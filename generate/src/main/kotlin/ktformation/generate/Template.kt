@@ -6,7 +6,7 @@ import javax.script.*
 /**
  * Template Engine
  */
-class Template private constructor(val bindings: Bindings, val compiledScript: CompiledScript) {
+class Template private constructor(private val bindings: Bindings, private val compiledScript: CompiledScript) {
 
     companion object {
         fun load(url: URL): Template = compile(url.readText())

@@ -53,146 +53,29 @@ data class Property(
         val itemTypes: MutableList<String>?,
         val types: MutableList<String>?
 ) {
-
-    // schema returns a JSON schema for the resource (as a string)
-    fun schema(name: String, parent: String): String {
-
-        val schemaPropertyTemplate = TemplateRepository.load("templates/SchemaPropertyTemplate.kts")
-
-        val parentpaths = parent.split(".")
-
-        val templateData = mapOf(
-                "name" to name,
-                "parent" to parentpaths[0],
-                "property" to this
-        )
-
-        // Execute the template, writing it to the buffer
-        try {
-            return schemaPropertyTemplate.putAll(templateData).eval()
-        } catch (e: Exception) {
-            log(LogLevel.ERROR, "Error: Failed to generate property $name")
-            throw e
-        }
-    }
-
-    // isPolymorphic checks whether a property can be multiple different types
-    fun isPolymorphic(): Boolean {
-        return primitiveTypes?.isNotEmpty() ?: false ||
-                primitiveItemTypes?.isNotEmpty() ?: false ||
-                itemTypes?.isNotEmpty() ?: false ||
-                types?.isNotEmpty() ?: false
-    }
-
-    // isPrimitive checks whether a property is a primitive type
-    fun isPrimitive() = !primitiveType.isNullOrEmpty()
-
-    // isMap checks whether a property should be a map (map[string]...)
-    fun isMap() = type == "Map"
-
-    // isMapOfPrimitives checks whether a map contains primitive values
-    fun isMapOfPrimitives() = isMap() && !primitiveItemType.isNullOrEmpty()
-
-    // isList checks whether a property should be a list ([]...)
     fun isList() = type == "List"
 
-    // isListOfPrimitives checks whether a list containers primitive values
-    fun isListOfPrimitives() = isList() && !primitiveItemType.isNullOrEmpty()
-
-    // isCustomType checks wither a property is a custom type
-    fun isCustomType() = primitiveType.isNullOrEmpty() && itemType.isNullOrEmpty() && primitiveItemType.isNullOrEmpty()
-
-    // goType returns the correct type for this property
-    // within a Go struct. For example, []string or map[string]AWSLambdaFunction_VpcConfig
-    fun goType(basename: String, name: String): String {
-
-        if (isPolymorphic()) {
-
-            generatePolymorphicProperty(basename + "_" + name, this)
-            return basename + "_" + name
-
-        }
-
-        if (isMap()) {
-
-            if (isMapOfPrimitives()) {
-                return "map[string]" + convertTypeToGo(primitiveItemType!!)
+    fun typeName(): String {
+        return when {
+            type != null -> when (type) {
+                "List" -> "List<${primitiveItemType ?: itemType}>"
+                "Map" -> "Map<String, ${primitiveItemType ?: itemType}>"
+                else -> type
             }
-
-            if (itemType == "Tag") {
-                return "map[string]Tag"
+            primitiveType != null -> when (primitiveType) {
+                "Integer" -> "Int"
+                "Timestamp" -> "java.util.Date"
+                else -> primitiveType
             }
-
-            return "map[string]" + basename + "_" + itemType
-
-        }
-
-        if (isList()) {
-
-            if (isListOfPrimitives()) {
-                return "[]" + convertTypeToGo(primitiveItemType!!)
-            }
-
-            if (itemType == "Tag") {
-                return "[]Tag"
-            }
-
-            return "[]" + basename + "_" + itemType
-
-        }
-
-        if (isCustomType()) {
-            return basename + "_" + type
-        }
-
-        // Must be a primitive value
-        return convertTypeToGo(primitiveType!!)
-
+            else -> polymorphicTypeName()
+        } + (if (required) "" else "?")
     }
 
-    // getJSONPrimitiveType returns the correct primitive property type for a JSON schema.
-    // If the property is a list/map, then it will return the type of the items.
-    fun getJSONPrimitiveType(): String {
-
-        if (isPrimitive()) {
-            return convertTypeToJSON(primitiveType!!)
+    fun polymorphicTypeName(): String {
+        return when {
+            types == null && primitiveTypes != null -> primitiveTypes.joinToString("")
+            types != null && primitiveTypes == null -> types.joinToString("")
+            else -> """${types?.joinToString("")}Or${primitiveTypes?.joinToString("")}"""
         }
-
-        if (isMap() && isMapOfPrimitives()) {
-            return convertTypeToJSON(primitiveItemType!!)
-        }
-
-        if (isList() && isListOfPrimitives()) {
-            return convertTypeToJSON(primitiveItemType!!)
-        }
-
-        return "unknown"
-
     }
 }
-
-fun convertTypeToGo(pt: String) =
-        when (pt) {
-            "String" -> "string"
-            "Long" -> "int64"
-            "Integer" -> "int"
-            "Double" -> "float64"
-            "Boolean" -> "bool"
-            "Timestamp" -> "string"
-            "Json" -> "interface{}"
-            else -> pt
-        }
-
-
-fun convertTypeToJSON(name: String) =
-        when (name) {
-            "String" -> "string"
-            "Long" -> "number"
-            "Integer" -> "number"
-            "Double" -> "number"
-            "Boolean" -> "boolean"
-            "Timestamp" -> "string"
-            "Json" -> "object"
-            else -> name
-        }
-

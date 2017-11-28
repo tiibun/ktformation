@@ -1,0 +1,64 @@
+package ktformation
+
+import com.fasterxml.jackson.annotation.JsonProperty
+
+@DslMarker
+annotation class CloudFormationMarker
+
+@CloudFormationMarker
+data class CloudFormation(
+        @field:JsonProperty("AWSTemplateFormatVersion")
+        val awsTemplateFormatVersion: String = "2010-09-09",
+
+        var description: String? = null,
+
+        var metadata: MutableMap<String, Metadata> = LinkedHashMap(), // TODO
+
+        var parameters: Parameters = Parameters(),
+
+        var mappings: Mappings = Mappings(),
+
+        var conditions: MutableMap<String, Condition> = LinkedHashMap(), // TODO
+
+        var transform: MutableMap<String, Transform> = LinkedHashMap(), // TODO
+
+        var resources: MutableMap<String, Resource<*>> = LinkedHashMap(),
+
+        var outputs: MutableMap<String, Output> = LinkedHashMap() // TODO
+) {
+    fun parameters(init: Parameters.() -> Unit): Parameters {
+        return Parameters().also {
+            it.init()
+            parameters.putAll(it)
+        }
+    }
+
+    fun mappings(init: Mappings.() -> Unit): Mappings {
+        return Mappings().also {
+            it.init()
+            mappings.putAll(it)
+        }
+    }
+
+    fun resources(init: Resources.() -> Unit): Resources {
+        return Resources().also {
+            it.init()
+            resources.putAll(it)
+        }
+    }
+
+    fun outputs(init: Outputs.() -> Unit): Outputs {
+        return Outputs().also {
+            it.init()
+            outputs.putAll(it)
+        }
+    }
+}
+
+data class Metadata(val name: String)
+
+data class Condition(val name: String)
+
+data class Transform(val name: String)
+
+fun cloudFormation(block: CloudFormation.() -> Unit): CloudFormation = CloudFormation().apply(block)

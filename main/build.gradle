@@ -1,0 +1,16 @@
+group = 'net.tiibun.ktformation'
+version = '0.0.1-SNAPSHOT'
+
+apply plugin: 'java-library'
+
+dependencies {
+    ext.jackson_version = '2.9.0'
+    compile "com.fasterxml.jackson.core:jackson-core:$jackson_version"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+    compile "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jackson_version"
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin:$jackson_version") {
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    compile 'org.yaml:snakeyaml:1.19'
+}

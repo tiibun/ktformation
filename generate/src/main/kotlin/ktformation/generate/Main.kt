@@ -1,7 +1,5 @@
 package ktformation.generate
 
-import kotlin.system.exitProcess
-
 fun main(args: Array<String>) {
 
     println("GoFormation Resource Generator")
