@@ -83,18 +83,18 @@ Would output the following JSON template:
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
-  Mappings:
-    AWSRegionToAMI:
-      ap-southeast-2:
-        AMIID: ami-5781be34
-  Parameters:
-    CidrBlock:
-      Default: 10.0.0
-      Description: CIDR block.
-      Type: String
-  Resources:
-    VPC:
-      Properties:
-        CidrBlock: !Ref 'CidrBlock'
-      Type: AWS::EC2::VPC
+Mappings:
+  AWSRegionToAMI:
+    ap-southeast-2:
+      AMIID: ami-5781be34
+Parameters:
+  CidrBlock:
+    Default: 10.0.0
+    Description: CIDR block.
+    Type: String
+Resources:
+  VPC:
+    Properties:
+      CidrBlock: !Ref 'CidrBlock'
+    Type: AWS::EC2::VPC
 ```
