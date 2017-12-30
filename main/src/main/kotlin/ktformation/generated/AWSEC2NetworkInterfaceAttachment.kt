@@ -12,7 +12,9 @@ class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2Netwo
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var deleteOnTermination: Any? = null
-        fun deleteOnTermination(value: Boolean?) { this.deleteOnTermination = value }
+        fun deleteOnTermination(value: Boolean) {
+            this.deleteOnTermination = value
+        }
         fun deleteOnTermination(value: IntrinsicFunction) { this.deleteOnTermination = value }
         @JvmField var deviceIndex: Any? = null
         fun deviceIndex(value: String) { this.deviceIndex = value }

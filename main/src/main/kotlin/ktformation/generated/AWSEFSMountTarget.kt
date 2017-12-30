@@ -15,7 +15,9 @@ class AWSEFSMountTarget(logicalId: String) : Resource<AWSEFSMountTarget.Properti
         fun fileSystemId(value: String) { this.fileSystemId = value }
         fun fileSystemId(value: IntrinsicFunction) { this.fileSystemId = value }
         @JvmField var ipAddress: Any? = null
-        fun ipAddress(value: String?) { this.ipAddress = value }
+        fun ipAddress(value: String) {
+            this.ipAddress = value
+        }
         fun ipAddress(value: IntrinsicFunction) { this.ipAddress = value }
         @JvmField var securityGroups: Any? = null
         fun securityGroups(value: List<String>) { this.securityGroups = value }

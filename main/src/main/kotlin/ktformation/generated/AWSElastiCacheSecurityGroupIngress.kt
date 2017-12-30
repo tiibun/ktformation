@@ -18,7 +18,9 @@ class AWSElastiCacheSecurityGroupIngress(logicalId: String) : Resource<AWSElasti
         fun eC2SecurityGroupName(value: String) { this.eC2SecurityGroupName = value }
         fun eC2SecurityGroupName(value: IntrinsicFunction) { this.eC2SecurityGroupName = value }
         @JvmField var eC2SecurityGroupOwnerId: Any? = null
-        fun eC2SecurityGroupOwnerId(value: String?) { this.eC2SecurityGroupOwnerId = value }
+        fun eC2SecurityGroupOwnerId(value: String) {
+            this.eC2SecurityGroupOwnerId = value
+        }
         fun eC2SecurityGroupOwnerId(value: IntrinsicFunction) { this.eC2SecurityGroupOwnerId = value }
     }
 

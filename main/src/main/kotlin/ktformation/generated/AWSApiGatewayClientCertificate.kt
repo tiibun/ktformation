@@ -12,7 +12,9 @@ class AWSApiGatewayClientCertificate(logicalId: String) : Resource<AWSApiGateway
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
     }
 

@@ -12,7 +12,9 @@ class AWSGlueClassifier(logicalId: String) : Resource<AWSGlueClassifier.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var grokClassifier: Any? = null
-        fun grokClassifier(value: GrokClassifier?) { this.grokClassifier = value }
+        fun grokClassifier(value: GrokClassifier) {
+            this.grokClassifier = value
+        }
         fun grokClassifier(value: IntrinsicFunction) { this.grokClassifier = value }
     }
 

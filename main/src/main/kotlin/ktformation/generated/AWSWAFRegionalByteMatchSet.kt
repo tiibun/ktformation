@@ -12,7 +12,9 @@ class AWSWAFRegionalByteMatchSet(logicalId: String) : Resource<AWSWAFRegionalByt
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var byteMatchTuples: Any? = null
-        fun byteMatchTuples(value: List<ByteMatchTuple>?) { this.byteMatchTuples = value }
+        fun byteMatchTuples(value: List<ByteMatchTuple>) {
+            this.byteMatchTuples = value
+        }
         fun byteMatchTuples(vararg value: IntrinsicFunction) { this.byteMatchTuples = value }
         @JvmField var name: Any? = null
         fun name(value: String) { this.name = value }

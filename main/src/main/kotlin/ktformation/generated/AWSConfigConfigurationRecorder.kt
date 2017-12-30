@@ -12,10 +12,14 @@ class AWSConfigConfigurationRecorder(logicalId: String) : Resource<AWSConfigConf
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var recordingGroup: Any? = null
-        fun recordingGroup(value: RecordingGroup?) { this.recordingGroup = value }
+        fun recordingGroup(value: RecordingGroup) {
+            this.recordingGroup = value
+        }
         fun recordingGroup(value: IntrinsicFunction) { this.recordingGroup = value }
         @JvmField var roleARN: Any? = null
         fun roleARN(value: String) { this.roleARN = value }

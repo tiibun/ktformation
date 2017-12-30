@@ -15,10 +15,14 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun customerGatewayId(value: String) { this.customerGatewayId = value }
         fun customerGatewayId(value: IntrinsicFunction) { this.customerGatewayId = value }
         @JvmField var staticRoutesOnly: Any? = null
-        fun staticRoutesOnly(value: Boolean?) { this.staticRoutesOnly = value }
+        fun staticRoutesOnly(value: Boolean) {
+            this.staticRoutesOnly = value
+        }
         fun staticRoutesOnly(value: IntrinsicFunction) { this.staticRoutesOnly = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var type: Any? = null
         fun type(value: String) { this.type = value }
@@ -27,7 +31,9 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun vpnGatewayId(value: String) { this.vpnGatewayId = value }
         fun vpnGatewayId(value: IntrinsicFunction) { this.vpnGatewayId = value }
         @JvmField var vpnTunnelOptionsSpecifications: Any? = null
-        fun vpnTunnelOptionsSpecifications(value: List<VpnTunnelOptionsSpecification>?) { this.vpnTunnelOptionsSpecifications = value }
+        fun vpnTunnelOptionsSpecifications(value: List<VpnTunnelOptionsSpecification>) {
+            this.vpnTunnelOptionsSpecifications = value
+        }
         fun vpnTunnelOptionsSpecifications(vararg value: IntrinsicFunction) { this.vpnTunnelOptionsSpecifications = value }
     }
 

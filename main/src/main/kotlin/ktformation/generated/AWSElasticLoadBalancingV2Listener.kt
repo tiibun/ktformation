@@ -12,7 +12,9 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var certificates: Any? = null
-        fun certificates(value: List<Certificate>?) { this.certificates = value }
+        fun certificates(value: List<Certificate>) {
+            this.certificates = value
+        }
         fun certificates(vararg value: IntrinsicFunction) { this.certificates = value }
         @JvmField var defaultActions: Any? = null
         fun defaultActions(value: List<Action>) { this.defaultActions = value }
@@ -27,7 +29,9 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun protocol(value: String) { this.protocol = value }
         fun protocol(value: IntrinsicFunction) { this.protocol = value }
         @JvmField var sslPolicy: Any? = null
-        fun sslPolicy(value: String?) { this.sslPolicy = value }
+        fun sslPolicy(value: String) {
+            this.sslPolicy = value
+        }
         fun sslPolicy(value: IntrinsicFunction) { this.sslPolicy = value }
     }
 

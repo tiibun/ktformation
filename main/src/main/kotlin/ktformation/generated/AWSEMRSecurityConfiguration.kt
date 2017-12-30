@@ -12,7 +12,9 @@ class AWSEMRSecurityConfiguration(logicalId: String) : Resource<AWSEMRSecurityCo
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var securityConfiguration: Any? = null
         fun securityConfiguration(value: Json) { this.securityConfiguration = value }

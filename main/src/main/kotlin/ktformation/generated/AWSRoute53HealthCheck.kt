@@ -15,7 +15,9 @@ class AWSRoute53HealthCheck(logicalId: String) : Resource<AWSRoute53HealthCheck.
         fun healthCheckConfig(value: HealthCheckConfig) { this.healthCheckConfig = value }
         fun healthCheckConfig(value: IntrinsicFunction) { this.healthCheckConfig = value }
         @JvmField var healthCheckTags: Any? = null
-        fun healthCheckTags(value: List<HealthCheckTag>?) { this.healthCheckTags = value }
+        fun healthCheckTags(value: List<HealthCheckTag>) {
+            this.healthCheckTags = value
+        }
         fun healthCheckTags(vararg value: IntrinsicFunction) { this.healthCheckTags = value }
     }
 

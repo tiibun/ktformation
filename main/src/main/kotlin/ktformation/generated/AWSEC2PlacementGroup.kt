@@ -12,7 +12,9 @@ class AWSEC2PlacementGroup(logicalId: String) : Resource<AWSEC2PlacementGroup.Pr
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var strategy: Any? = null
-        fun strategy(value: String?) { this.strategy = value }
+        fun strategy(value: String) {
+            this.strategy = value
+        }
         fun strategy(value: IntrinsicFunction) { this.strategy = value }
     }
 

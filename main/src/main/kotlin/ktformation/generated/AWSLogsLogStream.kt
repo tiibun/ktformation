@@ -15,7 +15,9 @@ class AWSLogsLogStream(logicalId: String) : Resource<AWSLogsLogStream.Properties
         fun logGroupName(value: String) { this.logGroupName = value }
         fun logGroupName(value: IntrinsicFunction) { this.logGroupName = value }
         @JvmField var logStreamName: Any? = null
-        fun logStreamName(value: String?) { this.logStreamName = value }
+        fun logStreamName(value: String) {
+            this.logStreamName = value
+        }
         fun logStreamName(value: IntrinsicFunction) { this.logStreamName = value }
     }
 

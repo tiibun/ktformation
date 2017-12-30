@@ -12,25 +12,39 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var additionalInfo: Any? = null
-        fun additionalInfo(value: Json?) { this.additionalInfo = value }
+        fun additionalInfo(value: Json) {
+            this.additionalInfo = value
+        }
         fun additionalInfo(value: IntrinsicFunction) { this.additionalInfo = value }
         @JvmField var applications: Any? = null
-        fun applications(value: List<Application>?) { this.applications = value }
+        fun applications(value: List<Application>) {
+            this.applications = value
+        }
         fun applications(vararg value: IntrinsicFunction) { this.applications = value }
         @JvmField var autoScalingRole: Any? = null
-        fun autoScalingRole(value: String?) { this.autoScalingRole = value }
+        fun autoScalingRole(value: String) {
+            this.autoScalingRole = value
+        }
         fun autoScalingRole(value: IntrinsicFunction) { this.autoScalingRole = value }
         @JvmField var bootstrapActions: Any? = null
-        fun bootstrapActions(value: List<BootstrapActionConfig>?) { this.bootstrapActions = value }
+        fun bootstrapActions(value: List<BootstrapActionConfig>) {
+            this.bootstrapActions = value
+        }
         fun bootstrapActions(vararg value: IntrinsicFunction) { this.bootstrapActions = value }
         @JvmField var configurations: Any? = null
-        fun configurations(value: List<Configuration>?) { this.configurations = value }
+        fun configurations(value: List<Configuration>) {
+            this.configurations = value
+        }
         fun configurations(vararg value: IntrinsicFunction) { this.configurations = value }
         @JvmField var customAmiId: Any? = null
-        fun customAmiId(value: String?) { this.customAmiId = value }
+        fun customAmiId(value: String) {
+            this.customAmiId = value
+        }
         fun customAmiId(value: IntrinsicFunction) { this.customAmiId = value }
         @JvmField var ebsRootVolumeSize: Any? = null
-        fun ebsRootVolumeSize(value: Int?) { this.ebsRootVolumeSize = value }
+        fun ebsRootVolumeSize(value: Int) {
+            this.ebsRootVolumeSize = value
+        }
         fun ebsRootVolumeSize(value: IntrinsicFunction) { this.ebsRootVolumeSize = value }
         @JvmField var instances: Any? = null
         fun instances(value: JobFlowInstancesConfig) { this.instances = value }
@@ -39,28 +53,40 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
         fun jobFlowRole(value: String) { this.jobFlowRole = value }
         fun jobFlowRole(value: IntrinsicFunction) { this.jobFlowRole = value }
         @JvmField var logUri: Any? = null
-        fun logUri(value: String?) { this.logUri = value }
+        fun logUri(value: String) {
+            this.logUri = value
+        }
         fun logUri(value: IntrinsicFunction) { this.logUri = value }
         @JvmField var name: Any? = null
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var releaseLabel: Any? = null
-        fun releaseLabel(value: String?) { this.releaseLabel = value }
+        fun releaseLabel(value: String) {
+            this.releaseLabel = value
+        }
         fun releaseLabel(value: IntrinsicFunction) { this.releaseLabel = value }
         @JvmField var scaleDownBehavior: Any? = null
-        fun scaleDownBehavior(value: String?) { this.scaleDownBehavior = value }
+        fun scaleDownBehavior(value: String) {
+            this.scaleDownBehavior = value
+        }
         fun scaleDownBehavior(value: IntrinsicFunction) { this.scaleDownBehavior = value }
         @JvmField var securityConfiguration: Any? = null
-        fun securityConfiguration(value: String?) { this.securityConfiguration = value }
+        fun securityConfiguration(value: String) {
+            this.securityConfiguration = value
+        }
         fun securityConfiguration(value: IntrinsicFunction) { this.securityConfiguration = value }
         @JvmField var serviceRole: Any? = null
         fun serviceRole(value: String) { this.serviceRole = value }
         fun serviceRole(value: IntrinsicFunction) { this.serviceRole = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var visibleToAllUsers: Any? = null
-        fun visibleToAllUsers(value: Boolean?) { this.visibleToAllUsers = value }
+        fun visibleToAllUsers(value: Boolean) {
+            this.visibleToAllUsers = value
+        }
         fun visibleToAllUsers(value: IntrinsicFunction) { this.visibleToAllUsers = value }
     }
 
@@ -73,7 +99,7 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
 
 
     class Application(
-            val additionalInfo: Map<String, String>? = null,
+            val additionalInfo: Map<String, Any>? = null,
             val args: List<String>? = null,
             val name: String? = null,
             val version: String? = null
@@ -103,7 +129,7 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
 
     class Configuration(
             val classification: String? = null,
-            val configurationProperties: Map<String, String>? = null,
+            val configurationProperties: Map<String, Any>? = null,
             val configurations: List<Configuration>? = null
     )
 

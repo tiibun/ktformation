@@ -12,7 +12,9 @@ class AWSApiGatewayDocumentationVersion(logicalId: String) : Resource<AWSApiGate
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var documentationVersion: Any? = null
         fun documentationVersion(value: String) { this.documentationVersion = value }

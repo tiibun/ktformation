@@ -12,7 +12,9 @@ class AWSCloudFormationWaitCondition(logicalId: String) : Resource<AWSCloudForma
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var count: Any? = null
-        fun count(value: Int?) { this.count = value }
+        fun count(value: Int) {
+            this.count = value
+        }
         fun count(value: IntrinsicFunction) { this.count = value }
         @JvmField var handle: Any? = null
         fun handle(value: String) { this.handle = value }

@@ -12,16 +12,22 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var peerOwnerId: Any? = null
-        fun peerOwnerId(value: String?) { this.peerOwnerId = value }
+        fun peerOwnerId(value: String) {
+            this.peerOwnerId = value
+        }
         fun peerOwnerId(value: IntrinsicFunction) { this.peerOwnerId = value }
         @JvmField var peerRoleArn: Any? = null
-        fun peerRoleArn(value: String?) { this.peerRoleArn = value }
+        fun peerRoleArn(value: String) {
+            this.peerRoleArn = value
+        }
         fun peerRoleArn(value: IntrinsicFunction) { this.peerRoleArn = value }
         @JvmField var peerVpcId: Any? = null
         fun peerVpcId(value: String) { this.peerVpcId = value }
         fun peerVpcId(value: IntrinsicFunction) { this.peerVpcId = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var vpcId: Any? = null
         fun vpcId(value: String) { this.vpcId = value }

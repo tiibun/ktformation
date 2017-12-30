@@ -24,7 +24,9 @@ class AWSGuardDutyThreatIntelSet(logicalId: String) : Resource<AWSGuardDutyThrea
         fun location(value: String) { this.location = value }
         fun location(value: IntrinsicFunction) { this.location = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
     }
 

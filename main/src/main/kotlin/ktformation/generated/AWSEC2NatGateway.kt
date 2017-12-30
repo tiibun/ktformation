@@ -18,7 +18,9 @@ class AWSEC2NatGateway(logicalId: String) : Resource<AWSEC2NatGateway.Properties
         fun subnetId(value: String) { this.subnetId = value }
         fun subnetId(value: IntrinsicFunction) { this.subnetId = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
     }
 

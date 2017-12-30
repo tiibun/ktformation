@@ -15,19 +15,29 @@ class AWSEC2SecurityGroup(logicalId: String) : Resource<AWSEC2SecurityGroup.Prop
         fun groupDescription(value: String) { this.groupDescription = value }
         fun groupDescription(value: IntrinsicFunction) { this.groupDescription = value }
         @JvmField var groupName: Any? = null
-        fun groupName(value: String?) { this.groupName = value }
+        fun groupName(value: String) {
+            this.groupName = value
+        }
         fun groupName(value: IntrinsicFunction) { this.groupName = value }
         @JvmField var securityGroupEgress: Any? = null
-        fun securityGroupEgress(value: List<Egress>?) { this.securityGroupEgress = value }
+        fun securityGroupEgress(value: List<Egress>) {
+            this.securityGroupEgress = value
+        }
         fun securityGroupEgress(vararg value: IntrinsicFunction) { this.securityGroupEgress = value }
         @JvmField var securityGroupIngress: Any? = null
-        fun securityGroupIngress(value: List<Ingress>?) { this.securityGroupIngress = value }
+        fun securityGroupIngress(value: List<Ingress>) {
+            this.securityGroupIngress = value
+        }
         fun securityGroupIngress(vararg value: IntrinsicFunction) { this.securityGroupIngress = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var vpcId: Any? = null
-        fun vpcId(value: String?) { this.vpcId = value }
+        fun vpcId(value: String) {
+            this.vpcId = value
+        }
         fun vpcId(value: IntrinsicFunction) { this.vpcId = value }
     }
 

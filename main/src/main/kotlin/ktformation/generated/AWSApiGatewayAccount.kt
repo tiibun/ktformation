@@ -12,7 +12,9 @@ class AWSApiGatewayAccount(logicalId: String) : Resource<AWSApiGatewayAccount.Pr
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var cloudWatchRoleArn: Any? = null
-        fun cloudWatchRoleArn(value: String?) { this.cloudWatchRoleArn = value }
+        fun cloudWatchRoleArn(value: String) {
+            this.cloudWatchRoleArn = value
+        }
         fun cloudWatchRoleArn(value: IntrinsicFunction) { this.cloudWatchRoleArn = value }
     }
 

@@ -12,31 +12,49 @@ class AWSElasticsearchDomain(logicalId: String) : Resource<AWSElasticsearchDomai
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var accessPolicies: Any? = null
-        fun accessPolicies(value: Json?) { this.accessPolicies = value }
+        fun accessPolicies(value: Json) {
+            this.accessPolicies = value
+        }
         fun accessPolicies(value: IntrinsicFunction) { this.accessPolicies = value }
         @JvmField var advancedOptions: Any? = null
-        fun advancedOptions(value: Map<String, String>?) { this.advancedOptions = value }
-        fun advancedOptions(value: IntrinsicFunction) { this.advancedOptions = value }
+        fun advancedOptions(value: Map<String, Any>) {
+            this.advancedOptions = value
+        }
+
         @JvmField var domainName: Any? = null
-        fun domainName(value: String?) { this.domainName = value }
+        fun domainName(value: String) {
+            this.domainName = value
+        }
         fun domainName(value: IntrinsicFunction) { this.domainName = value }
         @JvmField var eBSOptions: Any? = null
-        fun eBSOptions(value: EBSOptions?) { this.eBSOptions = value }
+        fun eBSOptions(value: EBSOptions) {
+            this.eBSOptions = value
+        }
         fun eBSOptions(value: IntrinsicFunction) { this.eBSOptions = value }
         @JvmField var elasticsearchClusterConfig: Any? = null
-        fun elasticsearchClusterConfig(value: ElasticsearchClusterConfig?) { this.elasticsearchClusterConfig = value }
+        fun elasticsearchClusterConfig(value: ElasticsearchClusterConfig) {
+            this.elasticsearchClusterConfig = value
+        }
         fun elasticsearchClusterConfig(value: IntrinsicFunction) { this.elasticsearchClusterConfig = value }
         @JvmField var elasticsearchVersion: Any? = null
-        fun elasticsearchVersion(value: String?) { this.elasticsearchVersion = value }
+        fun elasticsearchVersion(value: String) {
+            this.elasticsearchVersion = value
+        }
         fun elasticsearchVersion(value: IntrinsicFunction) { this.elasticsearchVersion = value }
         @JvmField var snapshotOptions: Any? = null
-        fun snapshotOptions(value: SnapshotOptions?) { this.snapshotOptions = value }
+        fun snapshotOptions(value: SnapshotOptions) {
+            this.snapshotOptions = value
+        }
         fun snapshotOptions(value: IntrinsicFunction) { this.snapshotOptions = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var vPCOptions: Any? = null
-        fun vPCOptions(value: VPCOptions?) { this.vPCOptions = value }
+        fun vPCOptions(value: VPCOptions) {
+            this.vPCOptions = value
+        }
         fun vPCOptions(value: IntrinsicFunction) { this.vPCOptions = value }
     }
 

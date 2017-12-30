@@ -12,10 +12,14 @@ class AWSEC2EIP(logicalId: String) : Resource<AWSEC2EIP.Properties>(logicalId, "
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var domain: Any? = null
-        fun domain(value: String?) { this.domain = value }
+        fun domain(value: String) {
+            this.domain = value
+        }
         fun domain(value: IntrinsicFunction) { this.domain = value }
         @JvmField var instanceId: Any? = null
-        fun instanceId(value: String?) { this.instanceId = value }
+        fun instanceId(value: String) {
+            this.instanceId = value
+        }
         fun instanceId(value: IntrinsicFunction) { this.instanceId = value }
     }
 

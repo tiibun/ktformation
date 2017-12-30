@@ -12,16 +12,24 @@ class AWSEMRInstanceGroupConfig(logicalId: String) : Resource<AWSEMRInstanceGrou
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var autoScalingPolicy: Any? = null
-        fun autoScalingPolicy(value: AutoScalingPolicy?) { this.autoScalingPolicy = value }
+        fun autoScalingPolicy(value: AutoScalingPolicy) {
+            this.autoScalingPolicy = value
+        }
         fun autoScalingPolicy(value: IntrinsicFunction) { this.autoScalingPolicy = value }
         @JvmField var bidPrice: Any? = null
-        fun bidPrice(value: String?) { this.bidPrice = value }
+        fun bidPrice(value: String) {
+            this.bidPrice = value
+        }
         fun bidPrice(value: IntrinsicFunction) { this.bidPrice = value }
         @JvmField var configurations: Any? = null
-        fun configurations(value: List<Configuration>?) { this.configurations = value }
+        fun configurations(value: List<Configuration>) {
+            this.configurations = value
+        }
         fun configurations(vararg value: IntrinsicFunction) { this.configurations = value }
         @JvmField var ebsConfiguration: Any? = null
-        fun ebsConfiguration(value: EbsConfiguration?) { this.ebsConfiguration = value }
+        fun ebsConfiguration(value: EbsConfiguration) {
+            this.ebsConfiguration = value
+        }
         fun ebsConfiguration(value: IntrinsicFunction) { this.ebsConfiguration = value }
         @JvmField var instanceCount: Any? = null
         fun instanceCount(value: Int) { this.instanceCount = value }
@@ -36,10 +44,14 @@ class AWSEMRInstanceGroupConfig(logicalId: String) : Resource<AWSEMRInstanceGrou
         fun jobFlowId(value: String) { this.jobFlowId = value }
         fun jobFlowId(value: IntrinsicFunction) { this.jobFlowId = value }
         @JvmField var market: Any? = null
-        fun market(value: String?) { this.market = value }
+        fun market(value: String) {
+            this.market = value
+        }
         fun market(value: IntrinsicFunction) { this.market = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
     }
 
@@ -70,7 +82,7 @@ class AWSEMRInstanceGroupConfig(logicalId: String) : Resource<AWSEMRInstanceGrou
 
     class Configuration(
             val classification: String? = null,
-            val configurationProperties: Map<String, String>? = null,
+            val configurationProperties: Map<String, Any>? = null,
             val configurations: List<Configuration>? = null
     )
 

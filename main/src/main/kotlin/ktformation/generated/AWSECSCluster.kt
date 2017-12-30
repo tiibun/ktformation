@@ -12,7 +12,9 @@ class AWSECSCluster(logicalId: String) : Resource<AWSECSCluster.Properties>(logi
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var clusterName: Any? = null
-        fun clusterName(value: String?) { this.clusterName = value }
+        fun clusterName(value: String) {
+            this.clusterName = value
+        }
         fun clusterName(value: IntrinsicFunction) { this.clusterName = value }
     }
 

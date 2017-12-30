@@ -12,22 +12,32 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var documentVersion: Any? = null
-        fun documentVersion(value: String?) { this.documentVersion = value }
+        fun documentVersion(value: String) {
+            this.documentVersion = value
+        }
         fun documentVersion(value: IntrinsicFunction) { this.documentVersion = value }
         @JvmField var instanceId: Any? = null
-        fun instanceId(value: String?) { this.instanceId = value }
+        fun instanceId(value: String) {
+            this.instanceId = value
+        }
         fun instanceId(value: IntrinsicFunction) { this.instanceId = value }
         @JvmField var name: Any? = null
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var parameters: Any? = null
-        fun parameters(value: Map<String, ParameterValues>?) { this.parameters = value }
-        fun parameters(value: IntrinsicFunction) { this.parameters = value }
+        fun parameters(value: Map<String, Any>) {
+            this.parameters = value
+        }
+
         @JvmField var scheduleExpression: Any? = null
-        fun scheduleExpression(value: String?) { this.scheduleExpression = value }
+        fun scheduleExpression(value: String) {
+            this.scheduleExpression = value
+        }
         fun scheduleExpression(value: IntrinsicFunction) { this.scheduleExpression = value }
         @JvmField var targets: Any? = null
-        fun targets(value: List<Target>?) { this.targets = value }
+        fun targets(value: List<Target>) {
+            this.targets = value
+        }
         fun targets(vararg value: IntrinsicFunction) { this.targets = value }
     }
 

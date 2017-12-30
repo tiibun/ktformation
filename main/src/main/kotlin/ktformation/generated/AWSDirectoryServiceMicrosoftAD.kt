@@ -12,10 +12,14 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var createAlias: Any? = null
-        fun createAlias(value: Boolean?) { this.createAlias = value }
+        fun createAlias(value: Boolean) {
+            this.createAlias = value
+        }
         fun createAlias(value: IntrinsicFunction) { this.createAlias = value }
         @JvmField var enableSso: Any? = null
-        fun enableSso(value: Boolean?) { this.enableSso = value }
+        fun enableSso(value: Boolean) {
+            this.enableSso = value
+        }
         fun enableSso(value: IntrinsicFunction) { this.enableSso = value }
         @JvmField var name: Any? = null
         fun name(value: String) { this.name = value }
@@ -24,7 +28,9 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun password(value: String) { this.password = value }
         fun password(value: IntrinsicFunction) { this.password = value }
         @JvmField var shortName: Any? = null
-        fun shortName(value: String?) { this.shortName = value }
+        fun shortName(value: String) {
+            this.shortName = value
+        }
         fun shortName(value: IntrinsicFunction) { this.shortName = value }
         @JvmField var vpcSettings: Any? = null
         fun vpcSettings(value: VpcSettings) { this.vpcSettings = value }

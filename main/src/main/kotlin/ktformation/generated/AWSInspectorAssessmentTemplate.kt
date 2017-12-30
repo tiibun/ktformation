@@ -15,7 +15,9 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun assessmentTargetArn(value: String) { this.assessmentTargetArn = value }
         fun assessmentTargetArn(value: IntrinsicFunction) { this.assessmentTargetArn = value }
         @JvmField var assessmentTemplateName: Any? = null
-        fun assessmentTemplateName(value: String?) { this.assessmentTemplateName = value }
+        fun assessmentTemplateName(value: String) {
+            this.assessmentTemplateName = value
+        }
         fun assessmentTemplateName(value: IntrinsicFunction) { this.assessmentTemplateName = value }
         @JvmField var durationInSeconds: Any? = null
         fun durationInSeconds(value: Int) { this.durationInSeconds = value }
@@ -24,7 +26,9 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun rulesPackageArns(value: List<String>) { this.rulesPackageArns = value }
         fun rulesPackageArns(vararg value: IntrinsicFunction) { this.rulesPackageArns = value }
         @JvmField var userAttributesForFindings: Any? = null
-        fun userAttributesForFindings(value: List<Tag>?) { this.userAttributesForFindings = value }
+        fun userAttributesForFindings(value: List<Tag>) {
+            this.userAttributesForFindings = value
+        }
         fun userAttributesForFindings(vararg value: IntrinsicFunction) { this.userAttributesForFindings = value }
     }
 

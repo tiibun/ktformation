@@ -12,7 +12,9 @@ class AWSIoTTopicRule(logicalId: String) : Resource<AWSIoTTopicRule.Properties>(
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var ruleName: Any? = null
-        fun ruleName(value: String?) { this.ruleName = value }
+        fun ruleName(value: String) {
+            this.ruleName = value
+        }
         fun ruleName(value: IntrinsicFunction) { this.ruleName = value }
         @JvmField var topicRulePayload: Any? = null
         fun topicRulePayload(value: TopicRulePayload) { this.topicRulePayload = value }

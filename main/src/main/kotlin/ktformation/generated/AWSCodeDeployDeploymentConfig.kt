@@ -12,10 +12,14 @@ class AWSCodeDeployDeploymentConfig(logicalId: String) : Resource<AWSCodeDeployD
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var deploymentConfigName: Any? = null
-        fun deploymentConfigName(value: String?) { this.deploymentConfigName = value }
+        fun deploymentConfigName(value: String) {
+            this.deploymentConfigName = value
+        }
         fun deploymentConfigName(value: IntrinsicFunction) { this.deploymentConfigName = value }
         @JvmField var minimumHealthyHosts: Any? = null
-        fun minimumHealthyHosts(value: MinimumHealthyHosts?) { this.minimumHealthyHosts = value }
+        fun minimumHealthyHosts(value: MinimumHealthyHosts) {
+            this.minimumHealthyHosts = value
+        }
         fun minimumHealthyHosts(value: IntrinsicFunction) { this.minimumHealthyHosts = value }
     }
 

@@ -18,7 +18,9 @@ class AWSStepFunctionsStateMachine(logicalId: String) : Resource<AWSStepFunction
         fun roleArn(value: String) { this.roleArn = value }
         fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
         @JvmField var stateMachineName: Any? = null
-        fun stateMachineName(value: String?) { this.stateMachineName = value }
+        fun stateMachineName(value: String) {
+            this.stateMachineName = value
+        }
         fun stateMachineName(value: IntrinsicFunction) { this.stateMachineName = value }
     }
 

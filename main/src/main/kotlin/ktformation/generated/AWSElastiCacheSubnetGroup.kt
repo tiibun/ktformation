@@ -12,7 +12,9 @@ class AWSElastiCacheSubnetGroup(logicalId: String) : Resource<AWSElastiCacheSubn
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var cacheSubnetGroupName: Any? = null
-        fun cacheSubnetGroupName(value: String?) { this.cacheSubnetGroupName = value }
+        fun cacheSubnetGroupName(value: String) {
+            this.cacheSubnetGroupName = value
+        }
         fun cacheSubnetGroupName(value: IntrinsicFunction) { this.cacheSubnetGroupName = value }
         @JvmField var description: Any? = null
         fun description(value: String) { this.description = value }

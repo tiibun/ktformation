@@ -12,19 +12,27 @@ class AWSRDSEventSubscription(logicalId: String) : Resource<AWSRDSEventSubscript
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var enabled: Any? = null
-        fun enabled(value: Boolean?) { this.enabled = value }
+        fun enabled(value: Boolean) {
+            this.enabled = value
+        }
         fun enabled(value: IntrinsicFunction) { this.enabled = value }
         @JvmField var eventCategories: Any? = null
-        fun eventCategories(value: List<String>?) { this.eventCategories = value }
+        fun eventCategories(value: List<String>) {
+            this.eventCategories = value
+        }
         fun eventCategories(vararg value: IntrinsicFunction) { this.eventCategories = value }
         @JvmField var snsTopicArn: Any? = null
         fun snsTopicArn(value: String) { this.snsTopicArn = value }
         fun snsTopicArn(value: IntrinsicFunction) { this.snsTopicArn = value }
         @JvmField var sourceIds: Any? = null
-        fun sourceIds(value: List<String>?) { this.sourceIds = value }
+        fun sourceIds(value: List<String>) {
+            this.sourceIds = value
+        }
         fun sourceIds(vararg value: IntrinsicFunction) { this.sourceIds = value }
         @JvmField var sourceType: Any? = null
-        fun sourceType(value: String?) { this.sourceType = value }
+        fun sourceType(value: String) {
+            this.sourceType = value
+        }
         fun sourceType(value: IntrinsicFunction) { this.sourceType = value }
     }
 

@@ -12,16 +12,24 @@ class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGr
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var groupName: Any? = null
-        fun groupName(value: String?) { this.groupName = value }
+        fun groupName(value: String) {
+            this.groupName = value
+        }
         fun groupName(value: IntrinsicFunction) { this.groupName = value }
         @JvmField var precedence: Any? = null
-        fun precedence(value: Double?) { this.precedence = value }
+        fun precedence(value: Double) {
+            this.precedence = value
+        }
         fun precedence(value: IntrinsicFunction) { this.precedence = value }
         @JvmField var roleArn: Any? = null
-        fun roleArn(value: String?) { this.roleArn = value }
+        fun roleArn(value: String) {
+            this.roleArn = value
+        }
         fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
         @JvmField var userPoolId: Any? = null
         fun userPoolId(value: String) { this.userPoolId = value }

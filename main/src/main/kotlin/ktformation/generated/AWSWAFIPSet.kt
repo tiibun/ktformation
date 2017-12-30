@@ -12,7 +12,9 @@ class AWSWAFIPSet(logicalId: String) : Resource<AWSWAFIPSet.Properties>(logicalI
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var iPSetDescriptors: Any? = null
-        fun iPSetDescriptors(value: List<IPSetDescriptor>?) { this.iPSetDescriptors = value }
+        fun iPSetDescriptors(value: List<IPSetDescriptor>) {
+            this.iPSetDescriptors = value
+        }
         fun iPSetDescriptors(vararg value: IntrinsicFunction) { this.iPSetDescriptors = value }
         @JvmField var name: Any? = null
         fun name(value: String) { this.name = value }

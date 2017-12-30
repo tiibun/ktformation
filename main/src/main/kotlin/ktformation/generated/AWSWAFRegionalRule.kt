@@ -18,7 +18,9 @@ class AWSWAFRegionalRule(logicalId: String) : Resource<AWSWAFRegionalRule.Proper
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var predicates: Any? = null
-        fun predicates(value: List<Predicate>?) { this.predicates = value }
+        fun predicates(value: List<Predicate>) {
+            this.predicates = value
+        }
         fun predicates(vararg value: IntrinsicFunction) { this.predicates = value }
     }
 

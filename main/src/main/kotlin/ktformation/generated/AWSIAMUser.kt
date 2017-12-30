@@ -12,22 +12,34 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var groups: Any? = null
-        fun groups(value: List<String>?) { this.groups = value }
+        fun groups(value: List<String>) {
+            this.groups = value
+        }
         fun groups(vararg value: IntrinsicFunction) { this.groups = value }
         @JvmField var loginProfile: Any? = null
-        fun loginProfile(value: LoginProfile?) { this.loginProfile = value }
+        fun loginProfile(value: LoginProfile) {
+            this.loginProfile = value
+        }
         fun loginProfile(value: IntrinsicFunction) { this.loginProfile = value }
         @JvmField var managedPolicyArns: Any? = null
-        fun managedPolicyArns(value: List<String>?) { this.managedPolicyArns = value }
+        fun managedPolicyArns(value: List<String>) {
+            this.managedPolicyArns = value
+        }
         fun managedPolicyArns(vararg value: IntrinsicFunction) { this.managedPolicyArns = value }
         @JvmField var path: Any? = null
-        fun path(value: String?) { this.path = value }
+        fun path(value: String) {
+            this.path = value
+        }
         fun path(value: IntrinsicFunction) { this.path = value }
         @JvmField var policies: Any? = null
-        fun policies(value: List<Policy>?) { this.policies = value }
+        fun policies(value: List<Policy>) {
+            this.policies = value
+        }
         fun policies(vararg value: IntrinsicFunction) { this.policies = value }
         @JvmField var userName: Any? = null
-        fun userName(value: String?) { this.userName = value }
+        fun userName(value: String) {
+            this.userName = value
+        }
         fun userName(value: IntrinsicFunction) { this.userName = value }
     }
 

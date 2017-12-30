@@ -15,10 +15,14 @@ class AWSCognitoIdentityPoolRoleAttachment(logicalId: String) : Resource<AWSCogn
         fun identityPoolId(value: String) { this.identityPoolId = value }
         fun identityPoolId(value: IntrinsicFunction) { this.identityPoolId = value }
         @JvmField var roleMappings: Any? = null
-        fun roleMappings(value: Json?) { this.roleMappings = value }
+        fun roleMappings(value: Json) {
+            this.roleMappings = value
+        }
         fun roleMappings(value: IntrinsicFunction) { this.roleMappings = value }
         @JvmField var roles: Any? = null
-        fun roles(value: Json?) { this.roles = value }
+        fun roles(value: Json) {
+            this.roles = value
+        }
         fun roles(value: IntrinsicFunction) { this.roles = value }
     }
 

@@ -15,13 +15,19 @@ class AWSBatchJobDefinition(logicalId: String) : Resource<AWSBatchJobDefinition.
         fun containerProperties(value: ContainerProperties) { this.containerProperties = value }
         fun containerProperties(value: IntrinsicFunction) { this.containerProperties = value }
         @JvmField var jobDefinitionName: Any? = null
-        fun jobDefinitionName(value: String?) { this.jobDefinitionName = value }
+        fun jobDefinitionName(value: String) {
+            this.jobDefinitionName = value
+        }
         fun jobDefinitionName(value: IntrinsicFunction) { this.jobDefinitionName = value }
         @JvmField var parameters: Any? = null
-        fun parameters(value: Json?) { this.parameters = value }
+        fun parameters(value: Json) {
+            this.parameters = value
+        }
         fun parameters(value: IntrinsicFunction) { this.parameters = value }
         @JvmField var retryStrategy: Any? = null
-        fun retryStrategy(value: RetryStrategy?) { this.retryStrategy = value }
+        fun retryStrategy(value: RetryStrategy) {
+            this.retryStrategy = value
+        }
         fun retryStrategy(value: IntrinsicFunction) { this.retryStrategy = value }
         @JvmField var type: Any? = null
         fun type(value: String) { this.type = value }

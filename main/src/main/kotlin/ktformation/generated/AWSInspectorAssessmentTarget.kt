@@ -12,7 +12,9 @@ class AWSInspectorAssessmentTarget(logicalId: String) : Resource<AWSInspectorAss
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var assessmentTargetName: Any? = null
-        fun assessmentTargetName(value: String?) { this.assessmentTargetName = value }
+        fun assessmentTargetName(value: String) {
+            this.assessmentTargetName = value
+        }
         fun assessmentTargetName(value: IntrinsicFunction) { this.assessmentTargetName = value }
         @JvmField var resourceGroupArn: Any? = null
         fun resourceGroupArn(value: String) { this.resourceGroupArn = value }

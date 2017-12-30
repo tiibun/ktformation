@@ -15,7 +15,9 @@ class AWSWAFRegionalXssMatchSet(logicalId: String) : Resource<AWSWAFRegionalXssM
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var xssMatchTuples: Any? = null
-        fun xssMatchTuples(value: List<XssMatchTuple>?) { this.xssMatchTuples = value }
+        fun xssMatchTuples(value: List<XssMatchTuple>) {
+            this.xssMatchTuples = value
+        }
         fun xssMatchTuples(vararg value: IntrinsicFunction) { this.xssMatchTuples = value }
     }
 

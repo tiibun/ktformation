@@ -12,10 +12,14 @@ class AWSCodeDeployApplication(logicalId: String) : Resource<AWSCodeDeployApplic
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var applicationName: Any? = null
-        fun applicationName(value: String?) { this.applicationName = value }
+        fun applicationName(value: String) {
+            this.applicationName = value
+        }
         fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
         @JvmField var computePlatform: Any? = null
-        fun computePlatform(value: String?) { this.computePlatform = value }
+        fun computePlatform(value: String) {
+            this.computePlatform = value
+        }
         fun computePlatform(value: IntrinsicFunction) { this.computePlatform = value }
     }
 

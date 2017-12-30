@@ -15,7 +15,9 @@ class AWSCodePipelineCustomActionType(logicalId: String) : Resource<AWSCodePipel
         fun category(value: String) { this.category = value }
         fun category(value: IntrinsicFunction) { this.category = value }
         @JvmField var configurationProperties: Any? = null
-        fun configurationProperties(value: List<ConfigurationProperties>?) { this.configurationProperties = value }
+        fun configurationProperties(value: List<ConfigurationProperties>) {
+            this.configurationProperties = value
+        }
         fun configurationProperties(vararg value: IntrinsicFunction) { this.configurationProperties = value }
         @JvmField var inputArtifactDetails: Any? = null
         fun inputArtifactDetails(value: ArtifactDetails) { this.inputArtifactDetails = value }
@@ -27,10 +29,14 @@ class AWSCodePipelineCustomActionType(logicalId: String) : Resource<AWSCodePipel
         fun provider(value: String) { this.provider = value }
         fun provider(value: IntrinsicFunction) { this.provider = value }
         @JvmField var settings: Any? = null
-        fun settings(value: Settings?) { this.settings = value }
+        fun settings(value: Settings) {
+            this.settings = value
+        }
         fun settings(value: IntrinsicFunction) { this.settings = value }
         @JvmField var version: Any? = null
-        fun version(value: String?) { this.version = value }
+        fun version(value: String) {
+            this.version = value
+        }
         fun version(value: IntrinsicFunction) { this.version = value }
     }
 

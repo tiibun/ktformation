@@ -12,7 +12,9 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var functionName: Any? = null
         fun functionName(value: String) { this.functionName = value }
@@ -24,7 +26,9 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var routingConfig: Any? = null
-        fun routingConfig(value: AliasRoutingConfiguration?) { this.routingConfig = value }
+        fun routingConfig(value: AliasRoutingConfiguration) {
+            this.routingConfig = value
+        }
         fun routingConfig(value: IntrinsicFunction) { this.routingConfig = value }
     }
 

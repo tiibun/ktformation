@@ -12,7 +12,9 @@ class AWSSDBDomain(logicalId: String) : Resource<AWSSDBDomain.Properties>(logica
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
     }
 

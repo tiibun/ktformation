@@ -12,13 +12,19 @@ class AWSKinesisAnalyticsApplication(logicalId: String) : Resource<AWSKinesisAna
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var applicationCode: Any? = null
-        fun applicationCode(value: String?) { this.applicationCode = value }
+        fun applicationCode(value: String) {
+            this.applicationCode = value
+        }
         fun applicationCode(value: IntrinsicFunction) { this.applicationCode = value }
         @JvmField var applicationDescription: Any? = null
-        fun applicationDescription(value: String?) { this.applicationDescription = value }
+        fun applicationDescription(value: String) {
+            this.applicationDescription = value
+        }
         fun applicationDescription(value: IntrinsicFunction) { this.applicationDescription = value }
         @JvmField var applicationName: Any? = null
-        fun applicationName(value: String?) { this.applicationName = value }
+        fun applicationName(value: String) {
+            this.applicationName = value
+        }
         fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
         @JvmField var inputs: Any? = null
         fun inputs(value: List<Input>) { this.inputs = value }

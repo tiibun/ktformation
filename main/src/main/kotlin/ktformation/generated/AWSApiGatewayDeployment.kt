@@ -12,16 +12,22 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var restApiId: Any? = null
         fun restApiId(value: String) { this.restApiId = value }
         fun restApiId(value: IntrinsicFunction) { this.restApiId = value }
         @JvmField var stageDescription: Any? = null
-        fun stageDescription(value: StageDescription?) { this.stageDescription = value }
+        fun stageDescription(value: StageDescription) {
+            this.stageDescription = value
+        }
         fun stageDescription(value: IntrinsicFunction) { this.stageDescription = value }
         @JvmField var stageName: Any? = null
-        fun stageName(value: String?) { this.stageName = value }
+        fun stageName(value: String) {
+            this.stageName = value
+        }
         fun stageName(value: IntrinsicFunction) { this.stageName = value }
     }
 
@@ -61,7 +67,7 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
             val metricsEnabled: Boolean? = null,
             val throttlingBurstLimit: Int? = null,
             val throttlingRateLimit: Double? = null,
-            val variables: Map<String, String>? = null
+            val variables: Map<String, Any>? = null
     )
 
 }

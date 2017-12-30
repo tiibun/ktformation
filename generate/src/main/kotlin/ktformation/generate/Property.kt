@@ -53,13 +53,11 @@ data class Property(
         val itemTypes: MutableList<String>?,
         val types: MutableList<String>?
 ) {
-    fun isList() = type == "List"
-
     fun typeName(): String {
         return when {
             type != null -> when (type) {
                 "List" -> "List<${primitiveItemType ?: itemType}>"
-                "Map" -> "Map<String, ${primitiveItemType ?: itemType}>"
+                "Map" -> "Map<String, Any>"
                 else -> type
             }
             primitiveType != null -> when (primitiveType) {
@@ -68,7 +66,7 @@ data class Property(
                 else -> primitiveType
             }
             else -> polymorphicTypeName()
-        } + (if (required) "" else "?")
+        }
     }
 
     fun polymorphicTypeName(): String {

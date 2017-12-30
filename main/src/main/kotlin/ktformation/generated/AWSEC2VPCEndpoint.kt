@@ -12,10 +12,14 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var policyDocument: Any? = null
-        fun policyDocument(value: Json?) { this.policyDocument = value }
+        fun policyDocument(value: Json) {
+            this.policyDocument = value
+        }
         fun policyDocument(value: IntrinsicFunction) { this.policyDocument = value }
         @JvmField var routeTableIds: Any? = null
-        fun routeTableIds(value: List<String>?) { this.routeTableIds = value }
+        fun routeTableIds(value: List<String>) {
+            this.routeTableIds = value
+        }
         fun routeTableIds(vararg value: IntrinsicFunction) { this.routeTableIds = value }
         @JvmField var serviceName: Any? = null
         fun serviceName(value: String) { this.serviceName = value }

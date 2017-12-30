@@ -150,6 +150,8 @@ fun Parameter.ref(): IntrinsicFunction = Ref(this)
 //class FnNot
 //class FnOr
 
+//class FnTransform
+
 
 /**
  * Pseudo Parameters

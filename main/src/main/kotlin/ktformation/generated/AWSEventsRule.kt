@@ -12,25 +12,39 @@ class AWSEventsRule(logicalId: String) : Resource<AWSEventsRule.Properties>(logi
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var eventPattern: Any? = null
-        fun eventPattern(value: Json?) { this.eventPattern = value }
+        fun eventPattern(value: Json) {
+            this.eventPattern = value
+        }
         fun eventPattern(value: IntrinsicFunction) { this.eventPattern = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var roleArn: Any? = null
-        fun roleArn(value: String?) { this.roleArn = value }
+        fun roleArn(value: String) {
+            this.roleArn = value
+        }
         fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
         @JvmField var scheduleExpression: Any? = null
-        fun scheduleExpression(value: String?) { this.scheduleExpression = value }
+        fun scheduleExpression(value: String) {
+            this.scheduleExpression = value
+        }
         fun scheduleExpression(value: IntrinsicFunction) { this.scheduleExpression = value }
         @JvmField var state: Any? = null
-        fun state(value: String?) { this.state = value }
+        fun state(value: String) {
+            this.state = value
+        }
         fun state(value: IntrinsicFunction) { this.state = value }
         @JvmField var targets: Any? = null
-        fun targets(value: List<Target>?) { this.targets = value }
+        fun targets(value: List<Target>) {
+            this.targets = value
+        }
         fun targets(vararg value: IntrinsicFunction) { this.targets = value }
     }
 
@@ -48,7 +62,7 @@ class AWSEventsRule(logicalId: String) : Resource<AWSEventsRule.Properties>(logi
     )
 
     class InputTransformer(
-            val inputPathsMap: Map<String, String>? = null,
+            val inputPathsMap: Map<String, Any>? = null,
             val inputTemplate: String
     )
 

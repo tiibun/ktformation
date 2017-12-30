@@ -12,16 +12,24 @@ class AWSRoute53RecordSetGroup(logicalId: String) : Resource<AWSRoute53RecordSet
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var comment: Any? = null
-        fun comment(value: String?) { this.comment = value }
+        fun comment(value: String) {
+            this.comment = value
+        }
         fun comment(value: IntrinsicFunction) { this.comment = value }
         @JvmField var hostedZoneId: Any? = null
-        fun hostedZoneId(value: String?) { this.hostedZoneId = value }
+        fun hostedZoneId(value: String) {
+            this.hostedZoneId = value
+        }
         fun hostedZoneId(value: IntrinsicFunction) { this.hostedZoneId = value }
         @JvmField var hostedZoneName: Any? = null
-        fun hostedZoneName(value: String?) { this.hostedZoneName = value }
+        fun hostedZoneName(value: String) {
+            this.hostedZoneName = value
+        }
         fun hostedZoneName(value: IntrinsicFunction) { this.hostedZoneName = value }
         @JvmField var recordSets: Any? = null
-        fun recordSets(value: List<RecordSet>?) { this.recordSets = value }
+        fun recordSets(value: List<RecordSet>) {
+            this.recordSets = value
+        }
         fun recordSets(vararg value: IntrinsicFunction) { this.recordSets = value }
     }
 

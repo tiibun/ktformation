@@ -12,19 +12,27 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var configSnapshotDeliveryProperties: Any? = null
-        fun configSnapshotDeliveryProperties(value: ConfigSnapshotDeliveryProperties?) { this.configSnapshotDeliveryProperties = value }
+        fun configSnapshotDeliveryProperties(value: ConfigSnapshotDeliveryProperties) {
+            this.configSnapshotDeliveryProperties = value
+        }
         fun configSnapshotDeliveryProperties(value: IntrinsicFunction) { this.configSnapshotDeliveryProperties = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var s3BucketName: Any? = null
         fun s3BucketName(value: String) { this.s3BucketName = value }
         fun s3BucketName(value: IntrinsicFunction) { this.s3BucketName = value }
         @JvmField var s3KeyPrefix: Any? = null
-        fun s3KeyPrefix(value: String?) { this.s3KeyPrefix = value }
+        fun s3KeyPrefix(value: String) {
+            this.s3KeyPrefix = value
+        }
         fun s3KeyPrefix(value: IntrinsicFunction) { this.s3KeyPrefix = value }
         @JvmField var snsTopicARN: Any? = null
-        fun snsTopicARN(value: String?) { this.snsTopicARN = value }
+        fun snsTopicARN(value: String) {
+            this.snsTopicARN = value
+        }
         fun snsTopicARN(value: IntrinsicFunction) { this.snsTopicARN = value }
     }
 

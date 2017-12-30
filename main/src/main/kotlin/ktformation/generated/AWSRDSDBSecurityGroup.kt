@@ -15,13 +15,17 @@ class AWSRDSDBSecurityGroup(logicalId: String) : Resource<AWSRDSDBSecurityGroup.
         fun dBSecurityGroupIngress(value: List<Ingress>) { this.dBSecurityGroupIngress = value }
         fun dBSecurityGroupIngress(vararg value: IntrinsicFunction) { this.dBSecurityGroupIngress = value }
         @JvmField var eC2VpcId: Any? = null
-        fun eC2VpcId(value: String?) { this.eC2VpcId = value }
+        fun eC2VpcId(value: String) {
+            this.eC2VpcId = value
+        }
         fun eC2VpcId(value: IntrinsicFunction) { this.eC2VpcId = value }
         @JvmField var groupDescription: Any? = null
         fun groupDescription(value: String) { this.groupDescription = value }
         fun groupDescription(value: IntrinsicFunction) { this.groupDescription = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
     }
 

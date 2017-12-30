@@ -23,7 +23,15 @@ ${props.joinToLines { (k, v) ->
     """
         @JvmField var ${k}: Any? = null
         fun ${k}(value: ${v.typeName()}) { this.${k} = value }
-        fun ${k}(${v.isList() then "vararg "}value: IntrinsicFunction) { this.${k} = value }
+        ${when (v.type) {
+        "Map" -> ""
+        "List" -> """
+        fun ${k}(vararg value: IntrinsicFunction) { this.${k} = value }
+        """.trimIndent()
+        else -> """
+        fun ${k}(value: IntrinsicFunction) { this.${k} = value }
+        """.trimIndent()
+    }}
 """
 }}
     }
@@ -42,7 +50,7 @@ subproperties.joinToLines { (k, v) ->
     class ${k}(
 ${v.properties.joinToLines(",") { (k, v) ->
         """
-            val ${k.decapitalize()}: ${v.typeName()}${!v.required then " = null"}
+            val ${k.decapitalize()}: ${v.typeName()}${!v.required then "? = null"}
 """
     }}
     )

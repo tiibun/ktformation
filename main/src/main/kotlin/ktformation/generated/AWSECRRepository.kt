@@ -12,13 +12,19 @@ class AWSECRRepository(logicalId: String) : Resource<AWSECRRepository.Properties
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var lifecyclePolicy: Any? = null
-        fun lifecyclePolicy(value: LifecyclePolicy?) { this.lifecyclePolicy = value }
+        fun lifecyclePolicy(value: LifecyclePolicy) {
+            this.lifecyclePolicy = value
+        }
         fun lifecyclePolicy(value: IntrinsicFunction) { this.lifecyclePolicy = value }
         @JvmField var repositoryName: Any? = null
-        fun repositoryName(value: String?) { this.repositoryName = value }
+        fun repositoryName(value: String) {
+            this.repositoryName = value
+        }
         fun repositoryName(value: IntrinsicFunction) { this.repositoryName = value }
         @JvmField var repositoryPolicyText: Any? = null
-        fun repositoryPolicyText(value: Json?) { this.repositoryPolicyText = value }
+        fun repositoryPolicyText(value: Json) {
+            this.repositoryPolicyText = value
+        }
         fun repositoryPolicyText(value: IntrinsicFunction) { this.repositoryPolicyText = value }
     }
 

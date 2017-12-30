@@ -12,13 +12,17 @@ class AWSCodeCommitRepository(logicalId: String) : Resource<AWSCodeCommitReposit
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var repositoryDescription: Any? = null
-        fun repositoryDescription(value: String?) { this.repositoryDescription = value }
+        fun repositoryDescription(value: String) {
+            this.repositoryDescription = value
+        }
         fun repositoryDescription(value: IntrinsicFunction) { this.repositoryDescription = value }
         @JvmField var repositoryName: Any? = null
         fun repositoryName(value: String) { this.repositoryName = value }
         fun repositoryName(value: IntrinsicFunction) { this.repositoryName = value }
         @JvmField var triggers: Any? = null
-        fun triggers(value: List<RepositoryTrigger>?) { this.triggers = value }
+        fun triggers(value: List<RepositoryTrigger>) {
+            this.triggers = value
+        }
         fun triggers(vararg value: IntrinsicFunction) { this.triggers = value }
     }
 

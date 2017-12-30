@@ -27,7 +27,9 @@ class AWSApplicationAutoScalingScalableTarget(logicalId: String) : Resource<AWSA
         fun scalableDimension(value: String) { this.scalableDimension = value }
         fun scalableDimension(value: IntrinsicFunction) { this.scalableDimension = value }
         @JvmField var scheduledActions: Any? = null
-        fun scheduledActions(value: List<ScheduledAction>?) { this.scheduledActions = value }
+        fun scheduledActions(value: List<ScheduledAction>) {
+            this.scheduledActions = value
+        }
         fun scheduledActions(vararg value: IntrinsicFunction) { this.scheduledActions = value }
         @JvmField var serviceNamespace: Any? = null
         fun serviceNamespace(value: String) { this.serviceNamespace = value }

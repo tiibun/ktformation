@@ -21,7 +21,9 @@ class AWSLogsSubscriptionFilter(logicalId: String) : Resource<AWSLogsSubscriptio
         fun logGroupName(value: String) { this.logGroupName = value }
         fun logGroupName(value: IntrinsicFunction) { this.logGroupName = value }
         @JvmField var roleArn: Any? = null
-        fun roleArn(value: String?) { this.roleArn = value }
+        fun roleArn(value: String) {
+            this.roleArn = value
+        }
         fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
     }
 

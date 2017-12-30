@@ -12,13 +12,19 @@ class AWSSNSTopic(logicalId: String) : Resource<AWSSNSTopic.Properties>(logicalI
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var displayName: Any? = null
-        fun displayName(value: String?) { this.displayName = value }
+        fun displayName(value: String) {
+            this.displayName = value
+        }
         fun displayName(value: IntrinsicFunction) { this.displayName = value }
         @JvmField var subscription: Any? = null
-        fun subscription(value: List<Subscription>?) { this.subscription = value }
+        fun subscription(value: List<Subscription>) {
+            this.subscription = value
+        }
         fun subscription(vararg value: IntrinsicFunction) { this.subscription = value }
         @JvmField var topicName: Any? = null
-        fun topicName(value: String?) { this.topicName = value }
+        fun topicName(value: String) {
+            this.topicName = value
+        }
         fun topicName(value: IntrinsicFunction) { this.topicName = value }
     }
 

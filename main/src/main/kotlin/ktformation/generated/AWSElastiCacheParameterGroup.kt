@@ -18,8 +18,10 @@ class AWSElastiCacheParameterGroup(logicalId: String) : Resource<AWSElastiCacheP
         fun description(value: String) { this.description = value }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var properties: Any? = null
-        fun properties(value: Map<String, String>?) { this.properties = value }
-        fun properties(value: IntrinsicFunction) { this.properties = value }
+        fun properties(value: Map<String, Any>) {
+            this.properties = value
+        }
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

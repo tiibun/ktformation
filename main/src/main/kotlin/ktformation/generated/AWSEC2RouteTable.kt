@@ -12,7 +12,9 @@ class AWSEC2RouteTable(logicalId: String) : Resource<AWSEC2RouteTable.Properties
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var vpcId: Any? = null
         fun vpcId(value: String) { this.vpcId = value }

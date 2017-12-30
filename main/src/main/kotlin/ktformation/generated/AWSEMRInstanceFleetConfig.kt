@@ -18,19 +18,29 @@ class AWSEMRInstanceFleetConfig(logicalId: String) : Resource<AWSEMRInstanceFlee
         fun instanceFleetType(value: String) { this.instanceFleetType = value }
         fun instanceFleetType(value: IntrinsicFunction) { this.instanceFleetType = value }
         @JvmField var instanceTypeConfigs: Any? = null
-        fun instanceTypeConfigs(value: List<InstanceTypeConfig>?) { this.instanceTypeConfigs = value }
+        fun instanceTypeConfigs(value: List<InstanceTypeConfig>) {
+            this.instanceTypeConfigs = value
+        }
         fun instanceTypeConfigs(vararg value: IntrinsicFunction) { this.instanceTypeConfigs = value }
         @JvmField var launchSpecifications: Any? = null
-        fun launchSpecifications(value: InstanceFleetProvisioningSpecifications?) { this.launchSpecifications = value }
+        fun launchSpecifications(value: InstanceFleetProvisioningSpecifications) {
+            this.launchSpecifications = value
+        }
         fun launchSpecifications(value: IntrinsicFunction) { this.launchSpecifications = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var targetOnDemandCapacity: Any? = null
-        fun targetOnDemandCapacity(value: Int?) { this.targetOnDemandCapacity = value }
+        fun targetOnDemandCapacity(value: Int) {
+            this.targetOnDemandCapacity = value
+        }
         fun targetOnDemandCapacity(value: IntrinsicFunction) { this.targetOnDemandCapacity = value }
         @JvmField var targetSpotCapacity: Any? = null
-        fun targetSpotCapacity(value: Int?) { this.targetSpotCapacity = value }
+        fun targetSpotCapacity(value: Int) {
+            this.targetSpotCapacity = value
+        }
         fun targetSpotCapacity(value: IntrinsicFunction) { this.targetSpotCapacity = value }
     }
 
@@ -44,7 +54,7 @@ class AWSEMRInstanceFleetConfig(logicalId: String) : Resource<AWSEMRInstanceFlee
 
     class Configuration(
             val classification: String? = null,
-            val configurationProperties: Map<String, String>? = null,
+            val configurationProperties: Map<String, Any>? = null,
             val configurations: List<Configuration>? = null
     )
 

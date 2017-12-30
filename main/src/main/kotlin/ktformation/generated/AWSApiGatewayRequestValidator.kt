@@ -12,16 +12,22 @@ class AWSApiGatewayRequestValidator(logicalId: String) : Resource<AWSApiGatewayR
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var restApiId: Any? = null
         fun restApiId(value: String) { this.restApiId = value }
         fun restApiId(value: IntrinsicFunction) { this.restApiId = value }
         @JvmField var validateRequestBody: Any? = null
-        fun validateRequestBody(value: Boolean?) { this.validateRequestBody = value }
+        fun validateRequestBody(value: Boolean) {
+            this.validateRequestBody = value
+        }
         fun validateRequestBody(value: IntrinsicFunction) { this.validateRequestBody = value }
         @JvmField var validateRequestParameters: Any? = null
-        fun validateRequestParameters(value: Boolean?) { this.validateRequestParameters = value }
+        fun validateRequestParameters(value: Boolean) {
+            this.validateRequestParameters = value
+        }
         fun validateRequestParameters(value: IntrinsicFunction) { this.validateRequestParameters = value }
     }
 

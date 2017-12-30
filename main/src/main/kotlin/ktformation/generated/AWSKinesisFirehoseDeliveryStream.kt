@@ -12,25 +12,39 @@ class AWSKinesisFirehoseDeliveryStream(logicalId: String) : Resource<AWSKinesisF
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var deliveryStreamName: Any? = null
-        fun deliveryStreamName(value: String?) { this.deliveryStreamName = value }
+        fun deliveryStreamName(value: String) {
+            this.deliveryStreamName = value
+        }
         fun deliveryStreamName(value: IntrinsicFunction) { this.deliveryStreamName = value }
         @JvmField var deliveryStreamType: Any? = null
-        fun deliveryStreamType(value: String?) { this.deliveryStreamType = value }
+        fun deliveryStreamType(value: String) {
+            this.deliveryStreamType = value
+        }
         fun deliveryStreamType(value: IntrinsicFunction) { this.deliveryStreamType = value }
         @JvmField var elasticsearchDestinationConfiguration: Any? = null
-        fun elasticsearchDestinationConfiguration(value: ElasticsearchDestinationConfiguration?) { this.elasticsearchDestinationConfiguration = value }
+        fun elasticsearchDestinationConfiguration(value: ElasticsearchDestinationConfiguration) {
+            this.elasticsearchDestinationConfiguration = value
+        }
         fun elasticsearchDestinationConfiguration(value: IntrinsicFunction) { this.elasticsearchDestinationConfiguration = value }
         @JvmField var extendedS3DestinationConfiguration: Any? = null
-        fun extendedS3DestinationConfiguration(value: ExtendedS3DestinationConfiguration?) { this.extendedS3DestinationConfiguration = value }
+        fun extendedS3DestinationConfiguration(value: ExtendedS3DestinationConfiguration) {
+            this.extendedS3DestinationConfiguration = value
+        }
         fun extendedS3DestinationConfiguration(value: IntrinsicFunction) { this.extendedS3DestinationConfiguration = value }
         @JvmField var kinesisStreamSourceConfiguration: Any? = null
-        fun kinesisStreamSourceConfiguration(value: KinesisStreamSourceConfiguration?) { this.kinesisStreamSourceConfiguration = value }
+        fun kinesisStreamSourceConfiguration(value: KinesisStreamSourceConfiguration) {
+            this.kinesisStreamSourceConfiguration = value
+        }
         fun kinesisStreamSourceConfiguration(value: IntrinsicFunction) { this.kinesisStreamSourceConfiguration = value }
         @JvmField var redshiftDestinationConfiguration: Any? = null
-        fun redshiftDestinationConfiguration(value: RedshiftDestinationConfiguration?) { this.redshiftDestinationConfiguration = value }
+        fun redshiftDestinationConfiguration(value: RedshiftDestinationConfiguration) {
+            this.redshiftDestinationConfiguration = value
+        }
         fun redshiftDestinationConfiguration(value: IntrinsicFunction) { this.redshiftDestinationConfiguration = value }
         @JvmField var s3DestinationConfiguration: Any? = null
-        fun s3DestinationConfiguration(value: S3DestinationConfiguration?) { this.s3DestinationConfiguration = value }
+        fun s3DestinationConfiguration(value: S3DestinationConfiguration) {
+            this.s3DestinationConfiguration = value
+        }
         fun s3DestinationConfiguration(value: IntrinsicFunction) { this.s3DestinationConfiguration = value }
     }
 

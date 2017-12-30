@@ -14,7 +14,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         @JvmField
         var assignIpv6AddressOnCreation: Any? = null
 
-        fun assignIpv6AddressOnCreation(value: Boolean?) {
+        fun assignIpv6AddressOnCreation(value: Boolean) {
             this.assignIpv6AddressOnCreation = value
         }
 
@@ -25,7 +25,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         @JvmField
         var availabilityZone: Any? = null
 
-        fun availabilityZone(value: String?) {
+        fun availabilityZone(value: String) {
             this.availabilityZone = value
         }
 
@@ -47,7 +47,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         @JvmField
         var ipv6CidrBlock: Any? = null
 
-        fun ipv6CidrBlock(value: String?) {
+        fun ipv6CidrBlock(value: String) {
             this.ipv6CidrBlock = value
         }
 
@@ -58,7 +58,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         @JvmField
         var mapPublicIpOnLaunch: Any? = null
 
-        fun mapPublicIpOnLaunch(value: Boolean?) {
+        fun mapPublicIpOnLaunch(value: Boolean) {
             this.mapPublicIpOnLaunch = value
         }
 
@@ -69,7 +69,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         @JvmField
         var tags: Any? = null
 
-        fun tags(value: List<Tag>?) {
+        fun tags(value: List<Tag>) {
             this.tags = value
         }
 

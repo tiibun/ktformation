@@ -18,7 +18,9 @@ class AWSEC2CustomerGateway(logicalId: String) : Resource<AWSEC2CustomerGateway.
         fun ipAddress(value: String) { this.ipAddress = value }
         fun ipAddress(value: IntrinsicFunction) { this.ipAddress = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
         @JvmField var type: Any? = null
         fun type(value: String) { this.type = value }

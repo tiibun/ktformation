@@ -12,7 +12,9 @@ class AWSEC2Host(logicalId: String) : Resource<AWSEC2Host.Properties>(logicalId,
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var autoPlacement: Any? = null
-        fun autoPlacement(value: String?) { this.autoPlacement = value }
+        fun autoPlacement(value: String) {
+            this.autoPlacement = value
+        }
         fun autoPlacement(value: IntrinsicFunction) { this.autoPlacement = value }
         @JvmField var availabilityZone: Any? = null
         fun availabilityZone(value: String) { this.availabilityZone = value }

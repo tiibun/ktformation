@@ -12,10 +12,14 @@ class AWSServerlessSimpleTable(logicalId: String) : Resource<AWSServerlessSimple
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var primaryKey: Any? = null
-        fun primaryKey(value: PrimaryKey?) { this.primaryKey = value }
+        fun primaryKey(value: PrimaryKey) {
+            this.primaryKey = value
+        }
         fun primaryKey(value: IntrinsicFunction) { this.primaryKey = value }
         @JvmField var provisionedThroughput: Any? = null
-        fun provisionedThroughput(value: ProvisionedThroughput?) { this.provisionedThroughput = value }
+        fun provisionedThroughput(value: ProvisionedThroughput) {
+            this.provisionedThroughput = value
+        }
         fun provisionedThroughput(value: IntrinsicFunction) { this.provisionedThroughput = value }
     }
 

@@ -1,6 +1,7 @@
 package ktformation
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import ktformation.transform.AWSInclude
 
 @DslMarker
 annotation class CloudFormationMarker
@@ -20,7 +21,7 @@ data class CloudFormation(
 
         var conditions: MutableMap<String, Condition> = LinkedHashMap(), // TODO
 
-        var transform: MutableMap<String, Transform> = LinkedHashMap(), // TODO
+        var transform: Any? = null,
 
         var resources: MutableMap<String, Resource<*>> = LinkedHashMap(),
 
@@ -59,6 +60,9 @@ data class Metadata(val name: String)
 
 data class Condition(val name: String)
 
-data class Transform(val name: String)
+/**
+ * String | [AWSInclude]
+ */
+typealias Transform = Any
 
 fun cloudFormation(block: CloudFormation.() -> Unit): CloudFormation = CloudFormation().apply(block)

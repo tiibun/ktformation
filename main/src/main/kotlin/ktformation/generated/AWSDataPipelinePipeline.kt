@@ -12,10 +12,14 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var activate: Any? = null
-        fun activate(value: Boolean?) { this.activate = value }
+        fun activate(value: Boolean) {
+            this.activate = value
+        }
         fun activate(value: IntrinsicFunction) { this.activate = value }
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var name: Any? = null
         fun name(value: String) { this.name = value }
@@ -24,13 +28,19 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun parameterObjects(value: List<ParameterObject>) { this.parameterObjects = value }
         fun parameterObjects(vararg value: IntrinsicFunction) { this.parameterObjects = value }
         @JvmField var parameterValues: Any? = null
-        fun parameterValues(value: List<ParameterValue>?) { this.parameterValues = value }
+        fun parameterValues(value: List<ParameterValue>) {
+            this.parameterValues = value
+        }
         fun parameterValues(vararg value: IntrinsicFunction) { this.parameterValues = value }
         @JvmField var pipelineObjects: Any? = null
-        fun pipelineObjects(value: List<PipelineObject>?) { this.pipelineObjects = value }
+        fun pipelineObjects(value: List<PipelineObject>) {
+            this.pipelineObjects = value
+        }
         fun pipelineObjects(vararg value: IntrinsicFunction) { this.pipelineObjects = value }
         @JvmField var pipelineTags: Any? = null
-        fun pipelineTags(value: List<PipelineTag>?) { this.pipelineTags = value }
+        fun pipelineTags(value: List<PipelineTag>) {
+            this.pipelineTags = value
+        }
         fun pipelineTags(vararg value: IntrinsicFunction) { this.pipelineTags = value }
     }
 

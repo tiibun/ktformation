@@ -12,10 +12,14 @@ class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalI
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var attributePayload: Any? = null
-        fun attributePayload(value: AttributePayload?) { this.attributePayload = value }
+        fun attributePayload(value: AttributePayload) {
+            this.attributePayload = value
+        }
         fun attributePayload(value: IntrinsicFunction) { this.attributePayload = value }
         @JvmField var thingName: Any? = null
-        fun thingName(value: String?) { this.thingName = value }
+        fun thingName(value: String) {
+            this.thingName = value
+        }
         fun thingName(value: IntrinsicFunction) { this.thingName = value }
     }
 
@@ -28,7 +32,7 @@ class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalI
 
 
     class AttributePayload(
-            val attributes: Map<String, String>? = null
+            val attributes: Map<String, Any>? = null
     )
 
 }

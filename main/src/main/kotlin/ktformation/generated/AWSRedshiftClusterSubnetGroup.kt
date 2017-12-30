@@ -18,7 +18,9 @@ class AWSRedshiftClusterSubnetGroup(logicalId: String) : Resource<AWSRedshiftClu
         fun subnetIds(value: List<String>) { this.subnetIds = value }
         fun subnetIds(vararg value: IntrinsicFunction) { this.subnetIds = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
     }
 

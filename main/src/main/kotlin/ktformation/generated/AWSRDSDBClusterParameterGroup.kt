@@ -21,7 +21,9 @@ class AWSRDSDBClusterParameterGroup(logicalId: String) : Resource<AWSRDSDBCluste
         fun parameters(value: Json) { this.parameters = value }
         fun parameters(value: IntrinsicFunction) { this.parameters = value }
         @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>?) { this.tags = value }
+        fun tags(value: List<Tag>) {
+            this.tags = value
+        }
         fun tags(vararg value: IntrinsicFunction) { this.tags = value }
     }
 

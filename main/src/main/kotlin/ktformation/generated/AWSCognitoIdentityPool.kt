@@ -15,31 +15,49 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun allowUnauthenticatedIdentities(value: Boolean) { this.allowUnauthenticatedIdentities = value }
         fun allowUnauthenticatedIdentities(value: IntrinsicFunction) { this.allowUnauthenticatedIdentities = value }
         @JvmField var cognitoEvents: Any? = null
-        fun cognitoEvents(value: Json?) { this.cognitoEvents = value }
+        fun cognitoEvents(value: Json) {
+            this.cognitoEvents = value
+        }
         fun cognitoEvents(value: IntrinsicFunction) { this.cognitoEvents = value }
         @JvmField var cognitoIdentityProviders: Any? = null
-        fun cognitoIdentityProviders(value: List<CognitoIdentityProvider>?) { this.cognitoIdentityProviders = value }
+        fun cognitoIdentityProviders(value: List<CognitoIdentityProvider>) {
+            this.cognitoIdentityProviders = value
+        }
         fun cognitoIdentityProviders(vararg value: IntrinsicFunction) { this.cognitoIdentityProviders = value }
         @JvmField var cognitoStreams: Any? = null
-        fun cognitoStreams(value: CognitoStreams?) { this.cognitoStreams = value }
+        fun cognitoStreams(value: CognitoStreams) {
+            this.cognitoStreams = value
+        }
         fun cognitoStreams(value: IntrinsicFunction) { this.cognitoStreams = value }
         @JvmField var developerProviderName: Any? = null
-        fun developerProviderName(value: String?) { this.developerProviderName = value }
+        fun developerProviderName(value: String) {
+            this.developerProviderName = value
+        }
         fun developerProviderName(value: IntrinsicFunction) { this.developerProviderName = value }
         @JvmField var identityPoolName: Any? = null
-        fun identityPoolName(value: String?) { this.identityPoolName = value }
+        fun identityPoolName(value: String) {
+            this.identityPoolName = value
+        }
         fun identityPoolName(value: IntrinsicFunction) { this.identityPoolName = value }
         @JvmField var openIdConnectProviderARNs: Any? = null
-        fun openIdConnectProviderARNs(value: List<String>?) { this.openIdConnectProviderARNs = value }
+        fun openIdConnectProviderARNs(value: List<String>) {
+            this.openIdConnectProviderARNs = value
+        }
         fun openIdConnectProviderARNs(vararg value: IntrinsicFunction) { this.openIdConnectProviderARNs = value }
         @JvmField var pushSync: Any? = null
-        fun pushSync(value: PushSync?) { this.pushSync = value }
+        fun pushSync(value: PushSync) {
+            this.pushSync = value
+        }
         fun pushSync(value: IntrinsicFunction) { this.pushSync = value }
         @JvmField var samlProviderARNs: Any? = null
-        fun samlProviderARNs(value: List<String>?) { this.samlProviderARNs = value }
+        fun samlProviderARNs(value: List<String>) {
+            this.samlProviderARNs = value
+        }
         fun samlProviderARNs(vararg value: IntrinsicFunction) { this.samlProviderARNs = value }
         @JvmField var supportedLoginProviders: Any? = null
-        fun supportedLoginProviders(value: Json?) { this.supportedLoginProviders = value }
+        fun supportedLoginProviders(value: Json) {
+            this.supportedLoginProviders = value
+        }
         fun supportedLoginProviders(value: IntrinsicFunction) { this.supportedLoginProviders = value }
     }
 

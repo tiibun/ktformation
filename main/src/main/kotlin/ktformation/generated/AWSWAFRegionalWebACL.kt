@@ -21,7 +21,9 @@ class AWSWAFRegionalWebACL(logicalId: String) : Resource<AWSWAFRegionalWebACL.Pr
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var rules: Any? = null
-        fun rules(value: List<Rule>?) { this.rules = value }
+        fun rules(value: List<Rule>) {
+            this.rules = value
+        }
         fun rules(vararg value: IntrinsicFunction) { this.rules = value }
     }
 

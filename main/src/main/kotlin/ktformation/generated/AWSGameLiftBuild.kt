@@ -12,13 +12,19 @@ class AWSGameLiftBuild(logicalId: String) : Resource<AWSGameLiftBuild.Properties
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var storageLocation: Any? = null
-        fun storageLocation(value: S3Location?) { this.storageLocation = value }
+        fun storageLocation(value: S3Location) {
+            this.storageLocation = value
+        }
         fun storageLocation(value: IntrinsicFunction) { this.storageLocation = value }
         @JvmField var version: Any? = null
-        fun version(value: String?) { this.version = value }
+        fun version(value: String) {
+            this.version = value
+        }
         fun version(value: IntrinsicFunction) { this.version = value }
     }
 

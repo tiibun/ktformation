@@ -15,10 +15,14 @@ class AWSAthenaNamedQuery(logicalId: String) : Resource<AWSAthenaNamedQuery.Prop
         fun database(value: String) { this.database = value }
         fun database(value: IntrinsicFunction) { this.database = value }
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var queryString: Any? = null
         fun queryString(value: String) { this.queryString = value }

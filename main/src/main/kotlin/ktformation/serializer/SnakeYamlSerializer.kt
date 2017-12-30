@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
 import ktformation.IntrinsicFunction
 import ktformation.ParameterType
+import ktformation.PolicyDocument
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.introspector.Property
@@ -20,6 +21,7 @@ class SnakeYamlSerializer {
             init {
                 addFunctionRepresents()
                 representers[ParameterType::class.java] = EnumRepresent()
+                representers[PolicyDocument.Effect::class.java] = EnumRepresent()
             }
 
             private fun addFunctionRepresents() {

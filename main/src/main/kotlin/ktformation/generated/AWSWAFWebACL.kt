@@ -21,7 +21,9 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         fun name(value: String) { this.name = value }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var rules: Any? = null
-        fun rules(value: List<ActivatedRule>?) { this.rules = value }
+        fun rules(value: List<ActivatedRule>) {
+            this.rules = value
+        }
         fun rules(vararg value: IntrinsicFunction) { this.rules = value }
     }
 

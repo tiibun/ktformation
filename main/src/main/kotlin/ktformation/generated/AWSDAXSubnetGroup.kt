@@ -12,10 +12,14 @@ class AWSDAXSubnetGroup(logicalId: String) : Resource<AWSDAXSubnetGroup.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var subnetGroupName: Any? = null
-        fun subnetGroupName(value: String?) { this.subnetGroupName = value }
+        fun subnetGroupName(value: String) {
+            this.subnetGroupName = value
+        }
         fun subnetGroupName(value: IntrinsicFunction) { this.subnetGroupName = value }
         @JvmField var subnetIds: Any? = null
         fun subnetIds(value: List<String>) { this.subnetIds = value }

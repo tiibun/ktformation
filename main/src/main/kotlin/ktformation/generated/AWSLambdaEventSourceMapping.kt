@@ -12,10 +12,14 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var batchSize: Any? = null
-        fun batchSize(value: Int?) { this.batchSize = value }
+        fun batchSize(value: Int) {
+            this.batchSize = value
+        }
         fun batchSize(value: IntrinsicFunction) { this.batchSize = value }
         @JvmField var enabled: Any? = null
-        fun enabled(value: Boolean?) { this.enabled = value }
+        fun enabled(value: Boolean) {
+            this.enabled = value
+        }
         fun enabled(value: IntrinsicFunction) { this.enabled = value }
         @JvmField var eventSourceArn: Any? = null
         fun eventSourceArn(value: String) { this.eventSourceArn = value }

@@ -12,10 +12,14 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var description: Any? = null
-        fun description(value: String?) { this.description = value }
+        fun description(value: String) {
+            this.description = value
+        }
         fun description(value: IntrinsicFunction) { this.description = value }
         @JvmField var loggingInfo: Any? = null
-        fun loggingInfo(value: LoggingInfo?) { this.loggingInfo = value }
+        fun loggingInfo(value: LoggingInfo) {
+            this.loggingInfo = value
+        }
         fun loggingInfo(value: IntrinsicFunction) { this.loggingInfo = value }
         @JvmField var maxConcurrency: Any? = null
         fun maxConcurrency(value: String) { this.maxConcurrency = value }
@@ -24,7 +28,9 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun maxErrors(value: String) { this.maxErrors = value }
         fun maxErrors(value: IntrinsicFunction) { this.maxErrors = value }
         @JvmField var name: Any? = null
-        fun name(value: String?) { this.name = value }
+        fun name(value: String) {
+            this.name = value
+        }
         fun name(value: IntrinsicFunction) { this.name = value }
         @JvmField var priority: Any? = null
         fun priority(value: Int) { this.priority = value }
@@ -39,16 +45,22 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun taskArn(value: String) { this.taskArn = value }
         fun taskArn(value: IntrinsicFunction) { this.taskArn = value }
         @JvmField var taskInvocationParameters: Any? = null
-        fun taskInvocationParameters(value: TaskInvocationParameters?) { this.taskInvocationParameters = value }
+        fun taskInvocationParameters(value: TaskInvocationParameters) {
+            this.taskInvocationParameters = value
+        }
         fun taskInvocationParameters(value: IntrinsicFunction) { this.taskInvocationParameters = value }
         @JvmField var taskParameters: Any? = null
-        fun taskParameters(value: Json?) { this.taskParameters = value }
+        fun taskParameters(value: Json) {
+            this.taskParameters = value
+        }
         fun taskParameters(value: IntrinsicFunction) { this.taskParameters = value }
         @JvmField var taskType: Any? = null
         fun taskType(value: String) { this.taskType = value }
         fun taskType(value: IntrinsicFunction) { this.taskType = value }
         @JvmField var windowId: Any? = null
-        fun windowId(value: String?) { this.windowId = value }
+        fun windowId(value: String) {
+            this.windowId = value
+        }
         fun windowId(value: IntrinsicFunction) { this.windowId = value }
     }
 

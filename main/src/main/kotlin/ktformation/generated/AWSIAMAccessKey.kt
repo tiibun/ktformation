@@ -12,10 +12,14 @@ class AWSIAMAccessKey(logicalId: String) : Resource<AWSIAMAccessKey.Properties>(
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var serial: Any? = null
-        fun serial(value: Int?) { this.serial = value }
+        fun serial(value: Int) {
+            this.serial = value
+        }
         fun serial(value: IntrinsicFunction) { this.serial = value }
         @JvmField var status: Any? = null
-        fun status(value: String?) { this.status = value }
+        fun status(value: String) {
+            this.status = value
+        }
         fun status(value: IntrinsicFunction) { this.status = value }
         @JvmField var userName: Any? = null
         fun userName(value: String) { this.userName = value }

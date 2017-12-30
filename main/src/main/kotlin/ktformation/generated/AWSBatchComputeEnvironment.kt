@@ -12,7 +12,9 @@ class AWSBatchComputeEnvironment(logicalId: String) : Resource<AWSBatchComputeEn
     @CloudFormationMarker
     class Properties : ResourceProperties {
         @JvmField var computeEnvironmentName: Any? = null
-        fun computeEnvironmentName(value: String?) { this.computeEnvironmentName = value }
+        fun computeEnvironmentName(value: String) {
+            this.computeEnvironmentName = value
+        }
         fun computeEnvironmentName(value: IntrinsicFunction) { this.computeEnvironmentName = value }
         @JvmField var computeResources: Any? = null
         fun computeResources(value: ComputeResources) { this.computeResources = value }
@@ -21,7 +23,9 @@ class AWSBatchComputeEnvironment(logicalId: String) : Resource<AWSBatchComputeEn
         fun serviceRole(value: String) { this.serviceRole = value }
         fun serviceRole(value: IntrinsicFunction) { this.serviceRole = value }
         @JvmField var state: Any? = null
-        fun state(value: String?) { this.state = value }
+        fun state(value: String) {
+            this.state = value
+        }
         fun state(value: IntrinsicFunction) { this.state = value }
         @JvmField var type: Any? = null
         fun type(value: String) { this.type = value }
