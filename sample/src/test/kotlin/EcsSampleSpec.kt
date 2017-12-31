@@ -1,5 +1,8 @@
 import ktformation.*
 import ktformation.generated.*
+import ktformation.policy.Effect
+import ktformation.policy.PolicyDocument
+import ktformation.policy.Statement
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
@@ -165,71 +168,73 @@ object EcsSampleSpec : Spek({
                     }
                     awsIAMRole("ECSServiceRole") {
                         properties {
-                            assumeRolePolicyDocument(json(
-                                    "Statement" to listOf(
-                                            mapOf("Effect" to "Allow",
-                                                    "Principal" to mapOf("Service" to listOf("ecs.amazonaws.com")),
-                                                    "Action" to listOf("sts:AssumeRole")))))
+                            assumeRolePolicyDocument(PolicyDocument(
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
+                                            principal = mapOf("Service" to listOf("ecs.amazonaws.com")),
+                                            action = listOf("sts:AssumeRole")
+                                    ))
+                            ))
                             path("/")
-                            policies(listOf(AWSIAMRole.Policy(json(
-                                    "Statement" to listOf(
-                                            mapOf("Effect" to "Allow",
-                                                    "Action" to listOf(
-                                                            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
-                                                            "elasticloadbalancing:DeregisterTargets",
-                                                            "elasticloadbalancing:Describe*",
-                                                            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-                                                            "elasticloadbalancing:RegisterTargets",
-                                                            "ec2:Describe*",
-                                                            "ec2:AuthorizeSecurityGroupIngress"),
-                                                    "Resource" to "*"))), "ecs-service")))
+                            policies(listOf(AWSIAMRole.Policy(PolicyDocument(
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
+                                            action = listOf(
+                                                    "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+                                                    "elasticloadbalancing:DeregisterTargets",
+                                                    "elasticloadbalancing:Describe*",
+                                                    "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+                                                    "elasticloadbalancing:RegisterTargets",
+                                                    "ec2:Describe*",
+                                                    "ec2:AuthorizeSecurityGroupIngress"),
+                                            resource = "*"))), "ecs-service")))
                         }
                     }
                     val ec2Role = awsIAMRole("EC2Role") {
                         properties {
-                            assumeRolePolicyDocument(json(
-                                    "Statement" to listOf(
-                                            mapOf("Effect" to "Allow",
-                                                    "Principal" to mapOf("Service" to listOf("ec2.amazonaws.com")),
-                                                    "Action" to listOf("sts:AssumeRole")))))
+                            assumeRolePolicyDocument(PolicyDocument(
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
+                                            principal = mapOf("Service" to listOf("ec2.amazonaws.com")),
+                                            action = listOf("sts:AssumeRole")))))
                             path("/")
-                            policies(listOf(AWSIAMRole.Policy(json(
-                                    "Statement" to listOf(
-                                            mapOf("Effect" to "Allow",
-                                                    "Action" to listOf(
-                                                            "ecs:CreateCluster",
-                                                            "ecs:DeregisterContainerInstance",
-                                                            "ecs:DiscoverPollEndpoint",
-                                                            "ecs:Poll",
-                                                            "ecs:RegisterContainerInstance",
-                                                            "ecs:StartTelemetrySession",
-                                                            "ecs:Submit*",
-                                                            "logs:CreateLogStream",
-                                                            "logs:PutLogEvents",
-                                                            "ecr:GetAuthorizationToken",
-                                                            "ecr:BatchGetImage",
-                                                            "ecr:GetDownloadUrlForLayer"),
-                                                    "Resource" to "*"))), "ecs-service")))
+                            policies(listOf(AWSIAMRole.Policy(PolicyDocument(
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
+                                            action = listOf(
+                                                    "ecs:CreateCluster",
+                                                    "ecs:DeregisterContainerInstance",
+                                                    "ecs:DiscoverPollEndpoint",
+                                                    "ecs:Poll",
+                                                    "ecs:RegisterContainerInstance",
+                                                    "ecs:StartTelemetrySession",
+                                                    "ecs:Submit*",
+                                                    "logs:CreateLogStream",
+                                                    "logs:PutLogEvents",
+                                                    "ecr:GetAuthorizationToken",
+                                                    "ecr:BatchGetImage",
+                                                    "ecr:GetDownloadUrlForLayer"),
+                                            resource = "*"))), "ecs-service")))
                         }
                     }
                     awsIAMRole("AutoscalingRole") {
                         properties {
-                            assumeRolePolicyDocument(json(
-                                    "Statement" to listOf(
-                                            mapOf("Effect" to "Allow",
-                                                    "Principal" to mapOf("Service" to listOf("application-autoscaling.amazonaws.com")),
-                                                    "Action" to listOf("sts:AssumeRole")))))
+                            assumeRolePolicyDocument(PolicyDocument(
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
+                                            principal = mapOf("Service" to listOf("application-autoscaling.amazonaws.com")),
+                                            action = listOf("sts:AssumeRole")))))
                             path("/")
-                            policies(listOf(AWSIAMRole.Policy(json(
-                                    "Statement" to listOf(
-                                            mapOf("Effect" to "Allow",
-                                                    "Action" to listOf(
-                                                            "application-autoscaling:*",
-                                                            "cloudwatch:DescribeAlarms",
-                                                            "cloudwatch:PutMetricAlarm",
-                                                            "ecs:DescribeServices",
-                                                            "ecs:UpdateServic"),
-                                                    "Resource" to "*"))), "service-autoscaling")))
+                            policies(listOf(AWSIAMRole.Policy(PolicyDocument(
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
+                                            action = listOf(
+                                                    "application-autoscaling:*",
+                                                    "cloudwatch:DescribeAlarms",
+                                                    "cloudwatch:PutMetricAlarm",
+                                                    "ecs:DescribeServices",
+                                                    "ecs:UpdateServic"),
+                                            resource = "*"))), "service-autoscaling")))
                         }
                     }
                     val ec2InstanceProfile = awsIAMInstanceProfile("EC2InstanceProfile") {

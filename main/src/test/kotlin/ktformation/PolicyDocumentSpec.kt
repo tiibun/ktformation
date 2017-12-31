@@ -1,5 +1,8 @@
 package ktformation
 
+import ktformation.policy.Effect
+import ktformation.policy.PolicyDocument
+import ktformation.policy.Statement
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
@@ -9,9 +12,9 @@ object PolicyDocumentSpec : Spek({
     describe("toJson") {
         it("outputs JSON") {
             val policy = PolicyDocument(
-                    statement = listOf(PolicyDocument.Statement(
+                    statement = listOf(Statement(
                             sid = "InventoryAndAnalyticsExamplePolicy",
-                            effect = PolicyDocument.Effect.ALLOW,
+                            effect = Effect.ALLOW,
                             principal = mapOf("Service" to "s3.amazonaws.com"),
                             action = listOf("s3:PutObject"),
                             resource = listOf("arn:aws:s3:::destination-bucket/*"),

@@ -1,5 +1,8 @@
 import ktformation.*
 import ktformation.generated.*
+import ktformation.policy.Effect
+import ktformation.policy.PolicyDocument
+import ktformation.policy.Statement
 import ktformation.transform.AWS_SERVERLESS_2016_10_31
 import ktformation.transform.transform
 import org.jetbrains.spek.api.Spek
@@ -24,8 +27,8 @@ object ServerlessSampleSpec : Spek({
                     awsIAMRole("LambdaExecutionRole") {
                         properties {
                             assumeRolePolicyDocument(PolicyDocument(
-                                    statement = listOf(PolicyDocument.Statement(
-                                            effect = PolicyDocument.Effect.ALLOW,
+                                    statement = listOf(Statement(
+                                            effect = Effect.ALLOW,
                                             principal = mapOf(
                                                     "Service" to "lambda.amazonaws.com"
                                             ),
@@ -35,8 +38,8 @@ object ServerlessSampleSpec : Spek({
                             policies(listOf(
                                     AWSIAMRole.Policy(policyName = "root",
                                             policyDocument = PolicyDocument(
-                                                    statement = listOf(PolicyDocument.Statement(
-                                                            effect = PolicyDocument.Effect.ALLOW,
+                                                    statement = listOf(Statement(
+                                                            effect = Effect.ALLOW,
                                                             action = listOf(
                                                                     "logs:CreateLogGroup",
                                                                     "logs:CreateLogStream",
