@@ -7,6 +7,7 @@ import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 import java.io.File
+import kotlin.test.assertEquals
 
 object EcsSampleSpec : Spek({
     describe("toJson") {
@@ -304,8 +305,12 @@ object EcsSampleSpec : Spek({
                     }
                 }
             }
-            File("esc_sample.json").writeText(template.toJSON(true))
-            File("esc_sample.yaml").writeText(template.toYAML(true))
+            assertEquals(
+                    File("sample/src/test/resources/esc_sample.json").readText(),
+                    template.toJSON(true))
+            assertEquals(
+                    File("sample/src/test/resources/esc_sample.yaml").readText(),
+                    template.toYAML(true))
         }
     }
 })

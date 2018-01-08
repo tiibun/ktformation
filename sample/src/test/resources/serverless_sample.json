@@ -1,0 +1,136 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Serverless Express Application/API powered by API Gateway and Lambda\n",
+  "Transform" : "AWS::Serverless-2016-10-31",
+  "Resources" : {
+    "ApiGatewayApi" : {
+      "Type" : "AWS::Serverless::Api",
+      "Properties" : {
+        "DefinitionUri" : "./simple-proxy-api.yaml",
+        "StageName" : "prod",
+        "Variables" : {
+          "ServerlessExpressLambdaFunctionName" : {
+            "Ref" : "YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME"
+          }
+        }
+      }
+    },
+    "LambdaExecutionRole" : {
+      "Type" : "AWS::IAM::Role",
+      "Properties" : {
+        "AssumeRolePolicyDocument" : {
+          "Version" : "2012-10-17",
+          "Statement" : [ {
+            "Principal" : {
+              "Service" : "lambda.amazonaws.com"
+            },
+            "Effect" : "Allow",
+            "Action" : "sts:AssumeRole"
+          } ]
+        },
+        "Path" : "/",
+        "Policies" : [ {
+          "PolicyDocument" : {
+            "Version" : "2012-10-17",
+            "Statement" : [ {
+              "Effect" : "Allow",
+              "Action" : [ "logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents" ],
+              "Resource" : "arn:aws:logs:*:*:*"
+            } ]
+          },
+          "PolicyName" : "root"
+        } ]
+      }
+    },
+    "LambdaApiGatewayExecutionPermission" : {
+      "Type" : "AWS::Lambda::Permission",
+      "Properties" : {
+        "Action" : "lambda:InvokeFunction",
+        "FunctionName" : {
+          "Ref" : "YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME"
+        },
+        "Principal" : "apigateway.amazonaws.com",
+        "SourceArn" : {
+          "Fn::Join" : [ "", [ "arn:aws:execute-api:", {
+            "Ref" : "AWS::Region"
+          }, ":", {
+            "Ref" : "AWS::AccountId"
+          }, ":", {
+            "Ref" : "ApiGatewayApi"
+          }, "/*/*" ] ]
+        }
+      }
+    },
+    "YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME" : {
+      "Type" : "AWS::Serverless::Function",
+      "Properties" : {
+        "CodeUri" : "./",
+        "Events" : {
+          "ProxyApiRoot" : {
+            "Type" : "Api",
+            "Properties" : {
+              "RestApiId" : {
+                "Ref" : "ApiGatewayApi"
+              },
+              "Path" : "/",
+              "Method" : "ANY"
+            }
+          },
+          "ProxyApiGreedy" : {
+            "Type" : "Api",
+            "Properties" : {
+              "RestApiId" : {
+                "Ref" : "ApiGatewayApi"
+              },
+              "Path" : "/{proxy+}",
+              "Method" : "ANY"
+            }
+          }
+        },
+        "Handler" : "lambda.handler",
+        "MemorySize" : 1024,
+        "Role" : {
+          "Fn::GetAtt" : [ "LambdaExecutionRole", "Arn" ]
+        },
+        "Runtime" : "nodejs6.10",
+        "Timeout" : 30
+      }
+    }
+  },
+  "Outputs" : {
+    "LambdaFunctionConsoleUrl" : {
+      "Description" : "Console URL for the Lambda Function.",
+      "Value" : {
+        "Fn::Join" : [ "", [ "https://", {
+          "Ref" : "AWS::Region"
+        }, ".console.aws.amazon.com/lambda/home?region=", {
+          "Ref" : "AWS::Region"
+        }, "#/functions/", {
+          "Ref" : "YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME"
+        } ] ]
+      }
+    },
+    "ApiGatewayApiConsoleUrl" : {
+      "Description" : "Console URL for the API Gateway API's Stage.",
+      "Value" : {
+        "Fn::Join" : [ "", [ "https://", {
+          "Ref" : "AWS::Region"
+        }, ".console.aws.amazon.com/lambda/home?region=", {
+          "Ref" : "AWS::Region"
+        }, "#/apis/", {
+          "Ref" : "ApiGatewayApi"
+        }, "/stages/prod" ] ]
+      }
+    },
+    "ApiUrl" : {
+      "Description" : "Invoke URL for your API. Clicking this link will perform a GET request\non the root resource of your API.",
+      "Value" : {
+        "Fn::Join" : [ "", [ "https://", {
+          "Ref" : "ApiGatewayApi"
+        }, ".execute-api.", {
+          "Ref" : "AWS::Region"
+        }, ".amazonaws.com/prod/" ] ]
+      }
+    }
+  }
+}

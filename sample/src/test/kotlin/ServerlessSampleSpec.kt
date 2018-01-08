@@ -8,6 +8,8 @@ import ktformation.transform.transform
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
+import java.io.File
+import kotlin.test.assertEquals
 
 object ServerlessSampleSpec : Spek({
     describe("toJSON") {
@@ -109,7 +111,12 @@ object ServerlessSampleSpec : Spek({
                     }
                 }
             }
-            println(template.toYAML(true))
+            assertEquals(
+                    File("sample/src/test/resources/serverless_sample.json").readText(),
+                    template.toJSON(true))
+            assertEquals(
+                    File("sample/src/test/resources/serverless_sample.yaml").readText(),
+                    template.toYAML(true))
         }
     }
 })
