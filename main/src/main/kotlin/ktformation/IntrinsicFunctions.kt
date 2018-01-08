@@ -143,15 +143,57 @@ fun <T : ResourceProperties> Resource<T>.ref(): IntrinsicFunction = Ref(this)
 
 fun Parameter.ref(): IntrinsicFunction = Ref(this)
 
-// Condition Functions TODO
-//class FnAnd
-//class FnEquals
-//class FnIf
-//class FnNot
-//class FnOr
+// Condition Functions
+interface ConditionFunction : IntrinsicFunction
+/**
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-and
+ */
+class FnAnd(vararg private val conditions: Any) : ConditionFunction {
 
-//class FnTransform
+    override val name = "Fn::And"
 
+    override val value get() = conditions
+}
+
+/**
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-equals
+ */
+class FnEquals(private val value1: Any, private val value2: Any) : ConditionFunction {
+
+    override val name = "Fn::Equals"
+
+    override val value get() = listOf(value1, value2)
+}
+
+/**
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-if
+ */
+class FnIf(private val conditionName: String, private val valueIfTrue: Any, private val valueIfFalse: Any) : ConditionFunction {
+
+    override val name = "Fn::If"
+
+    override val value get() = listOf(conditionName, valueIfTrue, valueIfFalse)
+}
+
+/**
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-not
+ */
+class FnNot(private val condition: Any) : ConditionFunction {
+
+    override val name = "Fn::Not"
+
+    override val value get() = condition
+}
+
+/**
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-or
+ */
+class FnOr(vararg private val conditions: Any) : ConditionFunction {
+
+    override val name = "Fn::Or"
+
+    override val value get() = conditions
+}
 
 /**
  * Pseudo Parameters
@@ -169,4 +211,8 @@ enum class AWS {
     override fun toString(): String = "AWS::" + name
 
     fun ref() = Ref(this)
+}
+
+class Condition(override val value: Any) : ConditionFunction {
+    override val name = "Condition"
 }

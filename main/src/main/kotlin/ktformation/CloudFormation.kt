@@ -13,20 +13,27 @@ data class CloudFormation(
 
         var description: String? = null,
 
-        var metadata: MutableMap<String, Metadata> = LinkedHashMap(), // TODO
+        var metadata: Metadata = Metadata(),
 
         var parameters: Parameters = Parameters(),
 
         var mappings: Mappings = Mappings(),
 
-        var conditions: MutableMap<String, Condition> = LinkedHashMap(), // TODO
+        var conditions: Conditions = Conditions(),
 
-        var transform: Any? = null,
+        var transform: Transform? = null,
 
-        var resources: MutableMap<String, Resource<*>> = LinkedHashMap(),
+        var resources: Resources = Resources(),
 
-        var outputs: MutableMap<String, Output> = LinkedHashMap() // TODO
+        var outputs: Outputs = Outputs()
 ) {
+    fun metadata(init: Metadata.() -> Unit): Metadata {
+        return Metadata().also {
+            it.init()
+            metadata.putAll(it)
+        }
+    }
+
     fun parameters(init: Parameters.() -> Unit): Parameters {
         return Parameters().also {
             it.init()
@@ -38,6 +45,13 @@ data class CloudFormation(
         return Mappings().also {
             it.init()
             mappings.putAll(it)
+        }
+    }
+
+    fun conditions(init: Conditions.() -> Unit): Conditions {
+        return Conditions().also {
+            it.init()
+            conditions.putAll(it)
         }
     }
 
@@ -55,10 +69,6 @@ data class CloudFormation(
         }
     }
 }
-
-data class Metadata(val name: String)
-
-data class Condition(val name: String)
 
 /**
  * String | [AWSInclude]
