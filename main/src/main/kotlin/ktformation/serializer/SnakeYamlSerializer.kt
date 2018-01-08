@@ -96,7 +96,8 @@ class SnakeYamlSerializer {
                         when (data.value) {
                             is Map<*, *> -> representMapping(tag, data.value as Map<*, *>, false)
                             is List<*> -> representSequence(tag, data.value as List<*>, false)
-                            is IntrinsicFunction -> representMapping(Tag.MAP, mapOf(data.name to data.value), null)
+                            is Array<*> -> representSequence(tag, (data.value as Array<*>).toList(), false)
+                            is IntrinsicFunction -> representMapping(Tag.MAP, mapOf(data.name to data.value), false)
                             else -> representScalar(tag, data.value.toString())
                         }
                     } else {
