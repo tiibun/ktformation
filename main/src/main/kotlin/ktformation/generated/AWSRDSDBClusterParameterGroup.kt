@@ -10,21 +10,43 @@ import ktformation.*
 class AWSRDSDBClusterParameterGroup(logicalId: String) : Resource<AWSRDSDBClusterParameterGroup.Properties>(logicalId, "AWS::RDS::DBClusterParameterGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
-        fun description(value: String) { this.description = value }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var family: Any? = null
-        fun family(value: String) { this.family = value }
-        fun family(value: IntrinsicFunction) { this.family = value }
-        @JvmField var parameters: Any? = null
-        fun parameters(value: Json) { this.parameters = value }
-        fun parameters(value: IntrinsicFunction) { this.parameters = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) {
-            this.tags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
+        fun description(value: String) {
+          this.description = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var family: Any? = null
+
+        fun family(value: String) {
+          this.family = value
+        }
+        fun family(value: IntrinsicFunction) {
+  this.family = value
+}
+        @JvmField
+        var parameters: Any? = null
+
+        fun parameters(value: Json) {
+          this.parameters = value
+        }
+        fun parameters(value: IntrinsicFunction) {
+  this.parameters = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

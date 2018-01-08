@@ -10,12 +10,16 @@ import ktformation.*
 class AWSApiGatewayAccount(logicalId: String) : Resource<AWSApiGatewayAccount.Properties>(logicalId, "AWS::ApiGateway::Account") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var cloudWatchRoleArn: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var cloudWatchRoleArn: Any? = null
+
         fun cloudWatchRoleArn(value: String) {
-            this.cloudWatchRoleArn = value
+          this.cloudWatchRoleArn = value
         }
-        fun cloudWatchRoleArn(value: IntrinsicFunction) { this.cloudWatchRoleArn = value }
+        fun cloudWatchRoleArn(value: IntrinsicFunction) {
+  this.cloudWatchRoleArn = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

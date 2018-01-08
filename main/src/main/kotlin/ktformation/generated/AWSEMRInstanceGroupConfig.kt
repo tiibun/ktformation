@@ -10,49 +10,97 @@ import ktformation.*
 class AWSEMRInstanceGroupConfig(logicalId: String) : Resource<AWSEMRInstanceGroupConfig.Properties>(logicalId, "AWS::EMR::InstanceGroupConfig") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var autoScalingPolicy: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var autoScalingPolicy: Any? = null
+
         fun autoScalingPolicy(value: AutoScalingPolicy) {
-            this.autoScalingPolicy = value
+          this.autoScalingPolicy = value
         }
-        fun autoScalingPolicy(value: IntrinsicFunction) { this.autoScalingPolicy = value }
-        @JvmField var bidPrice: Any? = null
+        fun autoScalingPolicy(value: IntrinsicFunction) {
+  this.autoScalingPolicy = value
+}
+        @JvmField
+        var bidPrice: Any? = null
+
         fun bidPrice(value: String) {
-            this.bidPrice = value
+          this.bidPrice = value
         }
-        fun bidPrice(value: IntrinsicFunction) { this.bidPrice = value }
-        @JvmField var configurations: Any? = null
+        fun bidPrice(value: IntrinsicFunction) {
+  this.bidPrice = value
+}
+        @JvmField
+        var configurations: Any? = null
+
         fun configurations(value: List<Configuration>) {
-            this.configurations = value
+          this.configurations = value
         }
-        fun configurations(vararg value: IntrinsicFunction) { this.configurations = value }
-        @JvmField var ebsConfiguration: Any? = null
+        fun configurations(vararg value: IntrinsicFunction) {
+  this.configurations = value
+}
+        @JvmField
+        var ebsConfiguration: Any? = null
+
         fun ebsConfiguration(value: EbsConfiguration) {
-            this.ebsConfiguration = value
+          this.ebsConfiguration = value
         }
-        fun ebsConfiguration(value: IntrinsicFunction) { this.ebsConfiguration = value }
-        @JvmField var instanceCount: Any? = null
-        fun instanceCount(value: Int) { this.instanceCount = value }
-        fun instanceCount(value: IntrinsicFunction) { this.instanceCount = value }
-        @JvmField var instanceRole: Any? = null
-        fun instanceRole(value: String) { this.instanceRole = value }
-        fun instanceRole(value: IntrinsicFunction) { this.instanceRole = value }
-        @JvmField var instanceType: Any? = null
-        fun instanceType(value: String) { this.instanceType = value }
-        fun instanceType(value: IntrinsicFunction) { this.instanceType = value }
-        @JvmField var jobFlowId: Any? = null
-        fun jobFlowId(value: String) { this.jobFlowId = value }
-        fun jobFlowId(value: IntrinsicFunction) { this.jobFlowId = value }
-        @JvmField var market: Any? = null
+        fun ebsConfiguration(value: IntrinsicFunction) {
+  this.ebsConfiguration = value
+}
+        @JvmField
+        var instanceCount: Any? = null
+
+        fun instanceCount(value: Int) {
+          this.instanceCount = value
+        }
+        fun instanceCount(value: IntrinsicFunction) {
+  this.instanceCount = value
+}
+        @JvmField
+        var instanceRole: Any? = null
+
+        fun instanceRole(value: String) {
+          this.instanceRole = value
+        }
+        fun instanceRole(value: IntrinsicFunction) {
+  this.instanceRole = value
+}
+        @JvmField
+        var instanceType: Any? = null
+
+        fun instanceType(value: String) {
+          this.instanceType = value
+        }
+        fun instanceType(value: IntrinsicFunction) {
+  this.instanceType = value
+}
+        @JvmField
+        var jobFlowId: Any? = null
+
+        fun jobFlowId(value: String) {
+          this.jobFlowId = value
+        }
+        fun jobFlowId(value: IntrinsicFunction) {
+  this.jobFlowId = value
+}
+        @JvmField
+        var market: Any? = null
+
         fun market(value: String) {
-            this.market = value
+          this.market = value
         }
-        fun market(value: IntrinsicFunction) { this.market = value }
-        @JvmField var name: Any? = null
+        fun market(value: IntrinsicFunction) {
+  this.market = value
+}
+        @JvmField
+        var name: Any? = null
+
         fun name(value: String) {
-            this.name = value
+          this.name = value
         }
-        fun name(value: IntrinsicFunction) { this.name = value }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

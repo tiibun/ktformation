@@ -10,12 +10,16 @@ import ktformation.*
 class AWSEC2InternetGateway(logicalId: String) : Resource<AWSEC2InternetGateway.Properties>(logicalId, "AWS::EC2::InternetGateway") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var tags: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

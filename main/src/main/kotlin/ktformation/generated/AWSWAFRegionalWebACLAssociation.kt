@@ -10,13 +10,25 @@ import ktformation.*
 class AWSWAFRegionalWebACLAssociation(logicalId: String) : Resource<AWSWAFRegionalWebACLAssociation.Properties>(logicalId, "AWS::WAFRegional::WebACLAssociation") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var resourceArn: Any? = null
-        fun resourceArn(value: String) { this.resourceArn = value }
-        fun resourceArn(value: IntrinsicFunction) { this.resourceArn = value }
-        @JvmField var webACLId: Any? = null
-        fun webACLId(value: String) { this.webACLId = value }
-        fun webACLId(value: IntrinsicFunction) { this.webACLId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var resourceArn: Any? = null
+
+        fun resourceArn(value: String) {
+          this.resourceArn = value
+        }
+        fun resourceArn(value: IntrinsicFunction) {
+  this.resourceArn = value
+}
+        @JvmField
+        var webACLId: Any? = null
+
+        fun webACLId(value: String) {
+          this.webACLId = value
+        }
+        fun webACLId(value: IntrinsicFunction) {
+  this.webACLId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

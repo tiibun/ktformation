@@ -10,10 +10,16 @@ import ktformation.*
 class AWSInspectorResourceGroup(logicalId: String) : Resource<AWSInspectorResourceGroup.Properties>(logicalId, "AWS::Inspector::ResourceGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var resourceGroupTags: Any? = null
-        fun resourceGroupTags(value: List<Tag>) { this.resourceGroupTags = value }
-        fun resourceGroupTags(vararg value: IntrinsicFunction) { this.resourceGroupTags = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var resourceGroupTags: Any? = null
+
+        fun resourceGroupTags(value: List<Tag>) {
+          this.resourceGroupTags = value
+        }
+        fun resourceGroupTags(vararg value: IntrinsicFunction) {
+  this.resourceGroupTags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

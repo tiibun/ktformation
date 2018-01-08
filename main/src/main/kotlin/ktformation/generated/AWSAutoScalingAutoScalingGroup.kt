@@ -10,93 +10,169 @@ import ktformation.*
 class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalingAutoScalingGroup.Properties>(logicalId, "AWS::AutoScaling::AutoScalingGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var availabilityZones: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var availabilityZones: Any? = null
+
         fun availabilityZones(value: List<String>) {
-            this.availabilityZones = value
+          this.availabilityZones = value
         }
-        fun availabilityZones(vararg value: IntrinsicFunction) { this.availabilityZones = value }
-        @JvmField var cooldown: Any? = null
+        fun availabilityZones(vararg value: IntrinsicFunction) {
+  this.availabilityZones = value
+}
+        @JvmField
+        var cooldown: Any? = null
+
         fun cooldown(value: String) {
-            this.cooldown = value
+          this.cooldown = value
         }
-        fun cooldown(value: IntrinsicFunction) { this.cooldown = value }
-        @JvmField var desiredCapacity: Any? = null
+        fun cooldown(value: IntrinsicFunction) {
+  this.cooldown = value
+}
+        @JvmField
+        var desiredCapacity: Any? = null
+
         fun desiredCapacity(value: String) {
-            this.desiredCapacity = value
+          this.desiredCapacity = value
         }
-        fun desiredCapacity(value: IntrinsicFunction) { this.desiredCapacity = value }
-        @JvmField var healthCheckGracePeriod: Any? = null
+        fun desiredCapacity(value: IntrinsicFunction) {
+  this.desiredCapacity = value
+}
+        @JvmField
+        var healthCheckGracePeriod: Any? = null
+
         fun healthCheckGracePeriod(value: Int) {
-            this.healthCheckGracePeriod = value
+          this.healthCheckGracePeriod = value
         }
-        fun healthCheckGracePeriod(value: IntrinsicFunction) { this.healthCheckGracePeriod = value }
-        @JvmField var healthCheckType: Any? = null
+        fun healthCheckGracePeriod(value: IntrinsicFunction) {
+  this.healthCheckGracePeriod = value
+}
+        @JvmField
+        var healthCheckType: Any? = null
+
         fun healthCheckType(value: String) {
-            this.healthCheckType = value
+          this.healthCheckType = value
         }
-        fun healthCheckType(value: IntrinsicFunction) { this.healthCheckType = value }
-        @JvmField var instanceId: Any? = null
+        fun healthCheckType(value: IntrinsicFunction) {
+  this.healthCheckType = value
+}
+        @JvmField
+        var instanceId: Any? = null
+
         fun instanceId(value: String) {
-            this.instanceId = value
+          this.instanceId = value
         }
-        fun instanceId(value: IntrinsicFunction) { this.instanceId = value }
-        @JvmField var launchConfigurationName: Any? = null
+        fun instanceId(value: IntrinsicFunction) {
+  this.instanceId = value
+}
+        @JvmField
+        var launchConfigurationName: Any? = null
+
         fun launchConfigurationName(value: String) {
-            this.launchConfigurationName = value
+          this.launchConfigurationName = value
         }
-        fun launchConfigurationName(value: IntrinsicFunction) { this.launchConfigurationName = value }
-        @JvmField var lifecycleHookSpecificationList: Any? = null
+        fun launchConfigurationName(value: IntrinsicFunction) {
+  this.launchConfigurationName = value
+}
+        @JvmField
+        var lifecycleHookSpecificationList: Any? = null
+
         fun lifecycleHookSpecificationList(value: List<LifecycleHookSpecification>) {
-            this.lifecycleHookSpecificationList = value
+          this.lifecycleHookSpecificationList = value
         }
-        fun lifecycleHookSpecificationList(vararg value: IntrinsicFunction) { this.lifecycleHookSpecificationList = value }
-        @JvmField var loadBalancerNames: Any? = null
+        fun lifecycleHookSpecificationList(vararg value: IntrinsicFunction) {
+  this.lifecycleHookSpecificationList = value
+}
+        @JvmField
+        var loadBalancerNames: Any? = null
+
         fun loadBalancerNames(value: List<String>) {
-            this.loadBalancerNames = value
+          this.loadBalancerNames = value
         }
-        fun loadBalancerNames(vararg value: IntrinsicFunction) { this.loadBalancerNames = value }
-        @JvmField var maxSize: Any? = null
-        fun maxSize(value: String) { this.maxSize = value }
-        fun maxSize(value: IntrinsicFunction) { this.maxSize = value }
-        @JvmField var metricsCollection: Any? = null
+        fun loadBalancerNames(vararg value: IntrinsicFunction) {
+  this.loadBalancerNames = value
+}
+        @JvmField
+        var maxSize: Any? = null
+
+        fun maxSize(value: String) {
+          this.maxSize = value
+        }
+        fun maxSize(value: IntrinsicFunction) {
+  this.maxSize = value
+}
+        @JvmField
+        var metricsCollection: Any? = null
+
         fun metricsCollection(value: List<MetricsCollection>) {
-            this.metricsCollection = value
+          this.metricsCollection = value
         }
-        fun metricsCollection(vararg value: IntrinsicFunction) { this.metricsCollection = value }
-        @JvmField var minSize: Any? = null
-        fun minSize(value: String) { this.minSize = value }
-        fun minSize(value: IntrinsicFunction) { this.minSize = value }
-        @JvmField var notificationConfigurations: Any? = null
+        fun metricsCollection(vararg value: IntrinsicFunction) {
+  this.metricsCollection = value
+}
+        @JvmField
+        var minSize: Any? = null
+
+        fun minSize(value: String) {
+          this.minSize = value
+        }
+        fun minSize(value: IntrinsicFunction) {
+  this.minSize = value
+}
+        @JvmField
+        var notificationConfigurations: Any? = null
+
         fun notificationConfigurations(value: List<NotificationConfiguration>) {
-            this.notificationConfigurations = value
+          this.notificationConfigurations = value
         }
-        fun notificationConfigurations(vararg value: IntrinsicFunction) { this.notificationConfigurations = value }
-        @JvmField var placementGroup: Any? = null
+        fun notificationConfigurations(vararg value: IntrinsicFunction) {
+  this.notificationConfigurations = value
+}
+        @JvmField
+        var placementGroup: Any? = null
+
         fun placementGroup(value: String) {
-            this.placementGroup = value
+          this.placementGroup = value
         }
-        fun placementGroup(value: IntrinsicFunction) { this.placementGroup = value }
-        @JvmField var tags: Any? = null
+        fun placementGroup(value: IntrinsicFunction) {
+  this.placementGroup = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<TagProperty>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var targetGroupARNs: Any? = null
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var targetGroupARNs: Any? = null
+
         fun targetGroupARNs(value: List<String>) {
-            this.targetGroupARNs = value
+          this.targetGroupARNs = value
         }
-        fun targetGroupARNs(vararg value: IntrinsicFunction) { this.targetGroupARNs = value }
-        @JvmField var terminationPolicies: Any? = null
+        fun targetGroupARNs(vararg value: IntrinsicFunction) {
+  this.targetGroupARNs = value
+}
+        @JvmField
+        var terminationPolicies: Any? = null
+
         fun terminationPolicies(value: List<String>) {
-            this.terminationPolicies = value
+          this.terminationPolicies = value
         }
-        fun terminationPolicies(vararg value: IntrinsicFunction) { this.terminationPolicies = value }
-        @JvmField var vPCZoneIdentifier: Any? = null
+        fun terminationPolicies(vararg value: IntrinsicFunction) {
+  this.terminationPolicies = value
+}
+        @JvmField
+        var vPCZoneIdentifier: Any? = null
+
         fun vPCZoneIdentifier(value: List<String>) {
-            this.vPCZoneIdentifier = value
+          this.vPCZoneIdentifier = value
         }
-        fun vPCZoneIdentifier(vararg value: IntrinsicFunction) { this.vPCZoneIdentifier = value }
+        fun vPCZoneIdentifier(vararg value: IntrinsicFunction) {
+  this.vPCZoneIdentifier = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

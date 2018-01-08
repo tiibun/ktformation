@@ -3,8 +3,6 @@ import ktformation.generated.*
 import ktformation.policy.Effect
 import ktformation.policy.PolicyDocument
 import ktformation.policy.Statement
-import ktformation.transform.AWS_SERVERLESS_2016_10_31
-import ktformation.transform.transform
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it

@@ -10,25 +10,43 @@ import ktformation.*
 class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertificateManagerCertificate.Properties>(logicalId, "AWS::CertificateManager::Certificate") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var domainName: Any? = null
-        fun domainName(value: String) { this.domainName = value }
-        fun domainName(value: IntrinsicFunction) { this.domainName = value }
-        @JvmField var domainValidationOptions: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var domainName: Any? = null
+
+        fun domainName(value: String) {
+          this.domainName = value
+        }
+        fun domainName(value: IntrinsicFunction) {
+  this.domainName = value
+}
+        @JvmField
+        var domainValidationOptions: Any? = null
+
         fun domainValidationOptions(value: List<DomainValidationOption>) {
-            this.domainValidationOptions = value
+          this.domainValidationOptions = value
         }
-        fun domainValidationOptions(vararg value: IntrinsicFunction) { this.domainValidationOptions = value }
-        @JvmField var subjectAlternativeNames: Any? = null
+        fun domainValidationOptions(vararg value: IntrinsicFunction) {
+  this.domainValidationOptions = value
+}
+        @JvmField
+        var subjectAlternativeNames: Any? = null
+
         fun subjectAlternativeNames(value: List<String>) {
-            this.subjectAlternativeNames = value
+          this.subjectAlternativeNames = value
         }
-        fun subjectAlternativeNames(vararg value: IntrinsicFunction) { this.subjectAlternativeNames = value }
-        @JvmField var tags: Any? = null
+        fun subjectAlternativeNames(vararg value: IntrinsicFunction) {
+  this.subjectAlternativeNames = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

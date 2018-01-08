@@ -10,13 +10,25 @@ import ktformation.*
 class AWSEC2SubnetCidrBlock(logicalId: String) : Resource<AWSEC2SubnetCidrBlock.Properties>(logicalId, "AWS::EC2::SubnetCidrBlock") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var ipv6CidrBlock: Any? = null
-        fun ipv6CidrBlock(value: String) { this.ipv6CidrBlock = value }
-        fun ipv6CidrBlock(value: IntrinsicFunction) { this.ipv6CidrBlock = value }
-        @JvmField var subnetId: Any? = null
-        fun subnetId(value: String) { this.subnetId = value }
-        fun subnetId(value: IntrinsicFunction) { this.subnetId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var ipv6CidrBlock: Any? = null
+
+        fun ipv6CidrBlock(value: String) {
+          this.ipv6CidrBlock = value
+        }
+        fun ipv6CidrBlock(value: IntrinsicFunction) {
+  this.ipv6CidrBlock = value
+}
+        @JvmField
+        var subnetId: Any? = null
+
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        fun subnetId(value: IntrinsicFunction) {
+  this.subnetId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,18 +10,34 @@ import ktformation.*
 class AWSServiceDiscoveryPrivateDnsNamespace(logicalId: String) : Resource<AWSServiceDiscoveryPrivateDnsNamespace.Properties>(logicalId, "AWS::ServiceDiscovery::PrivateDnsNamespace") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var vpc: Any? = null
-        fun vpc(value: String) { this.vpc = value }
-        fun vpc(value: IntrinsicFunction) { this.vpc = value }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var vpc: Any? = null
+
+        fun vpc(value: String) {
+          this.vpc = value
+        }
+        fun vpc(value: IntrinsicFunction) {
+  this.vpc = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

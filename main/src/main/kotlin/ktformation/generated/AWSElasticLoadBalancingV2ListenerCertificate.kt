@@ -10,13 +10,25 @@ import ktformation.*
 class AWSElasticLoadBalancingV2ListenerCertificate(logicalId: String) : Resource<AWSElasticLoadBalancingV2ListenerCertificate.Properties>(logicalId, "AWS::ElasticLoadBalancingV2::ListenerCertificate") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var certificates: Any? = null
-        fun certificates(value: List<Certificate>) { this.certificates = value }
-        fun certificates(vararg value: IntrinsicFunction) { this.certificates = value }
-        @JvmField var listenerArn: Any? = null
-        fun listenerArn(value: String) { this.listenerArn = value }
-        fun listenerArn(value: IntrinsicFunction) { this.listenerArn = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var certificates: Any? = null
+
+        fun certificates(value: List<Certificate>) {
+          this.certificates = value
+        }
+        fun certificates(vararg value: IntrinsicFunction) {
+  this.certificates = value
+}
+        @JvmField
+        var listenerArn: Any? = null
+
+        fun listenerArn(value: String) {
+          this.listenerArn = value
+        }
+        fun listenerArn(value: IntrinsicFunction) {
+  this.listenerArn = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

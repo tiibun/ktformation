@@ -10,20 +10,34 @@ import ktformation.*
 class AWSCognitoIdentityPoolRoleAttachment(logicalId: String) : Resource<AWSCognitoIdentityPoolRoleAttachment.Properties>(logicalId, "AWS::Cognito::IdentityPoolRoleAttachment") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var identityPoolId: Any? = null
-        fun identityPoolId(value: String) { this.identityPoolId = value }
-        fun identityPoolId(value: IntrinsicFunction) { this.identityPoolId = value }
-        @JvmField var roleMappings: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var identityPoolId: Any? = null
+
+        fun identityPoolId(value: String) {
+          this.identityPoolId = value
+        }
+        fun identityPoolId(value: IntrinsicFunction) {
+  this.identityPoolId = value
+}
+        @JvmField
+        var roleMappings: Any? = null
+
         fun roleMappings(value: Json) {
-            this.roleMappings = value
+          this.roleMappings = value
         }
-        fun roleMappings(value: IntrinsicFunction) { this.roleMappings = value }
-        @JvmField var roles: Any? = null
+        fun roleMappings(value: IntrinsicFunction) {
+  this.roleMappings = value
+}
+        @JvmField
+        var roles: Any? = null
+
         fun roles(value: Json) {
-            this.roles = value
+          this.roles = value
         }
-        fun roles(value: IntrinsicFunction) { this.roles = value }
+        fun roles(value: IntrinsicFunction) {
+  this.roles = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

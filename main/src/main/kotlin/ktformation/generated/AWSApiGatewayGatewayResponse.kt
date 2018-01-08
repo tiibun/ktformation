@@ -10,28 +10,48 @@ import ktformation.*
 class AWSApiGatewayGatewayResponse(logicalId: String) : Resource<AWSApiGatewayGatewayResponse.Properties>(logicalId, "AWS::ApiGateway::GatewayResponse") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var responseParameters: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var responseParameters: Any? = null
+
         fun responseParameters(value: Map<String, Any>) {
-            this.responseParameters = value
+          this.responseParameters = value
         }
+        
+        @JvmField
+        var responseTemplates: Any? = null
 
-        @JvmField var responseTemplates: Any? = null
         fun responseTemplates(value: Map<String, Any>) {
-            this.responseTemplates = value
+          this.responseTemplates = value
         }
+        
+        @JvmField
+        var responseType: Any? = null
 
-        @JvmField var responseType: Any? = null
-        fun responseType(value: String) { this.responseType = value }
-        fun responseType(value: IntrinsicFunction) { this.responseType = value }
-        @JvmField var restApiId: Any? = null
-        fun restApiId(value: String) { this.restApiId = value }
-        fun restApiId(value: IntrinsicFunction) { this.restApiId = value }
-        @JvmField var statusCode: Any? = null
-        fun statusCode(value: String) {
-            this.statusCode = value
+        fun responseType(value: String) {
+          this.responseType = value
         }
-        fun statusCode(value: IntrinsicFunction) { this.statusCode = value }
+        fun responseType(value: IntrinsicFunction) {
+  this.responseType = value
+}
+        @JvmField
+        var restApiId: Any? = null
+
+        fun restApiId(value: String) {
+          this.restApiId = value
+        }
+        fun restApiId(value: IntrinsicFunction) {
+  this.restApiId = value
+}
+        @JvmField
+        var statusCode: Any? = null
+
+        fun statusCode(value: String) {
+          this.statusCode = value
+        }
+        fun statusCode(value: IntrinsicFunction) {
+  this.statusCode = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

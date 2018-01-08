@@ -10,13 +10,25 @@ import ktformation.*
 class AWSEC2VPNGatewayRoutePropagation(logicalId: String) : Resource<AWSEC2VPNGatewayRoutePropagation.Properties>(logicalId, "AWS::EC2::VPNGatewayRoutePropagation") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var routeTableIds: Any? = null
-        fun routeTableIds(value: List<String>) { this.routeTableIds = value }
-        fun routeTableIds(vararg value: IntrinsicFunction) { this.routeTableIds = value }
-        @JvmField var vpnGatewayId: Any? = null
-        fun vpnGatewayId(value: String) { this.vpnGatewayId = value }
-        fun vpnGatewayId(value: IntrinsicFunction) { this.vpnGatewayId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var routeTableIds: Any? = null
+
+        fun routeTableIds(value: List<String>) {
+          this.routeTableIds = value
+        }
+        fun routeTableIds(vararg value: IntrinsicFunction) {
+  this.routeTableIds = value
+}
+        @JvmField
+        var vpnGatewayId: Any? = null
+
+        fun vpnGatewayId(value: String) {
+          this.vpnGatewayId = value
+        }
+        fun vpnGatewayId(value: IntrinsicFunction) {
+  this.vpnGatewayId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

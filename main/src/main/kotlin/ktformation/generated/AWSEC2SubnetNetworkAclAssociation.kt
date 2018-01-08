@@ -10,13 +10,25 @@ import ktformation.*
 class AWSEC2SubnetNetworkAclAssociation(logicalId: String) : Resource<AWSEC2SubnetNetworkAclAssociation.Properties>(logicalId, "AWS::EC2::SubnetNetworkAclAssociation") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var networkAclId: Any? = null
-        fun networkAclId(value: String) { this.networkAclId = value }
-        fun networkAclId(value: IntrinsicFunction) { this.networkAclId = value }
-        @JvmField var subnetId: Any? = null
-        fun subnetId(value: String) { this.subnetId = value }
-        fun subnetId(value: IntrinsicFunction) { this.subnetId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var networkAclId: Any? = null
+
+        fun networkAclId(value: String) {
+          this.networkAclId = value
+        }
+        fun networkAclId(value: IntrinsicFunction) {
+  this.networkAclId = value
+}
+        @JvmField
+        var subnetId: Any? = null
+
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        fun subnetId(value: IntrinsicFunction) {
+  this.subnetId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

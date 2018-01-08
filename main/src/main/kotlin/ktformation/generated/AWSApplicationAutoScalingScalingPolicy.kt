@@ -10,43 +10,79 @@ import ktformation.*
 class AWSApplicationAutoScalingScalingPolicy(logicalId: String) : Resource<AWSApplicationAutoScalingScalingPolicy.Properties>(logicalId, "AWS::ApplicationAutoScaling::ScalingPolicy") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var policyName: Any? = null
-        fun policyName(value: String) { this.policyName = value }
-        fun policyName(value: IntrinsicFunction) { this.policyName = value }
-        @JvmField var policyType: Any? = null
-        fun policyType(value: String) { this.policyType = value }
-        fun policyType(value: IntrinsicFunction) { this.policyType = value }
-        @JvmField var resourceId: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var policyName: Any? = null
+
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        fun policyName(value: IntrinsicFunction) {
+  this.policyName = value
+}
+        @JvmField
+        var policyType: Any? = null
+
+        fun policyType(value: String) {
+          this.policyType = value
+        }
+        fun policyType(value: IntrinsicFunction) {
+  this.policyType = value
+}
+        @JvmField
+        var resourceId: Any? = null
+
         fun resourceId(value: String) {
-            this.resourceId = value
+          this.resourceId = value
         }
-        fun resourceId(value: IntrinsicFunction) { this.resourceId = value }
-        @JvmField var scalableDimension: Any? = null
+        fun resourceId(value: IntrinsicFunction) {
+  this.resourceId = value
+}
+        @JvmField
+        var scalableDimension: Any? = null
+
         fun scalableDimension(value: String) {
-            this.scalableDimension = value
+          this.scalableDimension = value
         }
-        fun scalableDimension(value: IntrinsicFunction) { this.scalableDimension = value }
-        @JvmField var scalingTargetId: Any? = null
+        fun scalableDimension(value: IntrinsicFunction) {
+  this.scalableDimension = value
+}
+        @JvmField
+        var scalingTargetId: Any? = null
+
         fun scalingTargetId(value: String) {
-            this.scalingTargetId = value
+          this.scalingTargetId = value
         }
-        fun scalingTargetId(value: IntrinsicFunction) { this.scalingTargetId = value }
-        @JvmField var serviceNamespace: Any? = null
+        fun scalingTargetId(value: IntrinsicFunction) {
+  this.scalingTargetId = value
+}
+        @JvmField
+        var serviceNamespace: Any? = null
+
         fun serviceNamespace(value: String) {
-            this.serviceNamespace = value
+          this.serviceNamespace = value
         }
-        fun serviceNamespace(value: IntrinsicFunction) { this.serviceNamespace = value }
-        @JvmField var stepScalingPolicyConfiguration: Any? = null
+        fun serviceNamespace(value: IntrinsicFunction) {
+  this.serviceNamespace = value
+}
+        @JvmField
+        var stepScalingPolicyConfiguration: Any? = null
+
         fun stepScalingPolicyConfiguration(value: StepScalingPolicyConfiguration) {
-            this.stepScalingPolicyConfiguration = value
+          this.stepScalingPolicyConfiguration = value
         }
-        fun stepScalingPolicyConfiguration(value: IntrinsicFunction) { this.stepScalingPolicyConfiguration = value }
-        @JvmField var targetTrackingScalingPolicyConfiguration: Any? = null
+        fun stepScalingPolicyConfiguration(value: IntrinsicFunction) {
+  this.stepScalingPolicyConfiguration = value
+}
+        @JvmField
+        var targetTrackingScalingPolicyConfiguration: Any? = null
+
         fun targetTrackingScalingPolicyConfiguration(value: TargetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = value
+          this.targetTrackingScalingPolicyConfiguration = value
         }
-        fun targetTrackingScalingPolicyConfiguration(value: IntrinsicFunction) { this.targetTrackingScalingPolicyConfiguration = value }
+        fun targetTrackingScalingPolicyConfiguration(value: IntrinsicFunction) {
+  this.targetTrackingScalingPolicyConfiguration = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

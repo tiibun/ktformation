@@ -10,81 +10,147 @@ import ktformation.*
 class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.Properties>(logicalId, "AWS::Serverless::Function") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var codeUri: Any? = null
-        fun codeUri(value: S3LocationOrString) { this.codeUri = value }
-        fun codeUri(value: IntrinsicFunction) { this.codeUri = value }
-        @JvmField var deadLetterQueue: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var codeUri: Any? = null
+
+        fun codeUri(value: S3LocationOrString) {
+          this.codeUri = value
+        }
+        fun codeUri(value: IntrinsicFunction) {
+  this.codeUri = value
+}
+        @JvmField
+        var deadLetterQueue: Any? = null
+
         fun deadLetterQueue(value: DeadLetterQueue) {
-            this.deadLetterQueue = value
+          this.deadLetterQueue = value
         }
-        fun deadLetterQueue(value: IntrinsicFunction) { this.deadLetterQueue = value }
-        @JvmField var description: Any? = null
+        fun deadLetterQueue(value: IntrinsicFunction) {
+  this.deadLetterQueue = value
+}
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var environment: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var environment: Any? = null
+
         fun environment(value: FunctionEnvironment) {
-            this.environment = value
+          this.environment = value
         }
-        fun environment(value: IntrinsicFunction) { this.environment = value }
-        @JvmField var events: Any? = null
+        fun environment(value: IntrinsicFunction) {
+  this.environment = value
+}
+        @JvmField
+        var events: Any? = null
+
         fun events(value: Map<String, Any>) {
-            this.events = value
+          this.events = value
         }
+        
+        @JvmField
+        var functionName: Any? = null
 
-        @JvmField var functionName: Any? = null
         fun functionName(value: String) {
-            this.functionName = value
+          this.functionName = value
         }
-        fun functionName(value: IntrinsicFunction) { this.functionName = value }
-        @JvmField var handler: Any? = null
-        fun handler(value: String) { this.handler = value }
-        fun handler(value: IntrinsicFunction) { this.handler = value }
-        @JvmField var kmsKeyArn: Any? = null
-        fun kmsKeyArn(value: String) {
-            this.kmsKeyArn = value
-        }
-        fun kmsKeyArn(value: IntrinsicFunction) { this.kmsKeyArn = value }
-        @JvmField var memorySize: Any? = null
-        fun memorySize(value: Int) {
-            this.memorySize = value
-        }
-        fun memorySize(value: IntrinsicFunction) { this.memorySize = value }
-        @JvmField var policies: Any? = null
-        fun policies(value: IAMPolicyDocumentOrString) {
-            this.policies = value
-        }
-        fun policies(value: IntrinsicFunction) { this.policies = value }
-        @JvmField var role: Any? = null
-        fun role(value: String) {
-            this.role = value
-        }
-        fun role(value: IntrinsicFunction) { this.role = value }
-        @JvmField var runtime: Any? = null
-        fun runtime(value: String) { this.runtime = value }
-        fun runtime(value: IntrinsicFunction) { this.runtime = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: Map<String, Any>) {
-            this.tags = value
-        }
+        fun functionName(value: IntrinsicFunction) {
+  this.functionName = value
+}
+        @JvmField
+        var handler: Any? = null
 
-        @JvmField var timeout: Any? = null
+        fun handler(value: String) {
+          this.handler = value
+        }
+        fun handler(value: IntrinsicFunction) {
+  this.handler = value
+}
+        @JvmField
+        var kmsKeyArn: Any? = null
+
+        fun kmsKeyArn(value: String) {
+          this.kmsKeyArn = value
+        }
+        fun kmsKeyArn(value: IntrinsicFunction) {
+  this.kmsKeyArn = value
+}
+        @JvmField
+        var memorySize: Any? = null
+
+        fun memorySize(value: Int) {
+          this.memorySize = value
+        }
+        fun memorySize(value: IntrinsicFunction) {
+  this.memorySize = value
+}
+        @JvmField
+        var policies: Any? = null
+
+        fun policies(value: IAMPolicyDocumentOrString) {
+          this.policies = value
+        }
+        fun policies(value: IntrinsicFunction) {
+  this.policies = value
+}
+        @JvmField
+        var role: Any? = null
+
+        fun role(value: String) {
+          this.role = value
+        }
+        fun role(value: IntrinsicFunction) {
+  this.role = value
+}
+        @JvmField
+        var runtime: Any? = null
+
+        fun runtime(value: String) {
+          this.runtime = value
+        }
+        fun runtime(value: IntrinsicFunction) {
+  this.runtime = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: Map<String, Any>) {
+          this.tags = value
+        }
+        
+        @JvmField
+        var timeout: Any? = null
+
         fun timeout(value: Int) {
-            this.timeout = value
+          this.timeout = value
         }
-        fun timeout(value: IntrinsicFunction) { this.timeout = value }
-        @JvmField var tracing: Any? = null
+        fun timeout(value: IntrinsicFunction) {
+  this.timeout = value
+}
+        @JvmField
+        var tracing: Any? = null
+
         fun tracing(value: String) {
-            this.tracing = value
+          this.tracing = value
         }
-        fun tracing(value: IntrinsicFunction) { this.tracing = value }
-        @JvmField var vpcConfig: Any? = null
+        fun tracing(value: IntrinsicFunction) {
+  this.tracing = value
+}
+        @JvmField
+        var vpcConfig: Any? = null
+
         fun vpcConfig(value: VpcConfig) {
-            this.vpcConfig = value
+          this.vpcConfig = value
         }
-        fun vpcConfig(value: IntrinsicFunction) { this.vpcConfig = value }
+        fun vpcConfig(value: IntrinsicFunction) {
+  this.vpcConfig = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,27 +10,43 @@ import ktformation.*
 class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties>(logicalId, "AWS::EFS::FileSystem") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var encrypted: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var encrypted: Any? = null
+
         fun encrypted(value: Boolean) {
-            this.encrypted = value
+          this.encrypted = value
         }
-        fun encrypted(value: IntrinsicFunction) { this.encrypted = value }
-        @JvmField var fileSystemTags: Any? = null
+        fun encrypted(value: IntrinsicFunction) {
+  this.encrypted = value
+}
+        @JvmField
+        var fileSystemTags: Any? = null
+
         fun fileSystemTags(value: List<ElasticFileSystemTag>) {
-            this.fileSystemTags = value
+          this.fileSystemTags = value
         }
-        fun fileSystemTags(vararg value: IntrinsicFunction) { this.fileSystemTags = value }
-        @JvmField var kmsKeyId: Any? = null
+        fun fileSystemTags(vararg value: IntrinsicFunction) {
+  this.fileSystemTags = value
+}
+        @JvmField
+        var kmsKeyId: Any? = null
+
         fun kmsKeyId(value: String) {
-            this.kmsKeyId = value
+          this.kmsKeyId = value
         }
-        fun kmsKeyId(value: IntrinsicFunction) { this.kmsKeyId = value }
-        @JvmField var performanceMode: Any? = null
+        fun kmsKeyId(value: IntrinsicFunction) {
+  this.kmsKeyId = value
+}
+        @JvmField
+        var performanceMode: Any? = null
+
         fun performanceMode(value: String) {
-            this.performanceMode = value
+          this.performanceMode = value
         }
-        fun performanceMode(value: IntrinsicFunction) { this.performanceMode = value }
+        fun performanceMode(value: IntrinsicFunction) {
+  this.performanceMode = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

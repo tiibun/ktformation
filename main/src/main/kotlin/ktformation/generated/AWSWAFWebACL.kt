@@ -10,21 +10,43 @@ import ktformation.*
 class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logicalId, "AWS::WAF::WebACL") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var defaultAction: Any? = null
-        fun defaultAction(value: WafAction) { this.defaultAction = value }
-        fun defaultAction(value: IntrinsicFunction) { this.defaultAction = value }
-        @JvmField var metricName: Any? = null
-        fun metricName(value: String) { this.metricName = value }
-        fun metricName(value: IntrinsicFunction) { this.metricName = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var rules: Any? = null
-        fun rules(value: List<ActivatedRule>) {
-            this.rules = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var defaultAction: Any? = null
+
+        fun defaultAction(value: WafAction) {
+          this.defaultAction = value
         }
-        fun rules(vararg value: IntrinsicFunction) { this.rules = value }
+        fun defaultAction(value: IntrinsicFunction) {
+  this.defaultAction = value
+}
+        @JvmField
+        var metricName: Any? = null
+
+        fun metricName(value: String) {
+          this.metricName = value
+        }
+        fun metricName(value: IntrinsicFunction) {
+  this.metricName = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var rules: Any? = null
+
+        fun rules(value: List<ActivatedRule>) {
+          this.rules = value
+        }
+        fun rules(vararg value: IntrinsicFunction) {
+  this.rules = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

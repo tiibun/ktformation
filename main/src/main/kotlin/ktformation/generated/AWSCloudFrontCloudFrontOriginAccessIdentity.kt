@@ -10,10 +10,16 @@ import ktformation.*
 class AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId: String) : Resource<AWSCloudFrontCloudFrontOriginAccessIdentity.Properties>(logicalId, "AWS::CloudFront::CloudFrontOriginAccessIdentity") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var cloudFrontOriginAccessIdentityConfig: Any? = null
-        fun cloudFrontOriginAccessIdentityConfig(value: CloudFrontOriginAccessIdentityConfig) { this.cloudFrontOriginAccessIdentityConfig = value }
-        fun cloudFrontOriginAccessIdentityConfig(value: IntrinsicFunction) { this.cloudFrontOriginAccessIdentityConfig = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var cloudFrontOriginAccessIdentityConfig: Any? = null
+
+        fun cloudFrontOriginAccessIdentityConfig(value: CloudFrontOriginAccessIdentityConfig) {
+          this.cloudFrontOriginAccessIdentityConfig = value
+        }
+        fun cloudFrontOriginAccessIdentityConfig(value: IntrinsicFunction) {
+  this.cloudFrontOriginAccessIdentityConfig = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

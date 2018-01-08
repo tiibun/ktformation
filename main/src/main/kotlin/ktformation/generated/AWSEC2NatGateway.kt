@@ -10,18 +10,34 @@ import ktformation.*
 class AWSEC2NatGateway(logicalId: String) : Resource<AWSEC2NatGateway.Properties>(logicalId, "AWS::EC2::NatGateway") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var allocationId: Any? = null
-        fun allocationId(value: String) { this.allocationId = value }
-        fun allocationId(value: IntrinsicFunction) { this.allocationId = value }
-        @JvmField var subnetId: Any? = null
-        fun subnetId(value: String) { this.subnetId = value }
-        fun subnetId(value: IntrinsicFunction) { this.subnetId = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) {
-            this.tags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var allocationId: Any? = null
+
+        fun allocationId(value: String) {
+          this.allocationId = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun allocationId(value: IntrinsicFunction) {
+  this.allocationId = value
+}
+        @JvmField
+        var subnetId: Any? = null
+
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        fun subnetId(value: IntrinsicFunction) {
+  this.subnetId = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

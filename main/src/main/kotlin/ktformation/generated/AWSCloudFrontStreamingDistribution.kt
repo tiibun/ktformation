@@ -10,13 +10,25 @@ import ktformation.*
 class AWSCloudFrontStreamingDistribution(logicalId: String) : Resource<AWSCloudFrontStreamingDistribution.Properties>(logicalId, "AWS::CloudFront::StreamingDistribution") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var streamingDistributionConfig: Any? = null
-        fun streamingDistributionConfig(value: StreamingDistributionConfig) { this.streamingDistributionConfig = value }
-        fun streamingDistributionConfig(value: IntrinsicFunction) { this.streamingDistributionConfig = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) { this.tags = value }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var streamingDistributionConfig: Any? = null
+
+        fun streamingDistributionConfig(value: StreamingDistributionConfig) {
+          this.streamingDistributionConfig = value
+        }
+        fun streamingDistributionConfig(value: IntrinsicFunction) {
+  this.streamingDistributionConfig = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

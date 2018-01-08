@@ -10,17 +10,25 @@ import ktformation.*
 class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalId, "AWS::IoT::Thing") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var attributePayload: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var attributePayload: Any? = null
+
         fun attributePayload(value: AttributePayload) {
-            this.attributePayload = value
+          this.attributePayload = value
         }
-        fun attributePayload(value: IntrinsicFunction) { this.attributePayload = value }
-        @JvmField var thingName: Any? = null
+        fun attributePayload(value: IntrinsicFunction) {
+  this.attributePayload = value
+}
+        @JvmField
+        var thingName: Any? = null
+
         fun thingName(value: String) {
-            this.thingName = value
+          this.thingName = value
         }
-        fun thingName(value: IntrinsicFunction) { this.thingName = value }
+        fun thingName(value: IntrinsicFunction) {
+  this.thingName = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

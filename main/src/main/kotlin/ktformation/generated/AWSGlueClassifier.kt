@@ -10,12 +10,16 @@ import ktformation.*
 class AWSGlueClassifier(logicalId: String) : Resource<AWSGlueClassifier.Properties>(logicalId, "AWS::Glue::Classifier") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var grokClassifier: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var grokClassifier: Any? = null
+
         fun grokClassifier(value: GrokClassifier) {
-            this.grokClassifier = value
+          this.grokClassifier = value
         }
-        fun grokClassifier(value: IntrinsicFunction) { this.grokClassifier = value }
+        fun grokClassifier(value: IntrinsicFunction) {
+  this.grokClassifier = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

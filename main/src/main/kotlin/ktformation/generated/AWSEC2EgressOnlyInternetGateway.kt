@@ -10,10 +10,16 @@ import ktformation.*
 class AWSEC2EgressOnlyInternetGateway(logicalId: String) : Resource<AWSEC2EgressOnlyInternetGateway.Properties>(logicalId, "AWS::EC2::EgressOnlyInternetGateway") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var vpcId: Any? = null
-        fun vpcId(value: String) { this.vpcId = value }
-        fun vpcId(value: IntrinsicFunction) { this.vpcId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var vpcId: Any? = null
+
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        fun vpcId(value: IntrinsicFunction) {
+  this.vpcId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

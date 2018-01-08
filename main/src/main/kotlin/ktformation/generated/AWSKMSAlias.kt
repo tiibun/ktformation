@@ -10,13 +10,25 @@ import ktformation.*
 class AWSKMSAlias(logicalId: String) : Resource<AWSKMSAlias.Properties>(logicalId, "AWS::KMS::Alias") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var aliasName: Any? = null
-        fun aliasName(value: String) { this.aliasName = value }
-        fun aliasName(value: IntrinsicFunction) { this.aliasName = value }
-        @JvmField var targetKeyId: Any? = null
-        fun targetKeyId(value: String) { this.targetKeyId = value }
-        fun targetKeyId(value: IntrinsicFunction) { this.targetKeyId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var aliasName: Any? = null
+
+        fun aliasName(value: String) {
+          this.aliasName = value
+        }
+        fun aliasName(value: IntrinsicFunction) {
+  this.aliasName = value
+}
+        @JvmField
+        var targetKeyId: Any? = null
+
+        fun targetKeyId(value: String) {
+          this.targetKeyId = value
+        }
+        fun targetKeyId(value: IntrinsicFunction) {
+  this.targetKeyId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

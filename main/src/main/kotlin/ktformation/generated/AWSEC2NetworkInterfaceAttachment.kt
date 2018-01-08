@@ -10,21 +10,43 @@ import ktformation.*
 class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2NetworkInterfaceAttachment.Properties>(logicalId, "AWS::EC2::NetworkInterfaceAttachment") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var deleteOnTermination: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var deleteOnTermination: Any? = null
+
         fun deleteOnTermination(value: Boolean) {
-            this.deleteOnTermination = value
+          this.deleteOnTermination = value
         }
-        fun deleteOnTermination(value: IntrinsicFunction) { this.deleteOnTermination = value }
-        @JvmField var deviceIndex: Any? = null
-        fun deviceIndex(value: String) { this.deviceIndex = value }
-        fun deviceIndex(value: IntrinsicFunction) { this.deviceIndex = value }
-        @JvmField var instanceId: Any? = null
-        fun instanceId(value: String) { this.instanceId = value }
-        fun instanceId(value: IntrinsicFunction) { this.instanceId = value }
-        @JvmField var networkInterfaceId: Any? = null
-        fun networkInterfaceId(value: String) { this.networkInterfaceId = value }
-        fun networkInterfaceId(value: IntrinsicFunction) { this.networkInterfaceId = value }
+        fun deleteOnTermination(value: IntrinsicFunction) {
+  this.deleteOnTermination = value
+}
+        @JvmField
+        var deviceIndex: Any? = null
+
+        fun deviceIndex(value: String) {
+          this.deviceIndex = value
+        }
+        fun deviceIndex(value: IntrinsicFunction) {
+  this.deviceIndex = value
+}
+        @JvmField
+        var instanceId: Any? = null
+
+        fun instanceId(value: String) {
+          this.instanceId = value
+        }
+        fun instanceId(value: IntrinsicFunction) {
+  this.instanceId = value
+}
+        @JvmField
+        var networkInterfaceId: Any? = null
+
+        fun networkInterfaceId(value: String) {
+          this.networkInterfaceId = value
+        }
+        fun networkInterfaceId(value: IntrinsicFunction) {
+  this.networkInterfaceId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

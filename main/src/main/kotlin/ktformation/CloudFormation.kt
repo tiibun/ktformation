@@ -1,7 +1,6 @@
 package ktformation
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import ktformation.transform.AWSInclude
 
 @DslMarker
 annotation class CloudFormationMarker
@@ -55,6 +54,16 @@ data class CloudFormation(
         }
     }
 
+    fun transform(serverless: String): Transform {
+        transform = serverless
+        return transform as Transform
+    }
+
+    fun transform(init: () -> AWSInclude): Transform {
+        transform = init()
+        return transform as Transform
+    }
+
     fun resources(init: Resources.() -> Unit): Resources {
         return Resources().also {
             it.init()
@@ -69,10 +78,5 @@ data class CloudFormation(
         }
     }
 }
-
-/**
- * String | [AWSInclude]
- */
-typealias Transform = Any
 
 fun cloudFormation(block: CloudFormation.() -> Unit): CloudFormation = CloudFormation().apply(block)

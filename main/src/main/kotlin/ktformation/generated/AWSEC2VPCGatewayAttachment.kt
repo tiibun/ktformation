@@ -10,20 +10,34 @@ import ktformation.*
 class AWSEC2VPCGatewayAttachment(logicalId: String) : Resource<AWSEC2VPCGatewayAttachment.Properties>(logicalId, "AWS::EC2::VPCGatewayAttachment") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var internetGatewayId: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var internetGatewayId: Any? = null
+
         fun internetGatewayId(value: String) {
-            this.internetGatewayId = value
+          this.internetGatewayId = value
         }
-        fun internetGatewayId(value: IntrinsicFunction) { this.internetGatewayId = value }
-        @JvmField var vpcId: Any? = null
-        fun vpcId(value: String) { this.vpcId = value }
-        fun vpcId(value: IntrinsicFunction) { this.vpcId = value }
-        @JvmField var vpnGatewayId: Any? = null
+        fun internetGatewayId(value: IntrinsicFunction) {
+  this.internetGatewayId = value
+}
+        @JvmField
+        var vpcId: Any? = null
+
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        fun vpcId(value: IntrinsicFunction) {
+  this.vpcId = value
+}
+        @JvmField
+        var vpnGatewayId: Any? = null
+
         fun vpnGatewayId(value: String) {
-            this.vpnGatewayId = value
+          this.vpnGatewayId = value
         }
-        fun vpnGatewayId(value: IntrinsicFunction) { this.vpnGatewayId = value }
+        fun vpnGatewayId(value: IntrinsicFunction) {
+  this.vpnGatewayId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

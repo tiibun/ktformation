@@ -10,22 +10,34 @@ import ktformation.*
 class AWSElasticBeanstalkApplication(logicalId: String) : Resource<AWSElasticBeanstalkApplication.Properties>(logicalId, "AWS::ElasticBeanstalk::Application") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var applicationName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var applicationName: Any? = null
+
         fun applicationName(value: String) {
-            this.applicationName = value
+          this.applicationName = value
         }
-        fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
-        @JvmField var description: Any? = null
+        fun applicationName(value: IntrinsicFunction) {
+  this.applicationName = value
+}
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var resourceLifecycleConfig: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var resourceLifecycleConfig: Any? = null
+
         fun resourceLifecycleConfig(value: ApplicationResourceLifecycleConfig) {
-            this.resourceLifecycleConfig = value
+          this.resourceLifecycleConfig = value
         }
-        fun resourceLifecycleConfig(value: IntrinsicFunction) { this.resourceLifecycleConfig = value }
+        fun resourceLifecycleConfig(value: IntrinsicFunction) {
+  this.resourceLifecycleConfig = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

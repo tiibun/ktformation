@@ -10,12 +10,16 @@ import ktformation.*
 class AWSEC2PlacementGroup(logicalId: String) : Resource<AWSEC2PlacementGroup.Properties>(logicalId, "AWS::EC2::PlacementGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var strategy: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var strategy: Any? = null
+
         fun strategy(value: String) {
-            this.strategy = value
+          this.strategy = value
         }
-        fun strategy(value: IntrinsicFunction) { this.strategy = value }
+        fun strategy(value: IntrinsicFunction) {
+  this.strategy = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

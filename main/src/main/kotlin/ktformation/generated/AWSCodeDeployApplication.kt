@@ -10,17 +10,25 @@ import ktformation.*
 class AWSCodeDeployApplication(logicalId: String) : Resource<AWSCodeDeployApplication.Properties>(logicalId, "AWS::CodeDeploy::Application") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var applicationName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var applicationName: Any? = null
+
         fun applicationName(value: String) {
-            this.applicationName = value
+          this.applicationName = value
         }
-        fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
-        @JvmField var computePlatform: Any? = null
+        fun applicationName(value: IntrinsicFunction) {
+  this.applicationName = value
+}
+        @JvmField
+        var computePlatform: Any? = null
+
         fun computePlatform(value: String) {
-            this.computePlatform = value
+          this.computePlatform = value
         }
-        fun computePlatform(value: IntrinsicFunction) { this.computePlatform = value }
+        fun computePlatform(value: IntrinsicFunction) {
+  this.computePlatform = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

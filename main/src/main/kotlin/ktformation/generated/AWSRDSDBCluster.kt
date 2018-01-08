@@ -10,95 +10,169 @@ import ktformation.*
 class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(logicalId, "AWS::RDS::DBCluster") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var availabilityZones: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var availabilityZones: Any? = null
+
         fun availabilityZones(value: List<String>) {
-            this.availabilityZones = value
+          this.availabilityZones = value
         }
-        fun availabilityZones(vararg value: IntrinsicFunction) { this.availabilityZones = value }
-        @JvmField var backupRetentionPeriod: Any? = null
+        fun availabilityZones(vararg value: IntrinsicFunction) {
+  this.availabilityZones = value
+}
+        @JvmField
+        var backupRetentionPeriod: Any? = null
+
         fun backupRetentionPeriod(value: Int) {
-            this.backupRetentionPeriod = value
+          this.backupRetentionPeriod = value
         }
-        fun backupRetentionPeriod(value: IntrinsicFunction) { this.backupRetentionPeriod = value }
-        @JvmField var dBClusterParameterGroupName: Any? = null
+        fun backupRetentionPeriod(value: IntrinsicFunction) {
+  this.backupRetentionPeriod = value
+}
+        @JvmField
+        var dBClusterParameterGroupName: Any? = null
+
         fun dBClusterParameterGroupName(value: String) {
-            this.dBClusterParameterGroupName = value
+          this.dBClusterParameterGroupName = value
         }
-        fun dBClusterParameterGroupName(value: IntrinsicFunction) { this.dBClusterParameterGroupName = value }
-        @JvmField var dBSubnetGroupName: Any? = null
+        fun dBClusterParameterGroupName(value: IntrinsicFunction) {
+  this.dBClusterParameterGroupName = value
+}
+        @JvmField
+        var dBSubnetGroupName: Any? = null
+
         fun dBSubnetGroupName(value: String) {
-            this.dBSubnetGroupName = value
+          this.dBSubnetGroupName = value
         }
-        fun dBSubnetGroupName(value: IntrinsicFunction) { this.dBSubnetGroupName = value }
-        @JvmField var databaseName: Any? = null
+        fun dBSubnetGroupName(value: IntrinsicFunction) {
+  this.dBSubnetGroupName = value
+}
+        @JvmField
+        var databaseName: Any? = null
+
         fun databaseName(value: String) {
-            this.databaseName = value
+          this.databaseName = value
         }
-        fun databaseName(value: IntrinsicFunction) { this.databaseName = value }
-        @JvmField var engine: Any? = null
-        fun engine(value: String) { this.engine = value }
-        fun engine(value: IntrinsicFunction) { this.engine = value }
-        @JvmField var engineVersion: Any? = null
+        fun databaseName(value: IntrinsicFunction) {
+  this.databaseName = value
+}
+        @JvmField
+        var engine: Any? = null
+
+        fun engine(value: String) {
+          this.engine = value
+        }
+        fun engine(value: IntrinsicFunction) {
+  this.engine = value
+}
+        @JvmField
+        var engineVersion: Any? = null
+
         fun engineVersion(value: String) {
-            this.engineVersion = value
+          this.engineVersion = value
         }
-        fun engineVersion(value: IntrinsicFunction) { this.engineVersion = value }
-        @JvmField var kmsKeyId: Any? = null
+        fun engineVersion(value: IntrinsicFunction) {
+  this.engineVersion = value
+}
+        @JvmField
+        var kmsKeyId: Any? = null
+
         fun kmsKeyId(value: String) {
-            this.kmsKeyId = value
+          this.kmsKeyId = value
         }
-        fun kmsKeyId(value: IntrinsicFunction) { this.kmsKeyId = value }
-        @JvmField var masterUserPassword: Any? = null
+        fun kmsKeyId(value: IntrinsicFunction) {
+  this.kmsKeyId = value
+}
+        @JvmField
+        var masterUserPassword: Any? = null
+
         fun masterUserPassword(value: String) {
-            this.masterUserPassword = value
+          this.masterUserPassword = value
         }
-        fun masterUserPassword(value: IntrinsicFunction) { this.masterUserPassword = value }
-        @JvmField var masterUsername: Any? = null
+        fun masterUserPassword(value: IntrinsicFunction) {
+  this.masterUserPassword = value
+}
+        @JvmField
+        var masterUsername: Any? = null
+
         fun masterUsername(value: String) {
-            this.masterUsername = value
+          this.masterUsername = value
         }
-        fun masterUsername(value: IntrinsicFunction) { this.masterUsername = value }
-        @JvmField var port: Any? = null
+        fun masterUsername(value: IntrinsicFunction) {
+  this.masterUsername = value
+}
+        @JvmField
+        var port: Any? = null
+
         fun port(value: Int) {
-            this.port = value
+          this.port = value
         }
-        fun port(value: IntrinsicFunction) { this.port = value }
-        @JvmField var preferredBackupWindow: Any? = null
+        fun port(value: IntrinsicFunction) {
+  this.port = value
+}
+        @JvmField
+        var preferredBackupWindow: Any? = null
+
         fun preferredBackupWindow(value: String) {
-            this.preferredBackupWindow = value
+          this.preferredBackupWindow = value
         }
-        fun preferredBackupWindow(value: IntrinsicFunction) { this.preferredBackupWindow = value }
-        @JvmField var preferredMaintenanceWindow: Any? = null
+        fun preferredBackupWindow(value: IntrinsicFunction) {
+  this.preferredBackupWindow = value
+}
+        @JvmField
+        var preferredMaintenanceWindow: Any? = null
+
         fun preferredMaintenanceWindow(value: String) {
-            this.preferredMaintenanceWindow = value
+          this.preferredMaintenanceWindow = value
         }
-        fun preferredMaintenanceWindow(value: IntrinsicFunction) { this.preferredMaintenanceWindow = value }
-        @JvmField var replicationSourceIdentifier: Any? = null
+        fun preferredMaintenanceWindow(value: IntrinsicFunction) {
+  this.preferredMaintenanceWindow = value
+}
+        @JvmField
+        var replicationSourceIdentifier: Any? = null
+
         fun replicationSourceIdentifier(value: String) {
-            this.replicationSourceIdentifier = value
+          this.replicationSourceIdentifier = value
         }
-        fun replicationSourceIdentifier(value: IntrinsicFunction) { this.replicationSourceIdentifier = value }
-        @JvmField var snapshotIdentifier: Any? = null
+        fun replicationSourceIdentifier(value: IntrinsicFunction) {
+  this.replicationSourceIdentifier = value
+}
+        @JvmField
+        var snapshotIdentifier: Any? = null
+
         fun snapshotIdentifier(value: String) {
-            this.snapshotIdentifier = value
+          this.snapshotIdentifier = value
         }
-        fun snapshotIdentifier(value: IntrinsicFunction) { this.snapshotIdentifier = value }
-        @JvmField var storageEncrypted: Any? = null
+        fun snapshotIdentifier(value: IntrinsicFunction) {
+  this.snapshotIdentifier = value
+}
+        @JvmField
+        var storageEncrypted: Any? = null
+
         fun storageEncrypted(value: Boolean) {
-            this.storageEncrypted = value
+          this.storageEncrypted = value
         }
-        fun storageEncrypted(value: IntrinsicFunction) { this.storageEncrypted = value }
-        @JvmField var tags: Any? = null
+        fun storageEncrypted(value: IntrinsicFunction) {
+  this.storageEncrypted = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var vpcSecurityGroupIds: Any? = null
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var vpcSecurityGroupIds: Any? = null
+
         fun vpcSecurityGroupIds(value: List<String>) {
-            this.vpcSecurityGroupIds = value
+          this.vpcSecurityGroupIds = value
         }
-        fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) { this.vpcSecurityGroupIds = value }
+        fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) {
+  this.vpcSecurityGroupIds = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

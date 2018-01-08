@@ -10,17 +10,25 @@ import ktformation.*
 class AWSEC2EIP(logicalId: String) : Resource<AWSEC2EIP.Properties>(logicalId, "AWS::EC2::EIP") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var domain: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var domain: Any? = null
+
         fun domain(value: String) {
-            this.domain = value
+          this.domain = value
         }
-        fun domain(value: IntrinsicFunction) { this.domain = value }
-        @JvmField var instanceId: Any? = null
+        fun domain(value: IntrinsicFunction) {
+  this.domain = value
+}
+        @JvmField
+        var instanceId: Any? = null
+
         fun instanceId(value: String) {
-            this.instanceId = value
+          this.instanceId = value
         }
-        fun instanceId(value: IntrinsicFunction) { this.instanceId = value }
+        fun instanceId(value: IntrinsicFunction) {
+  this.instanceId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

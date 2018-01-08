@@ -10,15 +10,25 @@ import ktformation.*
 class AWSWAFRegionalSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFRegionalSqlInjectionMatchSet.Properties>(logicalId, "AWS::WAFRegional::SqlInjectionMatchSet") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var sqlInjectionMatchTuples: Any? = null
-        fun sqlInjectionMatchTuples(value: List<SqlInjectionMatchTuple>) {
-            this.sqlInjectionMatchTuples = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
         }
-        fun sqlInjectionMatchTuples(vararg value: IntrinsicFunction) { this.sqlInjectionMatchTuples = value }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var sqlInjectionMatchTuples: Any? = null
+
+        fun sqlInjectionMatchTuples(value: List<SqlInjectionMatchTuple>) {
+          this.sqlInjectionMatchTuples = value
+        }
+        fun sqlInjectionMatchTuples(vararg value: IntrinsicFunction) {
+  this.sqlInjectionMatchTuples = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

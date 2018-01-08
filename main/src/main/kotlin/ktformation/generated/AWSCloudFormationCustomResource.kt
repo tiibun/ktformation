@@ -10,10 +10,16 @@ import ktformation.*
 class AWSCloudFormationCustomResource(logicalId: String) : Resource<AWSCloudFormationCustomResource.Properties>(logicalId, "AWS::CloudFormation::CustomResource") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var serviceToken: Any? = null
-        fun serviceToken(value: String) { this.serviceToken = value }
-        fun serviceToken(value: IntrinsicFunction) { this.serviceToken = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var serviceToken: Any? = null
+
+        fun serviceToken(value: String) {
+          this.serviceToken = value
+        }
+        fun serviceToken(value: IntrinsicFunction) {
+  this.serviceToken = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

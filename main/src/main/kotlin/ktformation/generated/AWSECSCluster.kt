@@ -10,12 +10,16 @@ import ktformation.*
 class AWSECSCluster(logicalId: String) : Resource<AWSECSCluster.Properties>(logicalId, "AWS::ECS::Cluster") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var clusterName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var clusterName: Any? = null
+
         fun clusterName(value: String) {
-            this.clusterName = value
+          this.clusterName = value
         }
-        fun clusterName(value: IntrinsicFunction) { this.clusterName = value }
+        fun clusterName(value: IntrinsicFunction) {
+  this.clusterName = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,22 +10,34 @@ import ktformation.*
 class AWSGameLiftBuild(logicalId: String) : Resource<AWSGameLiftBuild.Properties>(logicalId, "AWS::GameLift::Build") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var name: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var name: Any? = null
+
         fun name(value: String) {
-            this.name = value
+          this.name = value
         }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var storageLocation: Any? = null
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var storageLocation: Any? = null
+
         fun storageLocation(value: S3Location) {
-            this.storageLocation = value
+          this.storageLocation = value
         }
-        fun storageLocation(value: IntrinsicFunction) { this.storageLocation = value }
-        @JvmField var version: Any? = null
+        fun storageLocation(value: IntrinsicFunction) {
+  this.storageLocation = value
+}
+        @JvmField
+        var version: Any? = null
+
         fun version(value: String) {
-            this.version = value
+          this.version = value
         }
-        fun version(value: IntrinsicFunction) { this.version = value }
+        fun version(value: IntrinsicFunction) {
+  this.version = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

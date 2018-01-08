@@ -10,30 +10,50 @@ import ktformation.*
 class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStack.Properties>(logicalId, "AWS::CloudFormation::Stack") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var notificationARNs: Any? = null
-        fun notificationARNs(value: List<String>) {
-            this.notificationARNs = value
-        }
-        fun notificationARNs(vararg value: IntrinsicFunction) { this.notificationARNs = value }
-        @JvmField var parameters: Any? = null
-        fun parameters(value: Map<String, Any>) {
-            this.parameters = value
-        }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var notificationARNs: Any? = null
 
-        @JvmField var tags: Any? = null
+        fun notificationARNs(value: List<String>) {
+          this.notificationARNs = value
+        }
+        fun notificationARNs(vararg value: IntrinsicFunction) {
+  this.notificationARNs = value
+}
+        @JvmField
+        var parameters: Any? = null
+
+        fun parameters(value: Map<String, Any>) {
+          this.parameters = value
+        }
+        
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var templateURL: Any? = null
-        fun templateURL(value: String) { this.templateURL = value }
-        fun templateURL(value: IntrinsicFunction) { this.templateURL = value }
-        @JvmField var timeoutInMinutes: Any? = null
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var templateURL: Any? = null
+
+        fun templateURL(value: String) {
+          this.templateURL = value
+        }
+        fun templateURL(value: IntrinsicFunction) {
+  this.templateURL = value
+}
+        @JvmField
+        var timeoutInMinutes: Any? = null
+
         fun timeoutInMinutes(value: Int) {
-            this.timeoutInMinutes = value
+          this.timeoutInMinutes = value
         }
-        fun timeoutInMinutes(value: IntrinsicFunction) { this.timeoutInMinutes = value }
+        fun timeoutInMinutes(value: IntrinsicFunction) {
+  this.timeoutInMinutes = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

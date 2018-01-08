@@ -10,18 +10,34 @@ import ktformation.*
 class AWSStepFunctionsStateMachine(logicalId: String) : Resource<AWSStepFunctionsStateMachine.Properties>(logicalId, "AWS::StepFunctions::StateMachine") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var definitionString: Any? = null
-        fun definitionString(value: String) { this.definitionString = value }
-        fun definitionString(value: IntrinsicFunction) { this.definitionString = value }
-        @JvmField var roleArn: Any? = null
-        fun roleArn(value: String) { this.roleArn = value }
-        fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
-        @JvmField var stateMachineName: Any? = null
-        fun stateMachineName(value: String) {
-            this.stateMachineName = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var definitionString: Any? = null
+
+        fun definitionString(value: String) {
+          this.definitionString = value
         }
-        fun stateMachineName(value: IntrinsicFunction) { this.stateMachineName = value }
+        fun definitionString(value: IntrinsicFunction) {
+  this.definitionString = value
+}
+        @JvmField
+        var roleArn: Any? = null
+
+        fun roleArn(value: String) {
+          this.roleArn = value
+        }
+        fun roleArn(value: IntrinsicFunction) {
+  this.roleArn = value
+}
+        @JvmField
+        var stateMachineName: Any? = null
+
+        fun stateMachineName(value: String) {
+          this.stateMachineName = value
+        }
+        fun stateMachineName(value: IntrinsicFunction) {
+  this.stateMachineName = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

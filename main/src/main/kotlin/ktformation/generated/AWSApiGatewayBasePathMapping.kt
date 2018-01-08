@@ -10,25 +10,43 @@ import ktformation.*
 class AWSApiGatewayBasePathMapping(logicalId: String) : Resource<AWSApiGatewayBasePathMapping.Properties>(logicalId, "AWS::ApiGateway::BasePathMapping") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var basePath: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var basePath: Any? = null
+
         fun basePath(value: String) {
-            this.basePath = value
+          this.basePath = value
         }
-        fun basePath(value: IntrinsicFunction) { this.basePath = value }
-        @JvmField var domainName: Any? = null
-        fun domainName(value: String) { this.domainName = value }
-        fun domainName(value: IntrinsicFunction) { this.domainName = value }
-        @JvmField var restApiId: Any? = null
+        fun basePath(value: IntrinsicFunction) {
+  this.basePath = value
+}
+        @JvmField
+        var domainName: Any? = null
+
+        fun domainName(value: String) {
+          this.domainName = value
+        }
+        fun domainName(value: IntrinsicFunction) {
+  this.domainName = value
+}
+        @JvmField
+        var restApiId: Any? = null
+
         fun restApiId(value: String) {
-            this.restApiId = value
+          this.restApiId = value
         }
-        fun restApiId(value: IntrinsicFunction) { this.restApiId = value }
-        @JvmField var stage: Any? = null
+        fun restApiId(value: IntrinsicFunction) {
+  this.restApiId = value
+}
+        @JvmField
+        var stage: Any? = null
+
         fun stage(value: String) {
-            this.stage = value
+          this.stage = value
         }
-        fun stage(value: IntrinsicFunction) { this.stage = value }
+        fun stage(value: IntrinsicFunction) {
+  this.stage = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

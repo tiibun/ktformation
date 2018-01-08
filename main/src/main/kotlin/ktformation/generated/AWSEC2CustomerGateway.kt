@@ -10,21 +10,43 @@ import ktformation.*
 class AWSEC2CustomerGateway(logicalId: String) : Resource<AWSEC2CustomerGateway.Properties>(logicalId, "AWS::EC2::CustomerGateway") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var bgpAsn: Any? = null
-        fun bgpAsn(value: Int) { this.bgpAsn = value }
-        fun bgpAsn(value: IntrinsicFunction) { this.bgpAsn = value }
-        @JvmField var ipAddress: Any? = null
-        fun ipAddress(value: String) { this.ipAddress = value }
-        fun ipAddress(value: IntrinsicFunction) { this.ipAddress = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) {
-            this.tags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var bgpAsn: Any? = null
+
+        fun bgpAsn(value: Int) {
+          this.bgpAsn = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var type: Any? = null
-        fun type(value: String) { this.type = value }
-        fun type(value: IntrinsicFunction) { this.type = value }
+        fun bgpAsn(value: IntrinsicFunction) {
+  this.bgpAsn = value
+}
+        @JvmField
+        var ipAddress: Any? = null
+
+        fun ipAddress(value: String) {
+          this.ipAddress = value
+        }
+        fun ipAddress(value: IntrinsicFunction) {
+  this.ipAddress = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var type: Any? = null
+
+        fun type(value: String) {
+          this.type = value
+        }
+        fun type(value: IntrinsicFunction) {
+  this.type = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

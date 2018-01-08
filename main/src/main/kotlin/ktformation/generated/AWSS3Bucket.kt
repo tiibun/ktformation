@@ -10,77 +10,133 @@ import ktformation.*
 class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalId, "AWS::S3::Bucket") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var accelerateConfiguration: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var accelerateConfiguration: Any? = null
+
         fun accelerateConfiguration(value: AccelerateConfiguration) {
-            this.accelerateConfiguration = value
+          this.accelerateConfiguration = value
         }
-        fun accelerateConfiguration(value: IntrinsicFunction) { this.accelerateConfiguration = value }
-        @JvmField var accessControl: Any? = null
+        fun accelerateConfiguration(value: IntrinsicFunction) {
+  this.accelerateConfiguration = value
+}
+        @JvmField
+        var accessControl: Any? = null
+
         fun accessControl(value: String) {
-            this.accessControl = value
+          this.accessControl = value
         }
-        fun accessControl(value: IntrinsicFunction) { this.accessControl = value }
-        @JvmField var analyticsConfigurations: Any? = null
+        fun accessControl(value: IntrinsicFunction) {
+  this.accessControl = value
+}
+        @JvmField
+        var analyticsConfigurations: Any? = null
+
         fun analyticsConfigurations(value: List<AnalyticsConfiguration>) {
-            this.analyticsConfigurations = value
+          this.analyticsConfigurations = value
         }
-        fun analyticsConfigurations(vararg value: IntrinsicFunction) { this.analyticsConfigurations = value }
-        @JvmField var bucketName: Any? = null
+        fun analyticsConfigurations(vararg value: IntrinsicFunction) {
+  this.analyticsConfigurations = value
+}
+        @JvmField
+        var bucketName: Any? = null
+
         fun bucketName(value: String) {
-            this.bucketName = value
+          this.bucketName = value
         }
-        fun bucketName(value: IntrinsicFunction) { this.bucketName = value }
-        @JvmField var corsConfiguration: Any? = null
+        fun bucketName(value: IntrinsicFunction) {
+  this.bucketName = value
+}
+        @JvmField
+        var corsConfiguration: Any? = null
+
         fun corsConfiguration(value: CorsConfiguration) {
-            this.corsConfiguration = value
+          this.corsConfiguration = value
         }
-        fun corsConfiguration(value: IntrinsicFunction) { this.corsConfiguration = value }
-        @JvmField var inventoryConfigurations: Any? = null
+        fun corsConfiguration(value: IntrinsicFunction) {
+  this.corsConfiguration = value
+}
+        @JvmField
+        var inventoryConfigurations: Any? = null
+
         fun inventoryConfigurations(value: List<InventoryConfiguration>) {
-            this.inventoryConfigurations = value
+          this.inventoryConfigurations = value
         }
-        fun inventoryConfigurations(vararg value: IntrinsicFunction) { this.inventoryConfigurations = value }
-        @JvmField var lifecycleConfiguration: Any? = null
+        fun inventoryConfigurations(vararg value: IntrinsicFunction) {
+  this.inventoryConfigurations = value
+}
+        @JvmField
+        var lifecycleConfiguration: Any? = null
+
         fun lifecycleConfiguration(value: LifecycleConfiguration) {
-            this.lifecycleConfiguration = value
+          this.lifecycleConfiguration = value
         }
-        fun lifecycleConfiguration(value: IntrinsicFunction) { this.lifecycleConfiguration = value }
-        @JvmField var loggingConfiguration: Any? = null
+        fun lifecycleConfiguration(value: IntrinsicFunction) {
+  this.lifecycleConfiguration = value
+}
+        @JvmField
+        var loggingConfiguration: Any? = null
+
         fun loggingConfiguration(value: LoggingConfiguration) {
-            this.loggingConfiguration = value
+          this.loggingConfiguration = value
         }
-        fun loggingConfiguration(value: IntrinsicFunction) { this.loggingConfiguration = value }
-        @JvmField var metricsConfigurations: Any? = null
+        fun loggingConfiguration(value: IntrinsicFunction) {
+  this.loggingConfiguration = value
+}
+        @JvmField
+        var metricsConfigurations: Any? = null
+
         fun metricsConfigurations(value: List<MetricsConfiguration>) {
-            this.metricsConfigurations = value
+          this.metricsConfigurations = value
         }
-        fun metricsConfigurations(vararg value: IntrinsicFunction) { this.metricsConfigurations = value }
-        @JvmField var notificationConfiguration: Any? = null
+        fun metricsConfigurations(vararg value: IntrinsicFunction) {
+  this.metricsConfigurations = value
+}
+        @JvmField
+        var notificationConfiguration: Any? = null
+
         fun notificationConfiguration(value: NotificationConfiguration) {
-            this.notificationConfiguration = value
+          this.notificationConfiguration = value
         }
-        fun notificationConfiguration(value: IntrinsicFunction) { this.notificationConfiguration = value }
-        @JvmField var replicationConfiguration: Any? = null
+        fun notificationConfiguration(value: IntrinsicFunction) {
+  this.notificationConfiguration = value
+}
+        @JvmField
+        var replicationConfiguration: Any? = null
+
         fun replicationConfiguration(value: ReplicationConfiguration) {
-            this.replicationConfiguration = value
+          this.replicationConfiguration = value
         }
-        fun replicationConfiguration(value: IntrinsicFunction) { this.replicationConfiguration = value }
-        @JvmField var tags: Any? = null
+        fun replicationConfiguration(value: IntrinsicFunction) {
+  this.replicationConfiguration = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var versioningConfiguration: Any? = null
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var versioningConfiguration: Any? = null
+
         fun versioningConfiguration(value: VersioningConfiguration) {
-            this.versioningConfiguration = value
+          this.versioningConfiguration = value
         }
-        fun versioningConfiguration(value: IntrinsicFunction) { this.versioningConfiguration = value }
-        @JvmField var websiteConfiguration: Any? = null
+        fun versioningConfiguration(value: IntrinsicFunction) {
+  this.versioningConfiguration = value
+}
+        @JvmField
+        var websiteConfiguration: Any? = null
+
         fun websiteConfiguration(value: WebsiteConfiguration) {
-            this.websiteConfiguration = value
+          this.websiteConfiguration = value
         }
-        fun websiteConfiguration(value: IntrinsicFunction) { this.websiteConfiguration = value }
+        fun websiteConfiguration(value: IntrinsicFunction) {
+  this.websiteConfiguration = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

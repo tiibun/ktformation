@@ -10,13 +10,25 @@ import ktformation.*
 class AWSOpsWorksElasticLoadBalancerAttachment(logicalId: String) : Resource<AWSOpsWorksElasticLoadBalancerAttachment.Properties>(logicalId, "AWS::OpsWorks::ElasticLoadBalancerAttachment") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var elasticLoadBalancerName: Any? = null
-        fun elasticLoadBalancerName(value: String) { this.elasticLoadBalancerName = value }
-        fun elasticLoadBalancerName(value: IntrinsicFunction) { this.elasticLoadBalancerName = value }
-        @JvmField var layerId: Any? = null
-        fun layerId(value: String) { this.layerId = value }
-        fun layerId(value: IntrinsicFunction) { this.layerId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var elasticLoadBalancerName: Any? = null
+
+        fun elasticLoadBalancerName(value: String) {
+          this.elasticLoadBalancerName = value
+        }
+        fun elasticLoadBalancerName(value: IntrinsicFunction) {
+  this.elasticLoadBalancerName = value
+}
+        @JvmField
+        var layerId: Any? = null
+
+        fun layerId(value: String) {
+          this.layerId = value
+        }
+        fun layerId(value: IntrinsicFunction) {
+  this.layerId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

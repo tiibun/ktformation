@@ -10,13 +10,25 @@ import ktformation.*
 class AWSEC2VPNConnectionRoute(logicalId: String) : Resource<AWSEC2VPNConnectionRoute.Properties>(logicalId, "AWS::EC2::VPNConnectionRoute") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var destinationCidrBlock: Any? = null
-        fun destinationCidrBlock(value: String) { this.destinationCidrBlock = value }
-        fun destinationCidrBlock(value: IntrinsicFunction) { this.destinationCidrBlock = value }
-        @JvmField var vpnConnectionId: Any? = null
-        fun vpnConnectionId(value: String) { this.vpnConnectionId = value }
-        fun vpnConnectionId(value: IntrinsicFunction) { this.vpnConnectionId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var destinationCidrBlock: Any? = null
+
+        fun destinationCidrBlock(value: String) {
+          this.destinationCidrBlock = value
+        }
+        fun destinationCidrBlock(value: IntrinsicFunction) {
+  this.destinationCidrBlock = value
+}
+        @JvmField
+        var vpnConnectionId: Any? = null
+
+        fun vpnConnectionId(value: String) {
+          this.vpnConnectionId = value
+        }
+        fun vpnConnectionId(value: IntrinsicFunction) {
+  this.vpnConnectionId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

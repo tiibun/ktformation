@@ -10,10 +10,16 @@ import ktformation.*
 class AWSElastiCacheSecurityGroup(logicalId: String) : Resource<AWSElastiCacheSecurityGroup.Properties>(logicalId, "AWS::ElastiCache::SecurityGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
-        fun description(value: String) { this.description = value }
-        fun description(value: IntrinsicFunction) { this.description = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
+        fun description(value: String) {
+          this.description = value
+        }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

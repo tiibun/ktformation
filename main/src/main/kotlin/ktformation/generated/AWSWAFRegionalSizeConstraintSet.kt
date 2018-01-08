@@ -10,15 +10,25 @@ import ktformation.*
 class AWSWAFRegionalSizeConstraintSet(logicalId: String) : Resource<AWSWAFRegionalSizeConstraintSet.Properties>(logicalId, "AWS::WAFRegional::SizeConstraintSet") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var sizeConstraints: Any? = null
-        fun sizeConstraints(value: List<SizeConstraint>) {
-            this.sizeConstraints = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
         }
-        fun sizeConstraints(vararg value: IntrinsicFunction) { this.sizeConstraints = value }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var sizeConstraints: Any? = null
+
+        fun sizeConstraints(value: List<SizeConstraint>) {
+          this.sizeConstraints = value
+        }
+        fun sizeConstraints(vararg value: IntrinsicFunction) {
+  this.sizeConstraints = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

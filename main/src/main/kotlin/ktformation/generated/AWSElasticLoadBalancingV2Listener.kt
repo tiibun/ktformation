@@ -10,29 +10,61 @@ import ktformation.*
 class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElasticLoadBalancingV2Listener.Properties>(logicalId, "AWS::ElasticLoadBalancingV2::Listener") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var certificates: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var certificates: Any? = null
+
         fun certificates(value: List<Certificate>) {
-            this.certificates = value
+          this.certificates = value
         }
-        fun certificates(vararg value: IntrinsicFunction) { this.certificates = value }
-        @JvmField var defaultActions: Any? = null
-        fun defaultActions(value: List<Action>) { this.defaultActions = value }
-        fun defaultActions(vararg value: IntrinsicFunction) { this.defaultActions = value }
-        @JvmField var loadBalancerArn: Any? = null
-        fun loadBalancerArn(value: String) { this.loadBalancerArn = value }
-        fun loadBalancerArn(value: IntrinsicFunction) { this.loadBalancerArn = value }
-        @JvmField var port: Any? = null
-        fun port(value: Int) { this.port = value }
-        fun port(value: IntrinsicFunction) { this.port = value }
-        @JvmField var protocol: Any? = null
-        fun protocol(value: String) { this.protocol = value }
-        fun protocol(value: IntrinsicFunction) { this.protocol = value }
-        @JvmField var sslPolicy: Any? = null
+        fun certificates(vararg value: IntrinsicFunction) {
+  this.certificates = value
+}
+        @JvmField
+        var defaultActions: Any? = null
+
+        fun defaultActions(value: List<Action>) {
+          this.defaultActions = value
+        }
+        fun defaultActions(vararg value: IntrinsicFunction) {
+  this.defaultActions = value
+}
+        @JvmField
+        var loadBalancerArn: Any? = null
+
+        fun loadBalancerArn(value: String) {
+          this.loadBalancerArn = value
+        }
+        fun loadBalancerArn(value: IntrinsicFunction) {
+  this.loadBalancerArn = value
+}
+        @JvmField
+        var port: Any? = null
+
+        fun port(value: Int) {
+          this.port = value
+        }
+        fun port(value: IntrinsicFunction) {
+  this.port = value
+}
+        @JvmField
+        var protocol: Any? = null
+
+        fun protocol(value: String) {
+          this.protocol = value
+        }
+        fun protocol(value: IntrinsicFunction) {
+  this.protocol = value
+}
+        @JvmField
+        var sslPolicy: Any? = null
+
         fun sslPolicy(value: String) {
-            this.sslPolicy = value
+          this.sslPolicy = value
         }
-        fun sslPolicy(value: IntrinsicFunction) { this.sslPolicy = value }
+        fun sslPolicy(value: IntrinsicFunction) {
+  this.sslPolicy = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

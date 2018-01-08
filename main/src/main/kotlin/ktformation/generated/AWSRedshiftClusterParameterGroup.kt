@@ -10,23 +10,43 @@ import ktformation.*
 class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshiftClusterParameterGroup.Properties>(logicalId, "AWS::Redshift::ClusterParameterGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
-        fun description(value: String) { this.description = value }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var parameterGroupFamily: Any? = null
-        fun parameterGroupFamily(value: String) { this.parameterGroupFamily = value }
-        fun parameterGroupFamily(value: IntrinsicFunction) { this.parameterGroupFamily = value }
-        @JvmField var parameters: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
+        fun description(value: String) {
+          this.description = value
+        }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var parameterGroupFamily: Any? = null
+
+        fun parameterGroupFamily(value: String) {
+          this.parameterGroupFamily = value
+        }
+        fun parameterGroupFamily(value: IntrinsicFunction) {
+  this.parameterGroupFamily = value
+}
+        @JvmField
+        var parameters: Any? = null
+
         fun parameters(value: List<Parameter>) {
-            this.parameters = value
+          this.parameters = value
         }
-        fun parameters(vararg value: IntrinsicFunction) { this.parameters = value }
-        @JvmField var tags: Any? = null
+        fun parameters(vararg value: IntrinsicFunction) {
+  this.parameters = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

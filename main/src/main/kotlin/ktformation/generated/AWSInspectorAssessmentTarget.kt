@@ -10,15 +10,25 @@ import ktformation.*
 class AWSInspectorAssessmentTarget(logicalId: String) : Resource<AWSInspectorAssessmentTarget.Properties>(logicalId, "AWS::Inspector::AssessmentTarget") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var assessmentTargetName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var assessmentTargetName: Any? = null
+
         fun assessmentTargetName(value: String) {
-            this.assessmentTargetName = value
+          this.assessmentTargetName = value
         }
-        fun assessmentTargetName(value: IntrinsicFunction) { this.assessmentTargetName = value }
-        @JvmField var resourceGroupArn: Any? = null
-        fun resourceGroupArn(value: String) { this.resourceGroupArn = value }
-        fun resourceGroupArn(value: IntrinsicFunction) { this.resourceGroupArn = value }
+        fun assessmentTargetName(value: IntrinsicFunction) {
+  this.assessmentTargetName = value
+}
+        @JvmField
+        var resourceGroupArn: Any? = null
+
+        fun resourceGroupArn(value: String) {
+          this.resourceGroupArn = value
+        }
+        fun resourceGroupArn(value: IntrinsicFunction) {
+  this.resourceGroupArn = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

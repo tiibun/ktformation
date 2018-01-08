@@ -10,13 +10,25 @@ import ktformation.*
 class AWSKinesisAnalyticsApplicationReferenceDataSource(logicalId: String) : Resource<AWSKinesisAnalyticsApplicationReferenceDataSource.Properties>(logicalId, "AWS::KinesisAnalytics::ApplicationReferenceDataSource") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var applicationName: Any? = null
-        fun applicationName(value: String) { this.applicationName = value }
-        fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
-        @JvmField var referenceDataSource: Any? = null
-        fun referenceDataSource(value: ReferenceDataSource) { this.referenceDataSource = value }
-        fun referenceDataSource(value: IntrinsicFunction) { this.referenceDataSource = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var applicationName: Any? = null
+
+        fun applicationName(value: String) {
+          this.applicationName = value
+        }
+        fun applicationName(value: IntrinsicFunction) {
+  this.applicationName = value
+}
+        @JvmField
+        var referenceDataSource: Any? = null
+
+        fun referenceDataSource(value: ReferenceDataSource) {
+          this.referenceDataSource = value
+        }
+        fun referenceDataSource(value: IntrinsicFunction) {
+  this.referenceDataSource = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

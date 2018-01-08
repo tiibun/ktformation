@@ -10,10 +10,16 @@ import ktformation.*
 class AWSGuardDutyDetector(logicalId: String) : Resource<AWSGuardDutyDetector.Properties>(logicalId, "AWS::GuardDuty::Detector") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var enable: Any? = null
-        fun enable(value: Boolean) { this.enable = value }
-        fun enable(value: IntrinsicFunction) { this.enable = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var enable: Any? = null
+
+        fun enable(value: Boolean) {
+          this.enable = value
+        }
+        fun enable(value: IntrinsicFunction) {
+  this.enable = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

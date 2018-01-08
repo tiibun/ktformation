@@ -10,15 +10,25 @@ import ktformation.*
 class AWSIoTPolicy(logicalId: String) : Resource<AWSIoTPolicy.Properties>(logicalId, "AWS::IoT::Policy") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var policyDocument: Any? = null
-        fun policyDocument(value: Json) { this.policyDocument = value }
-        fun policyDocument(value: IntrinsicFunction) { this.policyDocument = value }
-        @JvmField var policyName: Any? = null
-        fun policyName(value: String) {
-            this.policyName = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var policyDocument: Any? = null
+
+        fun policyDocument(value: Json) {
+          this.policyDocument = value
         }
-        fun policyName(value: IntrinsicFunction) { this.policyName = value }
+        fun policyDocument(value: IntrinsicFunction) {
+  this.policyDocument = value
+}
+        @JvmField
+        var policyName: Any? = null
+
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        fun policyName(value: IntrinsicFunction) {
+  this.policyName = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,22 +10,34 @@ import ktformation.*
 class AWSDAXParameterGroup(logicalId: String) : Resource<AWSDAXParameterGroup.Properties>(logicalId, "AWS::DAX::ParameterGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var parameterGroupName: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var parameterGroupName: Any? = null
+
         fun parameterGroupName(value: String) {
-            this.parameterGroupName = value
+          this.parameterGroupName = value
         }
-        fun parameterGroupName(value: IntrinsicFunction) { this.parameterGroupName = value }
-        @JvmField var parameterNameValues: Any? = null
+        fun parameterGroupName(value: IntrinsicFunction) {
+  this.parameterGroupName = value
+}
+        @JvmField
+        var parameterNameValues: Any? = null
+
         fun parameterNameValues(value: Json) {
-            this.parameterNameValues = value
+          this.parameterNameValues = value
         }
-        fun parameterNameValues(value: IntrinsicFunction) { this.parameterNameValues = value }
+        fun parameterNameValues(value: IntrinsicFunction) {
+  this.parameterNameValues = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

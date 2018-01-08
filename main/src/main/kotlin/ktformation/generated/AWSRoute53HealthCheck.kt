@@ -10,15 +10,25 @@ import ktformation.*
 class AWSRoute53HealthCheck(logicalId: String) : Resource<AWSRoute53HealthCheck.Properties>(logicalId, "AWS::Route53::HealthCheck") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var healthCheckConfig: Any? = null
-        fun healthCheckConfig(value: HealthCheckConfig) { this.healthCheckConfig = value }
-        fun healthCheckConfig(value: IntrinsicFunction) { this.healthCheckConfig = value }
-        @JvmField var healthCheckTags: Any? = null
-        fun healthCheckTags(value: List<HealthCheckTag>) {
-            this.healthCheckTags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var healthCheckConfig: Any? = null
+
+        fun healthCheckConfig(value: HealthCheckConfig) {
+          this.healthCheckConfig = value
         }
-        fun healthCheckTags(vararg value: IntrinsicFunction) { this.healthCheckTags = value }
+        fun healthCheckConfig(value: IntrinsicFunction) {
+  this.healthCheckConfig = value
+}
+        @JvmField
+        var healthCheckTags: Any? = null
+
+        fun healthCheckTags(value: List<HealthCheckTag>) {
+          this.healthCheckTags = value
+        }
+        fun healthCheckTags(vararg value: IntrinsicFunction) {
+  this.healthCheckTags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

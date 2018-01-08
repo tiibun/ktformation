@@ -10,21 +10,43 @@ import ktformation.*
 class AWSEFSMountTarget(logicalId: String) : Resource<AWSEFSMountTarget.Properties>(logicalId, "AWS::EFS::MountTarget") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var fileSystemId: Any? = null
-        fun fileSystemId(value: String) { this.fileSystemId = value }
-        fun fileSystemId(value: IntrinsicFunction) { this.fileSystemId = value }
-        @JvmField var ipAddress: Any? = null
-        fun ipAddress(value: String) {
-            this.ipAddress = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var fileSystemId: Any? = null
+
+        fun fileSystemId(value: String) {
+          this.fileSystemId = value
         }
-        fun ipAddress(value: IntrinsicFunction) { this.ipAddress = value }
-        @JvmField var securityGroups: Any? = null
-        fun securityGroups(value: List<String>) { this.securityGroups = value }
-        fun securityGroups(vararg value: IntrinsicFunction) { this.securityGroups = value }
-        @JvmField var subnetId: Any? = null
-        fun subnetId(value: String) { this.subnetId = value }
-        fun subnetId(value: IntrinsicFunction) { this.subnetId = value }
+        fun fileSystemId(value: IntrinsicFunction) {
+  this.fileSystemId = value
+}
+        @JvmField
+        var ipAddress: Any? = null
+
+        fun ipAddress(value: String) {
+          this.ipAddress = value
+        }
+        fun ipAddress(value: IntrinsicFunction) {
+  this.ipAddress = value
+}
+        @JvmField
+        var securityGroups: Any? = null
+
+        fun securityGroups(value: List<String>) {
+          this.securityGroups = value
+        }
+        fun securityGroups(vararg value: IntrinsicFunction) {
+  this.securityGroups = value
+}
+        @JvmField
+        var subnetId: Any? = null
+
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        fun subnetId(value: IntrinsicFunction) {
+  this.subnetId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

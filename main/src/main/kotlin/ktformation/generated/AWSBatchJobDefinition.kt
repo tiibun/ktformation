@@ -10,28 +10,52 @@ import ktformation.*
 class AWSBatchJobDefinition(logicalId: String) : Resource<AWSBatchJobDefinition.Properties>(logicalId, "AWS::Batch::JobDefinition") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var containerProperties: Any? = null
-        fun containerProperties(value: ContainerProperties) { this.containerProperties = value }
-        fun containerProperties(value: IntrinsicFunction) { this.containerProperties = value }
-        @JvmField var jobDefinitionName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var containerProperties: Any? = null
+
+        fun containerProperties(value: ContainerProperties) {
+          this.containerProperties = value
+        }
+        fun containerProperties(value: IntrinsicFunction) {
+  this.containerProperties = value
+}
+        @JvmField
+        var jobDefinitionName: Any? = null
+
         fun jobDefinitionName(value: String) {
-            this.jobDefinitionName = value
+          this.jobDefinitionName = value
         }
-        fun jobDefinitionName(value: IntrinsicFunction) { this.jobDefinitionName = value }
-        @JvmField var parameters: Any? = null
+        fun jobDefinitionName(value: IntrinsicFunction) {
+  this.jobDefinitionName = value
+}
+        @JvmField
+        var parameters: Any? = null
+
         fun parameters(value: Json) {
-            this.parameters = value
+          this.parameters = value
         }
-        fun parameters(value: IntrinsicFunction) { this.parameters = value }
-        @JvmField var retryStrategy: Any? = null
+        fun parameters(value: IntrinsicFunction) {
+  this.parameters = value
+}
+        @JvmField
+        var retryStrategy: Any? = null
+
         fun retryStrategy(value: RetryStrategy) {
-            this.retryStrategy = value
+          this.retryStrategy = value
         }
-        fun retryStrategy(value: IntrinsicFunction) { this.retryStrategy = value }
-        @JvmField var type: Any? = null
-        fun type(value: String) { this.type = value }
-        fun type(value: IntrinsicFunction) { this.type = value }
+        fun retryStrategy(value: IntrinsicFunction) {
+  this.retryStrategy = value
+}
+        @JvmField
+        var type: Any? = null
+
+        fun type(value: String) {
+          this.type = value
+        }
+        fun type(value: IntrinsicFunction) {
+  this.type = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

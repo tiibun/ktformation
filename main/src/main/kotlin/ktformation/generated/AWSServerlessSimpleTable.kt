@@ -10,17 +10,25 @@ import ktformation.*
 class AWSServerlessSimpleTable(logicalId: String) : Resource<AWSServerlessSimpleTable.Properties>(logicalId, "AWS::Serverless::SimpleTable") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var primaryKey: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var primaryKey: Any? = null
+
         fun primaryKey(value: PrimaryKey) {
-            this.primaryKey = value
+          this.primaryKey = value
         }
-        fun primaryKey(value: IntrinsicFunction) { this.primaryKey = value }
-        @JvmField var provisionedThroughput: Any? = null
+        fun primaryKey(value: IntrinsicFunction) {
+  this.primaryKey = value
+}
+        @JvmField
+        var provisionedThroughput: Any? = null
+
         fun provisionedThroughput(value: ProvisionedThroughput) {
-            this.provisionedThroughput = value
+          this.provisionedThroughput = value
         }
-        fun provisionedThroughput(value: IntrinsicFunction) { this.provisionedThroughput = value }
+        fun provisionedThroughput(value: IntrinsicFunction) {
+  this.provisionedThroughput = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,15 +10,25 @@ import ktformation.*
 class AWSEMRSecurityConfiguration(logicalId: String) : Resource<AWSEMRSecurityConfiguration.Properties>(logicalId, "AWS::EMR::SecurityConfiguration") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var name: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var name: Any? = null
+
         fun name(value: String) {
-            this.name = value
+          this.name = value
         }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var securityConfiguration: Any? = null
-        fun securityConfiguration(value: Json) { this.securityConfiguration = value }
-        fun securityConfiguration(value: IntrinsicFunction) { this.securityConfiguration = value }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var securityConfiguration: Any? = null
+
+        fun securityConfiguration(value: Json) {
+          this.securityConfiguration = value
+        }
+        fun securityConfiguration(value: IntrinsicFunction) {
+  this.securityConfiguration = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

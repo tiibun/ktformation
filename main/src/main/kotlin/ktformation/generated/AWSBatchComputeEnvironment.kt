@@ -10,26 +10,52 @@ import ktformation.*
 class AWSBatchComputeEnvironment(logicalId: String) : Resource<AWSBatchComputeEnvironment.Properties>(logicalId, "AWS::Batch::ComputeEnvironment") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var computeEnvironmentName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var computeEnvironmentName: Any? = null
+
         fun computeEnvironmentName(value: String) {
-            this.computeEnvironmentName = value
+          this.computeEnvironmentName = value
         }
-        fun computeEnvironmentName(value: IntrinsicFunction) { this.computeEnvironmentName = value }
-        @JvmField var computeResources: Any? = null
-        fun computeResources(value: ComputeResources) { this.computeResources = value }
-        fun computeResources(value: IntrinsicFunction) { this.computeResources = value }
-        @JvmField var serviceRole: Any? = null
-        fun serviceRole(value: String) { this.serviceRole = value }
-        fun serviceRole(value: IntrinsicFunction) { this.serviceRole = value }
-        @JvmField var state: Any? = null
+        fun computeEnvironmentName(value: IntrinsicFunction) {
+  this.computeEnvironmentName = value
+}
+        @JvmField
+        var computeResources: Any? = null
+
+        fun computeResources(value: ComputeResources) {
+          this.computeResources = value
+        }
+        fun computeResources(value: IntrinsicFunction) {
+  this.computeResources = value
+}
+        @JvmField
+        var serviceRole: Any? = null
+
+        fun serviceRole(value: String) {
+          this.serviceRole = value
+        }
+        fun serviceRole(value: IntrinsicFunction) {
+  this.serviceRole = value
+}
+        @JvmField
+        var state: Any? = null
+
         fun state(value: String) {
-            this.state = value
+          this.state = value
         }
-        fun state(value: IntrinsicFunction) { this.state = value }
-        @JvmField var type: Any? = null
-        fun type(value: String) { this.type = value }
-        fun type(value: IntrinsicFunction) { this.type = value }
+        fun state(value: IntrinsicFunction) {
+  this.state = value
+}
+        @JvmField
+        var type: Any? = null
+
+        fun type(value: String) {
+          this.type = value
+        }
+        fun type(value: IntrinsicFunction) {
+  this.type = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

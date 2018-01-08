@@ -10,10 +10,16 @@ import ktformation.*
 class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(logicalId, "AWS::EC2::SpotFleet") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var spotFleetRequestConfigData: Any? = null
-        fun spotFleetRequestConfigData(value: SpotFleetRequestConfigData) { this.spotFleetRequestConfigData = value }
-        fun spotFleetRequestConfigData(value: IntrinsicFunction) { this.spotFleetRequestConfigData = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var spotFleetRequestConfigData: Any? = null
+
+        fun spotFleetRequestConfigData(value: SpotFleetRequestConfigData) {
+          this.spotFleetRequestConfigData = value
+        }
+        fun spotFleetRequestConfigData(value: IntrinsicFunction) {
+  this.spotFleetRequestConfigData = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

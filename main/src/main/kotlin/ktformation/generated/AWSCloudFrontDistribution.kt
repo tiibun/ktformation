@@ -10,15 +10,25 @@ import ktformation.*
 class AWSCloudFrontDistribution(logicalId: String) : Resource<AWSCloudFrontDistribution.Properties>(logicalId, "AWS::CloudFront::Distribution") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var distributionConfig: Any? = null
-        fun distributionConfig(value: DistributionConfig) { this.distributionConfig = value }
-        fun distributionConfig(value: IntrinsicFunction) { this.distributionConfig = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) {
-            this.tags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var distributionConfig: Any? = null
+
+        fun distributionConfig(value: DistributionConfig) {
+          this.distributionConfig = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun distributionConfig(value: IntrinsicFunction) {
+  this.distributionConfig = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

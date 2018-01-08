@@ -10,20 +10,34 @@ import ktformation.*
 class AWSEC2VPCCidrBlock(logicalId: String) : Resource<AWSEC2VPCCidrBlock.Properties>(logicalId, "AWS::EC2::VPCCidrBlock") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var amazonProvidedIpv6CidrBlock: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var amazonProvidedIpv6CidrBlock: Any? = null
+
         fun amazonProvidedIpv6CidrBlock(value: Boolean) {
-            this.amazonProvidedIpv6CidrBlock = value
+          this.amazonProvidedIpv6CidrBlock = value
         }
-        fun amazonProvidedIpv6CidrBlock(value: IntrinsicFunction) { this.amazonProvidedIpv6CidrBlock = value }
-        @JvmField var cidrBlock: Any? = null
+        fun amazonProvidedIpv6CidrBlock(value: IntrinsicFunction) {
+  this.amazonProvidedIpv6CidrBlock = value
+}
+        @JvmField
+        var cidrBlock: Any? = null
+
         fun cidrBlock(value: String) {
-            this.cidrBlock = value
+          this.cidrBlock = value
         }
-        fun cidrBlock(value: IntrinsicFunction) { this.cidrBlock = value }
-        @JvmField var vpcId: Any? = null
-        fun vpcId(value: String) { this.vpcId = value }
-        fun vpcId(value: IntrinsicFunction) { this.vpcId = value }
+        fun cidrBlock(value: IntrinsicFunction) {
+  this.cidrBlock = value
+}
+        @JvmField
+        var vpcId: Any? = null
+
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        fun vpcId(value: IntrinsicFunction) {
+  this.vpcId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,15 +10,25 @@ import ktformation.*
 class AWSRedshiftClusterSecurityGroup(logicalId: String) : Resource<AWSRedshiftClusterSecurityGroup.Properties>(logicalId, "AWS::Redshift::ClusterSecurityGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
-        fun description(value: String) { this.description = value }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) {
-            this.tags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
+        fun description(value: String) {
+          this.description = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

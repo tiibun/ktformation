@@ -10,18 +10,34 @@ import ktformation.*
 class AWSServiceDiscoveryInstance(logicalId: String) : Resource<AWSServiceDiscoveryInstance.Properties>(logicalId, "AWS::ServiceDiscovery::Instance") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var instanceAttributes: Any? = null
-        fun instanceAttributes(value: Json) { this.instanceAttributes = value }
-        fun instanceAttributes(value: IntrinsicFunction) { this.instanceAttributes = value }
-        @JvmField var instanceId: Any? = null
-        fun instanceId(value: String) {
-            this.instanceId = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var instanceAttributes: Any? = null
+
+        fun instanceAttributes(value: Json) {
+          this.instanceAttributes = value
         }
-        fun instanceId(value: IntrinsicFunction) { this.instanceId = value }
-        @JvmField var serviceId: Any? = null
-        fun serviceId(value: String) { this.serviceId = value }
-        fun serviceId(value: IntrinsicFunction) { this.serviceId = value }
+        fun instanceAttributes(value: IntrinsicFunction) {
+  this.instanceAttributes = value
+}
+        @JvmField
+        var instanceId: Any? = null
+
+        fun instanceId(value: String) {
+          this.instanceId = value
+        }
+        fun instanceId(value: IntrinsicFunction) {
+  this.instanceId = value
+}
+        @JvmField
+        var serviceId: Any? = null
+
+        fun serviceId(value: String) {
+          this.serviceId = value
+        }
+        fun serviceId(value: IntrinsicFunction) {
+  this.serviceId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

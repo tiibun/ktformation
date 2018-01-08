@@ -10,58 +10,124 @@ import ktformation.*
 class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanceWindowTask.Properties>(logicalId, "AWS::SSM::MaintenanceWindowTask") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var loggingInfo: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var loggingInfo: Any? = null
+
         fun loggingInfo(value: LoggingInfo) {
-            this.loggingInfo = value
+          this.loggingInfo = value
         }
-        fun loggingInfo(value: IntrinsicFunction) { this.loggingInfo = value }
-        @JvmField var maxConcurrency: Any? = null
-        fun maxConcurrency(value: String) { this.maxConcurrency = value }
-        fun maxConcurrency(value: IntrinsicFunction) { this.maxConcurrency = value }
-        @JvmField var maxErrors: Any? = null
-        fun maxErrors(value: String) { this.maxErrors = value }
-        fun maxErrors(value: IntrinsicFunction) { this.maxErrors = value }
-        @JvmField var name: Any? = null
+        fun loggingInfo(value: IntrinsicFunction) {
+  this.loggingInfo = value
+}
+        @JvmField
+        var maxConcurrency: Any? = null
+
+        fun maxConcurrency(value: String) {
+          this.maxConcurrency = value
+        }
+        fun maxConcurrency(value: IntrinsicFunction) {
+  this.maxConcurrency = value
+}
+        @JvmField
+        var maxErrors: Any? = null
+
+        fun maxErrors(value: String) {
+          this.maxErrors = value
+        }
+        fun maxErrors(value: IntrinsicFunction) {
+  this.maxErrors = value
+}
+        @JvmField
+        var name: Any? = null
+
         fun name(value: String) {
-            this.name = value
+          this.name = value
         }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var priority: Any? = null
-        fun priority(value: Int) { this.priority = value }
-        fun priority(value: IntrinsicFunction) { this.priority = value }
-        @JvmField var serviceRoleArn: Any? = null
-        fun serviceRoleArn(value: String) { this.serviceRoleArn = value }
-        fun serviceRoleArn(value: IntrinsicFunction) { this.serviceRoleArn = value }
-        @JvmField var targets: Any? = null
-        fun targets(value: List<Target>) { this.targets = value }
-        fun targets(vararg value: IntrinsicFunction) { this.targets = value }
-        @JvmField var taskArn: Any? = null
-        fun taskArn(value: String) { this.taskArn = value }
-        fun taskArn(value: IntrinsicFunction) { this.taskArn = value }
-        @JvmField var taskInvocationParameters: Any? = null
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var priority: Any? = null
+
+        fun priority(value: Int) {
+          this.priority = value
+        }
+        fun priority(value: IntrinsicFunction) {
+  this.priority = value
+}
+        @JvmField
+        var serviceRoleArn: Any? = null
+
+        fun serviceRoleArn(value: String) {
+          this.serviceRoleArn = value
+        }
+        fun serviceRoleArn(value: IntrinsicFunction) {
+  this.serviceRoleArn = value
+}
+        @JvmField
+        var targets: Any? = null
+
+        fun targets(value: List<Target>) {
+          this.targets = value
+        }
+        fun targets(vararg value: IntrinsicFunction) {
+  this.targets = value
+}
+        @JvmField
+        var taskArn: Any? = null
+
+        fun taskArn(value: String) {
+          this.taskArn = value
+        }
+        fun taskArn(value: IntrinsicFunction) {
+  this.taskArn = value
+}
+        @JvmField
+        var taskInvocationParameters: Any? = null
+
         fun taskInvocationParameters(value: TaskInvocationParameters) {
-            this.taskInvocationParameters = value
+          this.taskInvocationParameters = value
         }
-        fun taskInvocationParameters(value: IntrinsicFunction) { this.taskInvocationParameters = value }
-        @JvmField var taskParameters: Any? = null
+        fun taskInvocationParameters(value: IntrinsicFunction) {
+  this.taskInvocationParameters = value
+}
+        @JvmField
+        var taskParameters: Any? = null
+
         fun taskParameters(value: Json) {
-            this.taskParameters = value
+          this.taskParameters = value
         }
-        fun taskParameters(value: IntrinsicFunction) { this.taskParameters = value }
-        @JvmField var taskType: Any? = null
-        fun taskType(value: String) { this.taskType = value }
-        fun taskType(value: IntrinsicFunction) { this.taskType = value }
-        @JvmField var windowId: Any? = null
+        fun taskParameters(value: IntrinsicFunction) {
+  this.taskParameters = value
+}
+        @JvmField
+        var taskType: Any? = null
+
+        fun taskType(value: String) {
+          this.taskType = value
+        }
+        fun taskType(value: IntrinsicFunction) {
+  this.taskType = value
+}
+        @JvmField
+        var windowId: Any? = null
+
         fun windowId(value: String) {
-            this.windowId = value
+          this.windowId = value
         }
-        fun windowId(value: IntrinsicFunction) { this.windowId = value }
+        fun windowId(value: IntrinsicFunction) {
+  this.windowId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

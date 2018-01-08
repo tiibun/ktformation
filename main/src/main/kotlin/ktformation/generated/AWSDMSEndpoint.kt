@@ -10,83 +10,151 @@ import ktformation.*
 class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(logicalId, "AWS::DMS::Endpoint") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var certificateArn: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var certificateArn: Any? = null
+
         fun certificateArn(value: String) {
-            this.certificateArn = value
+          this.certificateArn = value
         }
-        fun certificateArn(value: IntrinsicFunction) { this.certificateArn = value }
-        @JvmField var databaseName: Any? = null
+        fun certificateArn(value: IntrinsicFunction) {
+  this.certificateArn = value
+}
+        @JvmField
+        var databaseName: Any? = null
+
         fun databaseName(value: String) {
-            this.databaseName = value
+          this.databaseName = value
         }
-        fun databaseName(value: IntrinsicFunction) { this.databaseName = value }
-        @JvmField var dynamoDbSettings: Any? = null
+        fun databaseName(value: IntrinsicFunction) {
+  this.databaseName = value
+}
+        @JvmField
+        var dynamoDbSettings: Any? = null
+
         fun dynamoDbSettings(value: DynamoDbSettings) {
-            this.dynamoDbSettings = value
+          this.dynamoDbSettings = value
         }
-        fun dynamoDbSettings(value: IntrinsicFunction) { this.dynamoDbSettings = value }
-        @JvmField var endpointIdentifier: Any? = null
+        fun dynamoDbSettings(value: IntrinsicFunction) {
+  this.dynamoDbSettings = value
+}
+        @JvmField
+        var endpointIdentifier: Any? = null
+
         fun endpointIdentifier(value: String) {
-            this.endpointIdentifier = value
+          this.endpointIdentifier = value
         }
-        fun endpointIdentifier(value: IntrinsicFunction) { this.endpointIdentifier = value }
-        @JvmField var endpointType: Any? = null
-        fun endpointType(value: String) { this.endpointType = value }
-        fun endpointType(value: IntrinsicFunction) { this.endpointType = value }
-        @JvmField var engineName: Any? = null
-        fun engineName(value: String) { this.engineName = value }
-        fun engineName(value: IntrinsicFunction) { this.engineName = value }
-        @JvmField var extraConnectionAttributes: Any? = null
+        fun endpointIdentifier(value: IntrinsicFunction) {
+  this.endpointIdentifier = value
+}
+        @JvmField
+        var endpointType: Any? = null
+
+        fun endpointType(value: String) {
+          this.endpointType = value
+        }
+        fun endpointType(value: IntrinsicFunction) {
+  this.endpointType = value
+}
+        @JvmField
+        var engineName: Any? = null
+
+        fun engineName(value: String) {
+          this.engineName = value
+        }
+        fun engineName(value: IntrinsicFunction) {
+  this.engineName = value
+}
+        @JvmField
+        var extraConnectionAttributes: Any? = null
+
         fun extraConnectionAttributes(value: String) {
-            this.extraConnectionAttributes = value
+          this.extraConnectionAttributes = value
         }
-        fun extraConnectionAttributes(value: IntrinsicFunction) { this.extraConnectionAttributes = value }
-        @JvmField var kmsKeyId: Any? = null
+        fun extraConnectionAttributes(value: IntrinsicFunction) {
+  this.extraConnectionAttributes = value
+}
+        @JvmField
+        var kmsKeyId: Any? = null
+
         fun kmsKeyId(value: String) {
-            this.kmsKeyId = value
+          this.kmsKeyId = value
         }
-        fun kmsKeyId(value: IntrinsicFunction) { this.kmsKeyId = value }
-        @JvmField var mongoDbSettings: Any? = null
+        fun kmsKeyId(value: IntrinsicFunction) {
+  this.kmsKeyId = value
+}
+        @JvmField
+        var mongoDbSettings: Any? = null
+
         fun mongoDbSettings(value: MongoDbSettings) {
-            this.mongoDbSettings = value
+          this.mongoDbSettings = value
         }
-        fun mongoDbSettings(value: IntrinsicFunction) { this.mongoDbSettings = value }
-        @JvmField var password: Any? = null
+        fun mongoDbSettings(value: IntrinsicFunction) {
+  this.mongoDbSettings = value
+}
+        @JvmField
+        var password: Any? = null
+
         fun password(value: String) {
-            this.password = value
+          this.password = value
         }
-        fun password(value: IntrinsicFunction) { this.password = value }
-        @JvmField var port: Any? = null
+        fun password(value: IntrinsicFunction) {
+  this.password = value
+}
+        @JvmField
+        var port: Any? = null
+
         fun port(value: Int) {
-            this.port = value
+          this.port = value
         }
-        fun port(value: IntrinsicFunction) { this.port = value }
-        @JvmField var s3Settings: Any? = null
+        fun port(value: IntrinsicFunction) {
+  this.port = value
+}
+        @JvmField
+        var s3Settings: Any? = null
+
         fun s3Settings(value: S3Settings) {
-            this.s3Settings = value
+          this.s3Settings = value
         }
-        fun s3Settings(value: IntrinsicFunction) { this.s3Settings = value }
-        @JvmField var serverName: Any? = null
+        fun s3Settings(value: IntrinsicFunction) {
+  this.s3Settings = value
+}
+        @JvmField
+        var serverName: Any? = null
+
         fun serverName(value: String) {
-            this.serverName = value
+          this.serverName = value
         }
-        fun serverName(value: IntrinsicFunction) { this.serverName = value }
-        @JvmField var sslMode: Any? = null
+        fun serverName(value: IntrinsicFunction) {
+  this.serverName = value
+}
+        @JvmField
+        var sslMode: Any? = null
+
         fun sslMode(value: String) {
-            this.sslMode = value
+          this.sslMode = value
         }
-        fun sslMode(value: IntrinsicFunction) { this.sslMode = value }
-        @JvmField var tags: Any? = null
+        fun sslMode(value: IntrinsicFunction) {
+  this.sslMode = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var username: Any? = null
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var username: Any? = null
+
         fun username(value: String) {
-            this.username = value
+          this.username = value
         }
-        fun username(value: IntrinsicFunction) { this.username = value }
+        fun username(value: IntrinsicFunction) {
+  this.username = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

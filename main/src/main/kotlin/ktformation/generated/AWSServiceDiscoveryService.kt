@@ -10,25 +10,43 @@ import ktformation.*
 class AWSServiceDiscoveryService(logicalId: String) : Resource<AWSServiceDiscoveryService.Properties>(logicalId, "AWS::ServiceDiscovery::Service") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var dnsConfig: Any? = null
-        fun dnsConfig(value: DnsConfig) { this.dnsConfig = value }
-        fun dnsConfig(value: IntrinsicFunction) { this.dnsConfig = value }
-        @JvmField var healthCheckConfig: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var dnsConfig: Any? = null
+
+        fun dnsConfig(value: DnsConfig) {
+          this.dnsConfig = value
+        }
+        fun dnsConfig(value: IntrinsicFunction) {
+  this.dnsConfig = value
+}
+        @JvmField
+        var healthCheckConfig: Any? = null
+
         fun healthCheckConfig(value: HealthCheckConfig) {
-            this.healthCheckConfig = value
+          this.healthCheckConfig = value
         }
-        fun healthCheckConfig(value: IntrinsicFunction) { this.healthCheckConfig = value }
-        @JvmField var name: Any? = null
+        fun healthCheckConfig(value: IntrinsicFunction) {
+  this.healthCheckConfig = value
+}
+        @JvmField
+        var name: Any? = null
+
         fun name(value: String) {
-            this.name = value
+          this.name = value
         }
-        fun name(value: IntrinsicFunction) { this.name = value }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

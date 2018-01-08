@@ -10,18 +10,34 @@ import ktformation.*
 class AWSCloudFormationWaitCondition(logicalId: String) : Resource<AWSCloudFormationWaitCondition.Properties>(logicalId, "AWS::CloudFormation::WaitCondition") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var count: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var count: Any? = null
+
         fun count(value: Int) {
-            this.count = value
+          this.count = value
         }
-        fun count(value: IntrinsicFunction) { this.count = value }
-        @JvmField var handle: Any? = null
-        fun handle(value: String) { this.handle = value }
-        fun handle(value: IntrinsicFunction) { this.handle = value }
-        @JvmField var timeout: Any? = null
-        fun timeout(value: String) { this.timeout = value }
-        fun timeout(value: IntrinsicFunction) { this.timeout = value }
+        fun count(value: IntrinsicFunction) {
+  this.count = value
+}
+        @JvmField
+        var handle: Any? = null
+
+        fun handle(value: String) {
+          this.handle = value
+        }
+        fun handle(value: IntrinsicFunction) {
+  this.handle = value
+}
+        @JvmField
+        var timeout: Any? = null
+
+        fun timeout(value: String) {
+          this.timeout = value
+        }
+        fun timeout(value: IntrinsicFunction) {
+  this.timeout = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,15 +10,25 @@ import ktformation.*
 class AWSWAFRegionalByteMatchSet(logicalId: String) : Resource<AWSWAFRegionalByteMatchSet.Properties>(logicalId, "AWS::WAFRegional::ByteMatchSet") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var byteMatchTuples: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var byteMatchTuples: Any? = null
+
         fun byteMatchTuples(value: List<ByteMatchTuple>) {
-            this.byteMatchTuples = value
+          this.byteMatchTuples = value
         }
-        fun byteMatchTuples(vararg value: IntrinsicFunction) { this.byteMatchTuples = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
+        fun byteMatchTuples(vararg value: IntrinsicFunction) {
+  this.byteMatchTuples = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -1,8 +1,16 @@
 package ktformation
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonProperty
 
-interface ResourceProperties
+abstract class ResourceProperties {
+    @JsonProperty("Fn::Transform")
+    var fnTransform: MutableList<AWSInclude> = arrayListOf()
+
+    fun fnTransform(vararg awsInclude: AWSInclude) {
+        fnTransform.addAll(awsInclude)
+    }
+}
 
 abstract class Resource<T : ResourceProperties>(
         @JsonIgnore val logicalId: String,
@@ -48,8 +56,13 @@ abstract class Resource<T : ResourceProperties>(
 }
 
 @CloudFormationMarker
-data class Resources(private val map: MutableMap<String, Resource<*>> = linkedMapOf())
-    : MutableMap<String, Resource<*>> by map
+data class Resources(private val map: MutableMap<String, Any> = linkedMapOf())
+    : MutableMap<String, Any> by map {
+
+    fun fnTransform(vararg awsInclude: AWSInclude) {
+        put("Fn::Transform", awsInclude)
+    }
+}
 
 typealias S3LocationOrString = Any
 

@@ -10,13 +10,25 @@ import ktformation.*
 class AWSKinesisAnalyticsApplicationOutput(logicalId: String) : Resource<AWSKinesisAnalyticsApplicationOutput.Properties>(logicalId, "AWS::KinesisAnalytics::ApplicationOutput") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var applicationName: Any? = null
-        fun applicationName(value: String) { this.applicationName = value }
-        fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
-        @JvmField var output: Any? = null
-        fun output(value: Output) { this.output = value }
-        fun output(value: IntrinsicFunction) { this.output = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var applicationName: Any? = null
+
+        fun applicationName(value: String) {
+          this.applicationName = value
+        }
+        fun applicationName(value: IntrinsicFunction) {
+  this.applicationName = value
+}
+        @JvmField
+        var output: Any? = null
+
+        fun output(value: Output) {
+          this.output = value
+        }
+        fun output(value: IntrinsicFunction) {
+  this.output = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,15 +10,25 @@ import ktformation.*
 class AWSSSMDocument(logicalId: String) : Resource<AWSSSMDocument.Properties>(logicalId, "AWS::SSM::Document") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var content: Any? = null
-        fun content(value: Json) { this.content = value }
-        fun content(value: IntrinsicFunction) { this.content = value }
-        @JvmField var documentType: Any? = null
-        fun documentType(value: String) {
-            this.documentType = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var content: Any? = null
+
+        fun content(value: Json) {
+          this.content = value
         }
-        fun documentType(value: IntrinsicFunction) { this.documentType = value }
+        fun content(value: IntrinsicFunction) {
+  this.content = value
+}
+        @JvmField
+        var documentType: Any? = null
+
+        fun documentType(value: String) {
+          this.documentType = value
+        }
+        fun documentType(value: IntrinsicFunction) {
+  this.documentType = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

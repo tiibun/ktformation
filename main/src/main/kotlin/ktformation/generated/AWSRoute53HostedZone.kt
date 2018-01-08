@@ -10,30 +10,52 @@ import ktformation.*
 class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Properties>(logicalId, "AWS::Route53::HostedZone") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var hostedZoneConfig: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var hostedZoneConfig: Any? = null
+
         fun hostedZoneConfig(value: HostedZoneConfig) {
-            this.hostedZoneConfig = value
+          this.hostedZoneConfig = value
         }
-        fun hostedZoneConfig(value: IntrinsicFunction) { this.hostedZoneConfig = value }
-        @JvmField var hostedZoneTags: Any? = null
+        fun hostedZoneConfig(value: IntrinsicFunction) {
+  this.hostedZoneConfig = value
+}
+        @JvmField
+        var hostedZoneTags: Any? = null
+
         fun hostedZoneTags(value: List<HostedZoneTag>) {
-            this.hostedZoneTags = value
+          this.hostedZoneTags = value
         }
-        fun hostedZoneTags(vararg value: IntrinsicFunction) { this.hostedZoneTags = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var queryLoggingConfig: Any? = null
+        fun hostedZoneTags(vararg value: IntrinsicFunction) {
+  this.hostedZoneTags = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var queryLoggingConfig: Any? = null
+
         fun queryLoggingConfig(value: QueryLoggingConfig) {
-            this.queryLoggingConfig = value
+          this.queryLoggingConfig = value
         }
-        fun queryLoggingConfig(value: IntrinsicFunction) { this.queryLoggingConfig = value }
-        @JvmField var vPCs: Any? = null
+        fun queryLoggingConfig(value: IntrinsicFunction) {
+  this.queryLoggingConfig = value
+}
+        @JvmField
+        var vPCs: Any? = null
+
         fun vPCs(value: List<VPC>) {
-            this.vPCs = value
+          this.vPCs = value
         }
-        fun vPCs(vararg value: IntrinsicFunction) { this.vPCs = value }
+        fun vPCs(vararg value: IntrinsicFunction) {
+  this.vPCs = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

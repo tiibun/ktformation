@@ -10,26 +10,52 @@ import ktformation.*
 class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSourceMapping.Properties>(logicalId, "AWS::Lambda::EventSourceMapping") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var batchSize: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var batchSize: Any? = null
+
         fun batchSize(value: Int) {
-            this.batchSize = value
+          this.batchSize = value
         }
-        fun batchSize(value: IntrinsicFunction) { this.batchSize = value }
-        @JvmField var enabled: Any? = null
+        fun batchSize(value: IntrinsicFunction) {
+  this.batchSize = value
+}
+        @JvmField
+        var enabled: Any? = null
+
         fun enabled(value: Boolean) {
-            this.enabled = value
+          this.enabled = value
         }
-        fun enabled(value: IntrinsicFunction) { this.enabled = value }
-        @JvmField var eventSourceArn: Any? = null
-        fun eventSourceArn(value: String) { this.eventSourceArn = value }
-        fun eventSourceArn(value: IntrinsicFunction) { this.eventSourceArn = value }
-        @JvmField var functionName: Any? = null
-        fun functionName(value: String) { this.functionName = value }
-        fun functionName(value: IntrinsicFunction) { this.functionName = value }
-        @JvmField var startingPosition: Any? = null
-        fun startingPosition(value: String) { this.startingPosition = value }
-        fun startingPosition(value: IntrinsicFunction) { this.startingPosition = value }
+        fun enabled(value: IntrinsicFunction) {
+  this.enabled = value
+}
+        @JvmField
+        var eventSourceArn: Any? = null
+
+        fun eventSourceArn(value: String) {
+          this.eventSourceArn = value
+        }
+        fun eventSourceArn(value: IntrinsicFunction) {
+  this.eventSourceArn = value
+}
+        @JvmField
+        var functionName: Any? = null
+
+        fun functionName(value: String) {
+          this.functionName = value
+        }
+        fun functionName(value: IntrinsicFunction) {
+  this.functionName = value
+}
+        @JvmField
+        var startingPosition: Any? = null
+
+        fun startingPosition(value: String) {
+          this.startingPosition = value
+        }
+        fun startingPosition(value: IntrinsicFunction) {
+  this.startingPosition = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

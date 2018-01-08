@@ -10,13 +10,25 @@ import ktformation.*
 class AWSIoTThingPrincipalAttachment(logicalId: String) : Resource<AWSIoTThingPrincipalAttachment.Properties>(logicalId, "AWS::IoT::ThingPrincipalAttachment") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var principal: Any? = null
-        fun principal(value: String) { this.principal = value }
-        fun principal(value: IntrinsicFunction) { this.principal = value }
-        @JvmField var thingName: Any? = null
-        fun thingName(value: String) { this.thingName = value }
-        fun thingName(value: IntrinsicFunction) { this.thingName = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var principal: Any? = null
+
+        fun principal(value: String) {
+          this.principal = value
+        }
+        fun principal(value: IntrinsicFunction) {
+  this.principal = value
+}
+        @JvmField
+        var thingName: Any? = null
+
+        fun thingName(value: String) {
+          this.thingName = value
+        }
+        fun thingName(value: IntrinsicFunction) {
+  this.thingName = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

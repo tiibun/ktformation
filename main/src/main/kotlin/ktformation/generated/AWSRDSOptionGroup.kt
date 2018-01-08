@@ -10,24 +10,52 @@ import ktformation.*
 class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properties>(logicalId, "AWS::RDS::OptionGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var engineName: Any? = null
-        fun engineName(value: String) { this.engineName = value }
-        fun engineName(value: IntrinsicFunction) { this.engineName = value }
-        @JvmField var majorEngineVersion: Any? = null
-        fun majorEngineVersion(value: String) { this.majorEngineVersion = value }
-        fun majorEngineVersion(value: IntrinsicFunction) { this.majorEngineVersion = value }
-        @JvmField var optionConfigurations: Any? = null
-        fun optionConfigurations(value: List<OptionConfiguration>) { this.optionConfigurations = value }
-        fun optionConfigurations(vararg value: IntrinsicFunction) { this.optionConfigurations = value }
-        @JvmField var optionGroupDescription: Any? = null
-        fun optionGroupDescription(value: String) { this.optionGroupDescription = value }
-        fun optionGroupDescription(value: IntrinsicFunction) { this.optionGroupDescription = value }
-        @JvmField var tags: Any? = null
-        fun tags(value: List<Tag>) {
-            this.tags = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var engineName: Any? = null
+
+        fun engineName(value: String) {
+          this.engineName = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
+        fun engineName(value: IntrinsicFunction) {
+  this.engineName = value
+}
+        @JvmField
+        var majorEngineVersion: Any? = null
+
+        fun majorEngineVersion(value: String) {
+          this.majorEngineVersion = value
+        }
+        fun majorEngineVersion(value: IntrinsicFunction) {
+  this.majorEngineVersion = value
+}
+        @JvmField
+        var optionConfigurations: Any? = null
+
+        fun optionConfigurations(value: List<OptionConfiguration>) {
+          this.optionConfigurations = value
+        }
+        fun optionConfigurations(vararg value: IntrinsicFunction) {
+  this.optionConfigurations = value
+}
+        @JvmField
+        var optionGroupDescription: Any? = null
+
+        fun optionGroupDescription(value: String) {
+          this.optionGroupDescription = value
+        }
+        fun optionGroupDescription(value: IntrinsicFunction) {
+  this.optionGroupDescription = value
+}
+        @JvmField
+        var tags: Any? = null
+
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

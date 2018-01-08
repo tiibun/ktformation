@@ -10,7 +10,7 @@ import ktformation.*
 class AWSCloudFormationWaitConditionHandle(logicalId: String) : Resource<AWSCloudFormationWaitConditionHandle.Properties>(logicalId, "AWS::CloudFormation::WaitConditionHandle") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
+    class Properties : ResourceProperties() {
 
     }
 

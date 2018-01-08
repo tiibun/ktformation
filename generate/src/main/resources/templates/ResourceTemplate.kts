@@ -18,18 +18,26 @@ import ktformation.*
 class ${className}(logicalId: String) : Resource<${className}.Properties>(logicalId, "${name}") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
+    class Properties : ResourceProperties() {
 ${props.joinToLines { (k, v) ->
     """
-        @JvmField var ${k}: Any? = null
-        fun ${k}(value: ${v.typeName()}) { this.${k} = value }
+        @JvmField
+        var ${k}: Any? = null
+
+        fun ${k}(value: ${v.typeName()}) {
+          this.${k} = value
+        }
         ${when (v.type) {
         "Map" -> ""
         "List" -> """
-        fun ${k}(vararg value: IntrinsicFunction) { this.${k} = value }
+        fun ${k}(vararg value: IntrinsicFunction) {
+          this.${k} = value
+        }
         """.trimIndent()
         else -> """
-        fun ${k}(value: IntrinsicFunction) { this.${k} = value }
+        fun ${k}(value: IntrinsicFunction) {
+          this.${k} = value
+        }
         """.trimIndent()
     }}
 """

@@ -10,23 +10,43 @@ import ktformation.*
 class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties>(logicalId, "AWS::Batch::JobQueue") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var computeEnvironmentOrder: Any? = null
-        fun computeEnvironmentOrder(value: List<ComputeEnvironmentOrder>) { this.computeEnvironmentOrder = value }
-        fun computeEnvironmentOrder(vararg value: IntrinsicFunction) { this.computeEnvironmentOrder = value }
-        @JvmField var jobQueueName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var computeEnvironmentOrder: Any? = null
+
+        fun computeEnvironmentOrder(value: List<ComputeEnvironmentOrder>) {
+          this.computeEnvironmentOrder = value
+        }
+        fun computeEnvironmentOrder(vararg value: IntrinsicFunction) {
+  this.computeEnvironmentOrder = value
+}
+        @JvmField
+        var jobQueueName: Any? = null
+
         fun jobQueueName(value: String) {
-            this.jobQueueName = value
+          this.jobQueueName = value
         }
-        fun jobQueueName(value: IntrinsicFunction) { this.jobQueueName = value }
-        @JvmField var priority: Any? = null
-        fun priority(value: Int) { this.priority = value }
-        fun priority(value: IntrinsicFunction) { this.priority = value }
-        @JvmField var state: Any? = null
+        fun jobQueueName(value: IntrinsicFunction) {
+  this.jobQueueName = value
+}
+        @JvmField
+        var priority: Any? = null
+
+        fun priority(value: Int) {
+          this.priority = value
+        }
+        fun priority(value: IntrinsicFunction) {
+  this.priority = value
+}
+        @JvmField
+        var state: Any? = null
+
         fun state(value: String) {
-            this.state = value
+          this.state = value
         }
-        fun state(value: IntrinsicFunction) { this.state = value }
+        fun state(value: IntrinsicFunction) {
+  this.state = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

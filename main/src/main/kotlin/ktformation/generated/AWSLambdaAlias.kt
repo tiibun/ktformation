@@ -10,26 +10,52 @@ import ktformation.*
 class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(logicalId, "AWS::Lambda::Alias") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var functionName: Any? = null
-        fun functionName(value: String) { this.functionName = value }
-        fun functionName(value: IntrinsicFunction) { this.functionName = value }
-        @JvmField var functionVersion: Any? = null
-        fun functionVersion(value: String) { this.functionVersion = value }
-        fun functionVersion(value: IntrinsicFunction) { this.functionVersion = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var routingConfig: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var functionName: Any? = null
+
+        fun functionName(value: String) {
+          this.functionName = value
+        }
+        fun functionName(value: IntrinsicFunction) {
+  this.functionName = value
+}
+        @JvmField
+        var functionVersion: Any? = null
+
+        fun functionVersion(value: String) {
+          this.functionVersion = value
+        }
+        fun functionVersion(value: IntrinsicFunction) {
+  this.functionVersion = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var routingConfig: Any? = null
+
         fun routingConfig(value: AliasRoutingConfiguration) {
-            this.routingConfig = value
+          this.routingConfig = value
         }
-        fun routingConfig(value: IntrinsicFunction) { this.routingConfig = value }
+        fun routingConfig(value: IntrinsicFunction) {
+  this.routingConfig = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,13 +10,25 @@ import ktformation.*
 class AWSIAMUserToGroupAddition(logicalId: String) : Resource<AWSIAMUserToGroupAddition.Properties>(logicalId, "AWS::IAM::UserToGroupAddition") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var groupName: Any? = null
-        fun groupName(value: String) { this.groupName = value }
-        fun groupName(value: IntrinsicFunction) { this.groupName = value }
-        @JvmField var users: Any? = null
-        fun users(value: List<String>) { this.users = value }
-        fun users(vararg value: IntrinsicFunction) { this.users = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var groupName: Any? = null
+
+        fun groupName(value: String) {
+          this.groupName = value
+        }
+        fun groupName(value: IntrinsicFunction) {
+  this.groupName = value
+}
+        @JvmField
+        var users: Any? = null
+
+        fun users(value: List<String>) {
+          this.users = value
+        }
+        fun users(vararg value: IntrinsicFunction) {
+  this.users = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,33 +10,61 @@ import ktformation.*
 class AWSGlueTrigger(logicalId: String) : Resource<AWSGlueTrigger.Properties>(logicalId, "AWS::Glue::Trigger") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var actions: Any? = null
-        fun actions(value: List<Action>) { this.actions = value }
-        fun actions(vararg value: IntrinsicFunction) { this.actions = value }
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var actions: Any? = null
+
+        fun actions(value: List<Action>) {
+          this.actions = value
+        }
+        fun actions(vararg value: IntrinsicFunction) {
+  this.actions = value
+}
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var name: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var name: Any? = null
+
         fun name(value: String) {
-            this.name = value
+          this.name = value
         }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var predicate: Any? = null
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var predicate: Any? = null
+
         fun predicate(value: Predicate) {
-            this.predicate = value
+          this.predicate = value
         }
-        fun predicate(value: IntrinsicFunction) { this.predicate = value }
-        @JvmField var schedule: Any? = null
+        fun predicate(value: IntrinsicFunction) {
+  this.predicate = value
+}
+        @JvmField
+        var schedule: Any? = null
+
         fun schedule(value: String) {
-            this.schedule = value
+          this.schedule = value
         }
-        fun schedule(value: IntrinsicFunction) { this.schedule = value }
-        @JvmField var type: Any? = null
-        fun type(value: String) { this.type = value }
-        fun type(value: IntrinsicFunction) { this.type = value }
+        fun schedule(value: IntrinsicFunction) {
+  this.schedule = value
+}
+        @JvmField
+        var type: Any? = null
+
+        fun type(value: String) {
+          this.type = value
+        }
+        fun type(value: IntrinsicFunction) {
+  this.type = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

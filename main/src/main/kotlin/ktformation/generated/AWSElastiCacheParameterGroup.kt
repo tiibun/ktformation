@@ -10,18 +10,32 @@ import ktformation.*
 class AWSElastiCacheParameterGroup(logicalId: String) : Resource<AWSElastiCacheParameterGroup.Properties>(logicalId, "AWS::ElastiCache::ParameterGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var cacheParameterGroupFamily: Any? = null
-        fun cacheParameterGroupFamily(value: String) { this.cacheParameterGroupFamily = value }
-        fun cacheParameterGroupFamily(value: IntrinsicFunction) { this.cacheParameterGroupFamily = value }
-        @JvmField var description: Any? = null
-        fun description(value: String) { this.description = value }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var properties: Any? = null
-        fun properties(value: Map<String, Any>) {
-            this.properties = value
-        }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var cacheParameterGroupFamily: Any? = null
 
+        fun cacheParameterGroupFamily(value: String) {
+          this.cacheParameterGroupFamily = value
+        }
+        fun cacheParameterGroupFamily(value: IntrinsicFunction) {
+  this.cacheParameterGroupFamily = value
+}
+        @JvmField
+        var description: Any? = null
+
+        fun description(value: String) {
+          this.description = value
+        }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var properties: Any? = null
+
+        fun properties(value: Map<String, Any>) {
+          this.properties = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

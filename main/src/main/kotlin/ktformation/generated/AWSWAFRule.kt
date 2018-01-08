@@ -10,18 +10,34 @@ import ktformation.*
 class AWSWAFRule(logicalId: String) : Resource<AWSWAFRule.Properties>(logicalId, "AWS::WAF::Rule") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var metricName: Any? = null
-        fun metricName(value: String) { this.metricName = value }
-        fun metricName(value: IntrinsicFunction) { this.metricName = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var predicates: Any? = null
-        fun predicates(value: List<Predicate>) {
-            this.predicates = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var metricName: Any? = null
+
+        fun metricName(value: String) {
+          this.metricName = value
         }
-        fun predicates(vararg value: IntrinsicFunction) { this.predicates = value }
+        fun metricName(value: IntrinsicFunction) {
+  this.metricName = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var predicates: Any? = null
+
+        fun predicates(value: List<Predicate>) {
+          this.predicates = value
+        }
+        fun predicates(vararg value: IntrinsicFunction) {
+  this.predicates = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,16 +10,34 @@ import ktformation.*
 class AWSApiGatewayDocumentationPart(logicalId: String) : Resource<AWSApiGatewayDocumentationPart.Properties>(logicalId, "AWS::ApiGateway::DocumentationPart") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var location: Any? = null
-        fun location(value: Location) { this.location = value }
-        fun location(value: IntrinsicFunction) { this.location = value }
-        @JvmField var properties: Any? = null
-        fun properties(value: String) { this.properties = value }
-        fun properties(value: IntrinsicFunction) { this.properties = value }
-        @JvmField var restApiId: Any? = null
-        fun restApiId(value: String) { this.restApiId = value }
-        fun restApiId(value: IntrinsicFunction) { this.restApiId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var location: Any? = null
+
+        fun location(value: Location) {
+          this.location = value
+        }
+        fun location(value: IntrinsicFunction) {
+  this.location = value
+}
+        @JvmField
+        var properties: Any? = null
+
+        fun properties(value: String) {
+          this.properties = value
+        }
+        fun properties(value: IntrinsicFunction) {
+  this.properties = value
+}
+        @JvmField
+        var restApiId: Any? = null
+
+        fun restApiId(value: String) {
+          this.restApiId = value
+        }
+        fun restApiId(value: IntrinsicFunction) {
+  this.restApiId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,10 +10,16 @@ import ktformation.*
 class AWSStepFunctionsActivity(logicalId: String) : Resource<AWSStepFunctionsActivity.Properties>(logicalId, "AWS::StepFunctions::Activity") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

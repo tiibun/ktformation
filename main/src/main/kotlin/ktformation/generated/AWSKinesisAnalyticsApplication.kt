@@ -10,25 +10,43 @@ import ktformation.*
 class AWSKinesisAnalyticsApplication(logicalId: String) : Resource<AWSKinesisAnalyticsApplication.Properties>(logicalId, "AWS::KinesisAnalytics::Application") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var applicationCode: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var applicationCode: Any? = null
+
         fun applicationCode(value: String) {
-            this.applicationCode = value
+          this.applicationCode = value
         }
-        fun applicationCode(value: IntrinsicFunction) { this.applicationCode = value }
-        @JvmField var applicationDescription: Any? = null
+        fun applicationCode(value: IntrinsicFunction) {
+  this.applicationCode = value
+}
+        @JvmField
+        var applicationDescription: Any? = null
+
         fun applicationDescription(value: String) {
-            this.applicationDescription = value
+          this.applicationDescription = value
         }
-        fun applicationDescription(value: IntrinsicFunction) { this.applicationDescription = value }
-        @JvmField var applicationName: Any? = null
+        fun applicationDescription(value: IntrinsicFunction) {
+  this.applicationDescription = value
+}
+        @JvmField
+        var applicationName: Any? = null
+
         fun applicationName(value: String) {
-            this.applicationName = value
+          this.applicationName = value
         }
-        fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
-        @JvmField var inputs: Any? = null
-        fun inputs(value: List<Input>) { this.inputs = value }
-        fun inputs(vararg value: IntrinsicFunction) { this.inputs = value }
+        fun applicationName(value: IntrinsicFunction) {
+  this.applicationName = value
+}
+        @JvmField
+        var inputs: Any? = null
+
+        fun inputs(value: List<Input>) {
+          this.inputs = value
+        }
+        fun inputs(vararg value: IntrinsicFunction) {
+  this.inputs = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

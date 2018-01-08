@@ -10,23 +10,43 @@ import ktformation.*
 class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properties>(logicalId, "AWS::EC2::VPCEndpoint") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var policyDocument: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var policyDocument: Any? = null
+
         fun policyDocument(value: Json) {
-            this.policyDocument = value
+          this.policyDocument = value
         }
-        fun policyDocument(value: IntrinsicFunction) { this.policyDocument = value }
-        @JvmField var routeTableIds: Any? = null
+        fun policyDocument(value: IntrinsicFunction) {
+  this.policyDocument = value
+}
+        @JvmField
+        var routeTableIds: Any? = null
+
         fun routeTableIds(value: List<String>) {
-            this.routeTableIds = value
+          this.routeTableIds = value
         }
-        fun routeTableIds(vararg value: IntrinsicFunction) { this.routeTableIds = value }
-        @JvmField var serviceName: Any? = null
-        fun serviceName(value: String) { this.serviceName = value }
-        fun serviceName(value: IntrinsicFunction) { this.serviceName = value }
-        @JvmField var vpcId: Any? = null
-        fun vpcId(value: String) { this.vpcId = value }
-        fun vpcId(value: IntrinsicFunction) { this.vpcId = value }
+        fun routeTableIds(vararg value: IntrinsicFunction) {
+  this.routeTableIds = value
+}
+        @JvmField
+        var serviceName: Any? = null
+
+        fun serviceName(value: String) {
+          this.serviceName = value
+        }
+        fun serviceName(value: IntrinsicFunction) {
+  this.serviceName = value
+}
+        @JvmField
+        var vpcId: Any? = null
+
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        fun vpcId(value: IntrinsicFunction) {
+  this.vpcId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

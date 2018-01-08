@@ -10,13 +10,25 @@ import ktformation.*
 class AWSEC2SubnetRouteTableAssociation(logicalId: String) : Resource<AWSEC2SubnetRouteTableAssociation.Properties>(logicalId, "AWS::EC2::SubnetRouteTableAssociation") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var routeTableId: Any? = null
-        fun routeTableId(value: String) { this.routeTableId = value }
-        fun routeTableId(value: IntrinsicFunction) { this.routeTableId = value }
-        @JvmField var subnetId: Any? = null
-        fun subnetId(value: String) { this.subnetId = value }
-        fun subnetId(value: IntrinsicFunction) { this.subnetId = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var routeTableId: Any? = null
+
+        fun routeTableId(value: String) {
+          this.routeTableId = value
+        }
+        fun routeTableId(value: IntrinsicFunction) {
+  this.routeTableId = value
+}
+        @JvmField
+        var subnetId: Any? = null
+
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        fun subnetId(value: IntrinsicFunction) {
+  this.subnetId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

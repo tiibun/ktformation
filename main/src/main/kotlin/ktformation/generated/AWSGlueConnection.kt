@@ -10,13 +10,25 @@ import ktformation.*
 class AWSGlueConnection(logicalId: String) : Resource<AWSGlueConnection.Properties>(logicalId, "AWS::Glue::Connection") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var catalogId: Any? = null
-        fun catalogId(value: String) { this.catalogId = value }
-        fun catalogId(value: IntrinsicFunction) { this.catalogId = value }
-        @JvmField var connectionInput: Any? = null
-        fun connectionInput(value: ConnectionInput) { this.connectionInput = value }
-        fun connectionInput(value: IntrinsicFunction) { this.connectionInput = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var catalogId: Any? = null
+
+        fun catalogId(value: String) {
+          this.catalogId = value
+        }
+        fun catalogId(value: IntrinsicFunction) {
+  this.catalogId = value
+}
+        @JvmField
+        var connectionInput: Any? = null
+
+        fun connectionInput(value: ConnectionInput) {
+          this.connectionInput = value
+        }
+        fun connectionInput(value: IntrinsicFunction) {
+  this.connectionInput = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

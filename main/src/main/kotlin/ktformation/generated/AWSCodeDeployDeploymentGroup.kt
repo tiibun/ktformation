@@ -10,68 +10,124 @@ import ktformation.*
 class AWSCodeDeployDeploymentGroup(logicalId: String) : Resource<AWSCodeDeployDeploymentGroup.Properties>(logicalId, "AWS::CodeDeploy::DeploymentGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var alarmConfiguration: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var alarmConfiguration: Any? = null
+
         fun alarmConfiguration(value: AlarmConfiguration) {
-            this.alarmConfiguration = value
+          this.alarmConfiguration = value
         }
-        fun alarmConfiguration(value: IntrinsicFunction) { this.alarmConfiguration = value }
-        @JvmField var applicationName: Any? = null
-        fun applicationName(value: String) { this.applicationName = value }
-        fun applicationName(value: IntrinsicFunction) { this.applicationName = value }
-        @JvmField var autoRollbackConfiguration: Any? = null
+        fun alarmConfiguration(value: IntrinsicFunction) {
+  this.alarmConfiguration = value
+}
+        @JvmField
+        var applicationName: Any? = null
+
+        fun applicationName(value: String) {
+          this.applicationName = value
+        }
+        fun applicationName(value: IntrinsicFunction) {
+  this.applicationName = value
+}
+        @JvmField
+        var autoRollbackConfiguration: Any? = null
+
         fun autoRollbackConfiguration(value: AutoRollbackConfiguration) {
-            this.autoRollbackConfiguration = value
+          this.autoRollbackConfiguration = value
         }
-        fun autoRollbackConfiguration(value: IntrinsicFunction) { this.autoRollbackConfiguration = value }
-        @JvmField var autoScalingGroups: Any? = null
+        fun autoRollbackConfiguration(value: IntrinsicFunction) {
+  this.autoRollbackConfiguration = value
+}
+        @JvmField
+        var autoScalingGroups: Any? = null
+
         fun autoScalingGroups(value: List<String>) {
-            this.autoScalingGroups = value
+          this.autoScalingGroups = value
         }
-        fun autoScalingGroups(vararg value: IntrinsicFunction) { this.autoScalingGroups = value }
-        @JvmField var deployment: Any? = null
+        fun autoScalingGroups(vararg value: IntrinsicFunction) {
+  this.autoScalingGroups = value
+}
+        @JvmField
+        var deployment: Any? = null
+
         fun deployment(value: Deployment) {
-            this.deployment = value
+          this.deployment = value
         }
-        fun deployment(value: IntrinsicFunction) { this.deployment = value }
-        @JvmField var deploymentConfigName: Any? = null
+        fun deployment(value: IntrinsicFunction) {
+  this.deployment = value
+}
+        @JvmField
+        var deploymentConfigName: Any? = null
+
         fun deploymentConfigName(value: String) {
-            this.deploymentConfigName = value
+          this.deploymentConfigName = value
         }
-        fun deploymentConfigName(value: IntrinsicFunction) { this.deploymentConfigName = value }
-        @JvmField var deploymentGroupName: Any? = null
+        fun deploymentConfigName(value: IntrinsicFunction) {
+  this.deploymentConfigName = value
+}
+        @JvmField
+        var deploymentGroupName: Any? = null
+
         fun deploymentGroupName(value: String) {
-            this.deploymentGroupName = value
+          this.deploymentGroupName = value
         }
-        fun deploymentGroupName(value: IntrinsicFunction) { this.deploymentGroupName = value }
-        @JvmField var deploymentStyle: Any? = null
+        fun deploymentGroupName(value: IntrinsicFunction) {
+  this.deploymentGroupName = value
+}
+        @JvmField
+        var deploymentStyle: Any? = null
+
         fun deploymentStyle(value: DeploymentStyle) {
-            this.deploymentStyle = value
+          this.deploymentStyle = value
         }
-        fun deploymentStyle(value: IntrinsicFunction) { this.deploymentStyle = value }
-        @JvmField var ec2TagFilters: Any? = null
+        fun deploymentStyle(value: IntrinsicFunction) {
+  this.deploymentStyle = value
+}
+        @JvmField
+        var ec2TagFilters: Any? = null
+
         fun ec2TagFilters(value: List<EC2TagFilter>) {
-            this.ec2TagFilters = value
+          this.ec2TagFilters = value
         }
-        fun ec2TagFilters(vararg value: IntrinsicFunction) { this.ec2TagFilters = value }
-        @JvmField var loadBalancerInfo: Any? = null
+        fun ec2TagFilters(vararg value: IntrinsicFunction) {
+  this.ec2TagFilters = value
+}
+        @JvmField
+        var loadBalancerInfo: Any? = null
+
         fun loadBalancerInfo(value: LoadBalancerInfo) {
-            this.loadBalancerInfo = value
+          this.loadBalancerInfo = value
         }
-        fun loadBalancerInfo(value: IntrinsicFunction) { this.loadBalancerInfo = value }
-        @JvmField var onPremisesInstanceTagFilters: Any? = null
+        fun loadBalancerInfo(value: IntrinsicFunction) {
+  this.loadBalancerInfo = value
+}
+        @JvmField
+        var onPremisesInstanceTagFilters: Any? = null
+
         fun onPremisesInstanceTagFilters(value: List<TagFilter>) {
-            this.onPremisesInstanceTagFilters = value
+          this.onPremisesInstanceTagFilters = value
         }
-        fun onPremisesInstanceTagFilters(vararg value: IntrinsicFunction) { this.onPremisesInstanceTagFilters = value }
-        @JvmField var serviceRoleArn: Any? = null
-        fun serviceRoleArn(value: String) { this.serviceRoleArn = value }
-        fun serviceRoleArn(value: IntrinsicFunction) { this.serviceRoleArn = value }
-        @JvmField var triggerConfigurations: Any? = null
+        fun onPremisesInstanceTagFilters(vararg value: IntrinsicFunction) {
+  this.onPremisesInstanceTagFilters = value
+}
+        @JvmField
+        var serviceRoleArn: Any? = null
+
+        fun serviceRoleArn(value: String) {
+          this.serviceRoleArn = value
+        }
+        fun serviceRoleArn(value: IntrinsicFunction) {
+  this.serviceRoleArn = value
+}
+        @JvmField
+        var triggerConfigurations: Any? = null
+
         fun triggerConfigurations(value: List<TriggerConfig>) {
-            this.triggerConfigurations = value
+          this.triggerConfigurations = value
         }
-        fun triggerConfigurations(vararg value: IntrinsicFunction) { this.triggerConfigurations = value }
+        fun triggerConfigurations(vararg value: IntrinsicFunction) {
+  this.triggerConfigurations = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

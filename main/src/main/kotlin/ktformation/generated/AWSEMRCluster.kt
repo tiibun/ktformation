@@ -10,84 +10,160 @@ import ktformation.*
 class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logicalId, "AWS::EMR::Cluster") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var additionalInfo: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var additionalInfo: Any? = null
+
         fun additionalInfo(value: Json) {
-            this.additionalInfo = value
+          this.additionalInfo = value
         }
-        fun additionalInfo(value: IntrinsicFunction) { this.additionalInfo = value }
-        @JvmField var applications: Any? = null
+        fun additionalInfo(value: IntrinsicFunction) {
+  this.additionalInfo = value
+}
+        @JvmField
+        var applications: Any? = null
+
         fun applications(value: List<Application>) {
-            this.applications = value
+          this.applications = value
         }
-        fun applications(vararg value: IntrinsicFunction) { this.applications = value }
-        @JvmField var autoScalingRole: Any? = null
+        fun applications(vararg value: IntrinsicFunction) {
+  this.applications = value
+}
+        @JvmField
+        var autoScalingRole: Any? = null
+
         fun autoScalingRole(value: String) {
-            this.autoScalingRole = value
+          this.autoScalingRole = value
         }
-        fun autoScalingRole(value: IntrinsicFunction) { this.autoScalingRole = value }
-        @JvmField var bootstrapActions: Any? = null
+        fun autoScalingRole(value: IntrinsicFunction) {
+  this.autoScalingRole = value
+}
+        @JvmField
+        var bootstrapActions: Any? = null
+
         fun bootstrapActions(value: List<BootstrapActionConfig>) {
-            this.bootstrapActions = value
+          this.bootstrapActions = value
         }
-        fun bootstrapActions(vararg value: IntrinsicFunction) { this.bootstrapActions = value }
-        @JvmField var configurations: Any? = null
+        fun bootstrapActions(vararg value: IntrinsicFunction) {
+  this.bootstrapActions = value
+}
+        @JvmField
+        var configurations: Any? = null
+
         fun configurations(value: List<Configuration>) {
-            this.configurations = value
+          this.configurations = value
         }
-        fun configurations(vararg value: IntrinsicFunction) { this.configurations = value }
-        @JvmField var customAmiId: Any? = null
+        fun configurations(vararg value: IntrinsicFunction) {
+  this.configurations = value
+}
+        @JvmField
+        var customAmiId: Any? = null
+
         fun customAmiId(value: String) {
-            this.customAmiId = value
+          this.customAmiId = value
         }
-        fun customAmiId(value: IntrinsicFunction) { this.customAmiId = value }
-        @JvmField var ebsRootVolumeSize: Any? = null
+        fun customAmiId(value: IntrinsicFunction) {
+  this.customAmiId = value
+}
+        @JvmField
+        var ebsRootVolumeSize: Any? = null
+
         fun ebsRootVolumeSize(value: Int) {
-            this.ebsRootVolumeSize = value
+          this.ebsRootVolumeSize = value
         }
-        fun ebsRootVolumeSize(value: IntrinsicFunction) { this.ebsRootVolumeSize = value }
-        @JvmField var instances: Any? = null
-        fun instances(value: JobFlowInstancesConfig) { this.instances = value }
-        fun instances(value: IntrinsicFunction) { this.instances = value }
-        @JvmField var jobFlowRole: Any? = null
-        fun jobFlowRole(value: String) { this.jobFlowRole = value }
-        fun jobFlowRole(value: IntrinsicFunction) { this.jobFlowRole = value }
-        @JvmField var logUri: Any? = null
+        fun ebsRootVolumeSize(value: IntrinsicFunction) {
+  this.ebsRootVolumeSize = value
+}
+        @JvmField
+        var instances: Any? = null
+
+        fun instances(value: JobFlowInstancesConfig) {
+          this.instances = value
+        }
+        fun instances(value: IntrinsicFunction) {
+  this.instances = value
+}
+        @JvmField
+        var jobFlowRole: Any? = null
+
+        fun jobFlowRole(value: String) {
+          this.jobFlowRole = value
+        }
+        fun jobFlowRole(value: IntrinsicFunction) {
+  this.jobFlowRole = value
+}
+        @JvmField
+        var logUri: Any? = null
+
         fun logUri(value: String) {
-            this.logUri = value
+          this.logUri = value
         }
-        fun logUri(value: IntrinsicFunction) { this.logUri = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var releaseLabel: Any? = null
+        fun logUri(value: IntrinsicFunction) {
+  this.logUri = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var releaseLabel: Any? = null
+
         fun releaseLabel(value: String) {
-            this.releaseLabel = value
+          this.releaseLabel = value
         }
-        fun releaseLabel(value: IntrinsicFunction) { this.releaseLabel = value }
-        @JvmField var scaleDownBehavior: Any? = null
+        fun releaseLabel(value: IntrinsicFunction) {
+  this.releaseLabel = value
+}
+        @JvmField
+        var scaleDownBehavior: Any? = null
+
         fun scaleDownBehavior(value: String) {
-            this.scaleDownBehavior = value
+          this.scaleDownBehavior = value
         }
-        fun scaleDownBehavior(value: IntrinsicFunction) { this.scaleDownBehavior = value }
-        @JvmField var securityConfiguration: Any? = null
+        fun scaleDownBehavior(value: IntrinsicFunction) {
+  this.scaleDownBehavior = value
+}
+        @JvmField
+        var securityConfiguration: Any? = null
+
         fun securityConfiguration(value: String) {
-            this.securityConfiguration = value
+          this.securityConfiguration = value
         }
-        fun securityConfiguration(value: IntrinsicFunction) { this.securityConfiguration = value }
-        @JvmField var serviceRole: Any? = null
-        fun serviceRole(value: String) { this.serviceRole = value }
-        fun serviceRole(value: IntrinsicFunction) { this.serviceRole = value }
-        @JvmField var tags: Any? = null
+        fun securityConfiguration(value: IntrinsicFunction) {
+  this.securityConfiguration = value
+}
+        @JvmField
+        var serviceRole: Any? = null
+
+        fun serviceRole(value: String) {
+          this.serviceRole = value
+        }
+        fun serviceRole(value: IntrinsicFunction) {
+  this.serviceRole = value
+}
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var visibleToAllUsers: Any? = null
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var visibleToAllUsers: Any? = null
+
         fun visibleToAllUsers(value: Boolean) {
-            this.visibleToAllUsers = value
+          this.visibleToAllUsers = value
         }
-        fun visibleToAllUsers(value: IntrinsicFunction) { this.visibleToAllUsers = value }
+        fun visibleToAllUsers(value: IntrinsicFunction) {
+  this.visibleToAllUsers = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,87 +10,151 @@ import ktformation.*
 class AWSCognitoUserPool(logicalId: String) : Resource<AWSCognitoUserPool.Properties>(logicalId, "AWS::Cognito::UserPool") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var adminCreateUserConfig: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var adminCreateUserConfig: Any? = null
+
         fun adminCreateUserConfig(value: AdminCreateUserConfig) {
-            this.adminCreateUserConfig = value
+          this.adminCreateUserConfig = value
         }
-        fun adminCreateUserConfig(value: IntrinsicFunction) { this.adminCreateUserConfig = value }
-        @JvmField var aliasAttributes: Any? = null
+        fun adminCreateUserConfig(value: IntrinsicFunction) {
+  this.adminCreateUserConfig = value
+}
+        @JvmField
+        var aliasAttributes: Any? = null
+
         fun aliasAttributes(value: List<String>) {
-            this.aliasAttributes = value
+          this.aliasAttributes = value
         }
-        fun aliasAttributes(vararg value: IntrinsicFunction) { this.aliasAttributes = value }
-        @JvmField var autoVerifiedAttributes: Any? = null
+        fun aliasAttributes(vararg value: IntrinsicFunction) {
+  this.aliasAttributes = value
+}
+        @JvmField
+        var autoVerifiedAttributes: Any? = null
+
         fun autoVerifiedAttributes(value: List<String>) {
-            this.autoVerifiedAttributes = value
+          this.autoVerifiedAttributes = value
         }
-        fun autoVerifiedAttributes(vararg value: IntrinsicFunction) { this.autoVerifiedAttributes = value }
-        @JvmField var deviceConfiguration: Any? = null
+        fun autoVerifiedAttributes(vararg value: IntrinsicFunction) {
+  this.autoVerifiedAttributes = value
+}
+        @JvmField
+        var deviceConfiguration: Any? = null
+
         fun deviceConfiguration(value: DeviceConfiguration) {
-            this.deviceConfiguration = value
+          this.deviceConfiguration = value
         }
-        fun deviceConfiguration(value: IntrinsicFunction) { this.deviceConfiguration = value }
-        @JvmField var emailConfiguration: Any? = null
+        fun deviceConfiguration(value: IntrinsicFunction) {
+  this.deviceConfiguration = value
+}
+        @JvmField
+        var emailConfiguration: Any? = null
+
         fun emailConfiguration(value: EmailConfiguration) {
-            this.emailConfiguration = value
+          this.emailConfiguration = value
         }
-        fun emailConfiguration(value: IntrinsicFunction) { this.emailConfiguration = value }
-        @JvmField var emailVerificationMessage: Any? = null
+        fun emailConfiguration(value: IntrinsicFunction) {
+  this.emailConfiguration = value
+}
+        @JvmField
+        var emailVerificationMessage: Any? = null
+
         fun emailVerificationMessage(value: String) {
-            this.emailVerificationMessage = value
+          this.emailVerificationMessage = value
         }
-        fun emailVerificationMessage(value: IntrinsicFunction) { this.emailVerificationMessage = value }
-        @JvmField var emailVerificationSubject: Any? = null
+        fun emailVerificationMessage(value: IntrinsicFunction) {
+  this.emailVerificationMessage = value
+}
+        @JvmField
+        var emailVerificationSubject: Any? = null
+
         fun emailVerificationSubject(value: String) {
-            this.emailVerificationSubject = value
+          this.emailVerificationSubject = value
         }
-        fun emailVerificationSubject(value: IntrinsicFunction) { this.emailVerificationSubject = value }
-        @JvmField var lambdaConfig: Any? = null
+        fun emailVerificationSubject(value: IntrinsicFunction) {
+  this.emailVerificationSubject = value
+}
+        @JvmField
+        var lambdaConfig: Any? = null
+
         fun lambdaConfig(value: LambdaConfig) {
-            this.lambdaConfig = value
+          this.lambdaConfig = value
         }
-        fun lambdaConfig(value: IntrinsicFunction) { this.lambdaConfig = value }
-        @JvmField var mfaConfiguration: Any? = null
+        fun lambdaConfig(value: IntrinsicFunction) {
+  this.lambdaConfig = value
+}
+        @JvmField
+        var mfaConfiguration: Any? = null
+
         fun mfaConfiguration(value: String) {
-            this.mfaConfiguration = value
+          this.mfaConfiguration = value
         }
-        fun mfaConfiguration(value: IntrinsicFunction) { this.mfaConfiguration = value }
-        @JvmField var policies: Any? = null
+        fun mfaConfiguration(value: IntrinsicFunction) {
+  this.mfaConfiguration = value
+}
+        @JvmField
+        var policies: Any? = null
+
         fun policies(value: Policies) {
-            this.policies = value
+          this.policies = value
         }
-        fun policies(value: IntrinsicFunction) { this.policies = value }
-        @JvmField var schema: Any? = null
+        fun policies(value: IntrinsicFunction) {
+  this.policies = value
+}
+        @JvmField
+        var schema: Any? = null
+
         fun schema(value: List<SchemaAttribute>) {
-            this.schema = value
+          this.schema = value
         }
-        fun schema(vararg value: IntrinsicFunction) { this.schema = value }
-        @JvmField var smsAuthenticationMessage: Any? = null
+        fun schema(vararg value: IntrinsicFunction) {
+  this.schema = value
+}
+        @JvmField
+        var smsAuthenticationMessage: Any? = null
+
         fun smsAuthenticationMessage(value: String) {
-            this.smsAuthenticationMessage = value
+          this.smsAuthenticationMessage = value
         }
-        fun smsAuthenticationMessage(value: IntrinsicFunction) { this.smsAuthenticationMessage = value }
-        @JvmField var smsConfiguration: Any? = null
+        fun smsAuthenticationMessage(value: IntrinsicFunction) {
+  this.smsAuthenticationMessage = value
+}
+        @JvmField
+        var smsConfiguration: Any? = null
+
         fun smsConfiguration(value: SmsConfiguration) {
-            this.smsConfiguration = value
+          this.smsConfiguration = value
         }
-        fun smsConfiguration(value: IntrinsicFunction) { this.smsConfiguration = value }
-        @JvmField var smsVerificationMessage: Any? = null
+        fun smsConfiguration(value: IntrinsicFunction) {
+  this.smsConfiguration = value
+}
+        @JvmField
+        var smsVerificationMessage: Any? = null
+
         fun smsVerificationMessage(value: String) {
-            this.smsVerificationMessage = value
+          this.smsVerificationMessage = value
         }
-        fun smsVerificationMessage(value: IntrinsicFunction) { this.smsVerificationMessage = value }
-        @JvmField var userPoolName: Any? = null
+        fun smsVerificationMessage(value: IntrinsicFunction) {
+  this.smsVerificationMessage = value
+}
+        @JvmField
+        var userPoolName: Any? = null
+
         fun userPoolName(value: String) {
-            this.userPoolName = value
+          this.userPoolName = value
         }
-        fun userPoolName(value: IntrinsicFunction) { this.userPoolName = value }
-        @JvmField var userPoolTags: Any? = null
+        fun userPoolName(value: IntrinsicFunction) {
+  this.userPoolName = value
+}
+        @JvmField
+        var userPoolTags: Any? = null
+
         fun userPoolTags(value: Json) {
-            this.userPoolTags = value
+          this.userPoolTags = value
         }
-        fun userPoolTags(value: IntrinsicFunction) { this.userPoolTags = value }
+        fun userPoolTags(value: IntrinsicFunction) {
+  this.userPoolTags = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

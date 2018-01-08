@@ -10,30 +10,52 @@ import ktformation.*
 class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGroup.Properties>(logicalId, "AWS::Cognito::UserPoolGroup") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var groupName: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var groupName: Any? = null
+
         fun groupName(value: String) {
-            this.groupName = value
+          this.groupName = value
         }
-        fun groupName(value: IntrinsicFunction) { this.groupName = value }
-        @JvmField var precedence: Any? = null
+        fun groupName(value: IntrinsicFunction) {
+  this.groupName = value
+}
+        @JvmField
+        var precedence: Any? = null
+
         fun precedence(value: Double) {
-            this.precedence = value
+          this.precedence = value
         }
-        fun precedence(value: IntrinsicFunction) { this.precedence = value }
-        @JvmField var roleArn: Any? = null
+        fun precedence(value: IntrinsicFunction) {
+  this.precedence = value
+}
+        @JvmField
+        var roleArn: Any? = null
+
         fun roleArn(value: String) {
-            this.roleArn = value
+          this.roleArn = value
         }
-        fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
-        @JvmField var userPoolId: Any? = null
-        fun userPoolId(value: String) { this.userPoolId = value }
-        fun userPoolId(value: IntrinsicFunction) { this.userPoolId = value }
+        fun roleArn(value: IntrinsicFunction) {
+  this.roleArn = value
+}
+        @JvmField
+        var userPoolId: Any? = null
+
+        fun userPoolId(value: String) {
+          this.userPoolId = value
+        }
+        fun userPoolId(value: IntrinsicFunction) {
+  this.userPoolId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

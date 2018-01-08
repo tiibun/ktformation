@@ -10,21 +10,43 @@ import ktformation.*
 class AWSLogsSubscriptionFilter(logicalId: String) : Resource<AWSLogsSubscriptionFilter.Properties>(logicalId, "AWS::Logs::SubscriptionFilter") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var destinationArn: Any? = null
-        fun destinationArn(value: String) { this.destinationArn = value }
-        fun destinationArn(value: IntrinsicFunction) { this.destinationArn = value }
-        @JvmField var filterPattern: Any? = null
-        fun filterPattern(value: String) { this.filterPattern = value }
-        fun filterPattern(value: IntrinsicFunction) { this.filterPattern = value }
-        @JvmField var logGroupName: Any? = null
-        fun logGroupName(value: String) { this.logGroupName = value }
-        fun logGroupName(value: IntrinsicFunction) { this.logGroupName = value }
-        @JvmField var roleArn: Any? = null
-        fun roleArn(value: String) {
-            this.roleArn = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var destinationArn: Any? = null
+
+        fun destinationArn(value: String) {
+          this.destinationArn = value
         }
-        fun roleArn(value: IntrinsicFunction) { this.roleArn = value }
+        fun destinationArn(value: IntrinsicFunction) {
+  this.destinationArn = value
+}
+        @JvmField
+        var filterPattern: Any? = null
+
+        fun filterPattern(value: String) {
+          this.filterPattern = value
+        }
+        fun filterPattern(value: IntrinsicFunction) {
+  this.filterPattern = value
+}
+        @JvmField
+        var logGroupName: Any? = null
+
+        fun logGroupName(value: String) {
+          this.logGroupName = value
+        }
+        fun logGroupName(value: IntrinsicFunction) {
+  this.logGroupName = value
+}
+        @JvmField
+        var roleArn: Any? = null
+
+        fun roleArn(value: String) {
+          this.roleArn = value
+        }
+        fun roleArn(value: IntrinsicFunction) {
+  this.roleArn = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -10,50 +10,88 @@ import ktformation.*
 class AWSSSMPatchBaseline(logicalId: String) : Resource<AWSSSMPatchBaseline.Properties>(logicalId, "AWS::SSM::PatchBaseline") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var approvalRules: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var approvalRules: Any? = null
+
         fun approvalRules(value: RuleGroup) {
-            this.approvalRules = value
+          this.approvalRules = value
         }
-        fun approvalRules(value: IntrinsicFunction) { this.approvalRules = value }
-        @JvmField var approvedPatches: Any? = null
+        fun approvalRules(value: IntrinsicFunction) {
+  this.approvalRules = value
+}
+        @JvmField
+        var approvedPatches: Any? = null
+
         fun approvedPatches(value: List<String>) {
-            this.approvedPatches = value
+          this.approvedPatches = value
         }
-        fun approvedPatches(vararg value: IntrinsicFunction) { this.approvedPatches = value }
-        @JvmField var approvedPatchesComplianceLevel: Any? = null
+        fun approvedPatches(vararg value: IntrinsicFunction) {
+  this.approvedPatches = value
+}
+        @JvmField
+        var approvedPatchesComplianceLevel: Any? = null
+
         fun approvedPatchesComplianceLevel(value: String) {
-            this.approvedPatchesComplianceLevel = value
+          this.approvedPatchesComplianceLevel = value
         }
-        fun approvedPatchesComplianceLevel(value: IntrinsicFunction) { this.approvedPatchesComplianceLevel = value }
-        @JvmField var description: Any? = null
+        fun approvedPatchesComplianceLevel(value: IntrinsicFunction) {
+  this.approvedPatchesComplianceLevel = value
+}
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
-        @JvmField var globalFilters: Any? = null
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
+        @JvmField
+        var globalFilters: Any? = null
+
         fun globalFilters(value: PatchFilterGroup) {
-            this.globalFilters = value
+          this.globalFilters = value
         }
-        fun globalFilters(value: IntrinsicFunction) { this.globalFilters = value }
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var operatingSystem: Any? = null
+        fun globalFilters(value: IntrinsicFunction) {
+  this.globalFilters = value
+}
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
+        }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var operatingSystem: Any? = null
+
         fun operatingSystem(value: String) {
-            this.operatingSystem = value
+          this.operatingSystem = value
         }
-        fun operatingSystem(value: IntrinsicFunction) { this.operatingSystem = value }
-        @JvmField var patchGroups: Any? = null
+        fun operatingSystem(value: IntrinsicFunction) {
+  this.operatingSystem = value
+}
+        @JvmField
+        var patchGroups: Any? = null
+
         fun patchGroups(value: List<String>) {
-            this.patchGroups = value
+          this.patchGroups = value
         }
-        fun patchGroups(vararg value: IntrinsicFunction) { this.patchGroups = value }
-        @JvmField var rejectedPatches: Any? = null
+        fun patchGroups(vararg value: IntrinsicFunction) {
+  this.patchGroups = value
+}
+        @JvmField
+        var rejectedPatches: Any? = null
+
         fun rejectedPatches(value: List<String>) {
-            this.rejectedPatches = value
+          this.rejectedPatches = value
         }
-        fun rejectedPatches(vararg value: IntrinsicFunction) { this.rejectedPatches = value }
+        fun rejectedPatches(vararg value: IntrinsicFunction) {
+  this.rejectedPatches = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

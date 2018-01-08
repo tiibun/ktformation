@@ -10,13 +10,25 @@ import ktformation.*
 class AWSSNSTopicPolicy(logicalId: String) : Resource<AWSSNSTopicPolicy.Properties>(logicalId, "AWS::SNS::TopicPolicy") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var policyDocument: Any? = null
-        fun policyDocument(value: Json) { this.policyDocument = value }
-        fun policyDocument(value: IntrinsicFunction) { this.policyDocument = value }
-        @JvmField var topics: Any? = null
-        fun topics(value: List<String>) { this.topics = value }
-        fun topics(vararg value: IntrinsicFunction) { this.topics = value }
+    class Properties : ResourceProperties() {
+        @JvmField
+        var policyDocument: Any? = null
+
+        fun policyDocument(value: Json) {
+          this.policyDocument = value
+        }
+        fun policyDocument(value: IntrinsicFunction) {
+  this.policyDocument = value
+}
+        @JvmField
+        var topics: Any? = null
+
+        fun topics(value: List<String>) {
+          this.topics = value
+        }
+        fun topics(vararg value: IntrinsicFunction) {
+  this.topics = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

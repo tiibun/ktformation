@@ -10,17 +10,25 @@ import ktformation.*
 class AWSCodeDeployDeploymentConfig(logicalId: String) : Resource<AWSCodeDeployDeploymentConfig.Properties>(logicalId, "AWS::CodeDeploy::DeploymentConfig") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var deploymentConfigName: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var deploymentConfigName: Any? = null
+
         fun deploymentConfigName(value: String) {
-            this.deploymentConfigName = value
+          this.deploymentConfigName = value
         }
-        fun deploymentConfigName(value: IntrinsicFunction) { this.deploymentConfigName = value }
-        @JvmField var minimumHealthyHosts: Any? = null
+        fun deploymentConfigName(value: IntrinsicFunction) {
+  this.deploymentConfigName = value
+}
+        @JvmField
+        var minimumHealthyHosts: Any? = null
+
         fun minimumHealthyHosts(value: MinimumHealthyHosts) {
-            this.minimumHealthyHosts = value
+          this.minimumHealthyHosts = value
         }
-        fun minimumHealthyHosts(value: IntrinsicFunction) { this.minimumHealthyHosts = value }
+        fun minimumHealthyHosts(value: IntrinsicFunction) {
+  this.minimumHealthyHosts = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

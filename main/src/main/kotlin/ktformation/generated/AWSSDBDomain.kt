@@ -10,12 +10,16 @@ import ktformation.*
 class AWSSDBDomain(logicalId: String) : Resource<AWSSDBDomain.Properties>(logicalId, "AWS::SDB::Domain") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var description: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var description: Any? = null
+
         fun description(value: String) {
-            this.description = value
+          this.description = value
         }
-        fun description(value: IntrinsicFunction) { this.description = value }
+        fun description(value: IntrinsicFunction) {
+  this.description = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

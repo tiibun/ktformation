@@ -10,15 +10,25 @@ import ktformation.*
 class AWSWAFRegionalXssMatchSet(logicalId: String) : Resource<AWSWAFRegionalXssMatchSet.Properties>(logicalId, "AWS::WAFRegional::XssMatchSet") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var name: Any? = null
-        fun name(value: String) { this.name = value }
-        fun name(value: IntrinsicFunction) { this.name = value }
-        @JvmField var xssMatchTuples: Any? = null
-        fun xssMatchTuples(value: List<XssMatchTuple>) {
-            this.xssMatchTuples = value
+    class Properties : ResourceProperties() {
+        @JvmField
+        var name: Any? = null
+
+        fun name(value: String) {
+          this.name = value
         }
-        fun xssMatchTuples(vararg value: IntrinsicFunction) { this.xssMatchTuples = value }
+        fun name(value: IntrinsicFunction) {
+  this.name = value
+}
+        @JvmField
+        var xssMatchTuples: Any? = null
+
+        fun xssMatchTuples(value: List<XssMatchTuple>) {
+          this.xssMatchTuples = value
+        }
+        fun xssMatchTuples(vararg value: IntrinsicFunction) {
+  this.xssMatchTuples = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

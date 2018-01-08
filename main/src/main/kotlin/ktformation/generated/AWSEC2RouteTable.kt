@@ -10,15 +10,25 @@ import ktformation.*
 class AWSEC2RouteTable(logicalId: String) : Resource<AWSEC2RouteTable.Properties>(logicalId, "AWS::EC2::RouteTable") {
 
     @CloudFormationMarker
-    class Properties : ResourceProperties {
-        @JvmField var tags: Any? = null
+    class Properties : ResourceProperties() {
+        @JvmField
+        var tags: Any? = null
+
         fun tags(value: List<Tag>) {
-            this.tags = value
+          this.tags = value
         }
-        fun tags(vararg value: IntrinsicFunction) { this.tags = value }
-        @JvmField var vpcId: Any? = null
-        fun vpcId(value: String) { this.vpcId = value }
-        fun vpcId(value: IntrinsicFunction) { this.vpcId = value }
+        fun tags(vararg value: IntrinsicFunction) {
+  this.tags = value
+}
+        @JvmField
+        var vpcId: Any? = null
+
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        fun vpcId(value: IntrinsicFunction) {
+  this.vpcId = value
+}
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
