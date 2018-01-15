@@ -5,13 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import ktformation.IntrinsicFunction
 import ktformation.ParameterType
 import ktformation.policy.Effect
+import ktformation.util.ClassFinder
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.introspector.Property
 import org.yaml.snakeyaml.nodes.*
 import org.yaml.snakeyaml.representer.Represent
 import org.yaml.snakeyaml.representer.Representer
-import java.io.File
 import java.lang.reflect.Field
 
 class SnakeYamlSerializer {
@@ -25,22 +25,8 @@ class SnakeYamlSerializer {
             }
 
             private fun addFunctionRepresents() {
-                val rootPackages = Thread.currentThread().contextClassLoader.getResources("")
-                for (p in rootPackages) {
-                    val rootDir = File(p.toURI())
-                    rootDir.walk()
-                            .filter { it.path.endsWith(".class") }
-                            .map { file ->
-                                val className = file.path
-                                        .replace(rootDir.path + "/", "")
-                                        .replace(".class", "")
-                                        .replace("/", ".")
-                                Class.forName(className)
-                            }
-                            .filter { IntrinsicFunction::class.java.isAssignableFrom(it) }
-                            .forEach {
-                                representers[it] = IntrinsicFunctionRepresent()
-                            }
+                ClassFinder.getChildren(IntrinsicFunction::class.java).forEach {
+                    representers[it] = IntrinsicFunctionRepresent()
                 }
             }
 
