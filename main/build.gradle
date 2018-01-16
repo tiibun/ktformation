@@ -10,8 +10,9 @@ buildscript {
 group = 'net.tiibun.ktformation'
 version = '0.0.1-SNAPSHOT'
 
-apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'java-library'
+apply plugin: 'com.github.johnrengelman.shadow'
+
 
 dependencies {
     ext.jackson_version = '2.9.0'
@@ -23,4 +24,8 @@ dependencies {
         exclude group: 'org.jetbrains.kotlin'
     }
     compile 'org.yaml:snakeyaml:1.19'
+}
+
+shadowJar {
+    baseName = 'ktformation'
 }
