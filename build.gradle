@@ -1,23 +1,23 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            url 'https://plugins.gradle.org/m2/'
-        }
+        jcenter()
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0'
-        classpath 'net.researchgate:gradle-release:2.6.0'
+        classpath 'co.riiid:gradle-github-plugin:0.4.2'
     }
 }
 
-apply plugin: 'net.researchgate.release'
+apply plugin: 'co.riiid.gradle'
 
 subprojects {
     apply plugin: 'kotlin'
     apply plugin: 'org.junit.platform.gradle.plugin'
+
+    group = 'net.tiibun.ktformation'
 
     repositories {
         mavenCentral()
@@ -61,4 +61,15 @@ subprojects {
     }
 }
 
-task build {}
+github {
+    owner = github_owner
+    token = github_token
+    repo = 'ktformation'
+    tagName = version
+    targetCommitish = 'master'
+    assets = [
+            "main/build/libs/ktformation-${version}-all.jar"
+    ]
+}
+
+githubRelease.dependsOn ':main:shadowJar'
