@@ -17,63 +17,77 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun apiKeyRequired(value: Boolean) {
           this.apiKeyRequired = value
         }
+        
         fun apiKeyRequired(value: IntrinsicFunction) {
-  this.apiKeyRequired = value
-}
+          this.apiKeyRequired = value
+        }
+        
         @JvmField
         var authorizationType: Any? = null
 
         fun authorizationType(value: String) {
           this.authorizationType = value
         }
+        
         fun authorizationType(value: IntrinsicFunction) {
-  this.authorizationType = value
-}
+          this.authorizationType = value
+        }
+        
         @JvmField
         var authorizerId: Any? = null
 
         fun authorizerId(value: String) {
           this.authorizerId = value
         }
+        
         fun authorizerId(value: IntrinsicFunction) {
-  this.authorizerId = value
-}
+          this.authorizerId = value
+        }
+        
         @JvmField
         var httpMethod: Any? = null
 
         fun httpMethod(value: String) {
           this.httpMethod = value
         }
+        
         fun httpMethod(value: IntrinsicFunction) {
-  this.httpMethod = value
-}
+          this.httpMethod = value
+        }
+        
         @JvmField
         var integration: Any? = null
 
         fun integration(value: Integration) {
           this.integration = value
         }
+        
         fun integration(value: IntrinsicFunction) {
-  this.integration = value
-}
+          this.integration = value
+        }
+        
         @JvmField
         var methodResponses: Any? = null
 
         fun methodResponses(value: List<MethodResponse>) {
           this.methodResponses = value
         }
+        
         fun methodResponses(vararg value: IntrinsicFunction) {
-  this.methodResponses = value
-}
+          this.methodResponses = value
+        }
+        
         @JvmField
         var operationName: Any? = null
 
         fun operationName(value: String) {
           this.operationName = value
         }
+        
         fun operationName(value: IntrinsicFunction) {
-  this.operationName = value
-}
+          this.operationName = value
+        }
+        
         @JvmField
         var requestModels: Any? = null
 
@@ -94,27 +108,33 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun requestValidatorId(value: String) {
           this.requestValidatorId = value
         }
+        
         fun requestValidatorId(value: IntrinsicFunction) {
-  this.requestValidatorId = value
-}
+          this.requestValidatorId = value
+        }
+        
         @JvmField
         var resourceId: Any? = null
 
         fun resourceId(value: String) {
           this.resourceId = value
         }
+        
         fun resourceId(value: IntrinsicFunction) {
-  this.resourceId = value
-}
+          this.resourceId = value
+        }
+        
         @JvmField
         var restApiId: Any? = null
 
         fun restApiId(value: String) {
           this.restApiId = value
         }
+        
         fun restApiId(value: IntrinsicFunction) {
-  this.restApiId = value
-}
+          this.restApiId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

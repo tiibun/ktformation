@@ -17,18 +17,22 @@ class AWSEC2VPNGatewayRoutePropagation(logicalId: String) : Resource<AWSEC2VPNGa
         fun routeTableIds(value: List<String>) {
           this.routeTableIds = value
         }
+        
         fun routeTableIds(vararg value: IntrinsicFunction) {
-  this.routeTableIds = value
-}
+          this.routeTableIds = value
+        }
+        
         @JvmField
         var vpnGatewayId: Any? = null
 
         fun vpnGatewayId(value: String) {
           this.vpnGatewayId = value
         }
+        
         fun vpnGatewayId(value: IntrinsicFunction) {
-  this.vpnGatewayId = value
-}
+          this.vpnGatewayId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,45 +17,55 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
         fun hostedZoneConfig(value: HostedZoneConfig) {
           this.hostedZoneConfig = value
         }
+        
         fun hostedZoneConfig(value: IntrinsicFunction) {
-  this.hostedZoneConfig = value
-}
+          this.hostedZoneConfig = value
+        }
+        
         @JvmField
         var hostedZoneTags: Any? = null
 
         fun hostedZoneTags(value: List<HostedZoneTag>) {
           this.hostedZoneTags = value
         }
+        
         fun hostedZoneTags(vararg value: IntrinsicFunction) {
-  this.hostedZoneTags = value
-}
+          this.hostedZoneTags = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var queryLoggingConfig: Any? = null
 
         fun queryLoggingConfig(value: QueryLoggingConfig) {
           this.queryLoggingConfig = value
         }
+        
         fun queryLoggingConfig(value: IntrinsicFunction) {
-  this.queryLoggingConfig = value
-}
+          this.queryLoggingConfig = value
+        }
+        
         @JvmField
         var vPCs: Any? = null
 
         fun vPCs(value: List<VPC>) {
           this.vPCs = value
         }
+        
         fun vPCs(vararg value: IntrinsicFunction) {
-  this.vPCs = value
-}
+          this.vPCs = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,9 +17,11 @@ class AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId: String) : Resource<
         fun cloudFrontOriginAccessIdentityConfig(value: CloudFrontOriginAccessIdentityConfig) {
           this.cloudFrontOriginAccessIdentityConfig = value
         }
+        
         fun cloudFrontOriginAccessIdentityConfig(value: IntrinsicFunction) {
-  this.cloudFrontOriginAccessIdentityConfig = value
-}
+          this.cloudFrontOriginAccessIdentityConfig = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

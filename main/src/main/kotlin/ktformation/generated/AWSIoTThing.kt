@@ -17,18 +17,22 @@ class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalI
         fun attributePayload(value: AttributePayload) {
           this.attributePayload = value
         }
+        
         fun attributePayload(value: IntrinsicFunction) {
-  this.attributePayload = value
-}
+          this.attributePayload = value
+        }
+        
         @JvmField
         var thingName: Any? = null
 
         fun thingName(value: String) {
           this.thingName = value
         }
+        
         fun thingName(value: IntrinsicFunction) {
-  this.thingName = value
-}
+          this.thingName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,126 +17,154 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun aliasTarget(value: AliasTarget) {
           this.aliasTarget = value
         }
+        
         fun aliasTarget(value: IntrinsicFunction) {
-  this.aliasTarget = value
-}
+          this.aliasTarget = value
+        }
+        
         @JvmField
         var comment: Any? = null
 
         fun comment(value: String) {
           this.comment = value
         }
+        
         fun comment(value: IntrinsicFunction) {
-  this.comment = value
-}
+          this.comment = value
+        }
+        
         @JvmField
         var failover: Any? = null
 
         fun failover(value: String) {
           this.failover = value
         }
+        
         fun failover(value: IntrinsicFunction) {
-  this.failover = value
-}
+          this.failover = value
+        }
+        
         @JvmField
         var geoLocation: Any? = null
 
         fun geoLocation(value: GeoLocation) {
           this.geoLocation = value
         }
+        
         fun geoLocation(value: IntrinsicFunction) {
-  this.geoLocation = value
-}
+          this.geoLocation = value
+        }
+        
         @JvmField
         var healthCheckId: Any? = null
 
         fun healthCheckId(value: String) {
           this.healthCheckId = value
         }
+        
         fun healthCheckId(value: IntrinsicFunction) {
-  this.healthCheckId = value
-}
+          this.healthCheckId = value
+        }
+        
         @JvmField
         var hostedZoneId: Any? = null
 
         fun hostedZoneId(value: String) {
           this.hostedZoneId = value
         }
+        
         fun hostedZoneId(value: IntrinsicFunction) {
-  this.hostedZoneId = value
-}
+          this.hostedZoneId = value
+        }
+        
         @JvmField
         var hostedZoneName: Any? = null
 
         fun hostedZoneName(value: String) {
           this.hostedZoneName = value
         }
+        
         fun hostedZoneName(value: IntrinsicFunction) {
-  this.hostedZoneName = value
-}
+          this.hostedZoneName = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var region: Any? = null
 
         fun region(value: String) {
           this.region = value
         }
+        
         fun region(value: IntrinsicFunction) {
-  this.region = value
-}
+          this.region = value
+        }
+        
         @JvmField
         var resourceRecords: Any? = null
 
         fun resourceRecords(value: List<String>) {
           this.resourceRecords = value
         }
+        
         fun resourceRecords(vararg value: IntrinsicFunction) {
-  this.resourceRecords = value
-}
+          this.resourceRecords = value
+        }
+        
         @JvmField
         var setIdentifier: Any? = null
 
         fun setIdentifier(value: String) {
           this.setIdentifier = value
         }
+        
         fun setIdentifier(value: IntrinsicFunction) {
-  this.setIdentifier = value
-}
+          this.setIdentifier = value
+        }
+        
         @JvmField
         var tTL: Any? = null
 
         fun tTL(value: String) {
           this.tTL = value
         }
+        
         fun tTL(value: IntrinsicFunction) {
-  this.tTL = value
-}
+          this.tTL = value
+        }
+        
         @JvmField
         var type: Any? = null
 
         fun type(value: String) {
           this.type = value
         }
+        
         fun type(value: IntrinsicFunction) {
-  this.type = value
-}
+          this.type = value
+        }
+        
         @JvmField
         var weight: Any? = null
 
         fun weight(value: Int) {
           this.weight = value
         }
+        
         fun weight(value: IntrinsicFunction) {
-  this.weight = value
-}
+          this.weight = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

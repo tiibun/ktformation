@@ -31,27 +31,33 @@ class AWSApiGatewayGatewayResponse(logicalId: String) : Resource<AWSApiGatewayGa
         fun responseType(value: String) {
           this.responseType = value
         }
+        
         fun responseType(value: IntrinsicFunction) {
-  this.responseType = value
-}
+          this.responseType = value
+        }
+        
         @JvmField
         var restApiId: Any? = null
 
         fun restApiId(value: String) {
           this.restApiId = value
         }
+        
         fun restApiId(value: IntrinsicFunction) {
-  this.restApiId = value
-}
+          this.restApiId = value
+        }
+        
         @JvmField
         var statusCode: Any? = null
 
         fun statusCode(value: String) {
           this.statusCode = value
         }
+        
         fun statusCode(value: IntrinsicFunction) {
-  this.statusCode = value
-}
+          this.statusCode = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

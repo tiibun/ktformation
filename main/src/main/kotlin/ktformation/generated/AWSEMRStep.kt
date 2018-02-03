@@ -17,36 +17,44 @@ class AWSEMRStep(logicalId: String) : Resource<AWSEMRStep.Properties>(logicalId,
         fun actionOnFailure(value: String) {
           this.actionOnFailure = value
         }
+        
         fun actionOnFailure(value: IntrinsicFunction) {
-  this.actionOnFailure = value
-}
+          this.actionOnFailure = value
+        }
+        
         @JvmField
         var hadoopJarStep: Any? = null
 
         fun hadoopJarStep(value: HadoopJarStepConfig) {
           this.hadoopJarStep = value
         }
+        
         fun hadoopJarStep(value: IntrinsicFunction) {
-  this.hadoopJarStep = value
-}
+          this.hadoopJarStep = value
+        }
+        
         @JvmField
         var jobFlowId: Any? = null
 
         fun jobFlowId(value: String) {
           this.jobFlowId = value
         }
+        
         fun jobFlowId(value: IntrinsicFunction) {
-  this.jobFlowId = value
-}
+          this.jobFlowId = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

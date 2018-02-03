@@ -17,18 +17,22 @@ class AWSWAFSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFSqlInjectio
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var sqlInjectionMatchTuples: Any? = null
 
         fun sqlInjectionMatchTuples(value: List<SqlInjectionMatchTuple>) {
           this.sqlInjectionMatchTuples = value
         }
+        
         fun sqlInjectionMatchTuples(vararg value: IntrinsicFunction) {
-  this.sqlInjectionMatchTuples = value
-}
+          this.sqlInjectionMatchTuples = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

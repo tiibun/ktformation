@@ -17,18 +17,22 @@ class AWSKinesisAnalyticsApplicationOutput(logicalId: String) : Resource<AWSKine
         fun applicationName(value: String) {
           this.applicationName = value
         }
+        
         fun applicationName(value: IntrinsicFunction) {
-  this.applicationName = value
-}
+          this.applicationName = value
+        }
+        
         @JvmField
         var output: Any? = null
 
         fun output(value: Output) {
           this.output = value
         }
+        
         fun output(value: IntrinsicFunction) {
-  this.output = value
-}
+          this.output = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,144 +17,176 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun accessLoggingPolicy(value: AccessLoggingPolicy) {
           this.accessLoggingPolicy = value
         }
+        
         fun accessLoggingPolicy(value: IntrinsicFunction) {
-  this.accessLoggingPolicy = value
-}
+          this.accessLoggingPolicy = value
+        }
+        
         @JvmField
         var appCookieStickinessPolicy: Any? = null
 
         fun appCookieStickinessPolicy(value: List<AppCookieStickinessPolicy>) {
           this.appCookieStickinessPolicy = value
         }
+        
         fun appCookieStickinessPolicy(vararg value: IntrinsicFunction) {
-  this.appCookieStickinessPolicy = value
-}
+          this.appCookieStickinessPolicy = value
+        }
+        
         @JvmField
         var availabilityZones: Any? = null
 
         fun availabilityZones(value: List<String>) {
           this.availabilityZones = value
         }
+        
         fun availabilityZones(vararg value: IntrinsicFunction) {
-  this.availabilityZones = value
-}
+          this.availabilityZones = value
+        }
+        
         @JvmField
         var connectionDrainingPolicy: Any? = null
 
         fun connectionDrainingPolicy(value: ConnectionDrainingPolicy) {
           this.connectionDrainingPolicy = value
         }
+        
         fun connectionDrainingPolicy(value: IntrinsicFunction) {
-  this.connectionDrainingPolicy = value
-}
+          this.connectionDrainingPolicy = value
+        }
+        
         @JvmField
         var connectionSettings: Any? = null
 
         fun connectionSettings(value: ConnectionSettings) {
           this.connectionSettings = value
         }
+        
         fun connectionSettings(value: IntrinsicFunction) {
-  this.connectionSettings = value
-}
+          this.connectionSettings = value
+        }
+        
         @JvmField
         var crossZone: Any? = null
 
         fun crossZone(value: Boolean) {
           this.crossZone = value
         }
+        
         fun crossZone(value: IntrinsicFunction) {
-  this.crossZone = value
-}
+          this.crossZone = value
+        }
+        
         @JvmField
         var healthCheck: Any? = null
 
         fun healthCheck(value: HealthCheck) {
           this.healthCheck = value
         }
+        
         fun healthCheck(value: IntrinsicFunction) {
-  this.healthCheck = value
-}
+          this.healthCheck = value
+        }
+        
         @JvmField
         var instances: Any? = null
 
         fun instances(value: List<String>) {
           this.instances = value
         }
+        
         fun instances(vararg value: IntrinsicFunction) {
-  this.instances = value
-}
+          this.instances = value
+        }
+        
         @JvmField
         var lBCookieStickinessPolicy: Any? = null
 
         fun lBCookieStickinessPolicy(value: List<LBCookieStickinessPolicy>) {
           this.lBCookieStickinessPolicy = value
         }
+        
         fun lBCookieStickinessPolicy(vararg value: IntrinsicFunction) {
-  this.lBCookieStickinessPolicy = value
-}
+          this.lBCookieStickinessPolicy = value
+        }
+        
         @JvmField
         var listeners: Any? = null
 
         fun listeners(value: List<Listeners>) {
           this.listeners = value
         }
+        
         fun listeners(vararg value: IntrinsicFunction) {
-  this.listeners = value
-}
+          this.listeners = value
+        }
+        
         @JvmField
         var loadBalancerName: Any? = null
 
         fun loadBalancerName(value: String) {
           this.loadBalancerName = value
         }
+        
         fun loadBalancerName(value: IntrinsicFunction) {
-  this.loadBalancerName = value
-}
+          this.loadBalancerName = value
+        }
+        
         @JvmField
         var policies: Any? = null
 
         fun policies(value: List<Policies>) {
           this.policies = value
         }
+        
         fun policies(vararg value: IntrinsicFunction) {
-  this.policies = value
-}
+          this.policies = value
+        }
+        
         @JvmField
         var scheme: Any? = null
 
         fun scheme(value: String) {
           this.scheme = value
         }
+        
         fun scheme(value: IntrinsicFunction) {
-  this.scheme = value
-}
+          this.scheme = value
+        }
+        
         @JvmField
         var securityGroups: Any? = null
 
         fun securityGroups(value: List<String>) {
           this.securityGroups = value
         }
+        
         fun securityGroups(vararg value: IntrinsicFunction) {
-  this.securityGroups = value
-}
+          this.securityGroups = value
+        }
+        
         @JvmField
         var subnets: Any? = null
 
         fun subnets(value: List<String>) {
           this.subnets = value
         }
+        
         fun subnets(vararg value: IntrinsicFunction) {
-  this.subnets = value
-}
+          this.subnets = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

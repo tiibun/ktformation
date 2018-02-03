@@ -17,18 +17,22 @@ class AWSWAFRegionalWebACLAssociation(logicalId: String) : Resource<AWSWAFRegion
         fun resourceArn(value: String) {
           this.resourceArn = value
         }
+        
         fun resourceArn(value: IntrinsicFunction) {
-  this.resourceArn = value
-}
+          this.resourceArn = value
+        }
+        
         @JvmField
         var webACLId: Any? = null
 
         fun webACLId(value: String) {
           this.webACLId = value
         }
+        
         fun webACLId(value: IntrinsicFunction) {
-  this.webACLId = value
-}
+          this.webACLId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

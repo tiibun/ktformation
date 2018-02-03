@@ -17,36 +17,44 @@ class AWSApiGatewayRequestValidator(logicalId: String) : Resource<AWSApiGatewayR
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var restApiId: Any? = null
 
         fun restApiId(value: String) {
           this.restApiId = value
         }
+        
         fun restApiId(value: IntrinsicFunction) {
-  this.restApiId = value
-}
+          this.restApiId = value
+        }
+        
         @JvmField
         var validateRequestBody: Any? = null
 
         fun validateRequestBody(value: Boolean) {
           this.validateRequestBody = value
         }
+        
         fun validateRequestBody(value: IntrinsicFunction) {
-  this.validateRequestBody = value
-}
+          this.validateRequestBody = value
+        }
+        
         @JvmField
         var validateRequestParameters: Any? = null
 
         fun validateRequestParameters(value: Boolean) {
           this.validateRequestParameters = value
         }
+        
         fun validateRequestParameters(value: IntrinsicFunction) {
-  this.validateRequestParameters = value
-}
+          this.validateRequestParameters = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

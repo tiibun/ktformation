@@ -17,9 +17,11 @@ class AWSGlueClassifier(logicalId: String) : Resource<AWSGlueClassifier.Properti
         fun grokClassifier(value: GrokClassifier) {
           this.grokClassifier = value
         }
+        
         fun grokClassifier(value: IntrinsicFunction) {
-  this.grokClassifier = value
-}
+          this.grokClassifier = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

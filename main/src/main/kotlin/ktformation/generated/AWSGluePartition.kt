@@ -17,36 +17,44 @@ class AWSGluePartition(logicalId: String) : Resource<AWSGluePartition.Properties
         fun catalogId(value: String) {
           this.catalogId = value
         }
+        
         fun catalogId(value: IntrinsicFunction) {
-  this.catalogId = value
-}
+          this.catalogId = value
+        }
+        
         @JvmField
         var databaseName: Any? = null
 
         fun databaseName(value: String) {
           this.databaseName = value
         }
+        
         fun databaseName(value: IntrinsicFunction) {
-  this.databaseName = value
-}
+          this.databaseName = value
+        }
+        
         @JvmField
         var partitionInput: Any? = null
 
         fun partitionInput(value: PartitionInput) {
           this.partitionInput = value
         }
+        
         fun partitionInput(value: IntrinsicFunction) {
-  this.partitionInput = value
-}
+          this.partitionInput = value
+        }
+        
         @JvmField
         var tableName: Any? = null
 
         fun tableName(value: String) {
           this.tableName = value
         }
+        
         fun tableName(value: IntrinsicFunction) {
-  this.tableName = value
-}
+          this.tableName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

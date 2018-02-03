@@ -17,81 +17,99 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun ipAddressType(value: String) {
           this.ipAddressType = value
         }
+        
         fun ipAddressType(value: IntrinsicFunction) {
-  this.ipAddressType = value
-}
+          this.ipAddressType = value
+        }
+        
         @JvmField
         var loadBalancerAttributes: Any? = null
 
         fun loadBalancerAttributes(value: List<LoadBalancerAttribute>) {
           this.loadBalancerAttributes = value
         }
+        
         fun loadBalancerAttributes(vararg value: IntrinsicFunction) {
-  this.loadBalancerAttributes = value
-}
+          this.loadBalancerAttributes = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var scheme: Any? = null
 
         fun scheme(value: String) {
           this.scheme = value
         }
+        
         fun scheme(value: IntrinsicFunction) {
-  this.scheme = value
-}
+          this.scheme = value
+        }
+        
         @JvmField
         var securityGroups: Any? = null
 
         fun securityGroups(value: List<String>) {
           this.securityGroups = value
         }
+        
         fun securityGroups(vararg value: IntrinsicFunction) {
-  this.securityGroups = value
-}
+          this.securityGroups = value
+        }
+        
         @JvmField
         var subnetMappings: Any? = null
 
         fun subnetMappings(value: List<SubnetMapping>) {
           this.subnetMappings = value
         }
+        
         fun subnetMappings(vararg value: IntrinsicFunction) {
-  this.subnetMappings = value
-}
+          this.subnetMappings = value
+        }
+        
         @JvmField
         var subnets: Any? = null
 
         fun subnets(value: List<String>) {
           this.subnets = value
         }
+        
         fun subnets(vararg value: IntrinsicFunction) {
-  this.subnets = value
-}
+          this.subnets = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
         @JvmField
         var type: Any? = null
 
         fun type(value: String) {
           this.type = value
         }
+        
         fun type(value: IntrinsicFunction) {
-  this.type = value
-}
+          this.type = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

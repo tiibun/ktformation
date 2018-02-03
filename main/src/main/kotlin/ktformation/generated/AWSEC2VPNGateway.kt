@@ -17,27 +17,33 @@ class AWSEC2VPNGateway(logicalId: String) : Resource<AWSEC2VPNGateway.Properties
         fun amazonSideAsn(value: Long) {
           this.amazonSideAsn = value
         }
+        
         fun amazonSideAsn(value: IntrinsicFunction) {
-  this.amazonSideAsn = value
-}
+          this.amazonSideAsn = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
         @JvmField
         var type: Any? = null
 
         fun type(value: String) {
           this.type = value
         }
+        
         fun type(value: IntrinsicFunction) {
-  this.type = value
-}
+          this.type = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

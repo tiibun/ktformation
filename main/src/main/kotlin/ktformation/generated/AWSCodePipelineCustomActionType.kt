@@ -17,63 +17,77 @@ class AWSCodePipelineCustomActionType(logicalId: String) : Resource<AWSCodePipel
         fun category(value: String) {
           this.category = value
         }
+        
         fun category(value: IntrinsicFunction) {
-  this.category = value
-}
+          this.category = value
+        }
+        
         @JvmField
         var configurationProperties: Any? = null
 
         fun configurationProperties(value: List<ConfigurationProperties>) {
           this.configurationProperties = value
         }
+        
         fun configurationProperties(vararg value: IntrinsicFunction) {
-  this.configurationProperties = value
-}
+          this.configurationProperties = value
+        }
+        
         @JvmField
         var inputArtifactDetails: Any? = null
 
         fun inputArtifactDetails(value: ArtifactDetails) {
           this.inputArtifactDetails = value
         }
+        
         fun inputArtifactDetails(value: IntrinsicFunction) {
-  this.inputArtifactDetails = value
-}
+          this.inputArtifactDetails = value
+        }
+        
         @JvmField
         var outputArtifactDetails: Any? = null
 
         fun outputArtifactDetails(value: ArtifactDetails) {
           this.outputArtifactDetails = value
         }
+        
         fun outputArtifactDetails(value: IntrinsicFunction) {
-  this.outputArtifactDetails = value
-}
+          this.outputArtifactDetails = value
+        }
+        
         @JvmField
         var provider: Any? = null
 
         fun provider(value: String) {
           this.provider = value
         }
+        
         fun provider(value: IntrinsicFunction) {
-  this.provider = value
-}
+          this.provider = value
+        }
+        
         @JvmField
         var settings: Any? = null
 
         fun settings(value: Settings) {
           this.settings = value
         }
+        
         fun settings(value: IntrinsicFunction) {
-  this.settings = value
-}
+          this.settings = value
+        }
+        
         @JvmField
         var version: Any? = null
 
         fun version(value: String) {
           this.version = value
         }
+        
         fun version(value: IntrinsicFunction) {
-  this.version = value
-}
+          this.version = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

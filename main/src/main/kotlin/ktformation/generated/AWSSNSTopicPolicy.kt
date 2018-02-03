@@ -17,18 +17,22 @@ class AWSSNSTopicPolicy(logicalId: String) : Resource<AWSSNSTopicPolicy.Properti
         fun policyDocument(value: Json) {
           this.policyDocument = value
         }
+        
         fun policyDocument(value: IntrinsicFunction) {
-  this.policyDocument = value
-}
+          this.policyDocument = value
+        }
+        
         @JvmField
         var topics: Any? = null
 
         fun topics(value: List<String>) {
           this.topics = value
         }
+        
         fun topics(vararg value: IntrinsicFunction) {
-  this.topics = value
-}
+          this.topics = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

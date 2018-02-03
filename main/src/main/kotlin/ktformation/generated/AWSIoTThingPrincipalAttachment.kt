@@ -17,18 +17,22 @@ class AWSIoTThingPrincipalAttachment(logicalId: String) : Resource<AWSIoTThingPr
         fun principal(value: String) {
           this.principal = value
         }
+        
         fun principal(value: IntrinsicFunction) {
-  this.principal = value
-}
+          this.principal = value
+        }
+        
         @JvmField
         var thingName: Any? = null
 
         fun thingName(value: String) {
           this.thingName = value
         }
+        
         fun thingName(value: IntrinsicFunction) {
-  this.thingName = value
-}
+          this.thingName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,54 +17,66 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun action(value: String) {
           this.action = value
         }
+        
         fun action(value: IntrinsicFunction) {
-  this.action = value
-}
+          this.action = value
+        }
+        
         @JvmField
         var eventSourceToken: Any? = null
 
         fun eventSourceToken(value: String) {
           this.eventSourceToken = value
         }
+        
         fun eventSourceToken(value: IntrinsicFunction) {
-  this.eventSourceToken = value
-}
+          this.eventSourceToken = value
+        }
+        
         @JvmField
         var functionName: Any? = null
 
         fun functionName(value: String) {
           this.functionName = value
         }
+        
         fun functionName(value: IntrinsicFunction) {
-  this.functionName = value
-}
+          this.functionName = value
+        }
+        
         @JvmField
         var principal: Any? = null
 
         fun principal(value: String) {
           this.principal = value
         }
+        
         fun principal(value: IntrinsicFunction) {
-  this.principal = value
-}
+          this.principal = value
+        }
+        
         @JvmField
         var sourceAccount: Any? = null
 
         fun sourceAccount(value: String) {
           this.sourceAccount = value
         }
+        
         fun sourceAccount(value: IntrinsicFunction) {
-  this.sourceAccount = value
-}
+          this.sourceAccount = value
+        }
+        
         @JvmField
         var sourceArn: Any? = null
 
         fun sourceArn(value: String) {
           this.sourceArn = value
         }
+        
         fun sourceArn(value: IntrinsicFunction) {
-  this.sourceArn = value
-}
+          this.sourceArn = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,36 +17,44 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
         fun domainName(value: String) {
           this.domainName = value
         }
+        
         fun domainName(value: IntrinsicFunction) {
-  this.domainName = value
-}
+          this.domainName = value
+        }
+        
         @JvmField
         var domainValidationOptions: Any? = null
 
         fun domainValidationOptions(value: List<DomainValidationOption>) {
           this.domainValidationOptions = value
         }
+        
         fun domainValidationOptions(vararg value: IntrinsicFunction) {
-  this.domainValidationOptions = value
-}
+          this.domainValidationOptions = value
+        }
+        
         @JvmField
         var subjectAlternativeNames: Any? = null
 
         fun subjectAlternativeNames(value: List<String>) {
           this.subjectAlternativeNames = value
         }
+        
         fun subjectAlternativeNames(vararg value: IntrinsicFunction) {
-  this.subjectAlternativeNames = value
-}
+          this.subjectAlternativeNames = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

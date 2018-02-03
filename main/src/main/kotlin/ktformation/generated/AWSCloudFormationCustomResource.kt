@@ -17,9 +17,11 @@ class AWSCloudFormationCustomResource(logicalId: String) : Resource<AWSCloudForm
         fun serviceToken(value: String) {
           this.serviceToken = value
         }
+        
         fun serviceToken(value: IntrinsicFunction) {
-  this.serviceToken = value
-}
+          this.serviceToken = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,27 +17,33 @@ class AWSGlueTable(logicalId: String) : Resource<AWSGlueTable.Properties>(logica
         fun catalogId(value: String) {
           this.catalogId = value
         }
+        
         fun catalogId(value: IntrinsicFunction) {
-  this.catalogId = value
-}
+          this.catalogId = value
+        }
+        
         @JvmField
         var databaseName: Any? = null
 
         fun databaseName(value: String) {
           this.databaseName = value
         }
+        
         fun databaseName(value: IntrinsicFunction) {
-  this.databaseName = value
-}
+          this.databaseName = value
+        }
+        
         @JvmField
         var tableInput: Any? = null
 
         fun tableInput(value: TableInput) {
           this.tableInput = value
         }
+        
         fun tableInput(value: IntrinsicFunction) {
-  this.tableInput = value
-}
+          this.tableInput = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

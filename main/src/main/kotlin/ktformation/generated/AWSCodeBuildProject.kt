@@ -17,108 +17,132 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun artifacts(value: Artifacts) {
           this.artifacts = value
         }
+        
         fun artifacts(value: IntrinsicFunction) {
-  this.artifacts = value
-}
+          this.artifacts = value
+        }
+        
         @JvmField
         var badgeEnabled: Any? = null
 
         fun badgeEnabled(value: Boolean) {
           this.badgeEnabled = value
         }
+        
         fun badgeEnabled(value: IntrinsicFunction) {
-  this.badgeEnabled = value
-}
+          this.badgeEnabled = value
+        }
+        
         @JvmField
         var cache: Any? = null
 
         fun cache(value: ProjectCache) {
           this.cache = value
         }
+        
         fun cache(value: IntrinsicFunction) {
-  this.cache = value
-}
+          this.cache = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var encryptionKey: Any? = null
 
         fun encryptionKey(value: String) {
           this.encryptionKey = value
         }
+        
         fun encryptionKey(value: IntrinsicFunction) {
-  this.encryptionKey = value
-}
+          this.encryptionKey = value
+        }
+        
         @JvmField
         var environment: Any? = null
 
         fun environment(value: Environment) {
           this.environment = value
         }
+        
         fun environment(value: IntrinsicFunction) {
-  this.environment = value
-}
+          this.environment = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var serviceRole: Any? = null
 
         fun serviceRole(value: String) {
           this.serviceRole = value
         }
+        
         fun serviceRole(value: IntrinsicFunction) {
-  this.serviceRole = value
-}
+          this.serviceRole = value
+        }
+        
         @JvmField
         var source: Any? = null
 
         fun source(value: Source) {
           this.source = value
         }
+        
         fun source(value: IntrinsicFunction) {
-  this.source = value
-}
+          this.source = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
         @JvmField
         var timeoutInMinutes: Any? = null
 
         fun timeoutInMinutes(value: Int) {
           this.timeoutInMinutes = value
         }
+        
         fun timeoutInMinutes(value: IntrinsicFunction) {
-  this.timeoutInMinutes = value
-}
+          this.timeoutInMinutes = value
+        }
+        
         @JvmField
         var vpcConfig: Any? = null
 
         fun vpcConfig(value: VpcConfig) {
           this.vpcConfig = value
         }
+        
         fun vpcConfig(value: IntrinsicFunction) {
-  this.vpcConfig = value
-}
+          this.vpcConfig = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

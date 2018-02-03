@@ -17,36 +17,44 @@ class AWSLogsDestination(logicalId: String) : Resource<AWSLogsDestination.Proper
         fun destinationName(value: String) {
           this.destinationName = value
         }
+        
         fun destinationName(value: IntrinsicFunction) {
-  this.destinationName = value
-}
+          this.destinationName = value
+        }
+        
         @JvmField
         var destinationPolicy: Any? = null
 
         fun destinationPolicy(value: String) {
           this.destinationPolicy = value
         }
+        
         fun destinationPolicy(value: IntrinsicFunction) {
-  this.destinationPolicy = value
-}
+          this.destinationPolicy = value
+        }
+        
         @JvmField
         var roleArn: Any? = null
 
         fun roleArn(value: String) {
           this.roleArn = value
         }
+        
         fun roleArn(value: IntrinsicFunction) {
-  this.roleArn = value
-}
+          this.roleArn = value
+        }
+        
         @JvmField
         var targetArn: Any? = null
 
         fun targetArn(value: String) {
           this.targetArn = value
         }
+        
         fun targetArn(value: IntrinsicFunction) {
-  this.targetArn = value
-}
+          this.targetArn = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

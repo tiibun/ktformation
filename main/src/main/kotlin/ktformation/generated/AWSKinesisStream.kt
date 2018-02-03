@@ -17,45 +17,55 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var retentionPeriodHours: Any? = null
 
         fun retentionPeriodHours(value: Int) {
           this.retentionPeriodHours = value
         }
+        
         fun retentionPeriodHours(value: IntrinsicFunction) {
-  this.retentionPeriodHours = value
-}
+          this.retentionPeriodHours = value
+        }
+        
         @JvmField
         var shardCount: Any? = null
 
         fun shardCount(value: Int) {
           this.shardCount = value
         }
+        
         fun shardCount(value: IntrinsicFunction) {
-  this.shardCount = value
-}
+          this.shardCount = value
+        }
+        
         @JvmField
         var streamEncryption: Any? = null
 
         fun streamEncryption(value: StreamEncryption) {
           this.streamEncryption = value
         }
+        
         fun streamEncryption(value: IntrinsicFunction) {
-  this.streamEncryption = value
-}
+          this.streamEncryption = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

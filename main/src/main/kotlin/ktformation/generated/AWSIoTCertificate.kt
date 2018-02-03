@@ -17,18 +17,22 @@ class AWSIoTCertificate(logicalId: String) : Resource<AWSIoTCertificate.Properti
         fun certificateSigningRequest(value: String) {
           this.certificateSigningRequest = value
         }
+        
         fun certificateSigningRequest(value: IntrinsicFunction) {
-  this.certificateSigningRequest = value
-}
+          this.certificateSigningRequest = value
+        }
+        
         @JvmField
         var status: Any? = null
 
         fun status(value: String) {
           this.status = value
         }
+        
         fun status(value: IntrinsicFunction) {
-  this.status = value
-}
+          this.status = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

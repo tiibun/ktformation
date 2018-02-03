@@ -17,27 +17,33 @@ class AWSElasticBeanstalkApplicationVersion(logicalId: String) : Resource<AWSEla
         fun applicationName(value: String) {
           this.applicationName = value
         }
+        
         fun applicationName(value: IntrinsicFunction) {
-  this.applicationName = value
-}
+          this.applicationName = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var sourceBundle: Any? = null
 
         fun sourceBundle(value: SourceBundle) {
           this.sourceBundle = value
         }
+        
         fun sourceBundle(value: IntrinsicFunction) {
-  this.sourceBundle = value
-}
+          this.sourceBundle = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

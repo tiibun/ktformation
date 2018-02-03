@@ -17,27 +17,33 @@ class AWSApiGatewayUsagePlanKey(logicalId: String) : Resource<AWSApiGatewayUsage
         fun keyId(value: String) {
           this.keyId = value
         }
+        
         fun keyId(value: IntrinsicFunction) {
-  this.keyId = value
-}
+          this.keyId = value
+        }
+        
         @JvmField
         var keyType: Any? = null
 
         fun keyType(value: String) {
           this.keyType = value
         }
+        
         fun keyType(value: IntrinsicFunction) {
-  this.keyType = value
-}
+          this.keyType = value
+        }
+        
         @JvmField
         var usagePlanId: Any? = null
 
         fun usagePlanId(value: String) {
           this.usagePlanId = value
         }
+        
         fun usagePlanId(value: IntrinsicFunction) {
-  this.usagePlanId = value
-}
+          this.usagePlanId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,18 +17,22 @@ class AWSEC2SubnetCidrBlock(logicalId: String) : Resource<AWSEC2SubnetCidrBlock.
         fun ipv6CidrBlock(value: String) {
           this.ipv6CidrBlock = value
         }
+        
         fun ipv6CidrBlock(value: IntrinsicFunction) {
-  this.ipv6CidrBlock = value
-}
+          this.ipv6CidrBlock = value
+        }
+        
         @JvmField
         var subnetId: Any? = null
 
         fun subnetId(value: String) {
           this.subnetId = value
         }
+        
         fun subnetId(value: IntrinsicFunction) {
-  this.subnetId = value
-}
+          this.subnetId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

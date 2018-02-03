@@ -17,18 +17,22 @@ class AWSElasticLoadBalancingV2ListenerCertificate(logicalId: String) : Resource
         fun certificates(value: List<Certificate>) {
           this.certificates = value
         }
+        
         fun certificates(vararg value: IntrinsicFunction) {
-  this.certificates = value
-}
+          this.certificates = value
+        }
+        
         @JvmField
         var listenerArn: Any? = null
 
         fun listenerArn(value: String) {
           this.listenerArn = value
         }
+        
         fun listenerArn(value: IntrinsicFunction) {
-  this.listenerArn = value
-}
+          this.listenerArn = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

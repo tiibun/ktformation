@@ -17,18 +17,22 @@ class AWSIoTTopicRule(logicalId: String) : Resource<AWSIoTTopicRule.Properties>(
         fun ruleName(value: String) {
           this.ruleName = value
         }
+        
         fun ruleName(value: IntrinsicFunction) {
-  this.ruleName = value
-}
+          this.ruleName = value
+        }
+        
         @JvmField
         var topicRulePayload: Any? = null
 
         fun topicRulePayload(value: TopicRulePayload) {
           this.topicRulePayload = value
         }
+        
         fun topicRulePayload(value: IntrinsicFunction) {
-  this.topicRulePayload = value
-}
+          this.topicRulePayload = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

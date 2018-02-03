@@ -17,18 +17,22 @@ class AWSRedshiftClusterSecurityGroup(logicalId: String) : Resource<AWSRedshiftC
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

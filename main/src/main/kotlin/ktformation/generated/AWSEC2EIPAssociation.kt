@@ -17,45 +17,55 @@ class AWSEC2EIPAssociation(logicalId: String) : Resource<AWSEC2EIPAssociation.Pr
         fun allocationId(value: String) {
           this.allocationId = value
         }
+        
         fun allocationId(value: IntrinsicFunction) {
-  this.allocationId = value
-}
+          this.allocationId = value
+        }
+        
         @JvmField
         var eIP: Any? = null
 
         fun eIP(value: String) {
           this.eIP = value
         }
+        
         fun eIP(value: IntrinsicFunction) {
-  this.eIP = value
-}
+          this.eIP = value
+        }
+        
         @JvmField
         var instanceId: Any? = null
 
         fun instanceId(value: String) {
           this.instanceId = value
         }
+        
         fun instanceId(value: IntrinsicFunction) {
-  this.instanceId = value
-}
+          this.instanceId = value
+        }
+        
         @JvmField
         var networkInterfaceId: Any? = null
 
         fun networkInterfaceId(value: String) {
           this.networkInterfaceId = value
         }
+        
         fun networkInterfaceId(value: IntrinsicFunction) {
-  this.networkInterfaceId = value
-}
+          this.networkInterfaceId = value
+        }
+        
         @JvmField
         var privateIpAddress: Any? = null
 
         fun privateIpAddress(value: String) {
           this.privateIpAddress = value
         }
+        
         fun privateIpAddress(value: IntrinsicFunction) {
-  this.privateIpAddress = value
-}
+          this.privateIpAddress = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

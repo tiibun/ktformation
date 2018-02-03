@@ -17,36 +17,44 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         fun defaultAction(value: WafAction) {
           this.defaultAction = value
         }
+        
         fun defaultAction(value: IntrinsicFunction) {
-  this.defaultAction = value
-}
+          this.defaultAction = value
+        }
+        
         @JvmField
         var metricName: Any? = null
 
         fun metricName(value: String) {
           this.metricName = value
         }
+        
         fun metricName(value: IntrinsicFunction) {
-  this.metricName = value
-}
+          this.metricName = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var rules: Any? = null
 
         fun rules(value: List<ActivatedRule>) {
           this.rules = value
         }
+        
         fun rules(vararg value: IntrinsicFunction) {
-  this.rules = value
-}
+          this.rules = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

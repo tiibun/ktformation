@@ -17,9 +17,11 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
         fun spotFleetRequestConfigData(value: SpotFleetRequestConfigData) {
           this.spotFleetRequestConfigData = value
         }
+        
         fun spotFleetRequestConfigData(value: IntrinsicFunction) {
-  this.spotFleetRequestConfigData = value
-}
+          this.spotFleetRequestConfigData = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

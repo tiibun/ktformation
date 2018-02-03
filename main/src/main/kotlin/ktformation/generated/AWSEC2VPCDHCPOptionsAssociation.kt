@@ -17,18 +17,22 @@ class AWSEC2VPCDHCPOptionsAssociation(logicalId: String) : Resource<AWSEC2VPCDHC
         fun dhcpOptionsId(value: String) {
           this.dhcpOptionsId = value
         }
+        
         fun dhcpOptionsId(value: IntrinsicFunction) {
-  this.dhcpOptionsId = value
-}
+          this.dhcpOptionsId = value
+        }
+        
         @JvmField
         var vpcId: Any? = null
 
         fun vpcId(value: String) {
           this.vpcId = value
         }
+        
         fun vpcId(value: IntrinsicFunction) {
-  this.vpcId = value
-}
+          this.vpcId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

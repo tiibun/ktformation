@@ -17,18 +17,22 @@ class AWSGlueDatabase(logicalId: String) : Resource<AWSGlueDatabase.Properties>(
         fun catalogId(value: String) {
           this.catalogId = value
         }
+        
         fun catalogId(value: IntrinsicFunction) {
-  this.catalogId = value
-}
+          this.catalogId = value
+        }
+        
         @JvmField
         var databaseInput: Any? = null
 
         fun databaseInput(value: DatabaseInput) {
           this.databaseInput = value
         }
+        
         fun databaseInput(value: IntrinsicFunction) {
-  this.databaseInput = value
-}
+          this.databaseInput = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

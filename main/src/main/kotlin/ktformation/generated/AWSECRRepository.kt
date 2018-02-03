@@ -17,27 +17,33 @@ class AWSECRRepository(logicalId: String) : Resource<AWSECRRepository.Properties
         fun lifecyclePolicy(value: LifecyclePolicy) {
           this.lifecyclePolicy = value
         }
+        
         fun lifecyclePolicy(value: IntrinsicFunction) {
-  this.lifecyclePolicy = value
-}
+          this.lifecyclePolicy = value
+        }
+        
         @JvmField
         var repositoryName: Any? = null
 
         fun repositoryName(value: String) {
           this.repositoryName = value
         }
+        
         fun repositoryName(value: IntrinsicFunction) {
-  this.repositoryName = value
-}
+          this.repositoryName = value
+        }
+        
         @JvmField
         var repositoryPolicyText: Any? = null
 
         fun repositoryPolicyText(value: Json) {
           this.repositoryPolicyText = value
         }
+        
         fun repositoryPolicyText(value: IntrinsicFunction) {
-  this.repositoryPolicyText = value
-}
+          this.repositoryPolicyText = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

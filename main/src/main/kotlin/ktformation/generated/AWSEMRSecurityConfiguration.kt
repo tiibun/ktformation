@@ -17,18 +17,22 @@ class AWSEMRSecurityConfiguration(logicalId: String) : Resource<AWSEMRSecurityCo
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var securityConfiguration: Any? = null
 
         fun securityConfiguration(value: Json) {
           this.securityConfiguration = value
         }
+        
         fun securityConfiguration(value: IntrinsicFunction) {
-  this.securityConfiguration = value
-}
+          this.securityConfiguration = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

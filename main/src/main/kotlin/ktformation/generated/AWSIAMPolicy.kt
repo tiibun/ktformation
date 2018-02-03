@@ -17,45 +17,55 @@ class AWSIAMPolicy(logicalId: String) : Resource<AWSIAMPolicy.Properties>(logica
         fun groups(value: List<String>) {
           this.groups = value
         }
+        
         fun groups(vararg value: IntrinsicFunction) {
-  this.groups = value
-}
+          this.groups = value
+        }
+        
         @JvmField
         var policyDocument: Any? = null
 
         fun policyDocument(value: Json) {
           this.policyDocument = value
         }
+        
         fun policyDocument(value: IntrinsicFunction) {
-  this.policyDocument = value
-}
+          this.policyDocument = value
+        }
+        
         @JvmField
         var policyName: Any? = null
 
         fun policyName(value: String) {
           this.policyName = value
         }
+        
         fun policyName(value: IntrinsicFunction) {
-  this.policyName = value
-}
+          this.policyName = value
+        }
+        
         @JvmField
         var roles: Any? = null
 
         fun roles(value: List<String>) {
           this.roles = value
         }
+        
         fun roles(vararg value: IntrinsicFunction) {
-  this.roles = value
-}
+          this.roles = value
+        }
+        
         @JvmField
         var users: Any? = null
 
         fun users(value: List<String>) {
           this.users = value
         }
+        
         fun users(vararg value: IntrinsicFunction) {
-  this.users = value
-}
+          this.users = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,36 +17,44 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun policyDocument(value: Json) {
           this.policyDocument = value
         }
+        
         fun policyDocument(value: IntrinsicFunction) {
-  this.policyDocument = value
-}
+          this.policyDocument = value
+        }
+        
         @JvmField
         var routeTableIds: Any? = null
 
         fun routeTableIds(value: List<String>) {
           this.routeTableIds = value
         }
+        
         fun routeTableIds(vararg value: IntrinsicFunction) {
-  this.routeTableIds = value
-}
+          this.routeTableIds = value
+        }
+        
         @JvmField
         var serviceName: Any? = null
 
         fun serviceName(value: String) {
           this.serviceName = value
         }
+        
         fun serviceName(value: IntrinsicFunction) {
-  this.serviceName = value
-}
+          this.serviceName = value
+        }
+        
         @JvmField
         var vpcId: Any? = null
 
         fun vpcId(value: String) {
           this.vpcId = value
         }
+        
         fun vpcId(value: IntrinsicFunction) {
-  this.vpcId = value
-}
+          this.vpcId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

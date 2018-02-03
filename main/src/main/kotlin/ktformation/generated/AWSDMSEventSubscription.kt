@@ -17,63 +17,77 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun enabled(value: Boolean) {
           this.enabled = value
         }
+        
         fun enabled(value: IntrinsicFunction) {
-  this.enabled = value
-}
+          this.enabled = value
+        }
+        
         @JvmField
         var eventCategories: Any? = null
 
         fun eventCategories(value: List<String>) {
           this.eventCategories = value
         }
+        
         fun eventCategories(vararg value: IntrinsicFunction) {
-  this.eventCategories = value
-}
+          this.eventCategories = value
+        }
+        
         @JvmField
         var snsTopicArn: Any? = null
 
         fun snsTopicArn(value: String) {
           this.snsTopicArn = value
         }
+        
         fun snsTopicArn(value: IntrinsicFunction) {
-  this.snsTopicArn = value
-}
+          this.snsTopicArn = value
+        }
+        
         @JvmField
         var sourceIds: Any? = null
 
         fun sourceIds(value: List<String>) {
           this.sourceIds = value
         }
+        
         fun sourceIds(vararg value: IntrinsicFunction) {
-  this.sourceIds = value
-}
+          this.sourceIds = value
+        }
+        
         @JvmField
         var sourceType: Any? = null
 
         fun sourceType(value: String) {
           this.sourceType = value
         }
+        
         fun sourceType(value: IntrinsicFunction) {
-  this.sourceType = value
-}
+          this.sourceType = value
+        }
+        
         @JvmField
         var subscriptionName: Any? = null
 
         fun subscriptionName(value: String) {
           this.subscriptionName = value
         }
+        
         fun subscriptionName(value: IntrinsicFunction) {
-  this.subscriptionName = value
-}
+          this.subscriptionName = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

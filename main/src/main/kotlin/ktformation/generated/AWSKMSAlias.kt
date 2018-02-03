@@ -17,18 +17,22 @@ class AWSKMSAlias(logicalId: String) : Resource<AWSKMSAlias.Properties>(logicalI
         fun aliasName(value: String) {
           this.aliasName = value
         }
+        
         fun aliasName(value: IntrinsicFunction) {
-  this.aliasName = value
-}
+          this.aliasName = value
+        }
+        
         @JvmField
         var targetKeyId: Any? = null
 
         fun targetKeyId(value: String) {
           this.targetKeyId = value
         }
+        
         fun targetKeyId(value: IntrinsicFunction) {
-  this.targetKeyId = value
-}
+          this.targetKeyId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,27 +17,33 @@ class AWSCognitoUserPoolUserToGroupAttachment(logicalId: String) : Resource<AWSC
         fun groupName(value: String) {
           this.groupName = value
         }
+        
         fun groupName(value: IntrinsicFunction) {
-  this.groupName = value
-}
+          this.groupName = value
+        }
+        
         @JvmField
         var userPoolId: Any? = null
 
         fun userPoolId(value: String) {
           this.userPoolId = value
         }
+        
         fun userPoolId(value: IntrinsicFunction) {
-  this.userPoolId = value
-}
+          this.userPoolId = value
+        }
+        
         @JvmField
         var username: Any? = null
 
         fun username(value: String) {
           this.username = value
         }
+        
         fun username(value: IntrinsicFunction) {
-  this.username = value
-}
+          this.username = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

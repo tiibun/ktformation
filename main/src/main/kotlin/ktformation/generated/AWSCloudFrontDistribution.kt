@@ -17,18 +17,22 @@ class AWSCloudFrontDistribution(logicalId: String) : Resource<AWSCloudFrontDistr
         fun distributionConfig(value: DistributionConfig) {
           this.distributionConfig = value
         }
+        
         fun distributionConfig(value: IntrinsicFunction) {
-  this.distributionConfig = value
-}
+          this.distributionConfig = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

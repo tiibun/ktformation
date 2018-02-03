@@ -17,18 +17,22 @@ class AWSSQSQueuePolicy(logicalId: String) : Resource<AWSSQSQueuePolicy.Properti
         fun policyDocument(value: Json) {
           this.policyDocument = value
         }
+        
         fun policyDocument(value: IntrinsicFunction) {
-  this.policyDocument = value
-}
+          this.policyDocument = value
+        }
+        
         @JvmField
         var queues: Any? = null
 
         fun queues(value: List<String>) {
           this.queues = value
         }
+        
         fun queues(vararg value: IntrinsicFunction) {
-  this.queues = value
-}
+          this.queues = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

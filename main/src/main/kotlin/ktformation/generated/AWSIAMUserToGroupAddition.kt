@@ -17,18 +17,22 @@ class AWSIAMUserToGroupAddition(logicalId: String) : Resource<AWSIAMUserToGroupA
         fun groupName(value: String) {
           this.groupName = value
         }
+        
         fun groupName(value: IntrinsicFunction) {
-  this.groupName = value
-}
+          this.groupName = value
+        }
+        
         @JvmField
         var users: Any? = null
 
         fun users(value: List<String>) {
           this.users = value
         }
+        
         fun users(vararg value: IntrinsicFunction) {
-  this.users = value
-}
+          this.users = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

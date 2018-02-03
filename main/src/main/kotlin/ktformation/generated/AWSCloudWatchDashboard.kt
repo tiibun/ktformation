@@ -17,18 +17,22 @@ class AWSCloudWatchDashboard(logicalId: String) : Resource<AWSCloudWatchDashboar
         fun dashboardBody(value: String) {
           this.dashboardBody = value
         }
+        
         fun dashboardBody(value: IntrinsicFunction) {
-  this.dashboardBody = value
-}
+          this.dashboardBody = value
+        }
+        
         @JvmField
         var dashboardName: Any? = null
 
         fun dashboardName(value: String) {
           this.dashboardName = value
         }
+        
         fun dashboardName(value: IntrinsicFunction) {
-  this.dashboardName = value
-}
+          this.dashboardName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

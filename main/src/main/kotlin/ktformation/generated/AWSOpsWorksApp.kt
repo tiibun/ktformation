@@ -17,9 +17,11 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun appSource(value: Source) {
           this.appSource = value
         }
+        
         fun appSource(value: IntrinsicFunction) {
-  this.appSource = value
-}
+          this.appSource = value
+        }
+        
         @JvmField
         var attributes: Any? = null
 
@@ -33,90 +35,110 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun dataSources(value: List<DataSource>) {
           this.dataSources = value
         }
+        
         fun dataSources(vararg value: IntrinsicFunction) {
-  this.dataSources = value
-}
+          this.dataSources = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var domains: Any? = null
 
         fun domains(value: List<String>) {
           this.domains = value
         }
+        
         fun domains(vararg value: IntrinsicFunction) {
-  this.domains = value
-}
+          this.domains = value
+        }
+        
         @JvmField
         var enableSsl: Any? = null
 
         fun enableSsl(value: Boolean) {
           this.enableSsl = value
         }
+        
         fun enableSsl(value: IntrinsicFunction) {
-  this.enableSsl = value
-}
+          this.enableSsl = value
+        }
+        
         @JvmField
         var environment: Any? = null
 
         fun environment(value: List<EnvironmentVariable>) {
           this.environment = value
         }
+        
         fun environment(vararg value: IntrinsicFunction) {
-  this.environment = value
-}
+          this.environment = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var shortname: Any? = null
 
         fun shortname(value: String) {
           this.shortname = value
         }
+        
         fun shortname(value: IntrinsicFunction) {
-  this.shortname = value
-}
+          this.shortname = value
+        }
+        
         @JvmField
         var sslConfiguration: Any? = null
 
         fun sslConfiguration(value: SslConfiguration) {
           this.sslConfiguration = value
         }
+        
         fun sslConfiguration(value: IntrinsicFunction) {
-  this.sslConfiguration = value
-}
+          this.sslConfiguration = value
+        }
+        
         @JvmField
         var stackId: Any? = null
 
         fun stackId(value: String) {
           this.stackId = value
         }
+        
         fun stackId(value: IntrinsicFunction) {
-  this.stackId = value
-}
+          this.stackId = value
+        }
+        
         @JvmField
         var type: Any? = null
 
         fun type(value: String) {
           this.type = value
         }
+        
         fun type(value: IntrinsicFunction) {
-  this.type = value
-}
+          this.type = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

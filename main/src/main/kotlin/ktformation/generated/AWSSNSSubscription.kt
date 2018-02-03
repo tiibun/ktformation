@@ -17,27 +17,33 @@ class AWSSNSSubscription(logicalId: String) : Resource<AWSSNSSubscription.Proper
         fun endpoint(value: String) {
           this.endpoint = value
         }
+        
         fun endpoint(value: IntrinsicFunction) {
-  this.endpoint = value
-}
+          this.endpoint = value
+        }
+        
         @JvmField
         var protocol: Any? = null
 
         fun protocol(value: String) {
           this.protocol = value
         }
+        
         fun protocol(value: IntrinsicFunction) {
-  this.protocol = value
-}
+          this.protocol = value
+        }
+        
         @JvmField
         var topicArn: Any? = null
 
         fun topicArn(value: String) {
           this.topicArn = value
         }
+        
         fun topicArn(value: IntrinsicFunction) {
-  this.topicArn = value
-}
+          this.topicArn = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

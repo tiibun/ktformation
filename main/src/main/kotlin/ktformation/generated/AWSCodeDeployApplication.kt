@@ -17,18 +17,22 @@ class AWSCodeDeployApplication(logicalId: String) : Resource<AWSCodeDeployApplic
         fun applicationName(value: String) {
           this.applicationName = value
         }
+        
         fun applicationName(value: IntrinsicFunction) {
-  this.applicationName = value
-}
+          this.applicationName = value
+        }
+        
         @JvmField
         var computePlatform: Any? = null
 
         fun computePlatform(value: String) {
           this.computePlatform = value
         }
+        
         fun computePlatform(value: IntrinsicFunction) {
-  this.computePlatform = value
-}
+          this.computePlatform = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

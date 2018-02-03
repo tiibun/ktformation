@@ -17,54 +17,66 @@ class AWSCodePipelinePipeline(logicalId: String) : Resource<AWSCodePipelinePipel
         fun artifactStore(value: ArtifactStore) {
           this.artifactStore = value
         }
+        
         fun artifactStore(value: IntrinsicFunction) {
-  this.artifactStore = value
-}
+          this.artifactStore = value
+        }
+        
         @JvmField
         var disableInboundStageTransitions: Any? = null
 
         fun disableInboundStageTransitions(value: List<StageTransition>) {
           this.disableInboundStageTransitions = value
         }
+        
         fun disableInboundStageTransitions(vararg value: IntrinsicFunction) {
-  this.disableInboundStageTransitions = value
-}
+          this.disableInboundStageTransitions = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var restartExecutionOnUpdate: Any? = null
 
         fun restartExecutionOnUpdate(value: Boolean) {
           this.restartExecutionOnUpdate = value
         }
+        
         fun restartExecutionOnUpdate(value: IntrinsicFunction) {
-  this.restartExecutionOnUpdate = value
-}
+          this.restartExecutionOnUpdate = value
+        }
+        
         @JvmField
         var roleArn: Any? = null
 
         fun roleArn(value: String) {
           this.roleArn = value
         }
+        
         fun roleArn(value: IntrinsicFunction) {
-  this.roleArn = value
-}
+          this.roleArn = value
+        }
+        
         @JvmField
         var stages: Any? = null
 
         fun stages(value: List<StageDeclaration>) {
           this.stages = value
         }
+        
         fun stages(vararg value: IntrinsicFunction) {
-  this.stages = value
-}
+          this.stages = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

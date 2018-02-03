@@ -17,36 +17,44 @@ class AWSServiceDiscoveryService(logicalId: String) : Resource<AWSServiceDiscove
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var dnsConfig: Any? = null
 
         fun dnsConfig(value: DnsConfig) {
           this.dnsConfig = value
         }
+        
         fun dnsConfig(value: IntrinsicFunction) {
-  this.dnsConfig = value
-}
+          this.dnsConfig = value
+        }
+        
         @JvmField
         var healthCheckConfig: Any? = null
 
         fun healthCheckConfig(value: HealthCheckConfig) {
           this.healthCheckConfig = value
         }
+        
         fun healthCheckConfig(value: IntrinsicFunction) {
-  this.healthCheckConfig = value
-}
+          this.healthCheckConfig = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

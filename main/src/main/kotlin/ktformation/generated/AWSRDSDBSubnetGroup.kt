@@ -17,36 +17,44 @@ class AWSRDSDBSubnetGroup(logicalId: String) : Resource<AWSRDSDBSubnetGroup.Prop
         fun dBSubnetGroupDescription(value: String) {
           this.dBSubnetGroupDescription = value
         }
+        
         fun dBSubnetGroupDescription(value: IntrinsicFunction) {
-  this.dBSubnetGroupDescription = value
-}
+          this.dBSubnetGroupDescription = value
+        }
+        
         @JvmField
         var dBSubnetGroupName: Any? = null
 
         fun dBSubnetGroupName(value: String) {
           this.dBSubnetGroupName = value
         }
+        
         fun dBSubnetGroupName(value: IntrinsicFunction) {
-  this.dBSubnetGroupName = value
-}
+          this.dBSubnetGroupName = value
+        }
+        
         @JvmField
         var subnetIds: Any? = null
 
         fun subnetIds(value: List<String>) {
           this.subnetIds = value
         }
+        
         fun subnetIds(vararg value: IntrinsicFunction) {
-  this.subnetIds = value
-}
+          this.subnetIds = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

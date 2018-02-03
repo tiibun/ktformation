@@ -17,27 +17,33 @@ class AWSEC2Host(logicalId: String) : Resource<AWSEC2Host.Properties>(logicalId,
         fun autoPlacement(value: String) {
           this.autoPlacement = value
         }
+        
         fun autoPlacement(value: IntrinsicFunction) {
-  this.autoPlacement = value
-}
+          this.autoPlacement = value
+        }
+        
         @JvmField
         var availabilityZone: Any? = null
 
         fun availabilityZone(value: String) {
           this.availabilityZone = value
         }
+        
         fun availabilityZone(value: IntrinsicFunction) {
-  this.availabilityZone = value
-}
+          this.availabilityZone = value
+        }
+        
         @JvmField
         var instanceType: Any? = null
 
         fun instanceType(value: String) {
           this.instanceType = value
         }
+        
         fun instanceType(value: IntrinsicFunction) {
-  this.instanceType = value
-}
+          this.instanceType = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

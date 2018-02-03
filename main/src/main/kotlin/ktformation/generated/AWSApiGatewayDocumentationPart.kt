@@ -17,27 +17,33 @@ class AWSApiGatewayDocumentationPart(logicalId: String) : Resource<AWSApiGateway
         fun location(value: Location) {
           this.location = value
         }
+        
         fun location(value: IntrinsicFunction) {
-  this.location = value
-}
+          this.location = value
+        }
+        
         @JvmField
         var properties: Any? = null
 
         fun properties(value: String) {
           this.properties = value
         }
+        
         fun properties(value: IntrinsicFunction) {
-  this.properties = value
-}
+          this.properties = value
+        }
+        
         @JvmField
         var restApiId: Any? = null
 
         fun restApiId(value: String) {
           this.restApiId = value
         }
+        
         fun restApiId(value: IntrinsicFunction) {
-  this.restApiId = value
-}
+          this.restApiId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

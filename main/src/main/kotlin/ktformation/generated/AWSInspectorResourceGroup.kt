@@ -17,9 +17,11 @@ class AWSInspectorResourceGroup(logicalId: String) : Resource<AWSInspectorResour
         fun resourceGroupTags(value: List<Tag>) {
           this.resourceGroupTags = value
         }
+        
         fun resourceGroupTags(vararg value: IntrinsicFunction) {
-  this.resourceGroupTags = value
-}
+          this.resourceGroupTags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

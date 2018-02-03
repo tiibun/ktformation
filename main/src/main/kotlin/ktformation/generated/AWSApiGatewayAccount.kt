@@ -17,9 +17,11 @@ class AWSApiGatewayAccount(logicalId: String) : Resource<AWSApiGatewayAccount.Pr
         fun cloudWatchRoleArn(value: String) {
           this.cloudWatchRoleArn = value
         }
+        
         fun cloudWatchRoleArn(value: IntrinsicFunction) {
-  this.cloudWatchRoleArn = value
-}
+          this.cloudWatchRoleArn = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

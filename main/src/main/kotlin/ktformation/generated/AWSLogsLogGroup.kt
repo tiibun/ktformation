@@ -17,18 +17,22 @@ class AWSLogsLogGroup(logicalId: String) : Resource<AWSLogsLogGroup.Properties>(
         fun logGroupName(value: String) {
           this.logGroupName = value
         }
+        
         fun logGroupName(value: IntrinsicFunction) {
-  this.logGroupName = value
-}
+          this.logGroupName = value
+        }
+        
         @JvmField
         var retentionInDays: Any? = null
 
         fun retentionInDays(value: Int) {
           this.retentionInDays = value
         }
+        
         fun retentionInDays(value: IntrinsicFunction) {
-  this.retentionInDays = value
-}
+          this.retentionInDays = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

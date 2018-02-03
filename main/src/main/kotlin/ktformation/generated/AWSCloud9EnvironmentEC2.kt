@@ -17,63 +17,77 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun automaticStopTimeMinutes(value: Int) {
           this.automaticStopTimeMinutes = value
         }
+        
         fun automaticStopTimeMinutes(value: IntrinsicFunction) {
-  this.automaticStopTimeMinutes = value
-}
+          this.automaticStopTimeMinutes = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var instanceType: Any? = null
 
         fun instanceType(value: String) {
           this.instanceType = value
         }
+        
         fun instanceType(value: IntrinsicFunction) {
-  this.instanceType = value
-}
+          this.instanceType = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var ownerArn: Any? = null
 
         fun ownerArn(value: String) {
           this.ownerArn = value
         }
+        
         fun ownerArn(value: IntrinsicFunction) {
-  this.ownerArn = value
-}
+          this.ownerArn = value
+        }
+        
         @JvmField
         var repositories: Any? = null
 
         fun repositories(value: List<Repository>) {
           this.repositories = value
         }
+        
         fun repositories(vararg value: IntrinsicFunction) {
-  this.repositories = value
-}
+          this.repositories = value
+        }
+        
         @JvmField
         var subnetId: Any? = null
 
         fun subnetId(value: String) {
           this.subnetId = value
         }
+        
         fun subnetId(value: IntrinsicFunction) {
-  this.subnetId = value
-}
+          this.subnetId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

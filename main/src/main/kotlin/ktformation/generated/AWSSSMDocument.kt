@@ -17,18 +17,22 @@ class AWSSSMDocument(logicalId: String) : Resource<AWSSSMDocument.Properties>(lo
         fun content(value: Json) {
           this.content = value
         }
+        
         fun content(value: IntrinsicFunction) {
-  this.content = value
-}
+          this.content = value
+        }
+        
         @JvmField
         var documentType: Any? = null
 
         fun documentType(value: String) {
           this.documentType = value
         }
+        
         fun documentType(value: IntrinsicFunction) {
-  this.documentType = value
-}
+          this.documentType = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

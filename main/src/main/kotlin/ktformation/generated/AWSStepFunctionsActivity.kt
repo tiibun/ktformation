@@ -17,9 +17,11 @@ class AWSStepFunctionsActivity(logicalId: String) : Resource<AWSStepFunctionsAct
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

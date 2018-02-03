@@ -17,18 +17,22 @@ class AWSWAFIPSet(logicalId: String) : Resource<AWSWAFIPSet.Properties>(logicalI
         fun iPSetDescriptors(value: List<IPSetDescriptor>) {
           this.iPSetDescriptors = value
         }
+        
         fun iPSetDescriptors(vararg value: IntrinsicFunction) {
-  this.iPSetDescriptors = value
-}
+          this.iPSetDescriptors = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

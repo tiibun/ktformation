@@ -17,27 +17,33 @@ class AWSIAMInstanceProfile(logicalId: String) : Resource<AWSIAMInstanceProfile.
         fun instanceProfileName(value: String) {
           this.instanceProfileName = value
         }
+        
         fun instanceProfileName(value: IntrinsicFunction) {
-  this.instanceProfileName = value
-}
+          this.instanceProfileName = value
+        }
+        
         @JvmField
         var path: Any? = null
 
         fun path(value: String) {
           this.path = value
         }
+        
         fun path(value: IntrinsicFunction) {
-  this.path = value
-}
+          this.path = value
+        }
+        
         @JvmField
         var roles: Any? = null
 
         fun roles(value: List<String>) {
           this.roles = value
         }
+        
         fun roles(vararg value: IntrinsicFunction) {
-  this.roles = value
-}
+          this.roles = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

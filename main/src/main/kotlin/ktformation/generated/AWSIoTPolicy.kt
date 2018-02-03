@@ -17,18 +17,22 @@ class AWSIoTPolicy(logicalId: String) : Resource<AWSIoTPolicy.Properties>(logica
         fun policyDocument(value: Json) {
           this.policyDocument = value
         }
+        
         fun policyDocument(value: IntrinsicFunction) {
-  this.policyDocument = value
-}
+          this.policyDocument = value
+        }
+        
         @JvmField
         var policyName: Any? = null
 
         fun policyName(value: String) {
           this.policyName = value
         }
+        
         fun policyName(value: IntrinsicFunction) {
-  this.policyName = value
-}
+          this.policyName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

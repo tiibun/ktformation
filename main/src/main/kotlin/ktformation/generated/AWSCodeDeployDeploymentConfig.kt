@@ -17,18 +17,22 @@ class AWSCodeDeployDeploymentConfig(logicalId: String) : Resource<AWSCodeDeployD
         fun deploymentConfigName(value: String) {
           this.deploymentConfigName = value
         }
+        
         fun deploymentConfigName(value: IntrinsicFunction) {
-  this.deploymentConfigName = value
-}
+          this.deploymentConfigName = value
+        }
+        
         @JvmField
         var minimumHealthyHosts: Any? = null
 
         fun minimumHealthyHosts(value: MinimumHealthyHosts) {
           this.minimumHealthyHosts = value
         }
+        
         fun minimumHealthyHosts(value: IntrinsicFunction) {
-  this.minimumHealthyHosts = value
-}
+          this.minimumHealthyHosts = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

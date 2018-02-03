@@ -17,36 +17,44 @@ class AWSDMSReplicationSubnetGroup(logicalId: String) : Resource<AWSDMSReplicati
         fun replicationSubnetGroupDescription(value: String) {
           this.replicationSubnetGroupDescription = value
         }
+        
         fun replicationSubnetGroupDescription(value: IntrinsicFunction) {
-  this.replicationSubnetGroupDescription = value
-}
+          this.replicationSubnetGroupDescription = value
+        }
+        
         @JvmField
         var replicationSubnetGroupIdentifier: Any? = null
 
         fun replicationSubnetGroupIdentifier(value: String) {
           this.replicationSubnetGroupIdentifier = value
         }
+        
         fun replicationSubnetGroupIdentifier(value: IntrinsicFunction) {
-  this.replicationSubnetGroupIdentifier = value
-}
+          this.replicationSubnetGroupIdentifier = value
+        }
+        
         @JvmField
         var subnetIds: Any? = null
 
         fun subnetIds(value: List<String>) {
           this.subnetIds = value
         }
+        
         fun subnetIds(vararg value: IntrinsicFunction) {
-  this.subnetIds = value
-}
+          this.subnetIds = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

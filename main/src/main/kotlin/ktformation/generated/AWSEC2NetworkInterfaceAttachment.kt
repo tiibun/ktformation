@@ -17,36 +17,44 @@ class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2Netwo
         fun deleteOnTermination(value: Boolean) {
           this.deleteOnTermination = value
         }
+        
         fun deleteOnTermination(value: IntrinsicFunction) {
-  this.deleteOnTermination = value
-}
+          this.deleteOnTermination = value
+        }
+        
         @JvmField
         var deviceIndex: Any? = null
 
         fun deviceIndex(value: String) {
           this.deviceIndex = value
         }
+        
         fun deviceIndex(value: IntrinsicFunction) {
-  this.deviceIndex = value
-}
+          this.deviceIndex = value
+        }
+        
         @JvmField
         var instanceId: Any? = null
 
         fun instanceId(value: String) {
           this.instanceId = value
         }
+        
         fun instanceId(value: IntrinsicFunction) {
-  this.instanceId = value
-}
+          this.instanceId = value
+        }
+        
         @JvmField
         var networkInterfaceId: Any? = null
 
         fun networkInterfaceId(value: String) {
           this.networkInterfaceId = value
         }
+        
         fun networkInterfaceId(value: IntrinsicFunction) {
-  this.networkInterfaceId = value
-}
+          this.networkInterfaceId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

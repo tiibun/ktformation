@@ -17,36 +17,44 @@ class AWSEC2TrunkInterfaceAssociation(logicalId: String) : Resource<AWSEC2TrunkI
         fun branchInterfaceId(value: String) {
           this.branchInterfaceId = value
         }
+        
         fun branchInterfaceId(value: IntrinsicFunction) {
-  this.branchInterfaceId = value
-}
+          this.branchInterfaceId = value
+        }
+        
         @JvmField
         var gREKey: Any? = null
 
         fun gREKey(value: Int) {
           this.gREKey = value
         }
+        
         fun gREKey(value: IntrinsicFunction) {
-  this.gREKey = value
-}
+          this.gREKey = value
+        }
+        
         @JvmField
         var trunkInterfaceId: Any? = null
 
         fun trunkInterfaceId(value: String) {
           this.trunkInterfaceId = value
         }
+        
         fun trunkInterfaceId(value: IntrinsicFunction) {
-  this.trunkInterfaceId = value
-}
+          this.trunkInterfaceId = value
+        }
+        
         @JvmField
         var vLANId: Any? = null
 
         fun vLANId(value: Int) {
           this.vLANId = value
         }
+        
         fun vLANId(value: IntrinsicFunction) {
-  this.vLANId = value
-}
+          this.vLANId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

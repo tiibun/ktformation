@@ -17,36 +17,44 @@ class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties
         fun computeEnvironmentOrder(value: List<ComputeEnvironmentOrder>) {
           this.computeEnvironmentOrder = value
         }
+        
         fun computeEnvironmentOrder(vararg value: IntrinsicFunction) {
-  this.computeEnvironmentOrder = value
-}
+          this.computeEnvironmentOrder = value
+        }
+        
         @JvmField
         var jobQueueName: Any? = null
 
         fun jobQueueName(value: String) {
           this.jobQueueName = value
         }
+        
         fun jobQueueName(value: IntrinsicFunction) {
-  this.jobQueueName = value
-}
+          this.jobQueueName = value
+        }
+        
         @JvmField
         var priority: Any? = null
 
         fun priority(value: Int) {
           this.priority = value
         }
+        
         fun priority(value: IntrinsicFunction) {
-  this.priority = value
-}
+          this.priority = value
+        }
+        
         @JvmField
         var state: Any? = null
 
         fun state(value: String) {
           this.state = value
         }
+        
         fun state(value: IntrinsicFunction) {
-  this.state = value
-}
+          this.state = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

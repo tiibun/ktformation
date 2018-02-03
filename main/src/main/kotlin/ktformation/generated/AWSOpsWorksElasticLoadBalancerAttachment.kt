@@ -17,18 +17,22 @@ class AWSOpsWorksElasticLoadBalancerAttachment(logicalId: String) : Resource<AWS
         fun elasticLoadBalancerName(value: String) {
           this.elasticLoadBalancerName = value
         }
+        
         fun elasticLoadBalancerName(value: IntrinsicFunction) {
-  this.elasticLoadBalancerName = value
-}
+          this.elasticLoadBalancerName = value
+        }
+        
         @JvmField
         var layerId: Any? = null
 
         fun layerId(value: String) {
           this.layerId = value
         }
+        
         fun layerId(value: IntrinsicFunction) {
-  this.layerId = value
-}
+          this.layerId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

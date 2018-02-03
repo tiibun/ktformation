@@ -33,12 +33,12 @@ ${props.joinToLines { (k, v) ->
         fun ${k}(vararg value: IntrinsicFunction) {
           this.${k} = value
         }
-        """.trimIndent()
+        """
         else -> """
         fun ${k}(value: IntrinsicFunction) {
           this.${k} = value
         }
-        """.trimIndent()
+        """
     }}
 """
 }}

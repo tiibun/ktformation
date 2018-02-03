@@ -17,18 +17,22 @@ class AWSInspectorAssessmentTarget(logicalId: String) : Resource<AWSInspectorAss
         fun assessmentTargetName(value: String) {
           this.assessmentTargetName = value
         }
+        
         fun assessmentTargetName(value: IntrinsicFunction) {
-  this.assessmentTargetName = value
-}
+          this.assessmentTargetName = value
+        }
+        
         @JvmField
         var resourceGroupArn: Any? = null
 
         fun resourceGroupArn(value: String) {
           this.resourceGroupArn = value
         }
+        
         fun resourceGroupArn(value: IntrinsicFunction) {
-  this.resourceGroupArn = value
-}
+          this.resourceGroupArn = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,63 +17,77 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun autoScalingGroupName(value: String) {
           this.autoScalingGroupName = value
         }
+        
         fun autoScalingGroupName(value: IntrinsicFunction) {
-  this.autoScalingGroupName = value
-}
+          this.autoScalingGroupName = value
+        }
+        
         @JvmField
         var desiredCapacity: Any? = null
 
         fun desiredCapacity(value: Int) {
           this.desiredCapacity = value
         }
+        
         fun desiredCapacity(value: IntrinsicFunction) {
-  this.desiredCapacity = value
-}
+          this.desiredCapacity = value
+        }
+        
         @JvmField
         var endTime: Any? = null
 
         fun endTime(value: String) {
           this.endTime = value
         }
+        
         fun endTime(value: IntrinsicFunction) {
-  this.endTime = value
-}
+          this.endTime = value
+        }
+        
         @JvmField
         var maxSize: Any? = null
 
         fun maxSize(value: Int) {
           this.maxSize = value
         }
+        
         fun maxSize(value: IntrinsicFunction) {
-  this.maxSize = value
-}
+          this.maxSize = value
+        }
+        
         @JvmField
         var minSize: Any? = null
 
         fun minSize(value: Int) {
           this.minSize = value
         }
+        
         fun minSize(value: IntrinsicFunction) {
-  this.minSize = value
-}
+          this.minSize = value
+        }
+        
         @JvmField
         var recurrence: Any? = null
 
         fun recurrence(value: String) {
           this.recurrence = value
         }
+        
         fun recurrence(value: IntrinsicFunction) {
-  this.recurrence = value
-}
+          this.recurrence = value
+        }
+        
         @JvmField
         var startTime: Any? = null
 
         fun startTime(value: String) {
           this.startTime = value
         }
+        
         fun startTime(value: IntrinsicFunction) {
-  this.startTime = value
-}
+          this.startTime = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

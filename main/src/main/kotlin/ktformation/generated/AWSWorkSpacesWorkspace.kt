@@ -17,54 +17,66 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun bundleId(value: String) {
           this.bundleId = value
         }
+        
         fun bundleId(value: IntrinsicFunction) {
-  this.bundleId = value
-}
+          this.bundleId = value
+        }
+        
         @JvmField
         var directoryId: Any? = null
 
         fun directoryId(value: String) {
           this.directoryId = value
         }
+        
         fun directoryId(value: IntrinsicFunction) {
-  this.directoryId = value
-}
+          this.directoryId = value
+        }
+        
         @JvmField
         var rootVolumeEncryptionEnabled: Any? = null
 
         fun rootVolumeEncryptionEnabled(value: Boolean) {
           this.rootVolumeEncryptionEnabled = value
         }
+        
         fun rootVolumeEncryptionEnabled(value: IntrinsicFunction) {
-  this.rootVolumeEncryptionEnabled = value
-}
+          this.rootVolumeEncryptionEnabled = value
+        }
+        
         @JvmField
         var userName: Any? = null
 
         fun userName(value: String) {
           this.userName = value
         }
+        
         fun userName(value: IntrinsicFunction) {
-  this.userName = value
-}
+          this.userName = value
+        }
+        
         @JvmField
         var userVolumeEncryptionEnabled: Any? = null
 
         fun userVolumeEncryptionEnabled(value: Boolean) {
           this.userVolumeEncryptionEnabled = value
         }
+        
         fun userVolumeEncryptionEnabled(value: IntrinsicFunction) {
-  this.userVolumeEncryptionEnabled = value
-}
+          this.userVolumeEncryptionEnabled = value
+        }
+        
         @JvmField
         var volumeEncryptionKey: Any? = null
 
         fun volumeEncryptionKey(value: String) {
           this.volumeEncryptionKey = value
         }
+        
         fun volumeEncryptionKey(value: IntrinsicFunction) {
-  this.volumeEncryptionKey = value
-}
+          this.volumeEncryptionKey = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

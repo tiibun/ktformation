@@ -17,36 +17,44 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var restApiId: Any? = null
 
         fun restApiId(value: String) {
           this.restApiId = value
         }
+        
         fun restApiId(value: IntrinsicFunction) {
-  this.restApiId = value
-}
+          this.restApiId = value
+        }
+        
         @JvmField
         var stageDescription: Any? = null
 
         fun stageDescription(value: StageDescription) {
           this.stageDescription = value
         }
+        
         fun stageDescription(value: IntrinsicFunction) {
-  this.stageDescription = value
-}
+          this.stageDescription = value
+        }
+        
         @JvmField
         var stageName: Any? = null
 
         fun stageName(value: String) {
           this.stageName = value
         }
+        
         fun stageName(value: IntrinsicFunction) {
-  this.stageName = value
-}
+          this.stageName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

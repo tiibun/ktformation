@@ -17,27 +17,33 @@ class AWSLogsMetricFilter(logicalId: String) : Resource<AWSLogsMetricFilter.Prop
         fun filterPattern(value: String) {
           this.filterPattern = value
         }
+        
         fun filterPattern(value: IntrinsicFunction) {
-  this.filterPattern = value
-}
+          this.filterPattern = value
+        }
+        
         @JvmField
         var logGroupName: Any? = null
 
         fun logGroupName(value: String) {
           this.logGroupName = value
         }
+        
         fun logGroupName(value: IntrinsicFunction) {
-  this.logGroupName = value
-}
+          this.logGroupName = value
+        }
+        
         @JvmField
         var metricTransformations: Any? = null
 
         fun metricTransformations(value: List<MetricTransformation>) {
           this.metricTransformations = value
         }
+        
         fun metricTransformations(vararg value: IntrinsicFunction) {
-  this.metricTransformations = value
-}
+          this.metricTransformations = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

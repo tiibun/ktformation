@@ -17,18 +17,22 @@ class AWSRDSDBParameterGroup(logicalId: String) : Resource<AWSRDSDBParameterGrou
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var family: Any? = null
 
         fun family(value: String) {
           this.family = value
         }
+        
         fun family(value: IntrinsicFunction) {
-  this.family = value
-}
+          this.family = value
+        }
+        
         @JvmField
         var parameters: Any? = null
 
@@ -42,9 +46,11 @@ class AWSRDSDBParameterGroup(logicalId: String) : Resource<AWSRDSDBParameterGrou
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

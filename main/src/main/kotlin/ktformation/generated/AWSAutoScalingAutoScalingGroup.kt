@@ -17,162 +17,198 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun availabilityZones(value: List<String>) {
           this.availabilityZones = value
         }
+        
         fun availabilityZones(vararg value: IntrinsicFunction) {
-  this.availabilityZones = value
-}
+          this.availabilityZones = value
+        }
+        
         @JvmField
         var cooldown: Any? = null
 
         fun cooldown(value: String) {
           this.cooldown = value
         }
+        
         fun cooldown(value: IntrinsicFunction) {
-  this.cooldown = value
-}
+          this.cooldown = value
+        }
+        
         @JvmField
         var desiredCapacity: Any? = null
 
         fun desiredCapacity(value: String) {
           this.desiredCapacity = value
         }
+        
         fun desiredCapacity(value: IntrinsicFunction) {
-  this.desiredCapacity = value
-}
+          this.desiredCapacity = value
+        }
+        
         @JvmField
         var healthCheckGracePeriod: Any? = null
 
         fun healthCheckGracePeriod(value: Int) {
           this.healthCheckGracePeriod = value
         }
+        
         fun healthCheckGracePeriod(value: IntrinsicFunction) {
-  this.healthCheckGracePeriod = value
-}
+          this.healthCheckGracePeriod = value
+        }
+        
         @JvmField
         var healthCheckType: Any? = null
 
         fun healthCheckType(value: String) {
           this.healthCheckType = value
         }
+        
         fun healthCheckType(value: IntrinsicFunction) {
-  this.healthCheckType = value
-}
+          this.healthCheckType = value
+        }
+        
         @JvmField
         var instanceId: Any? = null
 
         fun instanceId(value: String) {
           this.instanceId = value
         }
+        
         fun instanceId(value: IntrinsicFunction) {
-  this.instanceId = value
-}
+          this.instanceId = value
+        }
+        
         @JvmField
         var launchConfigurationName: Any? = null
 
         fun launchConfigurationName(value: String) {
           this.launchConfigurationName = value
         }
+        
         fun launchConfigurationName(value: IntrinsicFunction) {
-  this.launchConfigurationName = value
-}
+          this.launchConfigurationName = value
+        }
+        
         @JvmField
         var lifecycleHookSpecificationList: Any? = null
 
         fun lifecycleHookSpecificationList(value: List<LifecycleHookSpecification>) {
           this.lifecycleHookSpecificationList = value
         }
+        
         fun lifecycleHookSpecificationList(vararg value: IntrinsicFunction) {
-  this.lifecycleHookSpecificationList = value
-}
+          this.lifecycleHookSpecificationList = value
+        }
+        
         @JvmField
         var loadBalancerNames: Any? = null
 
         fun loadBalancerNames(value: List<String>) {
           this.loadBalancerNames = value
         }
+        
         fun loadBalancerNames(vararg value: IntrinsicFunction) {
-  this.loadBalancerNames = value
-}
+          this.loadBalancerNames = value
+        }
+        
         @JvmField
         var maxSize: Any? = null
 
         fun maxSize(value: String) {
           this.maxSize = value
         }
+        
         fun maxSize(value: IntrinsicFunction) {
-  this.maxSize = value
-}
+          this.maxSize = value
+        }
+        
         @JvmField
         var metricsCollection: Any? = null
 
         fun metricsCollection(value: List<MetricsCollection>) {
           this.metricsCollection = value
         }
+        
         fun metricsCollection(vararg value: IntrinsicFunction) {
-  this.metricsCollection = value
-}
+          this.metricsCollection = value
+        }
+        
         @JvmField
         var minSize: Any? = null
 
         fun minSize(value: String) {
           this.minSize = value
         }
+        
         fun minSize(value: IntrinsicFunction) {
-  this.minSize = value
-}
+          this.minSize = value
+        }
+        
         @JvmField
         var notificationConfigurations: Any? = null
 
         fun notificationConfigurations(value: List<NotificationConfiguration>) {
           this.notificationConfigurations = value
         }
+        
         fun notificationConfigurations(vararg value: IntrinsicFunction) {
-  this.notificationConfigurations = value
-}
+          this.notificationConfigurations = value
+        }
+        
         @JvmField
         var placementGroup: Any? = null
 
         fun placementGroup(value: String) {
           this.placementGroup = value
         }
+        
         fun placementGroup(value: IntrinsicFunction) {
-  this.placementGroup = value
-}
+          this.placementGroup = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<TagProperty>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
         @JvmField
         var targetGroupARNs: Any? = null
 
         fun targetGroupARNs(value: List<String>) {
           this.targetGroupARNs = value
         }
+        
         fun targetGroupARNs(vararg value: IntrinsicFunction) {
-  this.targetGroupARNs = value
-}
+          this.targetGroupARNs = value
+        }
+        
         @JvmField
         var terminationPolicies: Any? = null
 
         fun terminationPolicies(value: List<String>) {
           this.terminationPolicies = value
         }
+        
         fun terminationPolicies(vararg value: IntrinsicFunction) {
-  this.terminationPolicies = value
-}
+          this.terminationPolicies = value
+        }
+        
         @JvmField
         var vPCZoneIdentifier: Any? = null
 
         fun vPCZoneIdentifier(value: List<String>) {
           this.vPCZoneIdentifier = value
         }
+        
         fun vPCZoneIdentifier(vararg value: IntrinsicFunction) {
-  this.vPCZoneIdentifier = value
-}
+          this.vPCZoneIdentifier = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

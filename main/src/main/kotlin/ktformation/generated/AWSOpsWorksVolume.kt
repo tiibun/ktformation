@@ -17,36 +17,44 @@ class AWSOpsWorksVolume(logicalId: String) : Resource<AWSOpsWorksVolume.Properti
         fun ec2VolumeId(value: String) {
           this.ec2VolumeId = value
         }
+        
         fun ec2VolumeId(value: IntrinsicFunction) {
-  this.ec2VolumeId = value
-}
+          this.ec2VolumeId = value
+        }
+        
         @JvmField
         var mountPoint: Any? = null
 
         fun mountPoint(value: String) {
           this.mountPoint = value
         }
+        
         fun mountPoint(value: IntrinsicFunction) {
-  this.mountPoint = value
-}
+          this.mountPoint = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var stackId: Any? = null
 
         fun stackId(value: String) {
           this.stackId = value
         }
+        
         fun stackId(value: IntrinsicFunction) {
-  this.stackId = value
-}
+          this.stackId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

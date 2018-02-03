@@ -17,18 +17,22 @@ class AWSEC2VPNConnectionRoute(logicalId: String) : Resource<AWSEC2VPNConnection
         fun destinationCidrBlock(value: String) {
           this.destinationCidrBlock = value
         }
+        
         fun destinationCidrBlock(value: IntrinsicFunction) {
-  this.destinationCidrBlock = value
-}
+          this.destinationCidrBlock = value
+        }
+        
         @JvmField
         var vpnConnectionId: Any? = null
 
         fun vpnConnectionId(value: String) {
           this.vpnConnectionId = value
         }
+        
         fun vpnConnectionId(value: IntrinsicFunction) {
-  this.vpnConnectionId = value
-}
+          this.vpnConnectionId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

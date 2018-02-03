@@ -17,36 +17,44 @@ class AWSElasticLoadBalancingV2ListenerRule(logicalId: String) : Resource<AWSEla
         fun actions(value: List<Action>) {
           this.actions = value
         }
+        
         fun actions(vararg value: IntrinsicFunction) {
-  this.actions = value
-}
+          this.actions = value
+        }
+        
         @JvmField
         var conditions: Any? = null
 
         fun conditions(value: List<RuleCondition>) {
           this.conditions = value
         }
+        
         fun conditions(vararg value: IntrinsicFunction) {
-  this.conditions = value
-}
+          this.conditions = value
+        }
+        
         @JvmField
         var listenerArn: Any? = null
 
         fun listenerArn(value: String) {
           this.listenerArn = value
         }
+        
         fun listenerArn(value: IntrinsicFunction) {
-  this.listenerArn = value
-}
+          this.listenerArn = value
+        }
+        
         @JvmField
         var priority: Any? = null
 
         fun priority(value: Int) {
           this.priority = value
         }
+        
         fun priority(value: IntrinsicFunction) {
-  this.priority = value
-}
+          this.priority = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

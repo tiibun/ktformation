@@ -17,18 +17,22 @@ class AWSServiceDiscoveryPublicDnsNamespace(logicalId: String) : Resource<AWSSer
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

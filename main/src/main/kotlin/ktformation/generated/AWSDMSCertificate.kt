@@ -17,27 +17,33 @@ class AWSDMSCertificate(logicalId: String) : Resource<AWSDMSCertificate.Properti
         fun certificateIdentifier(value: String) {
           this.certificateIdentifier = value
         }
+        
         fun certificateIdentifier(value: IntrinsicFunction) {
-  this.certificateIdentifier = value
-}
+          this.certificateIdentifier = value
+        }
+        
         @JvmField
         var certificatePem: Any? = null
 
         fun certificatePem(value: String) {
           this.certificatePem = value
         }
+        
         fun certificatePem(value: IntrinsicFunction) {
-  this.certificatePem = value
-}
+          this.certificatePem = value
+        }
+        
         @JvmField
         var certificateWallet: Any? = null
 
         fun certificateWallet(value: String) {
           this.certificateWallet = value
         }
+        
         fun certificateWallet(value: IntrinsicFunction) {
-  this.certificateWallet = value
-}
+          this.certificateWallet = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

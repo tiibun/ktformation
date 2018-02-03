@@ -17,27 +17,33 @@ class AWSSNSTopic(logicalId: String) : Resource<AWSSNSTopic.Properties>(logicalI
         fun displayName(value: String) {
           this.displayName = value
         }
+        
         fun displayName(value: IntrinsicFunction) {
-  this.displayName = value
-}
+          this.displayName = value
+        }
+        
         @JvmField
         var subscription: Any? = null
 
         fun subscription(value: List<Subscription>) {
           this.subscription = value
         }
+        
         fun subscription(vararg value: IntrinsicFunction) {
-  this.subscription = value
-}
+          this.subscription = value
+        }
+        
         @JvmField
         var topicName: Any? = null
 
         fun topicName(value: String) {
           this.topicName = value
         }
+        
         fun topicName(value: IntrinsicFunction) {
-  this.topicName = value
-}
+          this.topicName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

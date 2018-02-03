@@ -17,27 +17,33 @@ class AWSGameLiftAlias(logicalId: String) : Resource<AWSGameLiftAlias.Properties
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var routingStrategy: Any? = null
 
         fun routingStrategy(value: RoutingStrategy) {
           this.routingStrategy = value
         }
+        
         fun routingStrategy(value: IntrinsicFunction) {
-  this.routingStrategy = value
-}
+          this.routingStrategy = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

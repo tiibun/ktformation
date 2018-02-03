@@ -17,54 +17,66 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun groups(value: List<String>) {
           this.groups = value
         }
+        
         fun groups(vararg value: IntrinsicFunction) {
-  this.groups = value
-}
+          this.groups = value
+        }
+        
         @JvmField
         var loginProfile: Any? = null
 
         fun loginProfile(value: LoginProfile) {
           this.loginProfile = value
         }
+        
         fun loginProfile(value: IntrinsicFunction) {
-  this.loginProfile = value
-}
+          this.loginProfile = value
+        }
+        
         @JvmField
         var managedPolicyArns: Any? = null
 
         fun managedPolicyArns(value: List<String>) {
           this.managedPolicyArns = value
         }
+        
         fun managedPolicyArns(vararg value: IntrinsicFunction) {
-  this.managedPolicyArns = value
-}
+          this.managedPolicyArns = value
+        }
+        
         @JvmField
         var path: Any? = null
 
         fun path(value: String) {
           this.path = value
         }
+        
         fun path(value: IntrinsicFunction) {
-  this.path = value
-}
+          this.path = value
+        }
+        
         @JvmField
         var policies: Any? = null
 
         fun policies(value: List<Policy>) {
           this.policies = value
         }
+        
         fun policies(vararg value: IntrinsicFunction) {
-  this.policies = value
-}
+          this.policies = value
+        }
+        
         @JvmField
         var userName: Any? = null
 
         fun userName(value: String) {
           this.userName = value
         }
+        
         fun userName(value: IntrinsicFunction) {
-  this.userName = value
-}
+          this.userName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

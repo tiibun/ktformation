@@ -17,27 +17,33 @@ class AWSCodeCommitRepository(logicalId: String) : Resource<AWSCodeCommitReposit
         fun repositoryDescription(value: String) {
           this.repositoryDescription = value
         }
+        
         fun repositoryDescription(value: IntrinsicFunction) {
-  this.repositoryDescription = value
-}
+          this.repositoryDescription = value
+        }
+        
         @JvmField
         var repositoryName: Any? = null
 
         fun repositoryName(value: String) {
           this.repositoryName = value
         }
+        
         fun repositoryName(value: IntrinsicFunction) {
-  this.repositoryName = value
-}
+          this.repositoryName = value
+        }
+        
         @JvmField
         var triggers: Any? = null
 
         fun triggers(value: List<RepositoryTrigger>) {
           this.triggers = value
         }
+        
         fun triggers(vararg value: IntrinsicFunction) {
-  this.triggers = value
-}
+          this.triggers = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

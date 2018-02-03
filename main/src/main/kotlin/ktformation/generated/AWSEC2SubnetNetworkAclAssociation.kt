@@ -17,18 +17,22 @@ class AWSEC2SubnetNetworkAclAssociation(logicalId: String) : Resource<AWSEC2Subn
         fun networkAclId(value: String) {
           this.networkAclId = value
         }
+        
         fun networkAclId(value: IntrinsicFunction) {
-  this.networkAclId = value
-}
+          this.networkAclId = value
+        }
+        
         @JvmField
         var subnetId: Any? = null
 
         fun subnetId(value: String) {
           this.subnetId = value
         }
+        
         fun subnetId(value: IntrinsicFunction) {
-  this.subnetId = value
-}
+          this.subnetId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

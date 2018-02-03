@@ -17,72 +17,88 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun endpointName(value: String) {
           this.endpointName = value
         }
+        
         fun endpointName(value: IntrinsicFunction) {
-  this.endpointName = value
-}
+          this.endpointName = value
+        }
+        
         @JvmField
         var extraJarsS3Path: Any? = null
 
         fun extraJarsS3Path(value: String) {
           this.extraJarsS3Path = value
         }
+        
         fun extraJarsS3Path(value: IntrinsicFunction) {
-  this.extraJarsS3Path = value
-}
+          this.extraJarsS3Path = value
+        }
+        
         @JvmField
         var extraPythonLibsS3Path: Any? = null
 
         fun extraPythonLibsS3Path(value: String) {
           this.extraPythonLibsS3Path = value
         }
+        
         fun extraPythonLibsS3Path(value: IntrinsicFunction) {
-  this.extraPythonLibsS3Path = value
-}
+          this.extraPythonLibsS3Path = value
+        }
+        
         @JvmField
         var numberOfNodes: Any? = null
 
         fun numberOfNodes(value: Int) {
           this.numberOfNodes = value
         }
+        
         fun numberOfNodes(value: IntrinsicFunction) {
-  this.numberOfNodes = value
-}
+          this.numberOfNodes = value
+        }
+        
         @JvmField
         var publicKey: Any? = null
 
         fun publicKey(value: String) {
           this.publicKey = value
         }
+        
         fun publicKey(value: IntrinsicFunction) {
-  this.publicKey = value
-}
+          this.publicKey = value
+        }
+        
         @JvmField
         var roleArn: Any? = null
 
         fun roleArn(value: String) {
           this.roleArn = value
         }
+        
         fun roleArn(value: IntrinsicFunction) {
-  this.roleArn = value
-}
+          this.roleArn = value
+        }
+        
         @JvmField
         var securityGroupIds: Any? = null
 
         fun securityGroupIds(value: List<String>) {
           this.securityGroupIds = value
         }
+        
         fun securityGroupIds(vararg value: IntrinsicFunction) {
-  this.securityGroupIds = value
-}
+          this.securityGroupIds = value
+        }
+        
         @JvmField
         var subnetId: Any? = null
 
         fun subnetId(value: String) {
           this.subnetId = value
         }
+        
         fun subnetId(value: IntrinsicFunction) {
-  this.subnetId = value
-}
+          this.subnetId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

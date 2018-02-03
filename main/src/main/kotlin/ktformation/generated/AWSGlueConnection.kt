@@ -17,18 +17,22 @@ class AWSGlueConnection(logicalId: String) : Resource<AWSGlueConnection.Properti
         fun catalogId(value: String) {
           this.catalogId = value
         }
+        
         fun catalogId(value: IntrinsicFunction) {
-  this.catalogId = value
-}
+          this.catalogId = value
+        }
+        
         @JvmField
         var connectionInput: Any? = null
 
         fun connectionInput(value: ConnectionInput) {
           this.connectionInput = value
         }
+        
         fun connectionInput(value: IntrinsicFunction) {
-  this.connectionInput = value
-}
+          this.connectionInput = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

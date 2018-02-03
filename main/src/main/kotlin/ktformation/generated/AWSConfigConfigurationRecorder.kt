@@ -17,27 +17,33 @@ class AWSConfigConfigurationRecorder(logicalId: String) : Resource<AWSConfigConf
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var recordingGroup: Any? = null
 
         fun recordingGroup(value: RecordingGroup) {
           this.recordingGroup = value
         }
+        
         fun recordingGroup(value: IntrinsicFunction) {
-  this.recordingGroup = value
-}
+          this.recordingGroup = value
+        }
+        
         @JvmField
         var roleARN: Any? = null
 
         fun roleARN(value: String) {
           this.roleARN = value
         }
+        
         fun roleARN(value: IntrinsicFunction) {
-  this.roleARN = value
-}
+          this.roleARN = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

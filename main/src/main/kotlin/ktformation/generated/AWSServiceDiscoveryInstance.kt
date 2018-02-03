@@ -17,27 +17,33 @@ class AWSServiceDiscoveryInstance(logicalId: String) : Resource<AWSServiceDiscov
         fun instanceAttributes(value: Json) {
           this.instanceAttributes = value
         }
+        
         fun instanceAttributes(value: IntrinsicFunction) {
-  this.instanceAttributes = value
-}
+          this.instanceAttributes = value
+        }
+        
         @JvmField
         var instanceId: Any? = null
 
         fun instanceId(value: String) {
           this.instanceId = value
         }
+        
         fun instanceId(value: IntrinsicFunction) {
-  this.instanceId = value
-}
+          this.instanceId = value
+        }
+        
         @JvmField
         var serviceId: Any? = null
 
         fun serviceId(value: String) {
           this.serviceId = value
         }
+        
         fun serviceId(value: IntrinsicFunction) {
-  this.serviceId = value
-}
+          this.serviceId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

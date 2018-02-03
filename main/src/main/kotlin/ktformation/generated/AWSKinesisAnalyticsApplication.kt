@@ -17,36 +17,44 @@ class AWSKinesisAnalyticsApplication(logicalId: String) : Resource<AWSKinesisAna
         fun applicationCode(value: String) {
           this.applicationCode = value
         }
+        
         fun applicationCode(value: IntrinsicFunction) {
-  this.applicationCode = value
-}
+          this.applicationCode = value
+        }
+        
         @JvmField
         var applicationDescription: Any? = null
 
         fun applicationDescription(value: String) {
           this.applicationDescription = value
         }
+        
         fun applicationDescription(value: IntrinsicFunction) {
-  this.applicationDescription = value
-}
+          this.applicationDescription = value
+        }
+        
         @JvmField
         var applicationName: Any? = null
 
         fun applicationName(value: String) {
           this.applicationName = value
         }
+        
         fun applicationName(value: IntrinsicFunction) {
-  this.applicationName = value
-}
+          this.applicationName = value
+        }
+        
         @JvmField
         var inputs: Any? = null
 
         fun inputs(value: List<Input>) {
           this.inputs = value
         }
+        
         fun inputs(vararg value: IntrinsicFunction) {
-  this.inputs = value
-}
+          this.inputs = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

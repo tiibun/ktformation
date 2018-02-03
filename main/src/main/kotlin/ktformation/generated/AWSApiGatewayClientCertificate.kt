@@ -17,9 +17,11 @@ class AWSApiGatewayClientCertificate(logicalId: String) : Resource<AWSApiGateway
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

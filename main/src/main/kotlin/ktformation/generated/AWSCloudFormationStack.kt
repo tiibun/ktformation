@@ -17,9 +17,11 @@ class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStac
         fun notificationARNs(value: List<String>) {
           this.notificationARNs = value
         }
+        
         fun notificationARNs(vararg value: IntrinsicFunction) {
-  this.notificationARNs = value
-}
+          this.notificationARNs = value
+        }
+        
         @JvmField
         var parameters: Any? = null
 
@@ -33,27 +35,33 @@ class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStac
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
         @JvmField
         var templateURL: Any? = null
 
         fun templateURL(value: String) {
           this.templateURL = value
         }
+        
         fun templateURL(value: IntrinsicFunction) {
-  this.templateURL = value
-}
+          this.templateURL = value
+        }
+        
         @JvmField
         var timeoutInMinutes: Any? = null
 
         fun timeoutInMinutes(value: Int) {
           this.timeoutInMinutes = value
         }
+        
         fun timeoutInMinutes(value: IntrinsicFunction) {
-  this.timeoutInMinutes = value
-}
+          this.timeoutInMinutes = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

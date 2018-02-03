@@ -17,18 +17,22 @@ class AWSEC2EIP(logicalId: String) : Resource<AWSEC2EIP.Properties>(logicalId, "
         fun domain(value: String) {
           this.domain = value
         }
+        
         fun domain(value: IntrinsicFunction) {
-  this.domain = value
-}
+          this.domain = value
+        }
+        
         @JvmField
         var instanceId: Any? = null
 
         fun instanceId(value: String) {
           this.instanceId = value
         }
+        
         fun instanceId(value: IntrinsicFunction) {
-  this.instanceId = value
-}
+          this.instanceId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

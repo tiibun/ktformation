@@ -17,72 +17,88 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun createAlias(value: Boolean) {
           this.createAlias = value
         }
+        
         fun createAlias(value: IntrinsicFunction) {
-  this.createAlias = value
-}
+          this.createAlias = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var enableSso: Any? = null
 
         fun enableSso(value: Boolean) {
           this.enableSso = value
         }
+        
         fun enableSso(value: IntrinsicFunction) {
-  this.enableSso = value
-}
+          this.enableSso = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var password: Any? = null
 
         fun password(value: String) {
           this.password = value
         }
+        
         fun password(value: IntrinsicFunction) {
-  this.password = value
-}
+          this.password = value
+        }
+        
         @JvmField
         var shortName: Any? = null
 
         fun shortName(value: String) {
           this.shortName = value
         }
+        
         fun shortName(value: IntrinsicFunction) {
-  this.shortName = value
-}
+          this.shortName = value
+        }
+        
         @JvmField
         var size: Any? = null
 
         fun size(value: String) {
           this.size = value
         }
+        
         fun size(value: IntrinsicFunction) {
-  this.size = value
-}
+          this.size = value
+        }
+        
         @JvmField
         var vpcSettings: Any? = null
 
         fun vpcSettings(value: VpcSettings) {
           this.vpcSettings = value
         }
+        
         fun vpcSettings(value: IntrinsicFunction) {
-  this.vpcSettings = value
-}
+          this.vpcSettings = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

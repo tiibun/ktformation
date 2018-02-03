@@ -17,45 +17,55 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
         fun apiStages(value: List<ApiStage>) {
           this.apiStages = value
         }
+        
         fun apiStages(vararg value: IntrinsicFunction) {
-  this.apiStages = value
-}
+          this.apiStages = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var quota: Any? = null
 
         fun quota(value: QuotaSettings) {
           this.quota = value
         }
+        
         fun quota(value: IntrinsicFunction) {
-  this.quota = value
-}
+          this.quota = value
+        }
+        
         @JvmField
         var throttle: Any? = null
 
         fun throttle(value: ThrottleSettings) {
           this.throttle = value
         }
+        
         fun throttle(value: IntrinsicFunction) {
-  this.throttle = value
-}
+          this.throttle = value
+        }
+        
         @JvmField
         var usagePlanName: Any? = null
 
         fun usagePlanName(value: String) {
           this.usagePlanName = value
         }
+        
         fun usagePlanName(value: IntrinsicFunction) {
-  this.usagePlanName = value
-}
+          this.usagePlanName = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

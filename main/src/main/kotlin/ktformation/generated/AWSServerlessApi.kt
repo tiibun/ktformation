@@ -17,54 +17,66 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun cacheClusterEnabled(value: Boolean) {
           this.cacheClusterEnabled = value
         }
+        
         fun cacheClusterEnabled(value: IntrinsicFunction) {
-  this.cacheClusterEnabled = value
-}
+          this.cacheClusterEnabled = value
+        }
+        
         @JvmField
         var cacheClusterSize: Any? = null
 
         fun cacheClusterSize(value: String) {
           this.cacheClusterSize = value
         }
+        
         fun cacheClusterSize(value: IntrinsicFunction) {
-  this.cacheClusterSize = value
-}
+          this.cacheClusterSize = value
+        }
+        
         @JvmField
         var definitionBody: Any? = null
 
         fun definitionBody(value: Json) {
           this.definitionBody = value
         }
+        
         fun definitionBody(value: IntrinsicFunction) {
-  this.definitionBody = value
-}
+          this.definitionBody = value
+        }
+        
         @JvmField
         var definitionUri: Any? = null
 
         fun definitionUri(value: S3LocationOrString) {
           this.definitionUri = value
         }
+        
         fun definitionUri(value: IntrinsicFunction) {
-  this.definitionUri = value
-}
+          this.definitionUri = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var stageName: Any? = null
 
         fun stageName(value: String) {
           this.stageName = value
         }
+        
         fun stageName(value: IntrinsicFunction) {
-  this.stageName = value
-}
+          this.stageName = value
+        }
+        
         @JvmField
         var variables: Any? = null
 

@@ -17,27 +17,33 @@ class AWSEC2VPCGatewayAttachment(logicalId: String) : Resource<AWSEC2VPCGatewayA
         fun internetGatewayId(value: String) {
           this.internetGatewayId = value
         }
+        
         fun internetGatewayId(value: IntrinsicFunction) {
-  this.internetGatewayId = value
-}
+          this.internetGatewayId = value
+        }
+        
         @JvmField
         var vpcId: Any? = null
 
         fun vpcId(value: String) {
           this.vpcId = value
         }
+        
         fun vpcId(value: IntrinsicFunction) {
-  this.vpcId = value
-}
+          this.vpcId = value
+        }
+        
         @JvmField
         var vpnGatewayId: Any? = null
 
         fun vpnGatewayId(value: String) {
           this.vpnGatewayId = value
         }
+        
         fun vpnGatewayId(value: IntrinsicFunction) {
-  this.vpnGatewayId = value
-}
+          this.vpnGatewayId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

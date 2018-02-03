@@ -17,36 +17,44 @@ class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshift
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var parameterGroupFamily: Any? = null
 
         fun parameterGroupFamily(value: String) {
           this.parameterGroupFamily = value
         }
+        
         fun parameterGroupFamily(value: IntrinsicFunction) {
-  this.parameterGroupFamily = value
-}
+          this.parameterGroupFamily = value
+        }
+        
         @JvmField
         var parameters: Any? = null
 
         fun parameters(value: List<Parameter>) {
           this.parameters = value
         }
+        
         fun parameters(vararg value: IntrinsicFunction) {
-  this.parameters = value
-}
+          this.parameters = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

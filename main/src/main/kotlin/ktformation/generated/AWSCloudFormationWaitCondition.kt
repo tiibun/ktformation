@@ -17,27 +17,33 @@ class AWSCloudFormationWaitCondition(logicalId: String) : Resource<AWSCloudForma
         fun count(value: Int) {
           this.count = value
         }
+        
         fun count(value: IntrinsicFunction) {
-  this.count = value
-}
+          this.count = value
+        }
+        
         @JvmField
         var handle: Any? = null
 
         fun handle(value: String) {
           this.handle = value
         }
+        
         fun handle(value: IntrinsicFunction) {
-  this.handle = value
-}
+          this.handle = value
+        }
+        
         @JvmField
         var timeout: Any? = null
 
         fun timeout(value: String) {
           this.timeout = value
         }
+        
         fun timeout(value: IntrinsicFunction) {
-  this.timeout = value
-}
+          this.timeout = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

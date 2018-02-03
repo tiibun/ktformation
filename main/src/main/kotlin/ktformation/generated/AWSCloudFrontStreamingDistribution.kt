@@ -17,18 +17,22 @@ class AWSCloudFrontStreamingDistribution(logicalId: String) : Resource<AWSCloudF
         fun streamingDistributionConfig(value: StreamingDistributionConfig) {
           this.streamingDistributionConfig = value
         }
+        
         fun streamingDistributionConfig(value: IntrinsicFunction) {
-  this.streamingDistributionConfig = value
-}
+          this.streamingDistributionConfig = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

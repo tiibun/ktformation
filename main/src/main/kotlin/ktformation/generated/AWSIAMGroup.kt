@@ -17,36 +17,44 @@ class AWSIAMGroup(logicalId: String) : Resource<AWSIAMGroup.Properties>(logicalI
         fun groupName(value: String) {
           this.groupName = value
         }
+        
         fun groupName(value: IntrinsicFunction) {
-  this.groupName = value
-}
+          this.groupName = value
+        }
+        
         @JvmField
         var managedPolicyArns: Any? = null
 
         fun managedPolicyArns(value: List<String>) {
           this.managedPolicyArns = value
         }
+        
         fun managedPolicyArns(vararg value: IntrinsicFunction) {
-  this.managedPolicyArns = value
-}
+          this.managedPolicyArns = value
+        }
+        
         @JvmField
         var path: Any? = null
 
         fun path(value: String) {
           this.path = value
         }
+        
         fun path(value: IntrinsicFunction) {
-  this.path = value
-}
+          this.path = value
+        }
+        
         @JvmField
         var policies: Any? = null
 
         fun policies(value: List<Policy>) {
           this.policies = value
         }
+        
         fun policies(vararg value: IntrinsicFunction) {
-  this.policies = value
-}
+          this.policies = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

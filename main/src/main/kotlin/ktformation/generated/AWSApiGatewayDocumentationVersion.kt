@@ -17,27 +17,33 @@ class AWSApiGatewayDocumentationVersion(logicalId: String) : Resource<AWSApiGate
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var documentationVersion: Any? = null
 
         fun documentationVersion(value: String) {
           this.documentationVersion = value
         }
+        
         fun documentationVersion(value: IntrinsicFunction) {
-  this.documentationVersion = value
-}
+          this.documentationVersion = value
+        }
+        
         @JvmField
         var restApiId: Any? = null
 
         fun restApiId(value: String) {
           this.restApiId = value
         }
+        
         fun restApiId(value: IntrinsicFunction) {
-  this.restApiId = value
-}
+          this.restApiId = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

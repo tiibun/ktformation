@@ -17,36 +17,44 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
         fun associationName(value: String) {
           this.associationName = value
         }
+        
         fun associationName(value: IntrinsicFunction) {
-  this.associationName = value
-}
+          this.associationName = value
+        }
+        
         @JvmField
         var documentVersion: Any? = null
 
         fun documentVersion(value: String) {
           this.documentVersion = value
         }
+        
         fun documentVersion(value: IntrinsicFunction) {
-  this.documentVersion = value
-}
+          this.documentVersion = value
+        }
+        
         @JvmField
         var instanceId: Any? = null
 
         fun instanceId(value: String) {
           this.instanceId = value
         }
+        
         fun instanceId(value: IntrinsicFunction) {
-  this.instanceId = value
-}
+          this.instanceId = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var parameters: Any? = null
 
@@ -60,18 +68,22 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
         fun scheduleExpression(value: String) {
           this.scheduleExpression = value
         }
+        
         fun scheduleExpression(value: IntrinsicFunction) {
-  this.scheduleExpression = value
-}
+          this.scheduleExpression = value
+        }
+        
         @JvmField
         var targets: Any? = null
 
         fun targets(value: List<Target>) {
           this.targets = value
         }
+        
         fun targets(vararg value: IntrinsicFunction) {
-  this.targets = value
-}
+          this.targets = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,18 +17,22 @@ class AWSElastiCacheParameterGroup(logicalId: String) : Resource<AWSElastiCacheP
         fun cacheParameterGroupFamily(value: String) {
           this.cacheParameterGroupFamily = value
         }
+        
         fun cacheParameterGroupFamily(value: IntrinsicFunction) {
-  this.cacheParameterGroupFamily = value
-}
+          this.cacheParameterGroupFamily = value
+        }
+        
         @JvmField
         var description: Any? = null
 
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var properties: Any? = null
 

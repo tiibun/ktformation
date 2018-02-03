@@ -17,18 +17,22 @@ class AWSIoTPolicyPrincipalAttachment(logicalId: String) : Resource<AWSIoTPolicy
         fun policyName(value: String) {
           this.policyName = value
         }
+        
         fun policyName(value: IntrinsicFunction) {
-  this.policyName = value
-}
+          this.policyName = value
+        }
+        
         @JvmField
         var principal: Any? = null
 
         fun principal(value: String) {
           this.principal = value
         }
+        
         fun principal(value: IntrinsicFunction) {
-  this.principal = value
-}
+          this.principal = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

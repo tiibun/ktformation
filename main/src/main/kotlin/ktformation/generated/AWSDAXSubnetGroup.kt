@@ -17,27 +17,33 @@ class AWSDAXSubnetGroup(logicalId: String) : Resource<AWSDAXSubnetGroup.Properti
         fun description(value: String) {
           this.description = value
         }
+        
         fun description(value: IntrinsicFunction) {
-  this.description = value
-}
+          this.description = value
+        }
+        
         @JvmField
         var subnetGroupName: Any? = null
 
         fun subnetGroupName(value: String) {
           this.subnetGroupName = value
         }
+        
         fun subnetGroupName(value: IntrinsicFunction) {
-  this.subnetGroupName = value
-}
+          this.subnetGroupName = value
+        }
+        
         @JvmField
         var subnetIds: Any? = null
 
         fun subnetIds(value: List<String>) {
           this.subnetIds = value
         }
+        
         fun subnetIds(vararg value: IntrinsicFunction) {
-  this.subnetIds = value
-}
+          this.subnetIds = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

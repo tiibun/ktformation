@@ -17,27 +17,33 @@ class AWSEC2NetworkInterfacePermission(logicalId: String) : Resource<AWSEC2Netwo
         fun awsAccountId(value: String) {
           this.awsAccountId = value
         }
+        
         fun awsAccountId(value: IntrinsicFunction) {
-  this.awsAccountId = value
-}
+          this.awsAccountId = value
+        }
+        
         @JvmField
         var networkInterfaceId: Any? = null
 
         fun networkInterfaceId(value: String) {
           this.networkInterfaceId = value
         }
+        
         fun networkInterfaceId(value: IntrinsicFunction) {
-  this.networkInterfaceId = value
-}
+          this.networkInterfaceId = value
+        }
+        
         @JvmField
         var permission: Any? = null
 
         fun permission(value: String) {
           this.permission = value
         }
+        
         fun permission(value: IntrinsicFunction) {
-  this.permission = value
-}
+          this.permission = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

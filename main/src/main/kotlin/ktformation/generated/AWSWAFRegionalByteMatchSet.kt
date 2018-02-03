@@ -17,18 +17,22 @@ class AWSWAFRegionalByteMatchSet(logicalId: String) : Resource<AWSWAFRegionalByt
         fun byteMatchTuples(value: List<ByteMatchTuple>) {
           this.byteMatchTuples = value
         }
+        
         fun byteMatchTuples(vararg value: IntrinsicFunction) {
-  this.byteMatchTuples = value
-}
+          this.byteMatchTuples = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

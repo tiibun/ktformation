@@ -24,162 +24,198 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun autoAssignElasticIps(value: Boolean) {
           this.autoAssignElasticIps = value
         }
+        
         fun autoAssignElasticIps(value: IntrinsicFunction) {
-  this.autoAssignElasticIps = value
-}
+          this.autoAssignElasticIps = value
+        }
+        
         @JvmField
         var autoAssignPublicIps: Any? = null
 
         fun autoAssignPublicIps(value: Boolean) {
           this.autoAssignPublicIps = value
         }
+        
         fun autoAssignPublicIps(value: IntrinsicFunction) {
-  this.autoAssignPublicIps = value
-}
+          this.autoAssignPublicIps = value
+        }
+        
         @JvmField
         var customInstanceProfileArn: Any? = null
 
         fun customInstanceProfileArn(value: String) {
           this.customInstanceProfileArn = value
         }
+        
         fun customInstanceProfileArn(value: IntrinsicFunction) {
-  this.customInstanceProfileArn = value
-}
+          this.customInstanceProfileArn = value
+        }
+        
         @JvmField
         var customJson: Any? = null
 
         fun customJson(value: Json) {
           this.customJson = value
         }
+        
         fun customJson(value: IntrinsicFunction) {
-  this.customJson = value
-}
+          this.customJson = value
+        }
+        
         @JvmField
         var customRecipes: Any? = null
 
         fun customRecipes(value: Recipes) {
           this.customRecipes = value
         }
+        
         fun customRecipes(value: IntrinsicFunction) {
-  this.customRecipes = value
-}
+          this.customRecipes = value
+        }
+        
         @JvmField
         var customSecurityGroupIds: Any? = null
 
         fun customSecurityGroupIds(value: List<String>) {
           this.customSecurityGroupIds = value
         }
+        
         fun customSecurityGroupIds(vararg value: IntrinsicFunction) {
-  this.customSecurityGroupIds = value
-}
+          this.customSecurityGroupIds = value
+        }
+        
         @JvmField
         var enableAutoHealing: Any? = null
 
         fun enableAutoHealing(value: Boolean) {
           this.enableAutoHealing = value
         }
+        
         fun enableAutoHealing(value: IntrinsicFunction) {
-  this.enableAutoHealing = value
-}
+          this.enableAutoHealing = value
+        }
+        
         @JvmField
         var installUpdatesOnBoot: Any? = null
 
         fun installUpdatesOnBoot(value: Boolean) {
           this.installUpdatesOnBoot = value
         }
+        
         fun installUpdatesOnBoot(value: IntrinsicFunction) {
-  this.installUpdatesOnBoot = value
-}
+          this.installUpdatesOnBoot = value
+        }
+        
         @JvmField
         var lifecycleEventConfiguration: Any? = null
 
         fun lifecycleEventConfiguration(value: LifecycleEventConfiguration) {
           this.lifecycleEventConfiguration = value
         }
+        
         fun lifecycleEventConfiguration(value: IntrinsicFunction) {
-  this.lifecycleEventConfiguration = value
-}
+          this.lifecycleEventConfiguration = value
+        }
+        
         @JvmField
         var loadBasedAutoScaling: Any? = null
 
         fun loadBasedAutoScaling(value: LoadBasedAutoScaling) {
           this.loadBasedAutoScaling = value
         }
+        
         fun loadBasedAutoScaling(value: IntrinsicFunction) {
-  this.loadBasedAutoScaling = value
-}
+          this.loadBasedAutoScaling = value
+        }
+        
         @JvmField
         var name: Any? = null
 
         fun name(value: String) {
           this.name = value
         }
+        
         fun name(value: IntrinsicFunction) {
-  this.name = value
-}
+          this.name = value
+        }
+        
         @JvmField
         var packages: Any? = null
 
         fun packages(value: List<String>) {
           this.packages = value
         }
+        
         fun packages(vararg value: IntrinsicFunction) {
-  this.packages = value
-}
+          this.packages = value
+        }
+        
         @JvmField
         var shortname: Any? = null
 
         fun shortname(value: String) {
           this.shortname = value
         }
+        
         fun shortname(value: IntrinsicFunction) {
-  this.shortname = value
-}
+          this.shortname = value
+        }
+        
         @JvmField
         var stackId: Any? = null
 
         fun stackId(value: String) {
           this.stackId = value
         }
+        
         fun stackId(value: IntrinsicFunction) {
-  this.stackId = value
-}
+          this.stackId = value
+        }
+        
         @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
           this.tags = value
         }
+        
         fun tags(vararg value: IntrinsicFunction) {
-  this.tags = value
-}
+          this.tags = value
+        }
+        
         @JvmField
         var type: Any? = null
 
         fun type(value: String) {
           this.type = value
         }
+        
         fun type(value: IntrinsicFunction) {
-  this.type = value
-}
+          this.type = value
+        }
+        
         @JvmField
         var useEbsOptimizedInstances: Any? = null
 
         fun useEbsOptimizedInstances(value: Boolean) {
           this.useEbsOptimizedInstances = value
         }
+        
         fun useEbsOptimizedInstances(value: IntrinsicFunction) {
-  this.useEbsOptimizedInstances = value
-}
+          this.useEbsOptimizedInstances = value
+        }
+        
         @JvmField
         var volumeConfigurations: Any? = null
 
         fun volumeConfigurations(value: List<VolumeConfiguration>) {
           this.volumeConfigurations = value
         }
+        
         fun volumeConfigurations(vararg value: IntrinsicFunction) {
-  this.volumeConfigurations = value
-}
+          this.volumeConfigurations = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

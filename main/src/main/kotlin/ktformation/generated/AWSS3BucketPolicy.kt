@@ -17,18 +17,22 @@ class AWSS3BucketPolicy(logicalId: String) : Resource<AWSS3BucketPolicy.Properti
         fun bucket(value: String) {
           this.bucket = value
         }
+        
         fun bucket(value: IntrinsicFunction) {
-  this.bucket = value
-}
+          this.bucket = value
+        }
+        
         @JvmField
         var policyDocument: Any? = null
 
         fun policyDocument(value: Json) {
           this.policyDocument = value
         }
+        
         fun policyDocument(value: IntrinsicFunction) {
-  this.policyDocument = value
-}
+          this.policyDocument = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

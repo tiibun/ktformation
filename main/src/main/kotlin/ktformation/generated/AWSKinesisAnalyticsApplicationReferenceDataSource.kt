@@ -17,18 +17,22 @@ class AWSKinesisAnalyticsApplicationReferenceDataSource(logicalId: String) : Res
         fun applicationName(value: String) {
           this.applicationName = value
         }
+        
         fun applicationName(value: IntrinsicFunction) {
-  this.applicationName = value
-}
+          this.applicationName = value
+        }
+        
         @JvmField
         var referenceDataSource: Any? = null
 
         fun referenceDataSource(value: ReferenceDataSource) {
           this.referenceDataSource = value
         }
+        
         fun referenceDataSource(value: IntrinsicFunction) {
-  this.referenceDataSource = value
-}
+          this.referenceDataSource = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

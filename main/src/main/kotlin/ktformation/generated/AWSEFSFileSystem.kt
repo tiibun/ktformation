@@ -17,36 +17,44 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
         fun encrypted(value: Boolean) {
           this.encrypted = value
         }
+        
         fun encrypted(value: IntrinsicFunction) {
-  this.encrypted = value
-}
+          this.encrypted = value
+        }
+        
         @JvmField
         var fileSystemTags: Any? = null
 
         fun fileSystemTags(value: List<ElasticFileSystemTag>) {
           this.fileSystemTags = value
         }
+        
         fun fileSystemTags(vararg value: IntrinsicFunction) {
-  this.fileSystemTags = value
-}
+          this.fileSystemTags = value
+        }
+        
         @JvmField
         var kmsKeyId: Any? = null
 
         fun kmsKeyId(value: String) {
           this.kmsKeyId = value
         }
+        
         fun kmsKeyId(value: IntrinsicFunction) {
-  this.kmsKeyId = value
-}
+          this.kmsKeyId = value
+        }
+        
         @JvmField
         var performanceMode: Any? = null
 
         fun performanceMode(value: String) {
           this.performanceMode = value
         }
+        
         fun performanceMode(value: IntrinsicFunction) {
-  this.performanceMode = value
-}
+          this.performanceMode = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -17,9 +17,11 @@ class AWSGuardDutyDetector(logicalId: String) : Resource<AWSGuardDutyDetector.Pr
         fun enable(value: Boolean) {
           this.enable = value
         }
+        
         fun enable(value: IntrinsicFunction) {
-  this.enable = value
-}
+          this.enable = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
