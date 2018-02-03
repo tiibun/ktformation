@@ -75,9 +75,9 @@ class AWSIoTTopicRule(logicalId: String) : Resource<AWSIoTTopicRule.Properties>(
             val hashKeyType: String? = null,
             val hashKeyValue: String,
             val payloadField: String? = null,
-            val rangeKeyField: String,
+            val rangeKeyField: String? = null,
             val rangeKeyType: String? = null,
-            val rangeKeyValue: String,
+            val rangeKeyValue: String? = null,
             val roleArn: String,
             val tableName: String
     )

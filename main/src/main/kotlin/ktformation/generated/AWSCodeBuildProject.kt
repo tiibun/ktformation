@@ -160,6 +160,8 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
     class Source(
             val auth: SourceAuth? = null,
             val buildSpec: String? = null,
+            val gitCloneDepth: Int? = null,
+            val insecureSsl: Boolean? = null,
             val location: String? = null,
             val type: String
     )

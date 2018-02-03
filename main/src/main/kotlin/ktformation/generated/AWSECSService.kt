@@ -39,6 +39,15 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
   this.desiredCount = value
 }
         @JvmField
+        var healthCheckGracePeriodSeconds: Any? = null
+
+        fun healthCheckGracePeriodSeconds(value: Int) {
+          this.healthCheckGracePeriodSeconds = value
+        }
+        fun healthCheckGracePeriodSeconds(value: IntrinsicFunction) {
+  this.healthCheckGracePeriodSeconds = value
+}
+        @JvmField
         var launchType: Any? = null
 
         fun launchType(value: String) {

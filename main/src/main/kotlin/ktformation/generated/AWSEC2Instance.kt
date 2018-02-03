@@ -48,6 +48,15 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
   this.blockDeviceMappings = value
 }
         @JvmField
+        var creditSpecification: Any? = null
+
+        fun creditSpecification(value: CreditSpecification) {
+          this.creditSpecification = value
+        }
+        fun creditSpecification(value: IntrinsicFunction) {
+  this.creditSpecification = value
+}
+        @JvmField
         var disableApiTermination: Any? = null
 
         fun disableApiTermination(value: Boolean) {
@@ -301,6 +310,10 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
             val ebs: Ebs? = null,
             val noDevice: NoDevice? = null,
             val virtualName: String? = null
+    )
+
+    class CreditSpecification(
+            val cPUCredits: String? = null
     )
 
     class Ebs(

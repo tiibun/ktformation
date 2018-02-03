@@ -39,6 +39,15 @@ class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalI
   this.analyticsConfigurations = value
 }
         @JvmField
+        var bucketEncryption: Any? = null
+
+        fun bucketEncryption(value: BucketEncryption) {
+          this.bucketEncryption = value
+        }
+        fun bucketEncryption(value: IntrinsicFunction) {
+  this.bucketEncryption = value
+}
+        @JvmField
         var bucketName: Any? = null
 
         fun bucketName(value: String) {
@@ -155,11 +164,19 @@ class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalI
             val accelerationStatus: String
     )
 
+    class AccessControlTranslation(
+            val owner: String
+    )
+
     class AnalyticsConfiguration(
             val id: String,
             val prefix: String? = null,
             val storageClassAnalysis: StorageClassAnalysis,
             val tagFilters: List<TagFilter>? = null
+    )
+
+    class BucketEncryption(
+            val serverSideEncryptionConfiguration: List<ServerSideEncryptionRule>
     )
 
     class CorsConfiguration(
@@ -185,6 +202,10 @@ class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalI
             val bucketArn: String,
             val format: String,
             val prefix: String? = null
+    )
+
+    class EncryptionConfiguration(
+            val replicaKmsKeyID: String
     )
 
     class FilterRule(
@@ -263,7 +284,10 @@ class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalI
     )
 
     class ReplicationDestination(
+            val accessControlTranslation: AccessControlTranslation? = null,
+            val account: String? = null,
             val bucket: String,
+            val encryptionConfiguration: EncryptionConfiguration? = null,
             val storageClass: String? = null
     )
 
@@ -271,6 +295,7 @@ class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalI
             val destination: ReplicationDestination,
             val id: String? = null,
             val prefix: String,
+            val sourceSelectionCriteria: SourceSelectionCriteria? = null,
             val status: String
     )
 
@@ -301,6 +326,23 @@ class AWSS3Bucket(logicalId: String) : Resource<AWSS3Bucket.Properties>(logicalI
 
     class S3KeyFilter(
             val rules: List<FilterRule>
+    )
+
+    class ServerSideEncryptionByDefault(
+            val kMSMasterKeyID: String? = null,
+            val sSEAlgorithm: String
+    )
+
+    class ServerSideEncryptionRule(
+            val serverSideEncryptionByDefault: ServerSideEncryptionByDefault? = null
+    )
+
+    class SourceSelectionCriteria(
+            val sseKmsEncryptedObjects: SseKmsEncryptedObjects
+    )
+
+    class SseKmsEncryptedObjects(
+            val status: String
     )
 
     class StorageClassAnalysis(

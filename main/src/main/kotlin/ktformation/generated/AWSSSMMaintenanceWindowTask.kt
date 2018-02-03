@@ -173,7 +173,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
     )
 
     class NotificationConfig(
-            val notificationArn: String? = null,
+            val notificationArn: String,
             val notificationEvents: List<String>? = null,
             val notificationType: String? = null
     )

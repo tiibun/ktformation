@@ -21,6 +21,15 @@ class AWSRDSDBSubnetGroup(logicalId: String) : Resource<AWSRDSDBSubnetGroup.Prop
   this.dBSubnetGroupDescription = value
 }
         @JvmField
+        var dBSubnetGroupName: Any? = null
+
+        fun dBSubnetGroupName(value: String) {
+          this.dBSubnetGroupName = value
+        }
+        fun dBSubnetGroupName(value: IntrinsicFunction) {
+  this.dBSubnetGroupName = value
+}
+        @JvmField
         var subnetIds: Any? = null
 
         fun subnetIds(value: List<String>) {

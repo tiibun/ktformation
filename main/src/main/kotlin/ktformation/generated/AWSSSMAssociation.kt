@@ -12,6 +12,15 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties() {
         @JvmField
+        var associationName: Any? = null
+
+        fun associationName(value: String) {
+          this.associationName = value
+        }
+        fun associationName(value: IntrinsicFunction) {
+  this.associationName = value
+}
+        @JvmField
         var documentVersion: Any? = null
 
         fun documentVersion(value: String) {

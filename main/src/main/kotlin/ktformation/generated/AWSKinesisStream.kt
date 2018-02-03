@@ -39,6 +39,15 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
   this.shardCount = value
 }
         @JvmField
+        var streamEncryption: Any? = null
+
+        fun streamEncryption(value: StreamEncryption) {
+          this.streamEncryption = value
+        }
+        fun streamEncryption(value: IntrinsicFunction) {
+  this.streamEncryption = value
+}
+        @JvmField
         var tags: Any? = null
 
         fun tags(value: List<Tag>) {
@@ -57,6 +66,10 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
     }
 
 
+    class StreamEncryption(
+            val encryptionType: String,
+            val keyId: String
+    )
 
 }
 

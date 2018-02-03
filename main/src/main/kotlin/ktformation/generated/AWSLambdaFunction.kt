@@ -84,6 +84,15 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
   this.memorySize = value
 }
         @JvmField
+        var reservedConcurrentExecutions: Any? = null
+
+        fun reservedConcurrentExecutions(value: Int) {
+          this.reservedConcurrentExecutions = value
+        }
+        fun reservedConcurrentExecutions(value: IntrinsicFunction) {
+  this.reservedConcurrentExecutions = value
+}
+        @JvmField
         var role: Any? = null
 
         fun role(value: String) {

@@ -53,10 +53,16 @@ class AWSKinesisAnalyticsApplicationOutput(logicalId: String) : Resource<AWSKine
             val roleARN: String
     )
 
+    class LambdaOutput(
+            val resourceARN: String,
+            val roleARN: String
+    )
+
     class Output(
             val destinationSchema: DestinationSchema,
             val kinesisFirehoseOutput: KinesisFirehoseOutput? = null,
             val kinesisStreamsOutput: KinesisStreamsOutput? = null,
+            val lambdaOutput: LambdaOutput? = null,
             val name: String? = null
     )
 
