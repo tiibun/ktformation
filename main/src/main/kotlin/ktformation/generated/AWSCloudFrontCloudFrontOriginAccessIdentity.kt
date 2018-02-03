@@ -11,13 +11,34 @@ class AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId: String) : Resource<
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [cloudFrontOriginAccessIdentityConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)
+         *
+         * _Required_: yes
+         *
+         * _Type_: CloudFrontOriginAccessIdentityConfig
+         */
         @JvmField
         var cloudFrontOriginAccessIdentityConfig: Any? = null
 
+        /**
+         * [cloudFrontOriginAccessIdentityConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)
+         *
+         * _Required_: yes
+         *
+         * _Type_: CloudFrontOriginAccessIdentityConfig
+         */
         fun cloudFrontOriginAccessIdentityConfig(value: CloudFrontOriginAccessIdentityConfig) {
           this.cloudFrontOriginAccessIdentityConfig = value
         }
         
+        /**
+         * [cloudFrontOriginAccessIdentityConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)
+         *
+         * _Required_: yes
+         *
+         * _Type_: CloudFrontOriginAccessIdentityConfig
+         */
         fun cloudFrontOriginAccessIdentityConfig(value: IntrinsicFunction) {
           this.cloudFrontOriginAccessIdentityConfig = value
         }
@@ -33,11 +54,21 @@ class AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId: String) : Resource<
 
 
     class CloudFrontOriginAccessIdentityConfig(
+            /**
+             * [Comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-comment)
+             *
+             * _Required_: yes
+             *
+             * _Type_: String
+             */
             val comment: String
     )
 
 }
 
+/**
+ * [AWS::CloudFront::CloudFrontOriginAccessIdentity - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html)
+ */
 fun Resources.awsCloudFrontCloudFrontOriginAccessIdentity(logicalId: String, init: AWSCloudFrontCloudFrontOriginAccessIdentity.() -> Unit = {}): AWSCloudFrontCloudFrontOriginAccessIdentity {
     return AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId).also {
         it.init()

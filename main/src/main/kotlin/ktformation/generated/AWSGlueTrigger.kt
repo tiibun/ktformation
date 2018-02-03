@@ -11,68 +11,194 @@ class AWSGlueTrigger(logicalId: String) : Resource<AWSGlueTrigger.Properties>(lo
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [actions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-actions)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Action>
+         */
         @JvmField
         var actions: Any? = null
 
+        /**
+         * [actions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-actions)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Action>
+         */
         fun actions(value: List<Action>) {
           this.actions = value
         }
         
+        /**
+         * [actions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-actions)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Action>
+         */
         fun actions(vararg value: IntrinsicFunction) {
           this.actions = value
         }
         
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var description: Any? = null
 
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun description(value: String) {
           this.description = value
         }
         
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var name: Any? = null
 
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun name(value: String) {
           this.name = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
         
+        /**
+         * [predicate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-predicate)
+         *
+         * _Required_: no
+         *
+         * _Type_: Predicate
+         */
         @JvmField
         var predicate: Any? = null
 
+        /**
+         * [predicate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-predicate)
+         *
+         * _Required_: no
+         *
+         * _Type_: Predicate
+         */
         fun predicate(value: Predicate) {
           this.predicate = value
         }
         
+        /**
+         * [predicate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-predicate)
+         *
+         * _Required_: no
+         *
+         * _Type_: Predicate
+         */
         fun predicate(value: IntrinsicFunction) {
           this.predicate = value
         }
         
+        /**
+         * [schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-schedule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var schedule: Any? = null
 
+        /**
+         * [schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-schedule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun schedule(value: String) {
           this.schedule = value
         }
         
+        /**
+         * [schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-schedule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun schedule(value: IntrinsicFunction) {
           this.schedule = value
         }
         
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var type: Any? = null
 
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun type(value: String) {
           this.type = value
         }
         
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
@@ -88,23 +214,75 @@ class AWSGlueTrigger(logicalId: String) : Resource<AWSGlueTrigger.Properties>(lo
 
 
     class Action(
+            /**
+             * [Arguments](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-arguments)
+             *
+             * _Required_: no
+             *
+             * _Type_: Json
+             */
             val arguments: Json? = null,
+            /**
+             * [JobName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val jobName: String? = null
     )
 
     class Condition(
+            /**
+             * [JobName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-jobname)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val jobName: String? = null,
+            /**
+             * [LogicalOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-logicaloperator)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val logicalOperator: String? = null,
+            /**
+             * [State](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-state)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val state: String? = null
     )
 
     class Predicate(
+            /**
+             * [Conditions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-conditions)
+             *
+             * _Required_: no
+             *
+             * _Type_: List<Condition>
+             */
             val conditions: List<Condition>? = null,
+            /**
+             * [Logical](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val logical: String? = null
     )
 
 }
 
+/**
+ * [AWS::Glue::Trigger - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)
+ */
 fun Resources.awsGlueTrigger(logicalId: String, init: AWSGlueTrigger.() -> Unit = {}): AWSGlueTrigger {
     return AWSGlueTrigger(logicalId).also {
         it.init()

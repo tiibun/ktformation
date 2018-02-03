@@ -21,20 +21,48 @@ class ${className}(logicalId: String) : Resource<${className}.Properties>(logica
     class Properties : ResourceProperties() {
 ${props.joinToLines { (k, v) ->
     """
+        /**
+         * [${k}](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
         @JvmField
         var ${k}: Any? = null
 
+        /**
+         * [${k}](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
         fun ${k}(value: ${v.typeName()}) {
           this.${k} = value
         }
         ${when (v.type) {
         "Map" -> ""
         "List" -> """
+        /**
+         * [${k}](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
         fun ${k}(vararg value: IntrinsicFunction) {
           this.${k} = value
         }
         """
         else -> """
+        /**
+         * [${k}](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
         fun ${k}(value: IntrinsicFunction) {
           this.${k} = value
         }
@@ -58,6 +86,13 @@ subproperties.joinToLines { (k, v) ->
     class ${k}(
 ${v.properties.joinToLines(",") { (k, v) ->
         """
+            /**
+             * [${k}](${v.documentation})
+             *
+             * _Required_: ${if (v.required) "yes" else "no"}
+             *
+             * _Type_: ${v.typeName()}
+             */
             val ${k.decapitalize()}: ${v.typeName()}${!v.required then "? = null"}
 """
     }}
@@ -67,6 +102,9 @@ ${v.properties.joinToLines(",") { (k, v) ->
 ${customMembers(className)}
 }
 
+/**
+ * [${name} - AWS CloudFormation](${resource.documentation})
+ */
 fun Resources.${className.replace(Regex("^AWS"), "aws")}(logicalId: String, init: ${className}.() -> Unit = {}): ${className} {
     return ${className}(logicalId).also {
         it.init()

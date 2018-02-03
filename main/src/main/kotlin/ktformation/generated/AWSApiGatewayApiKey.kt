@@ -11,68 +11,194 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [customerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var customerId: Any? = null
 
+        /**
+         * [customerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun customerId(value: String) {
           this.customerId = value
         }
         
+        /**
+         * [customerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun customerId(value: IntrinsicFunction) {
           this.customerId = value
         }
         
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var description: Any? = null
 
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun description(value: String) {
           this.description = value
         }
         
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
         
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
         @JvmField
         var enabled: Any? = null
 
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
         fun enabled(value: Boolean) {
           this.enabled = value
         }
         
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
         fun enabled(value: IntrinsicFunction) {
           this.enabled = value
         }
         
+        /**
+         * [generateDistinctId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
         @JvmField
         var generateDistinctId: Any? = null
 
+        /**
+         * [generateDistinctId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
         fun generateDistinctId(value: Boolean) {
           this.generateDistinctId = value
         }
         
+        /**
+         * [generateDistinctId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
         fun generateDistinctId(value: IntrinsicFunction) {
           this.generateDistinctId = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var name: Any? = null
 
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun name(value: String) {
           this.name = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
         
+        /**
+         * [stageKeys](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<StageKey>
+         */
         @JvmField
         var stageKeys: Any? = null
 
+        /**
+         * [stageKeys](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<StageKey>
+         */
         fun stageKeys(value: List<StageKey>) {
           this.stageKeys = value
         }
         
+        /**
+         * [stageKeys](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<StageKey>
+         */
         fun stageKeys(vararg value: IntrinsicFunction) {
           this.stageKeys = value
         }
@@ -88,12 +214,29 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
 
 
     class StageKey(
+            /**
+             * [RestApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val restApiId: String? = null,
+            /**
+             * [StageName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
             val stageName: String? = null
     )
 
 }
 
+/**
+ * [AWS::ApiGateway::ApiKey - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html)
+ */
 fun Resources.awsApiGatewayApiKey(logicalId: String, init: AWSApiGatewayApiKey.() -> Unit = {}): AWSApiGatewayApiKey {
     return AWSApiGatewayApiKey(logicalId).also {
         it.init()

@@ -11,24 +11,66 @@ class AWSCloudWatchDashboard(logicalId: String) : Resource<AWSCloudWatchDashboar
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [dashboardBody](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardbody)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var dashboardBody: Any? = null
 
+        /**
+         * [dashboardBody](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardbody)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun dashboardBody(value: String) {
           this.dashboardBody = value
         }
         
+        /**
+         * [dashboardBody](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardbody)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun dashboardBody(value: IntrinsicFunction) {
           this.dashboardBody = value
         }
         
+        /**
+         * [dashboardName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var dashboardName: Any? = null
 
+        /**
+         * [dashboardName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun dashboardName(value: String) {
           this.dashboardName = value
         }
         
+        /**
+         * [dashboardName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun dashboardName(value: IntrinsicFunction) {
           this.dashboardName = value
         }
@@ -46,6 +88,9 @@ class AWSCloudWatchDashboard(logicalId: String) : Resource<AWSCloudWatchDashboar
 
 }
 
+/**
+ * [AWS::CloudWatch::Dashboard - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html)
+ */
 fun Resources.awsCloudWatchDashboard(logicalId: String, init: AWSCloudWatchDashboard.() -> Unit = {}): AWSCloudWatchDashboard {
     return AWSCloudWatchDashboard(logicalId).also {
         it.init()

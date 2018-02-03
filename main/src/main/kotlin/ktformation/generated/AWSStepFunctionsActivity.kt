@@ -11,13 +11,34 @@ class AWSStepFunctionsActivity(logicalId: String) : Resource<AWSStepFunctionsAct
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var name: Any? = null
 
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun name(value: String) {
           this.name = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
@@ -35,6 +56,9 @@ class AWSStepFunctionsActivity(logicalId: String) : Resource<AWSStepFunctionsAct
 
 }
 
+/**
+ * [AWS::StepFunctions::Activity - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html)
+ */
 fun Resources.awsStepFunctionsActivity(logicalId: String, init: AWSStepFunctionsActivity.() -> Unit = {}): AWSStepFunctionsActivity {
     return AWSStepFunctionsActivity(logicalId).also {
         it.init()

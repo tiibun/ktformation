@@ -11,24 +11,66 @@ class AWSServiceDiscoveryPublicDnsNamespace(logicalId: String) : Resource<AWSSer
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         @JvmField
         var description: Any? = null
 
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun description(value: String) {
           this.description = value
         }
         
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var name: Any? = null
 
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun name(value: String) {
           this.name = value
         }
         
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
@@ -46,6 +88,9 @@ class AWSServiceDiscoveryPublicDnsNamespace(logicalId: String) : Resource<AWSSer
 
 }
 
+/**
+ * [AWS::ServiceDiscovery::PublicDnsNamespace - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html)
+ */
 fun Resources.awsServiceDiscoveryPublicDnsNamespace(logicalId: String, init: AWSServiceDiscoveryPublicDnsNamespace.() -> Unit = {}): AWSServiceDiscoveryPublicDnsNamespace {
     return AWSServiceDiscoveryPublicDnsNamespace(logicalId).also {
         it.init()

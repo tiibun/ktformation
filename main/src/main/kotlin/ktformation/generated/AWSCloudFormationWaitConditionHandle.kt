@@ -25,6 +25,9 @@ class AWSCloudFormationWaitConditionHandle(logicalId: String) : Resource<AWSClou
 
 }
 
+/**
+ * [AWS::CloudFormation::WaitConditionHandle - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html)
+ */
 fun Resources.awsCloudFormationWaitConditionHandle(logicalId: String, init: AWSCloudFormationWaitConditionHandle.() -> Unit = {}): AWSCloudFormationWaitConditionHandle {
     return AWSCloudFormationWaitConditionHandle(logicalId).also {
         it.init()

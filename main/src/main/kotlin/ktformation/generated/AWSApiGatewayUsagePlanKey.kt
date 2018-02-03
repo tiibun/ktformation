@@ -11,35 +11,98 @@ class AWSApiGatewayUsagePlanKey(logicalId: String) : Resource<AWSApiGatewayUsage
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [keyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var keyId: Any? = null
 
+        /**
+         * [keyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun keyId(value: String) {
           this.keyId = value
         }
         
+        /**
+         * [keyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun keyId(value: IntrinsicFunction) {
           this.keyId = value
         }
         
+        /**
+         * [keyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var keyType: Any? = null
 
+        /**
+         * [keyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun keyType(value: String) {
           this.keyType = value
         }
         
+        /**
+         * [keyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun keyType(value: IntrinsicFunction) {
           this.keyType = value
         }
         
+        /**
+         * [usagePlanId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var usagePlanId: Any? = null
 
+        /**
+         * [usagePlanId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun usagePlanId(value: String) {
           this.usagePlanId = value
         }
         
+        /**
+         * [usagePlanId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun usagePlanId(value: IntrinsicFunction) {
           this.usagePlanId = value
         }
@@ -57,6 +120,9 @@ class AWSApiGatewayUsagePlanKey(logicalId: String) : Resource<AWSApiGatewayUsage
 
 }
 
+/**
+ * [AWS::ApiGateway::UsagePlanKey - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html)
+ */
 fun Resources.awsApiGatewayUsagePlanKey(logicalId: String, init: AWSApiGatewayUsagePlanKey.() -> Unit = {}): AWSApiGatewayUsagePlanKey {
     return AWSApiGatewayUsagePlanKey(logicalId).also {
         it.init()

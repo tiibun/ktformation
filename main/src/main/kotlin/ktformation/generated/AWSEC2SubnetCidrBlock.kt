@@ -11,24 +11,66 @@ class AWSEC2SubnetCidrBlock(logicalId: String) : Resource<AWSEC2SubnetCidrBlock.
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
+        /**
+         * [ipv6CidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-ipv6cidrblock)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var ipv6CidrBlock: Any? = null
 
+        /**
+         * [ipv6CidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-ipv6cidrblock)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun ipv6CidrBlock(value: String) {
           this.ipv6CidrBlock = value
         }
         
+        /**
+         * [ipv6CidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-ipv6cidrblock)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun ipv6CidrBlock(value: IntrinsicFunction) {
           this.ipv6CidrBlock = value
         }
         
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-subnetid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         @JvmField
         var subnetId: Any? = null
 
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-subnetid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun subnetId(value: String) {
           this.subnetId = value
         }
         
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-subnetid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
@@ -46,6 +88,9 @@ class AWSEC2SubnetCidrBlock(logicalId: String) : Resource<AWSEC2SubnetCidrBlock.
 
 }
 
+/**
+ * [AWS::EC2::SubnetCidrBlock - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html)
+ */
 fun Resources.awsEC2SubnetCidrBlock(logicalId: String, init: AWSEC2SubnetCidrBlock.() -> Unit = {}): AWSEC2SubnetCidrBlock {
     return AWSEC2SubnetCidrBlock(logicalId).also {
         it.init()
