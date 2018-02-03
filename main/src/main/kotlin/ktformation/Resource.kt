@@ -17,7 +17,7 @@ abstract class Resource<T : ResourceProperties>(
         val type: String,
         var properties: T? = null,
         var creationPolicy: CreationPolicy? = null,
-        var deletionPolicy: Any? = null, // TODO
+        var deletionPolicy: DeletionPolicy? = null,
         var dependsOn: Array<String>? = null,
         var metadata: Any? = null,
         var updatePolicy: UpdatePolicy? = null) {
@@ -53,6 +53,18 @@ abstract class Resource<T : ResourceProperties>(
     }
 
     interface UpdatePolicy
+
+    enum class DeletionPolicy(private val value: String) {
+        DELETE("Delete"),
+        RETAIN("Retain"),
+        SNAPSHOT("Snapshot");
+
+        override fun toString() = value
+    }
+
+    fun deletionPolicy(policy: DeletionPolicy) {
+        deletionPolicy = policy
+    }
 }
 
 @CloudFormationMarker
