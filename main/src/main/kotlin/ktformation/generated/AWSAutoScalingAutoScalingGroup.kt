@@ -12,6 +12,38 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
     @CloudFormationMarker
     class Properties : ResourceProperties() {
         /**
+         * [autoScalingGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var autoScalingGroupName: Any? = null
+
+        /**
+         * [autoScalingGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun autoScalingGroupName(value: String) {
+          this.autoScalingGroupName = value
+        }
+        
+        /**
+         * [autoScalingGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun autoScalingGroupName(value: IntrinsicFunction) {
+          this.autoScalingGroupName = value
+        }
+        
+        /**
          * [availabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-availabilityzones)
          *
          * _Required_: no

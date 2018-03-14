@@ -12,6 +12,38 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
     @CloudFormationMarker
     class Properties : ResourceProperties() {
         /**
+         * [apiKeySourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var apiKeySourceType: Any? = null
+
+        /**
+         * [apiKeySourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun apiKeySourceType(value: String) {
+          this.apiKeySourceType = value
+        }
+        
+        /**
+         * [apiKeySourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun apiKeySourceType(value: IntrinsicFunction) {
+          this.apiKeySourceType = value
+        }
+        
+        /**
          * [binaryMediaTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes)
          *
          * _Required_: no
@@ -236,35 +268,35 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         }
         
         /**
-         * [mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-mode)
+         * [minimumCompressionSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize)
          *
          * _Required_: no
          *
-         * _Type_: String
+         * _Type_: Int
          */
         @JvmField
-        var mode: Any? = null
+        var minimumCompressionSize: Any? = null
 
         /**
-         * [mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-mode)
+         * [minimumCompressionSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize)
          *
          * _Required_: no
          *
-         * _Type_: String
+         * _Type_: Int
          */
-        fun mode(value: String) {
-          this.mode = value
+        fun minimumCompressionSize(value: Int) {
+          this.minimumCompressionSize = value
         }
         
         /**
-         * [mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-mode)
+         * [minimumCompressionSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize)
          *
          * _Required_: no
          *
-         * _Type_: String
+         * _Type_: Int
          */
-        fun mode(value: IntrinsicFunction) {
-          this.mode = value
+        fun minimumCompressionSize(value: IntrinsicFunction) {
+          this.minimumCompressionSize = value
         }
         
         /**

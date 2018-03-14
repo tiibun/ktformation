@@ -75,6 +75,38 @@ class AWSSSMDocument(logicalId: String) : Resource<AWSSSMDocument.Properties>(lo
           this.documentType = value
         }
         
+        /**
+         * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-tags)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tag>
+         */
+        @JvmField
+        var tags: Any? = null
+
+        /**
+         * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-tags)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tag>
+         */
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        
+        /**
+         * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-tags)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tag>
+         */
+        fun tags(vararg value: IntrinsicFunction) {
+          this.tags = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

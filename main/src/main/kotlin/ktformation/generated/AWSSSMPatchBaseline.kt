@@ -108,6 +108,38 @@ class AWSSSMPatchBaseline(logicalId: String) : Resource<AWSSSMPatchBaseline.Prop
         }
         
         /**
+         * [approvedPatchesEnableNonSecurity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        @JvmField
+        var approvedPatchesEnableNonSecurity: Any? = null
+
+        /**
+         * [approvedPatchesEnableNonSecurity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun approvedPatchesEnableNonSecurity(value: Boolean) {
+          this.approvedPatchesEnableNonSecurity = value
+        }
+        
+        /**
+         * [approvedPatchesEnableNonSecurity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun approvedPatchesEnableNonSecurity(value: IntrinsicFunction) {
+          this.approvedPatchesEnableNonSecurity = value
+        }
+        
+        /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-description)
          *
          * _Required_: no
@@ -299,6 +331,38 @@ class AWSSSMPatchBaseline(logicalId: String) : Resource<AWSSSMPatchBaseline.Prop
           this.rejectedPatches = value
         }
         
+        /**
+         * [sources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-sources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<PatchSource>
+         */
+        @JvmField
+        var sources: Any? = null
+
+        /**
+         * [sources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-sources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<PatchSource>
+         */
+        fun sources(value: List<PatchSource>) {
+          this.sources = value
+        }
+        
+        /**
+         * [sources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-sources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<PatchSource>
+         */
+        fun sources(vararg value: IntrinsicFunction) {
+          this.sources = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -339,6 +403,33 @@ class AWSSSMPatchBaseline(logicalId: String) : Resource<AWSSSMPatchBaseline.Prop
             val patchFilters: List<PatchFilter>? = null
     )
 
+    class PatchSource(
+            /**
+             * [Configuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-configuration)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val configuration: String? = null,
+            /**
+             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-name)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val name: String? = null,
+            /**
+             * [Products](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-products)
+             *
+             * _Required_: no
+             *
+             * _Type_: List<String>
+             */
+            val products: List<String>? = null
+    )
+
     class Rule(
             /**
              * [ApproveAfterDays](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveafterdays)
@@ -356,6 +447,14 @@ class AWSSSMPatchBaseline(logicalId: String) : Resource<AWSSSMPatchBaseline.Prop
              * _Type_: String
              */
             val complianceLevel: String? = null,
+            /**
+             * [EnableNonSecurity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-enablenonsecurity)
+             *
+             * _Required_: no
+             *
+             * _Type_: Boolean
+             */
+            val enableNonSecurity: Boolean? = null,
             /**
              * [PatchFilterGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-patchfiltergroup)
              *

@@ -364,6 +364,38 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         }
         
         /**
+         * [triggers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-triggers)
+         *
+         * _Required_: no
+         *
+         * _Type_: ProjectTriggers
+         */
+        @JvmField
+        var triggers: Any? = null
+
+        /**
+         * [triggers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-triggers)
+         *
+         * _Required_: no
+         *
+         * _Type_: ProjectTriggers
+         */
+        fun triggers(value: ProjectTriggers) {
+          this.triggers = value
+        }
+        
+        /**
+         * [triggers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-triggers)
+         *
+         * _Required_: no
+         *
+         * _Type_: ProjectTriggers
+         */
+        fun triggers(value: IntrinsicFunction) {
+          this.triggers = value
+        }
+        
+        /**
          * [vpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-vpcconfig)
          *
          * _Required_: no
@@ -543,6 +575,17 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
              * _Type_: String
              */
             val type: String
+    )
+
+    class ProjectTriggers(
+            /**
+             * [Webhook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
+             *
+             * _Required_: no
+             *
+             * _Type_: Boolean
+             */
+            val webhook: Boolean? = null
     )
 
     class Source(

@@ -172,6 +172,38 @@ class AWSDynamoDBTable(logicalId: String) : Resource<AWSDynamoDBTable.Properties
         }
         
         /**
+         * [sSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: SSESpecification
+         */
+        @JvmField
+        var sSESpecification: Any? = null
+
+        /**
+         * [sSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: SSESpecification
+         */
+        fun sSESpecification(value: SSESpecification) {
+          this.sSESpecification = value
+        }
+        
+        /**
+         * [sSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: SSESpecification
+         */
+        fun sSESpecification(value: IntrinsicFunction) {
+          this.sSESpecification = value
+        }
+        
+        /**
          * [streamSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification)
          *
          * _Required_: no
@@ -445,6 +477,17 @@ class AWSDynamoDBTable(logicalId: String) : Resource<AWSDynamoDBTable.Properties
              * _Type_: Long
              */
             val writeCapacityUnits: Long
+    )
+
+    class SSESpecification(
+            /**
+             * [SSEEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled)
+             *
+             * _Required_: yes
+             *
+             * _Type_: Boolean
+             */
+            val sSEEnabled: Boolean
     )
 
     class StreamSpecification(

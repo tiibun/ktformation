@@ -396,6 +396,14 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
              */
             val subnetId: String? = null,
             /**
+             * [TagSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)
+             *
+             * _Required_: no
+             *
+             * _Type_: List<SpotFleetTagSpecification>
+             */
+            val tagSpecifications: List<SpotFleetTagSpecification>? = null,
+            /**
              * [UserData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata)
              *
              * _Required_: no
@@ -513,6 +521,17 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
              * _Type_: String
              */
             val validUntil: String? = null
+    )
+
+    class SpotFleetTagSpecification(
+            /**
+             * [ResourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val resourceType: String? = null
     )
 
     class SpotPlacement(

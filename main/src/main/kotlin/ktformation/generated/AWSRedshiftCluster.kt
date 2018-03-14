@@ -108,6 +108,38 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         }
         
         /**
+         * [clusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusteridentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var clusterIdentifier: Any? = null
+
+        /**
+         * [clusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusteridentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clusterIdentifier(value: String) {
+          this.clusterIdentifier = value
+        }
+        
+        /**
+         * [clusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusteridentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clusterIdentifier(value: IntrinsicFunction) {
+          this.clusterIdentifier = value
+        }
+        
+        /**
          * [clusterParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusterparametergroupname)
          *
          * _Required_: no

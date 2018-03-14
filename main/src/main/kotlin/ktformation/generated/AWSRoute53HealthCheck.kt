@@ -194,6 +194,14 @@ class AWSRoute53HealthCheck(logicalId: String) : Resource<AWSRoute53HealthCheck.
              */
             val port: Int? = null,
             /**
+             * [Regions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-regions)
+             *
+             * _Required_: no
+             *
+             * _Type_: List<String>
+             */
+            val regions: List<String>? = null,
+            /**
              * [RequestInterval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-requestinterval)
              *
              * _Required_: no

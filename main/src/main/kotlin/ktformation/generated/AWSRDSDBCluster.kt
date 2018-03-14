@@ -76,6 +76,38 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         }
         
         /**
+         * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusteridentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var dBClusterIdentifier: Any? = null
+
+        /**
+         * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusteridentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun dBClusterIdentifier(value: String) {
+          this.dBClusterIdentifier = value
+        }
+        
+        /**
+         * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusteridentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun dBClusterIdentifier(value: IntrinsicFunction) {
+          this.dBClusterIdentifier = value
+        }
+        
+        /**
          * [dBClusterParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname)
          *
          * _Required_: no

@@ -438,6 +438,14 @@ class AWSApplicationAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAp
              */
             val customizedMetricSpecification: CustomizedMetricSpecification? = null,
             /**
+             * [DisableScaleIn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-disablescalein)
+             *
+             * _Required_: no
+             *
+             * _Type_: Boolean
+             */
+            val disableScaleIn: Boolean? = null,
+            /**
              * [PredefinedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-predefinedmetricspecification)
              *
              * _Required_: no
