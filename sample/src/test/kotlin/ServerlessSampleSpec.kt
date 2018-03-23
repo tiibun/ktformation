@@ -110,10 +110,10 @@ object ServerlessSampleSpec : Spek({
                 }
             }
             assertEquals(
-                    File("sample/src/test/resources/serverless_sample.json").readText(),
+                    ServerlessSampleSpec::class.java.getResource("serverless_sample.json").readText(),
                     template.toJSON(true))
             assertEquals(
-                    File("sample/src/test/resources/serverless_sample.yaml").readText(),
+                    ServerlessSampleSpec::class.java.getResource("serverless_sample.yaml").readText(),
                     template.toYAML(true))
         }
     }

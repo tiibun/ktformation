@@ -306,10 +306,10 @@ object EcsSampleSpec : Spek({
                 }
             }
             assertEquals(
-                    File("sample/src/test/resources/esc_sample.json").readText(),
+                    EcsSampleSpec::class.java.getResource("esc_sample.json").readText(),
                     template.toJSON(true))
             assertEquals(
-                    File("sample/src/test/resources/esc_sample.yaml").readText(),
+                    EcsSampleSpec::class.java.getResource("esc_sample.yaml").readText(),
                     template.toYAML(true))
         }
     }
