@@ -3,6 +3,7 @@ apply plugin: 'application'
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-script-util'
     compile 'com.google.code.gson:gson:2.8.2'
+    runtime 'org.jetbrains.kotlin:kotlin-compiler-embeddable'
 }
 
 mainClassName = 'ktformation.generate.MainKt'
