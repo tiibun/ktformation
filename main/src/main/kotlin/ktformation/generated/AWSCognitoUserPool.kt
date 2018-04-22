@@ -523,6 +523,38 @@ class AWSCognitoUserPool(logicalId: String) : Resource<AWSCognitoUserPool.Proper
           this.userPoolTags = value
         }
         
+        /**
+         * [usernameAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameattributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        @JvmField
+        var usernameAttributes: Any? = null
+
+        /**
+         * [usernameAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameattributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun usernameAttributes(value: List<String>) {
+          this.usernameAttributes = value
+        }
+        
+        /**
+         * [usernameAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameattributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun usernameAttributes(vararg value: IntrinsicFunction) {
+          this.usernameAttributes = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
