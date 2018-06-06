@@ -140,6 +140,38 @@ class AWSDynamoDBTable(logicalId: String) : Resource<AWSDynamoDBTable.Properties
         }
         
         /**
+         * [pointInTimeRecoverySpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: PointInTimeRecoverySpecification
+         */
+        @JvmField
+        var pointInTimeRecoverySpecification: Any? = null
+
+        /**
+         * [pointInTimeRecoverySpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: PointInTimeRecoverySpecification
+         */
+        fun pointInTimeRecoverySpecification(value: PointInTimeRecoverySpecification) {
+          this.pointInTimeRecoverySpecification = value
+        }
+        
+        /**
+         * [pointInTimeRecoverySpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: PointInTimeRecoverySpecification
+         */
+        fun pointInTimeRecoverySpecification(value: IntrinsicFunction) {
+          this.pointInTimeRecoverySpecification = value
+        }
+        
+        /**
          * [provisionedThroughput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput)
          *
          * _Required_: yes
@@ -439,6 +471,17 @@ class AWSDynamoDBTable(logicalId: String) : Resource<AWSDynamoDBTable.Properties
              * _Type_: Projection
              */
             val projection: Projection
+    )
+
+    class PointInTimeRecoverySpecification(
+            /**
+             * [PointInTimeRecoveryEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled)
+             *
+             * _Required_: no
+             *
+             * _Type_: Boolean
+             */
+            val pointInTimeRecoveryEnabled: Boolean? = null
     )
 
     class Projection(

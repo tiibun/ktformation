@@ -46,7 +46,7 @@ class AWSBatchComputeEnvironment(logicalId: String) : Resource<AWSBatchComputeEn
         /**
          * [computeResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeresources)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: ComputeResources
          */
@@ -56,7 +56,7 @@ class AWSBatchComputeEnvironment(logicalId: String) : Resource<AWSBatchComputeEn
         /**
          * [computeResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeresources)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: ComputeResources
          */
@@ -67,7 +67,7 @@ class AWSBatchComputeEnvironment(logicalId: String) : Resource<AWSBatchComputeEn
         /**
          * [computeResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeresources)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: ComputeResources
          */

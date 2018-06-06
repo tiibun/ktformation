@@ -139,6 +139,38 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
           this.tags = value
         }
         
+        /**
+         * [validationMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var validationMethod: Any? = null
+
+        /**
+         * [validationMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun validationMethod(value: String) {
+          this.validationMethod = value
+        }
+        
+        /**
+         * [validationMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun validationMethod(value: IntrinsicFunction) {
+          this.validationMethod = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

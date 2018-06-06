@@ -396,6 +396,38 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         }
         
         /**
+         * [launchConfigurationName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var launchConfigurationName: Any? = null
+
+        /**
+         * [launchConfigurationName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchConfigurationName(value: String) {
+          this.launchConfigurationName = value
+        }
+        
+        /**
+         * [launchConfigurationName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchConfigurationName(value: IntrinsicFunction) {
+          this.launchConfigurationName = value
+        }
+        
+        /**
          * [placementTenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-placementtenancy)
          *
          * _Required_: no

@@ -108,6 +108,38 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
         }
         
         /**
+         * [openIDConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: OpenIDConnectConfig
+         */
+        @JvmField
+        var openIDConnectConfig: Any? = null
+
+        /**
+         * [openIDConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: OpenIDConnectConfig
+         */
+        fun openIDConnectConfig(value: OpenIDConnectConfig) {
+          this.openIDConnectConfig = value
+        }
+        
+        /**
+         * [openIDConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: OpenIDConnectConfig
+         */
+        fun openIDConnectConfig(value: IntrinsicFunction) {
+          this.openIDConnectConfig = value
+        }
+        
+        /**
          * [userPoolConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig)
          *
          * _Required_: no
@@ -166,6 +198,41 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
              * _Type_: String
              */
             val fieldLogLevel: String? = null
+    )
+
+    class OpenIDConnectConfig(
+            /**
+             * [AuthTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
+             *
+             * _Required_: no
+             *
+             * _Type_: Double
+             */
+            val authTTL: Double? = null,
+            /**
+             * [ClientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val clientId: String? = null,
+            /**
+             * [IatTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
+             *
+             * _Required_: no
+             *
+             * _Type_: Double
+             */
+            val iatTTL: Double? = null,
+            /**
+             * [Issuer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val issuer: String? = null
     )
 
     class UserPoolConfig(

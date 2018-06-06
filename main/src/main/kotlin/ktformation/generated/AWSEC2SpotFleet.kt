@@ -139,33 +139,6 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
             val volumeType: String? = null
     )
 
-    class FleetLaunchTemplateSpecification(
-            /**
-             * [LaunchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val launchTemplateId: String? = null,
-            /**
-             * [LaunchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val launchTemplateName: String? = null,
-            /**
-             * [Version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val version: String? = null
-    )
-
     class GroupIdentifier(
             /**
              * [GroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid)
@@ -288,68 +261,6 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
              * _Type_: String
              */
             val subnetId: String? = null
-    )
-
-    class LaunchTemplateConfig(
-            /**
-             * [LaunchTemplateSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)
-             *
-             * _Required_: no
-             *
-             * _Type_: FleetLaunchTemplateSpecification
-             */
-            val launchTemplateSpecification: FleetLaunchTemplateSpecification? = null,
-            /**
-             * [Overrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-overrides)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<LaunchTemplateOverrides>
-             */
-            val overrides: List<LaunchTemplateOverrides>? = null
-    )
-
-    class LaunchTemplateOverrides(
-            /**
-             * [AvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val availabilityZone: String? = null,
-            /**
-             * [InstanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val instanceType: String? = null,
-            /**
-             * [SpotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val spotPrice: String? = null,
-            /**
-             * [SubnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val subnetId: String? = null,
-            /**
-             * [WeightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val weightedCapacity: Double? = null
     )
 
     class PrivateIpAddressSpecification(
@@ -554,14 +465,6 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
              * _Type_: List<SpotFleetLaunchSpecification>
              */
             val launchSpecifications: List<SpotFleetLaunchSpecification>? = null,
-            /**
-             * [LaunchTemplateConfigs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<LaunchTemplateConfig>
-             */
-            val launchTemplateConfigs: List<LaunchTemplateConfig>? = null,
             /**
              * [ReplaceUnhealthyInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)
              *

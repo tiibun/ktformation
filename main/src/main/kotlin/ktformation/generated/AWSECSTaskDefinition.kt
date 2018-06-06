@@ -431,6 +431,14 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
              */
             val extraHosts: List<HostEntry>? = null,
             /**
+             * [HealthCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-healthcheck)
+             *
+             * _Required_: no
+             *
+             * _Type_: HealthCheck
+             */
+            val healthCheck: HealthCheck? = null,
+            /**
              * [Hostname](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-hostname)
              *
              * _Required_: no
@@ -585,6 +593,49 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
              * _Type_: List<String>
              */
             val permissions: List<String>? = null
+    )
+
+    class HealthCheck(
+            /**
+             * [Command](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
+             *
+             * _Required_: yes
+             *
+             * _Type_: List<String>
+             */
+            val command: List<String>,
+            /**
+             * [Interval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val interval: Int? = null,
+            /**
+             * [Retries](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val retries: Int? = null,
+            /**
+             * [StartPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val startPeriod: Int? = null,
+            /**
+             * [Timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val timeout: Int? = null
     )
 
     class HostEntry(

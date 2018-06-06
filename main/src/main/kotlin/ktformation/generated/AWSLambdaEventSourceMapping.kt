@@ -142,7 +142,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         /**
          * [startingPosition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -152,7 +152,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         /**
          * [startingPosition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -163,7 +163,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         /**
          * [startingPosition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */

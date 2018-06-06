@@ -352,6 +352,38 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
           this.parameters = value
         }
         
+        /**
+         * [policy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-policy)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        @JvmField
+        var policy: Any? = null
+
+        /**
+         * [policy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-policy)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun policy(value: Json) {
+          this.policy = value
+        }
+        
+        /**
+         * [policy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-policy)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun policy(value: IntrinsicFunction) {
+          this.policy = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -235,6 +235,38 @@ class AWSKinesisFirehoseDeliveryStream(logicalId: String) : Resource<AWSKinesisF
           this.s3DestinationConfiguration = value
         }
         
+        /**
+         * [splunkDestinationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: SplunkDestinationConfiguration
+         */
+        @JvmField
+        var splunkDestinationConfiguration: Any? = null
+
+        /**
+         * [splunkDestinationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: SplunkDestinationConfiguration
+         */
+        fun splunkDestinationConfiguration(value: SplunkDestinationConfiguration) {
+          this.splunkDestinationConfiguration = value
+        }
+        
+        /**
+         * [splunkDestinationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: SplunkDestinationConfiguration
+         */
+        fun splunkDestinationConfiguration(value: IntrinsicFunction) {
+          this.splunkDestinationConfiguration = value
+        }
+        
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -575,19 +607,19 @@ class AWSKinesisFirehoseDeliveryStream(logicalId: String) : Resource<AWSKinesisF
             /**
              * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled)
              *
-             * _Required_: yes
+             * _Required_: no
              *
              * _Type_: Boolean
              */
-            val enabled: Boolean,
+            val enabled: Boolean? = null,
             /**
              * [Processors](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors)
              *
-             * _Required_: yes
+             * _Required_: no
              *
              * _Type_: List<Processor>
              */
-            val processors: List<Processor>
+            val processors: List<Processor>? = null
     )
 
     class Processor(
@@ -752,6 +784,92 @@ class AWSKinesisFirehoseDeliveryStream(logicalId: String) : Resource<AWSKinesisF
              * _Type_: String
              */
             val roleARN: String
+    )
+
+    class SplunkDestinationConfiguration(
+            /**
+             * [CloudWatchLoggingOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions)
+             *
+             * _Required_: no
+             *
+             * _Type_: CloudWatchLoggingOptions
+             */
+            val cloudWatchLoggingOptions: CloudWatchLoggingOptions? = null,
+            /**
+             * [HECAcknowledgmentTimeoutInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val hECAcknowledgmentTimeoutInSeconds: Int? = null,
+            /**
+             * [HECEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpoint)
+             *
+             * _Required_: yes
+             *
+             * _Type_: String
+             */
+            val hECEndpoint: String,
+            /**
+             * [HECEndpointType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype)
+             *
+             * _Required_: yes
+             *
+             * _Type_: String
+             */
+            val hECEndpointType: String,
+            /**
+             * [HECToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hectoken)
+             *
+             * _Required_: yes
+             *
+             * _Type_: String
+             */
+            val hECToken: String,
+            /**
+             * [ProcessingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration)
+             *
+             * _Required_: no
+             *
+             * _Type_: ProcessingConfiguration
+             */
+            val processingConfiguration: ProcessingConfiguration? = null,
+            /**
+             * [RetryOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions)
+             *
+             * _Required_: no
+             *
+             * _Type_: SplunkRetryOptions
+             */
+            val retryOptions: SplunkRetryOptions? = null,
+            /**
+             * [S3BackupMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val s3BackupMode: String? = null,
+            /**
+             * [S3Configuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration)
+             *
+             * _Required_: yes
+             *
+             * _Type_: S3DestinationConfiguration
+             */
+            val s3Configuration: S3DestinationConfiguration
+    )
+
+    class SplunkRetryOptions(
+            /**
+             * [DurationInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.html#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds)
+             *
+             * _Required_: yes
+             *
+             * _Type_: Int
+             */
+            val durationInSeconds: Int
     )
 
 }

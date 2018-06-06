@@ -46,7 +46,7 @@ class AWSGuardDutyMaster(logicalId: String) : Resource<AWSGuardDutyMaster.Proper
         /**
          * [invitationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -56,7 +56,7 @@ class AWSGuardDutyMaster(logicalId: String) : Resource<AWSGuardDutyMaster.Proper
         /**
          * [invitationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -67,7 +67,7 @@ class AWSGuardDutyMaster(logicalId: String) : Resource<AWSGuardDutyMaster.Proper
         /**
          * [invitationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */

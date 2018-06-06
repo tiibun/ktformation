@@ -140,6 +140,38 @@ class AWSBatchJobDefinition(logicalId: String) : Resource<AWSBatchJobDefinition.
         }
         
         /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Timeout
+         */
+        @JvmField
+        var timeout: Any? = null
+
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Timeout
+         */
+        fun timeout(value: Timeout) {
+          this.timeout = value
+        }
+        
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Timeout
+         */
+        fun timeout(value: IntrinsicFunction) {
+          this.timeout = value
+        }
+        
+        /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type)
          *
          * _Required_: yes
@@ -335,6 +367,17 @@ class AWSBatchJobDefinition(logicalId: String) : Resource<AWSBatchJobDefinition.
              * _Type_: Int
              */
             val attempts: Int? = null
+    )
+
+    class Timeout(
+            /**
+             * [AttemptDurationSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html#cfn-batch-jobdefinition-timeout-attemptdurationseconds)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val attemptDurationSeconds: Int? = null
     )
 
     class Ulimit(

@@ -396,6 +396,38 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         }
         
         /**
+         * [serviceRegistries](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<ServiceRegistry>
+         */
+        @JvmField
+        var serviceRegistries: Any? = null
+
+        /**
+         * [serviceRegistries](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<ServiceRegistry>
+         */
+        fun serviceRegistries(value: List<ServiceRegistry>) {
+          this.serviceRegistries = value
+        }
+        
+        /**
+         * [serviceRegistries](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<ServiceRegistry>
+         */
+        fun serviceRegistries(vararg value: IntrinsicFunction) {
+          this.serviceRegistries = value
+        }
+        
+        /**
          * [taskDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition)
          *
          * _Required_: yes
@@ -565,6 +597,25 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
              * _Type_: String
              */
             val type: String
+    )
+
+    class ServiceRegistry(
+            /**
+             * [Port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port)
+             *
+             * _Required_: no
+             *
+             * _Type_: Int
+             */
+            val port: Int? = null,
+            /**
+             * [RegistryArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val registryArn: String? = null
     )
 
 }

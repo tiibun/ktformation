@@ -193,6 +193,38 @@ class AWSElasticsearchDomain(logicalId: String) : Resource<AWSElasticsearchDomai
         }
         
         /**
+         * [encryptionAtRestOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-encryptionatrestoptions)
+         *
+         * _Required_: no
+         *
+         * _Type_: EncryptionAtRestOptions
+         */
+        @JvmField
+        var encryptionAtRestOptions: Any? = null
+
+        /**
+         * [encryptionAtRestOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-encryptionatrestoptions)
+         *
+         * _Required_: no
+         *
+         * _Type_: EncryptionAtRestOptions
+         */
+        fun encryptionAtRestOptions(value: EncryptionAtRestOptions) {
+          this.encryptionAtRestOptions = value
+        }
+        
+        /**
+         * [encryptionAtRestOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-encryptionatrestoptions)
+         *
+         * _Required_: no
+         *
+         * _Type_: EncryptionAtRestOptions
+         */
+        fun encryptionAtRestOptions(value: IntrinsicFunction) {
+          this.encryptionAtRestOptions = value
+        }
+        
+        /**
          * [snapshotOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-snapshotoptions)
          *
          * _Required_: no
@@ -382,6 +414,25 @@ class AWSElasticsearchDomain(logicalId: String) : Resource<AWSElasticsearchDomai
              * _Type_: Boolean
              */
             val zoneAwarenessEnabled: Boolean? = null
+    )
+
+    class EncryptionAtRestOptions(
+            /**
+             * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-enabled)
+             *
+             * _Required_: no
+             *
+             * _Type_: Boolean
+             */
+            val enabled: Boolean? = null,
+            /**
+             * [KmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val kmsKeyId: String? = null
     )
 
     class SnapshotOptions(

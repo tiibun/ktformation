@@ -44,6 +44,38 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         }
         
         /**
+         * [edition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var edition: Any? = null
+
+        /**
+         * [edition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun edition(value: String) {
+          this.edition = value
+        }
+        
+        /**
+         * [edition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun edition(value: IntrinsicFunction) {
+          this.edition = value
+        }
+        
+        /**
          * [enableSso](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-enablesso)
          *
          * _Required_: no

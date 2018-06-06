@@ -119,6 +119,14 @@ class AWSLogsMetricFilter(logicalId: String) : Resource<AWSLogsMetricFilter.Prop
 
     class MetricTransformation(
             /**
+             * [DefaultValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-defaultvalue)
+             *
+             * _Required_: no
+             *
+             * _Type_: Double
+             */
+            val defaultValue: Double? = null,
+            /**
              * [MetricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricname)
              *
              * _Required_: yes

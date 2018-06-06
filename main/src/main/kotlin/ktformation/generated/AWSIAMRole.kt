@@ -76,6 +76,38 @@ class AWSIAMRole(logicalId: String) : Resource<AWSIAMRole.Properties>(logicalId,
         }
         
         /**
+         * [maxSessionDuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        @JvmField
+        var maxSessionDuration: Any? = null
+
+        /**
+         * [maxSessionDuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxSessionDuration(value: Int) {
+          this.maxSessionDuration = value
+        }
+        
+        /**
+         * [maxSessionDuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxSessionDuration(value: IntrinsicFunction) {
+          this.maxSessionDuration = value
+        }
+        
+        /**
          * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-path)
          *
          * _Required_: no

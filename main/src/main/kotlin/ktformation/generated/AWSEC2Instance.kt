@@ -334,7 +334,7 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
         /**
          * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-imageid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -344,7 +344,7 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
         /**
          * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-imageid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -355,7 +355,7 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
         /**
          * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-imageid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -553,6 +553,38 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
          */
         fun keyName(value: IntrinsicFunction) {
           this.keyName = value
+        }
+        
+        /**
+         * [launchTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-launchtemplate)
+         *
+         * _Required_: no
+         *
+         * _Type_: LaunchTemplateSpecification
+         */
+        @JvmField
+        var launchTemplate: Any? = null
+
+        /**
+         * [launchTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-launchtemplate)
+         *
+         * _Required_: no
+         *
+         * _Type_: LaunchTemplateSpecification
+         */
+        fun launchTemplate(value: LaunchTemplateSpecification) {
+          this.launchTemplate = value
+        }
+        
+        /**
+         * [launchTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-launchtemplate)
+         *
+         * _Required_: no
+         *
+         * _Type_: LaunchTemplateSpecification
+         */
+        fun launchTemplate(value: IntrinsicFunction) {
+          this.launchTemplate = value
         }
         
         /**
@@ -1149,6 +1181,33 @@ class AWSEC2Instance(logicalId: String) : Resource<AWSEC2Instance.Properties>(lo
              * _Type_: String
              */
             val ipv6Address: String
+    )
+
+    class LaunchTemplateSpecification(
+            /**
+             * [LaunchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val launchTemplateId: String? = null,
+            /**
+             * [LaunchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val launchTemplateName: String? = null,
+            /**
+             * [Version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
+             *
+             * _Required_: yes
+             *
+             * _Type_: String
+             */
+            val version: String
     )
 
     class NetworkInterface(

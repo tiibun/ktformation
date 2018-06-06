@@ -492,6 +492,38 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         }
         
         /**
+         * [serviceLinkedRoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var serviceLinkedRoleARN: Any? = null
+
+        /**
+         * [serviceLinkedRoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceLinkedRoleARN(value: String) {
+          this.serviceLinkedRoleARN = value
+        }
+        
+        /**
+         * [serviceLinkedRoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceLinkedRoleARN(value: IntrinsicFunction) {
+          this.serviceLinkedRoleARN = value
+        }
+        
+        /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-tags)
          *
          * _Required_: no

@@ -44,6 +44,38 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         }
         
         /**
+         * [disableEmailNotification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-disableemailnotification)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        @JvmField
+        var disableEmailNotification: Any? = null
+
+        /**
+         * [disableEmailNotification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-disableemailnotification)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun disableEmailNotification(value: Boolean) {
+          this.disableEmailNotification = value
+        }
+        
+        /**
+         * [disableEmailNotification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-disableemailnotification)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun disableEmailNotification(value: IntrinsicFunction) {
+          this.disableEmailNotification = value
+        }
+        
+        /**
          * [email](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-email)
          *
          * _Required_: yes

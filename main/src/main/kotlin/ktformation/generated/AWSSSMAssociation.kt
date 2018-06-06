@@ -140,6 +140,38 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
         }
         
         /**
+         * [outputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-outputlocation)
+         *
+         * _Required_: no
+         *
+         * _Type_: InstanceAssociationOutputLocation
+         */
+        @JvmField
+        var outputLocation: Any? = null
+
+        /**
+         * [outputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-outputlocation)
+         *
+         * _Required_: no
+         *
+         * _Type_: InstanceAssociationOutputLocation
+         */
+        fun outputLocation(value: InstanceAssociationOutputLocation) {
+          this.outputLocation = value
+        }
+        
+        /**
+         * [outputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-outputlocation)
+         *
+         * _Required_: no
+         *
+         * _Type_: InstanceAssociationOutputLocation
+         */
+        fun outputLocation(value: IntrinsicFunction) {
+          this.outputLocation = value
+        }
+        
+        /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters)
          *
          * _Required_: no
@@ -234,6 +266,17 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
     }
 
 
+    class InstanceAssociationOutputLocation(
+            /**
+             * [S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html#cfn-ssm-association-instanceassociationoutputlocation-s3location)
+             *
+             * _Required_: no
+             *
+             * _Type_: S3OutputLocation
+             */
+            val s3Location: S3OutputLocation? = null
+    )
+
     class ParameterValues(
             /**
              * [ParameterValues](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html#cfn-ssm-association-parametervalues-parametervalues)
@@ -243,6 +286,25 @@ class AWSSSMAssociation(logicalId: String) : Resource<AWSSSMAssociation.Properti
              * _Type_: List<String>
              */
             val parameterValues: List<String>
+    )
+
+    class S3OutputLocation(
+            /**
+             * [OutputS3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val outputS3BucketName: String? = null,
+            /**
+             * [OutputS3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val outputS3KeyPrefix: String? = null
     )
 
     class Target(
