@@ -1,6 +1,19 @@
+.DS_Store
 
+/.gitignore
 /.gradle
-build
+/build
+/generate/bin
+/generate/build
+/main/bin
+/main/build
+/main/out
+/sample/bin
+/sample/build
+/sample/out
 
-.*
-!.gitignore
+.classpath
+.project
+.settings
+/.idea
+/.vscode

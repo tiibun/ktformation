@@ -490,6 +490,14 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
 
     class Environment(
             /**
+             * [Certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val certificate: String? = null,
+            /**
              * [ComputeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-computetype)
              *
              * _Required_: yes
@@ -629,6 +637,14 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
              * _Type_: String
              */
             val location: String? = null,
+            /**
+             * [ReportBuildStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-reportbuildstatus)
+             *
+             * _Required_: no
+             *
+             * _Type_: Boolean
+             */
+            val reportBuildStatus: Boolean? = null,
             /**
              * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-type)
              *

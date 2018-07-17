@@ -12,6 +12,38 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties() {
         /**
+         * [isPrivateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        @JvmField
+        var isPrivateDnsEnabled: Any? = null
+
+        /**
+         * [isPrivateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun isPrivateDnsEnabled(value: Boolean) {
+          this.isPrivateDnsEnabled = value
+        }
+        
+        /**
+         * [isPrivateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun isPrivateDnsEnabled(value: IntrinsicFunction) {
+          this.isPrivateDnsEnabled = value
+        }
+        
+        /**
          * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument)
          *
          * _Required_: no
@@ -76,6 +108,38 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         }
         
         /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        @JvmField
+        var securityGroupIds: Any? = null
+
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(value: List<String>) {
+          this.securityGroupIds = value
+        }
+        
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(vararg value: IntrinsicFunction) {
+          this.securityGroupIds = value
+        }
+        
+        /**
          * [serviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename)
          *
          * _Required_: yes
@@ -105,6 +169,70 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
          */
         fun serviceName(value: IntrinsicFunction) {
           this.serviceName = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        @JvmField
+        var subnetIds: Any? = null
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(value: List<String>) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(vararg value: IntrinsicFunction) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [vPCEndpointType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var vPCEndpointType: Any? = null
+
+        /**
+         * [vPCEndpointType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun vPCEndpointType(value: String) {
+          this.vPCEndpointType = value
+        }
+        
+        /**
+         * [vPCEndpointType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun vPCEndpointType(value: IntrinsicFunction) {
+          this.vPCEndpointType = value
         }
         
         /**

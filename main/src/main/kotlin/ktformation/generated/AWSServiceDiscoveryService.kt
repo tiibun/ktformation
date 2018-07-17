@@ -108,6 +108,38 @@ class AWSServiceDiscoveryService(logicalId: String) : Resource<AWSServiceDiscove
         }
         
         /**
+         * [healthCheckCustomConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckcustomconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: HealthCheckCustomConfig
+         */
+        @JvmField
+        var healthCheckCustomConfig: Any? = null
+
+        /**
+         * [healthCheckCustomConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckcustomconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: HealthCheckCustomConfig
+         */
+        fun healthCheckCustomConfig(value: HealthCheckCustomConfig) {
+          this.healthCheckCustomConfig = value
+        }
+        
+        /**
+         * [healthCheckCustomConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckcustomconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: HealthCheckCustomConfig
+         */
+        fun healthCheckCustomConfig(value: IntrinsicFunction) {
+          this.healthCheckCustomConfig = value
+        }
+        
+        /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-name)
          *
          * _Required_: no
@@ -165,7 +197,15 @@ class AWSServiceDiscoveryService(logicalId: String) : Resource<AWSServiceDiscove
              *
              * _Type_: String
              */
-            val namespaceId: String
+            val namespaceId: String,
+            /**
+             * [RoutingPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsconfig.html#cfn-servicediscovery-service-dnsconfig-routingpolicy)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val routingPolicy: String? = null
     )
 
     class DnsRecord(
@@ -212,6 +252,17 @@ class AWSServiceDiscoveryService(logicalId: String) : Resource<AWSServiceDiscove
              * _Type_: String
              */
             val type: String
+    )
+
+    class HealthCheckCustomConfig(
+            /**
+             * [FailureThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold)
+             *
+             * _Required_: no
+             *
+             * _Type_: Double
+             */
+            val failureThreshold: Double? = null
     )
 
 }

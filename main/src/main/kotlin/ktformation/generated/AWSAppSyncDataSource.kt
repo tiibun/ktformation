@@ -140,6 +140,38 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         }
         
         /**
+         * [httpConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-httpconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: HttpConfig
+         */
+        @JvmField
+        var httpConfig: Any? = null
+
+        /**
+         * [httpConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-httpconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: HttpConfig
+         */
+        fun httpConfig(value: HttpConfig) {
+          this.httpConfig = value
+        }
+        
+        /**
+         * [httpConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-httpconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: HttpConfig
+         */
+        fun httpConfig(value: IntrinsicFunction) {
+          this.httpConfig = value
+        }
+        
+        /**
          * [lambdaConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-lambdaconfig)
          *
          * _Required_: no
@@ -315,6 +347,17 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
             val awsRegion: String,
             /**
              * [Endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
+             *
+             * _Required_: yes
+             *
+             * _Type_: String
+             */
+            val endpoint: String
+    )
+
+    class HttpConfig(
+            /**
+             * [Endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
              *
              * _Required_: yes
              *

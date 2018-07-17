@@ -119,6 +119,14 @@ class AWSCloudFrontDistribution(logicalId: String) : Resource<AWSCloudFrontDistr
              */
             val defaultTTL: Double? = null,
             /**
+             * [FieldLevelEncryptionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val fieldLevelEncryptionId: String? = null,
+            /**
              * [ForwardedValues](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-forwardedvalues)
              *
              * _Required_: yes
@@ -330,6 +338,14 @@ class AWSCloudFrontDistribution(logicalId: String) : Resource<AWSCloudFrontDistr
              * _Type_: Double
              */
             val defaultTTL: Double? = null,
+            /**
+             * [FieldLevelEncryptionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid)
+             *
+             * _Required_: no
+             *
+             * _Type_: String
+             */
+            val fieldLevelEncryptionId: String? = null,
             /**
              * [ForwardedValues](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues)
              *
