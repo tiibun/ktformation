@@ -42,7 +42,7 @@ class AWSIoTCertificate(logicalId: String) : Resource<AWSIoTCertificate.Properti
         fun certificateSigningRequest(value: IntrinsicFunction) {
           this.certificateSigningRequest = value
         }
-        
+
         /**
          * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-status)
          *
@@ -74,7 +74,8 @@ class AWSIoTCertificate(logicalId: String) : Resource<AWSIoTCertificate.Properti
         fun status(value: IntrinsicFunction) {
           this.status = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

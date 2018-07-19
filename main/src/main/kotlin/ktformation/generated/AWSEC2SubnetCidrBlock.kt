@@ -42,7 +42,7 @@ class AWSEC2SubnetCidrBlock(logicalId: String) : Resource<AWSEC2SubnetCidrBlock.
         fun ipv6CidrBlock(value: IntrinsicFunction) {
           this.ipv6CidrBlock = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-subnetid)
          *
@@ -74,7 +74,8 @@ class AWSEC2SubnetCidrBlock(logicalId: String) : Resource<AWSEC2SubnetCidrBlock.
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSIoTPolicy(logicalId: String) : Resource<AWSIoTPolicy.Properties>(logica
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
         /**
          * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policyname)
          *
@@ -74,7 +74,8 @@ class AWSIoTPolicy(logicalId: String) : Resource<AWSIoTPolicy.Properties>(logica
         fun policyName(value: IntrinsicFunction) {
           this.policyName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

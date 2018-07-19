@@ -42,7 +42,7 @@ class AWSElasticBeanstalkApplication(logicalId: String) : Resource<AWSElasticBea
         fun applicationName(value: IntrinsicFunction) {
           this.applicationName = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html#cfn-elasticbeanstalk-application-description)
          *
@@ -74,7 +74,7 @@ class AWSElasticBeanstalkApplication(logicalId: String) : Resource<AWSElasticBea
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [resourceLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html#cfn-elasticbeanstalk-application-resourcelifecycleconfig)
          *
@@ -106,7 +106,39 @@ class AWSElasticBeanstalkApplication(logicalId: String) : Resource<AWSElasticBea
         fun resourceLifecycleConfig(value: IntrinsicFunction) {
           this.resourceLifecycleConfig = value
         }
-        
+
+        /**
+        * [ApplicationResourceLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html)
+        */
+        fun applicationResourceLifecycleConfig(init: ApplicationResourceLifecycleConfig.() -> Unit = {}): ApplicationResourceLifecycleConfig {
+            return ApplicationResourceLifecycleConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [ApplicationVersionLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
+        */
+        fun applicationVersionLifecycleConfig(init: ApplicationVersionLifecycleConfig.() -> Unit = {}): ApplicationVersionLifecycleConfig {
+            return ApplicationVersionLifecycleConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaxAgeRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html)
+        */
+        fun maxAgeRule(init: MaxAgeRule.() -> Unit = {}): MaxAgeRule {
+            return MaxAgeRule().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaxCountRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html)
+        */
+        fun maxCountRule(init: MaxCountRule.() -> Unit = {}): MaxCountRule {
+            return MaxCountRule().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,97 +149,331 @@ class AWSElasticBeanstalkApplication(logicalId: String) : Resource<AWSElasticBea
     }
 
 
-    class ApplicationResourceLifecycleConfig(
+    @CloudFormationMarker
+    class ApplicationResourceLifecycleConfig {
             /**
-             * [ServiceRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val serviceRole: String? = null,
-            /**
-             * [VersionLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig)
-             *
-             * _Required_: no
-             *
-             * _Type_: ApplicationVersionLifecycleConfig
-             */
-            val versionLifecycleConfig: ApplicationVersionLifecycleConfig? = null
-    )
+         * [serviceRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var serviceRole: Any? = null
 
-    class ApplicationVersionLifecycleConfig(
-            /**
-             * [MaxAgeRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule)
-             *
-             * _Required_: no
-             *
-             * _Type_: MaxAgeRule
-             */
-            val maxAgeRule: MaxAgeRule? = null,
-            /**
-             * [MaxCountRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule)
-             *
-             * _Required_: no
-             *
-             * _Type_: MaxCountRule
-             */
-            val maxCountRule: MaxCountRule? = null
-    )
+        /**
+         * [serviceRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceRole(value: String) {
+          this.serviceRole = value
+        }
+        
+        /**
+         * [serviceRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-servicerole)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceRole(value: IntrinsicFunction) {
+          this.serviceRole = value
+        }
 
-    class MaxAgeRule(
-            /**
-             * [DeleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val deleteSourceFromS3: Boolean? = null,
-            /**
-             * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val enabled: Boolean? = null,
-            /**
-             * [MaxAgeInDays](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val maxAgeInDays: Int? = null
-    )
+        /**
+         * [versionLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: ApplicationVersionLifecycleConfig
+         */
+        var versionLifecycleConfig: Any? = null
 
-    class MaxCountRule(
+        /**
+         * [versionLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: ApplicationVersionLifecycleConfig
+         */
+        fun versionLifecycleConfig(value: ApplicationVersionLifecycleConfig) {
+          this.versionLifecycleConfig = value
+        }
+        
+        /**
+         * [versionLifecycleConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: ApplicationVersionLifecycleConfig
+         */
+        fun versionLifecycleConfig(value: IntrinsicFunction) {
+          this.versionLifecycleConfig = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ApplicationVersionLifecycleConfig {
             /**
-             * [DeleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val deleteSourceFromS3: Boolean? = null,
+         * [maxAgeRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaxAgeRule
+         */
+        var maxAgeRule: Any? = null
+
+        /**
+         * [maxAgeRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaxAgeRule
+         */
+        fun maxAgeRule(value: MaxAgeRule) {
+          this.maxAgeRule = value
+        }
+        
+        /**
+         * [maxAgeRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaxAgeRule
+         */
+        fun maxAgeRule(value: IntrinsicFunction) {
+          this.maxAgeRule = value
+        }
+
+        /**
+         * [maxCountRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaxCountRule
+         */
+        var maxCountRule: Any? = null
+
+        /**
+         * [maxCountRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaxCountRule
+         */
+        fun maxCountRule(value: MaxCountRule) {
+          this.maxCountRule = value
+        }
+        
+        /**
+         * [maxCountRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaxCountRule
+         */
+        fun maxCountRule(value: IntrinsicFunction) {
+          this.maxCountRule = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MaxAgeRule {
             /**
-             * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val enabled: Boolean? = null,
+         * [deleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var deleteSourceFromS3: Any? = null
+
+        /**
+         * [deleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteSourceFromS3(value: Boolean) {
+          this.deleteSourceFromS3 = value
+        }
+        
+        /**
+         * [deleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteSourceFromS3(value: IntrinsicFunction) {
+          this.deleteSourceFromS3 = value
+        }
+
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var enabled: Any? = null
+
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: Boolean) {
+          this.enabled = value
+        }
+        
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: IntrinsicFunction) {
+          this.enabled = value
+        }
+
+        /**
+         * [maxAgeInDays](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var maxAgeInDays: Any? = null
+
+        /**
+         * [maxAgeInDays](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxAgeInDays(value: Int) {
+          this.maxAgeInDays = value
+        }
+        
+        /**
+         * [maxAgeInDays](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxAgeInDays(value: IntrinsicFunction) {
+          this.maxAgeInDays = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MaxCountRule {
             /**
-             * [MaxCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val maxCount: Int? = null
-    )
+         * [deleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var deleteSourceFromS3: Any? = null
+
+        /**
+         * [deleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteSourceFromS3(value: Boolean) {
+          this.deleteSourceFromS3 = value
+        }
+        
+        /**
+         * [deleteSourceFromS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteSourceFromS3(value: IntrinsicFunction) {
+          this.deleteSourceFromS3 = value
+        }
+
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var enabled: Any? = null
+
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: Boolean) {
+          this.enabled = value
+        }
+        
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: IntrinsicFunction) {
+          this.enabled = value
+        }
+
+        /**
+         * [maxCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var maxCount: Any? = null
+
+        /**
+         * [maxCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxCount(value: Int) {
+          this.maxCount = value
+        }
+        
+        /**
+         * [maxCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxCount(value: IntrinsicFunction) {
+          this.maxCount = value
+        }
+
+    }
 
 }
 

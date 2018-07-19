@@ -42,7 +42,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun apiId(value: IntrinsicFunction) {
           this.apiId = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-description)
          *
@@ -74,7 +74,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [dynamoDBConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-dynamodbconfig)
          *
@@ -106,7 +106,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun dynamoDBConfig(value: IntrinsicFunction) {
           this.dynamoDBConfig = value
         }
-        
+
         /**
          * [elasticsearchConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
          *
@@ -138,7 +138,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun elasticsearchConfig(value: IntrinsicFunction) {
           this.elasticsearchConfig = value
         }
-        
+
         /**
          * [httpConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-httpconfig)
          *
@@ -170,7 +170,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun httpConfig(value: IntrinsicFunction) {
           this.httpConfig = value
         }
-        
+
         /**
          * [lambdaConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-lambdaconfig)
          *
@@ -202,7 +202,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun lambdaConfig(value: IntrinsicFunction) {
           this.lambdaConfig = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-name)
          *
@@ -234,7 +234,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [serviceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-servicerolearn)
          *
@@ -266,7 +266,7 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun serviceRoleArn(value: IntrinsicFunction) {
           this.serviceRoleArn = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-type)
          *
@@ -298,7 +298,39 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
+        /**
+        * [DynamoDBConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html)
+        */
+        fun dynamoDBConfig(init: DynamoDBConfig.() -> Unit = {}): DynamoDBConfig {
+            return DynamoDBConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [ElasticsearchConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html)
+        */
+        fun elasticsearchConfig(init: ElasticsearchConfig.() -> Unit = {}): ElasticsearchConfig {
+            return ElasticsearchConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [HttpConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html)
+        */
+        fun httpConfig(init: HttpConfig.() -> Unit = {}): HttpConfig {
+            return HttpConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [LambdaConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-lambdaconfig.html)
+        */
+        fun lambdaConfig(init: LambdaConfig.() -> Unit = {}): LambdaConfig {
+            return LambdaConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -309,73 +341,238 @@ class AWSAppSyncDataSource(logicalId: String) : Resource<AWSAppSyncDataSource.Pr
     }
 
 
-    class DynamoDBConfig(
+    @CloudFormationMarker
+    class DynamoDBConfig {
             /**
-             * [AwsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val awsRegion: String,
-            /**
-             * [TableName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val tableName: String,
-            /**
-             * [UseCallerCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val useCallerCredentials: Boolean? = null
-    )
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var awsRegion: Any? = null
 
-    class ElasticsearchConfig(
-            /**
-             * [AwsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val awsRegion: String,
-            /**
-             * [Endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val endpoint: String
-    )
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun awsRegion(value: String) {
+          this.awsRegion = value
+        }
+        
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun awsRegion(value: IntrinsicFunction) {
+          this.awsRegion = value
+        }
 
-    class HttpConfig(
-            /**
-             * [Endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val endpoint: String
-    )
+        /**
+         * [tableName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var tableName: Any? = null
 
-    class LambdaConfig(
+        /**
+         * [tableName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun tableName(value: String) {
+          this.tableName = value
+        }
+        
+        /**
+         * [tableName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun tableName(value: IntrinsicFunction) {
+          this.tableName = value
+        }
+
+        /**
+         * [useCallerCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var useCallerCredentials: Any? = null
+
+        /**
+         * [useCallerCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun useCallerCredentials(value: Boolean) {
+          this.useCallerCredentials = value
+        }
+        
+        /**
+         * [useCallerCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun useCallerCredentials(value: IntrinsicFunction) {
+          this.useCallerCredentials = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ElasticsearchConfig {
             /**
-             * [LambdaFunctionArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-lambdaconfig.html#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val lambdaFunctionArn: String
-    )
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var awsRegion: Any? = null
+
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun awsRegion(value: String) {
+          this.awsRegion = value
+        }
+        
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun awsRegion(value: IntrinsicFunction) {
+          this.awsRegion = value
+        }
+
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var endpoint: Any? = null
+
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun endpoint(value: String) {
+          this.endpoint = value
+        }
+        
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun endpoint(value: IntrinsicFunction) {
+          this.endpoint = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class HttpConfig {
+            /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var endpoint: Any? = null
+
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun endpoint(value: String) {
+          this.endpoint = value
+        }
+        
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun endpoint(value: IntrinsicFunction) {
+          this.endpoint = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LambdaConfig {
+            /**
+         * [lambdaFunctionArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-lambdaconfig.html#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var lambdaFunctionArn: Any? = null
+
+        /**
+         * [lambdaFunctionArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-lambdaconfig.html#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun lambdaFunctionArn(value: String) {
+          this.lambdaFunctionArn = value
+        }
+        
+        /**
+         * [lambdaFunctionArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-lambdaconfig.html#cfn-appsync-datasource-lambdaconfig-lambdafunctionarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun lambdaFunctionArn(value: IntrinsicFunction) {
+          this.lambdaFunctionArn = value
+        }
+
+    }
 
 }
 

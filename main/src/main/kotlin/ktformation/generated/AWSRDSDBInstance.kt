@@ -42,7 +42,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun allocatedStorage(value: IntrinsicFunction) {
           this.allocatedStorage = value
         }
-        
+
         /**
          * [allowMajorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-allowmajorversionupgrade)
          *
@@ -74,7 +74,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun allowMajorVersionUpgrade(value: IntrinsicFunction) {
           this.allowMajorVersionUpgrade = value
         }
-        
+
         /**
          * [autoMinorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-autominorversionupgrade)
          *
@@ -106,7 +106,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun autoMinorVersionUpgrade(value: IntrinsicFunction) {
           this.autoMinorVersionUpgrade = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-availabilityzone)
          *
@@ -138,7 +138,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [backupRetentionPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-backupretentionperiod)
          *
@@ -170,7 +170,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun backupRetentionPeriod(value: IntrinsicFunction) {
           this.backupRetentionPeriod = value
         }
-        
+
         /**
          * [characterSetName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-charactersetname)
          *
@@ -202,7 +202,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun characterSetName(value: IntrinsicFunction) {
           this.characterSetName = value
         }
-        
+
         /**
          * [copyTagsToSnapshot](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-copytagstosnapshot)
          *
@@ -234,7 +234,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun copyTagsToSnapshot(value: IntrinsicFunction) {
           this.copyTagsToSnapshot = value
         }
-        
+
         /**
          * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbclusteridentifier)
          *
@@ -266,7 +266,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBClusterIdentifier(value: IntrinsicFunction) {
           this.dBClusterIdentifier = value
         }
-        
+
         /**
          * [dBInstanceClass](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbinstanceclass)
          *
@@ -298,7 +298,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBInstanceClass(value: IntrinsicFunction) {
           this.dBInstanceClass = value
         }
-        
+
         /**
          * [dBInstanceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbinstanceidentifier)
          *
@@ -330,7 +330,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBInstanceIdentifier(value: IntrinsicFunction) {
           this.dBInstanceIdentifier = value
         }
-        
+
         /**
          * [dBName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbname)
          *
@@ -362,7 +362,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBName(value: IntrinsicFunction) {
           this.dBName = value
         }
-        
+
         /**
          * [dBParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbparametergroupname)
          *
@@ -394,7 +394,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBParameterGroupName(value: IntrinsicFunction) {
           this.dBParameterGroupName = value
         }
-        
+
         /**
          * [dBSecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups)
          *
@@ -426,7 +426,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBSecurityGroups(vararg value: IntrinsicFunction) {
           this.dBSecurityGroups = value
         }
-        
+
         /**
          * [dBSnapshotIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsnapshotidentifier)
          *
@@ -458,7 +458,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBSnapshotIdentifier(value: IntrinsicFunction) {
           this.dBSnapshotIdentifier = value
         }
-        
+
         /**
          * [dBSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsubnetgroupname)
          *
@@ -490,7 +490,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun dBSubnetGroupName(value: IntrinsicFunction) {
           this.dBSubnetGroupName = value
         }
-        
+
         /**
          * [domain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domain)
          *
@@ -522,7 +522,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun domain(value: IntrinsicFunction) {
           this.domain = value
         }
-        
+
         /**
          * [domainIAMRoleName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domainiamrolename)
          *
@@ -554,7 +554,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun domainIAMRoleName(value: IntrinsicFunction) {
           this.domainIAMRoleName = value
         }
-        
+
         /**
          * [engine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engine)
          *
@@ -586,7 +586,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun engine(value: IntrinsicFunction) {
           this.engine = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engineversion)
          *
@@ -618,7 +618,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-iops)
          *
@@ -650,7 +650,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun iops(value: IntrinsicFunction) {
           this.iops = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-kmskeyid)
          *
@@ -682,7 +682,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [licenseModel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-licensemodel)
          *
@@ -714,7 +714,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun licenseModel(value: IntrinsicFunction) {
           this.licenseModel = value
         }
-        
+
         /**
          * [masterUserPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masteruserpassword)
          *
@@ -746,7 +746,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun masterUserPassword(value: IntrinsicFunction) {
           this.masterUserPassword = value
         }
-        
+
         /**
          * [masterUsername](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masterusername)
          *
@@ -778,7 +778,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun masterUsername(value: IntrinsicFunction) {
           this.masterUsername = value
         }
-        
+
         /**
          * [monitoringInterval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-monitoringinterval)
          *
@@ -810,7 +810,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun monitoringInterval(value: IntrinsicFunction) {
           this.monitoringInterval = value
         }
-        
+
         /**
          * [monitoringRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-monitoringrolearn)
          *
@@ -842,7 +842,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun monitoringRoleArn(value: IntrinsicFunction) {
           this.monitoringRoleArn = value
         }
-        
+
         /**
          * [multiAZ](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-multiaz)
          *
@@ -874,7 +874,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun multiAZ(value: IntrinsicFunction) {
           this.multiAZ = value
         }
-        
+
         /**
          * [optionGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-optiongroupname)
          *
@@ -906,7 +906,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun optionGroupName(value: IntrinsicFunction) {
           this.optionGroupName = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-port)
          *
@@ -938,7 +938,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [preferredBackupWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-preferredbackupwindow)
          *
@@ -970,7 +970,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun preferredBackupWindow(value: IntrinsicFunction) {
           this.preferredBackupWindow = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-preferredmaintenancewindow)
          *
@@ -1002,7 +1002,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [publiclyAccessible](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-publiclyaccessible)
          *
@@ -1034,7 +1034,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun publiclyAccessible(value: IntrinsicFunction) {
           this.publiclyAccessible = value
         }
-        
+
         /**
          * [sourceDBInstanceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourcedbinstanceidentifier)
          *
@@ -1066,7 +1066,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun sourceDBInstanceIdentifier(value: IntrinsicFunction) {
           this.sourceDBInstanceIdentifier = value
         }
-        
+
         /**
          * [sourceRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourceregion)
          *
@@ -1098,7 +1098,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun sourceRegion(value: IntrinsicFunction) {
           this.sourceRegion = value
         }
-        
+
         /**
          * [storageEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-storageencrypted)
          *
@@ -1130,7 +1130,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun storageEncrypted(value: IntrinsicFunction) {
           this.storageEncrypted = value
         }
-        
+
         /**
          * [storageType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-storagetype)
          *
@@ -1162,7 +1162,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun storageType(value: IntrinsicFunction) {
           this.storageType = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-tags)
          *
@@ -1194,7 +1194,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [timezone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-timezone)
          *
@@ -1226,7 +1226,7 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun timezone(value: IntrinsicFunction) {
           this.timezone = value
         }
-        
+
         /**
          * [vPCSecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-vpcsecuritygroups)
          *
@@ -1258,7 +1258,8 @@ class AWSRDSDBInstance(logicalId: String) : Resource<AWSRDSDBInstance.Properties
         fun vPCSecurityGroups(vararg value: IntrinsicFunction) {
           this.vPCSecurityGroups = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

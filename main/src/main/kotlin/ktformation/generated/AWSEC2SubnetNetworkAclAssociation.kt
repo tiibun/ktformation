@@ -42,7 +42,7 @@ class AWSEC2SubnetNetworkAclAssociation(logicalId: String) : Resource<AWSEC2Subn
         fun networkAclId(value: IntrinsicFunction) {
           this.networkAclId = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html#cfn-ec2-subnetnetworkaclassociation-associationid)
          *
@@ -74,7 +74,8 @@ class AWSEC2SubnetNetworkAclAssociation(logicalId: String) : Resource<AWSEC2Subn
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun apiId(value: IntrinsicFunction) {
           this.apiId = value
         }
-        
+
         /**
          * [dataSourceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-datasourcename)
          *
@@ -74,7 +74,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun dataSourceName(value: IntrinsicFunction) {
           this.dataSourceName = value
         }
-        
+
         /**
          * [fieldName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-fieldname)
          *
@@ -106,7 +106,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun fieldName(value: IntrinsicFunction) {
           this.fieldName = value
         }
-        
+
         /**
          * [requestMappingTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplate)
          *
@@ -138,7 +138,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun requestMappingTemplate(value: IntrinsicFunction) {
           this.requestMappingTemplate = value
         }
-        
+
         /**
          * [requestMappingTemplateS3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplates3location)
          *
@@ -170,7 +170,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun requestMappingTemplateS3Location(value: IntrinsicFunction) {
           this.requestMappingTemplateS3Location = value
         }
-        
+
         /**
          * [responseMappingTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplate)
          *
@@ -202,7 +202,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun responseMappingTemplate(value: IntrinsicFunction) {
           this.responseMappingTemplate = value
         }
-        
+
         /**
          * [responseMappingTemplateS3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplates3location)
          *
@@ -234,7 +234,7 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun responseMappingTemplateS3Location(value: IntrinsicFunction) {
           this.responseMappingTemplateS3Location = value
         }
-        
+
         /**
          * [typeName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-typename)
          *
@@ -266,7 +266,8 @@ class AWSAppSyncResolver(logicalId: String) : Resource<AWSAppSyncResolver.Proper
         fun typeName(value: IntrinsicFunction) {
           this.typeName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

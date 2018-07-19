@@ -42,7 +42,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun allowUnauthenticatedIdentities(value: IntrinsicFunction) {
           this.allowUnauthenticatedIdentities = value
         }
-        
+
         /**
          * [cognitoEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoevents)
          *
@@ -74,7 +74,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun cognitoEvents(value: IntrinsicFunction) {
           this.cognitoEvents = value
         }
-        
+
         /**
          * [cognitoIdentityProviders](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoidentityproviders)
          *
@@ -106,7 +106,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun cognitoIdentityProviders(vararg value: IntrinsicFunction) {
           this.cognitoIdentityProviders = value
         }
-        
+
         /**
          * [cognitoStreams](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitostreams)
          *
@@ -138,7 +138,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun cognitoStreams(value: IntrinsicFunction) {
           this.cognitoStreams = value
         }
-        
+
         /**
          * [developerProviderName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-developerprovidername)
          *
@@ -170,7 +170,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun developerProviderName(value: IntrinsicFunction) {
           this.developerProviderName = value
         }
-        
+
         /**
          * [identityPoolName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypoolname)
          *
@@ -202,7 +202,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun identityPoolName(value: IntrinsicFunction) {
           this.identityPoolName = value
         }
-        
+
         /**
          * [openIdConnectProviderARNs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-openidconnectproviderarns)
          *
@@ -234,7 +234,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun openIdConnectProviderARNs(vararg value: IntrinsicFunction) {
           this.openIdConnectProviderARNs = value
         }
-        
+
         /**
          * [pushSync](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-pushsync)
          *
@@ -266,7 +266,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun pushSync(value: IntrinsicFunction) {
           this.pushSync = value
         }
-        
+
         /**
          * [samlProviderARNs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-samlproviderarns)
          *
@@ -298,7 +298,7 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun samlProviderARNs(vararg value: IntrinsicFunction) {
           this.samlProviderARNs = value
         }
-        
+
         /**
          * [supportedLoginProviders](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-supportedloginproviders)
          *
@@ -330,7 +330,31 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
         fun supportedLoginProviders(value: IntrinsicFunction) {
           this.supportedLoginProviders = value
         }
-        
+
+        /**
+        * [CognitoIdentityProvider](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html)
+        */
+        fun cognitoIdentityProvider(init: CognitoIdentityProvider.() -> Unit = {}): CognitoIdentityProvider {
+            return CognitoIdentityProvider().also {
+                it.init()
+            }
+        }
+        /**
+        * [CognitoStreams](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html)
+        */
+        fun cognitoStreams(init: CognitoStreams.() -> Unit = {}): CognitoStreams {
+            return CognitoStreams().also {
+                it.init()
+            }
+        }
+        /**
+        * [PushSync](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html)
+        */
+        fun pushSync(init: PushSync.() -> Unit = {}): PushSync {
+            return PushSync().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -341,78 +365,265 @@ class AWSCognitoIdentityPool(logicalId: String) : Resource<AWSCognitoIdentityPoo
     }
 
 
-    class CognitoIdentityProvider(
+    @CloudFormationMarker
+    class CognitoIdentityProvider {
             /**
-             * [ClientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-clientid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val clientId: String? = null,
-            /**
-             * [ProviderName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val providerName: String? = null,
-            /**
-             * [ServerSideTokenCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val serverSideTokenCheck: Boolean? = null
-    )
+         * [clientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-clientid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var clientId: Any? = null
 
-    class CognitoStreams(
-            /**
-             * [RoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val roleArn: String? = null,
-            /**
-             * [StreamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val streamName: String? = null,
-            /**
-             * [StreamingStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val streamingStatus: String? = null
-    )
+        /**
+         * [clientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-clientid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clientId(value: String) {
+          this.clientId = value
+        }
+        
+        /**
+         * [clientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-clientid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clientId(value: IntrinsicFunction) {
+          this.clientId = value
+        }
 
-    class PushSync(
+        /**
+         * [providerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var providerName: Any? = null
+
+        /**
+         * [providerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun providerName(value: String) {
+          this.providerName = value
+        }
+        
+        /**
+         * [providerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun providerName(value: IntrinsicFunction) {
+          this.providerName = value
+        }
+
+        /**
+         * [serverSideTokenCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var serverSideTokenCheck: Any? = null
+
+        /**
+         * [serverSideTokenCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun serverSideTokenCheck(value: Boolean) {
+          this.serverSideTokenCheck = value
+        }
+        
+        /**
+         * [serverSideTokenCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun serverSideTokenCheck(value: IntrinsicFunction) {
+          this.serverSideTokenCheck = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class CognitoStreams {
             /**
-             * [ApplicationArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-applicationarns)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val applicationArns: List<String>? = null,
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var roleArn: Any? = null
+
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun roleArn(value: String) {
+          this.roleArn = value
+        }
+        
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun roleArn(value: IntrinsicFunction) {
+          this.roleArn = value
+        }
+
+        /**
+         * [streamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var streamName: Any? = null
+
+        /**
+         * [streamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun streamName(value: String) {
+          this.streamName = value
+        }
+        
+        /**
+         * [streamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun streamName(value: IntrinsicFunction) {
+          this.streamName = value
+        }
+
+        /**
+         * [streamingStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var streamingStatus: Any? = null
+
+        /**
+         * [streamingStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun streamingStatus(value: String) {
+          this.streamingStatus = value
+        }
+        
+        /**
+         * [streamingStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun streamingStatus(value: IntrinsicFunction) {
+          this.streamingStatus = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PushSync {
             /**
-             * [RoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val roleArn: String? = null
-    )
+         * [applicationArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-applicationarns)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var applicationArns: Any? = null
+
+        /**
+         * [applicationArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-applicationarns)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun applicationArns(value: List<String>) {
+          this.applicationArns = value
+        }
+        
+        /**
+         * [applicationArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-applicationarns)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun applicationArns(vararg value: IntrinsicFunction) {
+          this.applicationArns = value
+        }
+
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var roleArn: Any? = null
+
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun roleArn(value: String) {
+          this.roleArn = value
+        }
+        
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun roleArn(value: IntrinsicFunction) {
+          this.roleArn = value
+        }
+
+    }
 
 }
 

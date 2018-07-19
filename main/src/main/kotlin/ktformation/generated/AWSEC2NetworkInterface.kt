@@ -42,7 +42,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [groupSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-groupset)
          *
@@ -74,7 +74,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun groupSet(vararg value: IntrinsicFunction) {
           this.groupSet = value
         }
-        
+
         /**
          * [interfaceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-ec2-networkinterface-interfacetype)
          *
@@ -106,7 +106,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun interfaceType(value: IntrinsicFunction) {
           this.interfaceType = value
         }
-        
+
         /**
          * [ipv6AddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-ec2-networkinterface-ipv6addresscount)
          *
@@ -138,7 +138,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun ipv6AddressCount(value: IntrinsicFunction) {
           this.ipv6AddressCount = value
         }
-        
+
         /**
          * [ipv6Addresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-ec2-networkinterface-ipv6addresses)
          *
@@ -170,7 +170,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun ipv6Addresses(value: IntrinsicFunction) {
           this.ipv6Addresses = value
         }
-        
+
         /**
          * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-privateipaddress)
          *
@@ -202,7 +202,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun privateIpAddress(value: IntrinsicFunction) {
           this.privateIpAddress = value
         }
-        
+
         /**
          * [privateIpAddresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-privateipaddresses)
          *
@@ -234,7 +234,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun privateIpAddresses(vararg value: IntrinsicFunction) {
           this.privateIpAddresses = value
         }
-        
+
         /**
          * [secondaryPrivateIpAddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-secondaryprivateipcount)
          *
@@ -266,7 +266,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun secondaryPrivateIpAddressCount(value: IntrinsicFunction) {
           this.secondaryPrivateIpAddressCount = value
         }
-        
+
         /**
          * [sourceDestCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-sourcedestcheck)
          *
@@ -298,7 +298,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun sourceDestCheck(value: IntrinsicFunction) {
           this.sourceDestCheck = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-subnetid)
          *
@@ -330,7 +330,7 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-tags)
          *
@@ -362,7 +362,23 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [InstanceIpv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html)
+        */
+        fun instanceIpv6Address(init: InstanceIpv6Address.() -> Unit = {}): InstanceIpv6Address {
+            return InstanceIpv6Address().also {
+                it.init()
+            }
+        }
+        /**
+        * [PrivateIpAddressSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html)
+        */
+        fun privateIpAddressSpecification(init: PrivateIpAddressSpecification.() -> Unit = {}): PrivateIpAddressSpecification {
+            return PrivateIpAddressSpecification().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -373,35 +389,106 @@ class AWSEC2NetworkInterface(logicalId: String) : Resource<AWSEC2NetworkInterfac
     }
 
 
-    class InstanceIpv6Address(
+    @CloudFormationMarker
+    class InstanceIpv6Address {
             /**
-             * [Ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val ipv6Address: String
-    )
+         * [ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var ipv6Address: Any? = null
 
-    class PrivateIpAddressSpecification(
+        /**
+         * [ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ipv6Address(value: String) {
+          this.ipv6Address = value
+        }
+        
+        /**
+         * [ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ipv6Address(value: IntrinsicFunction) {
+          this.ipv6Address = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PrivateIpAddressSpecification {
             /**
-             * [Primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-primary)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Boolean
-             */
-            val primary: Boolean,
-            /**
-             * [PrivateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-privateipaddress)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val privateIpAddress: String
-    )
+         * [primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-primary)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        var primary: Any? = null
+
+        /**
+         * [primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-primary)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun primary(value: Boolean) {
+          this.primary = value
+        }
+        
+        /**
+         * [primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-primary)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun primary(value: IntrinsicFunction) {
+          this.primary = value
+        }
+
+        /**
+         * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-privateipaddress)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var privateIpAddress: Any? = null
+
+        /**
+         * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-privateipaddress)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun privateIpAddress(value: String) {
+          this.privateIpAddress = value
+        }
+        
+        /**
+         * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-privateipaddress)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun privateIpAddress(value: IntrinsicFunction) {
+          this.privateIpAddress = value
+        }
+
+    }
 
 }
 

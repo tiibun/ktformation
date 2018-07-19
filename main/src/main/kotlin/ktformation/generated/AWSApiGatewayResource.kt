@@ -42,7 +42,7 @@ class AWSApiGatewayResource(logicalId: String) : Resource<AWSApiGatewayResource.
         fun parentId(value: IntrinsicFunction) {
           this.parentId = value
         }
-        
+
         /**
          * [pathPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html#cfn-apigateway-resource-pathpart)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayResource(logicalId: String) : Resource<AWSApiGatewayResource.
         fun pathPart(value: IntrinsicFunction) {
           this.pathPart = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html#cfn-apigateway-resource-restapiid)
          *
@@ -106,7 +106,8 @@ class AWSApiGatewayResource(logicalId: String) : Resource<AWSApiGatewayResource.
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

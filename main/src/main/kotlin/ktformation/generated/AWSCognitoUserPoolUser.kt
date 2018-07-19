@@ -42,7 +42,7 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun desiredDeliveryMediums(vararg value: IntrinsicFunction) {
           this.desiredDeliveryMediums = value
         }
-        
+
         /**
          * [forceAliasCreation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-forcealiascreation)
          *
@@ -74,7 +74,7 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun forceAliasCreation(value: IntrinsicFunction) {
           this.forceAliasCreation = value
         }
-        
+
         /**
          * [messageAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-messageaction)
          *
@@ -106,7 +106,7 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun messageAction(value: IntrinsicFunction) {
           this.messageAction = value
         }
-        
+
         /**
          * [userAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
          *
@@ -138,7 +138,7 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun userAttributes(vararg value: IntrinsicFunction) {
           this.userAttributes = value
         }
-        
+
         /**
          * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userpoolid)
          *
@@ -170,7 +170,7 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun userPoolId(value: IntrinsicFunction) {
           this.userPoolId = value
         }
-        
+
         /**
          * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-username)
          *
@@ -202,7 +202,7 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun username(value: IntrinsicFunction) {
           this.username = value
         }
-        
+
         /**
          * [validationData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-validationdata)
          *
@@ -234,7 +234,15 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
         fun validationData(vararg value: IntrinsicFunction) {
           this.validationData = value
         }
-        
+
+        /**
+        * [AttributeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html)
+        */
+        fun attributeType(init: AttributeType.() -> Unit = {}): AttributeType {
+            return AttributeType().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -245,24 +253,71 @@ class AWSCognitoUserPoolUser(logicalId: String) : Resource<AWSCognitoUserPoolUse
     }
 
 
-    class AttributeType(
+    @CloudFormationMarker
+    class AttributeType {
             /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-value)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val value: String? = null
-    )
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

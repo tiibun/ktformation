@@ -42,7 +42,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun cacheClusterEnabled(value: IntrinsicFunction) {
           this.cacheClusterEnabled = value
         }
-        
+
         /**
          * [cacheClusterSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-cacheclustersize)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun cacheClusterSize(value: IntrinsicFunction) {
           this.cacheClusterSize = value
         }
-        
+
         /**
          * [clientCertificateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-clientcertificateid)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun clientCertificateId(value: IntrinsicFunction) {
           this.clientCertificateId = value
         }
-        
+
         /**
          * [deploymentId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-deploymentid)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun deploymentId(value: IntrinsicFunction) {
           this.deploymentId = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-description)
          *
@@ -170,7 +170,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [documentationVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-documentationversion)
          *
@@ -202,7 +202,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun documentationVersion(value: IntrinsicFunction) {
           this.documentationVersion = value
         }
-        
+
         /**
          * [methodSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-methodsettings)
          *
@@ -234,7 +234,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun methodSettings(vararg value: IntrinsicFunction) {
           this.methodSettings = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-restapiid)
          *
@@ -266,7 +266,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
         /**
          * [stageName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-stagename)
          *
@@ -298,7 +298,7 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
         fun stageName(value: IntrinsicFunction) {
           this.stageName = value
         }
-        
+
         /**
          * [variables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables)
          *
@@ -320,6 +320,14 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
           this.variables = value
         }
         
+        /**
+        * [MethodSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html)
+        */
+        fun methodSetting(init: MethodSetting.() -> Unit = {}): MethodSetting {
+            return MethodSetting().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -330,88 +338,319 @@ class AWSApiGatewayStage(logicalId: String) : Resource<AWSApiGatewayStage.Proper
     }
 
 
-    class MethodSetting(
+    @CloudFormationMarker
+    class MethodSetting {
             /**
-             * [CacheDataEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachedataencrypted)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val cacheDataEncrypted: Boolean? = null,
-            /**
-             * [CacheTtlInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachettlinseconds)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val cacheTtlInSeconds: Int? = null,
-            /**
-             * [CachingEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachingenabled)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val cachingEnabled: Boolean? = null,
-            /**
-             * [DataTraceEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-datatraceenabled)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val dataTraceEnabled: Boolean? = null,
-            /**
-             * [HttpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-httpmethod)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val httpMethod: String? = null,
-            /**
-             * [LoggingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-logginglevel)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val loggingLevel: String? = null,
-            /**
-             * [MetricsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-metricsenabled)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val metricsEnabled: Boolean? = null,
-            /**
-             * [ResourcePath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-resourcepath)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val resourcePath: String? = null,
-            /**
-             * [ThrottlingBurstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingburstlimit)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val throttlingBurstLimit: Int? = null,
-            /**
-             * [ThrottlingRateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingratelimit)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val throttlingRateLimit: Double? = null
-    )
+         * [cacheDataEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachedataencrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var cacheDataEncrypted: Any? = null
+
+        /**
+         * [cacheDataEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachedataencrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun cacheDataEncrypted(value: Boolean) {
+          this.cacheDataEncrypted = value
+        }
+        
+        /**
+         * [cacheDataEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachedataencrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun cacheDataEncrypted(value: IntrinsicFunction) {
+          this.cacheDataEncrypted = value
+        }
+
+        /**
+         * [cacheTtlInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachettlinseconds)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var cacheTtlInSeconds: Any? = null
+
+        /**
+         * [cacheTtlInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachettlinseconds)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun cacheTtlInSeconds(value: Int) {
+          this.cacheTtlInSeconds = value
+        }
+        
+        /**
+         * [cacheTtlInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachettlinseconds)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun cacheTtlInSeconds(value: IntrinsicFunction) {
+          this.cacheTtlInSeconds = value
+        }
+
+        /**
+         * [cachingEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachingenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var cachingEnabled: Any? = null
+
+        /**
+         * [cachingEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachingenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun cachingEnabled(value: Boolean) {
+          this.cachingEnabled = value
+        }
+        
+        /**
+         * [cachingEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-cachingenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun cachingEnabled(value: IntrinsicFunction) {
+          this.cachingEnabled = value
+        }
+
+        /**
+         * [dataTraceEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-datatraceenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var dataTraceEnabled: Any? = null
+
+        /**
+         * [dataTraceEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-datatraceenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun dataTraceEnabled(value: Boolean) {
+          this.dataTraceEnabled = value
+        }
+        
+        /**
+         * [dataTraceEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-datatraceenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun dataTraceEnabled(value: IntrinsicFunction) {
+          this.dataTraceEnabled = value
+        }
+
+        /**
+         * [httpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-httpmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var httpMethod: Any? = null
+
+        /**
+         * [httpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-httpmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun httpMethod(value: String) {
+          this.httpMethod = value
+        }
+        
+        /**
+         * [httpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-httpmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun httpMethod(value: IntrinsicFunction) {
+          this.httpMethod = value
+        }
+
+        /**
+         * [loggingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-logginglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var loggingLevel: Any? = null
+
+        /**
+         * [loggingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-logginglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun loggingLevel(value: String) {
+          this.loggingLevel = value
+        }
+        
+        /**
+         * [loggingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-logginglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun loggingLevel(value: IntrinsicFunction) {
+          this.loggingLevel = value
+        }
+
+        /**
+         * [metricsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-metricsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var metricsEnabled: Any? = null
+
+        /**
+         * [metricsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-metricsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun metricsEnabled(value: Boolean) {
+          this.metricsEnabled = value
+        }
+        
+        /**
+         * [metricsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-metricsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun metricsEnabled(value: IntrinsicFunction) {
+          this.metricsEnabled = value
+        }
+
+        /**
+         * [resourcePath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-resourcepath)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var resourcePath: Any? = null
+
+        /**
+         * [resourcePath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-resourcepath)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resourcePath(value: String) {
+          this.resourcePath = value
+        }
+        
+        /**
+         * [resourcePath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-resourcepath)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resourcePath(value: IntrinsicFunction) {
+          this.resourcePath = value
+        }
+
+        /**
+         * [throttlingBurstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingburstlimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var throttlingBurstLimit: Any? = null
+
+        /**
+         * [throttlingBurstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingburstlimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun throttlingBurstLimit(value: Int) {
+          this.throttlingBurstLimit = value
+        }
+        
+        /**
+         * [throttlingBurstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingburstlimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun throttlingBurstLimit(value: IntrinsicFunction) {
+          this.throttlingBurstLimit = value
+        }
+
+        /**
+         * [throttlingRateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingratelimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var throttlingRateLimit: Any? = null
+
+        /**
+         * [throttlingRateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingratelimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun throttlingRateLimit(value: Double) {
+          this.throttlingRateLimit = value
+        }
+        
+        /**
+         * [throttlingRateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-stage-methodsetting.html#cfn-apigateway-stage-methodsetting-throttlingratelimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun throttlingRateLimit(value: IntrinsicFunction) {
+          this.throttlingRateLimit = value
+        }
+
+    }
 
 }
 

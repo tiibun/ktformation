@@ -42,7 +42,7 @@ class AWSEC2VPC(logicalId: String) : Resource<AWSEC2VPC.Properties>(logicalId, "
         fun cidrBlock(value: IntrinsicFunction) {
           this.cidrBlock = value
         }
-        
+
         /**
          * [enableDnsHostnames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-EnableDnsHostnames)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPC(logicalId: String) : Resource<AWSEC2VPC.Properties>(logicalId, "
         fun enableDnsHostnames(value: IntrinsicFunction) {
           this.enableDnsHostnames = value
         }
-        
+
         /**
          * [enableDnsSupport](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-EnableDnsSupport)
          *
@@ -106,7 +106,7 @@ class AWSEC2VPC(logicalId: String) : Resource<AWSEC2VPC.Properties>(logicalId, "
         fun enableDnsSupport(value: IntrinsicFunction) {
           this.enableDnsSupport = value
         }
-        
+
         /**
          * [instanceTenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-instancetenancy)
          *
@@ -138,7 +138,7 @@ class AWSEC2VPC(logicalId: String) : Resource<AWSEC2VPC.Properties>(logicalId, "
         fun instanceTenancy(value: IntrinsicFunction) {
           this.instanceTenancy = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-tags)
          *
@@ -170,7 +170,8 @@ class AWSEC2VPC(logicalId: String) : Resource<AWSEC2VPC.Properties>(logicalId, "
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSLogsDestination(logicalId: String) : Resource<AWSLogsDestination.Proper
         fun destinationName(value: IntrinsicFunction) {
           this.destinationName = value
         }
-        
+
         /**
          * [destinationPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-destinationpolicy)
          *
@@ -74,7 +74,7 @@ class AWSLogsDestination(logicalId: String) : Resource<AWSLogsDestination.Proper
         fun destinationPolicy(value: IntrinsicFunction) {
           this.destinationPolicy = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-rolearn)
          *
@@ -106,7 +106,7 @@ class AWSLogsDestination(logicalId: String) : Resource<AWSLogsDestination.Proper
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
         /**
          * [targetArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-targetarn)
          *
@@ -138,7 +138,8 @@ class AWSLogsDestination(logicalId: String) : Resource<AWSLogsDestination.Proper
         fun targetArn(value: IntrinsicFunction) {
           this.targetArn = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

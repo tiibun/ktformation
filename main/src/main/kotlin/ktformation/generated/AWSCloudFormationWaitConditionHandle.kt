@@ -12,6 +12,7 @@ class AWSCloudFormationWaitConditionHandle(logicalId: String) : Resource<AWSClou
     @CloudFormationMarker
     class Properties : ResourceProperties() {
 
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

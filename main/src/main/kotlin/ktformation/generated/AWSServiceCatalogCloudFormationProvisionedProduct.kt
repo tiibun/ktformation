@@ -42,7 +42,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [notificationArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun notificationArns(vararg value: IntrinsicFunction) {
           this.notificationArns = value
         }
-        
+
         /**
          * [pathId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-pathid)
          *
@@ -106,7 +106,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun pathId(value: IntrinsicFunction) {
           this.pathId = value
         }
-        
+
         /**
          * [productId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-productid)
          *
@@ -138,7 +138,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun productId(value: IntrinsicFunction) {
           this.productId = value
         }
-        
+
         /**
          * [productName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-productname)
          *
@@ -170,7 +170,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun productName(value: IntrinsicFunction) {
           this.productName = value
         }
-        
+
         /**
          * [provisionedProductName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname)
          *
@@ -202,7 +202,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun provisionedProductName(value: IntrinsicFunction) {
           this.provisionedProductName = value
         }
-        
+
         /**
          * [provisioningArtifactId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid)
          *
@@ -234,7 +234,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun provisioningArtifactId(value: IntrinsicFunction) {
           this.provisioningArtifactId = value
         }
-        
+
         /**
          * [provisioningArtifactName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname)
          *
@@ -266,7 +266,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun provisioningArtifactName(value: IntrinsicFunction) {
           this.provisioningArtifactName = value
         }
-        
+
         /**
          * [provisioningParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)
          *
@@ -298,7 +298,7 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun provisioningParameters(vararg value: IntrinsicFunction) {
           this.provisioningParameters = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-tags)
          *
@@ -330,7 +330,15 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [ProvisioningParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html)
+        */
+        fun provisioningParameter(init: ProvisioningParameter.() -> Unit = {}): ProvisioningParameter {
+            return ProvisioningParameter().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -341,24 +349,71 @@ class AWSServiceCatalogCloudFormationProvisionedProduct(logicalId: String) : Res
     }
 
 
-    class ProvisioningParameter(
+    @CloudFormationMarker
+    class ProvisioningParameter {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val key: String? = null,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val value: String? = null
-    )
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

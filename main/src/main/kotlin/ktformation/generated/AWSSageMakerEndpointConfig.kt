@@ -42,7 +42,7 @@ class AWSSageMakerEndpointConfig(logicalId: String) : Resource<AWSSageMakerEndpo
         fun endpointConfigName(value: IntrinsicFunction) {
           this.endpointConfigName = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-kmskeyid)
          *
@@ -74,7 +74,7 @@ class AWSSageMakerEndpointConfig(logicalId: String) : Resource<AWSSageMakerEndpo
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [productionVariants](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-productionvariants)
          *
@@ -106,7 +106,7 @@ class AWSSageMakerEndpointConfig(logicalId: String) : Resource<AWSSageMakerEndpo
         fun productionVariants(vararg value: IntrinsicFunction) {
           this.productionVariants = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-tags)
          *
@@ -138,7 +138,15 @@ class AWSSageMakerEndpointConfig(logicalId: String) : Resource<AWSSageMakerEndpo
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [ProductionVariant](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html)
+        */
+        fun productionVariant(init: ProductionVariant.() -> Unit = {}): ProductionVariant {
+            return ProductionVariant().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,48 +157,164 @@ class AWSSageMakerEndpointConfig(logicalId: String) : Resource<AWSSageMakerEndpo
     }
 
 
-    class ProductionVariant(
+    @CloudFormationMarker
+    class ProductionVariant {
             /**
-             * [InitialInstanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val initialInstanceCount: Int,
-            /**
-             * [InitialVariantWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Double
-             */
-            val initialVariantWeight: Double,
-            /**
-             * [InstanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-instancetype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val instanceType: String,
-            /**
-             * [ModelName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-modelname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val modelName: String,
-            /**
-             * [VariantName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-variantname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val variantName: String
-    )
+         * [initialInstanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var initialInstanceCount: Any? = null
+
+        /**
+         * [initialInstanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun initialInstanceCount(value: Int) {
+          this.initialInstanceCount = value
+        }
+        
+        /**
+         * [initialInstanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun initialInstanceCount(value: IntrinsicFunction) {
+          this.initialInstanceCount = value
+        }
+
+        /**
+         * [initialVariantWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        var initialVariantWeight: Any? = null
+
+        /**
+         * [initialVariantWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        fun initialVariantWeight(value: Double) {
+          this.initialVariantWeight = value
+        }
+        
+        /**
+         * [initialVariantWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        fun initialVariantWeight(value: IntrinsicFunction) {
+          this.initialVariantWeight = value
+        }
+
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-instancetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var instanceType: Any? = null
+
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-instancetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun instanceType(value: String) {
+          this.instanceType = value
+        }
+        
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-instancetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun instanceType(value: IntrinsicFunction) {
+          this.instanceType = value
+        }
+
+        /**
+         * [modelName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-modelname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var modelName: Any? = null
+
+        /**
+         * [modelName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-modelname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun modelName(value: String) {
+          this.modelName = value
+        }
+        
+        /**
+         * [modelName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-modelname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun modelName(value: IntrinsicFunction) {
+          this.modelName = value
+        }
+
+        /**
+         * [variantName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-variantname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var variantName: Any? = null
+
+        /**
+         * [variantName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-variantname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun variantName(value: String) {
+          this.variantName = value
+        }
+        
+        /**
+         * [variantName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-variantname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun variantName(value: IntrinsicFunction) {
+          this.variantName = value
+        }
+
+    }
 
 }
 

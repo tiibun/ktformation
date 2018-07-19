@@ -42,7 +42,7 @@ class AWSServiceDiscoveryInstance(logicalId: String) : Resource<AWSServiceDiscov
         fun instanceAttributes(value: IntrinsicFunction) {
           this.instanceAttributes = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-instanceid)
          *
@@ -74,7 +74,7 @@ class AWSServiceDiscoveryInstance(logicalId: String) : Resource<AWSServiceDiscov
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [serviceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-serviceid)
          *
@@ -106,7 +106,8 @@ class AWSServiceDiscoveryInstance(logicalId: String) : Resource<AWSServiceDiscov
         fun serviceId(value: IntrinsicFunction) {
           this.serviceId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

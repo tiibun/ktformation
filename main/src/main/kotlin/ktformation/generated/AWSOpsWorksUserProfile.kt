@@ -42,7 +42,7 @@ class AWSOpsWorksUserProfile(logicalId: String) : Resource<AWSOpsWorksUserProfil
         fun allowSelfManagement(value: IntrinsicFunction) {
           this.allowSelfManagement = value
         }
-        
+
         /**
          * [iamUserArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn)
          *
@@ -74,7 +74,7 @@ class AWSOpsWorksUserProfile(logicalId: String) : Resource<AWSOpsWorksUserProfil
         fun iamUserArn(value: IntrinsicFunction) {
           this.iamUserArn = value
         }
-        
+
         /**
          * [sshPublicKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey)
          *
@@ -106,7 +106,7 @@ class AWSOpsWorksUserProfile(logicalId: String) : Resource<AWSOpsWorksUserProfil
         fun sshPublicKey(value: IntrinsicFunction) {
           this.sshPublicKey = value
         }
-        
+
         /**
          * [sshUsername](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername)
          *
@@ -138,7 +138,8 @@ class AWSOpsWorksUserProfile(logicalId: String) : Resource<AWSOpsWorksUserProfil
         fun sshUsername(value: IntrinsicFunction) {
           this.sshUsername = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

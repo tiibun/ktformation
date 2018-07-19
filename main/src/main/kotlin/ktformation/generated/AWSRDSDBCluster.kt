@@ -42,7 +42,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun availabilityZones(vararg value: IntrinsicFunction) {
           this.availabilityZones = value
         }
-        
+
         /**
          * [backupRetentionPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backuprententionperiod)
          *
@@ -74,7 +74,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun backupRetentionPeriod(value: IntrinsicFunction) {
           this.backupRetentionPeriod = value
         }
-        
+
         /**
          * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusteridentifier)
          *
@@ -106,7 +106,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun dBClusterIdentifier(value: IntrinsicFunction) {
           this.dBClusterIdentifier = value
         }
-        
+
         /**
          * [dBClusterParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname)
          *
@@ -138,7 +138,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun dBClusterParameterGroupName(value: IntrinsicFunction) {
           this.dBClusterParameterGroupName = value
         }
-        
+
         /**
          * [dBSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbsubnetgroupname)
          *
@@ -170,7 +170,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun dBSubnetGroupName(value: IntrinsicFunction) {
           this.dBSubnetGroupName = value
         }
-        
+
         /**
          * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-databasename)
          *
@@ -202,7 +202,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun databaseName(value: IntrinsicFunction) {
           this.databaseName = value
         }
-        
+
         /**
          * [engine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engine)
          *
@@ -234,7 +234,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun engine(value: IntrinsicFunction) {
           this.engine = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion)
          *
@@ -266,7 +266,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-kmskeyid)
          *
@@ -298,7 +298,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [masterUserPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-masteruserpassword)
          *
@@ -330,7 +330,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun masterUserPassword(value: IntrinsicFunction) {
           this.masterUserPassword = value
         }
-        
+
         /**
          * [masterUsername](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-masterusername)
          *
@@ -362,7 +362,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun masterUsername(value: IntrinsicFunction) {
           this.masterUsername = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-port)
          *
@@ -394,7 +394,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [preferredBackupWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-preferredbackupwindow)
          *
@@ -426,7 +426,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun preferredBackupWindow(value: IntrinsicFunction) {
           this.preferredBackupWindow = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-preferredmaintenancewindow)
          *
@@ -458,7 +458,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [replicationSourceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-replicationsourceidentifier)
          *
@@ -490,7 +490,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun replicationSourceIdentifier(value: IntrinsicFunction) {
           this.replicationSourceIdentifier = value
         }
-        
+
         /**
          * [snapshotIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-snapshotidentifier)
          *
@@ -522,7 +522,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun snapshotIdentifier(value: IntrinsicFunction) {
           this.snapshotIdentifier = value
         }
-        
+
         /**
          * [storageEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted)
          *
@@ -554,7 +554,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun storageEncrypted(value: IntrinsicFunction) {
           this.storageEncrypted = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
          *
@@ -586,7 +586,7 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcSecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-vpcsecuritygroupids)
          *
@@ -618,7 +618,8 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) {
           this.vpcSecurityGroupIds = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties
         fun computeEnvironmentOrder(vararg value: IntrinsicFunction) {
           this.computeEnvironmentOrder = value
         }
-        
+
         /**
          * [jobQueueName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuename)
          *
@@ -74,7 +74,7 @@ class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties
         fun jobQueueName(value: IntrinsicFunction) {
           this.jobQueueName = value
         }
-        
+
         /**
          * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-priority)
          *
@@ -106,7 +106,7 @@ class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties
         fun priority(value: IntrinsicFunction) {
           this.priority = value
         }
-        
+
         /**
          * [state](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-state)
          *
@@ -138,7 +138,15 @@ class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties
         fun state(value: IntrinsicFunction) {
           this.state = value
         }
-        
+
+        /**
+        * [ComputeEnvironmentOrder](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html)
+        */
+        fun computeEnvironmentOrder(init: ComputeEnvironmentOrder.() -> Unit = {}): ComputeEnvironmentOrder {
+            return ComputeEnvironmentOrder().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,24 +157,71 @@ class AWSBatchJobQueue(logicalId: String) : Resource<AWSBatchJobQueue.Properties
     }
 
 
-    class ComputeEnvironmentOrder(
+    @CloudFormationMarker
+    class ComputeEnvironmentOrder {
             /**
-             * [ComputeEnvironment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val computeEnvironment: String,
-            /**
-             * [Order](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-order)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val order: Int
-    )
+         * [computeEnvironment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var computeEnvironment: Any? = null
+
+        /**
+         * [computeEnvironment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun computeEnvironment(value: String) {
+          this.computeEnvironment = value
+        }
+        
+        /**
+         * [computeEnvironment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun computeEnvironment(value: IntrinsicFunction) {
+          this.computeEnvironment = value
+        }
+
+        /**
+         * [order](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-order)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var order: Any? = null
+
+        /**
+         * [order](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-order)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun order(value: Int) {
+          this.order = value
+        }
+        
+        /**
+         * [order](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-order)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun order(value: IntrinsicFunction) {
+          this.order = value
+        }
+
+    }
 
 }
 

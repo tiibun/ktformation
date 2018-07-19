@@ -42,7 +42,7 @@ class AWSLogsLogStream(logicalId: String) : Resource<AWSLogsLogStream.Properties
         fun logGroupName(value: IntrinsicFunction) {
           this.logGroupName = value
         }
-        
+
         /**
          * [logStreamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-logstreamname)
          *
@@ -74,7 +74,8 @@ class AWSLogsLogStream(logicalId: String) : Resource<AWSLogsLogStream.Properties
         fun logStreamName(value: IntrinsicFunction) {
           this.logStreamName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

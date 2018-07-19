@@ -42,7 +42,7 @@ class AWSGameLiftAlias(logicalId: String) : Resource<AWSGameLiftAlias.Properties
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-name)
          *
@@ -74,7 +74,7 @@ class AWSGameLiftAlias(logicalId: String) : Resource<AWSGameLiftAlias.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [routingStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-routingstrategy)
          *
@@ -106,7 +106,15 @@ class AWSGameLiftAlias(logicalId: String) : Resource<AWSGameLiftAlias.Properties
         fun routingStrategy(value: IntrinsicFunction) {
           this.routingStrategy = value
         }
-        
+
+        /**
+        * [RoutingStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html)
+        */
+        fun routingStrategy(init: RoutingStrategy.() -> Unit = {}): RoutingStrategy {
+            return RoutingStrategy().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,32 +125,102 @@ class AWSGameLiftAlias(logicalId: String) : Resource<AWSGameLiftAlias.Properties
     }
 
 
-    class RoutingStrategy(
+    @CloudFormationMarker
+    class RoutingStrategy {
             /**
-             * [FleetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-fleetid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val fleetId: String? = null,
-            /**
-             * [Message](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-message)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val message: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [fleetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-fleetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var fleetId: Any? = null
+
+        /**
+         * [fleetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-fleetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun fleetId(value: String) {
+          this.fleetId = value
+        }
+        
+        /**
+         * [fleetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-fleetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun fleetId(value: IntrinsicFunction) {
+          this.fleetId = value
+        }
+
+        /**
+         * [message](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-message)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var message: Any? = null
+
+        /**
+         * [message](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-message)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun message(value: String) {
+          this.message = value
+        }
+        
+        /**
+         * [message](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-message)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun message(value: IntrinsicFunction) {
+          this.message = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
 
 }
 

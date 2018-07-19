@@ -42,7 +42,7 @@ class AWSRDSDBClusterParameterGroup(logicalId: String) : Resource<AWSRDSDBCluste
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [family](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-family)
          *
@@ -74,7 +74,7 @@ class AWSRDSDBClusterParameterGroup(logicalId: String) : Resource<AWSRDSDBCluste
         fun family(value: IntrinsicFunction) {
           this.family = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-parameters)
          *
@@ -106,7 +106,7 @@ class AWSRDSDBClusterParameterGroup(logicalId: String) : Resource<AWSRDSDBCluste
         fun parameters(value: IntrinsicFunction) {
           this.parameters = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-tags)
          *
@@ -138,7 +138,8 @@ class AWSRDSDBClusterParameterGroup(logicalId: String) : Resource<AWSRDSDBCluste
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

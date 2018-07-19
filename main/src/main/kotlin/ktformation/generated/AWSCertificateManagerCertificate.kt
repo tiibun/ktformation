@@ -42,7 +42,7 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
         fun domainName(value: IntrinsicFunction) {
           this.domainName = value
         }
-        
+
         /**
          * [domainValidationOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-domainvalidationoptions)
          *
@@ -74,7 +74,7 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
         fun domainValidationOptions(vararg value: IntrinsicFunction) {
           this.domainValidationOptions = value
         }
-        
+
         /**
          * [subjectAlternativeNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-subjectalternativenames)
          *
@@ -106,7 +106,7 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
         fun subjectAlternativeNames(vararg value: IntrinsicFunction) {
           this.subjectAlternativeNames = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-tags)
          *
@@ -138,7 +138,7 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [validationMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod)
          *
@@ -170,7 +170,15 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
         fun validationMethod(value: IntrinsicFunction) {
           this.validationMethod = value
         }
-        
+
+        /**
+        * [DomainValidationOption](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html)
+        */
+        fun domainValidationOption(init: DomainValidationOption.() -> Unit = {}): DomainValidationOption {
+            return DomainValidationOption().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,24 +189,71 @@ class AWSCertificateManagerCertificate(logicalId: String) : Resource<AWSCertific
     }
 
 
-    class DomainValidationOption(
+    @CloudFormationMarker
+    class DomainValidationOption {
             /**
-             * [DomainName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoptions-domainname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val domainName: String,
-            /**
-             * [ValidationDomain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val validationDomain: String
-    )
+         * [domainName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoptions-domainname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var domainName: Any? = null
+
+        /**
+         * [domainName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoptions-domainname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun domainName(value: String) {
+          this.domainName = value
+        }
+        
+        /**
+         * [domainName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoptions-domainname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun domainName(value: IntrinsicFunction) {
+          this.domainName = value
+        }
+
+        /**
+         * [validationDomain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var validationDomain: Any? = null
+
+        /**
+         * [validationDomain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun validationDomain(value: String) {
+          this.validationDomain = value
+        }
+        
+        /**
+         * [validationDomain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoption-validationdomain)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun validationDomain(value: IntrinsicFunction) {
+          this.validationDomain = value
+        }
+
+    }
 
 }
 

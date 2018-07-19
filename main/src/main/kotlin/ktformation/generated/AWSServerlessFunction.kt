@@ -42,7 +42,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun codeUri(value: IntrinsicFunction) {
           this.codeUri = value
         }
-        
+
         /**
          * [deadLetterQueue](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -74,7 +74,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun deadLetterQueue(value: IntrinsicFunction) {
           this.deadLetterQueue = value
         }
-        
+
         /**
          * [description](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -106,7 +106,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [environment](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -138,7 +138,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun environment(value: IntrinsicFunction) {
           this.environment = value
         }
-        
+
         /**
          * [events](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -191,7 +191,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun functionName(value: IntrinsicFunction) {
           this.functionName = value
         }
-        
+
         /**
          * [handler](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -223,7 +223,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun handler(value: IntrinsicFunction) {
           this.handler = value
         }
-        
+
         /**
          * [kmsKeyArn](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -255,7 +255,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun kmsKeyArn(value: IntrinsicFunction) {
           this.kmsKeyArn = value
         }
-        
+
         /**
          * [memorySize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -287,7 +287,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun memorySize(value: IntrinsicFunction) {
           this.memorySize = value
         }
-        
+
         /**
          * [policies](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -319,7 +319,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun policies(value: IntrinsicFunction) {
           this.policies = value
         }
-        
+
         /**
          * [role](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -351,7 +351,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun role(value: IntrinsicFunction) {
           this.role = value
         }
-        
+
         /**
          * [runtime](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -383,7 +383,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun runtime(value: IntrinsicFunction) {
           this.runtime = value
         }
-        
+
         /**
          * [tags](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -436,7 +436,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun timeout(value: IntrinsicFunction) {
           this.timeout = value
         }
-        
+
         /**
          * [tracing](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -468,7 +468,7 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun tracing(value: IntrinsicFunction) {
           this.tracing = value
         }
-        
+
         /**
          * [vpcConfig](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
          *
@@ -500,7 +500,135 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
         fun vpcConfig(value: IntrinsicFunction) {
           this.vpcConfig = value
         }
-        
+
+        /**
+        * [AlexaSkillEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#alexaskill)
+        */
+        fun alexaSkillEvent(init: AlexaSkillEvent.() -> Unit = {}): AlexaSkillEvent {
+            return AlexaSkillEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [ApiEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+        */
+        fun apiEvent(init: ApiEvent.() -> Unit = {}): ApiEvent {
+            return ApiEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [CloudWatchEventEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+        */
+        fun cloudWatchEventEvent(init: CloudWatchEventEvent.() -> Unit = {}): CloudWatchEventEvent {
+            return CloudWatchEventEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [DeadLetterQueue](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#deadletterqueue-object)
+        */
+        fun deadLetterQueue(init: DeadLetterQueue.() -> Unit = {}): DeadLetterQueue {
+            return DeadLetterQueue().also {
+                it.init()
+            }
+        }
+        /**
+        * [DynamoDBEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+        */
+        fun dynamoDBEvent(init: DynamoDBEvent.() -> Unit = {}): DynamoDBEvent {
+            return DynamoDBEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [EventSource](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object)
+        */
+        fun eventSource(init: EventSource.() -> Unit = {}): EventSource {
+            return EventSource().also {
+                it.init()
+            }
+        }
+        /**
+        * [FunctionEnvironment](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object)
+        */
+        fun functionEnvironment(init: FunctionEnvironment.() -> Unit = {}): FunctionEnvironment {
+            return FunctionEnvironment().also {
+                it.init()
+            }
+        }
+        /**
+        * [IAMPolicyDocument](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
+        */
+        fun iAMPolicyDocument(init: IAMPolicyDocument.() -> Unit = {}): IAMPolicyDocument {
+            return IAMPolicyDocument().also {
+                it.init()
+            }
+        }
+        /**
+        * [IoTRuleEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+        */
+        fun ioTRuleEvent(init: IoTRuleEvent.() -> Unit = {}): IoTRuleEvent {
+            return IoTRuleEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [KinesisEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+        */
+        fun kinesisEvent(init: KinesisEvent.() -> Unit = {}): KinesisEvent {
+            return KinesisEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [S3Event](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+        */
+        fun s3Event(init: S3Event.() -> Unit = {}): S3Event {
+            return S3Event().also {
+                it.init()
+            }
+        }
+        /**
+        * [S3Location](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3-location-object)
+        */
+        fun s3Location(init: S3Location.() -> Unit = {}): S3Location {
+            return S3Location().also {
+                it.init()
+            }
+        }
+        /**
+        * [S3NotificationFilter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html)
+        */
+        fun s3NotificationFilter(init: S3NotificationFilter.() -> Unit = {}): S3NotificationFilter {
+            return S3NotificationFilter().also {
+                it.init()
+            }
+        }
+        /**
+        * [SNSEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sns)
+        */
+        fun sNSEvent(init: SNSEvent.() -> Unit = {}): SNSEvent {
+            return SNSEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [ScheduleEvent](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+        */
+        fun scheduleEvent(init: ScheduleEvent.() -> Unit = {}): ScheduleEvent {
+            return ScheduleEvent().also {
+                it.init()
+            }
+        }
+        /**
+        * [VpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+        */
+        fun vpcConfig(init: VpcConfig.() -> Unit = {}): VpcConfig {
+            return VpcConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -511,317 +639,1070 @@ class AWSServerlessFunction(logicalId: String) : Resource<AWSServerlessFunction.
     }
 
 
-    class AlexaSkillEvent(
+    @CloudFormationMarker
+    class AlexaSkillEvent {
             /**
-             * [Variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#alexaskill)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val variables: Map<String, Any>? = null
-    )
+         * [variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#alexaskill)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var variables: Any? = null
 
-    class ApiEvent(
-            /**
-             * [Method](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val method: String,
-            /**
-             * [Path](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val path: String,
-            /**
-             * [RestApiId](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val restApiId: String? = null
-    )
+        /**
+         * [variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#alexaskill)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun variables(value: Map<String, Any>) {
+          this.variables = value
+        }
+        
+    }
 
-    class CloudWatchEventEvent(
+    @CloudFormationMarker
+    class ApiEvent {
             /**
-             * [Input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val input: String? = null,
-            /**
-             * [InputPath](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val inputPath: String? = null,
-            /**
-             * [Pattern](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Json
-             */
-            val pattern: Json
-    )
+         * [method](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var method: Any? = null
 
-    class DeadLetterQueue(
-            /**
-             * [TargetArn](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val targetArn: String,
-            /**
-             * [Type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [method](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun method(value: String) {
+          this.method = value
+        }
+        
+        /**
+         * [method](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun method(value: IntrinsicFunction) {
+          this.method = value
+        }
 
-    class DynamoDBEvent(
-            /**
-             * [BatchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val batchSize: Int,
-            /**
-             * [StartingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val startingPosition: String,
-            /**
-             * [Stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val stream: String
-    )
+        /**
+         * [path](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var path: Any? = null
 
-    class EventSource(
-            /**
-             * [Properties](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types)
-             *
-             * _Required_: yes
-             *
-             * _Type_: S3EventSNSEventKinesisEventDynamoDBEventApiEventScheduleEventCloudWatchEventEventIoTRuleEventAlexaSkillEvent
-             */
-            val properties: S3EventSNSEventKinesisEventDynamoDBEventApiEventScheduleEventCloudWatchEventEventIoTRuleEventAlexaSkillEvent,
-            /**
-             * [Type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [path](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun path(value: String) {
+          this.path = value
+        }
+        
+        /**
+         * [path](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun path(value: IntrinsicFunction) {
+          this.path = value
+        }
 
-    class FunctionEnvironment(
-            /**
-             * [Variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Map<String, Any>
-             */
-            val variables: Map<String, Any>
-    )
+        /**
+         * [restApiId](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var restApiId: Any? = null
 
-    class IAMPolicyDocument(
-            /**
-             * [Statement](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Json
-             */
-            val statement: Json
-    )
+        /**
+         * [restApiId](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun restApiId(value: String) {
+          this.restApiId = value
+        }
+        
+        /**
+         * [restApiId](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun restApiId(value: IntrinsicFunction) {
+          this.restApiId = value
+        }
 
-    class IoTRuleEvent(
-            /**
-             * [AwsIotSqlVersion](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val awsIotSqlVersion: String? = null,
-            /**
-             * [Sql](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val sql: String
-    )
+    }
 
-    class KinesisEvent(
+    @CloudFormationMarker
+    class CloudWatchEventEvent {
             /**
-             * [BatchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val batchSize: Int? = null,
-            /**
-             * [StartingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val startingPosition: String,
-            /**
-             * [Stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val stream: String
-    )
+         * [input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var input: Any? = null
 
-    class S3Event(
-            /**
-             * [Bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val bucket: String,
-            /**
-             * [Events](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val events: String,
-            /**
-             * [Filter](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
-             *
-             * _Required_: no
-             *
-             * _Type_: S3NotificationFilter
-             */
-            val filter: S3NotificationFilter? = null
-    )
+        /**
+         * [input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun input(value: String) {
+          this.input = value
+        }
+        
+        /**
+         * [input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun input(value: IntrinsicFunction) {
+          this.input = value
+        }
 
-    class S3Location(
-            /**
-             * [Bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val bucket: String,
-            /**
-             * [Key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [Version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val version: Int
-    )
+        /**
+         * [inputPath](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var inputPath: Any? = null
 
-    class S3NotificationFilter(
-            /**
-             * [S3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val s3Key: String
-    )
+        /**
+         * [inputPath](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun inputPath(value: String) {
+          this.inputPath = value
+        }
+        
+        /**
+         * [inputPath](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun inputPath(value: IntrinsicFunction) {
+          this.inputPath = value
+        }
 
-    class SNSEvent(
-            /**
-             * [Topic](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sns)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val topic: String
-    )
+        /**
+         * [pattern](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        var pattern: Any? = null
 
-    class ScheduleEvent(
-            /**
-             * [Input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val input: String? = null,
-            /**
-             * [Schedule](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val schedule: String
-    )
+        /**
+         * [pattern](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun pattern(value: Json) {
+          this.pattern = value
+        }
+        
+        /**
+         * [pattern](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun pattern(value: IntrinsicFunction) {
+          this.pattern = value
+        }
 
-    class VpcConfig(
+    }
+
+    @CloudFormationMarker
+    class DeadLetterQueue {
             /**
-             * [SecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val securityGroupIds: List<String>,
+         * [targetArn](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var targetArn: Any? = null
+
+        /**
+         * [targetArn](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun targetArn(value: String) {
+          this.targetArn = value
+        }
+        
+        /**
+         * [targetArn](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun targetArn(value: IntrinsicFunction) {
+          this.targetArn = value
+        }
+
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class DynamoDBEvent {
             /**
-             * [SubnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnetIds: List<String>
-    )
+         * [batchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var batchSize: Any? = null
+
+        /**
+         * [batchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun batchSize(value: Int) {
+          this.batchSize = value
+        }
+        
+        /**
+         * [batchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun batchSize(value: IntrinsicFunction) {
+          this.batchSize = value
+        }
+
+        /**
+         * [startingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var startingPosition: Any? = null
+
+        /**
+         * [startingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun startingPosition(value: String) {
+          this.startingPosition = value
+        }
+        
+        /**
+         * [startingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun startingPosition(value: IntrinsicFunction) {
+          this.startingPosition = value
+        }
+
+        /**
+         * [stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var stream: Any? = null
+
+        /**
+         * [stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stream(value: String) {
+          this.stream = value
+        }
+        
+        /**
+         * [stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stream(value: IntrinsicFunction) {
+          this.stream = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class EventSource {
+            /**
+         * [properties](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types)
+         *
+         * _Required_: yes
+         *
+         * _Type_: S3EventSNSEventKinesisEventDynamoDBEventApiEventScheduleEventCloudWatchEventEventIoTRuleEventAlexaSkillEvent
+         */
+        var properties: Any? = null
+
+        /**
+         * [properties](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types)
+         *
+         * _Required_: yes
+         *
+         * _Type_: S3EventSNSEventKinesisEventDynamoDBEventApiEventScheduleEventCloudWatchEventEventIoTRuleEventAlexaSkillEvent
+         */
+        fun properties(value: S3EventSNSEventKinesisEventDynamoDBEventApiEventScheduleEventCloudWatchEventEventIoTRuleEventAlexaSkillEvent) {
+          this.properties = value
+        }
+        
+        /**
+         * [properties](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types)
+         *
+         * _Required_: yes
+         *
+         * _Type_: S3EventSNSEventKinesisEventDynamoDBEventApiEventScheduleEventCloudWatchEventEventIoTRuleEventAlexaSkillEvent
+         */
+        fun properties(value: IntrinsicFunction) {
+          this.properties = value
+        }
+
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class FunctionEnvironment {
+            /**
+         * [variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Map<String, Any>
+         */
+        var variables: Any? = null
+
+        /**
+         * [variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun variables(value: Map<String, Any>) {
+          this.variables = value
+        }
+        
+    }
+
+    @CloudFormationMarker
+    class IAMPolicyDocument {
+            /**
+         * [statement](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        var statement: Any? = null
+
+        /**
+         * [statement](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun statement(value: Json) {
+          this.statement = value
+        }
+        
+        /**
+         * [statement](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun statement(value: IntrinsicFunction) {
+          this.statement = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class IoTRuleEvent {
+            /**
+         * [awsIotSqlVersion](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var awsIotSqlVersion: Any? = null
+
+        /**
+         * [awsIotSqlVersion](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun awsIotSqlVersion(value: String) {
+          this.awsIotSqlVersion = value
+        }
+        
+        /**
+         * [awsIotSqlVersion](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun awsIotSqlVersion(value: IntrinsicFunction) {
+          this.awsIotSqlVersion = value
+        }
+
+        /**
+         * [sql](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var sql: Any? = null
+
+        /**
+         * [sql](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun sql(value: String) {
+          this.sql = value
+        }
+        
+        /**
+         * [sql](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun sql(value: IntrinsicFunction) {
+          this.sql = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class KinesisEvent {
+            /**
+         * [batchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var batchSize: Any? = null
+
+        /**
+         * [batchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun batchSize(value: Int) {
+          this.batchSize = value
+        }
+        
+        /**
+         * [batchSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun batchSize(value: IntrinsicFunction) {
+          this.batchSize = value
+        }
+
+        /**
+         * [startingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var startingPosition: Any? = null
+
+        /**
+         * [startingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun startingPosition(value: String) {
+          this.startingPosition = value
+        }
+        
+        /**
+         * [startingPosition](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun startingPosition(value: IntrinsicFunction) {
+          this.startingPosition = value
+        }
+
+        /**
+         * [stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var stream: Any? = null
+
+        /**
+         * [stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stream(value: String) {
+          this.stream = value
+        }
+        
+        /**
+         * [stream](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stream(value: IntrinsicFunction) {
+          this.stream = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class S3Event {
+            /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var bucket: Any? = null
+
+        /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: String) {
+          this.bucket = value
+        }
+        
+        /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: IntrinsicFunction) {
+          this.bucket = value
+        }
+
+        /**
+         * [events](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var events: Any? = null
+
+        /**
+         * [events](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun events(value: String) {
+          this.events = value
+        }
+        
+        /**
+         * [events](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun events(value: IntrinsicFunction) {
+          this.events = value
+        }
+
+        /**
+         * [filter](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: no
+         *
+         * _Type_: S3NotificationFilter
+         */
+        var filter: Any? = null
+
+        /**
+         * [filter](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: no
+         *
+         * _Type_: S3NotificationFilter
+         */
+        fun filter(value: S3NotificationFilter) {
+          this.filter = value
+        }
+        
+        /**
+         * [filter](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3)
+         *
+         * _Required_: no
+         *
+         * _Type_: S3NotificationFilter
+         */
+        fun filter(value: IntrinsicFunction) {
+          this.filter = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class S3Location {
+            /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var bucket: Any? = null
+
+        /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: String) {
+          this.bucket = value
+        }
+        
+        /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: IntrinsicFunction) {
+          this.bucket = value
+        }
+
+        /**
+         * [key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var version: Any? = null
+
+        /**
+         * [version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun version(value: Int) {
+          this.version = value
+        }
+        
+        /**
+         * [version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun version(value: IntrinsicFunction) {
+          this.version = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class S3NotificationFilter {
+            /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var s3Key: Any? = null
+
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Key(value: String) {
+          this.s3Key = value
+        }
+        
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Key(value: IntrinsicFunction) {
+          this.s3Key = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SNSEvent {
+            /**
+         * [topic](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sns)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var topic: Any? = null
+
+        /**
+         * [topic](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sns)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun topic(value: String) {
+          this.topic = value
+        }
+        
+        /**
+         * [topic](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sns)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun topic(value: IntrinsicFunction) {
+          this.topic = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ScheduleEvent {
+            /**
+         * [input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var input: Any? = null
+
+        /**
+         * [input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun input(value: String) {
+          this.input = value
+        }
+        
+        /**
+         * [input](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun input(value: IntrinsicFunction) {
+          this.input = value
+        }
+
+        /**
+         * [schedule](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var schedule: Any? = null
+
+        /**
+         * [schedule](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun schedule(value: String) {
+          this.schedule = value
+        }
+        
+        /**
+         * [schedule](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun schedule(value: IntrinsicFunction) {
+          this.schedule = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class VpcConfig {
+            /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var securityGroupIds: Any? = null
+
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(value: List<String>) {
+          this.securityGroupIds = value
+        }
+        
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(vararg value: IntrinsicFunction) {
+          this.securityGroupIds = value
+        }
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnetIds: Any? = null
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(value: List<String>) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(vararg value: IntrinsicFunction) {
+          this.subnetIds = value
+        }
+
+    }
 
 }
 

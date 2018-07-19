@@ -42,7 +42,7 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun certificates(vararg value: IntrinsicFunction) {
           this.certificates = value
         }
-        
+
         /**
          * [defaultActions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-defaultactions)
          *
@@ -74,7 +74,7 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun defaultActions(vararg value: IntrinsicFunction) {
           this.defaultActions = value
         }
-        
+
         /**
          * [loadBalancerArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-loadbalancerarn)
          *
@@ -106,7 +106,7 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun loadBalancerArn(value: IntrinsicFunction) {
           this.loadBalancerArn = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-port)
          *
@@ -138,7 +138,7 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-protocol)
          *
@@ -170,7 +170,7 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun protocol(value: IntrinsicFunction) {
           this.protocol = value
         }
-        
+
         /**
          * [sslPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-sslpolicy)
          *
@@ -202,7 +202,23 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
         fun sslPolicy(value: IntrinsicFunction) {
           this.sslPolicy = value
         }
-        
+
+        /**
+        * [Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html)
+        */
+        fun action(init: Action.() -> Unit = {}): Action {
+            return Action().also {
+                it.init()
+            }
+        }
+        /**
+        * [Certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html)
+        */
+        fun certificate(init: Certificate.() -> Unit = {}): Certificate {
+            return Certificate().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -213,35 +229,106 @@ class AWSElasticLoadBalancingV2Listener(logicalId: String) : Resource<AWSElastic
     }
 
 
-    class Action(
+    @CloudFormationMarker
+    class Action {
             /**
-             * [TargetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val targetGroupArn: String,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var targetGroupArn: Any? = null
 
-    class Certificate(
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun targetGroupArn(value: String) {
+          this.targetGroupArn = value
+        }
+        
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun targetGroupArn(value: IntrinsicFunction) {
+          this.targetGroupArn = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Certificate {
             /**
-             * [CertificateArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val certificateArn: String? = null
-    )
+         * [certificateArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var certificateArn: Any? = null
+
+        /**
+         * [certificateArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun certificateArn(value: String) {
+          this.certificateArn = value
+        }
+        
+        /**
+         * [certificateArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun certificateArn(value: IntrinsicFunction) {
+          this.certificateArn = value
+        }
+
+    }
 
 }
 

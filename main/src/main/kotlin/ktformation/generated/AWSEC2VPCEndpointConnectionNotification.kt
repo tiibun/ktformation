@@ -42,7 +42,7 @@ class AWSEC2VPCEndpointConnectionNotification(logicalId: String) : Resource<AWSE
         fun connectionEvents(vararg value: IntrinsicFunction) {
           this.connectionEvents = value
         }
-        
+
         /**
          * [connectionNotificationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPCEndpointConnectionNotification(logicalId: String) : Resource<AWSE
         fun connectionNotificationArn(value: IntrinsicFunction) {
           this.connectionNotificationArn = value
         }
-        
+
         /**
          * [serviceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-serviceid)
          *
@@ -106,7 +106,7 @@ class AWSEC2VPCEndpointConnectionNotification(logicalId: String) : Resource<AWSE
         fun serviceId(value: IntrinsicFunction) {
           this.serviceId = value
         }
-        
+
         /**
          * [vPCEndpointId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid)
          *
@@ -138,7 +138,8 @@ class AWSEC2VPCEndpointConnectionNotification(logicalId: String) : Resource<AWSE
         fun vPCEndpointId(value: IntrinsicFunction) {
           this.vPCEndpointId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,15 @@ class AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId: String) : Resource<
         fun cloudFrontOriginAccessIdentityConfig(value: IntrinsicFunction) {
           this.cloudFrontOriginAccessIdentityConfig = value
         }
-        
+
+        /**
+        * [CloudFrontOriginAccessIdentityConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html)
+        */
+        fun cloudFrontOriginAccessIdentityConfig(init: CloudFrontOriginAccessIdentityConfig.() -> Unit = {}): CloudFrontOriginAccessIdentityConfig {
+            return CloudFrontOriginAccessIdentityConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -53,16 +61,40 @@ class AWSCloudFrontCloudFrontOriginAccessIdentity(logicalId: String) : Resource<
     }
 
 
-    class CloudFrontOriginAccessIdentityConfig(
+    @CloudFormationMarker
+    class CloudFrontOriginAccessIdentityConfig {
             /**
-             * [Comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-comment)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val comment: String
-    )
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-comment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var comment: Any? = null
+
+        /**
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-comment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun comment(value: String) {
+          this.comment = value
+        }
+        
+        /**
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-comment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun comment(value: IntrinsicFunction) {
+          this.comment = value
+        }
+
+    }
 
 }
 

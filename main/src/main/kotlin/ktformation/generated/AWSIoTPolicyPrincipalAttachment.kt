@@ -42,7 +42,7 @@ class AWSIoTPolicyPrincipalAttachment(logicalId: String) : Resource<AWSIoTPolicy
         fun policyName(value: IntrinsicFunction) {
           this.policyName = value
         }
-        
+
         /**
          * [principal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html#cfn-iot-policyprincipalattachment-principal)
          *
@@ -74,7 +74,8 @@ class AWSIoTPolicyPrincipalAttachment(logicalId: String) : Resource<AWSIoTPolicy
         fun principal(value: IntrinsicFunction) {
           this.principal = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

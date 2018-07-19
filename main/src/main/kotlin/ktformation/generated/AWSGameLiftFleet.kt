@@ -42,7 +42,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun buildId(value: IntrinsicFunction) {
           this.buildId = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description)
          *
@@ -74,7 +74,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [desiredEC2Instances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances)
          *
@@ -106,7 +106,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun desiredEC2Instances(value: IntrinsicFunction) {
           this.desiredEC2Instances = value
         }
-        
+
         /**
          * [eC2InboundPermissions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions)
          *
@@ -138,7 +138,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun eC2InboundPermissions(vararg value: IntrinsicFunction) {
           this.eC2InboundPermissions = value
         }
-        
+
         /**
          * [eC2InstanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype)
          *
@@ -170,7 +170,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun eC2InstanceType(value: IntrinsicFunction) {
           this.eC2InstanceType = value
         }
-        
+
         /**
          * [logPaths](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-logpaths)
          *
@@ -202,7 +202,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun logPaths(vararg value: IntrinsicFunction) {
           this.logPaths = value
         }
-        
+
         /**
          * [maxSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize)
          *
@@ -234,7 +234,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun maxSize(value: IntrinsicFunction) {
           this.maxSize = value
         }
-        
+
         /**
          * [minSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize)
          *
@@ -266,7 +266,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun minSize(value: IntrinsicFunction) {
           this.minSize = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name)
          *
@@ -298,7 +298,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [serverLaunchParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-serverlaunchparameters)
          *
@@ -330,7 +330,7 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun serverLaunchParameters(value: IntrinsicFunction) {
           this.serverLaunchParameters = value
         }
-        
+
         /**
          * [serverLaunchPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-serverlaunchpath)
          *
@@ -362,7 +362,15 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
         fun serverLaunchPath(value: IntrinsicFunction) {
           this.serverLaunchPath = value
         }
-        
+
+        /**
+        * [IpPermission](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html)
+        */
+        fun ipPermission(init: IpPermission.() -> Unit = {}): IpPermission {
+            return IpPermission().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -373,40 +381,133 @@ class AWSGameLiftFleet(logicalId: String) : Resource<AWSGameLiftFleet.Properties
     }
 
 
-    class IpPermission(
+    @CloudFormationMarker
+    class IpPermission {
             /**
-             * [FromPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-fromport)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val fromPort: Int,
-            /**
-             * [IpRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-iprange)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val ipRange: String,
-            /**
-             * [Protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-protocol)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val protocol: String,
-            /**
-             * [ToPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-toport)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val toPort: Int
-    )
+         * [fromPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-fromport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var fromPort: Any? = null
+
+        /**
+         * [fromPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-fromport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun fromPort(value: Int) {
+          this.fromPort = value
+        }
+        
+        /**
+         * [fromPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-fromport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun fromPort(value: IntrinsicFunction) {
+          this.fromPort = value
+        }
+
+        /**
+         * [ipRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-iprange)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var ipRange: Any? = null
+
+        /**
+         * [ipRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-iprange)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ipRange(value: String) {
+          this.ipRange = value
+        }
+        
+        /**
+         * [ipRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-iprange)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ipRange(value: IntrinsicFunction) {
+          this.ipRange = value
+        }
+
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var protocol: Any? = null
+
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun protocol(value: String) {
+          this.protocol = value
+        }
+        
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun protocol(value: IntrinsicFunction) {
+          this.protocol = value
+        }
+
+        /**
+         * [toPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-toport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var toPort: Any? = null
+
+        /**
+         * [toPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-toport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun toPort(value: Int) {
+          this.toPort = value
+        }
+        
+        /**
+         * [toPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html#cfn-gamelift-fleet-ec2inboundpermissions-toport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun toPort(value: IntrinsicFunction) {
+          this.toPort = value
+        }
+
+    }
 
 }
 

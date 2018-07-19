@@ -42,7 +42,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun accessLoggingPolicy(value: IntrinsicFunction) {
           this.accessLoggingPolicy = value
         }
-        
+
         /**
          * [appCookieStickinessPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-appcookiestickinesspolicy)
          *
@@ -74,7 +74,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun appCookieStickinessPolicy(vararg value: IntrinsicFunction) {
           this.appCookieStickinessPolicy = value
         }
-        
+
         /**
          * [availabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-availabilityzones)
          *
@@ -106,7 +106,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun availabilityZones(vararg value: IntrinsicFunction) {
           this.availabilityZones = value
         }
-        
+
         /**
          * [connectionDrainingPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectiondrainingpolicy)
          *
@@ -138,7 +138,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun connectionDrainingPolicy(value: IntrinsicFunction) {
           this.connectionDrainingPolicy = value
         }
-        
+
         /**
          * [connectionSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectionsettings)
          *
@@ -170,7 +170,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun connectionSettings(value: IntrinsicFunction) {
           this.connectionSettings = value
         }
-        
+
         /**
          * [crossZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-crosszone)
          *
@@ -202,7 +202,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun crossZone(value: IntrinsicFunction) {
           this.crossZone = value
         }
-        
+
         /**
          * [healthCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-healthcheck)
          *
@@ -234,7 +234,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun healthCheck(value: IntrinsicFunction) {
           this.healthCheck = value
         }
-        
+
         /**
          * [instances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-instances)
          *
@@ -266,7 +266,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun instances(vararg value: IntrinsicFunction) {
           this.instances = value
         }
-        
+
         /**
          * [lBCookieStickinessPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-lbcookiestickinesspolicy)
          *
@@ -298,7 +298,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun lBCookieStickinessPolicy(vararg value: IntrinsicFunction) {
           this.lBCookieStickinessPolicy = value
         }
-        
+
         /**
          * [listeners](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-listeners)
          *
@@ -330,7 +330,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun listeners(vararg value: IntrinsicFunction) {
           this.listeners = value
         }
-        
+
         /**
          * [loadBalancerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-elbname)
          *
@@ -362,7 +362,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun loadBalancerName(value: IntrinsicFunction) {
           this.loadBalancerName = value
         }
-        
+
         /**
          * [policies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-policies)
          *
@@ -394,7 +394,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun policies(vararg value: IntrinsicFunction) {
           this.policies = value
         }
-        
+
         /**
          * [scheme](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-scheme)
          *
@@ -426,7 +426,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun scheme(value: IntrinsicFunction) {
           this.scheme = value
         }
-        
+
         /**
          * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-securitygroups)
          *
@@ -458,7 +458,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun securityGroups(vararg value: IntrinsicFunction) {
           this.securityGroups = value
         }
-        
+
         /**
          * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-subnets)
          *
@@ -490,7 +490,7 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun subnets(vararg value: IntrinsicFunction) {
           this.subnets = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-elasticloadbalancing-loadbalancer-tags)
          *
@@ -522,7 +522,71 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [AccessLoggingPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html)
+        */
+        fun accessLoggingPolicy(init: AccessLoggingPolicy.() -> Unit = {}): AccessLoggingPolicy {
+            return AccessLoggingPolicy().also {
+                it.init()
+            }
+        }
+        /**
+        * [AppCookieStickinessPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html)
+        */
+        fun appCookieStickinessPolicy(init: AppCookieStickinessPolicy.() -> Unit = {}): AppCookieStickinessPolicy {
+            return AppCookieStickinessPolicy().also {
+                it.init()
+            }
+        }
+        /**
+        * [ConnectionDrainingPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html)
+        */
+        fun connectionDrainingPolicy(init: ConnectionDrainingPolicy.() -> Unit = {}): ConnectionDrainingPolicy {
+            return ConnectionDrainingPolicy().also {
+                it.init()
+            }
+        }
+        /**
+        * [ConnectionSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html)
+        */
+        fun connectionSettings(init: ConnectionSettings.() -> Unit = {}): ConnectionSettings {
+            return ConnectionSettings().also {
+                it.init()
+            }
+        }
+        /**
+        * [HealthCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html)
+        */
+        fun healthCheck(init: HealthCheck.() -> Unit = {}): HealthCheck {
+            return HealthCheck().also {
+                it.init()
+            }
+        }
+        /**
+        * [LBCookieStickinessPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html)
+        */
+        fun lBCookieStickinessPolicy(init: LBCookieStickinessPolicy.() -> Unit = {}): LBCookieStickinessPolicy {
+            return LBCookieStickinessPolicy().also {
+                it.init()
+            }
+        }
+        /**
+        * [Listeners](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html)
+        */
+        fun listeners(init: Listeners.() -> Unit = {}): Listeners {
+            return Listeners().also {
+                it.init()
+            }
+        }
+        /**
+        * [Policies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html)
+        */
+        fun policies(init: Policies.() -> Unit = {}): Policies {
+            return Policies().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -533,245 +597,874 @@ class AWSElasticLoadBalancingLoadBalancer(logicalId: String) : Resource<AWSElast
     }
 
 
-    class AccessLoggingPolicy(
+    @CloudFormationMarker
+    class AccessLoggingPolicy {
             /**
-             * [EmitInterval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-emitinterval)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val emitInterval: Int? = null,
-            /**
-             * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-enabled)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Boolean
-             */
-            val enabled: Boolean,
-            /**
-             * [S3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val s3BucketName: String,
-            /**
-             * [S3BucketPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketprefix)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val s3BucketPrefix: String? = null
-    )
+         * [emitInterval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-emitinterval)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var emitInterval: Any? = null
 
-    class AppCookieStickinessPolicy(
-            /**
-             * [CookieName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val cookieName: String,
-            /**
-             * [PolicyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val policyName: String
-    )
+        /**
+         * [emitInterval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-emitinterval)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun emitInterval(value: Int) {
+          this.emitInterval = value
+        }
+        
+        /**
+         * [emitInterval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-emitinterval)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun emitInterval(value: IntrinsicFunction) {
+          this.emitInterval = value
+        }
 
-    class ConnectionDrainingPolicy(
-            /**
-             * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Boolean
-             */
-            val enabled: Boolean,
-            /**
-             * [Timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val timeout: Int? = null
-    )
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-enabled)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        var enabled: Any? = null
 
-    class ConnectionSettings(
-            /**
-             * [IdleTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val idleTimeout: Int
-    )
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-enabled)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: Boolean) {
+          this.enabled = value
+        }
+        
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-enabled)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: IntrinsicFunction) {
+          this.enabled = value
+        }
 
-    class HealthCheck(
-            /**
-             * [HealthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val healthyThreshold: String,
-            /**
-             * [Interval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val interval: String,
-            /**
-             * [Target](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val target: String,
-            /**
-             * [Timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val timeout: String,
-            /**
-             * [UnhealthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val unhealthyThreshold: String
-    )
+        /**
+         * [s3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var s3BucketName: Any? = null
 
-    class LBCookieStickinessPolicy(
-            /**
-             * [CookieExpirationPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val cookieExpirationPeriod: String? = null,
-            /**
-             * [PolicyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val policyName: String? = null
-    )
+        /**
+         * [s3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3BucketName(value: String) {
+          this.s3BucketName = value
+        }
+        
+        /**
+         * [s3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3BucketName(value: IntrinsicFunction) {
+          this.s3BucketName = value
+        }
 
-    class Listeners(
-            /**
-             * [InstancePort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceport)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val instancePort: String,
-            /**
-             * [InstanceProtocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val instanceProtocol: String? = null,
-            /**
-             * [LoadBalancerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val loadBalancerPort: String,
-            /**
-             * [PolicyNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val policyNames: List<String>? = null,
-            /**
-             * [Protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val protocol: String,
-            /**
-             * [SSLCertificateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val sSLCertificateId: String? = null
-    )
+        /**
+         * [s3BucketPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var s3BucketPrefix: Any? = null
 
-    class Policies(
+        /**
+         * [s3BucketPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3BucketPrefix(value: String) {
+          this.s3BucketPrefix = value
+        }
+        
+        /**
+         * [s3BucketPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3BucketPrefix(value: IntrinsicFunction) {
+          this.s3BucketPrefix = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class AppCookieStickinessPolicy {
             /**
-             * [Attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-attributes)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<Json>
-             */
-            val attributes: List<Json>,
+         * [cookieName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var cookieName: Any? = null
+
+        /**
+         * [cookieName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun cookieName(value: String) {
+          this.cookieName = value
+        }
+        
+        /**
+         * [cookieName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun cookieName(value: IntrinsicFunction) {
+          this.cookieName = value
+        }
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var policyName: Any? = null
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: IntrinsicFunction) {
+          this.policyName = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ConnectionDrainingPolicy {
             /**
-             * [InstancePorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-instanceports)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val instancePorts: List<String>? = null,
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        var enabled: Any? = null
+
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: Boolean) {
+          this.enabled = value
+        }
+        
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: IntrinsicFunction) {
+          this.enabled = value
+        }
+
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var timeout: Any? = null
+
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun timeout(value: Int) {
+          this.timeout = value
+        }
+        
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun timeout(value: IntrinsicFunction) {
+          this.timeout = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ConnectionSettings {
             /**
-             * [LoadBalancerPorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-loadbalancerports)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val loadBalancerPorts: List<String>? = null,
+         * [idleTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var idleTimeout: Any? = null
+
+        /**
+         * [idleTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun idleTimeout(value: Int) {
+          this.idleTimeout = value
+        }
+        
+        /**
+         * [idleTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun idleTimeout(value: IntrinsicFunction) {
+          this.idleTimeout = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class HealthCheck {
             /**
-             * [PolicyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policyname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val policyName: String,
+         * [healthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var healthyThreshold: Any? = null
+
+        /**
+         * [healthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun healthyThreshold(value: String) {
+          this.healthyThreshold = value
+        }
+        
+        /**
+         * [healthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun healthyThreshold(value: IntrinsicFunction) {
+          this.healthyThreshold = value
+        }
+
+        /**
+         * [interval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var interval: Any? = null
+
+        /**
+         * [interval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun interval(value: String) {
+          this.interval = value
+        }
+        
+        /**
+         * [interval](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun interval(value: IntrinsicFunction) {
+          this.interval = value
+        }
+
+        /**
+         * [target](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var target: Any? = null
+
+        /**
+         * [target](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun target(value: String) {
+          this.target = value
+        }
+        
+        /**
+         * [target](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun target(value: IntrinsicFunction) {
+          this.target = value
+        }
+
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var timeout: Any? = null
+
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun timeout(value: String) {
+          this.timeout = value
+        }
+        
+        /**
+         * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun timeout(value: IntrinsicFunction) {
+          this.timeout = value
+        }
+
+        /**
+         * [unhealthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var unhealthyThreshold: Any? = null
+
+        /**
+         * [unhealthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun unhealthyThreshold(value: String) {
+          this.unhealthyThreshold = value
+        }
+        
+        /**
+         * [unhealthyThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun unhealthyThreshold(value: IntrinsicFunction) {
+          this.unhealthyThreshold = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LBCookieStickinessPolicy {
             /**
-             * [PolicyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policytype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val policyType: String
-    )
+         * [cookieExpirationPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var cookieExpirationPeriod: Any? = null
+
+        /**
+         * [cookieExpirationPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun cookieExpirationPeriod(value: String) {
+          this.cookieExpirationPeriod = value
+        }
+        
+        /**
+         * [cookieExpirationPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun cookieExpirationPeriod(value: IntrinsicFunction) {
+          this.cookieExpirationPeriod = value
+        }
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var policyName: Any? = null
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun policyName(value: IntrinsicFunction) {
+          this.policyName = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Listeners {
+            /**
+         * [instancePort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var instancePort: Any? = null
+
+        /**
+         * [instancePort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun instancePort(value: String) {
+          this.instancePort = value
+        }
+        
+        /**
+         * [instancePort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun instancePort(value: IntrinsicFunction) {
+          this.instancePort = value
+        }
+
+        /**
+         * [instanceProtocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var instanceProtocol: Any? = null
+
+        /**
+         * [instanceProtocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun instanceProtocol(value: String) {
+          this.instanceProtocol = value
+        }
+        
+        /**
+         * [instanceProtocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun instanceProtocol(value: IntrinsicFunction) {
+          this.instanceProtocol = value
+        }
+
+        /**
+         * [loadBalancerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var loadBalancerPort: Any? = null
+
+        /**
+         * [loadBalancerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun loadBalancerPort(value: String) {
+          this.loadBalancerPort = value
+        }
+        
+        /**
+         * [loadBalancerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun loadBalancerPort(value: IntrinsicFunction) {
+          this.loadBalancerPort = value
+        }
+
+        /**
+         * [policyNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var policyNames: Any? = null
+
+        /**
+         * [policyNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun policyNames(value: List<String>) {
+          this.policyNames = value
+        }
+        
+        /**
+         * [policyNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun policyNames(vararg value: IntrinsicFunction) {
+          this.policyNames = value
+        }
+
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var protocol: Any? = null
+
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun protocol(value: String) {
+          this.protocol = value
+        }
+        
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun protocol(value: IntrinsicFunction) {
+          this.protocol = value
+        }
+
+        /**
+         * [sSLCertificateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var sSLCertificateId: Any? = null
+
+        /**
+         * [sSLCertificateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sSLCertificateId(value: String) {
+          this.sSLCertificateId = value
+        }
+        
+        /**
+         * [sSLCertificateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sSLCertificateId(value: IntrinsicFunction) {
+          this.sSLCertificateId = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Policies {
+            /**
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-attributes)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Json>
+         */
+        var attributes: Any? = null
+
+        /**
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-attributes)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Json>
+         */
+        fun attributes(value: List<Json>) {
+          this.attributes = value
+        }
+        
+        /**
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-attributes)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Json>
+         */
+        fun attributes(vararg value: IntrinsicFunction) {
+          this.attributes = value
+        }
+
+        /**
+         * [instancePorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-instanceports)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var instancePorts: Any? = null
+
+        /**
+         * [instancePorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-instanceports)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun instancePorts(value: List<String>) {
+          this.instancePorts = value
+        }
+        
+        /**
+         * [instancePorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-instanceports)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun instancePorts(vararg value: IntrinsicFunction) {
+          this.instancePorts = value
+        }
+
+        /**
+         * [loadBalancerPorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-loadbalancerports)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var loadBalancerPorts: Any? = null
+
+        /**
+         * [loadBalancerPorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-loadbalancerports)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun loadBalancerPorts(value: List<String>) {
+          this.loadBalancerPorts = value
+        }
+        
+        /**
+         * [loadBalancerPorts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-loadbalancerports)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun loadBalancerPorts(vararg value: IntrinsicFunction) {
+          this.loadBalancerPorts = value
+        }
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var policyName: Any? = null
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: IntrinsicFunction) {
+          this.policyName = value
+        }
+
+        /**
+         * [policyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policytype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var policyType: Any? = null
+
+        /**
+         * [policyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policytype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyType(value: String) {
+          this.policyType = value
+        }
+        
+        /**
+         * [policyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policytype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyType(value: IntrinsicFunction) {
+          this.policyType = value
+        }
+
+    }
 
 }
 

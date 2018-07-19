@@ -42,7 +42,7 @@ class AWSSNSTopic(logicalId: String) : Resource<AWSSNSTopic.Properties>(logicalI
         fun displayName(value: IntrinsicFunction) {
           this.displayName = value
         }
-        
+
         /**
          * [subscription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-subscription)
          *
@@ -74,7 +74,7 @@ class AWSSNSTopic(logicalId: String) : Resource<AWSSNSTopic.Properties>(logicalI
         fun subscription(vararg value: IntrinsicFunction) {
           this.subscription = value
         }
-        
+
         /**
          * [topicName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-topicname)
          *
@@ -106,7 +106,15 @@ class AWSSNSTopic(logicalId: String) : Resource<AWSSNSTopic.Properties>(logicalI
         fun topicName(value: IntrinsicFunction) {
           this.topicName = value
         }
-        
+
+        /**
+        * [Subscription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html)
+        */
+        fun subscription(init: Subscription.() -> Unit = {}): Subscription {
+            return Subscription().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,24 +125,71 @@ class AWSSNSTopic(logicalId: String) : Resource<AWSSNSTopic.Properties>(logicalI
     }
 
 
-    class Subscription(
+    @CloudFormationMarker
+    class Subscription {
             /**
-             * [Endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val endpoint: String,
-            /**
-             * [Protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val protocol: String
-    )
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var endpoint: Any? = null
+
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun endpoint(value: String) {
+          this.endpoint = value
+        }
+        
+        /**
+         * [endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun endpoint(value: IntrinsicFunction) {
+          this.endpoint = value
+        }
+
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var protocol: Any? = null
+
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun protocol(value: String) {
+          this.protocol = value
+        }
+        
+        /**
+         * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun protocol(value: IntrinsicFunction) {
+          this.protocol = value
+        }
+
+    }
 
 }
 

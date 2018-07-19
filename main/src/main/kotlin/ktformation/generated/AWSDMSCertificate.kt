@@ -42,7 +42,7 @@ class AWSDMSCertificate(logicalId: String) : Resource<AWSDMSCertificate.Properti
         fun certificateIdentifier(value: IntrinsicFunction) {
           this.certificateIdentifier = value
         }
-        
+
         /**
          * [certificatePem](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificatepem)
          *
@@ -74,7 +74,7 @@ class AWSDMSCertificate(logicalId: String) : Resource<AWSDMSCertificate.Properti
         fun certificatePem(value: IntrinsicFunction) {
           this.certificatePem = value
         }
-        
+
         /**
          * [certificateWallet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificatewallet)
          *
@@ -106,7 +106,8 @@ class AWSDMSCertificate(logicalId: String) : Resource<AWSDMSCertificate.Properti
         fun certificateWallet(value: IntrinsicFunction) {
           this.certificateWallet = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

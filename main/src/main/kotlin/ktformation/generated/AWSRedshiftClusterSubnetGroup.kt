@@ -42,7 +42,7 @@ class AWSRedshiftClusterSubnetGroup(logicalId: String) : Resource<AWSRedshiftClu
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html#cfn-redshift-clustersubnetgroup-subnetids)
          *
@@ -74,7 +74,7 @@ class AWSRedshiftClusterSubnetGroup(logicalId: String) : Resource<AWSRedshiftClu
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html#cfn-redshift-clustersubnetgroup-tags)
          *
@@ -106,7 +106,8 @@ class AWSRedshiftClusterSubnetGroup(logicalId: String) : Resource<AWSRedshiftClu
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

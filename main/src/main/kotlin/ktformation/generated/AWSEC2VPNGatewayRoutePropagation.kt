@@ -42,7 +42,7 @@ class AWSEC2VPNGatewayRoutePropagation(logicalId: String) : Resource<AWSEC2VPNGa
         fun routeTableIds(vararg value: IntrinsicFunction) {
           this.routeTableIds = value
         }
-        
+
         /**
          * [vpnGatewayId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-vpngatewayid)
          *
@@ -74,7 +74,8 @@ class AWSEC2VPNGatewayRoutePropagation(logicalId: String) : Resource<AWSEC2VPNGa
         fun vpnGatewayId(value: IntrinsicFunction) {
           this.vpnGatewayId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

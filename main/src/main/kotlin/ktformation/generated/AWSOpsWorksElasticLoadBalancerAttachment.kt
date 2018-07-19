@@ -42,7 +42,7 @@ class AWSOpsWorksElasticLoadBalancerAttachment(logicalId: String) : Resource<AWS
         fun elasticLoadBalancerName(value: IntrinsicFunction) {
           this.elasticLoadBalancerName = value
         }
-        
+
         /**
          * [layerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html#cfn-opsworks-elbattachment-layerid)
          *
@@ -74,7 +74,8 @@ class AWSOpsWorksElasticLoadBalancerAttachment(logicalId: String) : Resource<AWS
         fun layerId(value: IntrinsicFunction) {
           this.layerId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

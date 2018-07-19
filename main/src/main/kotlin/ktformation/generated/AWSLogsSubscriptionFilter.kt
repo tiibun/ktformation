@@ -42,7 +42,7 @@ class AWSLogsSubscriptionFilter(logicalId: String) : Resource<AWSLogsSubscriptio
         fun destinationArn(value: IntrinsicFunction) {
           this.destinationArn = value
         }
-        
+
         /**
          * [filterPattern](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-cwl-subscriptionfilter-filterpattern)
          *
@@ -74,7 +74,7 @@ class AWSLogsSubscriptionFilter(logicalId: String) : Resource<AWSLogsSubscriptio
         fun filterPattern(value: IntrinsicFunction) {
           this.filterPattern = value
         }
-        
+
         /**
          * [logGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-cwl-subscriptionfilter-loggroupname)
          *
@@ -106,7 +106,7 @@ class AWSLogsSubscriptionFilter(logicalId: String) : Resource<AWSLogsSubscriptio
         fun logGroupName(value: IntrinsicFunction) {
           this.logGroupName = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-cwl-subscriptionfilter-rolearn)
          *
@@ -138,7 +138,8 @@ class AWSLogsSubscriptionFilter(logicalId: String) : Resource<AWSLogsSubscriptio
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

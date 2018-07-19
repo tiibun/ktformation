@@ -42,7 +42,7 @@ class AWSWAFRegionalSizeConstraintSet(logicalId: String) : Resource<AWSWAFRegion
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [sizeConstraints](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
          *
@@ -74,7 +74,23 @@ class AWSWAFRegionalSizeConstraintSet(logicalId: String) : Resource<AWSWAFRegion
         fun sizeConstraints(vararg value: IntrinsicFunction) {
           this.sizeConstraints = value
         }
-        
+
+        /**
+        * [FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html)
+        */
+        fun fieldToMatch(init: FieldToMatch.() -> Unit = {}): FieldToMatch {
+            return FieldToMatch().also {
+                it.init()
+            }
+        }
+        /**
+        * [SizeConstraint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html)
+        */
+        fun sizeConstraint(init: SizeConstraint.() -> Unit = {}): SizeConstraint {
+            return SizeConstraint().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,59 +101,199 @@ class AWSWAFRegionalSizeConstraintSet(logicalId: String) : Resource<AWSWAFRegion
     }
 
 
-    class FieldToMatch(
+    @CloudFormationMarker
+    class FieldToMatch {
             /**
-             * [Data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-data)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val data: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var data: Any? = null
 
-    class SizeConstraint(
+        /**
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun data(value: String) {
+          this.data = value
+        }
+        
+        /**
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun data(value: IntrinsicFunction) {
+          this.data = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html#cfn-wafregional-sizeconstraintset-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SizeConstraint {
             /**
-             * [ComparisonOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val comparisonOperator: String,
-            /**
-             * [FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)
-             *
-             * _Required_: yes
-             *
-             * _Type_: FieldToMatch
-             */
-            val fieldToMatch: FieldToMatch,
-            /**
-             * [Size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-size)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val size: Int,
-            /**
-             * [TextTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val textTransformation: String
-    )
+         * [comparisonOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var comparisonOperator: Any? = null
+
+        /**
+         * [comparisonOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun comparisonOperator(value: String) {
+          this.comparisonOperator = value
+        }
+        
+        /**
+         * [comparisonOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun comparisonOperator(value: IntrinsicFunction) {
+          this.comparisonOperator = value
+        }
+
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        var fieldToMatch: Any? = null
+
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        fun fieldToMatch(value: FieldToMatch) {
+          this.fieldToMatch = value
+        }
+        
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        fun fieldToMatch(value: IntrinsicFunction) {
+          this.fieldToMatch = value
+        }
+
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-size)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var size: Any? = null
+
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-size)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun size(value: Int) {
+          this.size = value
+        }
+        
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-size)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun size(value: IntrinsicFunction) {
+          this.size = value
+        }
+
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var textTransformation: Any? = null
+
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun textTransformation(value: String) {
+          this.textTransformation = value
+        }
+        
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun textTransformation(value: IntrinsicFunction) {
+          this.textTransformation = value
+        }
+
+    }
 
 }
 

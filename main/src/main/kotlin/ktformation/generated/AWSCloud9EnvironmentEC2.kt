@@ -42,7 +42,7 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun automaticStopTimeMinutes(value: IntrinsicFunction) {
           this.automaticStopTimeMinutes = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-description)
          *
@@ -74,7 +74,7 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-instancetype)
          *
@@ -106,7 +106,7 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun instanceType(value: IntrinsicFunction) {
           this.instanceType = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-name)
          *
@@ -138,7 +138,7 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [ownerArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-ownerarn)
          *
@@ -170,7 +170,7 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun ownerArn(value: IntrinsicFunction) {
           this.ownerArn = value
         }
-        
+
         /**
          * [repositories](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-repositories)
          *
@@ -202,7 +202,7 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun repositories(vararg value: IntrinsicFunction) {
           this.repositories = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-subnetid)
          *
@@ -234,7 +234,15 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
+        /**
+        * [Repository](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html)
+        */
+        fun repository(init: Repository.() -> Unit = {}): Repository {
+            return Repository().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -245,24 +253,71 @@ class AWSCloud9EnvironmentEC2(logicalId: String) : Resource<AWSCloud9Environment
     }
 
 
-    class Repository(
+    @CloudFormationMarker
+    class Repository {
             /**
-             * [PathComponent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val pathComponent: String,
-            /**
-             * [RepositoryUrl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val repositoryUrl: String
-    )
+         * [pathComponent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var pathComponent: Any? = null
+
+        /**
+         * [pathComponent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun pathComponent(value: String) {
+          this.pathComponent = value
+        }
+        
+        /**
+         * [pathComponent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun pathComponent(value: IntrinsicFunction) {
+          this.pathComponent = value
+        }
+
+        /**
+         * [repositoryUrl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var repositoryUrl: Any? = null
+
+        /**
+         * [repositoryUrl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun repositoryUrl(value: String) {
+          this.repositoryUrl = value
+        }
+        
+        /**
+         * [repositoryUrl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun repositoryUrl(value: IntrinsicFunction) {
+          this.repositoryUrl = value
+        }
+
+    }
 
 }
 

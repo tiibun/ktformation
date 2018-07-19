@@ -42,7 +42,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun aliasTarget(value: IntrinsicFunction) {
           this.aliasTarget = value
         }
-        
+
         /**
          * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-comment)
          *
@@ -74,7 +74,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun comment(value: IntrinsicFunction) {
           this.comment = value
         }
-        
+
         /**
          * [failover](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-failover)
          *
@@ -106,7 +106,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun failover(value: IntrinsicFunction) {
           this.failover = value
         }
-        
+
         /**
          * [geoLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-geolocation)
          *
@@ -138,7 +138,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun geoLocation(value: IntrinsicFunction) {
           this.geoLocation = value
         }
-        
+
         /**
          * [healthCheckId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-healthcheckid)
          *
@@ -170,7 +170,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun healthCheckId(value: IntrinsicFunction) {
           this.healthCheckId = value
         }
-        
+
         /**
          * [hostedZoneId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzoneid)
          *
@@ -202,7 +202,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun hostedZoneId(value: IntrinsicFunction) {
           this.hostedZoneId = value
         }
-        
+
         /**
          * [hostedZoneName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzonename)
          *
@@ -234,7 +234,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun hostedZoneName(value: IntrinsicFunction) {
           this.hostedZoneName = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-name)
          *
@@ -266,7 +266,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [region](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-region)
          *
@@ -298,7 +298,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun region(value: IntrinsicFunction) {
           this.region = value
         }
-        
+
         /**
          * [resourceRecords](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-resourcerecords)
          *
@@ -330,7 +330,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun resourceRecords(vararg value: IntrinsicFunction) {
           this.resourceRecords = value
         }
-        
+
         /**
          * [setIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-setidentifier)
          *
@@ -362,7 +362,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun setIdentifier(value: IntrinsicFunction) {
           this.setIdentifier = value
         }
-        
+
         /**
          * [tTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-ttl)
          *
@@ -394,7 +394,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun tTL(value: IntrinsicFunction) {
           this.tTL = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-type)
          *
@@ -426,7 +426,7 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
         /**
          * [weight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-weight)
          *
@@ -458,7 +458,23 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
         fun weight(value: IntrinsicFunction) {
           this.weight = value
         }
-        
+
+        /**
+        * [AliasTarget](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html)
+        */
+        fun aliasTarget(init: AliasTarget.() -> Unit = {}): AliasTarget {
+            return AliasTarget().also {
+                it.init()
+            }
+        }
+        /**
+        * [GeoLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html)
+        */
+        fun geoLocation(init: GeoLocation.() -> Unit = {}): GeoLocation {
+            return GeoLocation().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -469,59 +485,199 @@ class AWSRoute53RecordSet(logicalId: String) : Resource<AWSRoute53RecordSet.Prop
     }
 
 
-    class AliasTarget(
+    @CloudFormationMarker
+    class AliasTarget {
             /**
-             * [DNSName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-dnshostname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val dNSName: String,
-            /**
-             * [EvaluateTargetHealth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-evaluatetargethealth)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val evaluateTargetHealth: Boolean? = null,
-            /**
-             * [HostedZoneId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val hostedZoneId: String
-    )
+         * [dNSName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-dnshostname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var dNSName: Any? = null
 
-    class GeoLocation(
+        /**
+         * [dNSName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-dnshostname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dNSName(value: String) {
+          this.dNSName = value
+        }
+        
+        /**
+         * [dNSName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-dnshostname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dNSName(value: IntrinsicFunction) {
+          this.dNSName = value
+        }
+
+        /**
+         * [evaluateTargetHealth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-evaluatetargethealth)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var evaluateTargetHealth: Any? = null
+
+        /**
+         * [evaluateTargetHealth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-evaluatetargethealth)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun evaluateTargetHealth(value: Boolean) {
+          this.evaluateTargetHealth = value
+        }
+        
+        /**
+         * [evaluateTargetHealth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-evaluatetargethealth)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun evaluateTargetHealth(value: IntrinsicFunction) {
+          this.evaluateTargetHealth = value
+        }
+
+        /**
+         * [hostedZoneId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var hostedZoneId: Any? = null
+
+        /**
+         * [hostedZoneId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun hostedZoneId(value: String) {
+          this.hostedZoneId = value
+        }
+        
+        /**
+         * [hostedZoneId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun hostedZoneId(value: IntrinsicFunction) {
+          this.hostedZoneId = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class GeoLocation {
             /**
-             * [ContinentCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-continentcode)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val continentCode: String? = null,
-            /**
-             * [CountryCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val countryCode: String? = null,
-            /**
-             * [SubdivisionCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val subdivisionCode: String? = null
-    )
+         * [continentCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-continentcode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var continentCode: Any? = null
+
+        /**
+         * [continentCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-continentcode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun continentCode(value: String) {
+          this.continentCode = value
+        }
+        
+        /**
+         * [continentCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-continentcode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun continentCode(value: IntrinsicFunction) {
+          this.continentCode = value
+        }
+
+        /**
+         * [countryCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var countryCode: Any? = null
+
+        /**
+         * [countryCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun countryCode(value: String) {
+          this.countryCode = value
+        }
+        
+        /**
+         * [countryCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun countryCode(value: IntrinsicFunction) {
+          this.countryCode = value
+        }
+
+        /**
+         * [subdivisionCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var subdivisionCode: Any? = null
+
+        /**
+         * [subdivisionCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subdivisionCode(value: String) {
+          this.subdivisionCode = value
+        }
+        
+        /**
+         * [subdivisionCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subdivisionCode(value: IntrinsicFunction) {
+          this.subdivisionCode = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSIAMPolicy(logicalId: String) : Resource<AWSIAMPolicy.Properties>(logica
         fun groups(vararg value: IntrinsicFunction) {
           this.groups = value
         }
-        
+
         /**
          * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument)
          *
@@ -74,7 +74,7 @@ class AWSIAMPolicy(logicalId: String) : Resource<AWSIAMPolicy.Properties>(logica
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
         /**
          * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policyname)
          *
@@ -106,7 +106,7 @@ class AWSIAMPolicy(logicalId: String) : Resource<AWSIAMPolicy.Properties>(logica
         fun policyName(value: IntrinsicFunction) {
           this.policyName = value
         }
-        
+
         /**
          * [roles](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-roles)
          *
@@ -138,7 +138,7 @@ class AWSIAMPolicy(logicalId: String) : Resource<AWSIAMPolicy.Properties>(logica
         fun roles(vararg value: IntrinsicFunction) {
           this.roles = value
         }
-        
+
         /**
          * [users](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-users)
          *
@@ -170,7 +170,8 @@ class AWSIAMPolicy(logicalId: String) : Resource<AWSIAMPolicy.Properties>(logica
         fun users(vararg value: IntrinsicFunction) {
           this.users = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

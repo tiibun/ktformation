@@ -42,7 +42,7 @@ class AWSStepFunctionsStateMachine(logicalId: String) : Resource<AWSStepFunction
         fun definitionString(value: IntrinsicFunction) {
           this.definitionString = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-rolearn)
          *
@@ -74,7 +74,7 @@ class AWSStepFunctionsStateMachine(logicalId: String) : Resource<AWSStepFunction
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
         /**
          * [stateMachineName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinename)
          *
@@ -106,7 +106,8 @@ class AWSStepFunctionsStateMachine(logicalId: String) : Resource<AWSStepFunction
         fun stateMachineName(value: IntrinsicFunction) {
           this.stateMachineName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

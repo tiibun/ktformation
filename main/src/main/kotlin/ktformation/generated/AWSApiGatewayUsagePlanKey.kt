@@ -42,7 +42,7 @@ class AWSApiGatewayUsagePlanKey(logicalId: String) : Resource<AWSApiGatewayUsage
         fun keyId(value: IntrinsicFunction) {
           this.keyId = value
         }
-        
+
         /**
          * [keyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayUsagePlanKey(logicalId: String) : Resource<AWSApiGatewayUsage
         fun keyType(value: IntrinsicFunction) {
           this.keyType = value
         }
-        
+
         /**
          * [usagePlanId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid)
          *
@@ -106,7 +106,8 @@ class AWSApiGatewayUsagePlanKey(logicalId: String) : Resource<AWSApiGatewayUsage
         fun usagePlanId(value: IntrinsicFunction) {
           this.usagePlanId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

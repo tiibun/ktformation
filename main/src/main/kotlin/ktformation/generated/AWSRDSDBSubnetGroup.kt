@@ -42,7 +42,7 @@ class AWSRDSDBSubnetGroup(logicalId: String) : Resource<AWSRDSDBSubnetGroup.Prop
         fun dBSubnetGroupDescription(value: IntrinsicFunction) {
           this.dBSubnetGroupDescription = value
         }
-        
+
         /**
          * [dBSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html#cfn-rds-dbsubnetgroup-dbsubnetgroupname)
          *
@@ -74,7 +74,7 @@ class AWSRDSDBSubnetGroup(logicalId: String) : Resource<AWSRDSDBSubnetGroup.Prop
         fun dBSubnetGroupName(value: IntrinsicFunction) {
           this.dBSubnetGroupName = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html#cfn-rds-dbsubnetgroup-subnetids)
          *
@@ -106,7 +106,7 @@ class AWSRDSDBSubnetGroup(logicalId: String) : Resource<AWSRDSDBSubnetGroup.Prop
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html#cfn-rds-dbsubnetgroup-tags)
          *
@@ -138,7 +138,8 @@ class AWSRDSDBSubnetGroup(logicalId: String) : Resource<AWSRDSDBSubnetGroup.Prop
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

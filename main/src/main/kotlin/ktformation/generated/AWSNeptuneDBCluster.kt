@@ -42,7 +42,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun availabilityZones(vararg value: IntrinsicFunction) {
           this.availabilityZones = value
         }
-        
+
         /**
          * [backupRetentionPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-backupretentionperiod)
          *
@@ -74,7 +74,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun backupRetentionPeriod(value: IntrinsicFunction) {
           this.backupRetentionPeriod = value
         }
-        
+
         /**
          * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbclusteridentifier)
          *
@@ -106,7 +106,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun dBClusterIdentifier(value: IntrinsicFunction) {
           this.dBClusterIdentifier = value
         }
-        
+
         /**
          * [dBClusterParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbclusterparametergroupname)
          *
@@ -138,7 +138,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun dBClusterParameterGroupName(value: IntrinsicFunction) {
           this.dBClusterParameterGroupName = value
         }
-        
+
         /**
          * [dBSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbsubnetgroupname)
          *
@@ -170,7 +170,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun dBSubnetGroupName(value: IntrinsicFunction) {
           this.dBSubnetGroupName = value
         }
-        
+
         /**
          * [iamAuthEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-iamauthenabled)
          *
@@ -202,7 +202,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun iamAuthEnabled(value: IntrinsicFunction) {
           this.iamAuthEnabled = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-kmskeyid)
          *
@@ -234,7 +234,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-port)
          *
@@ -266,7 +266,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [preferredBackupWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-preferredbackupwindow)
          *
@@ -298,7 +298,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun preferredBackupWindow(value: IntrinsicFunction) {
           this.preferredBackupWindow = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-preferredmaintenancewindow)
          *
@@ -330,7 +330,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [snapshotIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-snapshotidentifier)
          *
@@ -362,7 +362,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun snapshotIdentifier(value: IntrinsicFunction) {
           this.snapshotIdentifier = value
         }
-        
+
         /**
          * [storageEncrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-storageencrypted)
          *
@@ -394,7 +394,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun storageEncrypted(value: IntrinsicFunction) {
           this.storageEncrypted = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-tags)
          *
@@ -426,7 +426,7 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcSecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-vpcsecuritygroupids)
          *
@@ -458,7 +458,8 @@ class AWSNeptuneDBCluster(logicalId: String) : Resource<AWSNeptuneDBCluster.Prop
         fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) {
           this.vpcSecurityGroupIds = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

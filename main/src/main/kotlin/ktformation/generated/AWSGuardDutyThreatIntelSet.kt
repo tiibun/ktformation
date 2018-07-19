@@ -42,7 +42,7 @@ class AWSGuardDutyThreatIntelSet(logicalId: String) : Resource<AWSGuardDutyThrea
         fun activate(value: IntrinsicFunction) {
           this.activate = value
         }
-        
+
         /**
          * [detectorId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-detectorid)
          *
@@ -74,7 +74,7 @@ class AWSGuardDutyThreatIntelSet(logicalId: String) : Resource<AWSGuardDutyThrea
         fun detectorId(value: IntrinsicFunction) {
           this.detectorId = value
         }
-        
+
         /**
          * [format](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-format)
          *
@@ -106,7 +106,7 @@ class AWSGuardDutyThreatIntelSet(logicalId: String) : Resource<AWSGuardDutyThrea
         fun format(value: IntrinsicFunction) {
           this.format = value
         }
-        
+
         /**
          * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-location)
          *
@@ -138,7 +138,7 @@ class AWSGuardDutyThreatIntelSet(logicalId: String) : Resource<AWSGuardDutyThrea
         fun location(value: IntrinsicFunction) {
           this.location = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-name)
          *
@@ -170,7 +170,8 @@ class AWSGuardDutyThreatIntelSet(logicalId: String) : Resource<AWSGuardDutyThrea
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

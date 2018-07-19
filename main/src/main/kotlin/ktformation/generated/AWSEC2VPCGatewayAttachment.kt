@@ -42,7 +42,7 @@ class AWSEC2VPCGatewayAttachment(logicalId: String) : Resource<AWSEC2VPCGatewayA
         fun internetGatewayId(value: IntrinsicFunction) {
           this.internetGatewayId = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-vpcid)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPCGatewayAttachment(logicalId: String) : Resource<AWSEC2VPCGatewayA
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
         /**
          * [vpnGatewayId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-vpngatewayid)
          *
@@ -106,7 +106,8 @@ class AWSEC2VPCGatewayAttachment(logicalId: String) : Resource<AWSEC2VPCGatewayA
         fun vpnGatewayId(value: IntrinsicFunction) {
           this.vpnGatewayId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSEC2Host(logicalId: String) : Resource<AWSEC2Host.Properties>(logicalId,
         fun autoPlacement(value: IntrinsicFunction) {
           this.autoPlacement = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-availabilityzone)
          *
@@ -74,7 +74,7 @@ class AWSEC2Host(logicalId: String) : Resource<AWSEC2Host.Properties>(logicalId,
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-instancetype)
          *
@@ -106,7 +106,8 @@ class AWSEC2Host(logicalId: String) : Resource<AWSEC2Host.Properties>(logicalId,
         fun instanceType(value: IntrinsicFunction) {
           this.instanceType = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

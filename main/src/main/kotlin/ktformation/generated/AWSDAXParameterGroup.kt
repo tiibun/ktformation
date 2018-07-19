@@ -42,7 +42,7 @@ class AWSDAXParameterGroup(logicalId: String) : Resource<AWSDAXParameterGroup.Pr
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [parameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parametergroupname)
          *
@@ -74,7 +74,7 @@ class AWSDAXParameterGroup(logicalId: String) : Resource<AWSDAXParameterGroup.Pr
         fun parameterGroupName(value: IntrinsicFunction) {
           this.parameterGroupName = value
         }
-        
+
         /**
          * [parameterNameValues](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues)
          *
@@ -106,7 +106,8 @@ class AWSDAXParameterGroup(logicalId: String) : Resource<AWSDAXParameterGroup.Pr
         fun parameterNameValues(value: IntrinsicFunction) {
           this.parameterNameValues = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

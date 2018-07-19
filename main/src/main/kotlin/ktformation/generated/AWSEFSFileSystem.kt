@@ -42,7 +42,7 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
         fun encrypted(value: IntrinsicFunction) {
           this.encrypted = value
         }
-        
+
         /**
          * [fileSystemTags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-filesystemtags)
          *
@@ -74,7 +74,7 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
         fun fileSystemTags(vararg value: IntrinsicFunction) {
           this.fileSystemTags = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-kmskeyid)
          *
@@ -106,7 +106,7 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [performanceMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-performancemode)
          *
@@ -138,7 +138,15 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
         fun performanceMode(value: IntrinsicFunction) {
           this.performanceMode = value
         }
-        
+
+        /**
+        * [ElasticFileSystemTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html)
+        */
+        fun elasticFileSystemTag(init: ElasticFileSystemTag.() -> Unit = {}): ElasticFileSystemTag {
+            return ElasticFileSystemTag().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,24 +157,71 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
     }
 
 
-    class ElasticFileSystemTag(
+    @CloudFormationMarker
+    class ElasticFileSystemTag {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html#cfn-efs-filesystem-filesystemtags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
         fun customerId(value: IntrinsicFunction) {
           this.customerId = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
         fun enabled(value: IntrinsicFunction) {
           this.enabled = value
         }
-        
+
         /**
          * [generateDistinctId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
         fun generateDistinctId(value: IntrinsicFunction) {
           this.generateDistinctId = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name)
          *
@@ -170,7 +170,7 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [stageKeys](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
          *
@@ -202,7 +202,15 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
         fun stageKeys(vararg value: IntrinsicFunction) {
           this.stageKeys = value
         }
-        
+
+        /**
+        * [StageKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html)
+        */
+        fun stageKey(init: StageKey.() -> Unit = {}): StageKey {
+            return StageKey().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -213,24 +221,71 @@ class AWSApiGatewayApiKey(logicalId: String) : Resource<AWSApiGatewayApiKey.Prop
     }
 
 
-    class StageKey(
+    @CloudFormationMarker
+    class StageKey {
             /**
-             * [RestApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val restApiId: String? = null,
-            /**
-             * [StageName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val stageName: String? = null
-    )
+         * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var restApiId: Any? = null
+
+        /**
+         * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun restApiId(value: String) {
+          this.restApiId = value
+        }
+        
+        /**
+         * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun restApiId(value: IntrinsicFunction) {
+          this.restApiId = value
+        }
+
+        /**
+         * [stageName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var stageName: Any? = null
+
+        /**
+         * [stageName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun stageName(value: String) {
+          this.stageName = value
+        }
+        
+        /**
+         * [stageName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun stageName(value: IntrinsicFunction) {
+          this.stageName = value
+        }
+
+    }
 
 }
 

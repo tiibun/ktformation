@@ -42,7 +42,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun autoEnableIO(value: IntrinsicFunction) {
           this.autoEnableIO = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-availabilityzone)
          *
@@ -74,7 +74,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-encrypted)
          *
@@ -106,7 +106,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun encrypted(value: IntrinsicFunction) {
           this.encrypted = value
         }
-        
+
         /**
          * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-iops)
          *
@@ -138,7 +138,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun iops(value: IntrinsicFunction) {
           this.iops = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-kmskeyid)
          *
@@ -170,7 +170,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-size)
          *
@@ -202,7 +202,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun size(value: IntrinsicFunction) {
           this.size = value
         }
-        
+
         /**
          * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-snapshotid)
          *
@@ -234,7 +234,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun snapshotId(value: IntrinsicFunction) {
           this.snapshotId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-tags)
          *
@@ -266,7 +266,7 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-volumetype)
          *
@@ -298,7 +298,8 @@ class AWSEC2Volume(logicalId: String) : Resource<AWSEC2Volume.Properties>(logica
         fun volumeType(value: IntrinsicFunction) {
           this.volumeType = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalI
         fun attributePayload(value: IntrinsicFunction) {
           this.attributePayload = value
         }
-        
+
         /**
          * [thingName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-thingname)
          *
@@ -74,7 +74,15 @@ class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalI
         fun thingName(value: IntrinsicFunction) {
           this.thingName = value
         }
-        
+
+        /**
+        * [AttributePayload](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thing-attributepayload.html)
+        */
+        fun attributePayload(init: AttributePayload.() -> Unit = {}): AttributePayload {
+            return AttributePayload().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,16 +93,29 @@ class AWSIoTThing(logicalId: String) : Resource<AWSIoTThing.Properties>(logicalI
     }
 
 
-    class AttributePayload(
+    @CloudFormationMarker
+    class AttributePayload {
             /**
-             * [Attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thing-attributepayload.html#cfn-iot-thing-attributepayload-attributes)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val attributes: Map<String, Any>? = null
-    )
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thing-attributepayload.html#cfn-iot-thing-attributepayload-attributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var attributes: Any? = null
+
+        /**
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thing-attributepayload.html#cfn-iot-thing-attributepayload-attributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun attributes(value: Map<String, Any>) {
+          this.attributes = value
+        }
+        
+    }
 
 }
 

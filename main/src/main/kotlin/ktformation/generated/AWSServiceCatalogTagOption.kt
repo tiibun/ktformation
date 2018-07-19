@@ -42,7 +42,7 @@ class AWSServiceCatalogTagOption(logicalId: String) : Resource<AWSServiceCatalog
         fun active(value: IntrinsicFunction) {
           this.active = value
         }
-        
+
         /**
          * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-key)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogTagOption(logicalId: String) : Resource<AWSServiceCatalog
         fun key(value: IntrinsicFunction) {
           this.key = value
         }
-        
+
         /**
          * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-value)
          *
@@ -106,7 +106,8 @@ class AWSServiceCatalogTagOption(logicalId: String) : Resource<AWSServiceCatalog
         fun value(value: IntrinsicFunction) {
           this.value = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

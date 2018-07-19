@@ -42,7 +42,7 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun assessmentTargetArn(value: IntrinsicFunction) {
           this.assessmentTargetArn = value
         }
-        
+
         /**
          * [assessmentTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-assessmenttemplatename)
          *
@@ -74,7 +74,7 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun assessmentTemplateName(value: IntrinsicFunction) {
           this.assessmentTemplateName = value
         }
-        
+
         /**
          * [durationInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-durationinseconds)
          *
@@ -106,7 +106,7 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun durationInSeconds(value: IntrinsicFunction) {
           this.durationInSeconds = value
         }
-        
+
         /**
          * [rulesPackageArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-rulespackagearns)
          *
@@ -138,7 +138,7 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun rulesPackageArns(vararg value: IntrinsicFunction) {
           this.rulesPackageArns = value
         }
-        
+
         /**
          * [userAttributesForFindings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-userattributesforfindings)
          *
@@ -170,7 +170,8 @@ class AWSInspectorAssessmentTemplate(logicalId: String) : Resource<AWSInspectorA
         fun userAttributesForFindings(vararg value: IntrinsicFunction) {
           this.userAttributesForFindings = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

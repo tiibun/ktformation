@@ -42,7 +42,7 @@ class AWSApiGatewayDocumentationVersion(logicalId: String) : Resource<AWSApiGate
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [documentationVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-documentationversion)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayDocumentationVersion(logicalId: String) : Resource<AWSApiGate
         fun documentationVersion(value: IntrinsicFunction) {
           this.documentationVersion = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-restapiid)
          *
@@ -106,7 +106,8 @@ class AWSApiGatewayDocumentationVersion(logicalId: String) : Resource<AWSApiGate
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

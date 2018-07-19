@@ -42,7 +42,7 @@ class AWSEC2RouteTable(logicalId: String) : Resource<AWSEC2RouteTable.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html#cfn-ec2-routetable-vpcid)
          *
@@ -74,7 +74,8 @@ class AWSEC2RouteTable(logicalId: String) : Resource<AWSEC2RouteTable.Properties
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

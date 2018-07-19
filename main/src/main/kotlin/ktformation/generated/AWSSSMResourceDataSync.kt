@@ -42,7 +42,7 @@ class AWSSSMResourceDataSync(logicalId: String) : Resource<AWSSSMResourceDataSyn
         fun bucketName(value: IntrinsicFunction) {
           this.bucketName = value
         }
-        
+
         /**
          * [bucketPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-bucketprefix)
          *
@@ -74,7 +74,7 @@ class AWSSSMResourceDataSync(logicalId: String) : Resource<AWSSSMResourceDataSyn
         fun bucketPrefix(value: IntrinsicFunction) {
           this.bucketPrefix = value
         }
-        
+
         /**
          * [bucketRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-bucketregion)
          *
@@ -106,7 +106,7 @@ class AWSSSMResourceDataSync(logicalId: String) : Resource<AWSSSMResourceDataSyn
         fun bucketRegion(value: IntrinsicFunction) {
           this.bucketRegion = value
         }
-        
+
         /**
          * [kMSKeyArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-kmskeyarn)
          *
@@ -138,7 +138,7 @@ class AWSSSMResourceDataSync(logicalId: String) : Resource<AWSSSMResourceDataSyn
         fun kMSKeyArn(value: IntrinsicFunction) {
           this.kMSKeyArn = value
         }
-        
+
         /**
          * [syncFormat](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncformat)
          *
@@ -170,7 +170,7 @@ class AWSSSMResourceDataSync(logicalId: String) : Resource<AWSSSMResourceDataSyn
         fun syncFormat(value: IntrinsicFunction) {
           this.syncFormat = value
         }
-        
+
         /**
          * [syncName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname)
          *
@@ -202,7 +202,8 @@ class AWSSSMResourceDataSync(logicalId: String) : Resource<AWSSSMResourceDataSyn
         fun syncName(value: IntrinsicFunction) {
           this.syncName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun actionsEnabled(value: IntrinsicFunction) {
           this.actionsEnabled = value
         }
-        
+
         /**
          * [alarmActions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmactions)
          *
@@ -74,7 +74,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun alarmActions(vararg value: IntrinsicFunction) {
           this.alarmActions = value
         }
-        
+
         /**
          * [alarmDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmdescription)
          *
@@ -106,7 +106,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun alarmDescription(value: IntrinsicFunction) {
           this.alarmDescription = value
         }
-        
+
         /**
          * [alarmName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmname)
          *
@@ -138,7 +138,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun alarmName(value: IntrinsicFunction) {
           this.alarmName = value
         }
-        
+
         /**
          * [comparisonOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-comparisonoperator)
          *
@@ -170,7 +170,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun comparisonOperator(value: IntrinsicFunction) {
           this.comparisonOperator = value
         }
-        
+
         /**
          * [dimensions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-dimension)
          *
@@ -202,7 +202,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun dimensions(vararg value: IntrinsicFunction) {
           this.dimensions = value
         }
-        
+
         /**
          * [evaluateLowSampleCountPercentile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile)
          *
@@ -234,7 +234,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun evaluateLowSampleCountPercentile(value: IntrinsicFunction) {
           this.evaluateLowSampleCountPercentile = value
         }
-        
+
         /**
          * [evaluationPeriods](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluationperiods)
          *
@@ -266,7 +266,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun evaluationPeriods(value: IntrinsicFunction) {
           this.evaluationPeriods = value
         }
-        
+
         /**
          * [extendedStatistic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-extendedstatistic)
          *
@@ -298,7 +298,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun extendedStatistic(value: IntrinsicFunction) {
           this.extendedStatistic = value
         }
-        
+
         /**
          * [insufficientDataActions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-insufficientdataactions)
          *
@@ -330,7 +330,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun insufficientDataActions(vararg value: IntrinsicFunction) {
           this.insufficientDataActions = value
         }
-        
+
         /**
          * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-metricname)
          *
@@ -362,7 +362,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun metricName(value: IntrinsicFunction) {
           this.metricName = value
         }
-        
+
         /**
          * [namespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-namespace)
          *
@@ -394,7 +394,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun namespace(value: IntrinsicFunction) {
           this.namespace = value
         }
-        
+
         /**
          * [oKActions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-okactions)
          *
@@ -426,7 +426,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun oKActions(vararg value: IntrinsicFunction) {
           this.oKActions = value
         }
-        
+
         /**
          * [period](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-period)
          *
@@ -458,7 +458,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun period(value: IntrinsicFunction) {
           this.period = value
         }
-        
+
         /**
          * [statistic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-statistic)
          *
@@ -490,7 +490,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun statistic(value: IntrinsicFunction) {
           this.statistic = value
         }
-        
+
         /**
          * [threshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-threshold)
          *
@@ -522,7 +522,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun threshold(value: IntrinsicFunction) {
           this.threshold = value
         }
-        
+
         /**
          * [treatMissingData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-treatmissingdata)
          *
@@ -554,7 +554,7 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun treatMissingData(value: IntrinsicFunction) {
           this.treatMissingData = value
         }
-        
+
         /**
          * [unit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-unit)
          *
@@ -586,7 +586,15 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
         fun unit(value: IntrinsicFunction) {
           this.unit = value
         }
-        
+
+        /**
+        * [Dimension](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html)
+        */
+        fun dimension(init: Dimension.() -> Unit = {}): Dimension {
+            return Dimension().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -597,24 +605,71 @@ class AWSCloudWatchAlarm(logicalId: String) : Resource<AWSCloudWatchAlarm.Proper
     }
 
 
-    class Dimension(
+    @CloudFormationMarker
+    class Dimension {
             /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-name)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val name: String,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

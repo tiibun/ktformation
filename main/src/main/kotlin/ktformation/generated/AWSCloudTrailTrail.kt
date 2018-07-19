@@ -42,7 +42,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun cloudWatchLogsLogGroupArn(value: IntrinsicFunction) {
           this.cloudWatchLogsLogGroupArn = value
         }
-        
+
         /**
          * [cloudWatchLogsRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn)
          *
@@ -74,7 +74,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun cloudWatchLogsRoleArn(value: IntrinsicFunction) {
           this.cloudWatchLogsRoleArn = value
         }
-        
+
         /**
          * [enableLogFileValidation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-enablelogfilevalidation)
          *
@@ -106,7 +106,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun enableLogFileValidation(value: IntrinsicFunction) {
           this.enableLogFileValidation = value
         }
-        
+
         /**
          * [eventSelectors](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors)
          *
@@ -138,7 +138,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun eventSelectors(vararg value: IntrinsicFunction) {
           this.eventSelectors = value
         }
-        
+
         /**
          * [includeGlobalServiceEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-includeglobalserviceevents)
          *
@@ -170,7 +170,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun includeGlobalServiceEvents(value: IntrinsicFunction) {
           this.includeGlobalServiceEvents = value
         }
-        
+
         /**
          * [isLogging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-islogging)
          *
@@ -202,7 +202,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun isLogging(value: IntrinsicFunction) {
           this.isLogging = value
         }
-        
+
         /**
          * [isMultiRegionTrail](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-ismultiregiontrail)
          *
@@ -234,7 +234,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun isMultiRegionTrail(value: IntrinsicFunction) {
           this.isMultiRegionTrail = value
         }
-        
+
         /**
          * [kMSKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-kmskeyid)
          *
@@ -266,7 +266,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun kMSKeyId(value: IntrinsicFunction) {
           this.kMSKeyId = value
         }
-        
+
         /**
          * [s3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname)
          *
@@ -298,7 +298,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun s3BucketName(value: IntrinsicFunction) {
           this.s3BucketName = value
         }
-        
+
         /**
          * [s3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix)
          *
@@ -330,7 +330,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun s3KeyPrefix(value: IntrinsicFunction) {
           this.s3KeyPrefix = value
         }
-        
+
         /**
          * [snsTopicName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-snstopicname)
          *
@@ -362,7 +362,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun snsTopicName(value: IntrinsicFunction) {
           this.snsTopicName = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-tags)
          *
@@ -394,7 +394,7 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [trailName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-trailname)
          *
@@ -426,7 +426,23 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
         fun trailName(value: IntrinsicFunction) {
           this.trailName = value
         }
-        
+
+        /**
+        * [DataResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html)
+        */
+        fun dataResource(init: DataResource.() -> Unit = {}): DataResource {
+            return DataResource().also {
+                it.init()
+            }
+        }
+        /**
+        * [EventSelector](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html)
+        */
+        fun eventSelector(init: EventSelector.() -> Unit = {}): EventSelector {
+            return EventSelector().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -437,51 +453,168 @@ class AWSCloudTrailTrail(logicalId: String) : Resource<AWSCloudTrailTrail.Proper
     }
 
 
-    class DataResource(
+    @CloudFormationMarker
+    class DataResource {
             /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String,
-            /**
-             * [Values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-values)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val values: List<String>? = null
-    )
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
 
-    class EventSelector(
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var values: Any? = null
+
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun values(value: List<String>) {
+          this.values = value
+        }
+        
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun values(vararg value: IntrinsicFunction) {
+          this.values = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class EventSelector {
             /**
-             * [DataResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<DataResource>
-             */
-            val dataResources: List<DataResource>? = null,
-            /**
-             * [IncludeManagementEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val includeManagementEvents: Boolean? = null,
-            /**
-             * [ReadWriteType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val readWriteType: String? = null
-    )
+         * [dataResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<DataResource>
+         */
+        var dataResources: Any? = null
+
+        /**
+         * [dataResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<DataResource>
+         */
+        fun dataResources(value: List<DataResource>) {
+          this.dataResources = value
+        }
+        
+        /**
+         * [dataResources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<DataResource>
+         */
+        fun dataResources(vararg value: IntrinsicFunction) {
+          this.dataResources = value
+        }
+
+        /**
+         * [includeManagementEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var includeManagementEvents: Any? = null
+
+        /**
+         * [includeManagementEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun includeManagementEvents(value: Boolean) {
+          this.includeManagementEvents = value
+        }
+        
+        /**
+         * [includeManagementEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun includeManagementEvents(value: IntrinsicFunction) {
+          this.includeManagementEvents = value
+        }
+
+        /**
+         * [readWriteType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var readWriteType: Any? = null
+
+        /**
+         * [readWriteType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun readWriteType(value: String) {
+          this.readWriteType = value
+        }
+        
+        /**
+         * [readWriteType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun readWriteType(value: IntrinsicFunction) {
+          this.readWriteType = value
+        }
+
+    }
 
 }
 

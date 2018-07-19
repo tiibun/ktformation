@@ -42,7 +42,7 @@ class AWSLogsMetricFilter(logicalId: String) : Resource<AWSLogsMetricFilter.Prop
         fun filterPattern(value: IntrinsicFunction) {
           this.filterPattern = value
         }
-        
+
         /**
          * [logGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-loggroupname)
          *
@@ -74,7 +74,7 @@ class AWSLogsMetricFilter(logicalId: String) : Resource<AWSLogsMetricFilter.Prop
         fun logGroupName(value: IntrinsicFunction) {
           this.logGroupName = value
         }
-        
+
         /**
          * [metricTransformations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-metrictransformations)
          *
@@ -106,7 +106,15 @@ class AWSLogsMetricFilter(logicalId: String) : Resource<AWSLogsMetricFilter.Prop
         fun metricTransformations(vararg value: IntrinsicFunction) {
           this.metricTransformations = value
         }
-        
+
+        /**
+        * [MetricTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html)
+        */
+        fun metricTransformation(init: MetricTransformation.() -> Unit = {}): MetricTransformation {
+            return MetricTransformation().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,40 +125,133 @@ class AWSLogsMetricFilter(logicalId: String) : Resource<AWSLogsMetricFilter.Prop
     }
 
 
-    class MetricTransformation(
+    @CloudFormationMarker
+    class MetricTransformation {
             /**
-             * [DefaultValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-defaultvalue)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val defaultValue: Double? = null,
-            /**
-             * [MetricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val metricName: String,
-            /**
-             * [MetricNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricnamespace)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val metricNamespace: String,
-            /**
-             * [MetricValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricvalue)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val metricValue: String
-    )
+         * [defaultValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-defaultvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var defaultValue: Any? = null
+
+        /**
+         * [defaultValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-defaultvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun defaultValue(value: Double) {
+          this.defaultValue = value
+        }
+        
+        /**
+         * [defaultValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-defaultvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun defaultValue(value: IntrinsicFunction) {
+          this.defaultValue = value
+        }
+
+        /**
+         * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var metricName: Any? = null
+
+        /**
+         * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricName(value: String) {
+          this.metricName = value
+        }
+        
+        /**
+         * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricName(value: IntrinsicFunction) {
+          this.metricName = value
+        }
+
+        /**
+         * [metricNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricnamespace)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var metricNamespace: Any? = null
+
+        /**
+         * [metricNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricnamespace)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricNamespace(value: String) {
+          this.metricNamespace = value
+        }
+        
+        /**
+         * [metricNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricnamespace)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricNamespace(value: IntrinsicFunction) {
+          this.metricNamespace = value
+        }
+
+        /**
+         * [metricValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var metricValue: Any? = null
+
+        /**
+         * [metricValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricValue(value: String) {
+          this.metricValue = value
+        }
+        
+        /**
+         * [metricValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricValue(value: IntrinsicFunction) {
+          this.metricValue = value
+        }
+
+    }
 
 }
 

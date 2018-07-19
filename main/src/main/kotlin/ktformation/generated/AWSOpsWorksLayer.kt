@@ -63,7 +63,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun autoAssignElasticIps(value: IntrinsicFunction) {
           this.autoAssignElasticIps = value
         }
-        
+
         /**
          * [autoAssignPublicIps](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-autoassignpublicips)
          *
@@ -95,7 +95,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun autoAssignPublicIps(value: IntrinsicFunction) {
           this.autoAssignPublicIps = value
         }
-        
+
         /**
          * [customInstanceProfileArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-custominstanceprofilearn)
          *
@@ -127,7 +127,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun customInstanceProfileArn(value: IntrinsicFunction) {
           this.customInstanceProfileArn = value
         }
-        
+
         /**
          * [customJson](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customjson)
          *
@@ -159,7 +159,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun customJson(value: IntrinsicFunction) {
           this.customJson = value
         }
-        
+
         /**
          * [customRecipes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customrecipes)
          *
@@ -191,7 +191,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun customRecipes(value: IntrinsicFunction) {
           this.customRecipes = value
         }
-        
+
         /**
          * [customSecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customsecuritygroupids)
          *
@@ -223,7 +223,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun customSecurityGroupIds(vararg value: IntrinsicFunction) {
           this.customSecurityGroupIds = value
         }
-        
+
         /**
          * [enableAutoHealing](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-enableautohealing)
          *
@@ -255,7 +255,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun enableAutoHealing(value: IntrinsicFunction) {
           this.enableAutoHealing = value
         }
-        
+
         /**
          * [installUpdatesOnBoot](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-installupdatesonboot)
          *
@@ -287,7 +287,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun installUpdatesOnBoot(value: IntrinsicFunction) {
           this.installUpdatesOnBoot = value
         }
-        
+
         /**
          * [lifecycleEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-lifecycleeventconfiguration)
          *
@@ -319,7 +319,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun lifecycleEventConfiguration(value: IntrinsicFunction) {
           this.lifecycleEventConfiguration = value
         }
-        
+
         /**
          * [loadBasedAutoScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-loadbasedautoscaling)
          *
@@ -351,7 +351,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun loadBasedAutoScaling(value: IntrinsicFunction) {
           this.loadBasedAutoScaling = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-name)
          *
@@ -383,7 +383,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [packages](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-packages)
          *
@@ -415,7 +415,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun packages(vararg value: IntrinsicFunction) {
           this.packages = value
         }
-        
+
         /**
          * [shortname](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-shortname)
          *
@@ -447,7 +447,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun shortname(value: IntrinsicFunction) {
           this.shortname = value
         }
-        
+
         /**
          * [stackId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-stackid)
          *
@@ -479,7 +479,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun stackId(value: IntrinsicFunction) {
           this.stackId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-tags)
          *
@@ -511,7 +511,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-type)
          *
@@ -543,7 +543,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
         /**
          * [useEbsOptimizedInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-useebsoptimizedinstances)
          *
@@ -575,7 +575,7 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun useEbsOptimizedInstances(value: IntrinsicFunction) {
           this.useEbsOptimizedInstances = value
         }
-        
+
         /**
          * [volumeConfigurations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-volumeconfigurations)
          *
@@ -607,7 +607,55 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
         fun volumeConfigurations(vararg value: IntrinsicFunction) {
           this.volumeConfigurations = value
         }
-        
+
+        /**
+        * [AutoScalingThresholds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html)
+        */
+        fun autoScalingThresholds(init: AutoScalingThresholds.() -> Unit = {}): AutoScalingThresholds {
+            return AutoScalingThresholds().also {
+                it.init()
+            }
+        }
+        /**
+        * [LifecycleEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html)
+        */
+        fun lifecycleEventConfiguration(init: LifecycleEventConfiguration.() -> Unit = {}): LifecycleEventConfiguration {
+            return LifecycleEventConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [LoadBasedAutoScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html)
+        */
+        fun loadBasedAutoScaling(init: LoadBasedAutoScaling.() -> Unit = {}): LoadBasedAutoScaling {
+            return LoadBasedAutoScaling().also {
+                it.init()
+            }
+        }
+        /**
+        * [Recipes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html)
+        */
+        fun recipes(init: Recipes.() -> Unit = {}): Recipes {
+            return Recipes().also {
+                it.init()
+            }
+        }
+        /**
+        * [ShutdownEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html)
+        */
+        fun shutdownEventConfiguration(init: ShutdownEventConfiguration.() -> Unit = {}): ShutdownEventConfiguration {
+            return ShutdownEventConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [VolumeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html)
+        */
+        fun volumeConfiguration(init: VolumeConfiguration.() -> Unit = {}): VolumeConfiguration {
+            return VolumeConfiguration().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -618,207 +666,742 @@ class AWSOpsWorksLayer(logicalId: String) : Resource<AWSOpsWorksLayer.Properties
     }
 
 
-    class AutoScalingThresholds(
+    @CloudFormationMarker
+    class AutoScalingThresholds {
             /**
-             * [CpuThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val cpuThreshold: Double? = null,
-            /**
-             * [IgnoreMetricsTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val ignoreMetricsTime: Int? = null,
-            /**
-             * [InstanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val instanceCount: Int? = null,
-            /**
-             * [LoadThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val loadThreshold: Double? = null,
-            /**
-             * [MemoryThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val memoryThreshold: Double? = null,
-            /**
-             * [ThresholdsWaitTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val thresholdsWaitTime: Int? = null
-    )
+         * [cpuThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var cpuThreshold: Any? = null
 
-    class LifecycleEventConfiguration(
-            /**
-             * [ShutdownEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)
-             *
-             * _Required_: no
-             *
-             * _Type_: ShutdownEventConfiguration
-             */
-            val shutdownEventConfiguration: ShutdownEventConfiguration? = null
-    )
+        /**
+         * [cpuThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun cpuThreshold(value: Double) {
+          this.cpuThreshold = value
+        }
+        
+        /**
+         * [cpuThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun cpuThreshold(value: IntrinsicFunction) {
+          this.cpuThreshold = value
+        }
 
-    class LoadBasedAutoScaling(
-            /**
-             * [DownScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
-             *
-             * _Required_: no
-             *
-             * _Type_: AutoScalingThresholds
-             */
-            val downScaling: AutoScalingThresholds? = null,
-            /**
-             * [Enable](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val enable: Boolean? = null,
-            /**
-             * [UpScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
-             *
-             * _Required_: no
-             *
-             * _Type_: AutoScalingThresholds
-             */
-            val upScaling: AutoScalingThresholds? = null
-    )
+        /**
+         * [ignoreMetricsTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var ignoreMetricsTime: Any? = null
 
-    class Recipes(
-            /**
-             * [Configure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val configure: List<String>? = null,
-            /**
-             * [Deploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val deploy: List<String>? = null,
-            /**
-             * [Setup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val setup: List<String>? = null,
-            /**
-             * [Shutdown](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val shutdown: List<String>? = null,
-            /**
-             * [Undeploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val undeploy: List<String>? = null
-    )
+        /**
+         * [ignoreMetricsTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun ignoreMetricsTime(value: Int) {
+          this.ignoreMetricsTime = value
+        }
+        
+        /**
+         * [ignoreMetricsTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun ignoreMetricsTime(value: IntrinsicFunction) {
+          this.ignoreMetricsTime = value
+        }
 
-    class ShutdownEventConfiguration(
-            /**
-             * [DelayUntilElbConnectionsDrained](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val delayUntilElbConnectionsDrained: Boolean? = null,
-            /**
-             * [ExecutionTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val executionTimeout: Int? = null
-    )
+        /**
+         * [instanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var instanceCount: Any? = null
 
-    class VolumeConfiguration(
+        /**
+         * [instanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun instanceCount(value: Int) {
+          this.instanceCount = value
+        }
+        
+        /**
+         * [instanceCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun instanceCount(value: IntrinsicFunction) {
+          this.instanceCount = value
+        }
+
+        /**
+         * [loadThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var loadThreshold: Any? = null
+
+        /**
+         * [loadThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun loadThreshold(value: Double) {
+          this.loadThreshold = value
+        }
+        
+        /**
+         * [loadThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun loadThreshold(value: IntrinsicFunction) {
+          this.loadThreshold = value
+        }
+
+        /**
+         * [memoryThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var memoryThreshold: Any? = null
+
+        /**
+         * [memoryThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun memoryThreshold(value: Double) {
+          this.memoryThreshold = value
+        }
+        
+        /**
+         * [memoryThreshold](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun memoryThreshold(value: IntrinsicFunction) {
+          this.memoryThreshold = value
+        }
+
+        /**
+         * [thresholdsWaitTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var thresholdsWaitTime: Any? = null
+
+        /**
+         * [thresholdsWaitTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun thresholdsWaitTime(value: Int) {
+          this.thresholdsWaitTime = value
+        }
+        
+        /**
+         * [thresholdsWaitTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun thresholdsWaitTime(value: IntrinsicFunction) {
+          this.thresholdsWaitTime = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LifecycleEventConfiguration {
             /**
-             * [Iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val iops: Int? = null,
+         * [shutdownEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: ShutdownEventConfiguration
+         */
+        var shutdownEventConfiguration: Any? = null
+
+        /**
+         * [shutdownEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: ShutdownEventConfiguration
+         */
+        fun shutdownEventConfiguration(value: ShutdownEventConfiguration) {
+          this.shutdownEventConfiguration = value
+        }
+        
+        /**
+         * [shutdownEventConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: ShutdownEventConfiguration
+         */
+        fun shutdownEventConfiguration(value: IntrinsicFunction) {
+          this.shutdownEventConfiguration = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LoadBasedAutoScaling {
             /**
-             * [MountPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val mountPoint: String? = null,
+         * [downScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+         *
+         * _Required_: no
+         *
+         * _Type_: AutoScalingThresholds
+         */
+        var downScaling: Any? = null
+
+        /**
+         * [downScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+         *
+         * _Required_: no
+         *
+         * _Type_: AutoScalingThresholds
+         */
+        fun downScaling(value: AutoScalingThresholds) {
+          this.downScaling = value
+        }
+        
+        /**
+         * [downScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+         *
+         * _Required_: no
+         *
+         * _Type_: AutoScalingThresholds
+         */
+        fun downScaling(value: IntrinsicFunction) {
+          this.downScaling = value
+        }
+
+        /**
+         * [enable](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var enable: Any? = null
+
+        /**
+         * [enable](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enable(value: Boolean) {
+          this.enable = value
+        }
+        
+        /**
+         * [enable](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enable(value: IntrinsicFunction) {
+          this.enable = value
+        }
+
+        /**
+         * [upScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
+         *
+         * _Required_: no
+         *
+         * _Type_: AutoScalingThresholds
+         */
+        var upScaling: Any? = null
+
+        /**
+         * [upScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
+         *
+         * _Required_: no
+         *
+         * _Type_: AutoScalingThresholds
+         */
+        fun upScaling(value: AutoScalingThresholds) {
+          this.upScaling = value
+        }
+        
+        /**
+         * [upScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
+         *
+         * _Required_: no
+         *
+         * _Type_: AutoScalingThresholds
+         */
+        fun upScaling(value: IntrinsicFunction) {
+          this.upScaling = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Recipes {
             /**
-             * [NumberOfDisks](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-numberofdisks)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val numberOfDisks: Int? = null,
+         * [configure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var configure: Any? = null
+
+        /**
+         * [configure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun configure(value: List<String>) {
+          this.configure = value
+        }
+        
+        /**
+         * [configure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun configure(vararg value: IntrinsicFunction) {
+          this.configure = value
+        }
+
+        /**
+         * [deploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var deploy: Any? = null
+
+        /**
+         * [deploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun deploy(value: List<String>) {
+          this.deploy = value
+        }
+        
+        /**
+         * [deploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun deploy(vararg value: IntrinsicFunction) {
+          this.deploy = value
+        }
+
+        /**
+         * [setup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var setup: Any? = null
+
+        /**
+         * [setup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun setup(value: List<String>) {
+          this.setup = value
+        }
+        
+        /**
+         * [setup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun setup(vararg value: IntrinsicFunction) {
+          this.setup = value
+        }
+
+        /**
+         * [shutdown](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var shutdown: Any? = null
+
+        /**
+         * [shutdown](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun shutdown(value: List<String>) {
+          this.shutdown = value
+        }
+        
+        /**
+         * [shutdown](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun shutdown(vararg value: IntrinsicFunction) {
+          this.shutdown = value
+        }
+
+        /**
+         * [undeploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var undeploy: Any? = null
+
+        /**
+         * [undeploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun undeploy(value: List<String>) {
+          this.undeploy = value
+        }
+        
+        /**
+         * [undeploy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun undeploy(vararg value: IntrinsicFunction) {
+          this.undeploy = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ShutdownEventConfiguration {
             /**
-             * [RaidLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-raidlevel)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val raidLevel: Int? = null,
+         * [delayUntilElbConnectionsDrained](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var delayUntilElbConnectionsDrained: Any? = null
+
+        /**
+         * [delayUntilElbConnectionsDrained](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun delayUntilElbConnectionsDrained(value: Boolean) {
+          this.delayUntilElbConnectionsDrained = value
+        }
+        
+        /**
+         * [delayUntilElbConnectionsDrained](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun delayUntilElbConnectionsDrained(value: IntrinsicFunction) {
+          this.delayUntilElbConnectionsDrained = value
+        }
+
+        /**
+         * [executionTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var executionTimeout: Any? = null
+
+        /**
+         * [executionTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun executionTimeout(value: Int) {
+          this.executionTimeout = value
+        }
+        
+        /**
+         * [executionTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun executionTimeout(value: IntrinsicFunction) {
+          this.executionTimeout = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class VolumeConfiguration {
             /**
-             * [Size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-size)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val size: Int? = null,
-            /**
-             * [VolumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val volumeType: String? = null
-    )
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var iops: Any? = null
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: Int) {
+          this.iops = value
+        }
+        
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: IntrinsicFunction) {
+          this.iops = value
+        }
+
+        /**
+         * [mountPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var mountPoint: Any? = null
+
+        /**
+         * [mountPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun mountPoint(value: String) {
+          this.mountPoint = value
+        }
+        
+        /**
+         * [mountPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun mountPoint(value: IntrinsicFunction) {
+          this.mountPoint = value
+        }
+
+        /**
+         * [numberOfDisks](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-numberofdisks)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var numberOfDisks: Any? = null
+
+        /**
+         * [numberOfDisks](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-numberofdisks)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun numberOfDisks(value: Int) {
+          this.numberOfDisks = value
+        }
+        
+        /**
+         * [numberOfDisks](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-numberofdisks)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun numberOfDisks(value: IntrinsicFunction) {
+          this.numberOfDisks = value
+        }
+
+        /**
+         * [raidLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-raidlevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var raidLevel: Any? = null
+
+        /**
+         * [raidLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-raidlevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun raidLevel(value: Int) {
+          this.raidLevel = value
+        }
+        
+        /**
+         * [raidLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-raidlevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun raidLevel(value: IntrinsicFunction) {
+          this.raidLevel = value
+        }
+
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-size)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var size: Any? = null
+
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-size)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun size(value: Int) {
+          this.size = value
+        }
+        
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-size)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun size(value: IntrinsicFunction) {
+          this.size = value
+        }
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var volumeType: Any? = null
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: String) {
+          this.volumeType = value
+        }
+        
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: IntrinsicFunction) {
+          this.volumeType = value
+        }
+
+    }
 
 }
 

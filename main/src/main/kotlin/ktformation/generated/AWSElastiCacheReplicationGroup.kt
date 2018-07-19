@@ -42,7 +42,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun atRestEncryptionEnabled(value: IntrinsicFunction) {
           this.atRestEncryptionEnabled = value
         }
-        
+
         /**
          * [authToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-authtoken)
          *
@@ -74,7 +74,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun authToken(value: IntrinsicFunction) {
           this.authToken = value
         }
-        
+
         /**
          * [autoMinorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade)
          *
@@ -106,7 +106,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun autoMinorVersionUpgrade(value: IntrinsicFunction) {
           this.autoMinorVersionUpgrade = value
         }
-        
+
         /**
          * [automaticFailoverEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-automaticfailoverenabled)
          *
@@ -138,7 +138,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun automaticFailoverEnabled(value: IntrinsicFunction) {
           this.automaticFailoverEnabled = value
         }
-        
+
         /**
          * [cacheNodeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachenodetype)
          *
@@ -170,7 +170,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun cacheNodeType(value: IntrinsicFunction) {
           this.cacheNodeType = value
         }
-        
+
         /**
          * [cacheParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cacheparametergroupname)
          *
@@ -202,7 +202,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun cacheParameterGroupName(value: IntrinsicFunction) {
           this.cacheParameterGroupName = value
         }
-        
+
         /**
          * [cacheSecurityGroupNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachesecuritygroupnames)
          *
@@ -234,7 +234,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun cacheSecurityGroupNames(vararg value: IntrinsicFunction) {
           this.cacheSecurityGroupNames = value
         }
-        
+
         /**
          * [cacheSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachesubnetgroupname)
          *
@@ -266,7 +266,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun cacheSubnetGroupName(value: IntrinsicFunction) {
           this.cacheSubnetGroupName = value
         }
-        
+
         /**
          * [engine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engine)
          *
@@ -298,7 +298,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun engine(value: IntrinsicFunction) {
           this.engine = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engineversion)
          *
@@ -330,7 +330,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [nodeGroupConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
          *
@@ -362,7 +362,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun nodeGroupConfiguration(vararg value: IntrinsicFunction) {
           this.nodeGroupConfiguration = value
         }
-        
+
         /**
          * [notificationTopicArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-notificationtopicarn)
          *
@@ -394,7 +394,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun notificationTopicArn(value: IntrinsicFunction) {
           this.notificationTopicArn = value
         }
-        
+
         /**
          * [numCacheClusters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numcacheclusters)
          *
@@ -426,7 +426,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun numCacheClusters(value: IntrinsicFunction) {
           this.numCacheClusters = value
         }
-        
+
         /**
          * [numNodeGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numnodegroups)
          *
@@ -458,7 +458,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun numNodeGroups(value: IntrinsicFunction) {
           this.numNodeGroups = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-port)
          *
@@ -490,7 +490,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [preferredCacheClusterAZs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-preferredcacheclusterazs)
          *
@@ -522,7 +522,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun preferredCacheClusterAZs(vararg value: IntrinsicFunction) {
           this.preferredCacheClusterAZs = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-preferredmaintenancewindow)
          *
@@ -554,7 +554,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [primaryClusterId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-primaryclusterid)
          *
@@ -586,7 +586,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun primaryClusterId(value: IntrinsicFunction) {
           this.primaryClusterId = value
         }
-        
+
         /**
          * [replicasPerNodeGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicaspernodegroup)
          *
@@ -618,7 +618,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun replicasPerNodeGroup(value: IntrinsicFunction) {
           this.replicasPerNodeGroup = value
         }
-        
+
         /**
          * [replicationGroupDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupdescription)
          *
@@ -650,7 +650,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun replicationGroupDescription(value: IntrinsicFunction) {
           this.replicationGroupDescription = value
         }
-        
+
         /**
          * [replicationGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupid)
          *
@@ -682,7 +682,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun replicationGroupId(value: IntrinsicFunction) {
           this.replicationGroupId = value
         }
-        
+
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-securitygroupids)
          *
@@ -714,7 +714,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun securityGroupIds(vararg value: IntrinsicFunction) {
           this.securityGroupIds = value
         }
-        
+
         /**
          * [snapshotArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns)
          *
@@ -746,7 +746,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun snapshotArns(vararg value: IntrinsicFunction) {
           this.snapshotArns = value
         }
-        
+
         /**
          * [snapshotName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotname)
          *
@@ -778,7 +778,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun snapshotName(value: IntrinsicFunction) {
           this.snapshotName = value
         }
-        
+
         /**
          * [snapshotRetentionLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotretentionlimit)
          *
@@ -810,7 +810,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun snapshotRetentionLimit(value: IntrinsicFunction) {
           this.snapshotRetentionLimit = value
         }
-        
+
         /**
          * [snapshotWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotwindow)
          *
@@ -842,7 +842,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun snapshotWindow(value: IntrinsicFunction) {
           this.snapshotWindow = value
         }
-        
+
         /**
          * [snapshottingClusterId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshottingclusterid)
          *
@@ -874,7 +874,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun snapshottingClusterId(value: IntrinsicFunction) {
           this.snapshottingClusterId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-tags)
          *
@@ -906,7 +906,7 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [transitEncryptionEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-transitencryptionenabled)
          *
@@ -938,7 +938,15 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
         fun transitEncryptionEnabled(value: IntrinsicFunction) {
           this.transitEncryptionEnabled = value
         }
-        
+
+        /**
+        * [NodeGroupConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html)
+        */
+        fun nodeGroupConfiguration(init: NodeGroupConfiguration.() -> Unit = {}): NodeGroupConfiguration {
+            return NodeGroupConfiguration().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -949,40 +957,133 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
     }
 
 
-    class NodeGroupConfiguration(
+    @CloudFormationMarker
+    class NodeGroupConfiguration {
             /**
-             * [PrimaryAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val primaryAvailabilityZone: String? = null,
-            /**
-             * [ReplicaAvailabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val replicaAvailabilityZones: List<String>? = null,
-            /**
-             * [ReplicaCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val replicaCount: Int? = null,
-            /**
-             * [Slots](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val slots: String? = null
-    )
+         * [primaryAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var primaryAvailabilityZone: Any? = null
+
+        /**
+         * [primaryAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun primaryAvailabilityZone(value: String) {
+          this.primaryAvailabilityZone = value
+        }
+        
+        /**
+         * [primaryAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun primaryAvailabilityZone(value: IntrinsicFunction) {
+          this.primaryAvailabilityZone = value
+        }
+
+        /**
+         * [replicaAvailabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var replicaAvailabilityZones: Any? = null
+
+        /**
+         * [replicaAvailabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun replicaAvailabilityZones(value: List<String>) {
+          this.replicaAvailabilityZones = value
+        }
+        
+        /**
+         * [replicaAvailabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun replicaAvailabilityZones(vararg value: IntrinsicFunction) {
+          this.replicaAvailabilityZones = value
+        }
+
+        /**
+         * [replicaCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var replicaCount: Any? = null
+
+        /**
+         * [replicaCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun replicaCount(value: Int) {
+          this.replicaCount = value
+        }
+        
+        /**
+         * [replicaCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun replicaCount(value: IntrinsicFunction) {
+          this.replicaCount = value
+        }
+
+        /**
+         * [slots](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var slots: Any? = null
+
+        /**
+         * [slots](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun slots(value: String) {
+          this.slots = value
+        }
+        
+        /**
+         * [slots](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun slots(value: IntrinsicFunction) {
+          this.slots = value
+        }
+
+    }
 
 }
 

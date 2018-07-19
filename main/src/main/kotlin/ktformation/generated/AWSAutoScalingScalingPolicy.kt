@@ -42,7 +42,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun adjustmentType(value: IntrinsicFunction) {
           this.adjustmentType = value
         }
-        
+
         /**
          * [autoScalingGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-autoscalinggroupname)
          *
@@ -74,7 +74,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun autoScalingGroupName(value: IntrinsicFunction) {
           this.autoScalingGroupName = value
         }
-        
+
         /**
          * [cooldown](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-cooldown)
          *
@@ -106,7 +106,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun cooldown(value: IntrinsicFunction) {
           this.cooldown = value
         }
-        
+
         /**
          * [estimatedInstanceWarmup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-estimatedinstancewarmup)
          *
@@ -138,7 +138,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun estimatedInstanceWarmup(value: IntrinsicFunction) {
           this.estimatedInstanceWarmup = value
         }
-        
+
         /**
          * [metricAggregationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-metricaggregationtype)
          *
@@ -170,7 +170,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun metricAggregationType(value: IntrinsicFunction) {
           this.metricAggregationType = value
         }
-        
+
         /**
          * [minAdjustmentMagnitude](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-minadjustmentmagnitude)
          *
@@ -202,7 +202,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun minAdjustmentMagnitude(value: IntrinsicFunction) {
           this.minAdjustmentMagnitude = value
         }
-        
+
         /**
          * [policyType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-policytype)
          *
@@ -234,7 +234,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun policyType(value: IntrinsicFunction) {
           this.policyType = value
         }
-        
+
         /**
          * [scalingAdjustment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-scalingadjustment)
          *
@@ -266,7 +266,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun scalingAdjustment(value: IntrinsicFunction) {
           this.scalingAdjustment = value
         }
-        
+
         /**
          * [stepAdjustments](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-stepadjustments)
          *
@@ -298,7 +298,7 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun stepAdjustments(vararg value: IntrinsicFunction) {
           this.stepAdjustments = value
         }
-        
+
         /**
          * [targetTrackingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration)
          *
@@ -330,7 +330,47 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
         fun targetTrackingConfiguration(value: IntrinsicFunction) {
           this.targetTrackingConfiguration = value
         }
-        
+
+        /**
+        * [CustomizedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html)
+        */
+        fun customizedMetricSpecification(init: CustomizedMetricSpecification.() -> Unit = {}): CustomizedMetricSpecification {
+            return CustomizedMetricSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [MetricDimension](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html)
+        */
+        fun metricDimension(init: MetricDimension.() -> Unit = {}): MetricDimension {
+            return MetricDimension().also {
+                it.init()
+            }
+        }
+        /**
+        * [PredefinedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html)
+        */
+        fun predefinedMetricSpecification(init: PredefinedMetricSpecification.() -> Unit = {}): PredefinedMetricSpecification {
+            return PredefinedMetricSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [StepAdjustment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html)
+        */
+        fun stepAdjustment(init: StepAdjustment.() -> Unit = {}): StepAdjustment {
+            return StepAdjustment().also {
+                it.init()
+            }
+        }
+        /**
+        * [TargetTrackingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html)
+        */
+        fun targetTrackingConfiguration(init: TargetTrackingConfiguration.() -> Unit = {}): TargetTrackingConfiguration {
+            return TargetTrackingConfiguration().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -341,148 +381,521 @@ class AWSAutoScalingScalingPolicy(logicalId: String) : Resource<AWSAutoScalingSc
     }
 
 
-    class CustomizedMetricSpecification(
+    @CloudFormationMarker
+    class CustomizedMetricSpecification {
             /**
-             * [Dimensions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<MetricDimension>
-             */
-            val dimensions: List<MetricDimension>? = null,
-            /**
-             * [MetricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val metricName: String,
-            /**
-             * [Namespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val namespace: String,
-            /**
-             * [Statistic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val statistic: String,
-            /**
-             * [Unit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val unit: String? = null
-    )
+         * [dimensions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<MetricDimension>
+         */
+        var dimensions: Any? = null
 
-    class MetricDimension(
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val name: String,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+        /**
+         * [dimensions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<MetricDimension>
+         */
+        fun dimensions(value: List<MetricDimension>) {
+          this.dimensions = value
+        }
+        
+        /**
+         * [dimensions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<MetricDimension>
+         */
+        fun dimensions(vararg value: IntrinsicFunction) {
+          this.dimensions = value
+        }
 
-    class PredefinedMetricSpecification(
-            /**
-             * [PredefinedMetricType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val predefinedMetricType: String,
-            /**
-             * [ResourceLabel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val resourceLabel: String? = null
-    )
+        /**
+         * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var metricName: Any? = null
 
-    class StepAdjustment(
-            /**
-             * [MetricIntervalLowerBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val metricIntervalLowerBound: Double? = null,
-            /**
-             * [MetricIntervalUpperBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val metricIntervalUpperBound: Double? = null,
-            /**
-             * [ScalingAdjustment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val scalingAdjustment: Int
-    )
+        /**
+         * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricName(value: String) {
+          this.metricName = value
+        }
+        
+        /**
+         * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun metricName(value: IntrinsicFunction) {
+          this.metricName = value
+        }
 
-    class TargetTrackingConfiguration(
+        /**
+         * [namespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var namespace: Any? = null
+
+        /**
+         * [namespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun namespace(value: String) {
+          this.namespace = value
+        }
+        
+        /**
+         * [namespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun namespace(value: IntrinsicFunction) {
+          this.namespace = value
+        }
+
+        /**
+         * [statistic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var statistic: Any? = null
+
+        /**
+         * [statistic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun statistic(value: String) {
+          this.statistic = value
+        }
+        
+        /**
+         * [statistic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun statistic(value: IntrinsicFunction) {
+          this.statistic = value
+        }
+
+        /**
+         * [unit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var unit: Any? = null
+
+        /**
+         * [unit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun unit(value: String) {
+          this.unit = value
+        }
+        
+        /**
+         * [unit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun unit(value: IntrinsicFunction) {
+          this.unit = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MetricDimension {
             /**
-             * [CustomizedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
-             *
-             * _Required_: no
-             *
-             * _Type_: CustomizedMetricSpecification
-             */
-            val customizedMetricSpecification: CustomizedMetricSpecification? = null,
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PredefinedMetricSpecification {
             /**
-             * [DisableScaleIn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val disableScaleIn: Boolean? = null,
+         * [predefinedMetricType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var predefinedMetricType: Any? = null
+
+        /**
+         * [predefinedMetricType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun predefinedMetricType(value: String) {
+          this.predefinedMetricType = value
+        }
+        
+        /**
+         * [predefinedMetricType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-predefinedmetrictype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun predefinedMetricType(value: IntrinsicFunction) {
+          this.predefinedMetricType = value
+        }
+
+        /**
+         * [resourceLabel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var resourceLabel: Any? = null
+
+        /**
+         * [resourceLabel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resourceLabel(value: String) {
+          this.resourceLabel = value
+        }
+        
+        /**
+         * [resourceLabel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html#cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resourceLabel(value: IntrinsicFunction) {
+          this.resourceLabel = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class StepAdjustment {
             /**
-             * [PredefinedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
-             *
-             * _Required_: no
-             *
-             * _Type_: PredefinedMetricSpecification
-             */
-            val predefinedMetricSpecification: PredefinedMetricSpecification? = null,
+         * [metricIntervalLowerBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var metricIntervalLowerBound: Any? = null
+
+        /**
+         * [metricIntervalLowerBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun metricIntervalLowerBound(value: Double) {
+          this.metricIntervalLowerBound = value
+        }
+        
+        /**
+         * [metricIntervalLowerBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun metricIntervalLowerBound(value: IntrinsicFunction) {
+          this.metricIntervalLowerBound = value
+        }
+
+        /**
+         * [metricIntervalUpperBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var metricIntervalUpperBound: Any? = null
+
+        /**
+         * [metricIntervalUpperBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun metricIntervalUpperBound(value: Double) {
+          this.metricIntervalUpperBound = value
+        }
+        
+        /**
+         * [metricIntervalUpperBound](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun metricIntervalUpperBound(value: IntrinsicFunction) {
+          this.metricIntervalUpperBound = value
+        }
+
+        /**
+         * [scalingAdjustment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var scalingAdjustment: Any? = null
+
+        /**
+         * [scalingAdjustment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun scalingAdjustment(value: Int) {
+          this.scalingAdjustment = value
+        }
+        
+        /**
+         * [scalingAdjustment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun scalingAdjustment(value: IntrinsicFunction) {
+          this.scalingAdjustment = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TargetTrackingConfiguration {
             /**
-             * [TargetValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Double
-             */
-            val targetValue: Double
-    )
+         * [customizedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: CustomizedMetricSpecification
+         */
+        var customizedMetricSpecification: Any? = null
+
+        /**
+         * [customizedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: CustomizedMetricSpecification
+         */
+        fun customizedMetricSpecification(value: CustomizedMetricSpecification) {
+          this.customizedMetricSpecification = value
+        }
+        
+        /**
+         * [customizedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: CustomizedMetricSpecification
+         */
+        fun customizedMetricSpecification(value: IntrinsicFunction) {
+          this.customizedMetricSpecification = value
+        }
+
+        /**
+         * [disableScaleIn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var disableScaleIn: Any? = null
+
+        /**
+         * [disableScaleIn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun disableScaleIn(value: Boolean) {
+          this.disableScaleIn = value
+        }
+        
+        /**
+         * [disableScaleIn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun disableScaleIn(value: IntrinsicFunction) {
+          this.disableScaleIn = value
+        }
+
+        /**
+         * [predefinedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: PredefinedMetricSpecification
+         */
+        var predefinedMetricSpecification: Any? = null
+
+        /**
+         * [predefinedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: PredefinedMetricSpecification
+         */
+        fun predefinedMetricSpecification(value: PredefinedMetricSpecification) {
+          this.predefinedMetricSpecification = value
+        }
+        
+        /**
+         * [predefinedMetricSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: PredefinedMetricSpecification
+         */
+        fun predefinedMetricSpecification(value: IntrinsicFunction) {
+          this.predefinedMetricSpecification = value
+        }
+
+        /**
+         * [targetValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        var targetValue: Any? = null
+
+        /**
+         * [targetValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        fun targetValue(value: Double) {
+          this.targetValue = value
+        }
+        
+        /**
+         * [targetValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        fun targetValue(value: IntrinsicFunction) {
+          this.targetValue = value
+        }
+
+    }
 
 }
 

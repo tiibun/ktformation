@@ -42,7 +42,8 @@ class AWSSESReceiptRuleSet(logicalId: String) : Resource<AWSSESReceiptRuleSet.Pr
         fun ruleSetName(value: IntrinsicFunction) {
           this.ruleSetName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

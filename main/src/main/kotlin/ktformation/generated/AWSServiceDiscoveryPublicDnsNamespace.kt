@@ -42,7 +42,7 @@ class AWSServiceDiscoveryPublicDnsNamespace(logicalId: String) : Resource<AWSSer
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-name)
          *
@@ -74,7 +74,8 @@ class AWSServiceDiscoveryPublicDnsNamespace(logicalId: String) : Resource<AWSSer
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

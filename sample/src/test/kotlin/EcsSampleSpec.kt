@@ -30,32 +30,67 @@ object EcsSampleSpec : Spek({
                     instanceType = parameter("InstanceType") {
                         description("EC2 instance type")
                         default("t2.micro")
-                        allowedValues(arrayOf("t2.micro", "t2.small", "t2.medium", "t2.large", "m3.medium", "m3.large",
-                                "m3.xlarge", "m3.2xlarge", "m4.large", "m4.xlarge", "m4.2xlarge", "m4.4xlarge", "m4.10xlarge",
-                                "c4.large", "c4.xlarge", "c4.2xlarge", "c4.4xlarge", "c4.8xlarge", "c3.large", "c3.xlarge",
-                                "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge",
-                                "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge"))
+                        allowedValues(
+                            arrayOf(
+                                "t2.micro",
+                                "t2.small",
+                                "t2.medium",
+                                "t2.large",
+                                "m3.medium",
+                                "m3.large",
+                                "m3.xlarge",
+                                "m3.2xlarge",
+                                "m4.large",
+                                "m4.xlarge",
+                                "m4.2xlarge",
+                                "m4.4xlarge",
+                                "m4.10xlarge",
+                                "c4.large",
+                                "c4.xlarge",
+                                "c4.2xlarge",
+                                "c4.4xlarge",
+                                "c4.8xlarge",
+                                "c3.large",
+                                "c3.xlarge",
+                                "c3.2xlarge",
+                                "c3.4xlarge",
+                                "c3.8xlarge",
+                                "r3.large",
+                                "r3.xlarge",
+                                "r3.2xlarge",
+                                "r3.4xlarge",
+                                "r3.8xlarge",
+                                "i2.xlarge",
+                                "i2.2xlarge",
+                                "i2.4xlarge",
+                                "i2.8xlarge"
+                            )
+                        )
                         constraintDescription("Please choose a valid instance type.")
                     }
                 }
                 lateinit var awsRegionToAMI: Mapping
                 lateinit var subnetConfig: Mapping
                 mappings {
-                    awsRegionToAMI = mapping("AWSRegionToAMI",
-                            "us-east-1" to mapOf("AMIID" to "ami-eca289fb"),
-                            "us-east-2" to mapOf("AMIID" to "ami-446f3521"),
-                            "us-west-1" to mapOf("AMIID" to "ami-9fadf8ff"),
-                            "us-west-2" to mapOf("AMIID" to "ami-7abc111a"),
-                            "eu-west-1" to mapOf("AMIID" to "ami-a1491ad2"),
-                            "eu-central-1" to mapOf("AMIID" to "ami-54f5303b"),
-                            "ap-northeast-1" to mapOf("AMIID" to "ami-9cd57ffd"),
-                            "ap-southeast-1" to mapOf("AMIID" to "ami-a900a3ca"),
-                            "ap-southeast-2" to mapOf("AMIID" to "ami-5781be34"))
+                    awsRegionToAMI = mapping(
+                        "AWSRegionToAMI",
+                        "us-east-1" to mapOf("AMIID" to "ami-eca289fb"),
+                        "us-east-2" to mapOf("AMIID" to "ami-446f3521"),
+                        "us-west-1" to mapOf("AMIID" to "ami-9fadf8ff"),
+                        "us-west-2" to mapOf("AMIID" to "ami-7abc111a"),
+                        "eu-west-1" to mapOf("AMIID" to "ami-a1491ad2"),
+                        "eu-central-1" to mapOf("AMIID" to "ami-54f5303b"),
+                        "ap-northeast-1" to mapOf("AMIID" to "ami-9cd57ffd"),
+                        "ap-southeast-1" to mapOf("AMIID" to "ami-a900a3ca"),
+                        "ap-southeast-2" to mapOf("AMIID" to "ami-5781be34")
+                    )
 
-                    subnetConfig = mapping("SubnetConfig",
-                            "VPC" to mapOf("CIDR" to "10.0.0.0/16"),
-                            "PublicOne" to mapOf("CIDR" to "10.0.0.0/24"),
-                            "PublicTwo" to mapOf("CIDR" to "10.0.1.0/24"))
+                    subnetConfig = mapping(
+                        "SubnetConfig",
+                        "VPC" to mapOf("CIDR" to "10.0.0.0/16"),
+                        "PublicOne" to mapOf("CIDR" to "10.0.0.0/24"),
+                        "PublicTwo" to mapOf("CIDR" to "10.0.1.0/24")
+                    )
                 }
                 lateinit var vpc: AWSEC2VPC
                 lateinit var ecsCluster: AWSECSCluster
@@ -160,7 +195,10 @@ object EcsSampleSpec : Spek({
                             name("demo")
                             scheme("internet-facing")
                             loadBalancerAttributes(listOf(
-                                    AWSElasticLoadBalancingV2LoadBalancer.LoadBalancerAttribute("idle_timeout.timeout_seconds", "30")
+                                loadBalancerAttribute {
+                                    key("idle_timeout.timeout_seconds")
+                                    value("30")
+                                }
                             ))
                             subnets(publicSubnetOne.ref(), publicSubnetTwo.ref())
                             securityGroups(ecsSecurityGroup.ref())
@@ -168,40 +206,66 @@ object EcsSampleSpec : Spek({
                     }
                     awsIAMRole("ECSServiceRole") {
                         properties {
-                            assumeRolePolicyDocument(PolicyDocument(
-                                    statement = listOf(Statement(
+                            assumeRolePolicyDocument(
+                                PolicyDocument(
+                                    statement = listOf(
+                                        Statement(
                                             effect = Effect.ALLOW,
                                             principal = mapOf("Service" to listOf("ecs.amazonaws.com")),
                                             action = listOf("sts:AssumeRole")
-                                    ))
-                            ))
+                                        )
+                                    )
+                                )
+                            )
                             path("/")
-                            policies(listOf(AWSIAMRole.Policy(PolicyDocument(
-                                    statement = listOf(Statement(
-                                            effect = Effect.ALLOW,
-                                            action = listOf(
-                                                    "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
-                                                    "elasticloadbalancing:DeregisterTargets",
-                                                    "elasticloadbalancing:Describe*",
-                                                    "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-                                                    "elasticloadbalancing:RegisterTargets",
-                                                    "ec2:Describe*",
-                                                    "ec2:AuthorizeSecurityGroupIngress"),
-                                            resource = "*"))), "ecs-service")))
+                            policies(
+                                listOf(
+                                    policy {
+                                        policyDocument(
+                                            PolicyDocument(
+                                                statement = listOf(
+                                                    Statement(
+                                                        effect = Effect.ALLOW,
+                                                        action = listOf(
+                                                            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+                                                            "elasticloadbalancing:DeregisterTargets",
+                                                            "elasticloadbalancing:Describe*",
+                                                            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+                                                            "elasticloadbalancing:RegisterTargets",
+                                                            "ec2:Describe*",
+                                                            "ec2:AuthorizeSecurityGroupIngress"
+                                                        ),
+                                                        resource = "*"
+                                                    )
+                                                )
+                                            )
+                                        )
+                                        policyName("ecs-service")
+                                    })
+                            )
                         }
                     }
                     val ec2Role = awsIAMRole("EC2Role") {
                         properties {
-                            assumeRolePolicyDocument(PolicyDocument(
-                                    statement = listOf(Statement(
+                            assumeRolePolicyDocument(
+                                PolicyDocument(
+                                    statement = listOf(
+                                        Statement(
                                             effect = Effect.ALLOW,
                                             principal = mapOf("Service" to listOf("ec2.amazonaws.com")),
-                                            action = listOf("sts:AssumeRole")))))
+                                            action = listOf("sts:AssumeRole")
+                                        )
+                                    )
+                                )
+                            )
                             path("/")
-                            policies(listOf(AWSIAMRole.Policy(PolicyDocument(
-                                    statement = listOf(Statement(
-                                            effect = Effect.ALLOW,
-                                            action = listOf(
+                            policies(listOf(policy {
+                                policyDocument(
+                                    PolicyDocument(
+                                        statement = listOf(
+                                            Statement(
+                                                effect = Effect.ALLOW,
+                                                action = listOf(
                                                     "ecs:CreateCluster",
                                                     "ecs:DeregisterContainerInstance",
                                                     "ecs:DiscoverPollEndpoint",
@@ -213,28 +277,51 @@ object EcsSampleSpec : Spek({
                                                     "logs:PutLogEvents",
                                                     "ecr:GetAuthorizationToken",
                                                     "ecr:BatchGetImage",
-                                                    "ecr:GetDownloadUrlForLayer"),
-                                            resource = "*"))), "ecs-service")))
+                                                    "ecr:GetDownloadUrlForLayer"
+                                                ),
+                                                resource = "*"
+                                            )
+                                        )
+                                    )
+                                )
+                                policyName("ecs-service")
+                            }))
                         }
                     }
                     awsIAMRole("AutoscalingRole") {
                         properties {
-                            assumeRolePolicyDocument(PolicyDocument(
-                                    statement = listOf(Statement(
+                            assumeRolePolicyDocument(
+                                PolicyDocument(
+                                    statement = listOf(
+                                        Statement(
                                             effect = Effect.ALLOW,
                                             principal = mapOf("Service" to listOf("application-autoscaling.amazonaws.com")),
-                                            action = listOf("sts:AssumeRole")))))
+                                            action = listOf("sts:AssumeRole")
+                                        )
+                                    )
+                                )
+                            )
                             path("/")
-                            policies(listOf(AWSIAMRole.Policy(PolicyDocument(
-                                    statement = listOf(Statement(
-                                            effect = Effect.ALLOW,
-                                            action = listOf(
+                            policies(listOf(policy {
+                                policyDocument(
+                                    PolicyDocument(
+                                        statement = listOf(
+                                            Statement(
+                                                effect = Effect.ALLOW,
+                                                action = listOf(
                                                     "application-autoscaling:*",
                                                     "cloudwatch:DescribeAlarms",
                                                     "cloudwatch:PutMetricAlarm",
                                                     "ecs:DescribeServices",
-                                                    "ecs:UpdateServic"),
-                                            resource = "*"))), "service-autoscaling")))
+                                                    "ecs:UpdateServic"
+                                                ),
+                                                resource = "*"
+                                            )
+                                        )
+                                    )
+                                )
+                                policyName("service-autoscaling")
+                            }))
                         }
                     }
                     val ec2InstanceProfile = awsIAMInstanceProfile("EC2InstanceProfile") {
@@ -249,12 +336,18 @@ object EcsSampleSpec : Spek({
                             securityGroups(ecsSecurityGroup.ref())
                             instanceType(instanceType.ref())
                             iamInstanceProfile(ec2InstanceProfile.ref())
-                            userData(FnBase64(FnSub("""
+                            userData(
+                                FnBase64(
+                                    FnSub(
+                                        """
                                 #!/bin/bash -xe
                                 echo ECS_CLUSTER=${'$'}{ECSCluster} >> /etc/ecs/ecs.config
                                 yum install -y aws-cfn-bootstrap
                                 /opt/aws/bin/cfn-signal -e ${'$'}? --stack ${'$'}{AWS::StackName} --resource ECSAutoScalingGroup --region ${'$'}{AWS::Region}
-                                """.trimIndent())))
+                                """.trimIndent()
+                                    )
+                                )
+                            )
                         }
                     }
                     awsAutoScalingAutoScalingGroup("ECSAutoScalingGroup") {
@@ -305,11 +398,13 @@ object EcsSampleSpec : Spek({
                 }
             }
             assertEquals(
-                    EcsSampleSpec::class.java.getResource("esc_sample.json").readText(),
-                    template.toJSON(true))
+                EcsSampleSpec::class.java.getResource("esc_sample.json").readText(),
+                template.toJSON(true)
+            )
             assertEquals(
-                    EcsSampleSpec::class.java.getResource("esc_sample.yaml").readText(),
-                    template.toYAML(true))
+                EcsSampleSpec::class.java.getResource("esc_sample.yaml").readText(),
+                template.toYAML(true)
+            )
         }
     }
 })

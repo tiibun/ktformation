@@ -42,7 +42,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun associatePublicIpAddress(value: IntrinsicFunction) {
           this.associatePublicIpAddress = value
         }
-        
+
         /**
          * [blockDeviceMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-blockdevicemappings)
          *
@@ -74,7 +74,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun blockDeviceMappings(vararg value: IntrinsicFunction) {
           this.blockDeviceMappings = value
         }
-        
+
         /**
          * [classicLinkVPCId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-classiclinkvpcid)
          *
@@ -106,7 +106,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun classicLinkVPCId(value: IntrinsicFunction) {
           this.classicLinkVPCId = value
         }
-        
+
         /**
          * [classicLinkVPCSecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-classiclinkvpcsecuritygroups)
          *
@@ -138,7 +138,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun classicLinkVPCSecurityGroups(vararg value: IntrinsicFunction) {
           this.classicLinkVPCSecurityGroups = value
         }
-        
+
         /**
          * [ebsOptimized](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-ebsoptimized)
          *
@@ -170,7 +170,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun ebsOptimized(value: IntrinsicFunction) {
           this.ebsOptimized = value
         }
-        
+
         /**
          * [iamInstanceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-iaminstanceprofile)
          *
@@ -202,7 +202,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun iamInstanceProfile(value: IntrinsicFunction) {
           this.iamInstanceProfile = value
         }
-        
+
         /**
          * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-imageid)
          *
@@ -234,7 +234,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun imageId(value: IntrinsicFunction) {
           this.imageId = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instanceid)
          *
@@ -266,7 +266,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [instanceMonitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instancemonitoring)
          *
@@ -298,7 +298,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun instanceMonitoring(value: IntrinsicFunction) {
           this.instanceMonitoring = value
         }
-        
+
         /**
          * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instancetype)
          *
@@ -330,7 +330,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun instanceType(value: IntrinsicFunction) {
           this.instanceType = value
         }
-        
+
         /**
          * [kernelId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-kernelid)
          *
@@ -362,7 +362,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun kernelId(value: IntrinsicFunction) {
           this.kernelId = value
         }
-        
+
         /**
          * [keyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-keyname)
          *
@@ -394,7 +394,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun keyName(value: IntrinsicFunction) {
           this.keyName = value
         }
-        
+
         /**
          * [launchConfigurationName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname)
          *
@@ -426,7 +426,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun launchConfigurationName(value: IntrinsicFunction) {
           this.launchConfigurationName = value
         }
-        
+
         /**
          * [placementTenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-placementtenancy)
          *
@@ -458,7 +458,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun placementTenancy(value: IntrinsicFunction) {
           this.placementTenancy = value
         }
-        
+
         /**
          * [ramDiskId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-ramdiskid)
          *
@@ -490,7 +490,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun ramDiskId(value: IntrinsicFunction) {
           this.ramDiskId = value
         }
-        
+
         /**
          * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-securitygroups)
          *
@@ -522,7 +522,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun securityGroups(vararg value: IntrinsicFunction) {
           this.securityGroups = value
         }
-        
+
         /**
          * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-spotprice)
          *
@@ -554,7 +554,7 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun spotPrice(value: IntrinsicFunction) {
           this.spotPrice = value
         }
-        
+
         /**
          * [userData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-userdata)
          *
@@ -586,7 +586,23 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
         fun userData(value: IntrinsicFunction) {
           this.userData = value
         }
-        
+
+        /**
+        * [BlockDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html)
+        */
+        fun blockDevice(init: BlockDevice.() -> Unit = {}): BlockDevice {
+            return BlockDevice().also {
+                it.init()
+            }
+        }
+        /**
+        * [BlockDeviceMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html)
+        */
+        fun blockDeviceMapping(init: BlockDeviceMapping.() -> Unit = {}): BlockDeviceMapping {
+            return BlockDeviceMapping().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -597,91 +613,323 @@ class AWSAutoScalingLaunchConfiguration(logicalId: String) : Resource<AWSAutoSca
     }
 
 
-    class BlockDevice(
+    @CloudFormationMarker
+    class BlockDevice {
             /**
-             * [DeleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-deleteonterm)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val deleteOnTermination: Boolean? = null,
-            /**
-             * [Encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-encrypted)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val encrypted: Boolean? = null,
-            /**
-             * [Iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-iops)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val iops: Int? = null,
-            /**
-             * [SnapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-snapshotid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val snapshotId: String? = null,
-            /**
-             * [VolumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumesize)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val volumeSize: Int? = null,
-            /**
-             * [VolumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val volumeType: String? = null
-    )
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-deleteonterm)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var deleteOnTermination: Any? = null
 
-    class BlockDeviceMapping(
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-deleteonterm)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: Boolean) {
+          this.deleteOnTermination = value
+        }
+        
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-deleteonterm)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: IntrinsicFunction) {
+          this.deleteOnTermination = value
+        }
+
+        /**
+         * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-encrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var encrypted: Any? = null
+
+        /**
+         * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-encrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun encrypted(value: Boolean) {
+          this.encrypted = value
+        }
+        
+        /**
+         * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-encrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun encrypted(value: IntrinsicFunction) {
+          this.encrypted = value
+        }
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var iops: Any? = null
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: Int) {
+          this.iops = value
+        }
+        
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: IntrinsicFunction) {
+          this.iops = value
+        }
+
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var snapshotId: Any? = null
+
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun snapshotId(value: String) {
+          this.snapshotId = value
+        }
+        
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun snapshotId(value: IntrinsicFunction) {
+          this.snapshotId = value
+        }
+
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var volumeSize: Any? = null
+
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun volumeSize(value: Int) {
+          this.volumeSize = value
+        }
+        
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun volumeSize(value: IntrinsicFunction) {
+          this.volumeSize = value
+        }
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var volumeType: Any? = null
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: String) {
+          this.volumeType = value
+        }
+        
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html#cfn-as-launchconfig-blockdev-template-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: IntrinsicFunction) {
+          this.volumeType = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class BlockDeviceMapping {
             /**
-             * [DeviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-devicename)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val deviceName: String,
-            /**
-             * [Ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-ebs)
-             *
-             * _Required_: no
-             *
-             * _Type_: BlockDevice
-             */
-            val ebs: BlockDevice? = null,
-            /**
-             * [NoDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-nodevice)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val noDevice: Boolean? = null,
-            /**
-             * [VirtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-virtualname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val virtualName: String? = null
-    )
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-devicename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var deviceName: Any? = null
+
+        /**
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-devicename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun deviceName(value: String) {
+          this.deviceName = value
+        }
+        
+        /**
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-devicename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun deviceName(value: IntrinsicFunction) {
+          this.deviceName = value
+        }
+
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: BlockDevice
+         */
+        var ebs: Any? = null
+
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: BlockDevice
+         */
+        fun ebs(value: BlockDevice) {
+          this.ebs = value
+        }
+        
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: BlockDevice
+         */
+        fun ebs(value: IntrinsicFunction) {
+          this.ebs = value
+        }
+
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var noDevice: Any? = null
+
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun noDevice(value: Boolean) {
+          this.noDevice = value
+        }
+        
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun noDevice(value: IntrinsicFunction) {
+          this.noDevice = value
+        }
+
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var virtualName: Any? = null
+
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun virtualName(value: String) {
+          this.virtualName = value
+        }
+        
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun virtualName(value: IntrinsicFunction) {
+          this.virtualName = value
+        }
+
+    }
 
 }
 

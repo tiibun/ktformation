@@ -42,7 +42,7 @@ class AWSApiGatewayDocumentationPart(logicalId: String) : Resource<AWSApiGateway
         fun location(value: IntrinsicFunction) {
           this.location = value
         }
-        
+
         /**
          * [properties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html#cfn-apigateway-documentationpart-properties)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayDocumentationPart(logicalId: String) : Resource<AWSApiGateway
         fun properties(value: IntrinsicFunction) {
           this.properties = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html#cfn-apigateway-documentationpart-restapiid)
          *
@@ -106,7 +106,15 @@ class AWSApiGatewayDocumentationPart(logicalId: String) : Resource<AWSApiGateway
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
+        /**
+        * [Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html)
+        */
+        fun location(init: Location.() -> Unit = {}): Location {
+            return Location().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,48 +125,164 @@ class AWSApiGatewayDocumentationPart(logicalId: String) : Resource<AWSApiGateway
     }
 
 
-    class Location(
+    @CloudFormationMarker
+    class Location {
             /**
-             * [Method](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-method)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val method: String? = null,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
-            /**
-             * [Path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-path)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val path: String? = null,
-            /**
-             * [StatusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-statuscode)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val statusCode: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null
-    )
+         * [method](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-method)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var method: Any? = null
+
+        /**
+         * [method](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-method)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun method(value: String) {
+          this.method = value
+        }
+        
+        /**
+         * [method](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-method)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun method(value: IntrinsicFunction) {
+          this.method = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-path)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var path: Any? = null
+
+        /**
+         * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-path)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun path(value: String) {
+          this.path = value
+        }
+        
+        /**
+         * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-path)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun path(value: IntrinsicFunction) {
+          this.path = value
+        }
+
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-statuscode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var statusCode: Any? = null
+
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-statuscode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun statusCode(value: String) {
+          this.statusCode = value
+        }
+        
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-statuscode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun statusCode(value: IntrinsicFunction) {
+          this.statusCode = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun cidrBlock(value: IntrinsicFunction) {
           this.cidrBlock = value
         }
-        
+
         /**
          * [egress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-egress)
          *
@@ -74,7 +74,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun egress(value: IntrinsicFunction) {
           this.egress = value
         }
-        
+
         /**
          * [icmp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-icmp)
          *
@@ -106,7 +106,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun icmp(value: IntrinsicFunction) {
           this.icmp = value
         }
-        
+
         /**
          * [ipv6CidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-ipv6cidrblock)
          *
@@ -138,7 +138,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun ipv6CidrBlock(value: IntrinsicFunction) {
           this.ipv6CidrBlock = value
         }
-        
+
         /**
          * [networkAclId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-networkaclid)
          *
@@ -170,7 +170,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun networkAclId(value: IntrinsicFunction) {
           this.networkAclId = value
         }
-        
+
         /**
          * [portRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-portrange)
          *
@@ -202,7 +202,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun portRange(value: IntrinsicFunction) {
           this.portRange = value
         }
-        
+
         /**
          * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-protocol)
          *
@@ -234,7 +234,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun protocol(value: IntrinsicFunction) {
           this.protocol = value
         }
-        
+
         /**
          * [ruleAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-ruleaction)
          *
@@ -266,7 +266,7 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun ruleAction(value: IntrinsicFunction) {
           this.ruleAction = value
         }
-        
+
         /**
          * [ruleNumber](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-rulenumber)
          *
@@ -298,7 +298,23 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
         fun ruleNumber(value: IntrinsicFunction) {
           this.ruleNumber = value
         }
-        
+
+        /**
+        * [Icmp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html)
+        */
+        fun icmp(init: Icmp.() -> Unit = {}): Icmp {
+            return Icmp().also {
+                it.init()
+            }
+        }
+        /**
+        * [PortRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html)
+        */
+        fun portRange(init: PortRange.() -> Unit = {}): PortRange {
+            return PortRange().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -309,43 +325,137 @@ class AWSEC2NetworkAclEntry(logicalId: String) : Resource<AWSEC2NetworkAclEntry.
     }
 
 
-    class Icmp(
+    @CloudFormationMarker
+    class Icmp {
             /**
-             * [Code](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-code)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val code: Int? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val type: Int? = null
-    )
+         * [code](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-code)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var code: Any? = null
 
-    class PortRange(
+        /**
+         * [code](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-code)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun code(value: Int) {
+          this.code = value
+        }
+        
+        /**
+         * [code](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-code)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun code(value: IntrinsicFunction) {
+          this.code = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun type(value: Int) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PortRange {
             /**
-             * [From](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-from)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val from: Int? = null,
-            /**
-             * [To](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-to)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val to: Int? = null
-    )
+         * [from](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-from)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var from: Any? = null
+
+        /**
+         * [from](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-from)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun from(value: Int) {
+          this.from = value
+        }
+        
+        /**
+         * [from](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-from)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun from(value: IntrinsicFunction) {
+          this.from = value
+        }
+
+        /**
+         * [to](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-to)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var to: Any? = null
+
+        /**
+         * [to](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-to)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun to(value: Int) {
+          this.to = value
+        }
+        
+        /**
+         * [to](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-portrange.html#cfn-ec2-networkaclentry-portrange-to)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun to(value: IntrinsicFunction) {
+          this.to = value
+        }
+
+    }
 
 }
 

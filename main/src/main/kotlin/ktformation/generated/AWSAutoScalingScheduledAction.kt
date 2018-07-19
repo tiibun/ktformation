@@ -42,7 +42,7 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun autoScalingGroupName(value: IntrinsicFunction) {
           this.autoScalingGroupName = value
         }
-        
+
         /**
          * [desiredCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-desiredcapacity)
          *
@@ -74,7 +74,7 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun desiredCapacity(value: IntrinsicFunction) {
           this.desiredCapacity = value
         }
-        
+
         /**
          * [endTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-endtime)
          *
@@ -106,7 +106,7 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun endTime(value: IntrinsicFunction) {
           this.endTime = value
         }
-        
+
         /**
          * [maxSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-maxsize)
          *
@@ -138,7 +138,7 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun maxSize(value: IntrinsicFunction) {
           this.maxSize = value
         }
-        
+
         /**
          * [minSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-minsize)
          *
@@ -170,7 +170,7 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun minSize(value: IntrinsicFunction) {
           this.minSize = value
         }
-        
+
         /**
          * [recurrence](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-recurrence)
          *
@@ -202,7 +202,7 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun recurrence(value: IntrinsicFunction) {
           this.recurrence = value
         }
-        
+
         /**
          * [startTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-starttime)
          *
@@ -234,7 +234,8 @@ class AWSAutoScalingScheduledAction(logicalId: String) : Resource<AWSAutoScaling
         fun startTime(value: IntrinsicFunction) {
           this.startTime = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

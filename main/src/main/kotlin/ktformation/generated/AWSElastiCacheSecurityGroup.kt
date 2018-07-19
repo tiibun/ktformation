@@ -42,7 +42,8 @@ class AWSElastiCacheSecurityGroup(logicalId: String) : Resource<AWSElastiCacheSe
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun createAlias(value: IntrinsicFunction) {
           this.createAlias = value
         }
-        
+
         /**
          * [edition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition)
          *
@@ -74,7 +74,7 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun edition(value: IntrinsicFunction) {
           this.edition = value
         }
-        
+
         /**
          * [enableSso](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-enablesso)
          *
@@ -106,7 +106,7 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun enableSso(value: IntrinsicFunction) {
           this.enableSso = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-name)
          *
@@ -138,7 +138,7 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-password)
          *
@@ -170,7 +170,7 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun password(value: IntrinsicFunction) {
           this.password = value
         }
-        
+
         /**
          * [shortName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-shortname)
          *
@@ -202,7 +202,7 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun shortName(value: IntrinsicFunction) {
           this.shortName = value
         }
-        
+
         /**
          * [vpcSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-vpcsettings)
          *
@@ -234,7 +234,15 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
         fun vpcSettings(value: IntrinsicFunction) {
           this.vpcSettings = value
         }
-        
+
+        /**
+        * [VpcSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html)
+        */
+        fun vpcSettings(init: VpcSettings.() -> Unit = {}): VpcSettings {
+            return VpcSettings().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -245,24 +253,71 @@ class AWSDirectoryServiceMicrosoftAD(logicalId: String) : Resource<AWSDirectoryS
     }
 
 
-    class VpcSettings(
+    @CloudFormationMarker
+    class VpcSettings {
             /**
-             * [SubnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnetIds: List<String>,
-            /**
-             * [VpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val vpcId: String
-    )
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnetIds: Any? = null
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(value: List<String>) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(vararg value: IntrinsicFunction) {
+          this.subnetIds = value
+        }
+
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var vpcId: Any? = null
+
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vpcId(value: IntrinsicFunction) {
+          this.vpcId = value
+        }
+
+    }
 
 }
 

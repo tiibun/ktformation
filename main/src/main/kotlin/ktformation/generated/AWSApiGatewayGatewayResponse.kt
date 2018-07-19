@@ -84,7 +84,7 @@ class AWSApiGatewayGatewayResponse(logicalId: String) : Resource<AWSApiGatewayGa
         fun responseType(value: IntrinsicFunction) {
           this.responseType = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-restapiid)
          *
@@ -116,7 +116,7 @@ class AWSApiGatewayGatewayResponse(logicalId: String) : Resource<AWSApiGatewayGa
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
         /**
          * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-statuscode)
          *
@@ -148,7 +148,8 @@ class AWSApiGatewayGatewayResponse(logicalId: String) : Resource<AWSApiGatewayGa
         fun statusCode(value: IntrinsicFunction) {
           this.statusCode = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

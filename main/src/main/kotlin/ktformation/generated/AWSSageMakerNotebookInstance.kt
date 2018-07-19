@@ -42,7 +42,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun directInternetAccess(value: IntrinsicFunction) {
           this.directInternetAccess = value
         }
-        
+
         /**
          * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-instancetype)
          *
@@ -74,7 +74,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun instanceType(value: IntrinsicFunction) {
           this.instanceType = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-kmskeyid)
          *
@@ -106,7 +106,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [lifecycleConfigName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-lifecycleconfigname)
          *
@@ -138,7 +138,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun lifecycleConfigName(value: IntrinsicFunction) {
           this.lifecycleConfigName = value
         }
-        
+
         /**
          * [notebookInstanceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-notebookinstancename)
          *
@@ -170,7 +170,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun notebookInstanceName(value: IntrinsicFunction) {
           this.notebookInstanceName = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rolearn)
          *
@@ -202,7 +202,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-securitygroupids)
          *
@@ -234,7 +234,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun securityGroupIds(vararg value: IntrinsicFunction) {
           this.securityGroupIds = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-subnetid)
          *
@@ -266,7 +266,7 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-tags)
          *
@@ -298,7 +298,8 @@ class AWSSageMakerNotebookInstance(logicalId: String) : Resource<AWSSageMakerNot
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

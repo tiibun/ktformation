@@ -42,7 +42,7 @@ class AWSEC2NetworkInterfacePermission(logicalId: String) : Resource<AWSEC2Netwo
         fun awsAccountId(value: IntrinsicFunction) {
           this.awsAccountId = value
         }
-        
+
         /**
          * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html#cfn-ec2-networkinterfacepermission-networkinterfaceid)
          *
@@ -74,7 +74,7 @@ class AWSEC2NetworkInterfacePermission(logicalId: String) : Resource<AWSEC2Netwo
         fun networkInterfaceId(value: IntrinsicFunction) {
           this.networkInterfaceId = value
         }
-        
+
         /**
          * [permission](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html#cfn-ec2-networkinterfacepermission-permission)
          *
@@ -106,7 +106,8 @@ class AWSEC2NetworkInterfacePermission(logicalId: String) : Resource<AWSEC2Netwo
         fun permission(value: IntrinsicFunction) {
           this.permission = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

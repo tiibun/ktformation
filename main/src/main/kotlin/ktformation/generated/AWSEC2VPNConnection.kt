@@ -42,7 +42,7 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun customerGatewayId(value: IntrinsicFunction) {
           this.customerGatewayId = value
         }
-        
+
         /**
          * [staticRoutesOnly](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-StaticRoutesOnly)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun staticRoutesOnly(value: IntrinsicFunction) {
           this.staticRoutesOnly = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-tags)
          *
@@ -106,7 +106,7 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-type)
          *
@@ -138,7 +138,7 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
         /**
          * [vpnGatewayId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpngatewayid)
          *
@@ -170,7 +170,7 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun vpnGatewayId(value: IntrinsicFunction) {
           this.vpnGatewayId = value
         }
-        
+
         /**
          * [vpnTunnelOptionsSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpntunneloptionsspecifications)
          *
@@ -202,7 +202,15 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
         fun vpnTunnelOptionsSpecifications(vararg value: IntrinsicFunction) {
           this.vpnTunnelOptionsSpecifications = value
         }
-        
+
+        /**
+        * [VpnTunnelOptionsSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html)
+        */
+        fun vpnTunnelOptionsSpecification(init: VpnTunnelOptionsSpecification.() -> Unit = {}): VpnTunnelOptionsSpecification {
+            return VpnTunnelOptionsSpecification().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -213,24 +221,71 @@ class AWSEC2VPNConnection(logicalId: String) : Resource<AWSEC2VPNConnection.Prop
     }
 
 
-    class VpnTunnelOptionsSpecification(
+    @CloudFormationMarker
+    class VpnTunnelOptionsSpecification {
             /**
-             * [PreSharedKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val preSharedKey: String? = null,
-            /**
-             * [TunnelInsideCidr](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val tunnelInsideCidr: String? = null
-    )
+         * [preSharedKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var preSharedKey: Any? = null
+
+        /**
+         * [preSharedKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun preSharedKey(value: String) {
+          this.preSharedKey = value
+        }
+        
+        /**
+         * [preSharedKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun preSharedKey(value: IntrinsicFunction) {
+          this.preSharedKey = value
+        }
+
+        /**
+         * [tunnelInsideCidr](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var tunnelInsideCidr: Any? = null
+
+        /**
+         * [tunnelInsideCidr](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun tunnelInsideCidr(value: String) {
+          this.tunnelInsideCidr = value
+        }
+        
+        /**
+         * [tunnelInsideCidr](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun tunnelInsideCidr(value: IntrinsicFunction) {
+          this.tunnelInsideCidr = value
+        }
+
+    }
 
 }
 

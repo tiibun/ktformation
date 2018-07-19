@@ -42,7 +42,7 @@ class AWSElastiCacheSecurityGroupIngress(logicalId: String) : Resource<AWSElasti
         fun cacheSecurityGroupName(value: IntrinsicFunction) {
           this.cacheSecurityGroupName = value
         }
-        
+
         /**
          * [eC2SecurityGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html#cfn-elasticache-securitygroupingress-ec2securitygroupname)
          *
@@ -74,7 +74,7 @@ class AWSElastiCacheSecurityGroupIngress(logicalId: String) : Resource<AWSElasti
         fun eC2SecurityGroupName(value: IntrinsicFunction) {
           this.eC2SecurityGroupName = value
         }
-        
+
         /**
          * [eC2SecurityGroupOwnerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html#cfn-elasticache-securitygroupingress-ec2securitygroupownerid)
          *
@@ -106,7 +106,8 @@ class AWSElastiCacheSecurityGroupIngress(logicalId: String) : Resource<AWSElasti
         fun eC2SecurityGroupOwnerId(value: IntrinsicFunction) {
           this.eC2SecurityGroupOwnerId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

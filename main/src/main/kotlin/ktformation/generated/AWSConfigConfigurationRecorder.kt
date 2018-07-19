@@ -42,7 +42,7 @@ class AWSConfigConfigurationRecorder(logicalId: String) : Resource<AWSConfigConf
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [recordingGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordinggroup)
          *
@@ -74,7 +74,7 @@ class AWSConfigConfigurationRecorder(logicalId: String) : Resource<AWSConfigConf
         fun recordingGroup(value: IntrinsicFunction) {
           this.recordingGroup = value
         }
-        
+
         /**
          * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-rolearn)
          *
@@ -106,7 +106,15 @@ class AWSConfigConfigurationRecorder(logicalId: String) : Resource<AWSConfigConf
         fun roleARN(value: IntrinsicFunction) {
           this.roleARN = value
         }
-        
+
+        /**
+        * [RecordingGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html)
+        */
+        fun recordingGroup(init: RecordingGroup.() -> Unit = {}): RecordingGroup {
+            return RecordingGroup().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,32 +125,102 @@ class AWSConfigConfigurationRecorder(logicalId: String) : Resource<AWSConfigConf
     }
 
 
-    class RecordingGroup(
+    @CloudFormationMarker
+    class RecordingGroup {
             /**
-             * [AllSupported](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-allsupported)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val allSupported: Boolean? = null,
-            /**
-             * [IncludeGlobalResourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val includeGlobalResourceTypes: Boolean? = null,
-            /**
-             * [ResourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-resourcetypes)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val resourceTypes: List<String>? = null
-    )
+         * [allSupported](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-allsupported)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var allSupported: Any? = null
+
+        /**
+         * [allSupported](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-allsupported)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun allSupported(value: Boolean) {
+          this.allSupported = value
+        }
+        
+        /**
+         * [allSupported](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-allsupported)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun allSupported(value: IntrinsicFunction) {
+          this.allSupported = value
+        }
+
+        /**
+         * [includeGlobalResourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var includeGlobalResourceTypes: Any? = null
+
+        /**
+         * [includeGlobalResourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun includeGlobalResourceTypes(value: Boolean) {
+          this.includeGlobalResourceTypes = value
+        }
+        
+        /**
+         * [includeGlobalResourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun includeGlobalResourceTypes(value: IntrinsicFunction) {
+          this.includeGlobalResourceTypes = value
+        }
+
+        /**
+         * [resourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-resourcetypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var resourceTypes: Any? = null
+
+        /**
+         * [resourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-resourcetypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun resourceTypes(value: List<String>) {
+          this.resourceTypes = value
+        }
+        
+        /**
+         * [resourceTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-resourcetypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun resourceTypes(vararg value: IntrinsicFunction) {
+          this.resourceTypes = value
+        }
+
+    }
 
 }
 

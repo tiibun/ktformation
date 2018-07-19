@@ -42,7 +42,7 @@ class AWSGameLiftBuild(logicalId: String) : Resource<AWSGameLiftBuild.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [storageLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
          *
@@ -74,7 +74,7 @@ class AWSGameLiftBuild(logicalId: String) : Resource<AWSGameLiftBuild.Properties
         fun storageLocation(value: IntrinsicFunction) {
           this.storageLocation = value
         }
-        
+
         /**
          * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-version)
          *
@@ -106,7 +106,15 @@ class AWSGameLiftBuild(logicalId: String) : Resource<AWSGameLiftBuild.Properties
         fun version(value: IntrinsicFunction) {
           this.version = value
         }
-        
+
+        /**
+        * [S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html)
+        */
+        fun s3Location(init: S3Location.() -> Unit = {}): S3Location {
+            return S3Location().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,32 +125,102 @@ class AWSGameLiftBuild(logicalId: String) : Resource<AWSGameLiftBuild.Properties
     }
 
 
-    class S3Location(
+    @CloudFormationMarker
+    class S3Location {
             /**
-             * [Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-bucket)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val bucket: String,
-            /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [RoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-rolearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val roleArn: String
-    )
+         * [bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var bucket: Any? = null
+
+        /**
+         * [bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: String) {
+          this.bucket = value
+        }
+        
+        /**
+         * [bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: IntrinsicFunction) {
+          this.bucket = value
+        }
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var roleArn: Any? = null
+
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleArn(value: String) {
+          this.roleArn = value
+        }
+        
+        /**
+         * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storage-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleArn(value: IntrinsicFunction) {
+          this.roleArn = value
+        }
+
+    }
 
 }
 

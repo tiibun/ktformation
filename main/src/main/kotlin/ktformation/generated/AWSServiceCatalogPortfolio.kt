@@ -42,7 +42,7 @@ class AWSServiceCatalogPortfolio(logicalId: String) : Resource<AWSServiceCatalog
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html#cfn-servicecatalog-portfolio-description)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogPortfolio(logicalId: String) : Resource<AWSServiceCatalog
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [displayName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html#cfn-servicecatalog-portfolio-displayname)
          *
@@ -106,7 +106,7 @@ class AWSServiceCatalogPortfolio(logicalId: String) : Resource<AWSServiceCatalog
         fun displayName(value: IntrinsicFunction) {
           this.displayName = value
         }
-        
+
         /**
          * [providerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html#cfn-servicecatalog-portfolio-providername)
          *
@@ -138,7 +138,7 @@ class AWSServiceCatalogPortfolio(logicalId: String) : Resource<AWSServiceCatalog
         fun providerName(value: IntrinsicFunction) {
           this.providerName = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html#cfn-servicecatalog-portfolio-tags)
          *
@@ -170,7 +170,8 @@ class AWSServiceCatalogPortfolio(logicalId: String) : Resource<AWSServiceCatalog
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

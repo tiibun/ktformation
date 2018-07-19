@@ -42,7 +42,8 @@ class AWSECSCluster(logicalId: String) : Resource<AWSECSCluster.Properties>(logi
         fun clusterName(value: IntrinsicFunction) {
           this.clusterName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

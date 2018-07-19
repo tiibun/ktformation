@@ -42,7 +42,7 @@ class AWSEC2VPNConnectionRoute(logicalId: String) : Resource<AWSEC2VPNConnection
         fun destinationCidrBlock(value: IntrinsicFunction) {
           this.destinationCidrBlock = value
         }
-        
+
         /**
          * [vpnConnectionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html#cfn-ec2-vpnconnectionroute-connectionid)
          *
@@ -74,7 +74,8 @@ class AWSEC2VPNConnectionRoute(logicalId: String) : Resource<AWSEC2VPNConnection
         fun vpnConnectionId(value: IntrinsicFunction) {
           this.vpnConnectionId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

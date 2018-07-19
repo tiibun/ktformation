@@ -42,7 +42,7 @@ class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshift
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [parameterGroupFamily](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parametergroupfamily)
          *
@@ -74,7 +74,7 @@ class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshift
         fun parameterGroupFamily(value: IntrinsicFunction) {
           this.parameterGroupFamily = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parameters)
          *
@@ -106,7 +106,7 @@ class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshift
         fun parameters(vararg value: IntrinsicFunction) {
           this.parameters = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-tags)
          *
@@ -138,7 +138,15 @@ class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshift
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [Parameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html)
+        */
+        fun parameter(init: Parameter.() -> Unit = {}): Parameter {
+            return Parameter().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,24 +157,71 @@ class AWSRedshiftClusterParameterGroup(logicalId: String) : Resource<AWSRedshift
     }
 
 
-    class Parameter(
+    @CloudFormationMarker
+    class Parameter {
             /**
-             * [ParameterName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametername)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val parameterName: String,
-            /**
-             * [ParameterValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametervalue)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val parameterValue: String
-    )
+         * [parameterName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametername)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var parameterName: Any? = null
+
+        /**
+         * [parameterName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametername)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun parameterName(value: String) {
+          this.parameterName = value
+        }
+        
+        /**
+         * [parameterName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametername)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun parameterName(value: IntrinsicFunction) {
+          this.parameterName = value
+        }
+
+        /**
+         * [parameterValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametervalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var parameterValue: Any? = null
+
+        /**
+         * [parameterValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametervalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun parameterValue(value: String) {
+          this.parameterValue = value
+        }
+        
+        /**
+         * [parameterValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html#cfn-redshift-clusterparametergroup-parameter-parametervalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun parameterValue(value: IntrinsicFunction) {
+          this.parameterValue = value
+        }
+
+    }
 
 }
 

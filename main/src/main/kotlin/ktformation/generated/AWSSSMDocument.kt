@@ -42,7 +42,7 @@ class AWSSSMDocument(logicalId: String) : Resource<AWSSSMDocument.Properties>(lo
         fun content(value: IntrinsicFunction) {
           this.content = value
         }
-        
+
         /**
          * [documentType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-documenttype)
          *
@@ -74,7 +74,7 @@ class AWSSSMDocument(logicalId: String) : Resource<AWSSSMDocument.Properties>(lo
         fun documentType(value: IntrinsicFunction) {
           this.documentType = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-tags)
          *
@@ -106,7 +106,8 @@ class AWSSSMDocument(logicalId: String) : Resource<AWSSSMDocument.Properties>(lo
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

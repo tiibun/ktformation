@@ -42,7 +42,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun authentication(value: IntrinsicFunction) {
           this.authentication = value
         }
-        
+
         /**
          * [authenticationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-authenticationconfiguration)
          *
@@ -74,7 +74,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun authenticationConfiguration(value: IntrinsicFunction) {
           this.authenticationConfiguration = value
         }
-        
+
         /**
          * [filters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-filters)
          *
@@ -106,7 +106,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun filters(vararg value: IntrinsicFunction) {
           this.filters = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-name)
          *
@@ -138,7 +138,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [registerWithThirdParty](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-registerwiththirdparty)
          *
@@ -170,7 +170,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun registerWithThirdParty(value: IntrinsicFunction) {
           this.registerWithThirdParty = value
         }
-        
+
         /**
          * [targetAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetaction)
          *
@@ -202,7 +202,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun targetAction(value: IntrinsicFunction) {
           this.targetAction = value
         }
-        
+
         /**
          * [targetPipeline](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipeline)
          *
@@ -234,7 +234,7 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun targetPipeline(value: IntrinsicFunction) {
           this.targetPipeline = value
         }
-        
+
         /**
          * [targetPipelineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipelineversion)
          *
@@ -266,7 +266,23 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
         fun targetPipelineVersion(value: IntrinsicFunction) {
           this.targetPipelineVersion = value
         }
-        
+
+        /**
+        * [WebhookAuthConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html)
+        */
+        fun webhookAuthConfiguration(init: WebhookAuthConfiguration.() -> Unit = {}): WebhookAuthConfiguration {
+            return WebhookAuthConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [WebhookFilterRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html)
+        */
+        fun webhookFilterRule(init: WebhookFilterRule.() -> Unit = {}): WebhookFilterRule {
+            return WebhookFilterRule().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -277,43 +293,137 @@ class AWSCodePipelineWebhook(logicalId: String) : Resource<AWSCodePipelineWebhoo
     }
 
 
-    class WebhookAuthConfiguration(
+    @CloudFormationMarker
+    class WebhookAuthConfiguration {
             /**
-             * [AllowedIPRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val allowedIPRange: String? = null,
-            /**
-             * [SecretToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val secretToken: String? = null
-    )
+         * [allowedIPRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var allowedIPRange: Any? = null
 
-    class WebhookFilterRule(
+        /**
+         * [allowedIPRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun allowedIPRange(value: String) {
+          this.allowedIPRange = value
+        }
+        
+        /**
+         * [allowedIPRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun allowedIPRange(value: IntrinsicFunction) {
+          this.allowedIPRange = value
+        }
+
+        /**
+         * [secretToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var secretToken: Any? = null
+
+        /**
+         * [secretToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun secretToken(value: String) {
+          this.secretToken = value
+        }
+        
+        /**
+         * [secretToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun secretToken(value: IntrinsicFunction) {
+          this.secretToken = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class WebhookFilterRule {
             /**
-             * [JsonPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-jsonpath)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val jsonPath: String,
-            /**
-             * [MatchEquals](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val matchEquals: String? = null
-    )
+         * [jsonPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-jsonpath)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var jsonPath: Any? = null
+
+        /**
+         * [jsonPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-jsonpath)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun jsonPath(value: String) {
+          this.jsonPath = value
+        }
+        
+        /**
+         * [jsonPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-jsonpath)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun jsonPath(value: IntrinsicFunction) {
+          this.jsonPath = value
+        }
+
+        /**
+         * [matchEquals](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var matchEquals: Any? = null
+
+        /**
+         * [matchEquals](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun matchEquals(value: String) {
+          this.matchEquals = value
+        }
+        
+        /**
+         * [matchEquals](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun matchEquals(value: IntrinsicFunction) {
+          this.matchEquals = value
+        }
+
+    }
 
 }
 

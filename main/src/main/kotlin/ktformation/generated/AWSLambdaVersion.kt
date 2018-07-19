@@ -42,7 +42,7 @@ class AWSLambdaVersion(logicalId: String) : Resource<AWSLambdaVersion.Properties
         fun codeSha256(value: IntrinsicFunction) {
           this.codeSha256 = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-description)
          *
@@ -74,7 +74,7 @@ class AWSLambdaVersion(logicalId: String) : Resource<AWSLambdaVersion.Properties
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [functionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-functionname)
          *
@@ -106,7 +106,8 @@ class AWSLambdaVersion(logicalId: String) : Resource<AWSLambdaVersion.Properties
         fun functionName(value: IntrinsicFunction) {
           this.functionName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

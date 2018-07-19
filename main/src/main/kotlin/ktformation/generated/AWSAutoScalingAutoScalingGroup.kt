@@ -42,7 +42,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun autoScalingGroupName(value: IntrinsicFunction) {
           this.autoScalingGroupName = value
         }
-        
+
         /**
          * [availabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-availabilityzones)
          *
@@ -74,7 +74,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun availabilityZones(vararg value: IntrinsicFunction) {
           this.availabilityZones = value
         }
-        
+
         /**
          * [cooldown](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-cooldown)
          *
@@ -106,7 +106,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun cooldown(value: IntrinsicFunction) {
           this.cooldown = value
         }
-        
+
         /**
          * [desiredCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-desiredcapacity)
          *
@@ -138,7 +138,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun desiredCapacity(value: IntrinsicFunction) {
           this.desiredCapacity = value
         }
-        
+
         /**
          * [healthCheckGracePeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-healthcheckgraceperiod)
          *
@@ -170,7 +170,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun healthCheckGracePeriod(value: IntrinsicFunction) {
           this.healthCheckGracePeriod = value
         }
-        
+
         /**
          * [healthCheckType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-healthchecktype)
          *
@@ -202,7 +202,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun healthCheckType(value: IntrinsicFunction) {
           this.healthCheckType = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-instanceid)
          *
@@ -234,7 +234,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [launchConfigurationName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-launchconfigurationname)
          *
@@ -266,7 +266,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun launchConfigurationName(value: IntrinsicFunction) {
           this.launchConfigurationName = value
         }
-        
+
         /**
          * [lifecycleHookSpecificationList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist)
          *
@@ -298,7 +298,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun lifecycleHookSpecificationList(vararg value: IntrinsicFunction) {
           this.lifecycleHookSpecificationList = value
         }
-        
+
         /**
          * [loadBalancerNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-loadbalancernames)
          *
@@ -330,7 +330,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun loadBalancerNames(vararg value: IntrinsicFunction) {
           this.loadBalancerNames = value
         }
-        
+
         /**
          * [maxSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-maxsize)
          *
@@ -362,7 +362,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun maxSize(value: IntrinsicFunction) {
           this.maxSize = value
         }
-        
+
         /**
          * [metricsCollection](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-metricscollection)
          *
@@ -394,7 +394,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun metricsCollection(vararg value: IntrinsicFunction) {
           this.metricsCollection = value
         }
-        
+
         /**
          * [minSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-minsize)
          *
@@ -426,7 +426,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun minSize(value: IntrinsicFunction) {
           this.minSize = value
         }
-        
+
         /**
          * [notificationConfigurations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-notificationconfigurations)
          *
@@ -458,7 +458,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun notificationConfigurations(vararg value: IntrinsicFunction) {
           this.notificationConfigurations = value
         }
-        
+
         /**
          * [placementGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-placementgroup)
          *
@@ -490,7 +490,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun placementGroup(value: IntrinsicFunction) {
           this.placementGroup = value
         }
-        
+
         /**
          * [serviceLinkedRoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)
          *
@@ -522,7 +522,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun serviceLinkedRoleARN(value: IntrinsicFunction) {
           this.serviceLinkedRoleARN = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-tags)
          *
@@ -554,7 +554,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [targetGroupARNs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-targetgrouparns)
          *
@@ -586,7 +586,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun targetGroupARNs(vararg value: IntrinsicFunction) {
           this.targetGroupARNs = value
         }
-        
+
         /**
          * [terminationPolicies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-termpolicy)
          *
@@ -618,7 +618,7 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun terminationPolicies(vararg value: IntrinsicFunction) {
           this.terminationPolicies = value
         }
-        
+
         /**
          * [vPCZoneIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-vpczoneidentifier)
          *
@@ -650,7 +650,39 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         fun vPCZoneIdentifier(vararg value: IntrinsicFunction) {
           this.vPCZoneIdentifier = value
         }
-        
+
+        /**
+        * [LifecycleHookSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html)
+        */
+        fun lifecycleHookSpecification(init: LifecycleHookSpecification.() -> Unit = {}): LifecycleHookSpecification {
+            return LifecycleHookSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [MetricsCollection](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html)
+        */
+        fun metricsCollection(init: MetricsCollection.() -> Unit = {}): MetricsCollection {
+            return MetricsCollection().also {
+                it.init()
+            }
+        }
+        /**
+        * [NotificationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html)
+        */
+        fun notificationConfiguration(init: NotificationConfiguration.() -> Unit = {}): NotificationConfiguration {
+            return NotificationConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [TagProperty](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html)
+        */
+        fun tagProperty(init: TagProperty.() -> Unit = {}): TagProperty {
+            return TagProperty().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -661,129 +693,455 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
     }
 
 
-    class LifecycleHookSpecification(
+    @CloudFormationMarker
+    class LifecycleHookSpecification {
             /**
-             * [DefaultResult](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val defaultResult: String? = null,
-            /**
-             * [HeartbeatTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val heartbeatTimeout: Int? = null,
-            /**
-             * [LifecycleHookName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val lifecycleHookName: String,
-            /**
-             * [LifecycleTransition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val lifecycleTransition: String,
-            /**
-             * [NotificationMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val notificationMetadata: String? = null,
-            /**
-             * [NotificationTargetARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val notificationTargetARN: String? = null,
-            /**
-             * [RoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val roleARN: String? = null
-    )
+         * [defaultResult](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var defaultResult: Any? = null
 
-    class MetricsCollection(
-            /**
-             * [Granularity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-granularity)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val granularity: String,
-            /**
-             * [Metrics](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-metrics)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val metrics: List<String>? = null
-    )
+        /**
+         * [defaultResult](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun defaultResult(value: String) {
+          this.defaultResult = value
+        }
+        
+        /**
+         * [defaultResult](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun defaultResult(value: IntrinsicFunction) {
+          this.defaultResult = value
+        }
 
-    class NotificationConfiguration(
-            /**
-             * [NotificationTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-as-group-notificationconfigurations-notificationtypes)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val notificationTypes: List<String>? = null,
-            /**
-             * [TopicARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val topicARN: String
-    )
+        /**
+         * [heartbeatTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var heartbeatTimeout: Any? = null
 
-    class TagProperty(
+        /**
+         * [heartbeatTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun heartbeatTimeout(value: Int) {
+          this.heartbeatTimeout = value
+        }
+        
+        /**
+         * [heartbeatTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun heartbeatTimeout(value: IntrinsicFunction) {
+          this.heartbeatTimeout = value
+        }
+
+        /**
+         * [lifecycleHookName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var lifecycleHookName: Any? = null
+
+        /**
+         * [lifecycleHookName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun lifecycleHookName(value: String) {
+          this.lifecycleHookName = value
+        }
+        
+        /**
+         * [lifecycleHookName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun lifecycleHookName(value: IntrinsicFunction) {
+          this.lifecycleHookName = value
+        }
+
+        /**
+         * [lifecycleTransition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var lifecycleTransition: Any? = null
+
+        /**
+         * [lifecycleTransition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun lifecycleTransition(value: String) {
+          this.lifecycleTransition = value
+        }
+        
+        /**
+         * [lifecycleTransition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun lifecycleTransition(value: IntrinsicFunction) {
+          this.lifecycleTransition = value
+        }
+
+        /**
+         * [notificationMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var notificationMetadata: Any? = null
+
+        /**
+         * [notificationMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun notificationMetadata(value: String) {
+          this.notificationMetadata = value
+        }
+        
+        /**
+         * [notificationMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun notificationMetadata(value: IntrinsicFunction) {
+          this.notificationMetadata = value
+        }
+
+        /**
+         * [notificationTargetARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var notificationTargetARN: Any? = null
+
+        /**
+         * [notificationTargetARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun notificationTargetARN(value: String) {
+          this.notificationTargetARN = value
+        }
+        
+        /**
+         * [notificationTargetARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun notificationTargetARN(value: IntrinsicFunction) {
+          this.notificationTargetARN = value
+        }
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var roleARN: Any? = null
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: String) {
+          this.roleARN = value
+        }
+        
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: IntrinsicFunction) {
+          this.roleARN = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MetricsCollection {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
+         * [granularity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-granularity)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var granularity: Any? = null
+
+        /**
+         * [granularity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-granularity)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun granularity(value: String) {
+          this.granularity = value
+        }
+        
+        /**
+         * [granularity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-granularity)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun granularity(value: IntrinsicFunction) {
+          this.granularity = value
+        }
+
+        /**
+         * [metrics](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-metrics)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var metrics: Any? = null
+
+        /**
+         * [metrics](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-metrics)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun metrics(value: List<String>) {
+          this.metrics = value
+        }
+        
+        /**
+         * [metrics](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-metrics)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun metrics(vararg value: IntrinsicFunction) {
+          this.metrics = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class NotificationConfiguration {
             /**
-             * [PropagateAtLaunch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-PropagateAtLaunch)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Boolean
-             */
-            val propagateAtLaunch: Boolean,
+         * [notificationTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-as-group-notificationconfigurations-notificationtypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var notificationTypes: Any? = null
+
+        /**
+         * [notificationTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-as-group-notificationconfigurations-notificationtypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun notificationTypes(value: List<String>) {
+          this.notificationTypes = value
+        }
+        
+        /**
+         * [notificationTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-as-group-notificationconfigurations-notificationtypes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun notificationTypes(vararg value: IntrinsicFunction) {
+          this.notificationTypes = value
+        }
+
+        /**
+         * [topicARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var topicARN: Any? = null
+
+        /**
+         * [topicARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun topicARN(value: String) {
+          this.topicARN = value
+        }
+        
+        /**
+         * [topicARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun topicARN(value: IntrinsicFunction) {
+          this.topicARN = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TagProperty {
             /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [propagateAtLaunch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-PropagateAtLaunch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        var propagateAtLaunch: Any? = null
+
+        /**
+         * [propagateAtLaunch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-PropagateAtLaunch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun propagateAtLaunch(value: Boolean) {
+          this.propagateAtLaunch = value
+        }
+        
+        /**
+         * [propagateAtLaunch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-PropagateAtLaunch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun propagateAtLaunch(value: IntrinsicFunction) {
+          this.propagateAtLaunch = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html#cfn-as-tags-Value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
     class UpdatePolicy(
             var autoScalingReplacingUpdate: AutoScalingReplacingUpdate? = null,

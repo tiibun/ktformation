@@ -42,7 +42,7 @@ class AWSEC2VolumeAttachment(logicalId: String) : Resource<AWSEC2VolumeAttachmen
         fun device(value: IntrinsicFunction) {
           this.device = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-instanceid)
          *
@@ -74,7 +74,7 @@ class AWSEC2VolumeAttachment(logicalId: String) : Resource<AWSEC2VolumeAttachmen
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [volumeId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-volumeid)
          *
@@ -106,7 +106,8 @@ class AWSEC2VolumeAttachment(logicalId: String) : Resource<AWSEC2VolumeAttachmen
         fun volumeId(value: IntrinsicFunction) {
           this.volumeId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

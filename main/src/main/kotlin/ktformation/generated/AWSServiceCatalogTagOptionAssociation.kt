@@ -42,7 +42,7 @@ class AWSServiceCatalogTagOptionAssociation(logicalId: String) : Resource<AWSSer
         fun resourceId(value: IntrinsicFunction) {
           this.resourceId = value
         }
-        
+
         /**
          * [tagOptionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-tagoptionid)
          *
@@ -74,7 +74,8 @@ class AWSServiceCatalogTagOptionAssociation(logicalId: String) : Resource<AWSSer
         fun tagOptionId(value: IntrinsicFunction) {
           this.tagOptionId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

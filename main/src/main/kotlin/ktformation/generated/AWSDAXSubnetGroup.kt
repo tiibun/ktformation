@@ -42,7 +42,7 @@ class AWSDAXSubnetGroup(logicalId: String) : Resource<AWSDAXSubnetGroup.Properti
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [subnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetgroupname)
          *
@@ -74,7 +74,7 @@ class AWSDAXSubnetGroup(logicalId: String) : Resource<AWSDAXSubnetGroup.Properti
         fun subnetGroupName(value: IntrinsicFunction) {
           this.subnetGroupName = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetids)
          *
@@ -106,7 +106,8 @@ class AWSDAXSubnetGroup(logicalId: String) : Resource<AWSDAXSubnetGroup.Properti
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

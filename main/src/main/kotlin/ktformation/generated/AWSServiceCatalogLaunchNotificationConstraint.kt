@@ -42,7 +42,7 @@ class AWSServiceCatalogLaunchNotificationConstraint(logicalId: String) : Resourc
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-description)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogLaunchNotificationConstraint(logicalId: String) : Resourc
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [notificationArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-notificationarns)
          *
@@ -106,7 +106,7 @@ class AWSServiceCatalogLaunchNotificationConstraint(logicalId: String) : Resourc
         fun notificationArns(vararg value: IntrinsicFunction) {
           this.notificationArns = value
         }
-        
+
         /**
          * [portfolioId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-portfolioid)
          *
@@ -138,7 +138,7 @@ class AWSServiceCatalogLaunchNotificationConstraint(logicalId: String) : Resourc
         fun portfolioId(value: IntrinsicFunction) {
           this.portfolioId = value
         }
-        
+
         /**
          * [productId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-productid)
          *
@@ -170,7 +170,8 @@ class AWSServiceCatalogLaunchNotificationConstraint(logicalId: String) : Resourc
         fun productId(value: IntrinsicFunction) {
           this.productId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

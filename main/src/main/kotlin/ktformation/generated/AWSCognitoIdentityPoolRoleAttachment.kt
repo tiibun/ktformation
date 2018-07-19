@@ -42,7 +42,7 @@ class AWSCognitoIdentityPoolRoleAttachment(logicalId: String) : Resource<AWSCogn
         fun identityPoolId(value: IntrinsicFunction) {
           this.identityPoolId = value
         }
-        
+
         /**
          * [roleMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-rolemappings)
          *
@@ -74,7 +74,7 @@ class AWSCognitoIdentityPoolRoleAttachment(logicalId: String) : Resource<AWSCogn
         fun roleMappings(value: IntrinsicFunction) {
           this.roleMappings = value
         }
-        
+
         /**
          * [roles](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-roles)
          *
@@ -106,7 +106,31 @@ class AWSCognitoIdentityPoolRoleAttachment(logicalId: String) : Resource<AWSCogn
         fun roles(value: IntrinsicFunction) {
           this.roles = value
         }
-        
+
+        /**
+        * [MappingRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html)
+        */
+        fun mappingRule(init: MappingRule.() -> Unit = {}): MappingRule {
+            return MappingRule().also {
+                it.init()
+            }
+        }
+        /**
+        * [RoleMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)
+        */
+        fun roleMapping(init: RoleMapping.() -> Unit = {}): RoleMapping {
+            return RoleMapping().also {
+                it.init()
+            }
+        }
+        /**
+        * [RulesConfigurationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html)
+        */
+        fun rulesConfigurationType(init: RulesConfigurationType.() -> Unit = {}): RulesConfigurationType {
+            return RulesConfigurationType().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,78 +141,265 @@ class AWSCognitoIdentityPoolRoleAttachment(logicalId: String) : Resource<AWSCogn
     }
 
 
-    class MappingRule(
+    @CloudFormationMarker
+    class MappingRule {
             /**
-             * [Claim](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val claim: String,
-            /**
-             * [MatchType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val matchType: String,
-            /**
-             * [RoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val roleARN: String,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+         * [claim](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var claim: Any? = null
 
-    class RoleMapping(
-            /**
-             * [AmbiguousRoleResolution](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val ambiguousRoleResolution: String? = null,
-            /**
-             * [RulesConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)
-             *
-             * _Required_: no
-             *
-             * _Type_: RulesConfigurationType
-             */
-            val rulesConfiguration: RulesConfigurationType? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [claim](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun claim(value: String) {
+          this.claim = value
+        }
+        
+        /**
+         * [claim](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun claim(value: IntrinsicFunction) {
+          this.claim = value
+        }
 
-    class RulesConfigurationType(
+        /**
+         * [matchType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var matchType: Any? = null
+
+        /**
+         * [matchType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun matchType(value: String) {
+          this.matchType = value
+        }
+        
+        /**
+         * [matchType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun matchType(value: IntrinsicFunction) {
+          this.matchType = value
+        }
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var roleARN: Any? = null
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: String) {
+          this.roleARN = value
+        }
+        
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: IntrinsicFunction) {
+          this.roleARN = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class RoleMapping {
             /**
-             * [Rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<MappingRule>
-             */
-            val rules: List<MappingRule>
-    )
+         * [ambiguousRoleResolution](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var ambiguousRoleResolution: Any? = null
+
+        /**
+         * [ambiguousRoleResolution](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun ambiguousRoleResolution(value: String) {
+          this.ambiguousRoleResolution = value
+        }
+        
+        /**
+         * [ambiguousRoleResolution](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun ambiguousRoleResolution(value: IntrinsicFunction) {
+          this.ambiguousRoleResolution = value
+        }
+
+        /**
+         * [rulesConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: RulesConfigurationType
+         */
+        var rulesConfiguration: Any? = null
+
+        /**
+         * [rulesConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: RulesConfigurationType
+         */
+        fun rulesConfiguration(value: RulesConfigurationType) {
+          this.rulesConfiguration = value
+        }
+        
+        /**
+         * [rulesConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: RulesConfigurationType
+         */
+        fun rulesConfiguration(value: IntrinsicFunction) {
+          this.rulesConfiguration = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class RulesConfigurationType {
+            /**
+         * [rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<MappingRule>
+         */
+        var rules: Any? = null
+
+        /**
+         * [rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<MappingRule>
+         */
+        fun rules(value: List<MappingRule>) {
+          this.rules = value
+        }
+        
+        /**
+         * [rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<MappingRule>
+         */
+        fun rules(vararg value: IntrinsicFunction) {
+          this.rules = value
+        }
+
+    }
 
 }
 

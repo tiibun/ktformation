@@ -42,7 +42,7 @@ class AWSEFSMountTarget(logicalId: String) : Resource<AWSEFSMountTarget.Properti
         fun fileSystemId(value: IntrinsicFunction) {
           this.fileSystemId = value
         }
-        
+
         /**
          * [ipAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipaddress)
          *
@@ -74,7 +74,7 @@ class AWSEFSMountTarget(logicalId: String) : Resource<AWSEFSMountTarget.Properti
         fun ipAddress(value: IntrinsicFunction) {
           this.ipAddress = value
         }
-        
+
         /**
          * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-securitygroups)
          *
@@ -106,7 +106,7 @@ class AWSEFSMountTarget(logicalId: String) : Resource<AWSEFSMountTarget.Properti
         fun securityGroups(vararg value: IntrinsicFunction) {
           this.securityGroups = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-subnetid)
          *
@@ -138,7 +138,8 @@ class AWSEFSMountTarget(logicalId: String) : Resource<AWSEFSMountTarget.Properti
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

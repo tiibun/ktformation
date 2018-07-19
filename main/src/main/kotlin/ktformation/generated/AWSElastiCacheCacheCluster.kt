@@ -42,7 +42,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun aZMode(value: IntrinsicFunction) {
           this.aZMode = value
         }
-        
+
         /**
          * [autoMinorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
          *
@@ -74,7 +74,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun autoMinorVersionUpgrade(value: IntrinsicFunction) {
           this.autoMinorVersionUpgrade = value
         }
-        
+
         /**
          * [cacheNodeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-cachenodetype)
          *
@@ -106,7 +106,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun cacheNodeType(value: IntrinsicFunction) {
           this.cacheNodeType = value
         }
-        
+
         /**
          * [cacheParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-cacheparametergroupname)
          *
@@ -138,7 +138,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun cacheParameterGroupName(value: IntrinsicFunction) {
           this.cacheParameterGroupName = value
         }
-        
+
         /**
          * [cacheSecurityGroupNames](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-cachesecuritygroupnames)
          *
@@ -170,7 +170,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun cacheSecurityGroupNames(vararg value: IntrinsicFunction) {
           this.cacheSecurityGroupNames = value
         }
-        
+
         /**
          * [cacheSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-cachesubnetgroupname)
          *
@@ -202,7 +202,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun cacheSubnetGroupName(value: IntrinsicFunction) {
           this.cacheSubnetGroupName = value
         }
-        
+
         /**
          * [clusterName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-clustername)
          *
@@ -234,7 +234,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun clusterName(value: IntrinsicFunction) {
           this.clusterName = value
         }
-        
+
         /**
          * [engine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-engine)
          *
@@ -266,7 +266,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun engine(value: IntrinsicFunction) {
           this.engine = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-engineversion)
          *
@@ -298,7 +298,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [notificationTopicArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-notificationtopicarn)
          *
@@ -330,7 +330,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun notificationTopicArn(value: IntrinsicFunction) {
           this.notificationTopicArn = value
         }
-        
+
         /**
          * [numCacheNodes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-numcachenodes)
          *
@@ -362,7 +362,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun numCacheNodes(value: IntrinsicFunction) {
           this.numCacheNodes = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-port)
          *
@@ -394,7 +394,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [preferredAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-preferredavailabilityzone)
          *
@@ -426,7 +426,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun preferredAvailabilityZone(value: IntrinsicFunction) {
           this.preferredAvailabilityZone = value
         }
-        
+
         /**
          * [preferredAvailabilityZones](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-preferredavailabilityzones)
          *
@@ -458,7 +458,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun preferredAvailabilityZones(vararg value: IntrinsicFunction) {
           this.preferredAvailabilityZones = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-preferredmaintenancewindow)
          *
@@ -490,7 +490,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [snapshotArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-snapshotarns)
          *
@@ -522,7 +522,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun snapshotArns(vararg value: IntrinsicFunction) {
           this.snapshotArns = value
         }
-        
+
         /**
          * [snapshotName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-snapshotname)
          *
@@ -554,7 +554,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun snapshotName(value: IntrinsicFunction) {
           this.snapshotName = value
         }
-        
+
         /**
          * [snapshotRetentionLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-snapshotretentionlimit)
          *
@@ -586,7 +586,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun snapshotRetentionLimit(value: IntrinsicFunction) {
           this.snapshotRetentionLimit = value
         }
-        
+
         /**
          * [snapshotWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-snapshotwindow)
          *
@@ -618,7 +618,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun snapshotWindow(value: IntrinsicFunction) {
           this.snapshotWindow = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-tags)
          *
@@ -650,7 +650,7 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcSecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-vpcsecuritygroupids)
          *
@@ -682,7 +682,8 @@ class AWSElastiCacheCacheCluster(logicalId: String) : Resource<AWSElastiCacheCac
         fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) {
           this.vpcSecurityGroupIds = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

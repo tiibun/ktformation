@@ -42,7 +42,7 @@ class AWSECRRepository(logicalId: String) : Resource<AWSECRRepository.Properties
         fun lifecyclePolicy(value: IntrinsicFunction) {
           this.lifecyclePolicy = value
         }
-        
+
         /**
          * [repositoryName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositoryname)
          *
@@ -74,7 +74,7 @@ class AWSECRRepository(logicalId: String) : Resource<AWSECRRepository.Properties
         fun repositoryName(value: IntrinsicFunction) {
           this.repositoryName = value
         }
-        
+
         /**
          * [repositoryPolicyText](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositorypolicytext)
          *
@@ -106,7 +106,15 @@ class AWSECRRepository(logicalId: String) : Resource<AWSECRRepository.Properties
         fun repositoryPolicyText(value: IntrinsicFunction) {
           this.repositoryPolicyText = value
         }
-        
+
+        /**
+        * [LifecyclePolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html)
+        */
+        fun lifecyclePolicy(init: LifecyclePolicy.() -> Unit = {}): LifecyclePolicy {
+            return LifecyclePolicy().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,24 +125,71 @@ class AWSECRRepository(logicalId: String) : Resource<AWSECRRepository.Properties
     }
 
 
-    class LifecyclePolicy(
+    @CloudFormationMarker
+    class LifecyclePolicy {
             /**
-             * [LifecyclePolicyText](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val lifecyclePolicyText: String? = null,
-            /**
-             * [RegistryId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val registryId: String? = null
-    )
+         * [lifecyclePolicyText](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var lifecyclePolicyText: Any? = null
+
+        /**
+         * [lifecyclePolicyText](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun lifecyclePolicyText(value: String) {
+          this.lifecyclePolicyText = value
+        }
+        
+        /**
+         * [lifecyclePolicyText](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun lifecyclePolicyText(value: IntrinsicFunction) {
+          this.lifecyclePolicyText = value
+        }
+
+        /**
+         * [registryId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var registryId: Any? = null
+
+        /**
+         * [registryId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun registryId(value: String) {
+          this.registryId = value
+        }
+        
+        /**
+         * [registryId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun registryId(value: IntrinsicFunction) {
+          this.registryId = value
+        }
+
+    }
 
 }
 

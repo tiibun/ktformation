@@ -42,7 +42,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [loggingInfo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
          *
@@ -74,7 +74,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun loggingInfo(value: IntrinsicFunction) {
           this.loggingInfo = value
         }
-        
+
         /**
          * [maxConcurrency](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxconcurrency)
          *
@@ -106,7 +106,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun maxConcurrency(value: IntrinsicFunction) {
           this.maxConcurrency = value
         }
-        
+
         /**
          * [maxErrors](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxerrors)
          *
@@ -138,7 +138,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun maxErrors(value: IntrinsicFunction) {
           this.maxErrors = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-name)
          *
@@ -170,7 +170,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-priority)
          *
@@ -202,7 +202,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun priority(value: IntrinsicFunction) {
           this.priority = value
         }
-        
+
         /**
          * [serviceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-servicerolearn)
          *
@@ -234,7 +234,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun serviceRoleArn(value: IntrinsicFunction) {
           this.serviceRoleArn = value
         }
-        
+
         /**
          * [targets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-targets)
          *
@@ -266,7 +266,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun targets(vararg value: IntrinsicFunction) {
           this.targets = value
         }
-        
+
         /**
          * [taskArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskarn)
          *
@@ -298,7 +298,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun taskArn(value: IntrinsicFunction) {
           this.taskArn = value
         }
-        
+
         /**
          * [taskInvocationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters)
          *
@@ -330,7 +330,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun taskInvocationParameters(value: IntrinsicFunction) {
           this.taskInvocationParameters = value
         }
-        
+
         /**
          * [taskParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskparameters)
          *
@@ -362,7 +362,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun taskParameters(value: IntrinsicFunction) {
           this.taskParameters = value
         }
-        
+
         /**
          * [taskType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-tasktype)
          *
@@ -394,7 +394,7 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun taskType(value: IntrinsicFunction) {
           this.taskType = value
         }
-        
+
         /**
          * [windowId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-windowid)
          *
@@ -426,7 +426,71 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
         fun windowId(value: IntrinsicFunction) {
           this.windowId = value
         }
-        
+
+        /**
+        * [LoggingInfo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html)
+        */
+        fun loggingInfo(init: LoggingInfo.() -> Unit = {}): LoggingInfo {
+            return LoggingInfo().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaintenanceWindowAutomationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html)
+        */
+        fun maintenanceWindowAutomationParameters(init: MaintenanceWindowAutomationParameters.() -> Unit = {}): MaintenanceWindowAutomationParameters {
+            return MaintenanceWindowAutomationParameters().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaintenanceWindowLambdaParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html)
+        */
+        fun maintenanceWindowLambdaParameters(init: MaintenanceWindowLambdaParameters.() -> Unit = {}): MaintenanceWindowLambdaParameters {
+            return MaintenanceWindowLambdaParameters().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaintenanceWindowRunCommandParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
+        */
+        fun maintenanceWindowRunCommandParameters(init: MaintenanceWindowRunCommandParameters.() -> Unit = {}): MaintenanceWindowRunCommandParameters {
+            return MaintenanceWindowRunCommandParameters().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaintenanceWindowStepFunctionsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html)
+        */
+        fun maintenanceWindowStepFunctionsParameters(init: MaintenanceWindowStepFunctionsParameters.() -> Unit = {}): MaintenanceWindowStepFunctionsParameters {
+            return MaintenanceWindowStepFunctionsParameters().also {
+                it.init()
+            }
+        }
+        /**
+        * [NotificationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html)
+        */
+        fun notificationConfig(init: NotificationConfig.() -> Unit = {}): NotificationConfig {
+            return NotificationConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [Target](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html)
+        */
+        fun target(init: Target.() -> Unit = {}): Target {
+            return Target().also {
+                it.init()
+            }
+        }
+        /**
+        * [TaskInvocationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+        */
+        fun taskInvocationParameters(init: TaskInvocationParameters.() -> Unit = {}): TaskInvocationParameters {
+            return TaskInvocationParameters().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -437,253 +501,905 @@ class AWSSSMMaintenanceWindowTask(logicalId: String) : Resource<AWSSSMMaintenanc
     }
 
 
-    class LoggingInfo(
+    @CloudFormationMarker
+    class LoggingInfo {
             /**
-             * [Region](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val region: String,
-            /**
-             * [S3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val s3Bucket: String,
-            /**
-             * [S3Prefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val s3Prefix: String? = null
-    )
+         * [region](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var region: Any? = null
 
-    class MaintenanceWindowAutomationParameters(
-            /**
-             * [DocumentVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val documentVersion: String? = null,
-            /**
-             * [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: Json
-             */
-            val parameters: Json? = null
-    )
+        /**
+         * [region](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun region(value: String) {
+          this.region = value
+        }
+        
+        /**
+         * [region](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun region(value: IntrinsicFunction) {
+          this.region = value
+        }
 
-    class MaintenanceWindowLambdaParameters(
-            /**
-             * [ClientContext](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val clientContext: String? = null,
-            /**
-             * [Payload](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val payload: String? = null,
-            /**
-             * [Qualifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val qualifier: String? = null
-    )
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var s3Bucket: Any? = null
 
-    class MaintenanceWindowRunCommandParameters(
-            /**
-             * [Comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val comment: String? = null,
-            /**
-             * [DocumentHash](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val documentHash: String? = null,
-            /**
-             * [DocumentHashType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val documentHashType: String? = null,
-            /**
-             * [NotificationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig)
-             *
-             * _Required_: no
-             *
-             * _Type_: NotificationConfig
-             */
-            val notificationConfig: NotificationConfig? = null,
-            /**
-             * [OutputS3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val outputS3BucketName: String? = null,
-            /**
-             * [OutputS3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val outputS3KeyPrefix: String? = null,
-            /**
-             * [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: Json
-             */
-            val parameters: Json? = null,
-            /**
-             * [ServiceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val serviceRoleArn: String? = null,
-            /**
-             * [TimeoutSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val timeoutSeconds: Int? = null
-    )
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Bucket(value: String) {
+          this.s3Bucket = value
+        }
+        
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Bucket(value: IntrinsicFunction) {
+          this.s3Bucket = value
+        }
 
-    class MaintenanceWindowStepFunctionsParameters(
-            /**
-             * [Input](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val input: String? = null,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null
-    )
+        /**
+         * [s3Prefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var s3Prefix: Any? = null
 
-    class NotificationConfig(
-            /**
-             * [NotificationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val notificationArn: String,
-            /**
-             * [NotificationEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val notificationEvents: List<String>? = null,
-            /**
-             * [NotificationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val notificationType: String? = null
-    )
+        /**
+         * [s3Prefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3Prefix(value: String) {
+          this.s3Prefix = value
+        }
+        
+        /**
+         * [s3Prefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3Prefix(value: IntrinsicFunction) {
+          this.s3Prefix = value
+        }
 
-    class Target(
-            /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [Values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val values: List<String>? = null
-    )
+    }
 
-    class TaskInvocationParameters(
+    @CloudFormationMarker
+    class MaintenanceWindowAutomationParameters {
             /**
-             * [MaintenanceWindowAutomationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: MaintenanceWindowAutomationParameters
-             */
-            val maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParameters? = null,
+         * [documentVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var documentVersion: Any? = null
+
+        /**
+         * [documentVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun documentVersion(value: String) {
+          this.documentVersion = value
+        }
+        
+        /**
+         * [documentVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun documentVersion(value: IntrinsicFunction) {
+          this.documentVersion = value
+        }
+
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        var parameters: Any? = null
+
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun parameters(value: Json) {
+          this.parameters = value
+        }
+        
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun parameters(value: IntrinsicFunction) {
+          this.parameters = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MaintenanceWindowLambdaParameters {
             /**
-             * [MaintenanceWindowLambdaParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: MaintenanceWindowLambdaParameters
-             */
-            val maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParameters? = null,
+         * [clientContext](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var clientContext: Any? = null
+
+        /**
+         * [clientContext](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clientContext(value: String) {
+          this.clientContext = value
+        }
+        
+        /**
+         * [clientContext](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clientContext(value: IntrinsicFunction) {
+          this.clientContext = value
+        }
+
+        /**
+         * [payload](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var payload: Any? = null
+
+        /**
+         * [payload](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun payload(value: String) {
+          this.payload = value
+        }
+        
+        /**
+         * [payload](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun payload(value: IntrinsicFunction) {
+          this.payload = value
+        }
+
+        /**
+         * [qualifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var qualifier: Any? = null
+
+        /**
+         * [qualifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun qualifier(value: String) {
+          this.qualifier = value
+        }
+        
+        /**
+         * [qualifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun qualifier(value: IntrinsicFunction) {
+          this.qualifier = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MaintenanceWindowRunCommandParameters {
             /**
-             * [MaintenanceWindowRunCommandParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: MaintenanceWindowRunCommandParameters
-             */
-            val maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParameters? = null,
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var comment: Any? = null
+
+        /**
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun comment(value: String) {
+          this.comment = value
+        }
+        
+        /**
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun comment(value: IntrinsicFunction) {
+          this.comment = value
+        }
+
+        /**
+         * [documentHash](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var documentHash: Any? = null
+
+        /**
+         * [documentHash](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun documentHash(value: String) {
+          this.documentHash = value
+        }
+        
+        /**
+         * [documentHash](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun documentHash(value: IntrinsicFunction) {
+          this.documentHash = value
+        }
+
+        /**
+         * [documentHashType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var documentHashType: Any? = null
+
+        /**
+         * [documentHashType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun documentHashType(value: String) {
+          this.documentHashType = value
+        }
+        
+        /**
+         * [documentHashType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun documentHashType(value: IntrinsicFunction) {
+          this.documentHashType = value
+        }
+
+        /**
+         * [notificationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: NotificationConfig
+         */
+        var notificationConfig: Any? = null
+
+        /**
+         * [notificationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: NotificationConfig
+         */
+        fun notificationConfig(value: NotificationConfig) {
+          this.notificationConfig = value
+        }
+        
+        /**
+         * [notificationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: NotificationConfig
+         */
+        fun notificationConfig(value: IntrinsicFunction) {
+          this.notificationConfig = value
+        }
+
+        /**
+         * [outputS3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var outputS3BucketName: Any? = null
+
+        /**
+         * [outputS3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun outputS3BucketName(value: String) {
+          this.outputS3BucketName = value
+        }
+        
+        /**
+         * [outputS3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun outputS3BucketName(value: IntrinsicFunction) {
+          this.outputS3BucketName = value
+        }
+
+        /**
+         * [outputS3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var outputS3KeyPrefix: Any? = null
+
+        /**
+         * [outputS3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun outputS3KeyPrefix(value: String) {
+          this.outputS3KeyPrefix = value
+        }
+        
+        /**
+         * [outputS3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun outputS3KeyPrefix(value: IntrinsicFunction) {
+          this.outputS3KeyPrefix = value
+        }
+
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        var parameters: Any? = null
+
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun parameters(value: Json) {
+          this.parameters = value
+        }
+        
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun parameters(value: IntrinsicFunction) {
+          this.parameters = value
+        }
+
+        /**
+         * [serviceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var serviceRoleArn: Any? = null
+
+        /**
+         * [serviceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceRoleArn(value: String) {
+          this.serviceRoleArn = value
+        }
+        
+        /**
+         * [serviceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceRoleArn(value: IntrinsicFunction) {
+          this.serviceRoleArn = value
+        }
+
+        /**
+         * [timeoutSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var timeoutSeconds: Any? = null
+
+        /**
+         * [timeoutSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun timeoutSeconds(value: Int) {
+          this.timeoutSeconds = value
+        }
+        
+        /**
+         * [timeoutSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun timeoutSeconds(value: IntrinsicFunction) {
+          this.timeoutSeconds = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MaintenanceWindowStepFunctionsParameters {
             /**
-             * [MaintenanceWindowStepFunctionsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: MaintenanceWindowStepFunctionsParameters
-             */
-            val maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParameters? = null
-    )
+         * [input](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var input: Any? = null
+
+        /**
+         * [input](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun input(value: String) {
+          this.input = value
+        }
+        
+        /**
+         * [input](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun input(value: IntrinsicFunction) {
+          this.input = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class NotificationConfig {
+            /**
+         * [notificationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var notificationArn: Any? = null
+
+        /**
+         * [notificationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun notificationArn(value: String) {
+          this.notificationArn = value
+        }
+        
+        /**
+         * [notificationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun notificationArn(value: IntrinsicFunction) {
+          this.notificationArn = value
+        }
+
+        /**
+         * [notificationEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var notificationEvents: Any? = null
+
+        /**
+         * [notificationEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun notificationEvents(value: List<String>) {
+          this.notificationEvents = value
+        }
+        
+        /**
+         * [notificationEvents](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun notificationEvents(vararg value: IntrinsicFunction) {
+          this.notificationEvents = value
+        }
+
+        /**
+         * [notificationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var notificationType: Any? = null
+
+        /**
+         * [notificationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun notificationType(value: String) {
+          this.notificationType = value
+        }
+        
+        /**
+         * [notificationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun notificationType(value: IntrinsicFunction) {
+          this.notificationType = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Target {
+            /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var values: Any? = null
+
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun values(value: List<String>) {
+          this.values = value
+        }
+        
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun values(vararg value: IntrinsicFunction) {
+          this.values = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TaskInvocationParameters {
+            /**
+         * [maintenanceWindowAutomationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowAutomationParameters
+         */
+        var maintenanceWindowAutomationParameters: Any? = null
+
+        /**
+         * [maintenanceWindowAutomationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowAutomationParameters
+         */
+        fun maintenanceWindowAutomationParameters(value: MaintenanceWindowAutomationParameters) {
+          this.maintenanceWindowAutomationParameters = value
+        }
+        
+        /**
+         * [maintenanceWindowAutomationParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowAutomationParameters
+         */
+        fun maintenanceWindowAutomationParameters(value: IntrinsicFunction) {
+          this.maintenanceWindowAutomationParameters = value
+        }
+
+        /**
+         * [maintenanceWindowLambdaParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowLambdaParameters
+         */
+        var maintenanceWindowLambdaParameters: Any? = null
+
+        /**
+         * [maintenanceWindowLambdaParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowLambdaParameters
+         */
+        fun maintenanceWindowLambdaParameters(value: MaintenanceWindowLambdaParameters) {
+          this.maintenanceWindowLambdaParameters = value
+        }
+        
+        /**
+         * [maintenanceWindowLambdaParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowLambdaParameters
+         */
+        fun maintenanceWindowLambdaParameters(value: IntrinsicFunction) {
+          this.maintenanceWindowLambdaParameters = value
+        }
+
+        /**
+         * [maintenanceWindowRunCommandParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowRunCommandParameters
+         */
+        var maintenanceWindowRunCommandParameters: Any? = null
+
+        /**
+         * [maintenanceWindowRunCommandParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowRunCommandParameters
+         */
+        fun maintenanceWindowRunCommandParameters(value: MaintenanceWindowRunCommandParameters) {
+          this.maintenanceWindowRunCommandParameters = value
+        }
+        
+        /**
+         * [maintenanceWindowRunCommandParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowRunCommandParameters
+         */
+        fun maintenanceWindowRunCommandParameters(value: IntrinsicFunction) {
+          this.maintenanceWindowRunCommandParameters = value
+        }
+
+        /**
+         * [maintenanceWindowStepFunctionsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowStepFunctionsParameters
+         */
+        var maintenanceWindowStepFunctionsParameters: Any? = null
+
+        /**
+         * [maintenanceWindowStepFunctionsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowStepFunctionsParameters
+         */
+        fun maintenanceWindowStepFunctionsParameters(value: MaintenanceWindowStepFunctionsParameters) {
+          this.maintenanceWindowStepFunctionsParameters = value
+        }
+        
+        /**
+         * [maintenanceWindowStepFunctionsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: MaintenanceWindowStepFunctionsParameters
+         */
+        fun maintenanceWindowStepFunctionsParameters(value: IntrinsicFunction) {
+          this.maintenanceWindowStepFunctionsParameters = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun allowVersionUpgrade(value: IntrinsicFunction) {
           this.allowVersionUpgrade = value
         }
-        
+
         /**
          * [automatedSnapshotRetentionPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-automatedsnapshotretentionperiod)
          *
@@ -74,7 +74,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun automatedSnapshotRetentionPeriod(value: IntrinsicFunction) {
           this.automatedSnapshotRetentionPeriod = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-availabilityzone)
          *
@@ -106,7 +106,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [clusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusteridentifier)
          *
@@ -138,7 +138,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun clusterIdentifier(value: IntrinsicFunction) {
           this.clusterIdentifier = value
         }
-        
+
         /**
          * [clusterParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusterparametergroupname)
          *
@@ -170,7 +170,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun clusterParameterGroupName(value: IntrinsicFunction) {
           this.clusterParameterGroupName = value
         }
-        
+
         /**
          * [clusterSecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clustersecuritygroups)
          *
@@ -202,7 +202,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun clusterSecurityGroups(vararg value: IntrinsicFunction) {
           this.clusterSecurityGroups = value
         }
-        
+
         /**
          * [clusterSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clustersubnetgroupname)
          *
@@ -234,7 +234,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun clusterSubnetGroupName(value: IntrinsicFunction) {
           this.clusterSubnetGroupName = value
         }
-        
+
         /**
          * [clusterType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clustertype)
          *
@@ -266,7 +266,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun clusterType(value: IntrinsicFunction) {
           this.clusterType = value
         }
-        
+
         /**
          * [clusterVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusterversion)
          *
@@ -298,7 +298,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun clusterVersion(value: IntrinsicFunction) {
           this.clusterVersion = value
         }
-        
+
         /**
          * [dBName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-dbname)
          *
@@ -330,7 +330,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun dBName(value: IntrinsicFunction) {
           this.dBName = value
         }
-        
+
         /**
          * [elasticIp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-elasticip)
          *
@@ -362,7 +362,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun elasticIp(value: IntrinsicFunction) {
           this.elasticIp = value
         }
-        
+
         /**
          * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
          *
@@ -394,7 +394,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun encrypted(value: IntrinsicFunction) {
           this.encrypted = value
         }
-        
+
         /**
          * [hsmClientCertificateIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-hsmclientcertidentifier)
          *
@@ -426,7 +426,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun hsmClientCertificateIdentifier(value: IntrinsicFunction) {
           this.hsmClientCertificateIdentifier = value
         }
-        
+
         /**
          * [hsmConfigurationIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-HsmConfigurationIdentifier)
          *
@@ -458,7 +458,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun hsmConfigurationIdentifier(value: IntrinsicFunction) {
           this.hsmConfigurationIdentifier = value
         }
-        
+
         /**
          * [iamRoles](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-iamroles)
          *
@@ -490,7 +490,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun iamRoles(vararg value: IntrinsicFunction) {
           this.iamRoles = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-kmskeyid)
          *
@@ -522,7 +522,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [loggingProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-loggingproperties)
          *
@@ -554,7 +554,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun loggingProperties(value: IntrinsicFunction) {
           this.loggingProperties = value
         }
-        
+
         /**
          * [masterUserPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masteruserpassword)
          *
@@ -586,7 +586,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun masterUserPassword(value: IntrinsicFunction) {
           this.masterUserPassword = value
         }
-        
+
         /**
          * [masterUsername](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterusername)
          *
@@ -618,7 +618,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun masterUsername(value: IntrinsicFunction) {
           this.masterUsername = value
         }
-        
+
         /**
          * [nodeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
          *
@@ -650,7 +650,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun nodeType(value: IntrinsicFunction) {
           this.nodeType = value
         }
-        
+
         /**
          * [numberOfNodes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
          *
@@ -682,7 +682,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun numberOfNodes(value: IntrinsicFunction) {
           this.numberOfNodes = value
         }
-        
+
         /**
          * [ownerAccount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-owneraccount)
          *
@@ -714,7 +714,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun ownerAccount(value: IntrinsicFunction) {
           this.ownerAccount = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
          *
@@ -746,7 +746,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-preferredmaintenancewindow)
          *
@@ -778,7 +778,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [publiclyAccessible](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
          *
@@ -810,7 +810,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun publiclyAccessible(value: IntrinsicFunction) {
           this.publiclyAccessible = value
         }
-        
+
         /**
          * [snapshotClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-snapshotclusteridentifier)
          *
@@ -842,7 +842,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun snapshotClusterIdentifier(value: IntrinsicFunction) {
           this.snapshotClusterIdentifier = value
         }
-        
+
         /**
          * [snapshotIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-snapshotidentifier)
          *
@@ -874,7 +874,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun snapshotIdentifier(value: IntrinsicFunction) {
           this.snapshotIdentifier = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-tags)
          *
@@ -906,7 +906,7 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcSecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-vpcsecuritygroupids)
          *
@@ -938,7 +938,15 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
         fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) {
           this.vpcSecurityGroupIds = value
         }
-        
+
+        /**
+        * [LoggingProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html)
+        */
+        fun loggingProperties(init: LoggingProperties.() -> Unit = {}): LoggingProperties {
+            return LoggingProperties().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -949,24 +957,71 @@ class AWSRedshiftCluster(logicalId: String) : Resource<AWSRedshiftCluster.Proper
     }
 
 
-    class LoggingProperties(
+    @CloudFormationMarker
+    class LoggingProperties {
             /**
-             * [BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-bucketname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val bucketName: String,
-            /**
-             * [S3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-s3keyprefix)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val s3KeyPrefix: String? = null
-    )
+         * [bucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-bucketname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var bucketName: Any? = null
+
+        /**
+         * [bucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-bucketname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucketName(value: String) {
+          this.bucketName = value
+        }
+        
+        /**
+         * [bucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-bucketname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucketName(value: IntrinsicFunction) {
+          this.bucketName = value
+        }
+
+        /**
+         * [s3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-s3keyprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var s3KeyPrefix: Any? = null
+
+        /**
+         * [s3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-s3keyprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3KeyPrefix(value: String) {
+          this.s3KeyPrefix = value
+        }
+        
+        /**
+         * [s3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-s3keyprefix)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3KeyPrefix(value: IntrinsicFunction) {
+          this.s3KeyPrefix = value
+        }
+
+    }
 
 }
 

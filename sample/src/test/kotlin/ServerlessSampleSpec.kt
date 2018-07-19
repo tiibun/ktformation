@@ -1,5 +1,8 @@
 import ktformation.*
-import ktformation.generated.*
+import ktformation.generated.awsIAMRole
+import ktformation.generated.awsLambdaPermission
+import ktformation.generated.awsServerlessApi
+import ktformation.generated.awsServerlessFunction
 import ktformation.policy.Effect
 import ktformation.policy.PolicyDocument
 import ktformation.policy.Statement
@@ -19,35 +22,51 @@ object ServerlessSampleSpec : Spek({
                         properties {
                             definitionUri("./simple-proxy-api.yaml")
                             stageName("prod")
-                            variables(mapOf("ServerlessExpressLambdaFunctionName" to
-                                    Ref("YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME")))
+                            variables(
+                                mapOf(
+                                    "ServerlessExpressLambdaFunctionName" to
+                                            Ref("YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME")
+                                )
+                            )
                         }
                     }
                     awsIAMRole("LambdaExecutionRole") {
                         properties {
-                            assumeRolePolicyDocument(PolicyDocument(
-                                    statement = listOf(Statement(
+                            assumeRolePolicyDocument(
+                                PolicyDocument(
+                                    statement = listOf(
+                                        Statement(
                                             effect = Effect.ALLOW,
                                             principal = mapOf(
-                                                    "Service" to "lambda.amazonaws.com"
+                                                "Service" to "lambda.amazonaws.com"
                                             ),
                                             action = "sts:AssumeRole"
-                                    ))))
+                                        )
+                                    )
+                                )
+                            )
                             path("/")
-                            policies(listOf(
-                                    AWSIAMRole.Policy(policyName = "root",
-                                            policyDocument = PolicyDocument(
-                                                    statement = listOf(Statement(
-                                                            effect = Effect.ALLOW,
-                                                            action = listOf(
-                                                                    "logs:CreateLogGroup",
-                                                                    "logs:CreateLogStream",
-                                                                    "logs:PutLogEvents"
-                                                            ),
-                                                            resource = "arn:aws:logs:*:*:*"
-                                                    ))
-                                            ))
-                            ))
+                            policies(
+                                listOf(
+                                    policy {
+                                        policyName("root")
+                                        policyDocument(
+                                            PolicyDocument(
+                                                statement = listOf(
+                                                    Statement(
+                                                        effect = Effect.ALLOW,
+                                                        action = listOf(
+                                                            "logs:CreateLogGroup",
+                                                            "logs:CreateLogStream",
+                                                            "logs:PutLogEvents"
+                                                        ),
+                                                        resource = "arn:aws:logs:*:*:*"
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    })
+                            )
                         }
                     }
                     awsLambdaPermission("LambdaApiGatewayExecutionPermission") {
@@ -55,8 +74,12 @@ object ServerlessSampleSpec : Spek({
                             action("lambda:InvokeFunction")
                             functionName(Ref("YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME"))
                             principal("apigateway.amazonaws.com")
-                            sourceArn(FnJoin("", "arn:aws:execute-api:", Ref(AWS.Region), ":",
-                                    Ref(AWS.AccountId), ":", Ref("ApiGatewayApi"), "/*/*"))
+                            sourceArn(
+                                FnJoin(
+                                    "", "arn:aws:execute-api:", Ref(AWS.Region), ":",
+                                    Ref(AWS.AccountId), ":", Ref("ApiGatewayApi"), "/*/*"
+                                )
+                            )
                         }
                     }
                     awsServerlessFunction("YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME") {
@@ -67,53 +90,74 @@ object ServerlessSampleSpec : Spek({
                             role(FnGetAtt("LambdaExecutionRole", "Arn"))
                             runtime("nodejs6.10")
                             timeout(30)
-                            events(mapOf(
+                            events(
+                                mapOf(
                                     "ProxyApiRoot" to mapOf(
-                                            "Type" to "Api",
-                                            "Properties" to mapOf(
-                                                    "RestApiId" to Ref("ApiGatewayApi"),
-                                                    "Path" to "/",
-                                                    "Method" to "ANY"
-                                            )),
+                                        "Type" to "Api",
+                                        "Properties" to mapOf(
+                                            "RestApiId" to Ref("ApiGatewayApi"),
+                                            "Path" to "/",
+                                            "Method" to "ANY"
+                                        )
+                                    ),
                                     "ProxyApiGreedy" to mapOf(
-                                            "Type" to "Api",
-                                            "Properties" to mapOf(
-                                                    "RestApiId" to Ref("ApiGatewayApi"),
-                                                    "Path" to "/{proxy+}",
-                                                    "Method" to "ANY"
-                                            ))))
+                                        "Type" to "Api",
+                                        "Properties" to mapOf(
+                                            "RestApiId" to Ref("ApiGatewayApi"),
+                                            "Path" to "/{proxy+}",
+                                            "Method" to "ANY"
+                                        )
+                                    )
+                                )
+                            )
                         }
                     }
                 }
                 outputs {
                     output("LambdaFunctionConsoleUrl") {
                         description("Console URL for the Lambda Function.")
-                        value(FnJoin("", "https://", Ref(AWS.Region),
+                        value(
+                            FnJoin(
+                                "", "https://", Ref(AWS.Region),
                                 ".console.aws.amazon.com/lambda/home?region=", Ref(AWS.Region), "#/functions/",
-                                Ref("YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME")))
+                                Ref("YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME")
+                            )
+                        )
                     }
                     output("ApiGatewayApiConsoleUrl") {
                         description("Console URL for the API Gateway API's Stage.")
-                        value(FnJoin("", "https://", Ref(AWS.Region),
+                        value(
+                            FnJoin(
+                                "", "https://", Ref(AWS.Region),
                                 ".console.aws.amazon.com/lambda/home?region=", Ref(AWS.Region), "#/apis/",
-                                Ref("ApiGatewayApi"), "/stages/prod"))
+                                Ref("ApiGatewayApi"), "/stages/prod"
+                            )
+                        )
                     }
                     output("ApiUrl") {
-                        description("""
+                        description(
+                            """
                             Invoke URL for your API. Clicking this link will perform a GET request
                             on the root resource of your API.
-                            """.trimIndent())
-                        value(FnJoin("", "https://", Ref("ApiGatewayApi"),
-                                ".execute-api.", Ref(AWS.Region), ".amazonaws.com/prod/"))
+                            """.trimIndent()
+                        )
+                        value(
+                            FnJoin(
+                                "", "https://", Ref("ApiGatewayApi"),
+                                ".execute-api.", Ref(AWS.Region), ".amazonaws.com/prod/"
+                            )
+                        )
                     }
                 }
             }
             assertEquals(
-                    ServerlessSampleSpec::class.java.getResource("serverless_sample.json").readText(),
-                    template.toJSON(true))
+                ServerlessSampleSpec::class.java.getResource("serverless_sample.json").readText(),
+                template.toJSON(true)
+            )
             assertEquals(
-                    ServerlessSampleSpec::class.java.getResource("serverless_sample.yaml").readText(),
-                    template.toYAML(true))
+                ServerlessSampleSpec::class.java.getResource("serverless_sample.yaml").readText(),
+                template.toYAML(true)
+            )
         }
     }
 })

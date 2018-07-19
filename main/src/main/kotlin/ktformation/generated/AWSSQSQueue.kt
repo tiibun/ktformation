@@ -42,7 +42,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun contentBasedDeduplication(value: IntrinsicFunction) {
           this.contentBasedDeduplication = value
         }
-        
+
         /**
          * [delaySeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-delayseconds)
          *
@@ -74,7 +74,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun delaySeconds(value: IntrinsicFunction) {
           this.delaySeconds = value
         }
-        
+
         /**
          * [fifoQueue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-fifoqueue)
          *
@@ -106,7 +106,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun fifoQueue(value: IntrinsicFunction) {
           this.fifoQueue = value
         }
-        
+
         /**
          * [kmsDataKeyReusePeriodSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsdatakeyreuseperiodseconds)
          *
@@ -138,7 +138,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun kmsDataKeyReusePeriodSeconds(value: IntrinsicFunction) {
           this.kmsDataKeyReusePeriodSeconds = value
         }
-        
+
         /**
          * [kmsMasterKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsmasterkeyid)
          *
@@ -170,7 +170,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun kmsMasterKeyId(value: IntrinsicFunction) {
           this.kmsMasterKeyId = value
         }
-        
+
         /**
          * [maximumMessageSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-maxmesgsize)
          *
@@ -202,7 +202,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun maximumMessageSize(value: IntrinsicFunction) {
           this.maximumMessageSize = value
         }
-        
+
         /**
          * [messageRetentionPeriod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-msgretentionperiod)
          *
@@ -234,7 +234,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun messageRetentionPeriod(value: IntrinsicFunction) {
           this.messageRetentionPeriod = value
         }
-        
+
         /**
          * [queueName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-name)
          *
@@ -266,7 +266,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun queueName(value: IntrinsicFunction) {
           this.queueName = value
         }
-        
+
         /**
          * [receiveMessageWaitTimeSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-receivemsgwaittime)
          *
@@ -298,7 +298,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun receiveMessageWaitTimeSeconds(value: IntrinsicFunction) {
           this.receiveMessageWaitTimeSeconds = value
         }
-        
+
         /**
          * [redrivePolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-redrive)
          *
@@ -330,7 +330,7 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun redrivePolicy(value: IntrinsicFunction) {
           this.redrivePolicy = value
         }
-        
+
         /**
          * [visibilityTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout)
          *
@@ -362,7 +362,8 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         fun visibilityTimeout(value: IntrinsicFunction) {
           this.visibilityTimeout = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

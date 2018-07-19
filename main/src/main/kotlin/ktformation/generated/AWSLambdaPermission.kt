@@ -42,7 +42,7 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun action(value: IntrinsicFunction) {
           this.action = value
         }
-        
+
         /**
          * [eventSourceToken](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-eventsourcetoken)
          *
@@ -74,7 +74,7 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun eventSourceToken(value: IntrinsicFunction) {
           this.eventSourceToken = value
         }
-        
+
         /**
          * [functionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-functionname)
          *
@@ -106,7 +106,7 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun functionName(value: IntrinsicFunction) {
           this.functionName = value
         }
-        
+
         /**
          * [principal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-principal)
          *
@@ -138,7 +138,7 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun principal(value: IntrinsicFunction) {
           this.principal = value
         }
-        
+
         /**
          * [sourceAccount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-sourceaccount)
          *
@@ -170,7 +170,7 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun sourceAccount(value: IntrinsicFunction) {
           this.sourceAccount = value
         }
-        
+
         /**
          * [sourceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-sourcearn)
          *
@@ -202,7 +202,8 @@ class AWSLambdaPermission(logicalId: String) : Resource<AWSLambdaPermission.Prop
         fun sourceArn(value: IntrinsicFunction) {
           this.sourceArn = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

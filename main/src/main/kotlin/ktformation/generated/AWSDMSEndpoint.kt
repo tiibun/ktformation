@@ -42,7 +42,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun certificateArn(value: IntrinsicFunction) {
           this.certificateArn = value
         }
-        
+
         /**
          * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-databasename)
          *
@@ -74,7 +74,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun databaseName(value: IntrinsicFunction) {
           this.databaseName = value
         }
-        
+
         /**
          * [dynamoDbSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-dynamodbsettings)
          *
@@ -106,7 +106,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun dynamoDbSettings(value: IntrinsicFunction) {
           this.dynamoDbSettings = value
         }
-        
+
         /**
          * [endpointIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointidentifier)
          *
@@ -138,7 +138,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun endpointIdentifier(value: IntrinsicFunction) {
           this.endpointIdentifier = value
         }
-        
+
         /**
          * [endpointType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointtype)
          *
@@ -170,7 +170,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun endpointType(value: IntrinsicFunction) {
           this.endpointType = value
         }
-        
+
         /**
          * [engineName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-enginename)
          *
@@ -202,7 +202,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun engineName(value: IntrinsicFunction) {
           this.engineName = value
         }
-        
+
         /**
          * [extraConnectionAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-extraconnectionattributes)
          *
@@ -234,7 +234,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun extraConnectionAttributes(value: IntrinsicFunction) {
           this.extraConnectionAttributes = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kmskeyid)
          *
@@ -266,7 +266,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [mongoDbSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-mongodbsettings)
          *
@@ -298,7 +298,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun mongoDbSettings(value: IntrinsicFunction) {
           this.mongoDbSettings = value
         }
-        
+
         /**
          * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-password)
          *
@@ -330,7 +330,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun password(value: IntrinsicFunction) {
           this.password = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-port)
          *
@@ -362,7 +362,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [s3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-s3settings)
          *
@@ -394,7 +394,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun s3Settings(value: IntrinsicFunction) {
           this.s3Settings = value
         }
-        
+
         /**
          * [serverName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-servername)
          *
@@ -426,7 +426,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun serverName(value: IntrinsicFunction) {
           this.serverName = value
         }
-        
+
         /**
          * [sslMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-sslmode)
          *
@@ -458,7 +458,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun sslMode(value: IntrinsicFunction) {
           this.sslMode = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-tags)
          *
@@ -490,7 +490,7 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-username)
          *
@@ -522,7 +522,31 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
         fun username(value: IntrinsicFunction) {
           this.username = value
         }
-        
+
+        /**
+        * [DynamoDbSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html)
+        */
+        fun dynamoDbSettings(init: DynamoDbSettings.() -> Unit = {}): DynamoDbSettings {
+            return DynamoDbSettings().also {
+                it.init()
+            }
+        }
+        /**
+        * [MongoDbSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html)
+        */
+        fun mongoDbSettings(init: MongoDbSettings.() -> Unit = {}): MongoDbSettings {
+            return MongoDbSettings().also {
+                it.init()
+            }
+        }
+        /**
+        * [S3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html)
+        */
+        fun s3Settings(init: S3Settings.() -> Unit = {}): S3Settings {
+            return S3Settings().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -533,166 +557,606 @@ class AWSDMSEndpoint(logicalId: String) : Resource<AWSDMSEndpoint.Properties>(lo
     }
 
 
-    class DynamoDbSettings(
+    @CloudFormationMarker
+    class DynamoDbSettings {
             /**
-             * [ServiceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val serviceAccessRoleArn: String? = null
-    )
+         * [serviceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var serviceAccessRoleArn: Any? = null
 
-    class MongoDbSettings(
-            /**
-             * [AuthMechanism](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val authMechanism: String? = null,
-            /**
-             * [AuthSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val authSource: String? = null,
-            /**
-             * [AuthType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val authType: String? = null,
-            /**
-             * [DatabaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val databaseName: String? = null,
-            /**
-             * [DocsToInvestigate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val docsToInvestigate: String? = null,
-            /**
-             * [ExtractDocId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val extractDocId: String? = null,
-            /**
-             * [NestingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val nestingLevel: String? = null,
-            /**
-             * [Password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val password: String? = null,
-            /**
-             * [Port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val port: Int? = null,
-            /**
-             * [ServerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val serverName: String? = null,
-            /**
-             * [Username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val username: String? = null
-    )
+        /**
+         * [serviceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceAccessRoleArn(value: String) {
+          this.serviceAccessRoleArn = value
+        }
+        
+        /**
+         * [serviceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceAccessRoleArn(value: IntrinsicFunction) {
+          this.serviceAccessRoleArn = value
+        }
 
-    class S3Settings(
+    }
+
+    @CloudFormationMarker
+    class MongoDbSettings {
             /**
-             * [BucketFolder](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val bucketFolder: String? = null,
+         * [authMechanism](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var authMechanism: Any? = null
+
+        /**
+         * [authMechanism](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun authMechanism(value: String) {
+          this.authMechanism = value
+        }
+        
+        /**
+         * [authMechanism](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun authMechanism(value: IntrinsicFunction) {
+          this.authMechanism = value
+        }
+
+        /**
+         * [authSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var authSource: Any? = null
+
+        /**
+         * [authSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun authSource(value: String) {
+          this.authSource = value
+        }
+        
+        /**
+         * [authSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun authSource(value: IntrinsicFunction) {
+          this.authSource = value
+        }
+
+        /**
+         * [authType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var authType: Any? = null
+
+        /**
+         * [authType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun authType(value: String) {
+          this.authType = value
+        }
+        
+        /**
+         * [authType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun authType(value: IntrinsicFunction) {
+          this.authType = value
+        }
+
+        /**
+         * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var databaseName: Any? = null
+
+        /**
+         * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun databaseName(value: String) {
+          this.databaseName = value
+        }
+        
+        /**
+         * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun databaseName(value: IntrinsicFunction) {
+          this.databaseName = value
+        }
+
+        /**
+         * [docsToInvestigate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var docsToInvestigate: Any? = null
+
+        /**
+         * [docsToInvestigate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun docsToInvestigate(value: String) {
+          this.docsToInvestigate = value
+        }
+        
+        /**
+         * [docsToInvestigate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun docsToInvestigate(value: IntrinsicFunction) {
+          this.docsToInvestigate = value
+        }
+
+        /**
+         * [extractDocId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var extractDocId: Any? = null
+
+        /**
+         * [extractDocId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun extractDocId(value: String) {
+          this.extractDocId = value
+        }
+        
+        /**
+         * [extractDocId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun extractDocId(value: IntrinsicFunction) {
+          this.extractDocId = value
+        }
+
+        /**
+         * [nestingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var nestingLevel: Any? = null
+
+        /**
+         * [nestingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun nestingLevel(value: String) {
+          this.nestingLevel = value
+        }
+        
+        /**
+         * [nestingLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun nestingLevel(value: IntrinsicFunction) {
+          this.nestingLevel = value
+        }
+
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var password: Any? = null
+
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun password(value: String) {
+          this.password = value
+        }
+        
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun password(value: IntrinsicFunction) {
+          this.password = value
+        }
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var port: Any? = null
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: Int) {
+          this.port = value
+        }
+        
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: IntrinsicFunction) {
+          this.port = value
+        }
+
+        /**
+         * [serverName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var serverName: Any? = null
+
+        /**
+         * [serverName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serverName(value: String) {
+          this.serverName = value
+        }
+        
+        /**
+         * [serverName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serverName(value: IntrinsicFunction) {
+          this.serverName = value
+        }
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var username: Any? = null
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun username(value: String) {
+          this.username = value
+        }
+        
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun username(value: IntrinsicFunction) {
+          this.username = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class S3Settings {
             /**
-             * [BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val bucketName: String? = null,
-            /**
-             * [CompressionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val compressionType: String? = null,
-            /**
-             * [CsvDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val csvDelimiter: String? = null,
-            /**
-             * [CsvRowDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val csvRowDelimiter: String? = null,
-            /**
-             * [ExternalTableDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val externalTableDefinition: String? = null,
-            /**
-             * [ServiceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val serviceAccessRoleArn: String? = null
-    )
+         * [bucketFolder](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var bucketFolder: Any? = null
+
+        /**
+         * [bucketFolder](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun bucketFolder(value: String) {
+          this.bucketFolder = value
+        }
+        
+        /**
+         * [bucketFolder](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun bucketFolder(value: IntrinsicFunction) {
+          this.bucketFolder = value
+        }
+
+        /**
+         * [bucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var bucketName: Any? = null
+
+        /**
+         * [bucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun bucketName(value: String) {
+          this.bucketName = value
+        }
+        
+        /**
+         * [bucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun bucketName(value: IntrinsicFunction) {
+          this.bucketName = value
+        }
+
+        /**
+         * [compressionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var compressionType: Any? = null
+
+        /**
+         * [compressionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun compressionType(value: String) {
+          this.compressionType = value
+        }
+        
+        /**
+         * [compressionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun compressionType(value: IntrinsicFunction) {
+          this.compressionType = value
+        }
+
+        /**
+         * [csvDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var csvDelimiter: Any? = null
+
+        /**
+         * [csvDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun csvDelimiter(value: String) {
+          this.csvDelimiter = value
+        }
+        
+        /**
+         * [csvDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun csvDelimiter(value: IntrinsicFunction) {
+          this.csvDelimiter = value
+        }
+
+        /**
+         * [csvRowDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var csvRowDelimiter: Any? = null
+
+        /**
+         * [csvRowDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun csvRowDelimiter(value: String) {
+          this.csvRowDelimiter = value
+        }
+        
+        /**
+         * [csvRowDelimiter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun csvRowDelimiter(value: IntrinsicFunction) {
+          this.csvRowDelimiter = value
+        }
+
+        /**
+         * [externalTableDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var externalTableDefinition: Any? = null
+
+        /**
+         * [externalTableDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun externalTableDefinition(value: String) {
+          this.externalTableDefinition = value
+        }
+        
+        /**
+         * [externalTableDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun externalTableDefinition(value: IntrinsicFunction) {
+          this.externalTableDefinition = value
+        }
+
+        /**
+         * [serviceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var serviceAccessRoleArn: Any? = null
+
+        /**
+         * [serviceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceAccessRoleArn(value: String) {
+          this.serviceAccessRoleArn = value
+        }
+        
+        /**
+         * [serviceAccessRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun serviceAccessRoleArn(value: IntrinsicFunction) {
+          this.serviceAccessRoleArn = value
+        }
+
+    }
 
 }
 

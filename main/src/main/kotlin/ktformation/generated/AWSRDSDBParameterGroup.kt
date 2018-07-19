@@ -42,7 +42,7 @@ class AWSRDSDBParameterGroup(logicalId: String) : Resource<AWSRDSDBParameterGrou
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [family](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html#cfn-rds-dbparametergroup-family)
          *
@@ -74,7 +74,7 @@ class AWSRDSDBParameterGroup(logicalId: String) : Resource<AWSRDSDBParameterGrou
         fun family(value: IntrinsicFunction) {
           this.family = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html#cfn-rds-dbparametergroup-parameters)
          *
@@ -127,7 +127,8 @@ class AWSRDSDBParameterGroup(logicalId: String) : Resource<AWSRDSDBParameterGrou
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

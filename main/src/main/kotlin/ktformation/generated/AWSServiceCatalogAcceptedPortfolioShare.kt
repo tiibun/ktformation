@@ -42,7 +42,7 @@ class AWSServiceCatalogAcceptedPortfolioShare(logicalId: String) : Resource<AWSS
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [portfolioId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-portfolioid)
          *
@@ -74,7 +74,8 @@ class AWSServiceCatalogAcceptedPortfolioShare(logicalId: String) : Resource<AWSS
         fun portfolioId(value: IntrinsicFunction) {
           this.portfolioId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

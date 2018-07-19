@@ -42,7 +42,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun agentVersion(value: IntrinsicFunction) {
           this.agentVersion = value
         }
-        
+
         /**
          * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-attributes)
          *
@@ -95,7 +95,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun chefConfiguration(value: IntrinsicFunction) {
           this.chefConfiguration = value
         }
-        
+
         /**
          * [cloneAppIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-cloneappids)
          *
@@ -127,7 +127,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun cloneAppIds(vararg value: IntrinsicFunction) {
           this.cloneAppIds = value
         }
-        
+
         /**
          * [clonePermissions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-clonepermissions)
          *
@@ -159,7 +159,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun clonePermissions(value: IntrinsicFunction) {
           this.clonePermissions = value
         }
-        
+
         /**
          * [configurationManager](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-configmanager)
          *
@@ -191,7 +191,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun configurationManager(value: IntrinsicFunction) {
           this.configurationManager = value
         }
-        
+
         /**
          * [customCookbooksSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-custcookbooksource)
          *
@@ -223,7 +223,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun customCookbooksSource(value: IntrinsicFunction) {
           this.customCookbooksSource = value
         }
-        
+
         /**
          * [customJson](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-custjson)
          *
@@ -255,7 +255,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun customJson(value: IntrinsicFunction) {
           this.customJson = value
         }
-        
+
         /**
          * [defaultAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultaz)
          *
@@ -287,7 +287,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun defaultAvailabilityZone(value: IntrinsicFunction) {
           this.defaultAvailabilityZone = value
         }
-        
+
         /**
          * [defaultInstanceProfileArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultinstanceprof)
          *
@@ -319,7 +319,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun defaultInstanceProfileArn(value: IntrinsicFunction) {
           this.defaultInstanceProfileArn = value
         }
-        
+
         /**
          * [defaultOs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultos)
          *
@@ -351,7 +351,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun defaultOs(value: IntrinsicFunction) {
           this.defaultOs = value
         }
-        
+
         /**
          * [defaultRootDeviceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultrootdevicetype)
          *
@@ -383,7 +383,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun defaultRootDeviceType(value: IntrinsicFunction) {
           this.defaultRootDeviceType = value
         }
-        
+
         /**
          * [defaultSshKeyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultsshkeyname)
          *
@@ -415,7 +415,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun defaultSshKeyName(value: IntrinsicFunction) {
           this.defaultSshKeyName = value
         }
-        
+
         /**
          * [defaultSubnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#defaultsubnet)
          *
@@ -447,7 +447,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun defaultSubnetId(value: IntrinsicFunction) {
           this.defaultSubnetId = value
         }
-        
+
         /**
          * [ecsClusterArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-ecsclusterarn)
          *
@@ -479,7 +479,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun ecsClusterArn(value: IntrinsicFunction) {
           this.ecsClusterArn = value
         }
-        
+
         /**
          * [elasticIps](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-elasticips)
          *
@@ -511,7 +511,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun elasticIps(vararg value: IntrinsicFunction) {
           this.elasticIps = value
         }
-        
+
         /**
          * [hostnameTheme](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-hostnametheme)
          *
@@ -543,7 +543,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun hostnameTheme(value: IntrinsicFunction) {
           this.hostnameTheme = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-name)
          *
@@ -575,7 +575,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [rdsDbInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-rdsdbinstances)
          *
@@ -607,7 +607,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun rdsDbInstances(vararg value: IntrinsicFunction) {
           this.rdsDbInstances = value
         }
-        
+
         /**
          * [serviceRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-servicerolearn)
          *
@@ -639,7 +639,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun serviceRoleArn(value: IntrinsicFunction) {
           this.serviceRoleArn = value
         }
-        
+
         /**
          * [sourceStackId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-sourcestackid)
          *
@@ -671,7 +671,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun sourceStackId(value: IntrinsicFunction) {
           this.sourceStackId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-tags)
          *
@@ -703,7 +703,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [useCustomCookbooks](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#usecustcookbooks)
          *
@@ -735,7 +735,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun useCustomCookbooks(value: IntrinsicFunction) {
           this.useCustomCookbooks = value
         }
-        
+
         /**
          * [useOpsworksSecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-useopsworkssecuritygroups)
          *
@@ -767,7 +767,7 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun useOpsworksSecurityGroups(value: IntrinsicFunction) {
           this.useOpsworksSecurityGroups = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-vpcid)
          *
@@ -799,7 +799,47 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+        /**
+        * [ChefConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html)
+        */
+        fun chefConfiguration(init: ChefConfiguration.() -> Unit = {}): ChefConfiguration {
+            return ChefConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [ElasticIp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html)
+        */
+        fun elasticIp(init: ElasticIp.() -> Unit = {}): ElasticIp {
+            return ElasticIp().also {
+                it.init()
+            }
+        }
+        /**
+        * [RdsDbInstance](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html)
+        */
+        fun rdsDbInstance(init: RdsDbInstance.() -> Unit = {}): RdsDbInstance {
+            return RdsDbInstance().also {
+                it.init()
+            }
+        }
+        /**
+        * [Source](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html)
+        */
+        fun source(init: Source.() -> Unit = {}): Source {
+            return Source().also {
+                it.init()
+            }
+        }
+        /**
+        * [StackConfigurationManager](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html)
+        */
+        fun stackConfigurationManager(init: StackConfigurationManager.() -> Unit = {}): StackConfigurationManager {
+            return StackConfigurationManager().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -810,140 +850,490 @@ class AWSOpsWorksStack(logicalId: String) : Resource<AWSOpsWorksStack.Properties
     }
 
 
-    class ChefConfiguration(
+    @CloudFormationMarker
+    class ChefConfiguration {
             /**
-             * [BerkshelfVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val berkshelfVersion: String? = null,
-            /**
-             * [ManageBerkshelf](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val manageBerkshelf: Boolean? = null
-    )
+         * [berkshelfVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var berkshelfVersion: Any? = null
 
-    class ElasticIp(
-            /**
-             * [Ip](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val ip: String,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null
-    )
+        /**
+         * [berkshelfVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun berkshelfVersion(value: String) {
+          this.berkshelfVersion = value
+        }
+        
+        /**
+         * [berkshelfVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun berkshelfVersion(value: IntrinsicFunction) {
+          this.berkshelfVersion = value
+        }
 
-    class RdsDbInstance(
-            /**
-             * [DbPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val dbPassword: String,
-            /**
-             * [DbUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val dbUser: String,
-            /**
-             * [RdsDbInstanceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val rdsDbInstanceArn: String
-    )
+        /**
+         * [manageBerkshelf](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var manageBerkshelf: Any? = null
 
-    class Source(
-            /**
-             * [Password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-password)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val password: String? = null,
-            /**
-             * [Revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val revision: String? = null,
-            /**
-             * [SshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val sshKey: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null,
-            /**
-             * [Url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val url: String? = null,
-            /**
-             * [Username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val username: String? = null
-    )
+        /**
+         * [manageBerkshelf](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun manageBerkshelf(value: Boolean) {
+          this.manageBerkshelf = value
+        }
+        
+        /**
+         * [manageBerkshelf](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun manageBerkshelf(value: IntrinsicFunction) {
+          this.manageBerkshelf = value
+        }
 
-    class StackConfigurationManager(
+    }
+
+    @CloudFormationMarker
+    class ElasticIp {
             /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
+         * [ip](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var ip: Any? = null
+
+        /**
+         * [ip](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ip(value: String) {
+          this.ip = value
+        }
+        
+        /**
+         * [ip](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ip(value: IntrinsicFunction) {
+          this.ip = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class RdsDbInstance {
             /**
-             * [Version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val version: String? = null
-    )
+         * [dbPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var dbPassword: Any? = null
+
+        /**
+         * [dbPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dbPassword(value: String) {
+          this.dbPassword = value
+        }
+        
+        /**
+         * [dbPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dbPassword(value: IntrinsicFunction) {
+          this.dbPassword = value
+        }
+
+        /**
+         * [dbUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var dbUser: Any? = null
+
+        /**
+         * [dbUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dbUser(value: String) {
+          this.dbUser = value
+        }
+        
+        /**
+         * [dbUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dbUser(value: IntrinsicFunction) {
+          this.dbUser = value
+        }
+
+        /**
+         * [rdsDbInstanceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var rdsDbInstanceArn: Any? = null
+
+        /**
+         * [rdsDbInstanceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun rdsDbInstanceArn(value: String) {
+          this.rdsDbInstanceArn = value
+        }
+        
+        /**
+         * [rdsDbInstanceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun rdsDbInstanceArn(value: IntrinsicFunction) {
+          this.rdsDbInstanceArn = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Source {
+            /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-password)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var password: Any? = null
+
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-password)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun password(value: String) {
+          this.password = value
+        }
+        
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-password)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun password(value: IntrinsicFunction) {
+          this.password = value
+        }
+
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var revision: Any? = null
+
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun revision(value: String) {
+          this.revision = value
+        }
+        
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun revision(value: IntrinsicFunction) {
+          this.revision = value
+        }
+
+        /**
+         * [sshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var sshKey: Any? = null
+
+        /**
+         * [sshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sshKey(value: String) {
+          this.sshKey = value
+        }
+        
+        /**
+         * [sshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sshKey(value: IntrinsicFunction) {
+          this.sshKey = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var url: Any? = null
+
+        /**
+         * [url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun url(value: String) {
+          this.url = value
+        }
+        
+        /**
+         * [url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun url(value: IntrinsicFunction) {
+          this.url = value
+        }
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var username: Any? = null
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun username(value: String) {
+          this.username = value
+        }
+        
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun username(value: IntrinsicFunction) {
+          this.username = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class StackConfigurationManager {
+            /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var version: Any? = null
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun version(value: String) {
+          this.version = value
+        }
+        
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun version(value: IntrinsicFunction) {
+          this.version = value
+        }
+
+    }
 
 }
 

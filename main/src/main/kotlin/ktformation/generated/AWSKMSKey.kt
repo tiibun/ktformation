@@ -42,7 +42,7 @@ class AWSKMSKey(logicalId: String) : Resource<AWSKMSKey.Properties>(logicalId, "
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [enableKeyRotation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enablekeyrotation)
          *
@@ -74,7 +74,7 @@ class AWSKMSKey(logicalId: String) : Resource<AWSKMSKey.Properties>(logicalId, "
         fun enableKeyRotation(value: IntrinsicFunction) {
           this.enableKeyRotation = value
         }
-        
+
         /**
          * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enabled)
          *
@@ -106,7 +106,7 @@ class AWSKMSKey(logicalId: String) : Resource<AWSKMSKey.Properties>(logicalId, "
         fun enabled(value: IntrinsicFunction) {
           this.enabled = value
         }
-        
+
         /**
          * [keyPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy)
          *
@@ -138,7 +138,7 @@ class AWSKMSKey(logicalId: String) : Resource<AWSKMSKey.Properties>(logicalId, "
         fun keyPolicy(value: IntrinsicFunction) {
           this.keyPolicy = value
         }
-        
+
         /**
          * [keyUsage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyusage)
          *
@@ -170,7 +170,7 @@ class AWSKMSKey(logicalId: String) : Resource<AWSKMSKey.Properties>(logicalId, "
         fun keyUsage(value: IntrinsicFunction) {
           this.keyUsage = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-tags)
          *
@@ -202,7 +202,8 @@ class AWSKMSKey(logicalId: String) : Resource<AWSKMSKey.Properties>(logicalId, "
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

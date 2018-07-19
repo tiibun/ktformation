@@ -42,7 +42,7 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
         fun authenticationType(value: IntrinsicFunction) {
           this.authenticationType = value
         }
-        
+
         /**
          * [logConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-logconfig)
          *
@@ -74,7 +74,7 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
         fun logConfig(value: IntrinsicFunction) {
           this.logConfig = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-name)
          *
@@ -106,7 +106,7 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [openIDConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig)
          *
@@ -138,7 +138,7 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
         fun openIDConnectConfig(value: IntrinsicFunction) {
           this.openIDConnectConfig = value
         }
-        
+
         /**
          * [userPoolConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig)
          *
@@ -170,7 +170,31 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
         fun userPoolConfig(value: IntrinsicFunction) {
           this.userPoolConfig = value
         }
-        
+
+        /**
+        * [LogConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html)
+        */
+        fun logConfig(init: LogConfig.() -> Unit = {}): LogConfig {
+            return LogConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [OpenIDConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html)
+        */
+        fun openIDConnectConfig(init: OpenIDConnectConfig.() -> Unit = {}): OpenIDConnectConfig {
+            return OpenIDConnectConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [UserPoolConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html)
+        */
+        fun userPoolConfig(init: UserPoolConfig.() -> Unit = {}): UserPoolConfig {
+            return UserPoolConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,94 +205,327 @@ class AWSAppSyncGraphQLApi(logicalId: String) : Resource<AWSAppSyncGraphQLApi.Pr
     }
 
 
-    class LogConfig(
+    @CloudFormationMarker
+    class LogConfig {
             /**
-             * [CloudWatchLogsRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val cloudWatchLogsRoleArn: String? = null,
-            /**
-             * [FieldLogLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val fieldLogLevel: String? = null
-    )
+         * [cloudWatchLogsRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var cloudWatchLogsRoleArn: Any? = null
 
-    class OpenIDConnectConfig(
-            /**
-             * [AuthTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val authTTL: Double? = null,
-            /**
-             * [ClientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val clientId: String? = null,
-            /**
-             * [IatTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val iatTTL: Double? = null,
-            /**
-             * [Issuer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val issuer: String? = null
-    )
+        /**
+         * [cloudWatchLogsRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun cloudWatchLogsRoleArn(value: String) {
+          this.cloudWatchLogsRoleArn = value
+        }
+        
+        /**
+         * [cloudWatchLogsRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun cloudWatchLogsRoleArn(value: IntrinsicFunction) {
+          this.cloudWatchLogsRoleArn = value
+        }
 
-    class UserPoolConfig(
+        /**
+         * [fieldLogLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var fieldLogLevel: Any? = null
+
+        /**
+         * [fieldLogLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun fieldLogLevel(value: String) {
+          this.fieldLogLevel = value
+        }
+        
+        /**
+         * [fieldLogLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun fieldLogLevel(value: IntrinsicFunction) {
+          this.fieldLogLevel = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class OpenIDConnectConfig {
             /**
-             * [AppIdClientRegex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val appIdClientRegex: String? = null,
+         * [authTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var authTTL: Any? = null
+
+        /**
+         * [authTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun authTTL(value: Double) {
+          this.authTTL = value
+        }
+        
+        /**
+         * [authTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun authTTL(value: IntrinsicFunction) {
+          this.authTTL = value
+        }
+
+        /**
+         * [clientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var clientId: Any? = null
+
+        /**
+         * [clientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clientId(value: String) {
+          this.clientId = value
+        }
+        
+        /**
+         * [clientId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun clientId(value: IntrinsicFunction) {
+          this.clientId = value
+        }
+
+        /**
+         * [iatTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var iatTTL: Any? = null
+
+        /**
+         * [iatTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun iatTTL(value: Double) {
+          this.iatTTL = value
+        }
+        
+        /**
+         * [iatTTL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun iatTTL(value: IntrinsicFunction) {
+          this.iatTTL = value
+        }
+
+        /**
+         * [issuer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var issuer: Any? = null
+
+        /**
+         * [issuer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun issuer(value: String) {
+          this.issuer = value
+        }
+        
+        /**
+         * [issuer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun issuer(value: IntrinsicFunction) {
+          this.issuer = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class UserPoolConfig {
             /**
-             * [AwsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val awsRegion: String? = null,
-            /**
-             * [DefaultAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val defaultAction: String? = null,
-            /**
-             * [UserPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val userPoolId: String? = null
-    )
+         * [appIdClientRegex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var appIdClientRegex: Any? = null
+
+        /**
+         * [appIdClientRegex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun appIdClientRegex(value: String) {
+          this.appIdClientRegex = value
+        }
+        
+        /**
+         * [appIdClientRegex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun appIdClientRegex(value: IntrinsicFunction) {
+          this.appIdClientRegex = value
+        }
+
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var awsRegion: Any? = null
+
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun awsRegion(value: String) {
+          this.awsRegion = value
+        }
+        
+        /**
+         * [awsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun awsRegion(value: IntrinsicFunction) {
+          this.awsRegion = value
+        }
+
+        /**
+         * [defaultAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var defaultAction: Any? = null
+
+        /**
+         * [defaultAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun defaultAction(value: String) {
+          this.defaultAction = value
+        }
+        
+        /**
+         * [defaultAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun defaultAction(value: IntrinsicFunction) {
+          this.defaultAction = value
+        }
+
+        /**
+         * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var userPoolId: Any? = null
+
+        /**
+         * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun userPoolId(value: String) {
+          this.userPoolId = value
+        }
+        
+        /**
+         * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun userPoolId(value: IntrinsicFunction) {
+          this.userPoolId = value
+        }
+
+    }
 
 }
 

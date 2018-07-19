@@ -42,7 +42,7 @@ class AWSGlueDatabase(logicalId: String) : Resource<AWSGlueDatabase.Properties>(
         fun catalogId(value: IntrinsicFunction) {
           this.catalogId = value
         }
-        
+
         /**
          * [databaseInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput)
          *
@@ -74,7 +74,15 @@ class AWSGlueDatabase(logicalId: String) : Resource<AWSGlueDatabase.Properties>(
         fun databaseInput(value: IntrinsicFunction) {
           this.databaseInput = value
         }
-        
+
+        /**
+        * [DatabaseInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html)
+        */
+        fun databaseInput(init: DatabaseInput.() -> Unit = {}): DatabaseInput {
+            return DatabaseInput().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,40 +93,133 @@ class AWSGlueDatabase(logicalId: String) : Resource<AWSGlueDatabase.Properties>(
     }
 
 
-    class DatabaseInput(
+    @CloudFormationMarker
+    class DatabaseInput {
             /**
-             * [Description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-description)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val description: String? = null,
-            /**
-             * [LocationUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-locationuri)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val locationUri: String? = null,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
-            /**
-             * [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-parameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: Json
-             */
-            val parameters: Json? = null
-    )
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var description: Any? = null
+
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun description(value: String) {
+          this.description = value
+        }
+        
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun description(value: IntrinsicFunction) {
+          this.description = value
+        }
+
+        /**
+         * [locationUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-locationuri)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var locationUri: Any? = null
+
+        /**
+         * [locationUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-locationuri)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun locationUri(value: String) {
+          this.locationUri = value
+        }
+        
+        /**
+         * [locationUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-locationuri)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun locationUri(value: IntrinsicFunction) {
+          this.locationUri = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        var parameters: Any? = null
+
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun parameters(value: Json) {
+          this.parameters = value
+        }
+        
+        /**
+         * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-parameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Json
+         */
+        fun parameters(value: IntrinsicFunction) {
+          this.parameters = value
+        }
+
+    }
 
 }
 

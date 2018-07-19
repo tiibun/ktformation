@@ -42,7 +42,7 @@ class AWSAthenaNamedQuery(logicalId: String) : Resource<AWSAthenaNamedQuery.Prop
         fun database(value: IntrinsicFunction) {
           this.database = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-description)
          *
@@ -74,7 +74,7 @@ class AWSAthenaNamedQuery(logicalId: String) : Resource<AWSAthenaNamedQuery.Prop
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-name)
          *
@@ -106,7 +106,7 @@ class AWSAthenaNamedQuery(logicalId: String) : Resource<AWSAthenaNamedQuery.Prop
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [queryString](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-querystring)
          *
@@ -138,7 +138,8 @@ class AWSAthenaNamedQuery(logicalId: String) : Resource<AWSAthenaNamedQuery.Prop
         fun queryString(value: IntrinsicFunction) {
           this.queryString = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

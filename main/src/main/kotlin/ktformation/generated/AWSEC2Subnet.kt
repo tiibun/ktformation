@@ -42,7 +42,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun assignIpv6AddressOnCreation(value: IntrinsicFunction) {
           this.assignIpv6AddressOnCreation = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-availabilityzone)
          *
@@ -74,7 +74,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [cidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-cidrblock)
          *
@@ -106,7 +106,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun cidrBlock(value: IntrinsicFunction) {
           this.cidrBlock = value
         }
-        
+
         /**
          * [ipv6CidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblock)
          *
@@ -138,7 +138,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun ipv6CidrBlock(value: IntrinsicFunction) {
           this.ipv6CidrBlock = value
         }
-        
+
         /**
          * [mapPublicIpOnLaunch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-mappubliciponlaunch)
          *
@@ -170,7 +170,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun mapPublicIpOnLaunch(value: IntrinsicFunction) {
           this.mapPublicIpOnLaunch = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-tags)
          *
@@ -202,7 +202,7 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-awsec2subnet-prop-vpcid)
          *
@@ -234,7 +234,8 @@ class AWSEC2Subnet(logicalId: String) : Resource<AWSEC2Subnet.Properties>(logica
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

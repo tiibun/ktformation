@@ -42,7 +42,7 @@ class AWSDMSReplicationSubnetGroup(logicalId: String) : Resource<AWSDMSReplicati
         fun replicationSubnetGroupDescription(value: IntrinsicFunction) {
           this.replicationSubnetGroupDescription = value
         }
-        
+
         /**
          * [replicationSubnetGroupIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier)
          *
@@ -74,7 +74,7 @@ class AWSDMSReplicationSubnetGroup(logicalId: String) : Resource<AWSDMSReplicati
         fun replicationSubnetGroupIdentifier(value: IntrinsicFunction) {
           this.replicationSubnetGroupIdentifier = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids)
          *
@@ -106,7 +106,7 @@ class AWSDMSReplicationSubnetGroup(logicalId: String) : Resource<AWSDMSReplicati
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags)
          *
@@ -138,7 +138,8 @@ class AWSDMSReplicationSubnetGroup(logicalId: String) : Resource<AWSDMSReplicati
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSIAMInstanceProfile(logicalId: String) : Resource<AWSIAMInstanceProfile.
         fun instanceProfileName(value: IntrinsicFunction) {
           this.instanceProfileName = value
         }
-        
+
         /**
          * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-path)
          *
@@ -74,7 +74,7 @@ class AWSIAMInstanceProfile(logicalId: String) : Resource<AWSIAMInstanceProfile.
         fun path(value: IntrinsicFunction) {
           this.path = value
         }
-        
+
         /**
          * [roles](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-roles)
          *
@@ -106,7 +106,8 @@ class AWSIAMInstanceProfile(logicalId: String) : Resource<AWSIAMInstanceProfile.
         fun roles(vararg value: IntrinsicFunction) {
           this.roles = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

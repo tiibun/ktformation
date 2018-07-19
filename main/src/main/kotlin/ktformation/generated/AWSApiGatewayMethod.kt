@@ -42,7 +42,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun apiKeyRequired(value: IntrinsicFunction) {
           this.apiKeyRequired = value
         }
-        
+
         /**
          * [authorizationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationtype)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun authorizationType(value: IntrinsicFunction) {
           this.authorizationType = value
         }
-        
+
         /**
          * [authorizerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-authorizerid)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun authorizerId(value: IntrinsicFunction) {
           this.authorizerId = value
         }
-        
+
         /**
          * [httpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-httpmethod)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun httpMethod(value: IntrinsicFunction) {
           this.httpMethod = value
         }
-        
+
         /**
          * [integration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-integration)
          *
@@ -170,7 +170,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun integration(value: IntrinsicFunction) {
           this.integration = value
         }
-        
+
         /**
          * [methodResponses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-methodresponses)
          *
@@ -202,7 +202,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun methodResponses(vararg value: IntrinsicFunction) {
           this.methodResponses = value
         }
-        
+
         /**
          * [operationName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-operationname)
          *
@@ -234,7 +234,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun operationName(value: IntrinsicFunction) {
           this.operationName = value
         }
-        
+
         /**
          * [requestModels](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-requestmodels)
          *
@@ -308,7 +308,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun requestValidatorId(value: IntrinsicFunction) {
           this.requestValidatorId = value
         }
-        
+
         /**
          * [resourceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-resourceid)
          *
@@ -340,7 +340,7 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun resourceId(value: IntrinsicFunction) {
           this.resourceId = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-restapiid)
          *
@@ -372,7 +372,31 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
+        /**
+        * [Integration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html)
+        */
+        fun integration(init: Integration.() -> Unit = {}): Integration {
+            return Integration().also {
+                it.init()
+            }
+        }
+        /**
+        * [IntegrationResponse](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html)
+        */
+        fun integrationResponse(init: IntegrationResponse.() -> Unit = {}): IntegrationResponse {
+            return IntegrationResponse().also {
+                it.init()
+            }
+        }
+        /**
+        * [MethodResponse](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html)
+        */
+        fun methodResponse(init: MethodResponse.() -> Unit = {}): MethodResponse {
+            return MethodResponse().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -383,166 +407,540 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
     }
 
 
-    class Integration(
+    @CloudFormationMarker
+    class Integration {
             /**
-             * [CacheKeyParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val cacheKeyParameters: List<String>? = null,
-            /**
-             * [CacheNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val cacheNamespace: String? = null,
-            /**
-             * [ContentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val contentHandling: String? = null,
-            /**
-             * [Credentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val credentials: String? = null,
-            /**
-             * [IntegrationHttpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val integrationHttpMethod: String? = null,
-            /**
-             * [IntegrationResponses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationresponses)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<IntegrationResponse>
-             */
-            val integrationResponses: List<IntegrationResponse>? = null,
-            /**
-             * [PassthroughBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val passthroughBehavior: String? = null,
-            /**
-             * [RequestParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requestparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val requestParameters: Map<String, Any>? = null,
-            /**
-             * [RequestTemplates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val requestTemplates: Map<String, Any>? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null,
-            /**
-             * [Uri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val uri: String? = null
-    )
+         * [cacheKeyParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var cacheKeyParameters: Any? = null
 
-    class IntegrationResponse(
-            /**
-             * [ContentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integrationresponse-contenthandling)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val contentHandling: String? = null,
-            /**
-             * [ResponseParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responseparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val responseParameters: Map<String, Any>? = null,
-            /**
-             * [ResponseTemplates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responsetemplates)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val responseTemplates: Map<String, Any>? = null,
-            /**
-             * [SelectionPattern](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-selectionpattern)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val selectionPattern: String? = null,
-            /**
-             * [StatusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-statuscode)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val statusCode: String
-    )
+        /**
+         * [cacheKeyParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun cacheKeyParameters(value: List<String>) {
+          this.cacheKeyParameters = value
+        }
+        
+        /**
+         * [cacheKeyParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun cacheKeyParameters(vararg value: IntrinsicFunction) {
+          this.cacheKeyParameters = value
+        }
 
-    class MethodResponse(
+        /**
+         * [cacheNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var cacheNamespace: Any? = null
+
+        /**
+         * [cacheNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun cacheNamespace(value: String) {
+          this.cacheNamespace = value
+        }
+        
+        /**
+         * [cacheNamespace](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun cacheNamespace(value: IntrinsicFunction) {
+          this.cacheNamespace = value
+        }
+
+        /**
+         * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var contentHandling: Any? = null
+
+        /**
+         * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun contentHandling(value: String) {
+          this.contentHandling = value
+        }
+        
+        /**
+         * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun contentHandling(value: IntrinsicFunction) {
+          this.contentHandling = value
+        }
+
+        /**
+         * [credentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var credentials: Any? = null
+
+        /**
+         * [credentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun credentials(value: String) {
+          this.credentials = value
+        }
+        
+        /**
+         * [credentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun credentials(value: IntrinsicFunction) {
+          this.credentials = value
+        }
+
+        /**
+         * [integrationHttpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var integrationHttpMethod: Any? = null
+
+        /**
+         * [integrationHttpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun integrationHttpMethod(value: String) {
+          this.integrationHttpMethod = value
+        }
+        
+        /**
+         * [integrationHttpMethod](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun integrationHttpMethod(value: IntrinsicFunction) {
+          this.integrationHttpMethod = value
+        }
+
+        /**
+         * [integrationResponses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationresponses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<IntegrationResponse>
+         */
+        var integrationResponses: Any? = null
+
+        /**
+         * [integrationResponses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationresponses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<IntegrationResponse>
+         */
+        fun integrationResponses(value: List<IntegrationResponse>) {
+          this.integrationResponses = value
+        }
+        
+        /**
+         * [integrationResponses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationresponses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<IntegrationResponse>
+         */
+        fun integrationResponses(vararg value: IntrinsicFunction) {
+          this.integrationResponses = value
+        }
+
+        /**
+         * [passthroughBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var passthroughBehavior: Any? = null
+
+        /**
+         * [passthroughBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun passthroughBehavior(value: String) {
+          this.passthroughBehavior = value
+        }
+        
+        /**
+         * [passthroughBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun passthroughBehavior(value: IntrinsicFunction) {
+          this.passthroughBehavior = value
+        }
+
+        /**
+         * [requestParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requestparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var requestParameters: Any? = null
+
+        /**
+         * [requestParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requestparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun requestParameters(value: Map<String, Any>) {
+          this.requestParameters = value
+        }
+        
+        /**
+         * [requestTemplates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var requestTemplates: Any? = null
+
+        /**
+         * [requestTemplates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun requestTemplates(value: Map<String, Any>) {
+          this.requestTemplates = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [uri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var uri: Any? = null
+
+        /**
+         * [uri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun uri(value: String) {
+          this.uri = value
+        }
+        
+        /**
+         * [uri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun uri(value: IntrinsicFunction) {
+          this.uri = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class IntegrationResponse {
             /**
-             * [ResponseModels](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val responseModels: Map<String, Any>? = null,
+         * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integrationresponse-contenthandling)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var contentHandling: Any? = null
+
+        /**
+         * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integrationresponse-contenthandling)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun contentHandling(value: String) {
+          this.contentHandling = value
+        }
+        
+        /**
+         * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integrationresponse-contenthandling)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun contentHandling(value: IntrinsicFunction) {
+          this.contentHandling = value
+        }
+
+        /**
+         * [responseParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responseparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var responseParameters: Any? = null
+
+        /**
+         * [responseParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responseparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun responseParameters(value: Map<String, Any>) {
+          this.responseParameters = value
+        }
+        
+        /**
+         * [responseTemplates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responsetemplates)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var responseTemplates: Any? = null
+
+        /**
+         * [responseTemplates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responsetemplates)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun responseTemplates(value: Map<String, Any>) {
+          this.responseTemplates = value
+        }
+        
+        /**
+         * [selectionPattern](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-selectionpattern)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var selectionPattern: Any? = null
+
+        /**
+         * [selectionPattern](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-selectionpattern)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun selectionPattern(value: String) {
+          this.selectionPattern = value
+        }
+        
+        /**
+         * [selectionPattern](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-selectionpattern)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun selectionPattern(value: IntrinsicFunction) {
+          this.selectionPattern = value
+        }
+
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-statuscode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var statusCode: Any? = null
+
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-statuscode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun statusCode(value: String) {
+          this.statusCode = value
+        }
+        
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-statuscode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun statusCode(value: IntrinsicFunction) {
+          this.statusCode = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MethodResponse {
             /**
-             * [ResponseParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val responseParameters: Map<String, Any>? = null,
-            /**
-             * [StatusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val statusCode: String
-    )
+         * [responseModels](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var responseModels: Any? = null
+
+        /**
+         * [responseModels](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun responseModels(value: Map<String, Any>) {
+          this.responseModels = value
+        }
+        
+        /**
+         * [responseParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var responseParameters: Any? = null
+
+        /**
+         * [responseParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun responseParameters(value: Map<String, Any>) {
+          this.responseParameters = value
+        }
+        
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var statusCode: Any? = null
+
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun statusCode(value: String) {
+          this.statusCode = value
+        }
+        
+        /**
+         * [statusCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun statusCode(value: IntrinsicFunction) {
+          this.statusCode = value
+        }
+
+    }
 
 }
 

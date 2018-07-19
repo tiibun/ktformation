@@ -42,7 +42,7 @@ class AWSServerlessSimpleTable(logicalId: String) : Resource<AWSServerlessSimple
         fun primaryKey(value: IntrinsicFunction) {
           this.primaryKey = value
         }
-        
+
         /**
          * [provisionedThroughput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
          *
@@ -74,7 +74,23 @@ class AWSServerlessSimpleTable(logicalId: String) : Resource<AWSServerlessSimple
         fun provisionedThroughput(value: IntrinsicFunction) {
           this.provisionedThroughput = value
         }
-        
+
+        /**
+        * [PrimaryKey](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+        */
+        fun primaryKey(init: PrimaryKey.() -> Unit = {}): PrimaryKey {
+            return PrimaryKey().also {
+                it.init()
+            }
+        }
+        /**
+        * [ProvisionedThroughput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+        */
+        fun provisionedThroughput(init: ProvisionedThroughput.() -> Unit = {}): ProvisionedThroughput {
+            return ProvisionedThroughput().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,43 +101,137 @@ class AWSServerlessSimpleTable(logicalId: String) : Resource<AWSServerlessSimple
     }
 
 
-    class PrimaryKey(
+    @CloudFormationMarker
+    class PrimaryKey {
             /**
-             * [Name](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
-            /**
-             * [Type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [name](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
 
-    class ProvisionedThroughput(
+        /**
+         * [name](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ProvisionedThroughput {
             /**
-             * [ReadCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val readCapacityUnits: Int? = null,
-            /**
-             * [WriteCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val writeCapacityUnits: Int
-    )
+         * [readCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var readCapacityUnits: Any? = null
+
+        /**
+         * [readCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun readCapacityUnits(value: Int) {
+          this.readCapacityUnits = value
+        }
+        
+        /**
+         * [readCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun readCapacityUnits(value: IntrinsicFunction) {
+          this.readCapacityUnits = value
+        }
+
+        /**
+         * [writeCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var writeCapacityUnits: Any? = null
+
+        /**
+         * [writeCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun writeCapacityUnits(value: Int) {
+          this.writeCapacityUnits = value
+        }
+        
+        /**
+         * [writeCapacityUnits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun writeCapacityUnits(value: IntrinsicFunction) {
+          this.writeCapacityUnits = value
+        }
+
+    }
 
 }
 

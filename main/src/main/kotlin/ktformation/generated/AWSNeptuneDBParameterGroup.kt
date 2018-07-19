@@ -42,7 +42,7 @@ class AWSNeptuneDBParameterGroup(logicalId: String) : Resource<AWSNeptuneDBParam
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [family](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-family)
          *
@@ -74,7 +74,7 @@ class AWSNeptuneDBParameterGroup(logicalId: String) : Resource<AWSNeptuneDBParam
         fun family(value: IntrinsicFunction) {
           this.family = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-name)
          *
@@ -106,7 +106,7 @@ class AWSNeptuneDBParameterGroup(logicalId: String) : Resource<AWSNeptuneDBParam
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-parameters)
          *
@@ -138,7 +138,7 @@ class AWSNeptuneDBParameterGroup(logicalId: String) : Resource<AWSNeptuneDBParam
         fun parameters(value: IntrinsicFunction) {
           this.parameters = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-tags)
          *
@@ -170,7 +170,8 @@ class AWSNeptuneDBParameterGroup(logicalId: String) : Resource<AWSNeptuneDBParam
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

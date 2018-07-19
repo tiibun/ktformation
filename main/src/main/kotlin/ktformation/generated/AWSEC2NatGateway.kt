@@ -42,7 +42,7 @@ class AWSEC2NatGateway(logicalId: String) : Resource<AWSEC2NatGateway.Properties
         fun allocationId(value: IntrinsicFunction) {
           this.allocationId = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-subnetid)
          *
@@ -74,7 +74,7 @@ class AWSEC2NatGateway(logicalId: String) : Resource<AWSEC2NatGateway.Properties
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-tags)
          *
@@ -106,7 +106,8 @@ class AWSEC2NatGateway(logicalId: String) : Resource<AWSEC2NatGateway.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSIAMUserToGroupAddition(logicalId: String) : Resource<AWSIAMUserToGroupA
         fun groupName(value: IntrinsicFunction) {
           this.groupName = value
         }
-        
+
         /**
          * [users](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html#cfn-iam-addusertogroup-users)
          *
@@ -74,7 +74,8 @@ class AWSIAMUserToGroupAddition(logicalId: String) : Resource<AWSIAMUserToGroupA
         fun users(vararg value: IntrinsicFunction) {
           this.users = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

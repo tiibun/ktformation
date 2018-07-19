@@ -42,7 +42,7 @@ class AWSApiGatewayRequestValidator(logicalId: String) : Resource<AWSApiGatewayR
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-restapiid)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayRequestValidator(logicalId: String) : Resource<AWSApiGatewayR
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
         /**
          * [validateRequestBody](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-validaterequestbody)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayRequestValidator(logicalId: String) : Resource<AWSApiGatewayR
         fun validateRequestBody(value: IntrinsicFunction) {
           this.validateRequestBody = value
         }
-        
+
         /**
          * [validateRequestParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-validaterequestparameters)
          *
@@ -138,7 +138,8 @@ class AWSApiGatewayRequestValidator(logicalId: String) : Resource<AWSApiGatewayR
         fun validateRequestParameters(value: IntrinsicFunction) {
           this.validateRequestParameters = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

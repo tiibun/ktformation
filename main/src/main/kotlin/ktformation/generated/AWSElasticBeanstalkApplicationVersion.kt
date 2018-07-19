@@ -42,7 +42,7 @@ class AWSElasticBeanstalkApplicationVersion(logicalId: String) : Resource<AWSEla
         fun applicationName(value: IntrinsicFunction) {
           this.applicationName = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-description)
          *
@@ -74,7 +74,7 @@ class AWSElasticBeanstalkApplicationVersion(logicalId: String) : Resource<AWSEla
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [sourceBundle](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-sourcebundle)
          *
@@ -106,7 +106,15 @@ class AWSElasticBeanstalkApplicationVersion(logicalId: String) : Resource<AWSEla
         fun sourceBundle(value: IntrinsicFunction) {
           this.sourceBundle = value
         }
-        
+
+        /**
+        * [SourceBundle](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html)
+        */
+        fun sourceBundle(init: SourceBundle.() -> Unit = {}): SourceBundle {
+            return SourceBundle().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,24 +125,71 @@ class AWSElasticBeanstalkApplicationVersion(logicalId: String) : Resource<AWSEla
     }
 
 
-    class SourceBundle(
+    @CloudFormationMarker
+    class SourceBundle {
             /**
-             * [S3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3bucket)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val s3Bucket: String,
-            /**
-             * [S3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val s3Key: String
-    )
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var s3Bucket: Any? = null
+
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Bucket(value: String) {
+          this.s3Bucket = value
+        }
+        
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3bucket)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Bucket(value: IntrinsicFunction) {
+          this.s3Bucket = value
+        }
+
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var s3Key: Any? = null
+
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Key(value: String) {
+          this.s3Key = value
+        }
+        
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun s3Key(value: IntrinsicFunction) {
+          this.s3Key = value
+        }
+
+    }
 
 }
 

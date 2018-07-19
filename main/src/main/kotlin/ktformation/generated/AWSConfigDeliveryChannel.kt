@@ -42,7 +42,7 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
         fun configSnapshotDeliveryProperties(value: IntrinsicFunction) {
           this.configSnapshotDeliveryProperties = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-name)
          *
@@ -74,7 +74,7 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [s3BucketName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3bucketname)
          *
@@ -106,7 +106,7 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
         fun s3BucketName(value: IntrinsicFunction) {
           this.s3BucketName = value
         }
-        
+
         /**
          * [s3KeyPrefix](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3keyprefix)
          *
@@ -138,7 +138,7 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
         fun s3KeyPrefix(value: IntrinsicFunction) {
           this.s3KeyPrefix = value
         }
-        
+
         /**
          * [snsTopicARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-snstopicarn)
          *
@@ -170,7 +170,15 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
         fun snsTopicARN(value: IntrinsicFunction) {
           this.snsTopicARN = value
         }
-        
+
+        /**
+        * [ConfigSnapshotDeliveryProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html)
+        */
+        fun configSnapshotDeliveryProperties(init: ConfigSnapshotDeliveryProperties.() -> Unit = {}): ConfigSnapshotDeliveryProperties {
+            return ConfigSnapshotDeliveryProperties().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,16 +189,40 @@ class AWSConfigDeliveryChannel(logicalId: String) : Resource<AWSConfigDeliveryCh
     }
 
 
-    class ConfigSnapshotDeliveryProperties(
+    @CloudFormationMarker
+    class ConfigSnapshotDeliveryProperties {
             /**
-             * [DeliveryFrequency](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val deliveryFrequency: String? = null
-    )
+         * [deliveryFrequency](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var deliveryFrequency: Any? = null
+
+        /**
+         * [deliveryFrequency](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun deliveryFrequency(value: String) {
+          this.deliveryFrequency = value
+        }
+        
+        /**
+         * [deliveryFrequency](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun deliveryFrequency(value: IntrinsicFunction) {
+          this.deliveryFrequency = value
+        }
+
+    }
 
 }
 

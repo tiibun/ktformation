@@ -42,7 +42,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun agentVersion(value: IntrinsicFunction) {
           this.agentVersion = value
         }
-        
+
         /**
          * [amiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-amiid)
          *
@@ -74,7 +74,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun amiId(value: IntrinsicFunction) {
           this.amiId = value
         }
-        
+
         /**
          * [architecture](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-architecture)
          *
@@ -106,7 +106,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun architecture(value: IntrinsicFunction) {
           this.architecture = value
         }
-        
+
         /**
          * [autoScalingType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-autoscalingtype)
          *
@@ -138,7 +138,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun autoScalingType(value: IntrinsicFunction) {
           this.autoScalingType = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-availabilityzone)
          *
@@ -170,7 +170,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [blockDeviceMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-blockdevicemappings)
          *
@@ -202,7 +202,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun blockDeviceMappings(vararg value: IntrinsicFunction) {
           this.blockDeviceMappings = value
         }
-        
+
         /**
          * [ebsOptimized](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-ebsoptimized)
          *
@@ -234,7 +234,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun ebsOptimized(value: IntrinsicFunction) {
           this.ebsOptimized = value
         }
-        
+
         /**
          * [elasticIps](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-elasticips)
          *
@@ -266,7 +266,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun elasticIps(vararg value: IntrinsicFunction) {
           this.elasticIps = value
         }
-        
+
         /**
          * [hostname](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-hostname)
          *
@@ -298,7 +298,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun hostname(value: IntrinsicFunction) {
           this.hostname = value
         }
-        
+
         /**
          * [installUpdatesOnBoot](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-installupdatesonboot)
          *
@@ -330,7 +330,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun installUpdatesOnBoot(value: IntrinsicFunction) {
           this.installUpdatesOnBoot = value
         }
-        
+
         /**
          * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-instancetype)
          *
@@ -362,7 +362,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun instanceType(value: IntrinsicFunction) {
           this.instanceType = value
         }
-        
+
         /**
          * [layerIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-layerids)
          *
@@ -394,7 +394,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun layerIds(vararg value: IntrinsicFunction) {
           this.layerIds = value
         }
-        
+
         /**
          * [os](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-os)
          *
@@ -426,7 +426,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun os(value: IntrinsicFunction) {
           this.os = value
         }
-        
+
         /**
          * [rootDeviceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-rootdevicetype)
          *
@@ -458,7 +458,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun rootDeviceType(value: IntrinsicFunction) {
           this.rootDeviceType = value
         }
-        
+
         /**
          * [sshKeyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-sshkeyname)
          *
@@ -490,7 +490,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun sshKeyName(value: IntrinsicFunction) {
           this.sshKeyName = value
         }
-        
+
         /**
          * [stackId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-stackid)
          *
@@ -522,7 +522,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun stackId(value: IntrinsicFunction) {
           this.stackId = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-subnetid)
          *
@@ -554,7 +554,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
         /**
          * [tenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-tenancy)
          *
@@ -586,7 +586,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun tenancy(value: IntrinsicFunction) {
           this.tenancy = value
         }
-        
+
         /**
          * [timeBasedAutoScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-timebasedautoscaling)
          *
@@ -618,7 +618,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun timeBasedAutoScaling(value: IntrinsicFunction) {
           this.timeBasedAutoScaling = value
         }
-        
+
         /**
          * [virtualizationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-virtualizationtype)
          *
@@ -650,7 +650,7 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun virtualizationType(value: IntrinsicFunction) {
           this.virtualizationType = value
         }
-        
+
         /**
          * [volumes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-volumes)
          *
@@ -682,7 +682,31 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
         fun volumes(vararg value: IntrinsicFunction) {
           this.volumes = value
         }
-        
+
+        /**
+        * [BlockDeviceMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html)
+        */
+        fun blockDeviceMapping(init: BlockDeviceMapping.() -> Unit = {}): BlockDeviceMapping {
+            return BlockDeviceMapping().also {
+                it.init()
+            }
+        }
+        /**
+        * [EbsBlockDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html)
+        */
+        fun ebsBlockDevice(init: EbsBlockDevice.() -> Unit = {}): EbsBlockDevice {
+            return EbsBlockDevice().also {
+                it.init()
+            }
+        }
+        /**
+        * [TimeBasedAutoScaling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html)
+        */
+        fun timeBasedAutoScaling(init: TimeBasedAutoScaling.() -> Unit = {}): TimeBasedAutoScaling {
+            return TimeBasedAutoScaling().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -693,142 +717,436 @@ class AWSOpsWorksInstance(logicalId: String) : Resource<AWSOpsWorksInstance.Prop
     }
 
 
-    class BlockDeviceMapping(
+    @CloudFormationMarker
+    class BlockDeviceMapping {
             /**
-             * [DeviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val deviceName: String? = null,
-            /**
-             * [Ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
-             *
-             * _Required_: no
-             *
-             * _Type_: EbsBlockDevice
-             */
-            val ebs: EbsBlockDevice? = null,
-            /**
-             * [NoDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val noDevice: String? = null,
-            /**
-             * [VirtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val virtualName: String? = null
-    )
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var deviceName: Any? = null
 
-    class EbsBlockDevice(
-            /**
-             * [DeleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val deleteOnTermination: Boolean? = null,
-            /**
-             * [Iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val iops: Int? = null,
-            /**
-             * [SnapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val snapshotId: String? = null,
-            /**
-             * [VolumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val volumeSize: Int? = null,
-            /**
-             * [VolumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val volumeType: String? = null
-    )
+        /**
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun deviceName(value: String) {
+          this.deviceName = value
+        }
+        
+        /**
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun deviceName(value: IntrinsicFunction) {
+          this.deviceName = value
+        }
 
-    class TimeBasedAutoScaling(
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: EbsBlockDevice
+         */
+        var ebs: Any? = null
+
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: EbsBlockDevice
+         */
+        fun ebs(value: EbsBlockDevice) {
+          this.ebs = value
+        }
+        
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: EbsBlockDevice
+         */
+        fun ebs(value: IntrinsicFunction) {
+          this.ebs = value
+        }
+
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var noDevice: Any? = null
+
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun noDevice(value: String) {
+          this.noDevice = value
+        }
+        
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun noDevice(value: IntrinsicFunction) {
+          this.noDevice = value
+        }
+
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var virtualName: Any? = null
+
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun virtualName(value: String) {
+          this.virtualName = value
+        }
+        
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun virtualName(value: IntrinsicFunction) {
+          this.virtualName = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class EbsBlockDevice {
             /**
-             * [Friday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-friday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val friday: Map<String, Any>? = null,
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var deleteOnTermination: Any? = null
+
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: Boolean) {
+          this.deleteOnTermination = value
+        }
+        
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: IntrinsicFunction) {
+          this.deleteOnTermination = value
+        }
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var iops: Any? = null
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: Int) {
+          this.iops = value
+        }
+        
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: IntrinsicFunction) {
+          this.iops = value
+        }
+
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var snapshotId: Any? = null
+
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun snapshotId(value: String) {
+          this.snapshotId = value
+        }
+        
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun snapshotId(value: IntrinsicFunction) {
+          this.snapshotId = value
+        }
+
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var volumeSize: Any? = null
+
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun volumeSize(value: Int) {
+          this.volumeSize = value
+        }
+        
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun volumeSize(value: IntrinsicFunction) {
+          this.volumeSize = value
+        }
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var volumeType: Any? = null
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: String) {
+          this.volumeType = value
+        }
+        
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: IntrinsicFunction) {
+          this.volumeType = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TimeBasedAutoScaling {
             /**
-             * [Monday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-monday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val monday: Map<String, Any>? = null,
-            /**
-             * [Saturday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-saturday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val saturday: Map<String, Any>? = null,
-            /**
-             * [Sunday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-sunday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val sunday: Map<String, Any>? = null,
-            /**
-             * [Thursday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-thursday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val thursday: Map<String, Any>? = null,
-            /**
-             * [Tuesday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-tuesday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val tuesday: Map<String, Any>? = null,
-            /**
-             * [Wednesday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-wednesday)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val wednesday: Map<String, Any>? = null
-    )
+         * [friday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-friday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var friday: Any? = null
+
+        /**
+         * [friday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-friday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun friday(value: Map<String, Any>) {
+          this.friday = value
+        }
+        
+        /**
+         * [monday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-monday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var monday: Any? = null
+
+        /**
+         * [monday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-monday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun monday(value: Map<String, Any>) {
+          this.monday = value
+        }
+        
+        /**
+         * [saturday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-saturday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var saturday: Any? = null
+
+        /**
+         * [saturday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-saturday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun saturday(value: Map<String, Any>) {
+          this.saturday = value
+        }
+        
+        /**
+         * [sunday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-sunday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var sunday: Any? = null
+
+        /**
+         * [sunday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-sunday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun sunday(value: Map<String, Any>) {
+          this.sunday = value
+        }
+        
+        /**
+         * [thursday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-thursday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var thursday: Any? = null
+
+        /**
+         * [thursday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-thursday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun thursday(value: Map<String, Any>) {
+          this.thursday = value
+        }
+        
+        /**
+         * [tuesday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-tuesday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var tuesday: Any? = null
+
+        /**
+         * [tuesday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-tuesday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun tuesday(value: Map<String, Any>) {
+          this.tuesday = value
+        }
+        
+        /**
+         * [wednesday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-wednesday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var wednesday: Any? = null
+
+        /**
+         * [wednesday](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-wednesday)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun wednesday(value: Map<String, Any>) {
+          this.wednesday = value
+        }
+        
+    }
 
 }
 

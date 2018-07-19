@@ -42,7 +42,7 @@ class AWSEC2CustomerGateway(logicalId: String) : Resource<AWSEC2CustomerGateway.
         fun bgpAsn(value: IntrinsicFunction) {
           this.bgpAsn = value
         }
-        
+
         /**
          * [ipAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-ipaddress)
          *
@@ -74,7 +74,7 @@ class AWSEC2CustomerGateway(logicalId: String) : Resource<AWSEC2CustomerGateway.
         fun ipAddress(value: IntrinsicFunction) {
           this.ipAddress = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-tags)
          *
@@ -106,7 +106,7 @@ class AWSEC2CustomerGateway(logicalId: String) : Resource<AWSEC2CustomerGateway.
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-type)
          *
@@ -138,7 +138,8 @@ class AWSEC2CustomerGateway(logicalId: String) : Resource<AWSEC2CustomerGateway.
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

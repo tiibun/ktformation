@@ -42,7 +42,7 @@ class AWSEC2FlowLog(logicalId: String) : Resource<AWSEC2FlowLog.Properties>(logi
         fun deliverLogsPermissionArn(value: IntrinsicFunction) {
           this.deliverLogsPermissionArn = value
         }
-        
+
         /**
          * [logGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-loggroupname)
          *
@@ -74,7 +74,7 @@ class AWSEC2FlowLog(logicalId: String) : Resource<AWSEC2FlowLog.Properties>(logi
         fun logGroupName(value: IntrinsicFunction) {
           this.logGroupName = value
         }
-        
+
         /**
          * [resourceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-resourceid)
          *
@@ -106,7 +106,7 @@ class AWSEC2FlowLog(logicalId: String) : Resource<AWSEC2FlowLog.Properties>(logi
         fun resourceId(value: IntrinsicFunction) {
           this.resourceId = value
         }
-        
+
         /**
          * [resourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-resourcetype)
          *
@@ -138,7 +138,7 @@ class AWSEC2FlowLog(logicalId: String) : Resource<AWSEC2FlowLog.Properties>(logi
         fun resourceType(value: IntrinsicFunction) {
           this.resourceType = value
         }
-        
+
         /**
          * [trafficType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-traffictype)
          *
@@ -170,7 +170,8 @@ class AWSEC2FlowLog(logicalId: String) : Resource<AWSEC2FlowLog.Properties>(logi
         fun trafficType(value: IntrinsicFunction) {
           this.trafficType = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

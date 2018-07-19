@@ -42,7 +42,7 @@ class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStac
         fun notificationARNs(vararg value: IntrinsicFunction) {
           this.notificationARNs = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html#cfn-cloudformation-stack-parameters)
          *
@@ -95,7 +95,7 @@ class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStac
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [templateURL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html#cfn-cloudformation-stack-templateurl)
          *
@@ -127,7 +127,7 @@ class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStac
         fun templateURL(value: IntrinsicFunction) {
           this.templateURL = value
         }
-        
+
         /**
          * [timeoutInMinutes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html#cfn-cloudformation-stack-timeoutinminutes)
          *
@@ -159,7 +159,8 @@ class AWSCloudFormationStack(logicalId: String) : Resource<AWSCloudFormationStac
         fun timeoutInMinutes(value: IntrinsicFunction) {
           this.timeoutInMinutes = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

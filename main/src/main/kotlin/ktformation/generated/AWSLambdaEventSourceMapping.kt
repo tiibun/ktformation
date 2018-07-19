@@ -42,7 +42,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         fun batchSize(value: IntrinsicFunction) {
           this.batchSize = value
         }
-        
+
         /**
          * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-enabled)
          *
@@ -74,7 +74,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         fun enabled(value: IntrinsicFunction) {
           this.enabled = value
         }
-        
+
         /**
          * [eventSourceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-eventsourcearn)
          *
@@ -106,7 +106,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         fun eventSourceArn(value: IntrinsicFunction) {
           this.eventSourceArn = value
         }
-        
+
         /**
          * [functionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
          *
@@ -138,7 +138,7 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         fun functionName(value: IntrinsicFunction) {
           this.functionName = value
         }
-        
+
         /**
          * [startingPosition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition)
          *
@@ -170,7 +170,8 @@ class AWSLambdaEventSourceMapping(logicalId: String) : Resource<AWSLambdaEventSo
         fun startingPosition(value: IntrinsicFunction) {
           this.startingPosition = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSRDSDBSecurityGroupIngress(logicalId: String) : Resource<AWSRDSDBSecurit
         fun cIDRIP(value: IntrinsicFunction) {
           this.cIDRIP = value
         }
-        
+
         /**
          * [dBSecurityGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-dbsecuritygroupname)
          *
@@ -74,7 +74,7 @@ class AWSRDSDBSecurityGroupIngress(logicalId: String) : Resource<AWSRDSDBSecurit
         fun dBSecurityGroupName(value: IntrinsicFunction) {
           this.dBSecurityGroupName = value
         }
-        
+
         /**
          * [eC2SecurityGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupid)
          *
@@ -106,7 +106,7 @@ class AWSRDSDBSecurityGroupIngress(logicalId: String) : Resource<AWSRDSDBSecurit
         fun eC2SecurityGroupId(value: IntrinsicFunction) {
           this.eC2SecurityGroupId = value
         }
-        
+
         /**
          * [eC2SecurityGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupname)
          *
@@ -138,7 +138,7 @@ class AWSRDSDBSecurityGroupIngress(logicalId: String) : Resource<AWSRDSDBSecurit
         fun eC2SecurityGroupName(value: IntrinsicFunction) {
           this.eC2SecurityGroupName = value
         }
-        
+
         /**
          * [eC2SecurityGroupOwnerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupownerid)
          *
@@ -170,7 +170,8 @@ class AWSRDSDBSecurityGroupIngress(logicalId: String) : Resource<AWSRDSDBSecurit
         fun eC2SecurityGroupOwnerId(value: IntrinsicFunction) {
           this.eC2SecurityGroupOwnerId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

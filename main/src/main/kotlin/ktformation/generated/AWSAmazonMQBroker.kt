@@ -42,7 +42,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun autoMinorVersionUpgrade(value: IntrinsicFunction) {
           this.autoMinorVersionUpgrade = value
         }
-        
+
         /**
          * [brokerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-brokername)
          *
@@ -74,7 +74,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun brokerName(value: IntrinsicFunction) {
           this.brokerName = value
         }
-        
+
         /**
          * [configuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-configuration)
          *
@@ -106,7 +106,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun configuration(value: IntrinsicFunction) {
           this.configuration = value
         }
-        
+
         /**
          * [deploymentMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode)
          *
@@ -138,7 +138,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun deploymentMode(value: IntrinsicFunction) {
           this.deploymentMode = value
         }
-        
+
         /**
          * [engineType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype)
          *
@@ -170,7 +170,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun engineType(value: IntrinsicFunction) {
           this.engineType = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion)
          *
@@ -202,7 +202,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [hostInstanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype)
          *
@@ -234,7 +234,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun hostInstanceType(value: IntrinsicFunction) {
           this.hostInstanceType = value
         }
-        
+
         /**
          * [maintenanceWindowStartTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-maintenancewindowstarttime)
          *
@@ -266,7 +266,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun maintenanceWindowStartTime(value: IntrinsicFunction) {
           this.maintenanceWindowStartTime = value
         }
-        
+
         /**
          * [publiclyAccessible](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible)
          *
@@ -298,7 +298,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun publiclyAccessible(value: IntrinsicFunction) {
           this.publiclyAccessible = value
         }
-        
+
         /**
          * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-securitygroups)
          *
@@ -330,7 +330,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun securityGroups(vararg value: IntrinsicFunction) {
           this.securityGroups = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-subnetids)
          *
@@ -362,7 +362,7 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
         /**
          * [users](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-users)
          *
@@ -394,7 +394,31 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         fun users(vararg value: IntrinsicFunction) {
           this.users = value
         }
-        
+
+        /**
+        * [ConfigurationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html)
+        */
+        fun configurationId(init: ConfigurationId.() -> Unit = {}): ConfigurationId {
+            return ConfigurationId().also {
+                it.init()
+            }
+        }
+        /**
+        * [MaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html)
+        */
+        fun maintenanceWindow(init: MaintenanceWindow.() -> Unit = {}): MaintenanceWindow {
+            return MaintenanceWindow().also {
+                it.init()
+            }
+        }
+        /**
+        * [User](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html)
+        */
+        fun user(init: User.() -> Unit = {}): User {
+            return User().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -405,86 +429,296 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
     }
 
 
-    class ConfigurationId(
+    @CloudFormationMarker
+    class ConfigurationId {
             /**
-             * [Id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val id: String,
-            /**
-             * [Revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val revision: Int
-    )
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var id: Any? = null
 
-    class MaintenanceWindow(
-            /**
-             * [DayOfWeek](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val dayOfWeek: String,
-            /**
-             * [TimeOfDay](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val timeOfDay: String,
-            /**
-             * [TimeZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val timeZone: String
-    )
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: String) {
+          this.id = value
+        }
+        
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: IntrinsicFunction) {
+          this.id = value
+        }
 
-    class User(
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var revision: Any? = null
+
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun revision(value: Int) {
+          this.revision = value
+        }
+        
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun revision(value: IntrinsicFunction) {
+          this.revision = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class MaintenanceWindow {
             /**
-             * [ConsoleAccess](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val consoleAccess: Boolean? = null,
+         * [dayOfWeek](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var dayOfWeek: Any? = null
+
+        /**
+         * [dayOfWeek](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dayOfWeek(value: String) {
+          this.dayOfWeek = value
+        }
+        
+        /**
+         * [dayOfWeek](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dayOfWeek(value: IntrinsicFunction) {
+          this.dayOfWeek = value
+        }
+
+        /**
+         * [timeOfDay](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var timeOfDay: Any? = null
+
+        /**
+         * [timeOfDay](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun timeOfDay(value: String) {
+          this.timeOfDay = value
+        }
+        
+        /**
+         * [timeOfDay](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun timeOfDay(value: IntrinsicFunction) {
+          this.timeOfDay = value
+        }
+
+        /**
+         * [timeZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var timeZone: Any? = null
+
+        /**
+         * [timeZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun timeZone(value: String) {
+          this.timeZone = value
+        }
+        
+        /**
+         * [timeZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun timeZone(value: IntrinsicFunction) {
+          this.timeZone = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class User {
             /**
-             * [Groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val groups: List<String>? = null,
-            /**
-             * [Password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val password: String,
-            /**
-             * [Username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val username: String
-    )
+         * [consoleAccess](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var consoleAccess: Any? = null
+
+        /**
+         * [consoleAccess](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun consoleAccess(value: Boolean) {
+          this.consoleAccess = value
+        }
+        
+        /**
+         * [consoleAccess](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun consoleAccess(value: IntrinsicFunction) {
+          this.consoleAccess = value
+        }
+
+        /**
+         * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var groups: Any? = null
+
+        /**
+         * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun groups(value: List<String>) {
+          this.groups = value
+        }
+        
+        /**
+         * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun groups(vararg value: IntrinsicFunction) {
+          this.groups = value
+        }
+
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var password: Any? = null
+
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun password(value: String) {
+          this.password = value
+        }
+        
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun password(value: IntrinsicFunction) {
+          this.password = value
+        }
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var username: Any? = null
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun username(value: String) {
+          this.username = value
+        }
+        
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun username(value: IntrinsicFunction) {
+          this.username = value
+        }
+
+    }
 
 }
 

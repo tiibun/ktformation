@@ -42,7 +42,7 @@ class AWSCodeDeployApplication(logicalId: String) : Resource<AWSCodeDeployApplic
         fun applicationName(value: IntrinsicFunction) {
           this.applicationName = value
         }
-        
+
         /**
          * [computePlatform](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-computeplatform)
          *
@@ -74,7 +74,8 @@ class AWSCodeDeployApplication(logicalId: String) : Resource<AWSCodeDeployApplic
         fun computePlatform(value: IntrinsicFunction) {
           this.computePlatform = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

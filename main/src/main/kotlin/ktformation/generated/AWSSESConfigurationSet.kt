@@ -42,7 +42,8 @@ class AWSSESConfigurationSet(logicalId: String) : Resource<AWSSESConfigurationSe
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

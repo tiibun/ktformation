@@ -42,7 +42,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun createAlias(value: IntrinsicFunction) {
           this.createAlias = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-description)
          *
@@ -74,7 +74,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [enableSso](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-enablesso)
          *
@@ -106,7 +106,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun enableSso(value: IntrinsicFunction) {
           this.enableSso = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-name)
          *
@@ -138,7 +138,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-password)
          *
@@ -170,7 +170,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun password(value: IntrinsicFunction) {
           this.password = value
         }
-        
+
         /**
          * [shortName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-shortname)
          *
@@ -202,7 +202,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun shortName(value: IntrinsicFunction) {
           this.shortName = value
         }
-        
+
         /**
          * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-size)
          *
@@ -234,7 +234,7 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun size(value: IntrinsicFunction) {
           this.size = value
         }
-        
+
         /**
          * [vpcSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-vpcsettings)
          *
@@ -266,7 +266,15 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
         fun vpcSettings(value: IntrinsicFunction) {
           this.vpcSettings = value
         }
-        
+
+        /**
+        * [VpcSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html)
+        */
+        fun vpcSettings(init: VpcSettings.() -> Unit = {}): VpcSettings {
+            return VpcSettings().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -277,24 +285,71 @@ class AWSDirectoryServiceSimpleAD(logicalId: String) : Resource<AWSDirectoryServ
     }
 
 
-    class VpcSettings(
+    @CloudFormationMarker
+    class VpcSettings {
             /**
-             * [SubnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-subnetids)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnetIds: List<String>,
-            /**
-             * [VpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-vpcid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val vpcId: String
-    )
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnetIds: Any? = null
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(value: List<String>) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(vararg value: IntrinsicFunction) {
+          this.subnetIds = value
+        }
+
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var vpcId: Any? = null
+
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vpcId(value: IntrinsicFunction) {
+          this.vpcId = value
+        }
+
+    }
 
 }
 

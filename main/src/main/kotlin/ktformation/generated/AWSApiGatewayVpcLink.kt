@@ -42,7 +42,7 @@ class AWSApiGatewayVpcLink(logicalId: String) : Resource<AWSApiGatewayVpcLink.Pr
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-name)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayVpcLink(logicalId: String) : Resource<AWSApiGatewayVpcLink.Pr
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [targetArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-targetarns)
          *
@@ -106,7 +106,8 @@ class AWSApiGatewayVpcLink(logicalId: String) : Resource<AWSApiGatewayVpcLink.Pr
         fun targetArns(vararg value: IntrinsicFunction) {
           this.targetArns = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

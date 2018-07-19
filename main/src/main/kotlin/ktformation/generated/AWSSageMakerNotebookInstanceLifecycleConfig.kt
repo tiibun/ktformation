@@ -42,7 +42,7 @@ class AWSSageMakerNotebookInstanceLifecycleConfig(logicalId: String) : Resource<
         fun notebookInstanceLifecycleConfigName(value: IntrinsicFunction) {
           this.notebookInstanceLifecycleConfigName = value
         }
-        
+
         /**
          * [onCreate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
          *
@@ -74,7 +74,7 @@ class AWSSageMakerNotebookInstanceLifecycleConfig(logicalId: String) : Resource<
         fun onCreate(vararg value: IntrinsicFunction) {
           this.onCreate = value
         }
-        
+
         /**
          * [onStart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
          *
@@ -106,7 +106,15 @@ class AWSSageMakerNotebookInstanceLifecycleConfig(logicalId: String) : Resource<
         fun onStart(vararg value: IntrinsicFunction) {
           this.onStart = value
         }
-        
+
+        /**
+        * [NotebookInstanceLifecycleHook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html)
+        */
+        fun notebookInstanceLifecycleHook(init: NotebookInstanceLifecycleHook.() -> Unit = {}): NotebookInstanceLifecycleHook {
+            return NotebookInstanceLifecycleHook().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,16 +125,40 @@ class AWSSageMakerNotebookInstanceLifecycleConfig(logicalId: String) : Resource<
     }
 
 
-    class NotebookInstanceLifecycleHook(
+    @CloudFormationMarker
+    class NotebookInstanceLifecycleHook {
             /**
-             * [Content](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val content: String? = null
-    )
+         * [content](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var content: Any? = null
+
+        /**
+         * [content](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun content(value: String) {
+          this.content = value
+        }
+        
+        /**
+         * [content](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun content(value: IntrinsicFunction) {
+          this.content = value
+        }
+
+    }
 
 }
 

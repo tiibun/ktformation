@@ -42,7 +42,7 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
         fun peerOwnerId(value: IntrinsicFunction) {
           this.peerOwnerId = value
         }
-        
+
         /**
          * [peerRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerrolearn)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
         fun peerRoleArn(value: IntrinsicFunction) {
           this.peerRoleArn = value
         }
-        
+
         /**
          * [peerVpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peervpcid)
          *
@@ -106,7 +106,7 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
         fun peerVpcId(value: IntrinsicFunction) {
           this.peerVpcId = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-tags)
          *
@@ -138,7 +138,7 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-vpcid)
          *
@@ -170,7 +170,8 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

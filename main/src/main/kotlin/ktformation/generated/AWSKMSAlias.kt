@@ -42,7 +42,7 @@ class AWSKMSAlias(logicalId: String) : Resource<AWSKMSAlias.Properties>(logicalI
         fun aliasName(value: IntrinsicFunction) {
           this.aliasName = value
         }
-        
+
         /**
          * [targetKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-targetkeyid)
          *
@@ -74,7 +74,8 @@ class AWSKMSAlias(logicalId: String) : Resource<AWSKMSAlias.Properties>(logicalI
         fun targetKeyId(value: IntrinsicFunction) {
           this.targetKeyId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

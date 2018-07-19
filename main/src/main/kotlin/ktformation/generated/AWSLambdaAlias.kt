@@ -42,7 +42,7 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [functionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-functionname)
          *
@@ -74,7 +74,7 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
         fun functionName(value: IntrinsicFunction) {
           this.functionName = value
         }
-        
+
         /**
          * [functionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-functionversion)
          *
@@ -106,7 +106,7 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
         fun functionVersion(value: IntrinsicFunction) {
           this.functionVersion = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-name)
          *
@@ -138,7 +138,7 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [routingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-routingconfig)
          *
@@ -170,7 +170,23 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
         fun routingConfig(value: IntrinsicFunction) {
           this.routingConfig = value
         }
-        
+
+        /**
+        * [AliasRoutingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html)
+        */
+        fun aliasRoutingConfiguration(init: AliasRoutingConfiguration.() -> Unit = {}): AliasRoutingConfiguration {
+            return AliasRoutingConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [VersionWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html)
+        */
+        fun versionWeight(init: VersionWeight.() -> Unit = {}): VersionWeight {
+            return VersionWeight().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,35 +197,106 @@ class AWSLambdaAlias(logicalId: String) : Resource<AWSLambdaAlias.Properties>(lo
     }
 
 
-    class AliasRoutingConfiguration(
+    @CloudFormationMarker
+    class AliasRoutingConfiguration {
             /**
-             * [AdditionalVersionWeights](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<VersionWeight>
-             */
-            val additionalVersionWeights: List<VersionWeight>
-    )
+         * [additionalVersionWeights](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<VersionWeight>
+         */
+        var additionalVersionWeights: Any? = null
 
-    class VersionWeight(
+        /**
+         * [additionalVersionWeights](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<VersionWeight>
+         */
+        fun additionalVersionWeights(value: List<VersionWeight>) {
+          this.additionalVersionWeights = value
+        }
+        
+        /**
+         * [additionalVersionWeights](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<VersionWeight>
+         */
+        fun additionalVersionWeights(vararg value: IntrinsicFunction) {
+          this.additionalVersionWeights = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class VersionWeight {
             /**
-             * [FunctionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionversion)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val functionVersion: String,
-            /**
-             * [FunctionWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionweight)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Double
-             */
-            val functionWeight: Double
-    )
+         * [functionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionversion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var functionVersion: Any? = null
+
+        /**
+         * [functionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionversion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun functionVersion(value: String) {
+          this.functionVersion = value
+        }
+        
+        /**
+         * [functionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionversion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun functionVersion(value: IntrinsicFunction) {
+          this.functionVersion = value
+        }
+
+        /**
+         * [functionWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionweight)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        var functionWeight: Any? = null
+
+        /**
+         * [functionWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionweight)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        fun functionWeight(value: Double) {
+          this.functionWeight = value
+        }
+        
+        /**
+         * [functionWeight](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionweight)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Double
+         */
+        fun functionWeight(value: IntrinsicFunction) {
+          this.functionWeight = value
+        }
+
+    }
 
     class UpdatePolicy(
             var codeDeployLambdaAliasUpdate: CodeDeployLambdaAliasUpdate? = null

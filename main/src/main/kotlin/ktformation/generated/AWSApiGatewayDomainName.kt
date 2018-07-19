@@ -42,7 +42,7 @@ class AWSApiGatewayDomainName(logicalId: String) : Resource<AWSApiGatewayDomainN
         fun certificateArn(value: IntrinsicFunction) {
           this.certificateArn = value
         }
-        
+
         /**
          * [domainName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-domainname)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayDomainName(logicalId: String) : Resource<AWSApiGatewayDomainN
         fun domainName(value: IntrinsicFunction) {
           this.domainName = value
         }
-        
+
         /**
          * [endpointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayDomainName(logicalId: String) : Resource<AWSApiGatewayDomainN
         fun endpointConfiguration(value: IntrinsicFunction) {
           this.endpointConfiguration = value
         }
-        
+
         /**
          * [regionalCertificateArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn)
          *
@@ -138,7 +138,15 @@ class AWSApiGatewayDomainName(logicalId: String) : Resource<AWSApiGatewayDomainN
         fun regionalCertificateArn(value: IntrinsicFunction) {
           this.regionalCertificateArn = value
         }
-        
+
+        /**
+        * [EndpointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html)
+        */
+        fun endpointConfiguration(init: EndpointConfiguration.() -> Unit = {}): EndpointConfiguration {
+            return EndpointConfiguration().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,16 +157,40 @@ class AWSApiGatewayDomainName(logicalId: String) : Resource<AWSApiGatewayDomainN
     }
 
 
-    class EndpointConfiguration(
+    @CloudFormationMarker
+    class EndpointConfiguration {
             /**
-             * [Types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val types: List<String>? = null
-    )
+         * [types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var types: Any? = null
+
+        /**
+         * [types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun types(value: List<String>) {
+          this.types = value
+        }
+        
+        /**
+         * [types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun types(vararg value: IntrinsicFunction) {
+          this.types = value
+        }
+
+    }
 
 }
 

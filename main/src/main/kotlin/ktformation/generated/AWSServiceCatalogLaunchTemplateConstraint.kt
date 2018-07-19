@@ -42,7 +42,7 @@ class AWSServiceCatalogLaunchTemplateConstraint(logicalId: String) : Resource<AW
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-description)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogLaunchTemplateConstraint(logicalId: String) : Resource<AW
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [portfolioId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-portfolioid)
          *
@@ -106,7 +106,7 @@ class AWSServiceCatalogLaunchTemplateConstraint(logicalId: String) : Resource<AW
         fun portfolioId(value: IntrinsicFunction) {
           this.portfolioId = value
         }
-        
+
         /**
          * [productId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-productid)
          *
@@ -138,7 +138,7 @@ class AWSServiceCatalogLaunchTemplateConstraint(logicalId: String) : Resource<AW
         fun productId(value: IntrinsicFunction) {
           this.productId = value
         }
-        
+
         /**
          * [rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-rules)
          *
@@ -170,7 +170,8 @@ class AWSServiceCatalogLaunchTemplateConstraint(logicalId: String) : Resource<AW
         fun rules(value: IntrinsicFunction) {
           this.rules = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

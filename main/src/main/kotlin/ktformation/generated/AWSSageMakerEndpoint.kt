@@ -42,7 +42,7 @@ class AWSSageMakerEndpoint(logicalId: String) : Resource<AWSSageMakerEndpoint.Pr
         fun endpointConfigName(value: IntrinsicFunction) {
           this.endpointConfigName = value
         }
-        
+
         /**
          * [endpointName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointname)
          *
@@ -74,7 +74,7 @@ class AWSSageMakerEndpoint(logicalId: String) : Resource<AWSSageMakerEndpoint.Pr
         fun endpointName(value: IntrinsicFunction) {
           this.endpointName = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-tags)
          *
@@ -106,7 +106,8 @@ class AWSSageMakerEndpoint(logicalId: String) : Resource<AWSSageMakerEndpoint.Pr
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

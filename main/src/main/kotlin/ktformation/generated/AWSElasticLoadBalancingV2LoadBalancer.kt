@@ -42,7 +42,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun ipAddressType(value: IntrinsicFunction) {
           this.ipAddressType = value
         }
-        
+
         /**
          * [loadBalancerAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
          *
@@ -74,7 +74,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun loadBalancerAttributes(vararg value: IntrinsicFunction) {
           this.loadBalancerAttributes = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-name)
          *
@@ -106,7 +106,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [scheme](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-scheme)
          *
@@ -138,7 +138,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun scheme(value: IntrinsicFunction) {
           this.scheme = value
         }
-        
+
         /**
          * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-securitygroups)
          *
@@ -170,7 +170,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun securityGroups(vararg value: IntrinsicFunction) {
           this.securityGroups = value
         }
-        
+
         /**
          * [subnetMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
          *
@@ -202,7 +202,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun subnetMappings(vararg value: IntrinsicFunction) {
           this.subnetMappings = value
         }
-        
+
         /**
          * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
          *
@@ -234,7 +234,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun subnets(vararg value: IntrinsicFunction) {
           this.subnets = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-tags)
          *
@@ -266,7 +266,7 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-type)
          *
@@ -298,7 +298,23 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
+        /**
+        * [LoadBalancerAttribute](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html)
+        */
+        fun loadBalancerAttribute(init: LoadBalancerAttribute.() -> Unit = {}): LoadBalancerAttribute {
+            return LoadBalancerAttribute().also {
+                it.init()
+            }
+        }
+        /**
+        * [SubnetMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)
+        */
+        fun subnetMapping(init: SubnetMapping.() -> Unit = {}): SubnetMapping {
+            return SubnetMapping().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -309,43 +325,137 @@ class AWSElasticLoadBalancingV2LoadBalancer(logicalId: String) : Resource<AWSEla
     }
 
 
-    class LoadBalancerAttribute(
+    @CloudFormationMarker
+    class LoadBalancerAttribute {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-key)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val key: String? = null,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-value)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val value: String? = null
-    )
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
 
-    class SubnetMapping(
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SubnetMapping {
             /**
-             * [AllocationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val allocationId: String,
-            /**
-             * [SubnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val subnetId: String
-    )
+         * [allocationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var allocationId: Any? = null
+
+        /**
+         * [allocationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun allocationId(value: String) {
+          this.allocationId = value
+        }
+        
+        /**
+         * [allocationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun allocationId(value: IntrinsicFunction) {
+          this.allocationId = value
+        }
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var subnetId: Any? = null
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: IntrinsicFunction) {
+          this.subnetId = value
+        }
+
+    }
 
 }
 

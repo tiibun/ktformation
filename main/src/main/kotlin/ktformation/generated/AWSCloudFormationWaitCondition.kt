@@ -42,7 +42,7 @@ class AWSCloudFormationWaitCondition(logicalId: String) : Resource<AWSCloudForma
         fun count(value: IntrinsicFunction) {
           this.count = value
         }
-        
+
         /**
          * [handle](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-handle)
          *
@@ -74,7 +74,7 @@ class AWSCloudFormationWaitCondition(logicalId: String) : Resource<AWSCloudForma
         fun handle(value: IntrinsicFunction) {
           this.handle = value
         }
-        
+
         /**
          * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-timeout)
          *
@@ -106,7 +106,8 @@ class AWSCloudFormationWaitCondition(logicalId: String) : Resource<AWSCloudForma
         fun timeout(value: IntrinsicFunction) {
           this.timeout = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun activate(value: IntrinsicFunction) {
           this.activate = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-description)
          *
@@ -74,7 +74,7 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-name)
          *
@@ -106,7 +106,7 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [parameterObjects](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-parameterobjects)
          *
@@ -138,7 +138,7 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun parameterObjects(vararg value: IntrinsicFunction) {
           this.parameterObjects = value
         }
-        
+
         /**
          * [parameterValues](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-parametervalues)
          *
@@ -170,7 +170,7 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun parameterValues(vararg value: IntrinsicFunction) {
           this.parameterValues = value
         }
-        
+
         /**
          * [pipelineObjects](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-pipelineobjects)
          *
@@ -202,7 +202,7 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun pipelineObjects(vararg value: IntrinsicFunction) {
           this.pipelineObjects = value
         }
-        
+
         /**
          * [pipelineTags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-pipelinetags)
          *
@@ -234,7 +234,55 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
         fun pipelineTags(vararg value: IntrinsicFunction) {
           this.pipelineTags = value
         }
-        
+
+        /**
+        * [Field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html)
+        */
+        fun field(init: Field.() -> Unit = {}): Field {
+            return Field().also {
+                it.init()
+            }
+        }
+        /**
+        * [ParameterAttribute](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html)
+        */
+        fun parameterAttribute(init: ParameterAttribute.() -> Unit = {}): ParameterAttribute {
+            return ParameterAttribute().also {
+                it.init()
+            }
+        }
+        /**
+        * [ParameterObject](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html)
+        */
+        fun parameterObject(init: ParameterObject.() -> Unit = {}): ParameterObject {
+            return ParameterObject().also {
+                it.init()
+            }
+        }
+        /**
+        * [ParameterValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html)
+        */
+        fun parameterValue(init: ParameterValue.() -> Unit = {}): ParameterValue {
+            return ParameterValue().also {
+                it.init()
+            }
+        }
+        /**
+        * [PipelineObject](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html)
+        */
+        fun pipelineObject(init: PipelineObject.() -> Unit = {}): PipelineObject {
+            return PipelineObject().also {
+                it.init()
+            }
+        }
+        /**
+        * [PipelineTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html)
+        */
+        fun pipelineTag(init: PipelineTag.() -> Unit = {}): PipelineTag {
+            return PipelineTag().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -245,135 +293,463 @@ class AWSDataPipelinePipeline(logicalId: String) : Resource<AWSDataPipelinePipel
     }
 
 
-    class Field(
+    @CloudFormationMarker
+    class Field {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [RefValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-refvalue)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val refValue: String? = null,
-            /**
-             * [StringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val stringValue: String? = null
-    )
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
 
-    class ParameterAttribute(
-            /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [StringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val stringValue: String
-    )
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
 
-    class ParameterObject(
-            /**
-             * [Attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-attributes)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<ParameterAttribute>
-             */
-            val attributes: List<ParameterAttribute>,
-            /**
-             * [Id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-id)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val id: String
-    )
+        /**
+         * [refValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-refvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var refValue: Any? = null
 
-    class ParameterValue(
-            /**
-             * [Id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-id)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val id: String,
-            /**
-             * [StringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-stringvalue)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val stringValue: String
-    )
+        /**
+         * [refValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-refvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun refValue(value: String) {
+          this.refValue = value
+        }
+        
+        /**
+         * [refValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-refvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun refValue(value: IntrinsicFunction) {
+          this.refValue = value
+        }
 
-    class PipelineObject(
-            /**
-             * [Fields](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-fields)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<Field>
-             */
-            val fields: List<Field>,
-            /**
-             * [Id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-id)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val id: String,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-name)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val name: String
-    )
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var stringValue: Any? = null
 
-    class PipelineTag(
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun stringValue(value: String) {
+          this.stringValue = value
+        }
+        
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html#cfn-datapipeline-pipeline-pipelineobjects-fields-stringvalue)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun stringValue(value: IntrinsicFunction) {
+          this.stringValue = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ParameterAttribute {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var stringValue: Any? = null
+
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stringValue(value: String) {
+          this.stringValue = value
+        }
+        
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stringValue(value: IntrinsicFunction) {
+          this.stringValue = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ParameterObject {
             /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-attributes)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<ParameterAttribute>
+         */
+        var attributes: Any? = null
+
+        /**
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-attributes)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<ParameterAttribute>
+         */
+        fun attributes(value: List<ParameterAttribute>) {
+          this.attributes = value
+        }
+        
+        /**
+         * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-attributes)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<ParameterAttribute>
+         */
+        fun attributes(vararg value: IntrinsicFunction) {
+          this.attributes = value
+        }
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var id: Any? = null
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: String) {
+          this.id = value
+        }
+        
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: IntrinsicFunction) {
+          this.id = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ParameterValue {
+            /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var id: Any? = null
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: String) {
+          this.id = value
+        }
+        
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: IntrinsicFunction) {
+          this.id = value
+        }
+
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-stringvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var stringValue: Any? = null
+
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-stringvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stringValue(value: String) {
+          this.stringValue = value
+        }
+        
+        /**
+         * [stringValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-stringvalue)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun stringValue(value: IntrinsicFunction) {
+          this.stringValue = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PipelineObject {
+            /**
+         * [fields](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-fields)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Field>
+         */
+        var fields: Any? = null
+
+        /**
+         * [fields](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-fields)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Field>
+         */
+        fun fields(value: List<Field>) {
+          this.fields = value
+        }
+        
+        /**
+         * [fields](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-fields)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<Field>
+         */
+        fun fields(vararg value: IntrinsicFunction) {
+          this.fields = value
+        }
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var id: Any? = null
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: String) {
+          this.id = value
+        }
+        
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: IntrinsicFunction) {
+          this.id = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PipelineTag {
+            /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html#cfn-datapipeline-pipeline-pipelinetags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

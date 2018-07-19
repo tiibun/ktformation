@@ -42,7 +42,7 @@ class AWSEC2VPNGateway(logicalId: String) : Resource<AWSEC2VPNGateway.Properties
         fun amazonSideAsn(value: IntrinsicFunction) {
           this.amazonSideAsn = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-tags)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPNGateway(logicalId: String) : Resource<AWSEC2VPNGateway.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-type)
          *
@@ -106,7 +106,8 @@ class AWSEC2VPNGateway(logicalId: String) : Resource<AWSEC2VPNGateway.Properties
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

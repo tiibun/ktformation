@@ -42,7 +42,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun allowMajorVersionUpgrade(value: IntrinsicFunction) {
           this.allowMajorVersionUpgrade = value
         }
-        
+
         /**
          * [autoMinorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-autominorversionupgrade)
          *
@@ -74,7 +74,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun autoMinorVersionUpgrade(value: IntrinsicFunction) {
           this.autoMinorVersionUpgrade = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-availabilityzone)
          *
@@ -106,7 +106,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [dBClusterIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbclusteridentifier)
          *
@@ -138,7 +138,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun dBClusterIdentifier(value: IntrinsicFunction) {
           this.dBClusterIdentifier = value
         }
-        
+
         /**
          * [dBInstanceClass](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbinstanceclass)
          *
@@ -170,7 +170,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun dBInstanceClass(value: IntrinsicFunction) {
           this.dBInstanceClass = value
         }
-        
+
         /**
          * [dBInstanceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbinstanceidentifier)
          *
@@ -202,7 +202,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun dBInstanceIdentifier(value: IntrinsicFunction) {
           this.dBInstanceIdentifier = value
         }
-        
+
         /**
          * [dBParameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbparametergroupname)
          *
@@ -234,7 +234,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun dBParameterGroupName(value: IntrinsicFunction) {
           this.dBParameterGroupName = value
         }
-        
+
         /**
          * [dBSnapshotIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsnapshotidentifier)
          *
@@ -266,7 +266,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun dBSnapshotIdentifier(value: IntrinsicFunction) {
           this.dBSnapshotIdentifier = value
         }
-        
+
         /**
          * [dBSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsubnetgroupname)
          *
@@ -298,7 +298,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun dBSubnetGroupName(value: IntrinsicFunction) {
           this.dBSubnetGroupName = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-preferredmaintenancewindow)
          *
@@ -330,7 +330,7 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-tags)
          *
@@ -362,7 +362,8 @@ class AWSNeptuneDBInstance(logicalId: String) : Resource<AWSNeptuneDBInstance.Pr
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSNeptuneDBClusterParameterGroup(logicalId: String) : Resource<AWSNeptune
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [family](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-family)
          *
@@ -74,7 +74,7 @@ class AWSNeptuneDBClusterParameterGroup(logicalId: String) : Resource<AWSNeptune
         fun family(value: IntrinsicFunction) {
           this.family = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-name)
          *
@@ -106,7 +106,7 @@ class AWSNeptuneDBClusterParameterGroup(logicalId: String) : Resource<AWSNeptune
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-parameters)
          *
@@ -138,7 +138,7 @@ class AWSNeptuneDBClusterParameterGroup(logicalId: String) : Resource<AWSNeptune
         fun parameters(value: IntrinsicFunction) {
           this.parameters = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-tags)
          *
@@ -170,7 +170,8 @@ class AWSNeptuneDBClusterParameterGroup(logicalId: String) : Resource<AWSNeptune
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSWAFSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFSqlInjectio
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [sqlInjectionMatchTuples](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sqlinjectionmatchset.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)
          *
@@ -74,7 +74,23 @@ class AWSWAFSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFSqlInjectio
         fun sqlInjectionMatchTuples(vararg value: IntrinsicFunction) {
           this.sqlInjectionMatchTuples = value
         }
-        
+
+        /**
+        * [FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html)
+        */
+        fun fieldToMatch(init: FieldToMatch.() -> Unit = {}): FieldToMatch {
+            return FieldToMatch().also {
+                it.init()
+            }
+        }
+        /**
+        * [SqlInjectionMatchTuple](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html)
+        */
+        fun sqlInjectionMatchTuple(init: SqlInjectionMatchTuple.() -> Unit = {}): SqlInjectionMatchTuple {
+            return SqlInjectionMatchTuple().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,43 +101,137 @@ class AWSWAFSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFSqlInjectio
     }
 
 
-    class FieldToMatch(
+    @CloudFormationMarker
+    class FieldToMatch {
             /**
-             * [Data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-data)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val data: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var data: Any? = null
 
-    class SqlInjectionMatchTuple(
+        /**
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun data(value: String) {
+          this.data = value
+        }
+        
+        /**
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun data(value: IntrinsicFunction) {
+          this.data = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SqlInjectionMatchTuple {
             /**
-             * [FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)
-             *
-             * _Required_: yes
-             *
-             * _Type_: FieldToMatch
-             */
-            val fieldToMatch: FieldToMatch,
-            /**
-             * [TextTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val textTransformation: String
-    )
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        var fieldToMatch: Any? = null
+
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        fun fieldToMatch(value: FieldToMatch) {
+          this.fieldToMatch = value
+        }
+        
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        fun fieldToMatch(value: IntrinsicFunction) {
+          this.fieldToMatch = value
+        }
+
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var textTransformation: Any? = null
+
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun textTransformation(value: String) {
+          this.textTransformation = value
+        }
+        
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun textTransformation(value: IntrinsicFunction) {
+          this.textTransformation = value
+        }
+
+    }
 
 }
 

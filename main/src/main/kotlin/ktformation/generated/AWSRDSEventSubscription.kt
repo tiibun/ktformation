@@ -42,7 +42,7 @@ class AWSRDSEventSubscription(logicalId: String) : Resource<AWSRDSEventSubscript
         fun enabled(value: IntrinsicFunction) {
           this.enabled = value
         }
-        
+
         /**
          * [eventCategories](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-eventcategories)
          *
@@ -74,7 +74,7 @@ class AWSRDSEventSubscription(logicalId: String) : Resource<AWSRDSEventSubscript
         fun eventCategories(vararg value: IntrinsicFunction) {
           this.eventCategories = value
         }
-        
+
         /**
          * [snsTopicArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-snstopicarn)
          *
@@ -106,7 +106,7 @@ class AWSRDSEventSubscription(logicalId: String) : Resource<AWSRDSEventSubscript
         fun snsTopicArn(value: IntrinsicFunction) {
           this.snsTopicArn = value
         }
-        
+
         /**
          * [sourceIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-sourceids)
          *
@@ -138,7 +138,7 @@ class AWSRDSEventSubscription(logicalId: String) : Resource<AWSRDSEventSubscript
         fun sourceIds(vararg value: IntrinsicFunction) {
           this.sourceIds = value
         }
-        
+
         /**
          * [sourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-sourcetype)
          *
@@ -170,7 +170,8 @@ class AWSRDSEventSubscription(logicalId: String) : Resource<AWSRDSEventSubscript
         fun sourceType(value: IntrinsicFunction) {
           this.sourceType = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

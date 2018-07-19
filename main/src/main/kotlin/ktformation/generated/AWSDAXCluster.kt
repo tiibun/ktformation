@@ -42,7 +42,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun availabilityZones(vararg value: IntrinsicFunction) {
           this.availabilityZones = value
         }
-        
+
         /**
          * [clusterName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clustername)
          *
@@ -74,7 +74,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun clusterName(value: IntrinsicFunction) {
           this.clusterName = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-description)
          *
@@ -106,7 +106,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [iAMRoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-iamrolearn)
          *
@@ -138,7 +138,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun iAMRoleARN(value: IntrinsicFunction) {
           this.iAMRoleARN = value
         }
-        
+
         /**
          * [nodeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-nodetype)
          *
@@ -170,7 +170,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun nodeType(value: IntrinsicFunction) {
           this.nodeType = value
         }
-        
+
         /**
          * [notificationTopicARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-notificationtopicarn)
          *
@@ -202,7 +202,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun notificationTopicARN(value: IntrinsicFunction) {
           this.notificationTopicARN = value
         }
-        
+
         /**
          * [parameterGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-parametergroupname)
          *
@@ -234,7 +234,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun parameterGroupName(value: IntrinsicFunction) {
           this.parameterGroupName = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-preferredmaintenancewindow)
          *
@@ -266,7 +266,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [replicationFactor](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-replicationfactor)
          *
@@ -298,7 +298,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun replicationFactor(value: IntrinsicFunction) {
           this.replicationFactor = value
         }
-        
+
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-securitygroupids)
          *
@@ -330,7 +330,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun securityGroupIds(vararg value: IntrinsicFunction) {
           this.securityGroupIds = value
         }
-        
+
         /**
          * [subnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-subnetgroupname)
          *
@@ -362,7 +362,7 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun subnetGroupName(value: IntrinsicFunction) {
           this.subnetGroupName = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-tags)
          *
@@ -394,7 +394,8 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         fun tags(value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

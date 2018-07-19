@@ -42,7 +42,7 @@ class AWSCloudWatchDashboard(logicalId: String) : Resource<AWSCloudWatchDashboar
         fun dashboardBody(value: IntrinsicFunction) {
           this.dashboardBody = value
         }
-        
+
         /**
          * [dashboardName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname)
          *
@@ -74,7 +74,8 @@ class AWSCloudWatchDashboard(logicalId: String) : Resource<AWSCloudWatchDashboar
         fun dashboardName(value: IntrinsicFunction) {
           this.dashboardName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

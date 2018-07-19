@@ -42,7 +42,7 @@ class AWSServiceCatalogLaunchRoleConstraint(logicalId: String) : Resource<AWSSer
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html#cfn-servicecatalog-launchroleconstraint-description)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogLaunchRoleConstraint(logicalId: String) : Resource<AWSSer
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [portfolioId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html#cfn-servicecatalog-launchroleconstraint-portfolioid)
          *
@@ -106,7 +106,7 @@ class AWSServiceCatalogLaunchRoleConstraint(logicalId: String) : Resource<AWSSer
         fun portfolioId(value: IntrinsicFunction) {
           this.portfolioId = value
         }
-        
+
         /**
          * [productId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html#cfn-servicecatalog-launchroleconstraint-productid)
          *
@@ -138,7 +138,7 @@ class AWSServiceCatalogLaunchRoleConstraint(logicalId: String) : Resource<AWSSer
         fun productId(value: IntrinsicFunction) {
           this.productId = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html#cfn-servicecatalog-launchroleconstraint-rolearn)
          *
@@ -170,7 +170,8 @@ class AWSServiceCatalogLaunchRoleConstraint(logicalId: String) : Resource<AWSSer
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

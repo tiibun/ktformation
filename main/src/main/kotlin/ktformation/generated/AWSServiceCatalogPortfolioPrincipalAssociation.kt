@@ -42,7 +42,7 @@ class AWSServiceCatalogPortfolioPrincipalAssociation(logicalId: String) : Resour
         fun acceptLanguage(value: IntrinsicFunction) {
           this.acceptLanguage = value
         }
-        
+
         /**
          * [portfolioId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-portfolioid)
          *
@@ -74,7 +74,7 @@ class AWSServiceCatalogPortfolioPrincipalAssociation(logicalId: String) : Resour
         fun portfolioId(value: IntrinsicFunction) {
           this.portfolioId = value
         }
-        
+
         /**
          * [principalARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principalarn)
          *
@@ -106,7 +106,7 @@ class AWSServiceCatalogPortfolioPrincipalAssociation(logicalId: String) : Resour
         fun principalARN(value: IntrinsicFunction) {
           this.principalARN = value
         }
-        
+
         /**
          * [principalType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principaltype)
          *
@@ -138,7 +138,8 @@ class AWSServiceCatalogPortfolioPrincipalAssociation(logicalId: String) : Resour
         fun principalType(value: IntrinsicFunction) {
           this.principalType = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

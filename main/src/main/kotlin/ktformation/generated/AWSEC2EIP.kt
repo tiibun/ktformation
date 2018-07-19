@@ -42,7 +42,7 @@ class AWSEC2EIP(logicalId: String) : Resource<AWSEC2EIP.Properties>(logicalId, "
         fun domain(value: IntrinsicFunction) {
           this.domain = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-instanceid)
          *
@@ -74,7 +74,8 @@ class AWSEC2EIP(logicalId: String) : Resource<AWSEC2EIP.Properties>(logicalId, "
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

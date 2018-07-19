@@ -42,7 +42,15 @@ class AWSSESTemplate(logicalId: String) : Resource<AWSSESTemplate.Properties>(lo
         fun template(value: IntrinsicFunction) {
           this.template = value
         }
-        
+
+        /**
+        * [Template](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html)
+        */
+        fun template(init: Template.() -> Unit = {}): Template {
+            return Template().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -53,40 +61,133 @@ class AWSSESTemplate(logicalId: String) : Resource<AWSSESTemplate.Properties>(lo
     }
 
 
-    class Template(
+    @CloudFormationMarker
+    class Template {
             /**
-             * [HtmlPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-htmlpart)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val htmlPart: String? = null,
-            /**
-             * [SubjectPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-subjectpart)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val subjectPart: String? = null,
-            /**
-             * [TemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val templateName: String? = null,
-            /**
-             * [TextPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-textpart)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val textPart: String? = null
-    )
+         * [htmlPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-htmlpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var htmlPart: Any? = null
+
+        /**
+         * [htmlPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-htmlpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun htmlPart(value: String) {
+          this.htmlPart = value
+        }
+        
+        /**
+         * [htmlPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-htmlpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun htmlPart(value: IntrinsicFunction) {
+          this.htmlPart = value
+        }
+
+        /**
+         * [subjectPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-subjectpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var subjectPart: Any? = null
+
+        /**
+         * [subjectPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-subjectpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subjectPart(value: String) {
+          this.subjectPart = value
+        }
+        
+        /**
+         * [subjectPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-subjectpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subjectPart(value: IntrinsicFunction) {
+          this.subjectPart = value
+        }
+
+        /**
+         * [templateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var templateName: Any? = null
+
+        /**
+         * [templateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun templateName(value: String) {
+          this.templateName = value
+        }
+        
+        /**
+         * [templateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun templateName(value: IntrinsicFunction) {
+          this.templateName = value
+        }
+
+        /**
+         * [textPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-textpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var textPart: Any? = null
+
+        /**
+         * [textPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-textpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun textPart(value: String) {
+          this.textPart = value
+        }
+        
+        /**
+         * [textPart](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-textpart)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun textPart(value: IntrinsicFunction) {
+          this.textPart = value
+        }
+
+    }
 
 }
 

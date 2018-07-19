@@ -54,7 +54,7 @@ ${props.joinToLines { (k, v) ->
         fun $k(vararg value: IntrinsicFunction) {
           this.$k = value
         }
-        """
+"""
         else -> """
         /**
          * [$k](${v.documentation})
@@ -66,8 +66,20 @@ ${props.joinToLines { (k, v) ->
         fun $k(value: IntrinsicFunction) {
           this.$k = value
         }
+"""
+        }}
+"""
+}}
+${subproperties.joinToLines { (subClassName, v) ->
         """
-    }}
+        /**
+        * [$subClassName](${v.documentation})
+        */
+        fun ${subClassName.decapitalize()}(init: $subClassName.() -> Unit = {}): $subClassName {
+            return $subClassName().also {
+                it.init()
+            }
+        }
 """
 }}
     }
@@ -80,23 +92,62 @@ ${props.joinToLines { (k, v) ->
     }
 
 ${// Subproperty classes
-subproperties.joinToLines { (k, v) ->
+subproperties.joinToLines { (subClassName, v) ->
     """
 
-    class $k(
-${v.properties.joinToLines(",") { (k, v) ->
+    @CloudFormationMarker
+    class $subClassName {
+    ${v.properties.mapKeys { it.key.decapitalize() }.joinToLines { (k, v) ->
         """
-            /**
-             * [$k](${v.documentation})
-             *
-             * _Required_: ${if (v.required) "yes" else "no"}
-             *
-             * _Type_: ${v.typeName()}
-             */
-            val ${k.decapitalize()}: ${v.typeName()}${!v.required then "? = null"}
+        /**
+         * [$k](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
+        var ${k.decapitalize()}: Any? = null
+
+        /**
+         * [$k](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
+        fun $k(value: ${v.typeName()}) {
+          this.$k = value
+        }
+        ${when (v.type) {
+        "Map" -> ""
+        "List" -> """
+        /**
+         * [$k](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
+        fun $k(vararg value: IntrinsicFunction) {
+          this.$k = value
+        }
 """
-    }}
-    )
+        else -> """
+        /**
+         * [$k](${v.documentation})
+         *
+         * _Required_: ${if (v.required) "yes" else "no"}
+         *
+         * _Type_: ${v.typeName()}
+         */
+        fun $k(value: IntrinsicFunction) {
+          this.$k = value
+        }
+"""
+        }}
+"""
+}}
+    }
 """
 }}
 ${customMembers(className)}

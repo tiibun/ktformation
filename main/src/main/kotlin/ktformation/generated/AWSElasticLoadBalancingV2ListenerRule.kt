@@ -42,7 +42,7 @@ class AWSElasticLoadBalancingV2ListenerRule(logicalId: String) : Resource<AWSEla
         fun actions(vararg value: IntrinsicFunction) {
           this.actions = value
         }
-        
+
         /**
          * [conditions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-conditions)
          *
@@ -74,7 +74,7 @@ class AWSElasticLoadBalancingV2ListenerRule(logicalId: String) : Resource<AWSEla
         fun conditions(vararg value: IntrinsicFunction) {
           this.conditions = value
         }
-        
+
         /**
          * [listenerArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-listenerarn)
          *
@@ -106,7 +106,7 @@ class AWSElasticLoadBalancingV2ListenerRule(logicalId: String) : Resource<AWSEla
         fun listenerArn(value: IntrinsicFunction) {
           this.listenerArn = value
         }
-        
+
         /**
          * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-priority)
          *
@@ -138,7 +138,23 @@ class AWSElasticLoadBalancingV2ListenerRule(logicalId: String) : Resource<AWSEla
         fun priority(value: IntrinsicFunction) {
           this.priority = value
         }
-        
+
+        /**
+        * [Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html)
+        */
+        fun action(init: Action.() -> Unit = {}): Action {
+            return Action().also {
+                it.init()
+            }
+        }
+        /**
+        * [RuleCondition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html)
+        */
+        fun ruleCondition(init: RuleCondition.() -> Unit = {}): RuleCondition {
+            return RuleCondition().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,43 +165,137 @@ class AWSElasticLoadBalancingV2ListenerRule(logicalId: String) : Resource<AWSEla
     }
 
 
-    class Action(
+    @CloudFormationMarker
+    class Action {
             /**
-             * [TargetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val targetGroupArn: String,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var targetGroupArn: Any? = null
 
-    class RuleCondition(
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun targetGroupArn(value: String) {
+          this.targetGroupArn = value
+        }
+        
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun targetGroupArn(value: IntrinsicFunction) {
+          this.targetGroupArn = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listener-actions-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class RuleCondition {
             /**
-             * [Field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-field)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val field: String? = null,
-            /**
-             * [Values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-values)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val values: List<String>? = null
-    )
+         * [field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-field)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var field: Any? = null
+
+        /**
+         * [field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-field)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun field(value: String) {
+          this.field = value
+        }
+        
+        /**
+         * [field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-field)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun field(value: IntrinsicFunction) {
+          this.field = value
+        }
+
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var values: Any? = null
+
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun values(value: List<String>) {
+          this.values = value
+        }
+        
+        /**
+         * [values](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-values)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun values(vararg value: IntrinsicFunction) {
+          this.values = value
+        }
+
+    }
 
 }
 

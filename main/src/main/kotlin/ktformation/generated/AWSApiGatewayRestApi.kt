@@ -42,7 +42,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun apiKeySourceType(value: IntrinsicFunction) {
           this.apiKeySourceType = value
         }
-        
+
         /**
          * [binaryMediaTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun binaryMediaTypes(vararg value: IntrinsicFunction) {
           this.binaryMediaTypes = value
         }
-        
+
         /**
          * [body](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-body)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun body(value: IntrinsicFunction) {
           this.body = value
         }
-        
+
         /**
          * [bodyS3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-bodys3location)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun bodyS3Location(value: IntrinsicFunction) {
           this.bodyS3Location = value
         }
-        
+
         /**
          * [cloneFrom](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-clonefrom)
          *
@@ -170,7 +170,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun cloneFrom(value: IntrinsicFunction) {
           this.cloneFrom = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-description)
          *
@@ -202,7 +202,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [endpointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
          *
@@ -234,7 +234,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun endpointConfiguration(value: IntrinsicFunction) {
           this.endpointConfiguration = value
         }
-        
+
         /**
          * [failOnWarnings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-failonwarnings)
          *
@@ -266,7 +266,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun failOnWarnings(value: IntrinsicFunction) {
           this.failOnWarnings = value
         }
-        
+
         /**
          * [minimumCompressionSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize)
          *
@@ -298,7 +298,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun minimumCompressionSize(value: IntrinsicFunction) {
           this.minimumCompressionSize = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-name)
          *
@@ -330,7 +330,7 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters)
          *
@@ -383,7 +383,23 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
         fun policy(value: IntrinsicFunction) {
           this.policy = value
         }
-        
+
+        /**
+        * [EndpointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+        */
+        fun endpointConfiguration(init: EndpointConfiguration.() -> Unit = {}): EndpointConfiguration {
+            return EndpointConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html)
+        */
+        fun s3Location(init: S3Location.() -> Unit = {}): S3Location {
+            return S3Location().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -394,51 +410,168 @@ class AWSApiGatewayRestApi(logicalId: String) : Resource<AWSApiGatewayRestApi.Pr
     }
 
 
-    class EndpointConfiguration(
+    @CloudFormationMarker
+    class EndpointConfiguration {
             /**
-             * [Types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val types: List<String>? = null
-    )
+         * [types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var types: Any? = null
 
-    class S3Location(
+        /**
+         * [types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun types(value: List<String>) {
+          this.types = value
+        }
+        
+        /**
+         * [types](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun types(vararg value: IntrinsicFunction) {
+          this.types = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class S3Location {
             /**
-             * [Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val bucket: String? = null,
-            /**
-             * [ETag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val eTag: String? = null,
-            /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val key: String? = null,
-            /**
-             * [Version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val version: String? = null
-    )
+         * [bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var bucket: Any? = null
+
+        /**
+         * [bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun bucket(value: String) {
+          this.bucket = value
+        }
+        
+        /**
+         * [bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun bucket(value: IntrinsicFunction) {
+          this.bucket = value
+        }
+
+        /**
+         * [eTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var eTag: Any? = null
+
+        /**
+         * [eTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun eTag(value: String) {
+          this.eTag = value
+        }
+        
+        /**
+         * [eTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun eTag(value: IntrinsicFunction) {
+          this.eTag = value
+        }
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var version: Any? = null
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun version(value: String) {
+          this.version = value
+        }
+        
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun version(value: IntrinsicFunction) {
+          this.version = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,103 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
         fun spotFleetRequestConfigData(value: IntrinsicFunction) {
           this.spotFleetRequestConfigData = value
         }
-        
+
+        /**
+        * [BlockDeviceMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html)
+        */
+        fun blockDeviceMapping(init: BlockDeviceMapping.() -> Unit = {}): BlockDeviceMapping {
+            return BlockDeviceMapping().also {
+                it.init()
+            }
+        }
+        /**
+        * [EbsBlockDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html)
+        */
+        fun ebsBlockDevice(init: EbsBlockDevice.() -> Unit = {}): EbsBlockDevice {
+            return EbsBlockDevice().also {
+                it.init()
+            }
+        }
+        /**
+        * [GroupIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html)
+        */
+        fun groupIdentifier(init: GroupIdentifier.() -> Unit = {}): GroupIdentifier {
+            return GroupIdentifier().also {
+                it.init()
+            }
+        }
+        /**
+        * [IamInstanceProfileSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.html)
+        */
+        fun iamInstanceProfileSpecification(init: IamInstanceProfileSpecification.() -> Unit = {}): IamInstanceProfileSpecification {
+            return IamInstanceProfileSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [InstanceIpv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html)
+        */
+        fun instanceIpv6Address(init: InstanceIpv6Address.() -> Unit = {}): InstanceIpv6Address {
+            return InstanceIpv6Address().also {
+                it.init()
+            }
+        }
+        /**
+        * [InstanceNetworkInterfaceSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html)
+        */
+        fun instanceNetworkInterfaceSpecification(init: InstanceNetworkInterfaceSpecification.() -> Unit = {}): InstanceNetworkInterfaceSpecification {
+            return InstanceNetworkInterfaceSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [PrivateIpAddressSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html)
+        */
+        fun privateIpAddressSpecification(init: PrivateIpAddressSpecification.() -> Unit = {}): PrivateIpAddressSpecification {
+            return PrivateIpAddressSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [SpotFleetLaunchSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html)
+        */
+        fun spotFleetLaunchSpecification(init: SpotFleetLaunchSpecification.() -> Unit = {}): SpotFleetLaunchSpecification {
+            return SpotFleetLaunchSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [SpotFleetMonitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html)
+        */
+        fun spotFleetMonitoring(init: SpotFleetMonitoring.() -> Unit = {}): SpotFleetMonitoring {
+            return SpotFleetMonitoring().also {
+                it.init()
+            }
+        }
+        /**
+        * [SpotFleetRequestConfigData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html)
+        */
+        fun spotFleetRequestConfigData(init: SpotFleetRequestConfigData.() -> Unit = {}): SpotFleetRequestConfigData {
+            return SpotFleetRequestConfigData().also {
+                it.init()
+            }
+        }
+        /**
+        * [SpotFleetTagSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html)
+        */
+        fun spotFleetTagSpecification(init: SpotFleetTagSpecification.() -> Unit = {}): SpotFleetTagSpecification {
+            return SpotFleetTagSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [SpotPlacement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html)
+        */
+        fun spotPlacement(init: SpotPlacement.() -> Unit = {}): SpotPlacement {
+            return SpotPlacement().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -53,505 +149,1851 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
     }
 
 
-    class BlockDeviceMapping(
+    @CloudFormationMarker
+    class BlockDeviceMapping {
             /**
-             * [DeviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-devicename)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val deviceName: String,
-            /**
-             * [Ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-ebs)
-             *
-             * _Required_: no
-             *
-             * _Type_: EbsBlockDevice
-             */
-            val ebs: EbsBlockDevice? = null,
-            /**
-             * [NoDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-nodevice)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val noDevice: String? = null,
-            /**
-             * [VirtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-virtualname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val virtualName: String? = null
-    )
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-devicename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var deviceName: Any? = null
 
-    class EbsBlockDevice(
-            /**
-             * [DeleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val deleteOnTermination: Boolean? = null,
-            /**
-             * [Encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val encrypted: Boolean? = null,
-            /**
-             * [Iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val iops: Int? = null,
-            /**
-             * [SnapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val snapshotId: String? = null,
-            /**
-             * [VolumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val volumeSize: Int? = null,
-            /**
-             * [VolumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val volumeType: String? = null
-    )
+        /**
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-devicename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun deviceName(value: String) {
+          this.deviceName = value
+        }
+        
+        /**
+         * [deviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-devicename)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun deviceName(value: IntrinsicFunction) {
+          this.deviceName = value
+        }
 
-    class GroupIdentifier(
-            /**
-             * [GroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val groupId: String
-    )
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: EbsBlockDevice
+         */
+        var ebs: Any? = null
 
-    class IamInstanceProfileSpecification(
-            /**
-             * [Arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val arn: String? = null
-    )
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: EbsBlockDevice
+         */
+        fun ebs(value: EbsBlockDevice) {
+          this.ebs = value
+        }
+        
+        /**
+         * [ebs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-ebs)
+         *
+         * _Required_: no
+         *
+         * _Type_: EbsBlockDevice
+         */
+        fun ebs(value: IntrinsicFunction) {
+          this.ebs = value
+        }
 
-    class InstanceIpv6Address(
-            /**
-             * [Ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val ipv6Address: String
-    )
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var noDevice: Any? = null
 
-    class InstanceNetworkInterfaceSpecification(
-            /**
-             * [AssociatePublicIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val associatePublicIpAddress: Boolean? = null,
-            /**
-             * [DeleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val deleteOnTermination: Boolean? = null,
-            /**
-             * [Description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val description: String? = null,
-            /**
-             * [DeviceIndex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val deviceIndex: Int? = null,
-            /**
-             * [Groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val groups: List<String>? = null,
-            /**
-             * [Ipv6AddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val ipv6AddressCount: Int? = null,
-            /**
-             * [Ipv6Addresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<InstanceIpv6Address>
-             */
-            val ipv6Addresses: List<InstanceIpv6Address>? = null,
-            /**
-             * [NetworkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val networkInterfaceId: String? = null,
-            /**
-             * [PrivateIpAddresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<PrivateIpAddressSpecification>
-             */
-            val privateIpAddresses: List<PrivateIpAddressSpecification>? = null,
-            /**
-             * [SecondaryPrivateIpAddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val secondaryPrivateIpAddressCount: Int? = null,
-            /**
-             * [SubnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val subnetId: String? = null
-    )
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun noDevice(value: String) {
+          this.noDevice = value
+        }
+        
+        /**
+         * [noDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-nodevice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun noDevice(value: IntrinsicFunction) {
+          this.noDevice = value
+        }
 
-    class PrivateIpAddressSpecification(
-            /**
-             * [Primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val primary: Boolean? = null,
-            /**
-             * [PrivateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val privateIpAddress: String
-    )
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var virtualName: Any? = null
 
-    class SpotFleetLaunchSpecification(
-            /**
-             * [BlockDeviceMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<BlockDeviceMapping>
-             */
-            val blockDeviceMappings: List<BlockDeviceMapping>? = null,
-            /**
-             * [EbsOptimized](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val ebsOptimized: Boolean? = null,
-            /**
-             * [IamInstanceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile)
-             *
-             * _Required_: no
-             *
-             * _Type_: IamInstanceProfileSpecification
-             */
-            val iamInstanceProfile: IamInstanceProfileSpecification? = null,
-            /**
-             * [ImageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val imageId: String,
-            /**
-             * [InstanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val instanceType: String,
-            /**
-             * [KernelId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val kernelId: String? = null,
-            /**
-             * [KeyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val keyName: String? = null,
-            /**
-             * [Monitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring)
-             *
-             * _Required_: no
-             *
-             * _Type_: SpotFleetMonitoring
-             */
-            val monitoring: SpotFleetMonitoring? = null,
-            /**
-             * [NetworkInterfaces](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<InstanceNetworkInterfaceSpecification>
-             */
-            val networkInterfaces: List<InstanceNetworkInterfaceSpecification>? = null,
-            /**
-             * [Placement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement)
-             *
-             * _Required_: no
-             *
-             * _Type_: SpotPlacement
-             */
-            val placement: SpotPlacement? = null,
-            /**
-             * [RamdiskId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val ramdiskId: String? = null,
-            /**
-             * [SecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<GroupIdentifier>
-             */
-            val securityGroups: List<GroupIdentifier>? = null,
-            /**
-             * [SpotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val spotPrice: String? = null,
-            /**
-             * [SubnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val subnetId: String? = null,
-            /**
-             * [TagSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<SpotFleetTagSpecification>
-             */
-            val tagSpecifications: List<SpotFleetTagSpecification>? = null,
-            /**
-             * [UserData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val userData: String? = null,
-            /**
-             * [WeightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val weightedCapacity: Double? = null
-    )
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun virtualName(value: String) {
+          this.virtualName = value
+        }
+        
+        /**
+         * [virtualName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-virtualname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun virtualName(value: IntrinsicFunction) {
+          this.virtualName = value
+        }
 
-    class SpotFleetMonitoring(
-            /**
-             * [Enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val enabled: Boolean? = null
-    )
+    }
 
-    class SpotFleetRequestConfigData(
+    @CloudFormationMarker
+    class EbsBlockDevice {
             /**
-             * [AllocationStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val allocationStrategy: String? = null,
-            /**
-             * [ExcessCapacityTerminationPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val excessCapacityTerminationPolicy: String? = null,
-            /**
-             * [IamFleetRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val iamFleetRole: String,
-            /**
-             * [LaunchSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<SpotFleetLaunchSpecification>
-             */
-            val launchSpecifications: List<SpotFleetLaunchSpecification>? = null,
-            /**
-             * [ReplaceUnhealthyInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val replaceUnhealthyInstances: Boolean? = null,
-            /**
-             * [SpotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val spotPrice: String? = null,
-            /**
-             * [TargetCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val targetCapacity: Int,
-            /**
-             * [TerminateInstancesWithExpiration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val terminateInstancesWithExpiration: Boolean? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null,
-            /**
-             * [ValidFrom](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val validFrom: String? = null,
-            /**
-             * [ValidUntil](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val validUntil: String? = null
-    )
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var deleteOnTermination: Any? = null
 
-    class SpotFleetTagSpecification(
-            /**
-             * [ResourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val resourceType: String? = null
-    )
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: Boolean) {
+          this.deleteOnTermination = value
+        }
+        
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: IntrinsicFunction) {
+          this.deleteOnTermination = value
+        }
 
-    class SpotPlacement(
+        /**
+         * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var encrypted: Any? = null
+
+        /**
+         * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun encrypted(value: Boolean) {
+          this.encrypted = value
+        }
+        
+        /**
+         * [encrypted](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun encrypted(value: IntrinsicFunction) {
+          this.encrypted = value
+        }
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var iops: Any? = null
+
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: Int) {
+          this.iops = value
+        }
+        
+        /**
+         * [iops](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun iops(value: IntrinsicFunction) {
+          this.iops = value
+        }
+
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var snapshotId: Any? = null
+
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun snapshotId(value: String) {
+          this.snapshotId = value
+        }
+        
+        /**
+         * [snapshotId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun snapshotId(value: IntrinsicFunction) {
+          this.snapshotId = value
+        }
+
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var volumeSize: Any? = null
+
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun volumeSize(value: Int) {
+          this.volumeSize = value
+        }
+        
+        /**
+         * [volumeSize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun volumeSize(value: IntrinsicFunction) {
+          this.volumeSize = value
+        }
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var volumeType: Any? = null
+
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: String) {
+          this.volumeType = value
+        }
+        
+        /**
+         * [volumeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun volumeType(value: IntrinsicFunction) {
+          this.volumeType = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class GroupIdentifier {
             /**
-             * [AvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-availabilityzone)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val availabilityZone: String? = null,
+         * [groupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var groupId: Any? = null
+
+        /**
+         * [groupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun groupId(value: String) {
+          this.groupId = value
+        }
+        
+        /**
+         * [groupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun groupId(value: IntrinsicFunction) {
+          this.groupId = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class IamInstanceProfileSpecification {
             /**
-             * [GroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-groupname)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val groupName: String? = null
-    )
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var arn: Any? = null
+
+        /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun arn(value: String) {
+          this.arn = value
+        }
+        
+        /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun arn(value: IntrinsicFunction) {
+          this.arn = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class InstanceIpv6Address {
+            /**
+         * [ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var ipv6Address: Any? = null
+
+        /**
+         * [ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ipv6Address(value: String) {
+          this.ipv6Address = value
+        }
+        
+        /**
+         * [ipv6Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ipv6Address(value: IntrinsicFunction) {
+          this.ipv6Address = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class InstanceNetworkInterfaceSpecification {
+            /**
+         * [associatePublicIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var associatePublicIpAddress: Any? = null
+
+        /**
+         * [associatePublicIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun associatePublicIpAddress(value: Boolean) {
+          this.associatePublicIpAddress = value
+        }
+        
+        /**
+         * [associatePublicIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun associatePublicIpAddress(value: IntrinsicFunction) {
+          this.associatePublicIpAddress = value
+        }
+
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var deleteOnTermination: Any? = null
+
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: Boolean) {
+          this.deleteOnTermination = value
+        }
+        
+        /**
+         * [deleteOnTermination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun deleteOnTermination(value: IntrinsicFunction) {
+          this.deleteOnTermination = value
+        }
+
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var description: Any? = null
+
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun description(value: String) {
+          this.description = value
+        }
+        
+        /**
+         * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun description(value: IntrinsicFunction) {
+          this.description = value
+        }
+
+        /**
+         * [deviceIndex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var deviceIndex: Any? = null
+
+        /**
+         * [deviceIndex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun deviceIndex(value: Int) {
+          this.deviceIndex = value
+        }
+        
+        /**
+         * [deviceIndex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun deviceIndex(value: IntrinsicFunction) {
+          this.deviceIndex = value
+        }
+
+        /**
+         * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var groups: Any? = null
+
+        /**
+         * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun groups(value: List<String>) {
+          this.groups = value
+        }
+        
+        /**
+         * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun groups(vararg value: IntrinsicFunction) {
+          this.groups = value
+        }
+
+        /**
+         * [ipv6AddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var ipv6AddressCount: Any? = null
+
+        /**
+         * [ipv6AddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun ipv6AddressCount(value: Int) {
+          this.ipv6AddressCount = value
+        }
+        
+        /**
+         * [ipv6AddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun ipv6AddressCount(value: IntrinsicFunction) {
+          this.ipv6AddressCount = value
+        }
+
+        /**
+         * [ipv6Addresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<InstanceIpv6Address>
+         */
+        var ipv6Addresses: Any? = null
+
+        /**
+         * [ipv6Addresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<InstanceIpv6Address>
+         */
+        fun ipv6Addresses(value: List<InstanceIpv6Address>) {
+          this.ipv6Addresses = value
+        }
+        
+        /**
+         * [ipv6Addresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<InstanceIpv6Address>
+         */
+        fun ipv6Addresses(vararg value: IntrinsicFunction) {
+          this.ipv6Addresses = value
+        }
+
+        /**
+         * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var networkInterfaceId: Any? = null
+
+        /**
+         * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun networkInterfaceId(value: String) {
+          this.networkInterfaceId = value
+        }
+        
+        /**
+         * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun networkInterfaceId(value: IntrinsicFunction) {
+          this.networkInterfaceId = value
+        }
+
+        /**
+         * [privateIpAddresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<PrivateIpAddressSpecification>
+         */
+        var privateIpAddresses: Any? = null
+
+        /**
+         * [privateIpAddresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<PrivateIpAddressSpecification>
+         */
+        fun privateIpAddresses(value: List<PrivateIpAddressSpecification>) {
+          this.privateIpAddresses = value
+        }
+        
+        /**
+         * [privateIpAddresses](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<PrivateIpAddressSpecification>
+         */
+        fun privateIpAddresses(vararg value: IntrinsicFunction) {
+          this.privateIpAddresses = value
+        }
+
+        /**
+         * [secondaryPrivateIpAddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var secondaryPrivateIpAddressCount: Any? = null
+
+        /**
+         * [secondaryPrivateIpAddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun secondaryPrivateIpAddressCount(value: Int) {
+          this.secondaryPrivateIpAddressCount = value
+        }
+        
+        /**
+         * [secondaryPrivateIpAddressCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun secondaryPrivateIpAddressCount(value: IntrinsicFunction) {
+          this.secondaryPrivateIpAddressCount = value
+        }
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var subnetId: Any? = null
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: IntrinsicFunction) {
+          this.subnetId = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PrivateIpAddressSpecification {
+            /**
+         * [primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var primary: Any? = null
+
+        /**
+         * [primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun primary(value: Boolean) {
+          this.primary = value
+        }
+        
+        /**
+         * [primary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun primary(value: IntrinsicFunction) {
+          this.primary = value
+        }
+
+        /**
+         * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var privateIpAddress: Any? = null
+
+        /**
+         * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun privateIpAddress(value: String) {
+          this.privateIpAddress = value
+        }
+        
+        /**
+         * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun privateIpAddress(value: IntrinsicFunction) {
+          this.privateIpAddress = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SpotFleetLaunchSpecification {
+            /**
+         * [blockDeviceMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<BlockDeviceMapping>
+         */
+        var blockDeviceMappings: Any? = null
+
+        /**
+         * [blockDeviceMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<BlockDeviceMapping>
+         */
+        fun blockDeviceMappings(value: List<BlockDeviceMapping>) {
+          this.blockDeviceMappings = value
+        }
+        
+        /**
+         * [blockDeviceMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<BlockDeviceMapping>
+         */
+        fun blockDeviceMappings(vararg value: IntrinsicFunction) {
+          this.blockDeviceMappings = value
+        }
+
+        /**
+         * [ebsOptimized](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var ebsOptimized: Any? = null
+
+        /**
+         * [ebsOptimized](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun ebsOptimized(value: Boolean) {
+          this.ebsOptimized = value
+        }
+        
+        /**
+         * [ebsOptimized](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun ebsOptimized(value: IntrinsicFunction) {
+          this.ebsOptimized = value
+        }
+
+        /**
+         * [iamInstanceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile)
+         *
+         * _Required_: no
+         *
+         * _Type_: IamInstanceProfileSpecification
+         */
+        var iamInstanceProfile: Any? = null
+
+        /**
+         * [iamInstanceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile)
+         *
+         * _Required_: no
+         *
+         * _Type_: IamInstanceProfileSpecification
+         */
+        fun iamInstanceProfile(value: IamInstanceProfileSpecification) {
+          this.iamInstanceProfile = value
+        }
+        
+        /**
+         * [iamInstanceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile)
+         *
+         * _Required_: no
+         *
+         * _Type_: IamInstanceProfileSpecification
+         */
+        fun iamInstanceProfile(value: IntrinsicFunction) {
+          this.iamInstanceProfile = value
+        }
+
+        /**
+         * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var imageId: Any? = null
+
+        /**
+         * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun imageId(value: String) {
+          this.imageId = value
+        }
+        
+        /**
+         * [imageId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun imageId(value: IntrinsicFunction) {
+          this.imageId = value
+        }
+
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var instanceType: Any? = null
+
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun instanceType(value: String) {
+          this.instanceType = value
+        }
+        
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun instanceType(value: IntrinsicFunction) {
+          this.instanceType = value
+        }
+
+        /**
+         * [kernelId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var kernelId: Any? = null
+
+        /**
+         * [kernelId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun kernelId(value: String) {
+          this.kernelId = value
+        }
+        
+        /**
+         * [kernelId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun kernelId(value: IntrinsicFunction) {
+          this.kernelId = value
+        }
+
+        /**
+         * [keyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var keyName: Any? = null
+
+        /**
+         * [keyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun keyName(value: String) {
+          this.keyName = value
+        }
+        
+        /**
+         * [keyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun keyName(value: IntrinsicFunction) {
+          this.keyName = value
+        }
+
+        /**
+         * [monitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring)
+         *
+         * _Required_: no
+         *
+         * _Type_: SpotFleetMonitoring
+         */
+        var monitoring: Any? = null
+
+        /**
+         * [monitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring)
+         *
+         * _Required_: no
+         *
+         * _Type_: SpotFleetMonitoring
+         */
+        fun monitoring(value: SpotFleetMonitoring) {
+          this.monitoring = value
+        }
+        
+        /**
+         * [monitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring)
+         *
+         * _Required_: no
+         *
+         * _Type_: SpotFleetMonitoring
+         */
+        fun monitoring(value: IntrinsicFunction) {
+          this.monitoring = value
+        }
+
+        /**
+         * [networkInterfaces](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<InstanceNetworkInterfaceSpecification>
+         */
+        var networkInterfaces: Any? = null
+
+        /**
+         * [networkInterfaces](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<InstanceNetworkInterfaceSpecification>
+         */
+        fun networkInterfaces(value: List<InstanceNetworkInterfaceSpecification>) {
+          this.networkInterfaces = value
+        }
+        
+        /**
+         * [networkInterfaces](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<InstanceNetworkInterfaceSpecification>
+         */
+        fun networkInterfaces(vararg value: IntrinsicFunction) {
+          this.networkInterfaces = value
+        }
+
+        /**
+         * [placement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement)
+         *
+         * _Required_: no
+         *
+         * _Type_: SpotPlacement
+         */
+        var placement: Any? = null
+
+        /**
+         * [placement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement)
+         *
+         * _Required_: no
+         *
+         * _Type_: SpotPlacement
+         */
+        fun placement(value: SpotPlacement) {
+          this.placement = value
+        }
+        
+        /**
+         * [placement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement)
+         *
+         * _Required_: no
+         *
+         * _Type_: SpotPlacement
+         */
+        fun placement(value: IntrinsicFunction) {
+          this.placement = value
+        }
+
+        /**
+         * [ramdiskId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var ramdiskId: Any? = null
+
+        /**
+         * [ramdiskId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun ramdiskId(value: String) {
+          this.ramdiskId = value
+        }
+        
+        /**
+         * [ramdiskId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun ramdiskId(value: IntrinsicFunction) {
+          this.ramdiskId = value
+        }
+
+        /**
+         * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<GroupIdentifier>
+         */
+        var securityGroups: Any? = null
+
+        /**
+         * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<GroupIdentifier>
+         */
+        fun securityGroups(value: List<GroupIdentifier>) {
+          this.securityGroups = value
+        }
+        
+        /**
+         * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<GroupIdentifier>
+         */
+        fun securityGroups(vararg value: IntrinsicFunction) {
+          this.securityGroups = value
+        }
+
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var spotPrice: Any? = null
+
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun spotPrice(value: String) {
+          this.spotPrice = value
+        }
+        
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun spotPrice(value: IntrinsicFunction) {
+          this.spotPrice = value
+        }
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var subnetId: Any? = null
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: IntrinsicFunction) {
+          this.subnetId = value
+        }
+
+        /**
+         * [tagSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<SpotFleetTagSpecification>
+         */
+        var tagSpecifications: Any? = null
+
+        /**
+         * [tagSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<SpotFleetTagSpecification>
+         */
+        fun tagSpecifications(value: List<SpotFleetTagSpecification>) {
+          this.tagSpecifications = value
+        }
+        
+        /**
+         * [tagSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<SpotFleetTagSpecification>
+         */
+        fun tagSpecifications(vararg value: IntrinsicFunction) {
+          this.tagSpecifications = value
+        }
+
+        /**
+         * [userData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var userData: Any? = null
+
+        /**
+         * [userData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun userData(value: String) {
+          this.userData = value
+        }
+        
+        /**
+         * [userData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun userData(value: IntrinsicFunction) {
+          this.userData = value
+        }
+
+        /**
+         * [weightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var weightedCapacity: Any? = null
+
+        /**
+         * [weightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun weightedCapacity(value: Double) {
+          this.weightedCapacity = value
+        }
+        
+        /**
+         * [weightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun weightedCapacity(value: IntrinsicFunction) {
+          this.weightedCapacity = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SpotFleetMonitoring {
+            /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var enabled: Any? = null
+
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: Boolean) {
+          this.enabled = value
+        }
+        
+        /**
+         * [enabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun enabled(value: IntrinsicFunction) {
+          this.enabled = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SpotFleetRequestConfigData {
+            /**
+         * [allocationStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var allocationStrategy: Any? = null
+
+        /**
+         * [allocationStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun allocationStrategy(value: String) {
+          this.allocationStrategy = value
+        }
+        
+        /**
+         * [allocationStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun allocationStrategy(value: IntrinsicFunction) {
+          this.allocationStrategy = value
+        }
+
+        /**
+         * [excessCapacityTerminationPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var excessCapacityTerminationPolicy: Any? = null
+
+        /**
+         * [excessCapacityTerminationPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun excessCapacityTerminationPolicy(value: String) {
+          this.excessCapacityTerminationPolicy = value
+        }
+        
+        /**
+         * [excessCapacityTerminationPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun excessCapacityTerminationPolicy(value: IntrinsicFunction) {
+          this.excessCapacityTerminationPolicy = value
+        }
+
+        /**
+         * [iamFleetRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var iamFleetRole: Any? = null
+
+        /**
+         * [iamFleetRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun iamFleetRole(value: String) {
+          this.iamFleetRole = value
+        }
+        
+        /**
+         * [iamFleetRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun iamFleetRole(value: IntrinsicFunction) {
+          this.iamFleetRole = value
+        }
+
+        /**
+         * [launchSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<SpotFleetLaunchSpecification>
+         */
+        var launchSpecifications: Any? = null
+
+        /**
+         * [launchSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<SpotFleetLaunchSpecification>
+         */
+        fun launchSpecifications(value: List<SpotFleetLaunchSpecification>) {
+          this.launchSpecifications = value
+        }
+        
+        /**
+         * [launchSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<SpotFleetLaunchSpecification>
+         */
+        fun launchSpecifications(vararg value: IntrinsicFunction) {
+          this.launchSpecifications = value
+        }
+
+        /**
+         * [replaceUnhealthyInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var replaceUnhealthyInstances: Any? = null
+
+        /**
+         * [replaceUnhealthyInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun replaceUnhealthyInstances(value: Boolean) {
+          this.replaceUnhealthyInstances = value
+        }
+        
+        /**
+         * [replaceUnhealthyInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun replaceUnhealthyInstances(value: IntrinsicFunction) {
+          this.replaceUnhealthyInstances = value
+        }
+
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var spotPrice: Any? = null
+
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun spotPrice(value: String) {
+          this.spotPrice = value
+        }
+        
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun spotPrice(value: IntrinsicFunction) {
+          this.spotPrice = value
+        }
+
+        /**
+         * [targetCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var targetCapacity: Any? = null
+
+        /**
+         * [targetCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun targetCapacity(value: Int) {
+          this.targetCapacity = value
+        }
+        
+        /**
+         * [targetCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun targetCapacity(value: IntrinsicFunction) {
+          this.targetCapacity = value
+        }
+
+        /**
+         * [terminateInstancesWithExpiration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var terminateInstancesWithExpiration: Any? = null
+
+        /**
+         * [terminateInstancesWithExpiration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun terminateInstancesWithExpiration(value: Boolean) {
+          this.terminateInstancesWithExpiration = value
+        }
+        
+        /**
+         * [terminateInstancesWithExpiration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun terminateInstancesWithExpiration(value: IntrinsicFunction) {
+          this.terminateInstancesWithExpiration = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [validFrom](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var validFrom: Any? = null
+
+        /**
+         * [validFrom](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun validFrom(value: String) {
+          this.validFrom = value
+        }
+        
+        /**
+         * [validFrom](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun validFrom(value: IntrinsicFunction) {
+          this.validFrom = value
+        }
+
+        /**
+         * [validUntil](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var validUntil: Any? = null
+
+        /**
+         * [validUntil](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun validUntil(value: String) {
+          this.validUntil = value
+        }
+        
+        /**
+         * [validUntil](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validuntil)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun validUntil(value: IntrinsicFunction) {
+          this.validUntil = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SpotFleetTagSpecification {
+            /**
+         * [resourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var resourceType: Any? = null
+
+        /**
+         * [resourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resourceType(value: String) {
+          this.resourceType = value
+        }
+        
+        /**
+         * [resourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resourceType(value: IntrinsicFunction) {
+          this.resourceType = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SpotPlacement {
+            /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var availabilityZone: Any? = null
+
+        /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun availabilityZone(value: String) {
+          this.availabilityZone = value
+        }
+        
+        /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun availabilityZone(value: IntrinsicFunction) {
+          this.availabilityZone = value
+        }
+
+        /**
+         * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-groupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var groupName: Any? = null
+
+        /**
+         * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-groupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun groupName(value: String) {
+          this.groupName = value
+        }
+        
+        /**
+         * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-groupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun groupName(value: IntrinsicFunction) {
+          this.groupName = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSRedshiftClusterSecurityGroup(logicalId: String) : Resource<AWSRedshiftC
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-tags)
          *
@@ -74,7 +74,8 @@ class AWSRedshiftClusterSecurityGroup(logicalId: String) : Resource<AWSRedshiftC
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

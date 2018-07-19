@@ -42,7 +42,7 @@ class AWSS3BucketPolicy(logicalId: String) : Resource<AWSS3BucketPolicy.Properti
         fun bucket(value: IntrinsicFunction) {
           this.bucket = value
         }
-        
+
         /**
          * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-policydocument)
          *
@@ -74,7 +74,8 @@ class AWSS3BucketPolicy(logicalId: String) : Resource<AWSS3BucketPolicy.Properti
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

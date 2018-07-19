@@ -42,7 +42,7 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun groups(vararg value: IntrinsicFunction) {
           this.groups = value
         }
-        
+
         /**
          * [loginProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-loginprofile)
          *
@@ -74,7 +74,7 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun loginProfile(value: IntrinsicFunction) {
           this.loginProfile = value
         }
-        
+
         /**
          * [managedPolicyArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-managepolicyarns)
          *
@@ -106,7 +106,7 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun managedPolicyArns(vararg value: IntrinsicFunction) {
           this.managedPolicyArns = value
         }
-        
+
         /**
          * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-path)
          *
@@ -138,7 +138,7 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun path(value: IntrinsicFunction) {
           this.path = value
         }
-        
+
         /**
          * [policies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-policies)
          *
@@ -170,7 +170,7 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun policies(vararg value: IntrinsicFunction) {
           this.policies = value
         }
-        
+
         /**
          * [userName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-username)
          *
@@ -202,7 +202,23 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
         fun userName(value: IntrinsicFunction) {
           this.userName = value
         }
-        
+
+        /**
+        * [LoginProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html)
+        */
+        fun loginProfile(init: LoginProfile.() -> Unit = {}): LoginProfile {
+            return LoginProfile().also {
+                it.init()
+            }
+        }
+        /**
+        * [Policy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+        */
+        fun policy(init: Policy.() -> Unit = {}): Policy {
+            return Policy().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -213,43 +229,137 @@ class AWSIAMUser(logicalId: String) : Resource<AWSIAMUser.Properties>(logicalId,
     }
 
 
-    class LoginProfile(
+    @CloudFormationMarker
+    class LoginProfile {
             /**
-             * [Password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-password)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val password: String,
-            /**
-             * [PasswordResetRequired](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-passwordresetrequired)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val passwordResetRequired: Boolean? = null
-    )
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-password)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var password: Any? = null
 
-    class Policy(
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-password)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun password(value: String) {
+          this.password = value
+        }
+        
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-password)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun password(value: IntrinsicFunction) {
+          this.password = value
+        }
+
+        /**
+         * [passwordResetRequired](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-passwordresetrequired)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var passwordResetRequired: Any? = null
+
+        /**
+         * [passwordResetRequired](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-passwordresetrequired)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun passwordResetRequired(value: Boolean) {
+          this.passwordResetRequired = value
+        }
+        
+        /**
+         * [passwordResetRequired](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-passwordresetrequired)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun passwordResetRequired(value: IntrinsicFunction) {
+          this.passwordResetRequired = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Policy {
             /**
-             * [PolicyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Json
-             */
-            val policyDocument: Json,
-            /**
-             * [PolicyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val policyName: String
-    )
+         * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        var policyDocument: Any? = null
+
+        /**
+         * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun policyDocument(value: Json) {
+          this.policyDocument = value
+        }
+        
+        /**
+         * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun policyDocument(value: IntrinsicFunction) {
+          this.policyDocument = value
+        }
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var policyName: Any? = null
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: IntrinsicFunction) {
+          this.policyName = value
+        }
+
+    }
 
 }
 

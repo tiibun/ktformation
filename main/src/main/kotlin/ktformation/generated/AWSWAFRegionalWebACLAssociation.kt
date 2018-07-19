@@ -42,7 +42,7 @@ class AWSWAFRegionalWebACLAssociation(logicalId: String) : Resource<AWSWAFRegion
         fun resourceArn(value: IntrinsicFunction) {
           this.resourceArn = value
         }
-        
+
         /**
          * [webACLId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webaclassociation.html#cfn-wafregional-webaclassociation-webaclid)
          *
@@ -74,7 +74,8 @@ class AWSWAFRegionalWebACLAssociation(logicalId: String) : Resource<AWSWAFRegion
         fun webACLId(value: IntrinsicFunction) {
           this.webACLId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

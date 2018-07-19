@@ -42,7 +42,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun appSource(value: IntrinsicFunction) {
           this.appSource = value
         }
-        
+
         /**
          * [attributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-attributes)
          *
@@ -95,7 +95,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun dataSources(vararg value: IntrinsicFunction) {
           this.dataSources = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-description)
          *
@@ -127,7 +127,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [domains](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-domains)
          *
@@ -159,7 +159,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun domains(vararg value: IntrinsicFunction) {
           this.domains = value
         }
-        
+
         /**
          * [enableSsl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-enablessl)
          *
@@ -191,7 +191,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun enableSsl(value: IntrinsicFunction) {
           this.enableSsl = value
         }
-        
+
         /**
          * [environment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-environment)
          *
@@ -223,7 +223,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun environment(vararg value: IntrinsicFunction) {
           this.environment = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-name)
          *
@@ -255,7 +255,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [shortname](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-shortname)
          *
@@ -287,7 +287,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun shortname(value: IntrinsicFunction) {
           this.shortname = value
         }
-        
+
         /**
          * [sslConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-sslconfiguration)
          *
@@ -319,7 +319,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun sslConfiguration(value: IntrinsicFunction) {
           this.sslConfiguration = value
         }
-        
+
         /**
          * [stackId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-stackid)
          *
@@ -351,7 +351,7 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun stackId(value: IntrinsicFunction) {
           this.stackId = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-type)
          *
@@ -383,7 +383,39 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
+        /**
+        * [DataSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html)
+        */
+        fun dataSource(init: DataSource.() -> Unit = {}): DataSource {
+            return DataSource().also {
+                it.init()
+            }
+        }
+        /**
+        * [EnvironmentVariable](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html)
+        */
+        fun environmentVariable(init: EnvironmentVariable.() -> Unit = {}): EnvironmentVariable {
+            return EnvironmentVariable().also {
+                it.init()
+            }
+        }
+        /**
+        * [Source](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html)
+        */
+        fun source(init: Source.() -> Unit = {}): Source {
+            return Source().also {
+                it.init()
+            }
+        }
+        /**
+        * [SslConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html)
+        */
+        fun sslConfiguration(init: SslConfiguration.() -> Unit = {}): SslConfiguration {
+            return SslConfiguration().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -394,137 +426,486 @@ class AWSOpsWorksApp(logicalId: String) : Resource<AWSOpsWorksApp.Properties>(lo
     }
 
 
-    class DataSource(
+    @CloudFormationMarker
+    class DataSource {
             /**
-             * [Arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val arn: String? = null,
-            /**
-             * [DatabaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val databaseName: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null
-    )
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var arn: Any? = null
 
-    class EnvironmentVariable(
-            /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [Secure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-secure)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val secure: Boolean? = null,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+        /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun arn(value: String) {
+          this.arn = value
+        }
+        
+        /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun arn(value: IntrinsicFunction) {
+          this.arn = value
+        }
 
-    class Source(
-            /**
-             * [Password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-pw)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val password: String? = null,
-            /**
-             * [Revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val revision: String? = null,
-            /**
-             * [SshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val sshKey: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null,
-            /**
-             * [Url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val url: String? = null,
-            /**
-             * [Username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val username: String? = null
-    )
+        /**
+         * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var databaseName: Any? = null
 
-    class SslConfiguration(
+        /**
+         * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun databaseName(value: String) {
+          this.databaseName = value
+        }
+        
+        /**
+         * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun databaseName(value: IntrinsicFunction) {
+          this.databaseName = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class EnvironmentVariable {
             /**
-             * [Certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-certificate)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val certificate: String? = null,
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [secure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-secure)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var secure: Any? = null
+
+        /**
+         * [secure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-secure)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun secure(value: Boolean) {
+          this.secure = value
+        }
+        
+        /**
+         * [secure](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-secure)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun secure(value: IntrinsicFunction) {
+          this.secure = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Source {
             /**
-             * [Chain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-chain)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val chain: String? = null,
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-pw)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var password: Any? = null
+
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-pw)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun password(value: String) {
+          this.password = value
+        }
+        
+        /**
+         * [password](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-pw)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun password(value: IntrinsicFunction) {
+          this.password = value
+        }
+
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var revision: Any? = null
+
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun revision(value: String) {
+          this.revision = value
+        }
+        
+        /**
+         * [revision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun revision(value: IntrinsicFunction) {
+          this.revision = value
+        }
+
+        /**
+         * [sshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var sshKey: Any? = null
+
+        /**
+         * [sshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sshKey(value: String) {
+          this.sshKey = value
+        }
+        
+        /**
+         * [sshKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sshKey(value: IntrinsicFunction) {
+          this.sshKey = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var url: Any? = null
+
+        /**
+         * [url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun url(value: String) {
+          this.url = value
+        }
+        
+        /**
+         * [url](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun url(value: IntrinsicFunction) {
+          this.url = value
+        }
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var username: Any? = null
+
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun username(value: String) {
+          this.username = value
+        }
+        
+        /**
+         * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun username(value: IntrinsicFunction) {
+          this.username = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SslConfiguration {
             /**
-             * [PrivateKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-privatekey)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val privateKey: String? = null
-    )
+         * [certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-certificate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var certificate: Any? = null
+
+        /**
+         * [certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-certificate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun certificate(value: String) {
+          this.certificate = value
+        }
+        
+        /**
+         * [certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-certificate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun certificate(value: IntrinsicFunction) {
+          this.certificate = value
+        }
+
+        /**
+         * [chain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-chain)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var chain: Any? = null
+
+        /**
+         * [chain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-chain)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun chain(value: String) {
+          this.chain = value
+        }
+        
+        /**
+         * [chain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-chain)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun chain(value: IntrinsicFunction) {
+          this.chain = value
+        }
+
+        /**
+         * [privateKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-privatekey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var privateKey: Any? = null
+
+        /**
+         * [privateKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-privatekey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun privateKey(value: String) {
+          this.privateKey = value
+        }
+        
+        /**
+         * [privateKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-privatekey)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun privateKey(value: IntrinsicFunction) {
+          this.privateKey = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSSNSSubscription(logicalId: String) : Resource<AWSSNSSubscription.Proper
         fun endpoint(value: IntrinsicFunction) {
           this.endpoint = value
         }
-        
+
         /**
          * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-protocol)
          *
@@ -74,7 +74,7 @@ class AWSSNSSubscription(logicalId: String) : Resource<AWSSNSSubscription.Proper
         fun protocol(value: IntrinsicFunction) {
           this.protocol = value
         }
-        
+
         /**
          * [topicArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#topicarn)
          *
@@ -106,7 +106,8 @@ class AWSSNSSubscription(logicalId: String) : Resource<AWSSNSSubscription.Proper
         fun topicArn(value: IntrinsicFunction) {
           this.topicArn = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

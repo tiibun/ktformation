@@ -42,7 +42,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun code(value: IntrinsicFunction) {
           this.code = value
         }
-        
+
         /**
          * [deadLetterConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
          *
@@ -74,7 +74,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun deadLetterConfig(value: IntrinsicFunction) {
           this.deadLetterConfig = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-description)
          *
@@ -106,7 +106,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [environment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
          *
@@ -138,7 +138,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun environment(value: IntrinsicFunction) {
           this.environment = value
         }
-        
+
         /**
          * [functionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-functionname)
          *
@@ -170,7 +170,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun functionName(value: IntrinsicFunction) {
           this.functionName = value
         }
-        
+
         /**
          * [handler](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-handler)
          *
@@ -202,7 +202,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun handler(value: IntrinsicFunction) {
           this.handler = value
         }
-        
+
         /**
          * [kmsKeyArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-kmskeyarn)
          *
@@ -234,7 +234,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun kmsKeyArn(value: IntrinsicFunction) {
           this.kmsKeyArn = value
         }
-        
+
         /**
          * [memorySize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-memorysize)
          *
@@ -266,7 +266,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun memorySize(value: IntrinsicFunction) {
           this.memorySize = value
         }
-        
+
         /**
          * [reservedConcurrentExecutions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-reservedconcurrentexecutions)
          *
@@ -298,7 +298,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun reservedConcurrentExecutions(value: IntrinsicFunction) {
           this.reservedConcurrentExecutions = value
         }
-        
+
         /**
          * [role](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-role)
          *
@@ -330,7 +330,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun role(value: IntrinsicFunction) {
           this.role = value
         }
-        
+
         /**
          * [runtime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtime)
          *
@@ -362,7 +362,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun runtime(value: IntrinsicFunction) {
           this.runtime = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tags)
          *
@@ -394,7 +394,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [timeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-timeout)
          *
@@ -426,7 +426,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun timeout(value: IntrinsicFunction) {
           this.timeout = value
         }
-        
+
         /**
          * [tracingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
          *
@@ -458,7 +458,7 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun tracingConfig(value: IntrinsicFunction) {
           this.tracingConfig = value
         }
-        
+
         /**
          * [vpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
          *
@@ -490,7 +490,47 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
         fun vpcConfig(value: IntrinsicFunction) {
           this.vpcConfig = value
         }
-        
+
+        /**
+        * [Code](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html)
+        */
+        fun code(init: Code.() -> Unit = {}): Code {
+            return Code().also {
+                it.init()
+            }
+        }
+        /**
+        * [DeadLetterConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html)
+        */
+        fun deadLetterConfig(init: DeadLetterConfig.() -> Unit = {}): DeadLetterConfig {
+            return DeadLetterConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [Environment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html)
+        */
+        fun environment(init: Environment.() -> Unit = {}): Environment {
+            return Environment().also {
+                it.init()
+            }
+        }
+        /**
+        * [TracingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html)
+        */
+        fun tracingConfig(init: TracingConfig.() -> Unit = {}): TracingConfig {
+            return TracingConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [VpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+        */
+        fun vpcConfig(init: VpcConfig.() -> Unit = {}): VpcConfig {
+            return VpcConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -501,92 +541,293 @@ class AWSLambdaFunction(logicalId: String) : Resource<AWSLambdaFunction.Properti
     }
 
 
-    class Code(
+    @CloudFormationMarker
+    class Code {
             /**
-             * [S3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val s3Bucket: String? = null,
-            /**
-             * [S3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3key)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val s3Key: String? = null,
-            /**
-             * [S3ObjectVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3objectversion)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val s3ObjectVersion: String? = null,
-            /**
-             * [ZipFile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val zipFile: String? = null
-    )
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var s3Bucket: Any? = null
 
-    class DeadLetterConfig(
-            /**
-             * [TargetArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val targetArn: String? = null
-    )
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3Bucket(value: String) {
+          this.s3Bucket = value
+        }
+        
+        /**
+         * [s3Bucket](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3Bucket(value: IntrinsicFunction) {
+          this.s3Bucket = value
+        }
 
-    class Environment(
-            /**
-             * [Variables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
-             *
-             * _Required_: no
-             *
-             * _Type_: Map<String, Any>
-             */
-            val variables: Map<String, Any>? = null
-    )
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var s3Key: Any? = null
 
-    class TracingConfig(
-            /**
-             * [Mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val mode: String? = null
-    )
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3Key(value: String) {
+          this.s3Key = value
+        }
+        
+        /**
+         * [s3Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3Key(value: IntrinsicFunction) {
+          this.s3Key = value
+        }
 
-    class VpcConfig(
+        /**
+         * [s3ObjectVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3objectversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var s3ObjectVersion: Any? = null
+
+        /**
+         * [s3ObjectVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3objectversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3ObjectVersion(value: String) {
+          this.s3ObjectVersion = value
+        }
+        
+        /**
+         * [s3ObjectVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3objectversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun s3ObjectVersion(value: IntrinsicFunction) {
+          this.s3ObjectVersion = value
+        }
+
+        /**
+         * [zipFile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var zipFile: Any? = null
+
+        /**
+         * [zipFile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun zipFile(value: String) {
+          this.zipFile = value
+        }
+        
+        /**
+         * [zipFile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun zipFile(value: IntrinsicFunction) {
+          this.zipFile = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class DeadLetterConfig {
             /**
-             * [SecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val securityGroupIds: List<String>,
+         * [targetArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var targetArn: Any? = null
+
+        /**
+         * [targetArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun targetArn(value: String) {
+          this.targetArn = value
+        }
+        
+        /**
+         * [targetArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun targetArn(value: IntrinsicFunction) {
+          this.targetArn = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Environment {
             /**
-             * [SubnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnetIds: List<String>
-    )
+         * [variables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var variables: Any? = null
+
+        /**
+         * [variables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun variables(value: Map<String, Any>) {
+          this.variables = value
+        }
+        
+    }
+
+    @CloudFormationMarker
+    class TracingConfig {
+            /**
+         * [mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var mode: Any? = null
+
+        /**
+         * [mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun mode(value: String) {
+          this.mode = value
+        }
+        
+        /**
+         * [mode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun mode(value: IntrinsicFunction) {
+          this.mode = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class VpcConfig {
+            /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var securityGroupIds: Any? = null
+
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(value: List<String>) {
+          this.securityGroupIds = value
+        }
+        
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(vararg value: IntrinsicFunction) {
+          this.securityGroupIds = value
+        }
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnetIds: Any? = null
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(value: List<String>) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(vararg value: IntrinsicFunction) {
+          this.subnetIds = value
+        }
+
+    }
 
 }
 

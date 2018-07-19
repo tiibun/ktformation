@@ -42,7 +42,7 @@ class AWSSQSQueuePolicy(logicalId: String) : Resource<AWSSQSQueuePolicy.Properti
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
         /**
          * [queues](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html#cfn-sqs-queuepolicy-queues)
          *
@@ -74,7 +74,8 @@ class AWSSQSQueuePolicy(logicalId: String) : Resource<AWSSQSQueuePolicy.Properti
         fun queues(vararg value: IntrinsicFunction) {
           this.queues = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

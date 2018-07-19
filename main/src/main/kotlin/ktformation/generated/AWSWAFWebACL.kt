@@ -42,7 +42,7 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         fun defaultAction(value: IntrinsicFunction) {
           this.defaultAction = value
         }
-        
+
         /**
          * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-metricname)
          *
@@ -74,7 +74,7 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         fun metricName(value: IntrinsicFunction) {
           this.metricName = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-name)
          *
@@ -106,7 +106,7 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-rules)
          *
@@ -138,7 +138,23 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         fun rules(vararg value: IntrinsicFunction) {
           this.rules = value
         }
-        
+
+        /**
+        * [ActivatedRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html)
+        */
+        fun activatedRule(init: ActivatedRule.() -> Unit = {}): ActivatedRule {
+            return ActivatedRule().also {
+                it.init()
+            }
+        }
+        /**
+        * [WafAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-action.html)
+        */
+        fun wafAction(init: WafAction.() -> Unit = {}): WafAction {
+            return WafAction().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,43 +165,137 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
     }
 
 
-    class ActivatedRule(
+    @CloudFormationMarker
+    class ActivatedRule {
             /**
-             * [Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
-             *
-             * _Required_: yes
-             *
-             * _Type_: WafAction
-             */
-            val action: WafAction,
-            /**
-             * [Priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-priority)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val priority: Int,
-            /**
-             * [RuleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-ruleid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val ruleId: String
-    )
+         * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
+         *
+         * _Required_: yes
+         *
+         * _Type_: WafAction
+         */
+        var action: Any? = null
 
-    class WafAction(
+        /**
+         * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
+         *
+         * _Required_: yes
+         *
+         * _Type_: WafAction
+         */
+        fun action(value: WafAction) {
+          this.action = value
+        }
+        
+        /**
+         * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
+         *
+         * _Required_: yes
+         *
+         * _Type_: WafAction
+         */
+        fun action(value: IntrinsicFunction) {
+          this.action = value
+        }
+
+        /**
+         * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-priority)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var priority: Any? = null
+
+        /**
+         * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-priority)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun priority(value: Int) {
+          this.priority = value
+        }
+        
+        /**
+         * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-priority)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun priority(value: IntrinsicFunction) {
+          this.priority = value
+        }
+
+        /**
+         * [ruleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-ruleid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var ruleId: Any? = null
+
+        /**
+         * [ruleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-ruleid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ruleId(value: String) {
+          this.ruleId = value
+        }
+        
+        /**
+         * [ruleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-ruleid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ruleId(value: IntrinsicFunction) {
+          this.ruleId = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class WafAction {
             /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-action.html#cfn-waf-webacl-action-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-action.html#cfn-waf-webacl-action-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-action.html#cfn-waf-webacl-action-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-action.html#cfn-waf-webacl-action-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
 
 }
 

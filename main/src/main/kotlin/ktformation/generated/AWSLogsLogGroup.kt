@@ -42,7 +42,7 @@ class AWSLogsLogGroup(logicalId: String) : Resource<AWSLogsLogGroup.Properties>(
         fun logGroupName(value: IntrinsicFunction) {
           this.logGroupName = value
         }
-        
+
         /**
          * [retentionInDays](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-cwl-loggroup-retentionindays)
          *
@@ -74,7 +74,8 @@ class AWSLogsLogGroup(logicalId: String) : Resource<AWSLogsLogGroup.Properties>(
         fun retentionInDays(value: IntrinsicFunction) {
           this.retentionInDays = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

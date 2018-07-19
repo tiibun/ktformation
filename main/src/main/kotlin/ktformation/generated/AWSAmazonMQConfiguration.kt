@@ -42,7 +42,7 @@ class AWSAmazonMQConfiguration(logicalId: String) : Resource<AWSAmazonMQConfigur
         fun data(value: IntrinsicFunction) {
           this.data = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-description)
          *
@@ -74,7 +74,7 @@ class AWSAmazonMQConfiguration(logicalId: String) : Resource<AWSAmazonMQConfigur
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [engineType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-enginetype)
          *
@@ -106,7 +106,7 @@ class AWSAmazonMQConfiguration(logicalId: String) : Resource<AWSAmazonMQConfigur
         fun engineType(value: IntrinsicFunction) {
           this.engineType = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion)
          *
@@ -138,7 +138,7 @@ class AWSAmazonMQConfiguration(logicalId: String) : Resource<AWSAmazonMQConfigur
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-name)
          *
@@ -170,7 +170,8 @@ class AWSAmazonMQConfiguration(logicalId: String) : Resource<AWSAmazonMQConfigur
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSWAFRegionalWebACL(logicalId: String) : Resource<AWSWAFRegionalWebACL.Pr
         fun defaultAction(value: IntrinsicFunction) {
           this.defaultAction = value
         }
-        
+
         /**
          * [metricName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-metricname)
          *
@@ -74,7 +74,7 @@ class AWSWAFRegionalWebACL(logicalId: String) : Resource<AWSWAFRegionalWebACL.Pr
         fun metricName(value: IntrinsicFunction) {
           this.metricName = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-name)
          *
@@ -106,7 +106,7 @@ class AWSWAFRegionalWebACL(logicalId: String) : Resource<AWSWAFRegionalWebACL.Pr
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [rules](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-rules)
          *
@@ -138,7 +138,23 @@ class AWSWAFRegionalWebACL(logicalId: String) : Resource<AWSWAFRegionalWebACL.Pr
         fun rules(vararg value: IntrinsicFunction) {
           this.rules = value
         }
-        
+
+        /**
+        * [Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html)
+        */
+        fun action(init: Action.() -> Unit = {}): Action {
+            return Action().also {
+                it.init()
+            }
+        }
+        /**
+        * [Rule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html)
+        */
+        fun rule(init: Rule.() -> Unit = {}): Rule {
+            return Rule().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,43 +165,137 @@ class AWSWAFRegionalWebACL(logicalId: String) : Resource<AWSWAFRegionalWebACL.Pr
     }
 
 
-    class Action(
+    @CloudFormationMarker
+    class Action {
             /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
 
-    class Rule(
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Rule {
             /**
-             * [Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-action)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Action
-             */
-            val action: Action,
-            /**
-             * [Priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val priority: Int,
-            /**
-             * [RuleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val ruleId: String
-    )
+         * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-action)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Action
+         */
+        var action: Any? = null
+
+        /**
+         * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-action)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Action
+         */
+        fun action(value: Action) {
+          this.action = value
+        }
+        
+        /**
+         * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-action)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Action
+         */
+        fun action(value: IntrinsicFunction) {
+          this.action = value
+        }
+
+        /**
+         * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var priority: Any? = null
+
+        /**
+         * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun priority(value: Int) {
+          this.priority = value
+        }
+        
+        /**
+         * [priority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun priority(value: IntrinsicFunction) {
+          this.priority = value
+        }
+
+        /**
+         * [ruleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var ruleId: Any? = null
+
+        /**
+         * [ruleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ruleId(value: String) {
+          this.ruleId = value
+        }
+        
+        /**
+         * [ruleId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun ruleId(value: IntrinsicFunction) {
+          this.ruleId = value
+        }
+
+    }
 
 }
 

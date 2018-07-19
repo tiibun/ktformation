@@ -42,7 +42,7 @@ class AWSEC2SubnetRouteTableAssociation(logicalId: String) : Resource<AWSEC2Subn
         fun routeTableId(value: IntrinsicFunction) {
           this.routeTableId = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html#cfn-ec2-subnetroutetableassociation-subnetid)
          *
@@ -74,7 +74,8 @@ class AWSEC2SubnetRouteTableAssociation(logicalId: String) : Resource<AWSEC2Subn
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

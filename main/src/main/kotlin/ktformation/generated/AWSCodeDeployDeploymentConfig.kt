@@ -42,7 +42,7 @@ class AWSCodeDeployDeploymentConfig(logicalId: String) : Resource<AWSCodeDeployD
         fun deploymentConfigName(value: IntrinsicFunction) {
           this.deploymentConfigName = value
         }
-        
+
         /**
          * [minimumHealthyHosts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)
          *
@@ -74,7 +74,15 @@ class AWSCodeDeployDeploymentConfig(logicalId: String) : Resource<AWSCodeDeployD
         fun minimumHealthyHosts(value: IntrinsicFunction) {
           this.minimumHealthyHosts = value
         }
-        
+
+        /**
+        * [MinimumHealthyHosts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html)
+        */
+        fun minimumHealthyHosts(init: MinimumHealthyHosts.() -> Unit = {}): MinimumHealthyHosts {
+            return MinimumHealthyHosts().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,24 +93,71 @@ class AWSCodeDeployDeploymentConfig(logicalId: String) : Resource<AWSCodeDeployD
     }
 
 
-    class MinimumHealthyHosts(
+    @CloudFormationMarker
+    class MinimumHealthyHosts {
             /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val value: Int
-    )
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun value(value: Int) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

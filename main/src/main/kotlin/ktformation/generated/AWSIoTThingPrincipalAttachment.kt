@@ -42,7 +42,7 @@ class AWSIoTThingPrincipalAttachment(logicalId: String) : Resource<AWSIoTThingPr
         fun principal(value: IntrinsicFunction) {
           this.principal = value
         }
-        
+
         /**
          * [thingName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingname)
          *
@@ -74,7 +74,8 @@ class AWSIoTThingPrincipalAttachment(logicalId: String) : Resource<AWSIoTThingPr
         fun thingName(value: IntrinsicFunction) {
           this.thingName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         fun detectorId(value: IntrinsicFunction) {
           this.detectorId = value
         }
-        
+
         /**
          * [disableEmailNotification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-disableemailnotification)
          *
@@ -74,7 +74,7 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         fun disableEmailNotification(value: IntrinsicFunction) {
           this.disableEmailNotification = value
         }
-        
+
         /**
          * [email](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-email)
          *
@@ -106,7 +106,7 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         fun email(value: IntrinsicFunction) {
           this.email = value
         }
-        
+
         /**
          * [memberId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-memberid)
          *
@@ -138,7 +138,7 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         fun memberId(value: IntrinsicFunction) {
           this.memberId = value
         }
-        
+
         /**
          * [message](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-message)
          *
@@ -170,7 +170,7 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         fun message(value: IntrinsicFunction) {
           this.message = value
         }
-        
+
         /**
          * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-status)
          *
@@ -202,7 +202,8 @@ class AWSGuardDutyMember(logicalId: String) : Resource<AWSGuardDutyMember.Proper
         fun status(value: IntrinsicFunction) {
           this.status = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

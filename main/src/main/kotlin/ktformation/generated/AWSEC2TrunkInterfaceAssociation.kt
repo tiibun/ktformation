@@ -42,7 +42,7 @@ class AWSEC2TrunkInterfaceAssociation(logicalId: String) : Resource<AWSEC2TrunkI
         fun branchInterfaceId(value: IntrinsicFunction) {
           this.branchInterfaceId = value
         }
-        
+
         /**
          * [gREKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trunkinterfaceassociation.html#cfn-ec2-trunkinterfaceassociation-grekey)
          *
@@ -74,7 +74,7 @@ class AWSEC2TrunkInterfaceAssociation(logicalId: String) : Resource<AWSEC2TrunkI
         fun gREKey(value: IntrinsicFunction) {
           this.gREKey = value
         }
-        
+
         /**
          * [trunkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trunkinterfaceassociation.html#cfn-ec2-trunkinterfaceassociation-trunkinterfaceid)
          *
@@ -106,7 +106,7 @@ class AWSEC2TrunkInterfaceAssociation(logicalId: String) : Resource<AWSEC2TrunkI
         fun trunkInterfaceId(value: IntrinsicFunction) {
           this.trunkInterfaceId = value
         }
-        
+
         /**
          * [vLANId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trunkinterfaceassociation.html#cfn-ec2-trunkinterfaceassociation-vlanid)
          *
@@ -138,7 +138,8 @@ class AWSEC2TrunkInterfaceAssociation(logicalId: String) : Resource<AWSEC2TrunkI
         fun vLANId(value: IntrinsicFunction) {
           this.vLANId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

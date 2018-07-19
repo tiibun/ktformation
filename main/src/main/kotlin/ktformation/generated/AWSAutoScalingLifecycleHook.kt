@@ -42,7 +42,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun autoScalingGroupName(value: IntrinsicFunction) {
           this.autoScalingGroupName = value
         }
-        
+
         /**
          * [defaultResult](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-defaultresult)
          *
@@ -74,7 +74,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun defaultResult(value: IntrinsicFunction) {
           this.defaultResult = value
         }
-        
+
         /**
          * [heartbeatTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-heartbeattimeout)
          *
@@ -106,7 +106,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun heartbeatTimeout(value: IntrinsicFunction) {
           this.heartbeatTimeout = value
         }
-        
+
         /**
          * [lifecycleHookName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-autoscaling-lifecyclehook-lifecyclehookname)
          *
@@ -138,7 +138,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun lifecycleHookName(value: IntrinsicFunction) {
           this.lifecycleHookName = value
         }
-        
+
         /**
          * [lifecycleTransition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-lifecycletransition)
          *
@@ -170,7 +170,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun lifecycleTransition(value: IntrinsicFunction) {
           this.lifecycleTransition = value
         }
-        
+
         /**
          * [notificationMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-notificationmetadata)
          *
@@ -202,7 +202,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun notificationMetadata(value: IntrinsicFunction) {
           this.notificationMetadata = value
         }
-        
+
         /**
          * [notificationTargetARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-notificationtargetarn)
          *
@@ -234,7 +234,7 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun notificationTargetARN(value: IntrinsicFunction) {
           this.notificationTargetARN = value
         }
-        
+
         /**
          * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-rolearn)
          *
@@ -266,7 +266,8 @@ class AWSAutoScalingLifecycleHook(logicalId: String) : Resource<AWSAutoScalingLi
         fun roleARN(value: IntrinsicFunction) {
           this.roleARN = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

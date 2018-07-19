@@ -42,7 +42,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun isPrivateDnsEnabled(value: IntrinsicFunction) {
           this.isPrivateDnsEnabled = value
         }
-        
+
         /**
          * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
         /**
          * [routeTableIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-routetableids)
          *
@@ -106,7 +106,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun routeTableIds(vararg value: IntrinsicFunction) {
           this.routeTableIds = value
         }
-        
+
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids)
          *
@@ -138,7 +138,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun securityGroupIds(vararg value: IntrinsicFunction) {
           this.securityGroupIds = value
         }
-        
+
         /**
          * [serviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename)
          *
@@ -170,7 +170,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun serviceName(value: IntrinsicFunction) {
           this.serviceName = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids)
          *
@@ -202,7 +202,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
         /**
          * [vPCEndpointType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype)
          *
@@ -234,7 +234,7 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun vPCEndpointType(value: IntrinsicFunction) {
           this.vPCEndpointType = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcid)
          *
@@ -266,7 +266,8 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

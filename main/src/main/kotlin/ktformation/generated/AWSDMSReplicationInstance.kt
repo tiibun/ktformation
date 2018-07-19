@@ -42,7 +42,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun allocatedStorage(value: IntrinsicFunction) {
           this.allocatedStorage = value
         }
-        
+
         /**
          * [allowMajorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-allowmajorversionupgrade)
          *
@@ -74,7 +74,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun allowMajorVersionUpgrade(value: IntrinsicFunction) {
           this.allowMajorVersionUpgrade = value
         }
-        
+
         /**
          * [autoMinorVersionUpgrade](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-autominorversionupgrade)
          *
@@ -106,7 +106,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun autoMinorVersionUpgrade(value: IntrinsicFunction) {
           this.autoMinorVersionUpgrade = value
         }
-        
+
         /**
          * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-availabilityzone)
          *
@@ -138,7 +138,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun availabilityZone(value: IntrinsicFunction) {
           this.availabilityZone = value
         }
-        
+
         /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-engineversion)
          *
@@ -170,7 +170,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun engineVersion(value: IntrinsicFunction) {
           this.engineVersion = value
         }
-        
+
         /**
          * [kmsKeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-kmskeyid)
          *
@@ -202,7 +202,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun kmsKeyId(value: IntrinsicFunction) {
           this.kmsKeyId = value
         }
-        
+
         /**
          * [multiAZ](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-multiaz)
          *
@@ -234,7 +234,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun multiAZ(value: IntrinsicFunction) {
           this.multiAZ = value
         }
-        
+
         /**
          * [preferredMaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-preferredmaintenancewindow)
          *
@@ -266,7 +266,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun preferredMaintenanceWindow(value: IntrinsicFunction) {
           this.preferredMaintenanceWindow = value
         }
-        
+
         /**
          * [publiclyAccessible](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-publiclyaccessible)
          *
@@ -298,7 +298,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun publiclyAccessible(value: IntrinsicFunction) {
           this.publiclyAccessible = value
         }
-        
+
         /**
          * [replicationInstanceClass](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceclass)
          *
@@ -330,7 +330,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun replicationInstanceClass(value: IntrinsicFunction) {
           this.replicationInstanceClass = value
         }
-        
+
         /**
          * [replicationInstanceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceidentifier)
          *
@@ -362,7 +362,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun replicationInstanceIdentifier(value: IntrinsicFunction) {
           this.replicationInstanceIdentifier = value
         }
-        
+
         /**
          * [replicationSubnetGroupIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationsubnetgroupidentifier)
          *
@@ -394,7 +394,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun replicationSubnetGroupIdentifier(value: IntrinsicFunction) {
           this.replicationSubnetGroupIdentifier = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-tags)
          *
@@ -426,7 +426,7 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [vpcSecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-vpcsecuritygroupids)
          *
@@ -458,7 +458,8 @@ class AWSDMSReplicationInstance(logicalId: String) : Resource<AWSDMSReplicationI
         fun vpcSecurityGroupIds(vararg value: IntrinsicFunction) {
           this.vpcSecurityGroupIds = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSSSMParameter(logicalId: String) : Resource<AWSSSMParameter.Properties>(
         fun allowedPattern(value: IntrinsicFunction) {
           this.allowedPattern = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-description)
          *
@@ -74,7 +74,7 @@ class AWSSSMParameter(logicalId: String) : Resource<AWSSSMParameter.Properties>(
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-name)
          *
@@ -106,7 +106,7 @@ class AWSSSMParameter(logicalId: String) : Resource<AWSSSMParameter.Properties>(
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
          *
@@ -138,7 +138,7 @@ class AWSSSMParameter(logicalId: String) : Resource<AWSSSMParameter.Properties>(
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
         /**
          * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-value)
          *
@@ -170,7 +170,8 @@ class AWSSSMParameter(logicalId: String) : Resource<AWSSSMParameter.Properties>(
         fun value(value: IntrinsicFunction) {
           this.value = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

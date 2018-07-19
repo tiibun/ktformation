@@ -42,7 +42,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun allocatedCapacity(value: IntrinsicFunction) {
           this.allocatedCapacity = value
         }
-        
+
         /**
          * [command](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-command)
          *
@@ -74,7 +74,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun command(value: IntrinsicFunction) {
           this.command = value
         }
-        
+
         /**
          * [connections](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-connections)
          *
@@ -106,7 +106,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun connections(value: IntrinsicFunction) {
           this.connections = value
         }
-        
+
         /**
          * [defaultArguments](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-defaultarguments)
          *
@@ -138,7 +138,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun defaultArguments(value: IntrinsicFunction) {
           this.defaultArguments = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-description)
          *
@@ -170,7 +170,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [executionProperty](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-executionproperty)
          *
@@ -202,7 +202,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun executionProperty(value: IntrinsicFunction) {
           this.executionProperty = value
         }
-        
+
         /**
          * [logUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-loguri)
          *
@@ -234,7 +234,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun logUri(value: IntrinsicFunction) {
           this.logUri = value
         }
-        
+
         /**
          * [maxRetries](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-maxretries)
          *
@@ -266,7 +266,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun maxRetries(value: IntrinsicFunction) {
           this.maxRetries = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-name)
          *
@@ -298,7 +298,7 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [role](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-role)
          *
@@ -330,7 +330,31 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
         fun role(value: IntrinsicFunction) {
           this.role = value
         }
-        
+
+        /**
+        * [ConnectionsList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html)
+        */
+        fun connectionsList(init: ConnectionsList.() -> Unit = {}): ConnectionsList {
+            return ConnectionsList().also {
+                it.init()
+            }
+        }
+        /**
+        * [ExecutionProperty](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html)
+        */
+        fun executionProperty(init: ExecutionProperty.() -> Unit = {}): ExecutionProperty {
+            return ExecutionProperty().also {
+                it.init()
+            }
+        }
+        /**
+        * [JobCommand](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html)
+        */
+        fun jobCommand(init: JobCommand.() -> Unit = {}): JobCommand {
+            return JobCommand().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -341,46 +365,141 @@ class AWSGlueJob(logicalId: String) : Resource<AWSGlueJob.Properties>(logicalId,
     }
 
 
-    class ConnectionsList(
+    @CloudFormationMarker
+    class ConnectionsList {
             /**
-             * [Connections](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val connections: List<String>? = null
-    )
+         * [connections](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var connections: Any? = null
 
-    class ExecutionProperty(
-            /**
-             * [MaxConcurrentRuns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val maxConcurrentRuns: Double? = null
-    )
+        /**
+         * [connections](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun connections(value: List<String>) {
+          this.connections = value
+        }
+        
+        /**
+         * [connections](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun connections(vararg value: IntrinsicFunction) {
+          this.connections = value
+        }
 
-    class JobCommand(
+    }
+
+    @CloudFormationMarker
+    class ExecutionProperty {
             /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
+         * [maxConcurrentRuns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var maxConcurrentRuns: Any? = null
+
+        /**
+         * [maxConcurrentRuns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun maxConcurrentRuns(value: Double) {
+          this.maxConcurrentRuns = value
+        }
+        
+        /**
+         * [maxConcurrentRuns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun maxConcurrentRuns(value: IntrinsicFunction) {
+          this.maxConcurrentRuns = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class JobCommand {
             /**
-             * [ScriptLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-scriptlocation)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val scriptLocation: String? = null
-    )
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [scriptLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-scriptlocation)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var scriptLocation: Any? = null
+
+        /**
+         * [scriptLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-scriptlocation)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun scriptLocation(value: String) {
+          this.scriptLocation = value
+        }
+        
+        /**
+         * [scriptLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-scriptlocation)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun scriptLocation(value: IntrinsicFunction) {
+          this.scriptLocation = value
+        }
+
+    }
 
 }
 

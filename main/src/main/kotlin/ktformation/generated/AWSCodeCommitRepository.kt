@@ -42,7 +42,7 @@ class AWSCodeCommitRepository(logicalId: String) : Resource<AWSCodeCommitReposit
         fun repositoryDescription(value: IntrinsicFunction) {
           this.repositoryDescription = value
         }
-        
+
         /**
          * [repositoryName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-repositoryname)
          *
@@ -74,7 +74,7 @@ class AWSCodeCommitRepository(logicalId: String) : Resource<AWSCodeCommitReposit
         fun repositoryName(value: IntrinsicFunction) {
           this.repositoryName = value
         }
-        
+
         /**
          * [triggers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-triggers)
          *
@@ -106,7 +106,15 @@ class AWSCodeCommitRepository(logicalId: String) : Resource<AWSCodeCommitReposit
         fun triggers(vararg value: IntrinsicFunction) {
           this.triggers = value
         }
-        
+
+        /**
+        * [RepositoryTrigger](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html)
+        */
+        fun repositoryTrigger(init: RepositoryTrigger.() -> Unit = {}): RepositoryTrigger {
+            return RepositoryTrigger().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,48 +125,164 @@ class AWSCodeCommitRepository(logicalId: String) : Resource<AWSCodeCommitReposit
     }
 
 
-    class RepositoryTrigger(
+    @CloudFormationMarker
+    class RepositoryTrigger {
             /**
-             * [Branches](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-branches)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val branches: List<String>? = null,
-            /**
-             * [CustomData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-customdata)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val customData: String? = null,
-            /**
-             * [DestinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-destinationarn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val destinationArn: String? = null,
-            /**
-             * [Events](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-events)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val events: List<String>? = null,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null
-    )
+         * [branches](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-branches)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var branches: Any? = null
+
+        /**
+         * [branches](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-branches)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun branches(value: List<String>) {
+          this.branches = value
+        }
+        
+        /**
+         * [branches](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-branches)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun branches(vararg value: IntrinsicFunction) {
+          this.branches = value
+        }
+
+        /**
+         * [customData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-customdata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var customData: Any? = null
+
+        /**
+         * [customData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-customdata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun customData(value: String) {
+          this.customData = value
+        }
+        
+        /**
+         * [customData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-customdata)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun customData(value: IntrinsicFunction) {
+          this.customData = value
+        }
+
+        /**
+         * [destinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-destinationarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var destinationArn: Any? = null
+
+        /**
+         * [destinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-destinationarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun destinationArn(value: String) {
+          this.destinationArn = value
+        }
+        
+        /**
+         * [destinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-destinationarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun destinationArn(value: IntrinsicFunction) {
+          this.destinationArn = value
+        }
+
+        /**
+         * [events](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-events)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var events: Any? = null
+
+        /**
+         * [events](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-events)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun events(value: List<String>) {
+          this.events = value
+        }
+        
+        /**
+         * [events](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-events)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun events(vararg value: IntrinsicFunction) {
+          this.events = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+    }
 
 }
 

@@ -42,7 +42,7 @@ class AWSElastiCacheParameterGroup(logicalId: String) : Resource<AWSElastiCacheP
         fun cacheParameterGroupFamily(value: IntrinsicFunction) {
           this.cacheParameterGroupFamily = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-description)
          *
@@ -74,7 +74,7 @@ class AWSElastiCacheParameterGroup(logicalId: String) : Resource<AWSElastiCacheP
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [properties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-properties)
          *
@@ -96,6 +96,7 @@ class AWSElastiCacheParameterGroup(logicalId: String) : Resource<AWSElastiCacheP
           this.properties = value
         }
         
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

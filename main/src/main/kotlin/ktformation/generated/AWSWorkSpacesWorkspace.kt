@@ -42,7 +42,7 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun bundleId(value: IntrinsicFunction) {
           this.bundleId = value
         }
-        
+
         /**
          * [directoryId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-directoryid)
          *
@@ -74,7 +74,7 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun directoryId(value: IntrinsicFunction) {
           this.directoryId = value
         }
-        
+
         /**
          * [rootVolumeEncryptionEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-rootvolumeencryptionenabled)
          *
@@ -106,7 +106,7 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun rootVolumeEncryptionEnabled(value: IntrinsicFunction) {
           this.rootVolumeEncryptionEnabled = value
         }
-        
+
         /**
          * [userName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username)
          *
@@ -138,7 +138,7 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun userName(value: IntrinsicFunction) {
           this.userName = value
         }
-        
+
         /**
          * [userVolumeEncryptionEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-uservolumeencryptionenabled)
          *
@@ -170,7 +170,7 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun userVolumeEncryptionEnabled(value: IntrinsicFunction) {
           this.userVolumeEncryptionEnabled = value
         }
-        
+
         /**
          * [volumeEncryptionKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-volumeencryptionkey)
          *
@@ -202,7 +202,8 @@ class AWSWorkSpacesWorkspace(logicalId: String) : Resource<AWSWorkSpacesWorkspac
         fun volumeEncryptionKey(value: IntrinsicFunction) {
           this.volumeEncryptionKey = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

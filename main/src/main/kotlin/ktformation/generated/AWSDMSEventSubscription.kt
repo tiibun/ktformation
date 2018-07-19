@@ -42,7 +42,7 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun enabled(value: IntrinsicFunction) {
           this.enabled = value
         }
-        
+
         /**
          * [eventCategories](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-eventcategories)
          *
@@ -74,7 +74,7 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun eventCategories(vararg value: IntrinsicFunction) {
           this.eventCategories = value
         }
-        
+
         /**
          * [snsTopicArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-snstopicarn)
          *
@@ -106,7 +106,7 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun snsTopicArn(value: IntrinsicFunction) {
           this.snsTopicArn = value
         }
-        
+
         /**
          * [sourceIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-sourceids)
          *
@@ -138,7 +138,7 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun sourceIds(vararg value: IntrinsicFunction) {
           this.sourceIds = value
         }
-        
+
         /**
          * [sourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-sourcetype)
          *
@@ -170,7 +170,7 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun sourceType(value: IntrinsicFunction) {
           this.sourceType = value
         }
-        
+
         /**
          * [subscriptionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-subscriptionname)
          *
@@ -202,7 +202,7 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun subscriptionName(value: IntrinsicFunction) {
           this.subscriptionName = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-tags)
          *
@@ -234,7 +234,8 @@ class AWSDMSEventSubscription(logicalId: String) : Resource<AWSDMSEventSubscript
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

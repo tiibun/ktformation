@@ -42,7 +42,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun cdcStartTime(value: IntrinsicFunction) {
           this.cdcStartTime = value
         }
-        
+
         /**
          * [migrationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-migrationtype)
          *
@@ -74,7 +74,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun migrationType(value: IntrinsicFunction) {
           this.migrationType = value
         }
-        
+
         /**
          * [replicationInstanceArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationinstancearn)
          *
@@ -106,7 +106,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun replicationInstanceArn(value: IntrinsicFunction) {
           this.replicationInstanceArn = value
         }
-        
+
         /**
          * [replicationTaskIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtaskidentifier)
          *
@@ -138,7 +138,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun replicationTaskIdentifier(value: IntrinsicFunction) {
           this.replicationTaskIdentifier = value
         }
-        
+
         /**
          * [replicationTaskSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtasksettings)
          *
@@ -170,7 +170,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun replicationTaskSettings(value: IntrinsicFunction) {
           this.replicationTaskSettings = value
         }
-        
+
         /**
          * [sourceEndpointArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-sourceendpointarn)
          *
@@ -202,7 +202,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun sourceEndpointArn(value: IntrinsicFunction) {
           this.sourceEndpointArn = value
         }
-        
+
         /**
          * [tableMappings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tablemappings)
          *
@@ -234,7 +234,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun tableMappings(value: IntrinsicFunction) {
           this.tableMappings = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tags)
          *
@@ -266,7 +266,7 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [targetEndpointArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-targetendpointarn)
          *
@@ -298,7 +298,8 @@ class AWSDMSReplicationTask(logicalId: String) : Resource<AWSDMSReplicationTask.
         fun targetEndpointArn(value: IntrinsicFunction) {
           this.targetEndpointArn = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

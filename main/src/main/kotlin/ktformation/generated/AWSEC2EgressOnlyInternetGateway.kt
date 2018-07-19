@@ -42,7 +42,8 @@ class AWSEC2EgressOnlyInternetGateway(logicalId: String) : Resource<AWSEC2Egress
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

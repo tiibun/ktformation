@@ -42,7 +42,7 @@ class AWSIAMGroup(logicalId: String) : Resource<AWSIAMGroup.Properties>(logicalI
         fun groupName(value: IntrinsicFunction) {
           this.groupName = value
         }
-        
+
         /**
          * [managedPolicyArns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-managepolicyarns)
          *
@@ -74,7 +74,7 @@ class AWSIAMGroup(logicalId: String) : Resource<AWSIAMGroup.Properties>(logicalI
         fun managedPolicyArns(vararg value: IntrinsicFunction) {
           this.managedPolicyArns = value
         }
-        
+
         /**
          * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-path)
          *
@@ -106,7 +106,7 @@ class AWSIAMGroup(logicalId: String) : Resource<AWSIAMGroup.Properties>(logicalI
         fun path(value: IntrinsicFunction) {
           this.path = value
         }
-        
+
         /**
          * [policies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-policies)
          *
@@ -138,7 +138,15 @@ class AWSIAMGroup(logicalId: String) : Resource<AWSIAMGroup.Properties>(logicalI
         fun policies(vararg value: IntrinsicFunction) {
           this.policies = value
         }
-        
+
+        /**
+        * [Policy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+        */
+        fun policy(init: Policy.() -> Unit = {}): Policy {
+            return Policy().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,24 +157,71 @@ class AWSIAMGroup(logicalId: String) : Resource<AWSIAMGroup.Properties>(logicalI
     }
 
 
-    class Policy(
+    @CloudFormationMarker
+    class Policy {
             /**
-             * [PolicyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Json
-             */
-            val policyDocument: Json,
-            /**
-             * [PolicyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val policyName: String
-    )
+         * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        var policyDocument: Any? = null
+
+        /**
+         * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun policyDocument(value: Json) {
+          this.policyDocument = value
+        }
+        
+        /**
+         * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Json
+         */
+        fun policyDocument(value: IntrinsicFunction) {
+          this.policyDocument = value
+        }
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var policyName: Any? = null
+
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: String) {
+          this.policyName = value
+        }
+        
+        /**
+         * [policyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun policyName(value: IntrinsicFunction) {
+          this.policyName = value
+        }
+
+    }
 
 }
 

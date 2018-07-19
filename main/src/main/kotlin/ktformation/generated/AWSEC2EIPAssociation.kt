@@ -42,7 +42,7 @@ class AWSEC2EIPAssociation(logicalId: String) : Resource<AWSEC2EIPAssociation.Pr
         fun allocationId(value: IntrinsicFunction) {
           this.allocationId = value
         }
-        
+
         /**
          * [eIP](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-eip)
          *
@@ -74,7 +74,7 @@ class AWSEC2EIPAssociation(logicalId: String) : Resource<AWSEC2EIPAssociation.Pr
         fun eIP(value: IntrinsicFunction) {
           this.eIP = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-instanceid)
          *
@@ -106,7 +106,7 @@ class AWSEC2EIPAssociation(logicalId: String) : Resource<AWSEC2EIPAssociation.Pr
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-networkinterfaceid)
          *
@@ -138,7 +138,7 @@ class AWSEC2EIPAssociation(logicalId: String) : Resource<AWSEC2EIPAssociation.Pr
         fun networkInterfaceId(value: IntrinsicFunction) {
           this.networkInterfaceId = value
         }
-        
+
         /**
          * [privateIpAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-PrivateIpAddress)
          *
@@ -170,7 +170,8 @@ class AWSEC2EIPAssociation(logicalId: String) : Resource<AWSEC2EIPAssociation.Pr
         fun privateIpAddress(value: IntrinsicFunction) {
           this.privateIpAddress = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

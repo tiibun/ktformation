@@ -42,7 +42,8 @@ class AWSEC2PlacementGroup(logicalId: String) : Resource<AWSEC2PlacementGroup.Pr
         fun strategy(value: IntrinsicFunction) {
           this.strategy = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

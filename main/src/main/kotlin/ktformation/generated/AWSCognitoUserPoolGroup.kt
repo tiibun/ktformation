@@ -42,7 +42,7 @@ class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGr
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname)
          *
@@ -74,7 +74,7 @@ class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGr
         fun groupName(value: IntrinsicFunction) {
           this.groupName = value
         }
-        
+
         /**
          * [precedence](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-precedence)
          *
@@ -106,7 +106,7 @@ class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGr
         fun precedence(value: IntrinsicFunction) {
           this.precedence = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-rolearn)
          *
@@ -138,7 +138,7 @@ class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGr
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
         /**
          * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-userpoolid)
          *
@@ -170,7 +170,8 @@ class AWSCognitoUserPoolGroup(logicalId: String) : Resource<AWSCognitoUserPoolGr
         fun userPoolId(value: IntrinsicFunction) {
           this.userPoolId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

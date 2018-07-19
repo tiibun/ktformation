@@ -42,7 +42,7 @@ class AWSWAFRegionalSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFReg
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [sqlInjectionMatchTuples](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples)
          *
@@ -74,7 +74,23 @@ class AWSWAFRegionalSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFReg
         fun sqlInjectionMatchTuples(vararg value: IntrinsicFunction) {
           this.sqlInjectionMatchTuples = value
         }
-        
+
+        /**
+        * [FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html)
+        */
+        fun fieldToMatch(init: FieldToMatch.() -> Unit = {}): FieldToMatch {
+            return FieldToMatch().also {
+                it.init()
+            }
+        }
+        /**
+        * [SqlInjectionMatchTuple](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html)
+        */
+        fun sqlInjectionMatchTuple(init: SqlInjectionMatchTuple.() -> Unit = {}): SqlInjectionMatchTuple {
+            return SqlInjectionMatchTuple().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,43 +101,137 @@ class AWSWAFRegionalSqlInjectionMatchSet(logicalId: String) : Resource<AWSWAFReg
     }
 
 
-    class FieldToMatch(
+    @CloudFormationMarker
+    class FieldToMatch {
             /**
-             * [Data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val data: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var data: Any? = null
 
-    class SqlInjectionMatchTuple(
+        /**
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun data(value: String) {
+          this.data = value
+        }
+        
+        /**
+         * [data](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun data(value: IntrinsicFunction) {
+          this.data = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SqlInjectionMatchTuple {
             /**
-             * [FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-fieldtomatch)
-             *
-             * _Required_: yes
-             *
-             * _Type_: FieldToMatch
-             */
-            val fieldToMatch: FieldToMatch,
-            /**
-             * [TextTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-texttransformation)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val textTransformation: String
-    )
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        var fieldToMatch: Any? = null
+
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        fun fieldToMatch(value: FieldToMatch) {
+          this.fieldToMatch = value
+        }
+        
+        /**
+         * [fieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-fieldtomatch)
+         *
+         * _Required_: yes
+         *
+         * _Type_: FieldToMatch
+         */
+        fun fieldToMatch(value: IntrinsicFunction) {
+          this.fieldToMatch = value
+        }
+
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var textTransformation: Any? = null
+
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun textTransformation(value: String) {
+          this.textTransformation = value
+        }
+        
+        /**
+         * [textTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple-texttransformation)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun textTransformation(value: IntrinsicFunction) {
+          this.textTransformation = value
+        }
+
+    }
 
 }
 

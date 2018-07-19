@@ -42,7 +42,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun cidrIp(value: IntrinsicFunction) {
           this.cidrIp = value
         }
-        
+
         /**
          * [cidrIpv6](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-cidripv6)
          *
@@ -74,7 +74,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun cidrIpv6(value: IntrinsicFunction) {
           this.cidrIpv6 = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-description)
          *
@@ -106,7 +106,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [destinationPrefixListId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-destinationprefixlistid)
          *
@@ -138,7 +138,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun destinationPrefixListId(value: IntrinsicFunction) {
           this.destinationPrefixListId = value
         }
-        
+
         /**
          * [destinationSecurityGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-destinationsecuritygroupid)
          *
@@ -170,7 +170,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun destinationSecurityGroupId(value: IntrinsicFunction) {
           this.destinationSecurityGroupId = value
         }
-        
+
         /**
          * [fromPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-fromport)
          *
@@ -202,7 +202,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun fromPort(value: IntrinsicFunction) {
           this.fromPort = value
         }
-        
+
         /**
          * [groupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-groupid)
          *
@@ -234,7 +234,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun groupId(value: IntrinsicFunction) {
           this.groupId = value
         }
-        
+
         /**
          * [ipProtocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-ipprotocol)
          *
@@ -266,7 +266,7 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun ipProtocol(value: IntrinsicFunction) {
           this.ipProtocol = value
         }
-        
+
         /**
          * [toPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-toport)
          *
@@ -298,7 +298,8 @@ class AWSEC2SecurityGroupEgress(logicalId: String) : Resource<AWSEC2SecurityGrou
         fun toPort(value: IntrinsicFunction) {
           this.toPort = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

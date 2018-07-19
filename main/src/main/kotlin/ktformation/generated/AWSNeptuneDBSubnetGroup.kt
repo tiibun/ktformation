@@ -42,7 +42,7 @@ class AWSNeptuneDBSubnetGroup(logicalId: String) : Resource<AWSNeptuneDBSubnetGr
         fun dBSubnetGroupDescription(value: IntrinsicFunction) {
           this.dBSubnetGroupDescription = value
         }
-        
+
         /**
          * [dBSubnetGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-dbsubnetgroupname)
          *
@@ -74,7 +74,7 @@ class AWSNeptuneDBSubnetGroup(logicalId: String) : Resource<AWSNeptuneDBSubnetGr
         fun dBSubnetGroupName(value: IntrinsicFunction) {
           this.dBSubnetGroupName = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-subnetids)
          *
@@ -106,7 +106,7 @@ class AWSNeptuneDBSubnetGroup(logicalId: String) : Resource<AWSNeptuneDBSubnetGr
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-tags)
          *
@@ -138,7 +138,8 @@ class AWSNeptuneDBSubnetGroup(logicalId: String) : Resource<AWSNeptuneDBSubnetGr
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

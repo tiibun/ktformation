@@ -42,7 +42,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun cluster(value: IntrinsicFunction) {
           this.cluster = value
         }
-        
+
         /**
          * [deploymentConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentconfiguration)
          *
@@ -74,7 +74,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun deploymentConfiguration(value: IntrinsicFunction) {
           this.deploymentConfiguration = value
         }
-        
+
         /**
          * [desiredCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-desiredcount)
          *
@@ -106,7 +106,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun desiredCount(value: IntrinsicFunction) {
           this.desiredCount = value
         }
-        
+
         /**
          * [healthCheckGracePeriodSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds)
          *
@@ -138,7 +138,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun healthCheckGracePeriodSeconds(value: IntrinsicFunction) {
           this.healthCheckGracePeriodSeconds = value
         }
-        
+
         /**
          * [launchType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-launchtype)
          *
@@ -170,7 +170,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun launchType(value: IntrinsicFunction) {
           this.launchType = value
         }
-        
+
         /**
          * [loadBalancers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
          *
@@ -202,7 +202,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun loadBalancers(vararg value: IntrinsicFunction) {
           this.loadBalancers = value
         }
-        
+
         /**
          * [networkConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-networkconfiguration)
          *
@@ -234,7 +234,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun networkConfiguration(value: IntrinsicFunction) {
           this.networkConfiguration = value
         }
-        
+
         /**
          * [placementConstraints](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
          *
@@ -266,7 +266,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun placementConstraints(vararg value: IntrinsicFunction) {
           this.placementConstraints = value
         }
-        
+
         /**
          * [placementStrategies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
          *
@@ -298,7 +298,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun placementStrategies(vararg value: IntrinsicFunction) {
           this.placementStrategies = value
         }
-        
+
         /**
          * [platformVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-platformversion)
          *
@@ -330,7 +330,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun platformVersion(value: IntrinsicFunction) {
           this.platformVersion = value
         }
-        
+
         /**
          * [role](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-role)
          *
@@ -362,7 +362,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun role(value: IntrinsicFunction) {
           this.role = value
         }
-        
+
         /**
          * [serviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-servicename)
          *
@@ -394,7 +394,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun serviceName(value: IntrinsicFunction) {
           this.serviceName = value
         }
-        
+
         /**
          * [serviceRegistries](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
          *
@@ -426,7 +426,7 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun serviceRegistries(vararg value: IntrinsicFunction) {
           this.serviceRegistries = value
         }
-        
+
         /**
          * [taskDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition)
          *
@@ -458,7 +458,63 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         fun taskDefinition(value: IntrinsicFunction) {
           this.taskDefinition = value
         }
-        
+
+        /**
+        * [AwsVpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html)
+        */
+        fun awsVpcConfiguration(init: AwsVpcConfiguration.() -> Unit = {}): AwsVpcConfiguration {
+            return AwsVpcConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [DeploymentConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html)
+        */
+        fun deploymentConfiguration(init: DeploymentConfiguration.() -> Unit = {}): DeploymentConfiguration {
+            return DeploymentConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [LoadBalancer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html)
+        */
+        fun loadBalancer(init: LoadBalancer.() -> Unit = {}): LoadBalancer {
+            return LoadBalancer().also {
+                it.init()
+            }
+        }
+        /**
+        * [NetworkConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html)
+        */
+        fun networkConfiguration(init: NetworkConfiguration.() -> Unit = {}): NetworkConfiguration {
+            return NetworkConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [PlacementConstraint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html)
+        */
+        fun placementConstraint(init: PlacementConstraint.() -> Unit = {}): PlacementConstraint {
+            return PlacementConstraint().also {
+                it.init()
+            }
+        }
+        /**
+        * [PlacementStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html)
+        */
+        fun placementStrategy(init: PlacementStrategy.() -> Unit = {}): PlacementStrategy {
+            return PlacementStrategy().also {
+                it.init()
+            }
+        }
+        /**
+        * [ServiceRegistry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html)
+        */
+        fun serviceRegistry(init: ServiceRegistry.() -> Unit = {}): ServiceRegistry {
+            return ServiceRegistry().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -469,154 +525,529 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
     }
 
 
-    class AwsVpcConfiguration(
+    @CloudFormationMarker
+    class AwsVpcConfiguration {
             /**
-             * [AssignPublicIp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val assignPublicIp: String? = null,
-            /**
-             * [SecurityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val securityGroups: List<String>? = null,
-            /**
-             * [Subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnets: List<String>
-    )
+         * [assignPublicIp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var assignPublicIp: Any? = null
 
-    class DeploymentConfiguration(
-            /**
-             * [MaximumPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val maximumPercent: Int? = null,
-            /**
-             * [MinimumHealthyPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val minimumHealthyPercent: Int? = null
-    )
+        /**
+         * [assignPublicIp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun assignPublicIp(value: String) {
+          this.assignPublicIp = value
+        }
+        
+        /**
+         * [assignPublicIp](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun assignPublicIp(value: IntrinsicFunction) {
+          this.assignPublicIp = value
+        }
 
-    class LoadBalancer(
-            /**
-             * [ContainerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containername)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val containerName: String? = null,
-            /**
-             * [ContainerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containerport)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val containerPort: Int,
-            /**
-             * [LoadBalancerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-loadbalancername)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val loadBalancerName: String? = null,
-            /**
-             * [TargetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-targetgrouparn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val targetGroupArn: String? = null
-    )
+        /**
+         * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var securityGroups: Any? = null
 
-    class NetworkConfiguration(
-            /**
-             * [AwsvpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
-             *
-             * _Required_: no
-             *
-             * _Type_: AwsVpcConfiguration
-             */
-            val awsvpcConfiguration: AwsVpcConfiguration? = null
-    )
+        /**
+         * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroups(value: List<String>) {
+          this.securityGroups = value
+        }
+        
+        /**
+         * [securityGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroups(vararg value: IntrinsicFunction) {
+          this.securityGroups = value
+        }
 
-    class PlacementConstraint(
-            /**
-             * [Expression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val expression: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnets: Any? = null
 
-    class PlacementStrategy(
-            /**
-             * [Field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val field: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnets(value: List<String>) {
+          this.subnets = value
+        }
+        
+        /**
+         * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnets(vararg value: IntrinsicFunction) {
+          this.subnets = value
+        }
 
-    class ServiceRegistry(
+    }
+
+    @CloudFormationMarker
+    class DeploymentConfiguration {
             /**
-             * [Port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val port: Int? = null,
+         * [maximumPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var maximumPercent: Any? = null
+
+        /**
+         * [maximumPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maximumPercent(value: Int) {
+          this.maximumPercent = value
+        }
+        
+        /**
+         * [maximumPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maximumPercent(value: IntrinsicFunction) {
+          this.maximumPercent = value
+        }
+
+        /**
+         * [minimumHealthyPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var minimumHealthyPercent: Any? = null
+
+        /**
+         * [minimumHealthyPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun minimumHealthyPercent(value: Int) {
+          this.minimumHealthyPercent = value
+        }
+        
+        /**
+         * [minimumHealthyPercent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun minimumHealthyPercent(value: IntrinsicFunction) {
+          this.minimumHealthyPercent = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LoadBalancer {
             /**
-             * [RegistryArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val registryArn: String? = null
-    )
+         * [containerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var containerName: Any? = null
+
+        /**
+         * [containerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun containerName(value: String) {
+          this.containerName = value
+        }
+        
+        /**
+         * [containerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun containerName(value: IntrinsicFunction) {
+          this.containerName = value
+        }
+
+        /**
+         * [containerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containerport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var containerPort: Any? = null
+
+        /**
+         * [containerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containerport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun containerPort(value: Int) {
+          this.containerPort = value
+        }
+        
+        /**
+         * [containerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containerport)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun containerPort(value: IntrinsicFunction) {
+          this.containerPort = value
+        }
+
+        /**
+         * [loadBalancerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-loadbalancername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var loadBalancerName: Any? = null
+
+        /**
+         * [loadBalancerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-loadbalancername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun loadBalancerName(value: String) {
+          this.loadBalancerName = value
+        }
+        
+        /**
+         * [loadBalancerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-loadbalancername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun loadBalancerName(value: IntrinsicFunction) {
+          this.loadBalancerName = value
+        }
+
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-targetgrouparn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var targetGroupArn: Any? = null
+
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-targetgrouparn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun targetGroupArn(value: String) {
+          this.targetGroupArn = value
+        }
+        
+        /**
+         * [targetGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-targetgrouparn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun targetGroupArn(value: IntrinsicFunction) {
+          this.targetGroupArn = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class NetworkConfiguration {
+            /**
+         * [awsvpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: AwsVpcConfiguration
+         */
+        var awsvpcConfiguration: Any? = null
+
+        /**
+         * [awsvpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: AwsVpcConfiguration
+         */
+        fun awsvpcConfiguration(value: AwsVpcConfiguration) {
+          this.awsvpcConfiguration = value
+        }
+        
+        /**
+         * [awsvpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: AwsVpcConfiguration
+         */
+        fun awsvpcConfiguration(value: IntrinsicFunction) {
+          this.awsvpcConfiguration = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PlacementConstraint {
+            /**
+         * [expression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var expression: Any? = null
+
+        /**
+         * [expression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun expression(value: String) {
+          this.expression = value
+        }
+        
+        /**
+         * [expression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun expression(value: IntrinsicFunction) {
+          this.expression = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class PlacementStrategy {
+            /**
+         * [field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var field: Any? = null
+
+        /**
+         * [field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun field(value: String) {
+          this.field = value
+        }
+        
+        /**
+         * [field](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun field(value: IntrinsicFunction) {
+          this.field = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ServiceRegistry {
+            /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var port: Any? = null
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: Int) {
+          this.port = value
+        }
+        
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: IntrinsicFunction) {
+          this.port = value
+        }
+
+        /**
+         * [registryArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var registryArn: Any? = null
+
+        /**
+         * [registryArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun registryArn(value: String) {
+          this.registryArn = value
+        }
+        
+        /**
+         * [registryArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun registryArn(value: IntrinsicFunction) {
+          this.registryArn = value
+        }
+
+    }
 
 }
 

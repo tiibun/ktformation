@@ -42,7 +42,7 @@ class AWSGuardDutyIPSet(logicalId: String) : Resource<AWSGuardDutyIPSet.Properti
         fun activate(value: IntrinsicFunction) {
           this.activate = value
         }
-        
+
         /**
          * [detectorId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-detectorid)
          *
@@ -74,7 +74,7 @@ class AWSGuardDutyIPSet(logicalId: String) : Resource<AWSGuardDutyIPSet.Properti
         fun detectorId(value: IntrinsicFunction) {
           this.detectorId = value
         }
-        
+
         /**
          * [format](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-format)
          *
@@ -106,7 +106,7 @@ class AWSGuardDutyIPSet(logicalId: String) : Resource<AWSGuardDutyIPSet.Properti
         fun format(value: IntrinsicFunction) {
           this.format = value
         }
-        
+
         /**
          * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-location)
          *
@@ -138,7 +138,7 @@ class AWSGuardDutyIPSet(logicalId: String) : Resource<AWSGuardDutyIPSet.Properti
         fun location(value: IntrinsicFunction) {
           this.location = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-name)
          *
@@ -170,7 +170,8 @@ class AWSGuardDutyIPSet(logicalId: String) : Resource<AWSGuardDutyIPSet.Properti
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

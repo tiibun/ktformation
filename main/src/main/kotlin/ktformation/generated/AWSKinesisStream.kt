@@ -42,7 +42,7 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [retentionPeriodHours](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-retentionperiodhours)
          *
@@ -74,7 +74,7 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
         fun retentionPeriodHours(value: IntrinsicFunction) {
           this.retentionPeriodHours = value
         }
-        
+
         /**
          * [shardCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-shardcount)
          *
@@ -106,7 +106,7 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
         fun shardCount(value: IntrinsicFunction) {
           this.shardCount = value
         }
-        
+
         /**
          * [streamEncryption](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-streamencryption)
          *
@@ -138,7 +138,7 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
         fun streamEncryption(value: IntrinsicFunction) {
           this.streamEncryption = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-tags)
          *
@@ -170,7 +170,15 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [StreamEncryption](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html)
+        */
+        fun streamEncryption(init: StreamEncryption.() -> Unit = {}): StreamEncryption {
+            return StreamEncryption().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,24 +189,71 @@ class AWSKinesisStream(logicalId: String) : Resource<AWSKinesisStream.Properties
     }
 
 
-    class StreamEncryption(
+    @CloudFormationMarker
+    class StreamEncryption {
             /**
-             * [EncryptionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-encryptiontype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val encryptionType: String,
-            /**
-             * [KeyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-keyid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val keyId: String
-    )
+         * [encryptionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-encryptiontype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var encryptionType: Any? = null
+
+        /**
+         * [encryptionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-encryptiontype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun encryptionType(value: String) {
+          this.encryptionType = value
+        }
+        
+        /**
+         * [encryptionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-encryptiontype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun encryptionType(value: IntrinsicFunction) {
+          this.encryptionType = value
+        }
+
+        /**
+         * [keyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-keyid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var keyId: Any? = null
+
+        /**
+         * [keyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-keyid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun keyId(value: String) {
+          this.keyId = value
+        }
+        
+        /**
+         * [keyId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-keyid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun keyId(value: IntrinsicFunction) {
+          this.keyId = value
+        }
+
+    }
 
 }
 

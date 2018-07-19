@@ -42,7 +42,7 @@ class AWSEC2DHCPOptions(logicalId: String) : Resource<AWSEC2DHCPOptions.Properti
         fun domainName(value: IntrinsicFunction) {
           this.domainName = value
         }
-        
+
         /**
          * [domainNameServers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-domainnameservers)
          *
@@ -74,7 +74,7 @@ class AWSEC2DHCPOptions(logicalId: String) : Resource<AWSEC2DHCPOptions.Properti
         fun domainNameServers(vararg value: IntrinsicFunction) {
           this.domainNameServers = value
         }
-        
+
         /**
          * [netbiosNameServers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-netbiosnameservers)
          *
@@ -106,7 +106,7 @@ class AWSEC2DHCPOptions(logicalId: String) : Resource<AWSEC2DHCPOptions.Properti
         fun netbiosNameServers(vararg value: IntrinsicFunction) {
           this.netbiosNameServers = value
         }
-        
+
         /**
          * [netbiosNodeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-netbiosnodetype)
          *
@@ -138,7 +138,7 @@ class AWSEC2DHCPOptions(logicalId: String) : Resource<AWSEC2DHCPOptions.Properti
         fun netbiosNodeType(value: IntrinsicFunction) {
           this.netbiosNodeType = value
         }
-        
+
         /**
          * [ntpServers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-ntpservers)
          *
@@ -170,7 +170,7 @@ class AWSEC2DHCPOptions(logicalId: String) : Resource<AWSEC2DHCPOptions.Properti
         fun ntpServers(vararg value: IntrinsicFunction) {
           this.ntpServers = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-tags)
          *
@@ -202,7 +202,8 @@ class AWSEC2DHCPOptions(logicalId: String) : Resource<AWSEC2DHCPOptions.Properti
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

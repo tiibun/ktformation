@@ -42,7 +42,7 @@ class AWSAppSyncApiKey(logicalId: String) : Resource<AWSAppSyncApiKey.Properties
         fun apiId(value: IntrinsicFunction) {
           this.apiId = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description)
          *
@@ -74,7 +74,7 @@ class AWSAppSyncApiKey(logicalId: String) : Resource<AWSAppSyncApiKey.Properties
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [expires](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires)
          *
@@ -106,7 +106,8 @@ class AWSAppSyncApiKey(logicalId: String) : Resource<AWSAppSyncApiKey.Properties
         fun expires(value: IntrinsicFunction) {
           this.expires = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSIAMAccessKey(logicalId: String) : Resource<AWSIAMAccessKey.Properties>(
         fun serial(value: IntrinsicFunction) {
           this.serial = value
         }
-        
+
         /**
          * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-status)
          *
@@ -74,7 +74,7 @@ class AWSIAMAccessKey(logicalId: String) : Resource<AWSIAMAccessKey.Properties>(
         fun status(value: IntrinsicFunction) {
           this.status = value
         }
-        
+
         /**
          * [userName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-username)
          *
@@ -106,7 +106,8 @@ class AWSIAMAccessKey(logicalId: String) : Resource<AWSIAMAccessKey.Properties>(
         fun userName(value: IntrinsicFunction) {
           this.userName = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSSNSTopicPolicy(logicalId: String) : Resource<AWSSNSTopicPolicy.Properti
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
         /**
          * [topics](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-topics)
          *
@@ -74,7 +74,8 @@ class AWSSNSTopicPolicy(logicalId: String) : Resource<AWSSNSTopicPolicy.Properti
         fun topics(vararg value: IntrinsicFunction) {
           this.topics = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

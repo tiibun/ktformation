@@ -42,7 +42,7 @@ class AWSKinesisAnalyticsApplicationOutput(logicalId: String) : Resource<AWSKine
         fun applicationName(value: IntrinsicFunction) {
           this.applicationName = value
         }
-        
+
         /**
          * [output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html#cfn-kinesisanalytics-applicationoutput-output)
          *
@@ -74,7 +74,47 @@ class AWSKinesisAnalyticsApplicationOutput(logicalId: String) : Resource<AWSKine
         fun output(value: IntrinsicFunction) {
           this.output = value
         }
-        
+
+        /**
+        * [DestinationSchema](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html)
+        */
+        fun destinationSchema(init: DestinationSchema.() -> Unit = {}): DestinationSchema {
+            return DestinationSchema().also {
+                it.init()
+            }
+        }
+        /**
+        * [KinesisFirehoseOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html)
+        */
+        fun kinesisFirehoseOutput(init: KinesisFirehoseOutput.() -> Unit = {}): KinesisFirehoseOutput {
+            return KinesisFirehoseOutput().also {
+                it.init()
+            }
+        }
+        /**
+        * [KinesisStreamsOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html)
+        */
+        fun kinesisStreamsOutput(init: KinesisStreamsOutput.() -> Unit = {}): KinesisStreamsOutput {
+            return KinesisStreamsOutput().also {
+                it.init()
+            }
+        }
+        /**
+        * [LambdaOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html)
+        */
+        fun lambdaOutput(init: LambdaOutput.() -> Unit = {}): LambdaOutput {
+            return LambdaOutput().also {
+                it.init()
+            }
+        }
+        /**
+        * [Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html)
+        */
+        fun output(init: Output.() -> Unit = {}): Output {
+            return Output().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -85,116 +125,397 @@ class AWSKinesisAnalyticsApplicationOutput(logicalId: String) : Resource<AWSKine
     }
 
 
-    class DestinationSchema(
+    @CloudFormationMarker
+    class DestinationSchema {
             /**
-             * [RecordFormatType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val recordFormatType: String? = null
-    )
+         * [recordFormatType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var recordFormatType: Any? = null
 
-    class KinesisFirehoseOutput(
-            /**
-             * [ResourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val resourceARN: String,
-            /**
-             * [RoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val roleARN: String
-    )
+        /**
+         * [recordFormatType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun recordFormatType(value: String) {
+          this.recordFormatType = value
+        }
+        
+        /**
+         * [recordFormatType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun recordFormatType(value: IntrinsicFunction) {
+          this.recordFormatType = value
+        }
 
-    class KinesisStreamsOutput(
-            /**
-             * [ResourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val resourceARN: String,
-            /**
-             * [RoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val roleARN: String
-    )
+    }
 
-    class LambdaOutput(
+    @CloudFormationMarker
+    class KinesisFirehoseOutput {
             /**
-             * [ResourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val resourceARN: String,
-            /**
-             * [RoleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val roleARN: String
-    )
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var resourceARN: Any? = null
 
-    class Output(
+        /**
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun resourceARN(value: String) {
+          this.resourceARN = value
+        }
+        
+        /**
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun resourceARN(value: IntrinsicFunction) {
+          this.resourceARN = value
+        }
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var roleARN: Any? = null
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: String) {
+          this.roleARN = value
+        }
+        
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: IntrinsicFunction) {
+          this.roleARN = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class KinesisStreamsOutput {
             /**
-             * [DestinationSchema](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-destinationschema)
-             *
-             * _Required_: yes
-             *
-             * _Type_: DestinationSchema
-             */
-            val destinationSchema: DestinationSchema,
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var resourceARN: Any? = null
+
+        /**
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun resourceARN(value: String) {
+          this.resourceARN = value
+        }
+        
+        /**
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun resourceARN(value: IntrinsicFunction) {
+          this.resourceARN = value
+        }
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var roleARN: Any? = null
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: String) {
+          this.roleARN = value
+        }
+        
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: IntrinsicFunction) {
+          this.roleARN = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LambdaOutput {
             /**
-             * [KinesisFirehoseOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput)
-             *
-             * _Required_: no
-             *
-             * _Type_: KinesisFirehoseOutput
-             */
-            val kinesisFirehoseOutput: KinesisFirehoseOutput? = null,
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var resourceARN: Any? = null
+
+        /**
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun resourceARN(value: String) {
+          this.resourceARN = value
+        }
+        
+        /**
+         * [resourceARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun resourceARN(value: IntrinsicFunction) {
+          this.resourceARN = value
+        }
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var roleARN: Any? = null
+
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: String) {
+          this.roleARN = value
+        }
+        
+        /**
+         * [roleARN](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun roleARN(value: IntrinsicFunction) {
+          this.roleARN = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Output {
             /**
-             * [KinesisStreamsOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput)
-             *
-             * _Required_: no
-             *
-             * _Type_: KinesisStreamsOutput
-             */
-            val kinesisStreamsOutput: KinesisStreamsOutput? = null,
-            /**
-             * [LambdaOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput)
-             *
-             * _Required_: no
-             *
-             * _Type_: LambdaOutput
-             */
-            val lambdaOutput: LambdaOutput? = null,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null
-    )
+         * [destinationSchema](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-destinationschema)
+         *
+         * _Required_: yes
+         *
+         * _Type_: DestinationSchema
+         */
+        var destinationSchema: Any? = null
+
+        /**
+         * [destinationSchema](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-destinationschema)
+         *
+         * _Required_: yes
+         *
+         * _Type_: DestinationSchema
+         */
+        fun destinationSchema(value: DestinationSchema) {
+          this.destinationSchema = value
+        }
+        
+        /**
+         * [destinationSchema](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-destinationschema)
+         *
+         * _Required_: yes
+         *
+         * _Type_: DestinationSchema
+         */
+        fun destinationSchema(value: IntrinsicFunction) {
+          this.destinationSchema = value
+        }
+
+        /**
+         * [kinesisFirehoseOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: KinesisFirehoseOutput
+         */
+        var kinesisFirehoseOutput: Any? = null
+
+        /**
+         * [kinesisFirehoseOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: KinesisFirehoseOutput
+         */
+        fun kinesisFirehoseOutput(value: KinesisFirehoseOutput) {
+          this.kinesisFirehoseOutput = value
+        }
+        
+        /**
+         * [kinesisFirehoseOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: KinesisFirehoseOutput
+         */
+        fun kinesisFirehoseOutput(value: IntrinsicFunction) {
+          this.kinesisFirehoseOutput = value
+        }
+
+        /**
+         * [kinesisStreamsOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: KinesisStreamsOutput
+         */
+        var kinesisStreamsOutput: Any? = null
+
+        /**
+         * [kinesisStreamsOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: KinesisStreamsOutput
+         */
+        fun kinesisStreamsOutput(value: KinesisStreamsOutput) {
+          this.kinesisStreamsOutput = value
+        }
+        
+        /**
+         * [kinesisStreamsOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: KinesisStreamsOutput
+         */
+        fun kinesisStreamsOutput(value: IntrinsicFunction) {
+          this.kinesisStreamsOutput = value
+        }
+
+        /**
+         * [lambdaOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: LambdaOutput
+         */
+        var lambdaOutput: Any? = null
+
+        /**
+         * [lambdaOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: LambdaOutput
+         */
+        fun lambdaOutput(value: LambdaOutput) {
+          this.lambdaOutput = value
+        }
+        
+        /**
+         * [lambdaOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput)
+         *
+         * _Required_: no
+         *
+         * _Type_: LambdaOutput
+         */
+        fun lambdaOutput(value: IntrinsicFunction) {
+          this.lambdaOutput = value
+        }
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+    }
 
 }
 

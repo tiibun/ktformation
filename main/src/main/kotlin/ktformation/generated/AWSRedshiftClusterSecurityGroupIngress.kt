@@ -42,7 +42,7 @@ class AWSRedshiftClusterSecurityGroupIngress(logicalId: String) : Resource<AWSRe
         fun cIDRIP(value: IntrinsicFunction) {
           this.cIDRIP = value
         }
-        
+
         /**
          * [clusterSecurityGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname)
          *
@@ -74,7 +74,7 @@ class AWSRedshiftClusterSecurityGroupIngress(logicalId: String) : Resource<AWSRe
         fun clusterSecurityGroupName(value: IntrinsicFunction) {
           this.clusterSecurityGroupName = value
         }
-        
+
         /**
          * [eC2SecurityGroupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname)
          *
@@ -106,7 +106,7 @@ class AWSRedshiftClusterSecurityGroupIngress(logicalId: String) : Resource<AWSRe
         fun eC2SecurityGroupName(value: IntrinsicFunction) {
           this.eC2SecurityGroupName = value
         }
-        
+
         /**
          * [eC2SecurityGroupOwnerId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid)
          *
@@ -138,7 +138,8 @@ class AWSRedshiftClusterSecurityGroupIngress(logicalId: String) : Resource<AWSRe
         fun eC2SecurityGroupOwnerId(value: IntrinsicFunction) {
           this.eC2SecurityGroupOwnerId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSCognitoUserPoolUserToGroupAttachment(logicalId: String) : Resource<AWSC
         fun groupName(value: IntrinsicFunction) {
           this.groupName = value
         }
-        
+
         /**
          * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid)
          *
@@ -74,7 +74,7 @@ class AWSCognitoUserPoolUserToGroupAttachment(logicalId: String) : Resource<AWSC
         fun userPoolId(value: IntrinsicFunction) {
           this.userPoolId = value
         }
-        
+
         /**
          * [username](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
          *
@@ -106,7 +106,8 @@ class AWSCognitoUserPoolUserToGroupAttachment(logicalId: String) : Resource<AWSC
         fun username(value: IntrinsicFunction) {
           this.username = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

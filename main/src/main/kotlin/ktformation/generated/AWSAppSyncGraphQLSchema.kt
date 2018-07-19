@@ -42,7 +42,7 @@ class AWSAppSyncGraphQLSchema(logicalId: String) : Resource<AWSAppSyncGraphQLSch
         fun apiId(value: IntrinsicFunction) {
           this.apiId = value
         }
-        
+
         /**
          * [definition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-definition)
          *
@@ -74,7 +74,7 @@ class AWSAppSyncGraphQLSchema(logicalId: String) : Resource<AWSAppSyncGraphQLSch
         fun definition(value: IntrinsicFunction) {
           this.definition = value
         }
-        
+
         /**
          * [definitionS3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-definitions3location)
          *
@@ -106,7 +106,8 @@ class AWSAppSyncGraphQLSchema(logicalId: String) : Resource<AWSAppSyncGraphQLSch
         fun definitionS3Location(value: IntrinsicFunction) {
           this.definitionS3Location = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

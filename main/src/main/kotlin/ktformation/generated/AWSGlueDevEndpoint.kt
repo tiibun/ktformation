@@ -42,7 +42,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun endpointName(value: IntrinsicFunction) {
           this.endpointName = value
         }
-        
+
         /**
          * [extraJarsS3Path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-extrajarss3path)
          *
@@ -74,7 +74,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun extraJarsS3Path(value: IntrinsicFunction) {
           this.extraJarsS3Path = value
         }
-        
+
         /**
          * [extraPythonLibsS3Path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-extrapythonlibss3path)
          *
@@ -106,7 +106,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun extraPythonLibsS3Path(value: IntrinsicFunction) {
           this.extraPythonLibsS3Path = value
         }
-        
+
         /**
          * [numberOfNodes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-numberofnodes)
          *
@@ -138,7 +138,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun numberOfNodes(value: IntrinsicFunction) {
           this.numberOfNodes = value
         }
-        
+
         /**
          * [publicKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-publickey)
          *
@@ -170,7 +170,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun publicKey(value: IntrinsicFunction) {
           this.publicKey = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-rolearn)
          *
@@ -202,7 +202,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-securitygroupids)
          *
@@ -234,7 +234,7 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun securityGroupIds(vararg value: IntrinsicFunction) {
           this.securityGroupIds = value
         }
-        
+
         /**
          * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-subnetid)
          *
@@ -266,7 +266,8 @@ class AWSGlueDevEndpoint(logicalId: String) : Resource<AWSGlueDevEndpoint.Proper
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

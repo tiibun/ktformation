@@ -42,7 +42,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun healthCheckIntervalSeconds(value: IntrinsicFunction) {
           this.healthCheckIntervalSeconds = value
         }
-        
+
         /**
          * [healthCheckPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath)
          *
@@ -74,7 +74,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun healthCheckPath(value: IntrinsicFunction) {
           this.healthCheckPath = value
         }
-        
+
         /**
          * [healthCheckPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckport)
          *
@@ -106,7 +106,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun healthCheckPort(value: IntrinsicFunction) {
           this.healthCheckPort = value
         }
-        
+
         /**
          * [healthCheckProtocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol)
          *
@@ -138,7 +138,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun healthCheckProtocol(value: IntrinsicFunction) {
           this.healthCheckProtocol = value
         }
-        
+
         /**
          * [healthCheckTimeoutSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds)
          *
@@ -170,7 +170,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun healthCheckTimeoutSeconds(value: IntrinsicFunction) {
           this.healthCheckTimeoutSeconds = value
         }
-        
+
         /**
          * [healthyThresholdCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount)
          *
@@ -202,7 +202,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun healthyThresholdCount(value: IntrinsicFunction) {
           this.healthyThresholdCount = value
         }
-        
+
         /**
          * [matcher](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-matcher)
          *
@@ -234,7 +234,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun matcher(value: IntrinsicFunction) {
           this.matcher = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-name)
          *
@@ -266,7 +266,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-port)
          *
@@ -298,7 +298,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun port(value: IntrinsicFunction) {
           this.port = value
         }
-        
+
         /**
          * [protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-protocol)
          *
@@ -330,7 +330,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun protocol(value: IntrinsicFunction) {
           this.protocol = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-tags)
          *
@@ -362,7 +362,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [targetGroupAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
          *
@@ -394,7 +394,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun targetGroupAttributes(vararg value: IntrinsicFunction) {
           this.targetGroupAttributes = value
         }
-        
+
         /**
          * [targetType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targettype)
          *
@@ -426,7 +426,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun targetType(value: IntrinsicFunction) {
           this.targetType = value
         }
-        
+
         /**
          * [targets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targets)
          *
@@ -458,7 +458,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun targets(vararg value: IntrinsicFunction) {
           this.targets = value
         }
-        
+
         /**
          * [unhealthyThresholdCount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount)
          *
@@ -490,7 +490,7 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun unhealthyThresholdCount(value: IntrinsicFunction) {
           this.unhealthyThresholdCount = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-vpcid)
          *
@@ -522,7 +522,31 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+        /**
+        * [Matcher](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-matcher.html)
+        */
+        fun matcher(init: Matcher.() -> Unit = {}): Matcher {
+            return Matcher().also {
+                it.init()
+            }
+        }
+        /**
+        * [TargetDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html)
+        */
+        fun targetDescription(init: TargetDescription.() -> Unit = {}): TargetDescription {
+            return TargetDescription().also {
+                it.init()
+            }
+        }
+        /**
+        * [TargetGroupAttribute](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+        */
+        fun targetGroupAttribute(init: TargetGroupAttribute.() -> Unit = {}): TargetGroupAttribute {
+            return TargetGroupAttribute().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -533,62 +557,203 @@ class AWSElasticLoadBalancingV2TargetGroup(logicalId: String) : Resource<AWSElas
     }
 
 
-    class Matcher(
+    @CloudFormationMarker
+    class Matcher {
             /**
-             * [HttpCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-matcher.html#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val httpCode: String
-    )
+         * [httpCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-matcher.html#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var httpCode: Any? = null
 
-    class TargetDescription(
-            /**
-             * [AvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val availabilityZone: String? = null,
-            /**
-             * [Id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val id: String,
-            /**
-             * [Port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val port: Int? = null
-    )
+        /**
+         * [httpCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-matcher.html#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun httpCode(value: String) {
+          this.httpCode = value
+        }
+        
+        /**
+         * [httpCode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-matcher.html#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun httpCode(value: IntrinsicFunction) {
+          this.httpCode = value
+        }
 
-    class TargetGroupAttribute(
+    }
+
+    @CloudFormationMarker
+    class TargetDescription {
             /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val key: String? = null,
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var availabilityZone: Any? = null
+
+        /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun availabilityZone(value: String) {
+          this.availabilityZone = value
+        }
+        
+        /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun availabilityZone(value: IntrinsicFunction) {
+          this.availabilityZone = value
+        }
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var id: Any? = null
+
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: String) {
+          this.id = value
+        }
+        
+        /**
+         * [id](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun id(value: IntrinsicFunction) {
+          this.id = value
+        }
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var port: Any? = null
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: Int) {
+          this.port = value
+        }
+        
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: IntrinsicFunction) {
+          this.port = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TargetGroupAttribute {
             /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-value)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val value: String? = null
-    )
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

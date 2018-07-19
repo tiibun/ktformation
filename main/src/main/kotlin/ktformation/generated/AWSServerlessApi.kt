@@ -42,7 +42,7 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun cacheClusterEnabled(value: IntrinsicFunction) {
           this.cacheClusterEnabled = value
         }
-        
+
         /**
          * [cacheClusterSize](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
          *
@@ -74,7 +74,7 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun cacheClusterSize(value: IntrinsicFunction) {
           this.cacheClusterSize = value
         }
-        
+
         /**
          * [definitionBody](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
          *
@@ -106,7 +106,7 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun definitionBody(value: IntrinsicFunction) {
           this.definitionBody = value
         }
-        
+
         /**
          * [definitionUri](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
          *
@@ -138,7 +138,7 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun definitionUri(value: IntrinsicFunction) {
           this.definitionUri = value
         }
-        
+
         /**
          * [name](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
          *
@@ -170,7 +170,7 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [stageName](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
          *
@@ -202,7 +202,7 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
         fun stageName(value: IntrinsicFunction) {
           this.stageName = value
         }
-        
+
         /**
          * [variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
          *
@@ -224,6 +224,14 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
           this.variables = value
         }
         
+        /**
+        * [S3Location](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3-location-object)
+        */
+        fun s3Location(init: S3Location.() -> Unit = {}): S3Location {
+            return S3Location().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -234,32 +242,102 @@ class AWSServerlessApi(logicalId: String) : Resource<AWSServerlessApi.Properties
     }
 
 
-    class S3Location(
+    @CloudFormationMarker
+    class S3Location {
             /**
-             * [Bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val bucket: String,
-            /**
-             * [Key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [Version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Int
-             */
-            val version: Int
-    )
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var bucket: Any? = null
+
+        /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: String) {
+          this.bucket = value
+        }
+        
+        /**
+         * [bucket](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun bucket(value: IntrinsicFunction) {
+          this.bucket = value
+        }
+
+        /**
+         * [key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        var version: Any? = null
+
+        /**
+         * [version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun version(value: Int) {
+          this.version = value
+        }
+        
+        /**
+         * [version](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Int
+         */
+        fun version(value: IntrinsicFunction) {
+          this.version = value
+        }
+
+    }
 
 }
 

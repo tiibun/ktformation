@@ -42,7 +42,7 @@ class AWSServiceDiscoveryPrivateDnsNamespace(logicalId: String) : Resource<AWSSe
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-name)
          *
@@ -74,7 +74,7 @@ class AWSServiceDiscoveryPrivateDnsNamespace(logicalId: String) : Resource<AWSSe
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [vpc](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc)
          *
@@ -106,7 +106,8 @@ class AWSServiceDiscoveryPrivateDnsNamespace(logicalId: String) : Resource<AWSSe
         fun vpc(value: IntrinsicFunction) {
           this.vpc = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

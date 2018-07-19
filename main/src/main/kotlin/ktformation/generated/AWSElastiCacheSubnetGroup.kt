@@ -42,7 +42,7 @@ class AWSElastiCacheSubnetGroup(logicalId: String) : Resource<AWSElastiCacheSubn
         fun cacheSubnetGroupName(value: IntrinsicFunction) {
           this.cacheSubnetGroupName = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-description)
          *
@@ -74,7 +74,7 @@ class AWSElastiCacheSubnetGroup(logicalId: String) : Resource<AWSElastiCacheSubn
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-subnetids)
          *
@@ -106,7 +106,8 @@ class AWSElastiCacheSubnetGroup(logicalId: String) : Resource<AWSElastiCacheSubn
         fun subnetIds(vararg value: IntrinsicFunction) {
           this.subnetIds = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

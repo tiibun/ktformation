@@ -42,7 +42,7 @@ class AWSGuardDutyMaster(logicalId: String) : Resource<AWSGuardDutyMaster.Proper
         fun detectorId(value: IntrinsicFunction) {
           this.detectorId = value
         }
-        
+
         /**
          * [invitationId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
          *
@@ -74,7 +74,7 @@ class AWSGuardDutyMaster(logicalId: String) : Resource<AWSGuardDutyMaster.Proper
         fun invitationId(value: IntrinsicFunction) {
           this.invitationId = value
         }
-        
+
         /**
          * [masterId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-masterid)
          *
@@ -106,7 +106,8 @@ class AWSGuardDutyMaster(logicalId: String) : Resource<AWSGuardDutyMaster.Proper
         fun masterId(value: IntrinsicFunction) {
           this.masterId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

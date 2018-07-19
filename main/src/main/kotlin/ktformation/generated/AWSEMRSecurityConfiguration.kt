@@ -42,7 +42,7 @@ class AWSEMRSecurityConfiguration(logicalId: String) : Resource<AWSEMRSecurityCo
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [securityConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration)
          *
@@ -74,7 +74,8 @@ class AWSEMRSecurityConfiguration(logicalId: String) : Resource<AWSEMRSecurityCo
         fun securityConfiguration(value: IntrinsicFunction) {
           this.securityConfiguration = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

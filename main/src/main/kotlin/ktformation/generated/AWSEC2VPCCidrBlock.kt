@@ -42,7 +42,7 @@ class AWSEC2VPCCidrBlock(logicalId: String) : Resource<AWSEC2VPCCidrBlock.Proper
         fun amazonProvidedIpv6CidrBlock(value: IntrinsicFunction) {
           this.amazonProvidedIpv6CidrBlock = value
         }
-        
+
         /**
          * [cidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-cidrblock)
          *
@@ -74,7 +74,7 @@ class AWSEC2VPCCidrBlock(logicalId: String) : Resource<AWSEC2VPCCidrBlock.Proper
         fun cidrBlock(value: IntrinsicFunction) {
           this.cidrBlock = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-vpcid)
          *
@@ -106,7 +106,8 @@ class AWSEC2VPCCidrBlock(logicalId: String) : Resource<AWSEC2VPCCidrBlock.Proper
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

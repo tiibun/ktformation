@@ -42,7 +42,7 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun clientName(value: IntrinsicFunction) {
           this.clientName = value
         }
-        
+
         /**
          * [explicitAuthFlows](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows)
          *
@@ -74,7 +74,7 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun explicitAuthFlows(vararg value: IntrinsicFunction) {
           this.explicitAuthFlows = value
         }
-        
+
         /**
          * [generateSecret](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret)
          *
@@ -106,7 +106,7 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun generateSecret(value: IntrinsicFunction) {
           this.generateSecret = value
         }
-        
+
         /**
          * [readAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
          *
@@ -138,7 +138,7 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun readAttributes(vararg value: IntrinsicFunction) {
           this.readAttributes = value
         }
-        
+
         /**
          * [refreshTokenValidity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity)
          *
@@ -170,7 +170,7 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun refreshTokenValidity(value: IntrinsicFunction) {
           this.refreshTokenValidity = value
         }
-        
+
         /**
          * [userPoolId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-userpoolid)
          *
@@ -202,7 +202,7 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun userPoolId(value: IntrinsicFunction) {
           this.userPoolId = value
         }
-        
+
         /**
          * [writeAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-writeattributes)
          *
@@ -234,7 +234,8 @@ class AWSCognitoUserPoolClient(logicalId: String) : Resource<AWSCognitoUserPoolC
         fun writeAttributes(vararg value: IntrinsicFunction) {
           this.writeAttributes = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

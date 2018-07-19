@@ -42,7 +42,7 @@ class AWSEKSCluster(logicalId: String) : Resource<AWSEKSCluster.Properties>(logi
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [resourcesVpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-resourcesvpcconfig)
          *
@@ -74,7 +74,7 @@ class AWSEKSCluster(logicalId: String) : Resource<AWSEKSCluster.Properties>(logi
         fun resourcesVpcConfig(value: IntrinsicFunction) {
           this.resourcesVpcConfig = value
         }
-        
+
         /**
          * [roleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn)
          *
@@ -106,7 +106,7 @@ class AWSEKSCluster(logicalId: String) : Resource<AWSEKSCluster.Properties>(logi
         fun roleArn(value: IntrinsicFunction) {
           this.roleArn = value
         }
-        
+
         /**
          * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version)
          *
@@ -138,7 +138,15 @@ class AWSEKSCluster(logicalId: String) : Resource<AWSEKSCluster.Properties>(logi
         fun version(value: IntrinsicFunction) {
           this.version = value
         }
-        
+
+        /**
+        * [ResourcesVpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html)
+        */
+        fun resourcesVpcConfig(init: ResourcesVpcConfig.() -> Unit = {}): ResourcesVpcConfig {
+            return ResourcesVpcConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -149,24 +157,71 @@ class AWSEKSCluster(logicalId: String) : Resource<AWSEKSCluster.Properties>(logi
     }
 
 
-    class ResourcesVpcConfig(
+    @CloudFormationMarker
+    class ResourcesVpcConfig {
             /**
-             * [SecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-securitygroupids)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val securityGroupIds: List<String>? = null,
-            /**
-             * [SubnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-subnetids)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnetIds: List<String>
-    )
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-securitygroupids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var securityGroupIds: Any? = null
+
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-securitygroupids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(value: List<String>) {
+          this.securityGroupIds = value
+        }
+        
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-securitygroupids)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(vararg value: IntrinsicFunction) {
+          this.securityGroupIds = value
+        }
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnetIds: Any? = null
+
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(value: List<String>) {
+          this.subnetIds = value
+        }
+        
+        /**
+         * [subnetIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-subnetids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnetIds(vararg value: IntrinsicFunction) {
+          this.subnetIds = value
+        }
+
+    }
 
 }
 

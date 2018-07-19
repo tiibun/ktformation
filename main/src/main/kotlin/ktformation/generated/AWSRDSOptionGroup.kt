@@ -42,7 +42,7 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
         fun engineName(value: IntrinsicFunction) {
           this.engineName = value
         }
-        
+
         /**
          * [majorEngineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-majorengineversion)
          *
@@ -74,7 +74,7 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
         fun majorEngineVersion(value: IntrinsicFunction) {
           this.majorEngineVersion = value
         }
-        
+
         /**
          * [optionConfigurations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
          *
@@ -106,7 +106,7 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
         fun optionConfigurations(vararg value: IntrinsicFunction) {
           this.optionConfigurations = value
         }
-        
+
         /**
          * [optionGroupDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optiongroupdescription)
          *
@@ -138,7 +138,7 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
         fun optionGroupDescription(value: IntrinsicFunction) {
           this.optionGroupDescription = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
          *
@@ -170,7 +170,23 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+        /**
+        * [OptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html)
+        */
+        fun optionConfiguration(init: OptionConfiguration.() -> Unit = {}): OptionConfiguration {
+            return OptionConfiguration().also {
+                it.init()
+            }
+        }
+        /**
+        * [OptionSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html)
+        */
+        fun optionSetting(init: OptionSetting.() -> Unit = {}): OptionSetting {
+            return OptionSetting().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,75 +197,261 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
     }
 
 
-    class OptionConfiguration(
+    @CloudFormationMarker
+    class OptionConfiguration {
             /**
-             * [DBSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val dBSecurityGroupMemberships: List<String>? = null,
-            /**
-             * [OptionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionname)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val optionName: String,
-            /**
-             * [OptionSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionsettings)
-             *
-             * _Required_: no
-             *
-             * _Type_: OptionSetting
-             */
-            val optionSettings: OptionSetting? = null,
-            /**
-             * [OptionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfiguration-optionversion)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val optionVersion: String? = null,
-            /**
-             * [Port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-port)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val port: Int? = null,
-            /**
-             * [VpcSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<String>
-             */
-            val vpcSecurityGroupMemberships: List<String>? = null
-    )
+         * [dBSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var dBSecurityGroupMemberships: Any? = null
 
-    class OptionSetting(
+        /**
+         * [dBSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun dBSecurityGroupMemberships(value: List<String>) {
+          this.dBSecurityGroupMemberships = value
+        }
+        
+        /**
+         * [dBSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun dBSecurityGroupMemberships(vararg value: IntrinsicFunction) {
+          this.dBSecurityGroupMemberships = value
+        }
+
+        /**
+         * [optionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var optionName: Any? = null
+
+        /**
+         * [optionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun optionName(value: String) {
+          this.optionName = value
+        }
+        
+        /**
+         * [optionName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionname)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun optionName(value: IntrinsicFunction) {
+          this.optionName = value
+        }
+
+        /**
+         * [optionSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionsettings)
+         *
+         * _Required_: no
+         *
+         * _Type_: OptionSetting
+         */
+        var optionSettings: Any? = null
+
+        /**
+         * [optionSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionsettings)
+         *
+         * _Required_: no
+         *
+         * _Type_: OptionSetting
+         */
+        fun optionSettings(value: OptionSetting) {
+          this.optionSettings = value
+        }
+        
+        /**
+         * [optionSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionsettings)
+         *
+         * _Required_: no
+         *
+         * _Type_: OptionSetting
+         */
+        fun optionSettings(value: IntrinsicFunction) {
+          this.optionSettings = value
+        }
+
+        /**
+         * [optionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfiguration-optionversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var optionVersion: Any? = null
+
+        /**
+         * [optionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfiguration-optionversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun optionVersion(value: String) {
+          this.optionVersion = value
+        }
+        
+        /**
+         * [optionVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfiguration-optionversion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun optionVersion(value: IntrinsicFunction) {
+          this.optionVersion = value
+        }
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var port: Any? = null
+
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: Int) {
+          this.port = value
+        }
+        
+        /**
+         * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-port)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun port(value: IntrinsicFunction) {
+          this.port = value
+        }
+
+        /**
+         * [vpcSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var vpcSecurityGroupMemberships: Any? = null
+
+        /**
+         * [vpcSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun vpcSecurityGroupMemberships(value: List<String>) {
+          this.vpcSecurityGroupMemberships = value
+        }
+        
+        /**
+         * [vpcSecurityGroupMemberships](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun vpcSecurityGroupMemberships(vararg value: IntrinsicFunction) {
+          this.vpcSecurityGroupMemberships = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class OptionSetting {
             /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-value)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val value: String? = null
-    )
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations-optionsettings.html#cfn-rds-optiongroup-optionconfigurations-optionsettings-value)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
 
 }
 

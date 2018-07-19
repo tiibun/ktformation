@@ -42,7 +42,7 @@ class AWSApiGatewayBasePathMapping(logicalId: String) : Resource<AWSApiGatewayBa
         fun basePath(value: IntrinsicFunction) {
           this.basePath = value
         }
-        
+
         /**
          * [domainName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-domainname)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayBasePathMapping(logicalId: String) : Resource<AWSApiGatewayBa
         fun domainName(value: IntrinsicFunction) {
           this.domainName = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-restapiid)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayBasePathMapping(logicalId: String) : Resource<AWSApiGatewayBa
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
         /**
          * [stage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-stage)
          *
@@ -138,7 +138,8 @@ class AWSApiGatewayBasePathMapping(logicalId: String) : Resource<AWSApiGatewayBa
         fun stage(value: IntrinsicFunction) {
           this.stage = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

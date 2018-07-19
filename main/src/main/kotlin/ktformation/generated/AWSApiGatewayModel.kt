@@ -42,7 +42,7 @@ class AWSApiGatewayModel(logicalId: String) : Resource<AWSApiGatewayModel.Proper
         fun contentType(value: IntrinsicFunction) {
           this.contentType = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-description)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayModel(logicalId: String) : Resource<AWSApiGatewayModel.Proper
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-name)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayModel(logicalId: String) : Resource<AWSApiGatewayModel.Proper
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-restapiid)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayModel(logicalId: String) : Resource<AWSApiGatewayModel.Proper
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
         /**
          * [schema](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-schema)
          *
@@ -170,7 +170,8 @@ class AWSApiGatewayModel(logicalId: String) : Resource<AWSApiGatewayModel.Proper
         fun schema(value: IntrinsicFunction) {
           this.schema = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

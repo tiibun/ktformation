@@ -42,7 +42,8 @@ class AWSSDBDomain(logicalId: String) : Resource<AWSSDBDomain.Properties>(logica
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

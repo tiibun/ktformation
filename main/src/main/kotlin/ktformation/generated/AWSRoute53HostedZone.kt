@@ -42,7 +42,7 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
         fun hostedZoneConfig(value: IntrinsicFunction) {
           this.hostedZoneConfig = value
         }
-        
+
         /**
          * [hostedZoneTags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
          *
@@ -74,7 +74,7 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
         fun hostedZoneTags(vararg value: IntrinsicFunction) {
           this.hostedZoneTags = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-name)
          *
@@ -106,7 +106,7 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [queryLoggingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-queryloggingconfig)
          *
@@ -138,7 +138,7 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
         fun queryLoggingConfig(value: IntrinsicFunction) {
           this.queryLoggingConfig = value
         }
-        
+
         /**
          * [vPCs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs)
          *
@@ -170,7 +170,39 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
         fun vPCs(vararg value: IntrinsicFunction) {
           this.vPCs = value
         }
-        
+
+        /**
+        * [HostedZoneConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html)
+        */
+        fun hostedZoneConfig(init: HostedZoneConfig.() -> Unit = {}): HostedZoneConfig {
+            return HostedZoneConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [HostedZoneTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html)
+        */
+        fun hostedZoneTag(init: HostedZoneTag.() -> Unit = {}): HostedZoneTag {
+            return HostedZoneTag().also {
+                it.init()
+            }
+        }
+        /**
+        * [QueryLoggingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html)
+        */
+        fun queryLoggingConfig(init: QueryLoggingConfig.() -> Unit = {}): QueryLoggingConfig {
+            return QueryLoggingConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [VPC](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html)
+        */
+        fun vPC(init: VPC.() -> Unit = {}): VPC {
+            return VPC().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,65 +213,207 @@ class AWSRoute53HostedZone(logicalId: String) : Resource<AWSRoute53HostedZone.Pr
     }
 
 
-    class HostedZoneConfig(
+    @CloudFormationMarker
+    class HostedZoneConfig {
             /**
-             * [Comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val comment: String? = null
-    )
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var comment: Any? = null
 
-    class HostedZoneTag(
-            /**
-             * [Key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-key)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val key: String,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+        /**
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun comment(value: String) {
+          this.comment = value
+        }
+        
+        /**
+         * [comment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun comment(value: IntrinsicFunction) {
+          this.comment = value
+        }
 
-    class QueryLoggingConfig(
-            /**
-             * [CloudWatchLogsLogGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val cloudWatchLogsLogGroupArn: String
-    )
+    }
 
-    class VPC(
+    @CloudFormationMarker
+    class HostedZoneTag {
             /**
-             * [VPCId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val vPCId: String,
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var key: Any? = null
+
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: String) {
+          this.key = value
+        }
+        
+        /**
+         * [key](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-key)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun key(value: IntrinsicFunction) {
+          this.key = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class QueryLoggingConfig {
             /**
-             * [VPCRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val vPCRegion: String
-    )
+         * [cloudWatchLogsLogGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var cloudWatchLogsLogGroupArn: Any? = null
+
+        /**
+         * [cloudWatchLogsLogGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun cloudWatchLogsLogGroupArn(value: String) {
+          this.cloudWatchLogsLogGroupArn = value
+        }
+        
+        /**
+         * [cloudWatchLogsLogGroupArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun cloudWatchLogsLogGroupArn(value: IntrinsicFunction) {
+          this.cloudWatchLogsLogGroupArn = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class VPC {
+            /**
+         * [vPCId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var vPCId: Any? = null
+
+        /**
+         * [vPCId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vPCId(value: String) {
+          this.vPCId = value
+        }
+        
+        /**
+         * [vPCId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vPCId(value: IntrinsicFunction) {
+          this.vPCId = value
+        }
+
+        /**
+         * [vPCRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var vPCRegion: Any? = null
+
+        /**
+         * [vPCRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vPCRegion(value: String) {
+          this.vPCRegion = value
+        }
+        
+        /**
+         * [vPCRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vPCRegion(value: IntrinsicFunction) {
+          this.vPCRegion = value
+        }
+
+    }
 
 }
 

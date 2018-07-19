@@ -42,7 +42,7 @@ class AWSOpsWorksVolume(logicalId: String) : Resource<AWSOpsWorksVolume.Properti
         fun ec2VolumeId(value: IntrinsicFunction) {
           this.ec2VolumeId = value
         }
-        
+
         /**
          * [mountPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-mountpoint)
          *
@@ -74,7 +74,7 @@ class AWSOpsWorksVolume(logicalId: String) : Resource<AWSOpsWorksVolume.Properti
         fun mountPoint(value: IntrinsicFunction) {
           this.mountPoint = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-name)
          *
@@ -106,7 +106,7 @@ class AWSOpsWorksVolume(logicalId: String) : Resource<AWSOpsWorksVolume.Properti
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [stackId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-stackid)
          *
@@ -138,7 +138,8 @@ class AWSOpsWorksVolume(logicalId: String) : Resource<AWSOpsWorksVolume.Properti
         fun stackId(value: IntrinsicFunction) {
           this.stackId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

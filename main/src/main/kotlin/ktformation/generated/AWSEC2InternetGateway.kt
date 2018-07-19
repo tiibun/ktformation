@@ -42,7 +42,8 @@ class AWSEC2InternetGateway(logicalId: String) : Resource<AWSEC2InternetGateway.
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
         fun apiStages(vararg value: IntrinsicFunction) {
           this.apiStages = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-description)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [quota](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
         fun quota(value: IntrinsicFunction) {
           this.quota = value
         }
-        
+
         /**
          * [throttle](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
         fun throttle(value: IntrinsicFunction) {
           this.throttle = value
         }
-        
+
         /**
          * [usagePlanName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-usageplanname)
          *
@@ -170,7 +170,31 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
         fun usagePlanName(value: IntrinsicFunction) {
           this.usagePlanName = value
         }
-        
+
+        /**
+        * [ApiStage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html)
+        */
+        fun apiStage(init: ApiStage.() -> Unit = {}): ApiStage {
+            return ApiStage().also {
+                it.init()
+            }
+        }
+        /**
+        * [QuotaSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html)
+        */
+        fun quotaSettings(init: QuotaSettings.() -> Unit = {}): QuotaSettings {
+            return QuotaSettings().also {
+                it.init()
+            }
+        }
+        /**
+        * [ThrottleSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html)
+        */
+        fun throttleSettings(init: ThrottleSettings.() -> Unit = {}): ThrottleSettings {
+            return ThrottleSettings().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -181,70 +205,234 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
     }
 
 
-    class ApiStage(
+    @CloudFormationMarker
+    class ApiStage {
             /**
-             * [ApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val apiId: String? = null,
-            /**
-             * [Stage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val stage: String? = null
-    )
+         * [apiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var apiId: Any? = null
 
-    class QuotaSettings(
-            /**
-             * [Limit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val limit: Int? = null,
-            /**
-             * [Offset](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val offset: Int? = null,
-            /**
-             * [Period](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val period: String? = null
-    )
+        /**
+         * [apiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun apiId(value: String) {
+          this.apiId = value
+        }
+        
+        /**
+         * [apiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun apiId(value: IntrinsicFunction) {
+          this.apiId = value
+        }
 
-    class ThrottleSettings(
+        /**
+         * [stage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var stage: Any? = null
+
+        /**
+         * [stage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun stage(value: String) {
+          this.stage = value
+        }
+        
+        /**
+         * [stage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun stage(value: IntrinsicFunction) {
+          this.stage = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class QuotaSettings {
             /**
-             * [BurstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val burstLimit: Int? = null,
+         * [limit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var limit: Any? = null
+
+        /**
+         * [limit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun limit(value: Int) {
+          this.limit = value
+        }
+        
+        /**
+         * [limit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun limit(value: IntrinsicFunction) {
+          this.limit = value
+        }
+
+        /**
+         * [offset](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var offset: Any? = null
+
+        /**
+         * [offset](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun offset(value: Int) {
+          this.offset = value
+        }
+        
+        /**
+         * [offset](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun offset(value: IntrinsicFunction) {
+          this.offset = value
+        }
+
+        /**
+         * [period](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var period: Any? = null
+
+        /**
+         * [period](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun period(value: String) {
+          this.period = value
+        }
+        
+        /**
+         * [period](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun period(value: IntrinsicFunction) {
+          this.period = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ThrottleSettings {
             /**
-             * [RateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
-             *
-             * _Required_: no
-             *
-             * _Type_: Double
-             */
-            val rateLimit: Double? = null
-    )
+         * [burstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var burstLimit: Any? = null
+
+        /**
+         * [burstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun burstLimit(value: Int) {
+          this.burstLimit = value
+        }
+        
+        /**
+         * [burstLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun burstLimit(value: IntrinsicFunction) {
+          this.burstLimit = value
+        }
+
+        /**
+         * [rateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var rateLimit: Any? = null
+
+        /**
+         * [rateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun rateLimit(value: Double) {
+          this.rateLimit = value
+        }
+        
+        /**
+         * [rateLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun rateLimit(value: IntrinsicFunction) {
+          this.rateLimit = value
+        }
+
+    }
 
 }
 

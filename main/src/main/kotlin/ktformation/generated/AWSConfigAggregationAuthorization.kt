@@ -42,7 +42,7 @@ class AWSConfigAggregationAuthorization(logicalId: String) : Resource<AWSConfigA
         fun authorizedAccountId(value: IntrinsicFunction) {
           this.authorizedAccountId = value
         }
-        
+
         /**
          * [authorizedAwsRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-authorizedawsregion)
          *
@@ -74,7 +74,8 @@ class AWSConfigAggregationAuthorization(logicalId: String) : Resource<AWSConfigA
         fun authorizedAwsRegion(value: IntrinsicFunction) {
           this.authorizedAwsRegion = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

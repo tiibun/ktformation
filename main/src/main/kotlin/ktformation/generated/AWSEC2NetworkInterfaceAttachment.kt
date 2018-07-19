@@ -42,7 +42,7 @@ class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2Netwo
         fun deleteOnTermination(value: IntrinsicFunction) {
           this.deleteOnTermination = value
         }
-        
+
         /**
          * [deviceIndex](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-deviceindex)
          *
@@ -74,7 +74,7 @@ class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2Netwo
         fun deviceIndex(value: IntrinsicFunction) {
           this.deviceIndex = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-instanceid)
          *
@@ -106,7 +106,7 @@ class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2Netwo
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-networkinterfaceid)
          *
@@ -138,7 +138,8 @@ class AWSEC2NetworkInterfaceAttachment(logicalId: String) : Resource<AWSEC2Netwo
         fun networkInterfaceId(value: IntrinsicFunction) {
           this.networkInterfaceId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

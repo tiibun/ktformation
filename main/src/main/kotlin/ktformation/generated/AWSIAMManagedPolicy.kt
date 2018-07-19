@@ -42,7 +42,7 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [groups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-groups)
          *
@@ -74,7 +74,7 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun groups(vararg value: IntrinsicFunction) {
           this.groups = value
         }
-        
+
         /**
          * [managedPolicyName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-managedpolicyname)
          *
@@ -106,7 +106,7 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun managedPolicyName(value: IntrinsicFunction) {
           this.managedPolicyName = value
         }
-        
+
         /**
          * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-ec2-dhcpoptions-path)
          *
@@ -138,7 +138,7 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun path(value: IntrinsicFunction) {
           this.path = value
         }
-        
+
         /**
          * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-policydocument)
          *
@@ -170,7 +170,7 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
         }
-        
+
         /**
          * [roles](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-roles)
          *
@@ -202,7 +202,7 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun roles(vararg value: IntrinsicFunction) {
           this.roles = value
         }
-        
+
         /**
          * [users](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-users)
          *
@@ -234,7 +234,8 @@ class AWSIAMManagedPolicy(logicalId: String) : Resource<AWSIAMManagedPolicy.Prop
         fun users(vararg value: IntrinsicFunction) {
           this.users = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

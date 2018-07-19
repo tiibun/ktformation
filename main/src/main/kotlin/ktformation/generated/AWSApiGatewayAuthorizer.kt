@@ -42,7 +42,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun authType(value: IntrinsicFunction) {
           this.authType = value
         }
-        
+
         /**
          * [authorizerCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizercredentials)
          *
@@ -74,7 +74,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun authorizerCredentials(value: IntrinsicFunction) {
           this.authorizerCredentials = value
         }
-        
+
         /**
          * [authorizerResultTtlInSeconds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizerresultttlinseconds)
          *
@@ -106,7 +106,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun authorizerResultTtlInSeconds(value: IntrinsicFunction) {
           this.authorizerResultTtlInSeconds = value
         }
-        
+
         /**
          * [authorizerUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizeruri)
          *
@@ -138,7 +138,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun authorizerUri(value: IntrinsicFunction) {
           this.authorizerUri = value
         }
-        
+
         /**
          * [identitySource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-identitysource)
          *
@@ -170,7 +170,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun identitySource(value: IntrinsicFunction) {
           this.identitySource = value
         }
-        
+
         /**
          * [identityValidationExpression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-identityvalidationexpression)
          *
@@ -202,7 +202,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun identityValidationExpression(value: IntrinsicFunction) {
           this.identityValidationExpression = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-name)
          *
@@ -234,7 +234,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [providerARNs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-providerarns)
          *
@@ -266,7 +266,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun providerARNs(vararg value: IntrinsicFunction) {
           this.providerARNs = value
         }
-        
+
         /**
          * [restApiId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-restapiid)
          *
@@ -298,7 +298,7 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun restApiId(value: IntrinsicFunction) {
           this.restApiId = value
         }
-        
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-type)
          *
@@ -330,7 +330,8 @@ class AWSApiGatewayAuthorizer(logicalId: String) : Resource<AWSApiGatewayAuthori
         fun type(value: IntrinsicFunction) {
           this.type = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

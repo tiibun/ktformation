@@ -42,7 +42,7 @@ class AWSEC2VPCDHCPOptionsAssociation(logicalId: String) : Resource<AWSEC2VPCDHC
         fun dhcpOptionsId(value: IntrinsicFunction) {
           this.dhcpOptionsId = value
         }
-        
+
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid)
          *
@@ -74,7 +74,8 @@ class AWSEC2VPCDHCPOptionsAssociation(logicalId: String) : Resource<AWSEC2VPCDHC
         fun vpcId(value: IntrinsicFunction) {
           this.vpcId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

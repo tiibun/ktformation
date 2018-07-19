@@ -42,7 +42,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun destinationCidrBlock(value: IntrinsicFunction) {
           this.destinationCidrBlock = value
         }
-        
+
         /**
          * [destinationIpv6CidrBlock](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationipv6cidrblock)
          *
@@ -74,7 +74,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun destinationIpv6CidrBlock(value: IntrinsicFunction) {
           this.destinationIpv6CidrBlock = value
         }
-        
+
         /**
          * [egressOnlyInternetGatewayId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-egressonlyinternetgatewayid)
          *
@@ -106,7 +106,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun egressOnlyInternetGatewayId(value: IntrinsicFunction) {
           this.egressOnlyInternetGatewayId = value
         }
-        
+
         /**
          * [gatewayId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-gatewayid)
          *
@@ -138,7 +138,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun gatewayId(value: IntrinsicFunction) {
           this.gatewayId = value
         }
-        
+
         /**
          * [instanceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-instanceid)
          *
@@ -170,7 +170,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun instanceId(value: IntrinsicFunction) {
           this.instanceId = value
         }
-        
+
         /**
          * [natGatewayId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-natgatewayid)
          *
@@ -202,7 +202,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun natGatewayId(value: IntrinsicFunction) {
           this.natGatewayId = value
         }
-        
+
         /**
          * [networkInterfaceId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-networkinterfaceid)
          *
@@ -234,7 +234,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun networkInterfaceId(value: IntrinsicFunction) {
           this.networkInterfaceId = value
         }
-        
+
         /**
          * [routeTableId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-routetableid)
          *
@@ -266,7 +266,7 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun routeTableId(value: IntrinsicFunction) {
           this.routeTableId = value
         }
-        
+
         /**
          * [vpcPeeringConnectionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-vpcpeeringconnectionid)
          *
@@ -298,7 +298,8 @@ class AWSEC2Route(logicalId: String) : Resource<AWSEC2Route.Properties>(logicalI
         fun vpcPeeringConnectionId(value: IntrinsicFunction) {
           this.vpcPeeringConnectionId = value
         }
-        
+
+
     }
 
     fun properties(init: Properties.() -> Unit): Properties {

@@ -42,7 +42,7 @@ class AWSWAFRule(logicalId: String) : Resource<AWSWAFRule.Properties>(logicalId,
         fun metricName(value: IntrinsicFunction) {
           this.metricName = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html#cfn-waf-rule-name)
          *
@@ -74,7 +74,7 @@ class AWSWAFRule(logicalId: String) : Resource<AWSWAFRule.Properties>(logicalId,
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [predicates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html#cfn-waf-rule-predicates)
          *
@@ -106,7 +106,15 @@ class AWSWAFRule(logicalId: String) : Resource<AWSWAFRule.Properties>(logicalId,
         fun predicates(vararg value: IntrinsicFunction) {
           this.predicates = value
         }
-        
+
+        /**
+        * [Predicate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html)
+        */
+        fun predicate(init: Predicate.() -> Unit = {}): Predicate {
+            return Predicate().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -117,32 +125,102 @@ class AWSWAFRule(logicalId: String) : Resource<AWSWAFRule.Properties>(logicalId,
     }
 
 
-    class Predicate(
+    @CloudFormationMarker
+    class Predicate {
             /**
-             * [DataId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-dataid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val dataId: String,
-            /**
-             * [Negated](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-negated)
-             *
-             * _Required_: yes
-             *
-             * _Type_: Boolean
-             */
-            val negated: Boolean,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [dataId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-dataid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var dataId: Any? = null
+
+        /**
+         * [dataId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-dataid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dataId(value: String) {
+          this.dataId = value
+        }
+        
+        /**
+         * [dataId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-dataid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun dataId(value: IntrinsicFunction) {
+          this.dataId = value
+        }
+
+        /**
+         * [negated](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-negated)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        var negated: Any? = null
+
+        /**
+         * [negated](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-negated)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun negated(value: Boolean) {
+          this.negated = value
+        }
+        
+        /**
+         * [negated](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-negated)
+         *
+         * _Required_: yes
+         *
+         * _Type_: Boolean
+         */
+        fun negated(value: IntrinsicFunction) {
+          this.negated = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
 
 }
 

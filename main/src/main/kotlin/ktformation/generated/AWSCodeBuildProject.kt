@@ -42,7 +42,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun artifacts(value: IntrinsicFunction) {
           this.artifacts = value
         }
-        
+
         /**
          * [badgeEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-badgeenabled)
          *
@@ -74,7 +74,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun badgeEnabled(value: IntrinsicFunction) {
           this.badgeEnabled = value
         }
-        
+
         /**
          * [cache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-cache)
          *
@@ -106,7 +106,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun cache(value: IntrinsicFunction) {
           this.cache = value
         }
-        
+
         /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-description)
          *
@@ -138,7 +138,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun description(value: IntrinsicFunction) {
           this.description = value
         }
-        
+
         /**
          * [encryptionKey](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-encryptionkey)
          *
@@ -170,7 +170,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun encryptionKey(value: IntrinsicFunction) {
           this.encryptionKey = value
         }
-        
+
         /**
          * [environment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-environment)
          *
@@ -202,7 +202,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun environment(value: IntrinsicFunction) {
           this.environment = value
         }
-        
+
         /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-name)
          *
@@ -234,7 +234,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun name(value: IntrinsicFunction) {
           this.name = value
         }
-        
+
         /**
          * [serviceRole](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-servicerole)
          *
@@ -266,7 +266,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun serviceRole(value: IntrinsicFunction) {
           this.serviceRole = value
         }
-        
+
         /**
          * [source](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-source)
          *
@@ -298,7 +298,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun source(value: IntrinsicFunction) {
           this.source = value
         }
-        
+
         /**
          * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-tags)
          *
@@ -330,7 +330,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun tags(vararg value: IntrinsicFunction) {
           this.tags = value
         }
-        
+
         /**
          * [timeoutInMinutes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-timeoutinminutes)
          *
@@ -362,7 +362,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun timeoutInMinutes(value: IntrinsicFunction) {
           this.timeoutInMinutes = value
         }
-        
+
         /**
          * [triggers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-triggers)
          *
@@ -394,7 +394,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun triggers(value: IntrinsicFunction) {
           this.triggers = value
         }
-        
+
         /**
          * [vpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-vpcconfig)
          *
@@ -426,7 +426,71 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         fun vpcConfig(value: IntrinsicFunction) {
           this.vpcConfig = value
         }
-        
+
+        /**
+        * [Artifacts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html)
+        */
+        fun artifacts(init: Artifacts.() -> Unit = {}): Artifacts {
+            return Artifacts().also {
+                it.init()
+            }
+        }
+        /**
+        * [Environment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
+        */
+        fun environment(init: Environment.() -> Unit = {}): Environment {
+            return Environment().also {
+                it.init()
+            }
+        }
+        /**
+        * [EnvironmentVariable](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html)
+        */
+        fun environmentVariable(init: EnvironmentVariable.() -> Unit = {}): EnvironmentVariable {
+            return EnvironmentVariable().also {
+                it.init()
+            }
+        }
+        /**
+        * [ProjectCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
+        */
+        fun projectCache(init: ProjectCache.() -> Unit = {}): ProjectCache {
+            return ProjectCache().also {
+                it.init()
+            }
+        }
+        /**
+        * [ProjectTriggers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
+        */
+        fun projectTriggers(init: ProjectTriggers.() -> Unit = {}): ProjectTriggers {
+            return ProjectTriggers().also {
+                it.init()
+            }
+        }
+        /**
+        * [Source](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+        */
+        fun source(init: Source.() -> Unit = {}): Source {
+            return Source().also {
+                it.init()
+            }
+        }
+        /**
+        * [SourceAuth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html)
+        */
+        fun sourceAuth(init: SourceAuth.() -> Unit = {}): SourceAuth {
+            return SourceAuth().also {
+                it.init()
+            }
+        }
+        /**
+        * [VpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html)
+        */
+        fun vpcConfig(init: VpcConfig.() -> Unit = {}): VpcConfig {
+            return VpcConfig().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -437,269 +501,967 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
     }
 
 
-    class Artifacts(
+    @CloudFormationMarker
+    class Artifacts {
             /**
-             * [Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val location: String? = null,
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-name)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val name: String? = null,
-            /**
-             * [NamespaceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-namespacetype)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val namespaceType: String? = null,
-            /**
-             * [Packaging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val packaging: String? = null,
-            /**
-             * [Path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-path)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val path: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var location: Any? = null
 
-    class Environment(
-            /**
-             * [Certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val certificate: String? = null,
-            /**
-             * [ComputeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-computetype)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val computeType: String,
-            /**
-             * [EnvironmentVariables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-environmentvariables)
-             *
-             * _Required_: no
-             *
-             * _Type_: List<EnvironmentVariable>
-             */
-            val environmentVariables: List<EnvironmentVariable>? = null,
-            /**
-             * [Image](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-image)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val image: String,
-            /**
-             * [PrivilegedMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-privilegedmode)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val privilegedMode: Boolean? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: String) {
+          this.location = value
+        }
+        
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: IntrinsicFunction) {
+          this.location = value
+        }
 
-    class EnvironmentVariable(
-            /**
-             * [Name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-name)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val name: String,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-type)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val type: String? = null,
-            /**
-             * [Value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-value)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val value: String
-    )
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
 
-    class ProjectCache(
-            /**
-             * [Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val location: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-name)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
 
-    class ProjectTriggers(
-            /**
-             * [Webhook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val webhook: Boolean? = null
-    )
+        /**
+         * [namespaceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-namespacetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var namespaceType: Any? = null
 
-    class Source(
-            /**
-             * [Auth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-auth)
-             *
-             * _Required_: no
-             *
-             * _Type_: SourceAuth
-             */
-            val auth: SourceAuth? = null,
-            /**
-             * [BuildSpec](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-buildspec)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val buildSpec: String? = null,
-            /**
-             * [GitCloneDepth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitclonedepth)
-             *
-             * _Required_: no
-             *
-             * _Type_: Int
-             */
-            val gitCloneDepth: Int? = null,
-            /**
-             * [InsecureSsl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-insecuressl)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val insecureSsl: Boolean? = null,
-            /**
-             * [Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-location)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val location: String? = null,
-            /**
-             * [ReportBuildStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-reportbuildstatus)
-             *
-             * _Required_: no
-             *
-             * _Type_: Boolean
-             */
-            val reportBuildStatus: Boolean? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [namespaceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-namespacetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun namespaceType(value: String) {
+          this.namespaceType = value
+        }
+        
+        /**
+         * [namespaceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-namespacetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun namespaceType(value: IntrinsicFunction) {
+          this.namespaceType = value
+        }
 
-    class SourceAuth(
-            /**
-             * [Resource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
-             *
-             * _Required_: no
-             *
-             * _Type_: String
-             */
-            val resource: String? = null,
-            /**
-             * [Type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val type: String
-    )
+        /**
+         * [packaging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var packaging: Any? = null
 
-    class VpcConfig(
+        /**
+         * [packaging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun packaging(value: String) {
+          this.packaging = value
+        }
+        
+        /**
+         * [packaging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun packaging(value: IntrinsicFunction) {
+          this.packaging = value
+        }
+
+        /**
+         * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-path)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var path: Any? = null
+
+        /**
+         * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-path)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun path(value: String) {
+          this.path = value
+        }
+        
+        /**
+         * [path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-path)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun path(value: IntrinsicFunction) {
+          this.path = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Environment {
             /**
-             * [SecurityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val securityGroupIds: List<String>,
+         * [certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var certificate: Any? = null
+
+        /**
+         * [certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun certificate(value: String) {
+          this.certificate = value
+        }
+        
+        /**
+         * [certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun certificate(value: IntrinsicFunction) {
+          this.certificate = value
+        }
+
+        /**
+         * [computeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-computetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var computeType: Any? = null
+
+        /**
+         * [computeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-computetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun computeType(value: String) {
+          this.computeType = value
+        }
+        
+        /**
+         * [computeType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-computetype)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun computeType(value: IntrinsicFunction) {
+          this.computeType = value
+        }
+
+        /**
+         * [environmentVariables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-environmentvariables)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<EnvironmentVariable>
+         */
+        var environmentVariables: Any? = null
+
+        /**
+         * [environmentVariables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-environmentvariables)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<EnvironmentVariable>
+         */
+        fun environmentVariables(value: List<EnvironmentVariable>) {
+          this.environmentVariables = value
+        }
+        
+        /**
+         * [environmentVariables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-environmentvariables)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<EnvironmentVariable>
+         */
+        fun environmentVariables(vararg value: IntrinsicFunction) {
+          this.environmentVariables = value
+        }
+
+        /**
+         * [image](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-image)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var image: Any? = null
+
+        /**
+         * [image](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-image)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun image(value: String) {
+          this.image = value
+        }
+        
+        /**
+         * [image](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-image)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun image(value: IntrinsicFunction) {
+          this.image = value
+        }
+
+        /**
+         * [privilegedMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-privilegedmode)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var privilegedMode: Any? = null
+
+        /**
+         * [privilegedMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-privilegedmode)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun privilegedMode(value: Boolean) {
+          this.privilegedMode = value
+        }
+        
+        /**
+         * [privilegedMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-privilegedmode)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun privilegedMode(value: IntrinsicFunction) {
+          this.privilegedMode = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class EnvironmentVariable {
             /**
-             * [Subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
-             *
-             * _Required_: yes
-             *
-             * _Type_: List<String>
-             */
-            val subnets: List<String>,
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-type)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var value: Any? = null
+
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: String) {
+          this.value = value
+        }
+        
+        /**
+         * [value](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html#cfn-codebuild-project-environmentvariable-value)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun value(value: IntrinsicFunction) {
+          this.value = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ProjectCache {
             /**
-             * [VpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
-             *
-             * _Required_: yes
-             *
-             * _Type_: String
-             */
-            val vpcId: String
-    )
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var location: Any? = null
+
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: String) {
+          this.location = value
+        }
+        
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: IntrinsicFunction) {
+          this.location = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ProjectTriggers {
+            /**
+         * [webhook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var webhook: Any? = null
+
+        /**
+         * [webhook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun webhook(value: Boolean) {
+          this.webhook = value
+        }
+        
+        /**
+         * [webhook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun webhook(value: IntrinsicFunction) {
+          this.webhook = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Source {
+            /**
+         * [auth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-auth)
+         *
+         * _Required_: no
+         *
+         * _Type_: SourceAuth
+         */
+        var auth: Any? = null
+
+        /**
+         * [auth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-auth)
+         *
+         * _Required_: no
+         *
+         * _Type_: SourceAuth
+         */
+        fun auth(value: SourceAuth) {
+          this.auth = value
+        }
+        
+        /**
+         * [auth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-auth)
+         *
+         * _Required_: no
+         *
+         * _Type_: SourceAuth
+         */
+        fun auth(value: IntrinsicFunction) {
+          this.auth = value
+        }
+
+        /**
+         * [buildSpec](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-buildspec)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var buildSpec: Any? = null
+
+        /**
+         * [buildSpec](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-buildspec)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun buildSpec(value: String) {
+          this.buildSpec = value
+        }
+        
+        /**
+         * [buildSpec](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-buildspec)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun buildSpec(value: IntrinsicFunction) {
+          this.buildSpec = value
+        }
+
+        /**
+         * [gitCloneDepth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitclonedepth)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var gitCloneDepth: Any? = null
+
+        /**
+         * [gitCloneDepth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitclonedepth)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun gitCloneDepth(value: Int) {
+          this.gitCloneDepth = value
+        }
+        
+        /**
+         * [gitCloneDepth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitclonedepth)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun gitCloneDepth(value: IntrinsicFunction) {
+          this.gitCloneDepth = value
+        }
+
+        /**
+         * [insecureSsl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-insecuressl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var insecureSsl: Any? = null
+
+        /**
+         * [insecureSsl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-insecuressl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun insecureSsl(value: Boolean) {
+          this.insecureSsl = value
+        }
+        
+        /**
+         * [insecureSsl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-insecuressl)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun insecureSsl(value: IntrinsicFunction) {
+          this.insecureSsl = value
+        }
+
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var location: Any? = null
+
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: String) {
+          this.location = value
+        }
+        
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: IntrinsicFunction) {
+          this.location = value
+        }
+
+        /**
+         * [reportBuildStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-reportbuildstatus)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var reportBuildStatus: Any? = null
+
+        /**
+         * [reportBuildStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-reportbuildstatus)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun reportBuildStatus(value: Boolean) {
+          this.reportBuildStatus = value
+        }
+        
+        /**
+         * [reportBuildStatus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-reportbuildstatus)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun reportBuildStatus(value: IntrinsicFunction) {
+          this.reportBuildStatus = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SourceAuth {
+            /**
+         * [resource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var resource: Any? = null
+
+        /**
+         * [resource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resource(value: String) {
+          this.resource = value
+        }
+        
+        /**
+         * [resource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun resource(value: IntrinsicFunction) {
+          this.resource = value
+        }
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var type: Any? = null
+
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: String) {
+          this.type = value
+        }
+        
+        /**
+         * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun type(value: IntrinsicFunction) {
+          this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class VpcConfig {
+            /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var securityGroupIds: Any? = null
+
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(value: List<String>) {
+          this.securityGroupIds = value
+        }
+        
+        /**
+         * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun securityGroupIds(vararg value: IntrinsicFunction) {
+          this.securityGroupIds = value
+        }
+
+        /**
+         * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        var subnets: Any? = null
+
+        /**
+         * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnets(value: List<String>) {
+          this.subnets = value
+        }
+        
+        /**
+         * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<String>
+         */
+        fun subnets(vararg value: IntrinsicFunction) {
+          this.subnets = value
+        }
+
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var vpcId: Any? = null
+
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vpcId(value: String) {
+          this.vpcId = value
+        }
+        
+        /**
+         * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun vpcId(value: IntrinsicFunction) {
+          this.vpcId = value
+        }
+
+    }
 
 }
 
