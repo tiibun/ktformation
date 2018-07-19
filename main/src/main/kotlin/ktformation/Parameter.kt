@@ -61,7 +61,7 @@ data class Parameter(@JsonIgnore val name: String) {
     }
 }
 
-data class ParameterType(private val typeName: String) {
+data class ParameterType(private val typeName: String) : JSONotable {
     companion object {
         val NUMBER = ParameterType("Number")
         val STRING = ParameterType("String")
@@ -130,6 +130,10 @@ data class ParameterType(private val typeName: String) {
     }
 
     override fun toString() = typeName
+
+    override fun toJSON(pretty: Boolean) = toString()
+
+    override fun toYAML(short: Boolean) = toString()
 }
 
 @CloudFormationMarker

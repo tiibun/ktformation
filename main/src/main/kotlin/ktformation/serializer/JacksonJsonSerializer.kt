@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.*
 import com.fasterxml.jackson.databind.module.SimpleModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import ktformation.IntrinsicFunction
+import ktformation.JSONotable
 
 class JacksonJsonSerializer {
 
@@ -14,7 +15,8 @@ class JacksonJsonSerializer {
         setSerializationInclusion(JsonInclude.Include.NON_EMPTY)
         enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING)
         enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING)
-        registerModule(SimpleModule().addSerializer(IntrinsicFunction::class.java, FunctionSerializer()))
+        registerModule(SimpleModule().addSerializer(IntrinsicFunction::class.java, FunctionSerializer())
+            .addSerializer(JSONotable::class.java, JSONotableSerializer()))
     }
 
     fun serialize(source: Any, pretty: Boolean): String {
@@ -27,6 +29,12 @@ class JacksonJsonSerializer {
     private class FunctionSerializer : JsonSerializer<IntrinsicFunction>() {
         override fun serialize(attribute: IntrinsicFunction?, gen: JsonGenerator?, serializers: SerializerProvider?) {
             gen?.writeObject(mapOf(attribute?.name to attribute?.value))
+        }
+    }
+
+    private class JSONotableSerializer: JsonSerializer<JSONotable>() {
+        override fun serialize(value: JSONotable?, gen: JsonGenerator?, serializers: SerializerProvider?) {
+            gen?.writeString(value?.toJSON())
         }
     }
 }
