@@ -12,59 +12,59 @@ package ktformation.generated
 import ktformation.*
 
 /**
- * [${name} - AWS CloudFormation](${resource.documentation})
+ * [$name - AWS CloudFormation](${resource.documentation})
  */
 @CloudFormationMarker
-class ${className}(logicalId: String) : Resource<${className}.Properties>(logicalId, "${name}") {
+class $className(logicalId: String) : Resource<$className.Properties>(logicalId, "$name") {
 
     @CloudFormationMarker
     class Properties : ResourceProperties() {
 ${props.joinToLines { (k, v) ->
     """
         /**
-         * [${k}](${v.documentation})
+         * [$k](${v.documentation})
          *
          * _Required_: ${if (v.required) "yes" else "no"}
          *
          * _Type_: ${v.typeName()}
          */
         @JvmField
-        var ${k}: Any? = null
+        var $k: Any? = null
 
         /**
-         * [${k}](${v.documentation})
+         * [$k](${v.documentation})
          *
          * _Required_: ${if (v.required) "yes" else "no"}
          *
          * _Type_: ${v.typeName()}
          */
-        fun ${k}(value: ${v.typeName()}) {
-          this.${k} = value
+        fun $k(value: ${v.typeName()}) {
+          this.$k = value
         }
         ${when (v.type) {
         "Map" -> ""
         "List" -> """
         /**
-         * [${k}](${v.documentation})
+         * [$k](${v.documentation})
          *
          * _Required_: ${if (v.required) "yes" else "no"}
          *
          * _Type_: ${v.typeName()}
          */
-        fun ${k}(vararg value: IntrinsicFunction) {
-          this.${k} = value
+        fun $k(vararg value: IntrinsicFunction) {
+          this.$k = value
         }
         """
         else -> """
         /**
-         * [${k}](${v.documentation})
+         * [$k](${v.documentation})
          *
          * _Required_: ${if (v.required) "yes" else "no"}
          *
          * _Type_: ${v.typeName()}
          */
-        fun ${k}(value: IntrinsicFunction) {
-          this.${k} = value
+        fun $k(value: IntrinsicFunction) {
+          this.$k = value
         }
         """
     }}
@@ -83,11 +83,11 @@ ${// Subproperty classes
 subproperties.joinToLines { (k, v) ->
     """
 
-    class ${k}(
+    class $k(
 ${v.properties.joinToLines(",") { (k, v) ->
         """
             /**
-             * [${k}](${v.documentation})
+             * [$k](${v.documentation})
              *
              * _Required_: ${if (v.required) "yes" else "no"}
              *
@@ -103,10 +103,10 @@ ${customMembers(className)}
 }
 
 /**
- * [${name} - AWS CloudFormation](${resource.documentation})
+ * [$name - AWS CloudFormation](${resource.documentation})
  */
-fun Resources.${className.replace(Regex("^AWS"), "aws")}(logicalId: String, init: ${className}.() -> Unit = {}): ${className} {
-    return ${className}(logicalId).also {
+fun Resources.${className.replace(Regex("^AWS"), "aws")}(logicalId: String, init: $className.() -> Unit = {}): $className {
+    return $className(logicalId).also {
         it.init()
         put(logicalId, it)
     }

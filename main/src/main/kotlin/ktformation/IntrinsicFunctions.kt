@@ -83,7 +83,7 @@ class FnImportValue private constructor(private val sharedValueToImport: Any) : 
 /**
  * [Fn::Join - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html)
  */
-class FnJoin(private val delimiter: String, vararg private val listOfValues: Any) : IntrinsicFunction {
+class FnJoin(private val delimiter: String, private vararg val listOfValues: Any) : IntrinsicFunction {
     override val name = "Fn::Join"
 
     override val value get() = listOf(delimiter, listOfValues)
@@ -148,7 +148,7 @@ interface ConditionFunction : IntrinsicFunction
 /**
  * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-and
  */
-class FnAnd(vararg private val conditions: Any) : ConditionFunction {
+class FnAnd(private vararg val conditions: Any) : ConditionFunction {
 
     override val name = "Fn::And"
 
@@ -188,7 +188,7 @@ class FnNot(private val condition: Any) : ConditionFunction {
 /**
  * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-or
  */
-class FnOr(vararg private val conditions: Any) : ConditionFunction {
+class FnOr(private vararg val conditions: Any) : ConditionFunction {
 
     override val name = "Fn::Or"
 
@@ -208,7 +208,7 @@ enum class AWS {
     StackName,
     URLSuffix;
 
-    override fun toString(): String = "AWS::" + name
+    override fun toString(): String = "AWS::$name"
 
     fun ref() = Ref(this)
 }

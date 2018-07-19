@@ -6,11 +6,11 @@ import org.jetbrains.spek.api.dsl.it
 import kotlin.test.assertEquals
 
 object MetadataSpec : Spek({
-    describe("Metadata", {
+    describe("Metadata") {
         it("outputs JSON") {
             val testee = Metadata(linkedMapOf(
-                    "Instances" to mapOf("Description" to "Information about the instances"),
-                    "Databases" to mapOf("Description" to "Information about the databases")
+                "Instances" to mapOf("Description" to "Information about the instances"),
+                "Databases" to mapOf("Description" to "Information about the databases")
             ))
 
             assertEquals("""
@@ -31,7 +31,7 @@ object MetadataSpec : Spek({
 
             """.trimIndent(), testee.toYAML(true))
         }
-    })
+    }
 
     describe("AWS::CloudFormation::Init") {
         it("outputs JSON") {

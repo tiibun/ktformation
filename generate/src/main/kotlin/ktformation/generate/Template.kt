@@ -29,7 +29,7 @@ class Template private constructor(private val bindings: Bindings, private val c
      * put a variable.
      */
     fun put(key: String, value: Any?): Template {
-        bindings.put(key, value)
+        bindings[key] = value
         return this
     }
 

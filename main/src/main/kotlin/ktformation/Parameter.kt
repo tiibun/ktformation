@@ -118,7 +118,7 @@ data class ParameterType(private val typeName: String) : JSONotable {
          */
         val AWS_ROUTE53_HOSTEDZONE_ID = ParameterType("AWS::Route53::HostedZone::Id")
 
-        fun list(parameterType: ParameterType) = ParameterType("List<${parameterType}>")
+        fun list(parameterType: ParameterType) = ParameterType("List<$parameterType>")
 
         /**
          * The name of a Systems Manager parameter key.
@@ -126,7 +126,7 @@ data class ParameterType(private val typeName: String) : JSONotable {
          */
         val AWS_SSM_PARAMETER_NAME = ParameterType("AWS::SSM::Parameter::Name")
 
-        fun ssm(parameterType: ParameterType) = ParameterType("AWS::SSM::Parameter::Value<${parameterType}>")
+        fun ssm(parameterType: ParameterType) = ParameterType("AWS::SSM::Parameter::Value<$parameterType>")
     }
 
     override fun toString() = typeName

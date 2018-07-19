@@ -78,8 +78,8 @@ class ResourceGenerator(val primaryUrl: String, val fragmentUrls: Map<String, St
         val templateData = mapOf(
                 "name" to name,
                 "resource" to resource,
-                "subproperties" to spec.propertyTypes.filterKeys { it.startsWith(name + ".") }
-                        .mapKeys { it.key.removePrefix(name + ".") }
+                "subproperties" to spec.propertyTypes.filterKeys { it.startsWith("$name.") }
+                        .mapKeys { it.key.removePrefix("$name.") }
         )
 
         // Execute the template, writing it to a buffer

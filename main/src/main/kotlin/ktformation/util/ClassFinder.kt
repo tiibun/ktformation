@@ -25,17 +25,17 @@ class ClassFinder {
             }.filter { parentClass.isAssignableFrom(it) }
         }
 
-        fun listClassPaths(): List<String> {
+        private fun listClassPaths(): List<String> {
             return System.getProperty("java.class.path").split(System.getProperty("path.separator"))
         }
 
-        fun listClasses(path: File): List<String> {
+        private fun listClasses(path: File): List<String> {
             return path.walk().filter { it.name.endsWith(".class") }
                     .map { it.path.removePrefix(path.path + "/").removeSuffix(".class")
                             .replace('/', '.') }.toList()
         }
 
-        fun listClasses(jar: JarFile): List<String> {
+        private fun listClasses(jar: JarFile): List<String> {
             return jar.entries().asSequence().filter { it.name.endsWith(".class") }
                     .map { it.name.removeSuffix(".class").replace('/', '.') }.toList()
         }

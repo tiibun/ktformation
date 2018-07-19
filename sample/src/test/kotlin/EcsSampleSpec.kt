@@ -6,7 +6,6 @@ import ktformation.policy.Statement
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
-import java.io.File
 import kotlin.test.assertEquals
 
 object EcsSampleSpec : Spek({

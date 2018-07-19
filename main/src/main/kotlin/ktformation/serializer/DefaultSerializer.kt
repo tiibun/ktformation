@@ -1,7 +1,6 @@
 package ktformation.serializer
 
 import ktformation.Serializer
-import kotlin.reflect.KClass
 
 
 class DefaultSerializer : Serializer {
