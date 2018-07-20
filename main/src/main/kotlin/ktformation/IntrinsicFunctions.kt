@@ -22,19 +22,82 @@ class FnBase64 private constructor(private val valueToEncode: Any) : IntrinsicFu
 /**
  * [Fn::FindInMap - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-findinmap.html)
  */
-class FnFindInMap private constructor(private val mapName: Any, private val topLevelKey: Any, private val secondLevelKey: Any) : IntrinsicFunction {
-    constructor(mapName: String, topLevelKey: String, secondLevelKey: String) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: String, topLevelKey: String, secondLevelKey: IntrinsicFunction) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: String, topLevelKey: IntrinsicFunction, secondLevelKey: String) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: String, topLevelKey: IntrinsicFunction, secondLevelKey: IntrinsicFunction) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: IntrinsicFunction, topLevelKey: String, secondLevelKey: String) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: IntrinsicFunction, topLevelKey: String, secondLevelKey: IntrinsicFunction) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: IntrinsicFunction, topLevelKey: IntrinsicFunction, secondLevelKey: String) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapName: IntrinsicFunction, topLevelKey: IntrinsicFunction, secondLevelKey: IntrinsicFunction) : this(mapName as Any, topLevelKey, secondLevelKey)
-    constructor(mapping: Mapping, topLevelKey: String, secondLevelKey: String) : this(mapping.name, topLevelKey, secondLevelKey)
-    constructor(mapping: Mapping, topLevelKey: IntrinsicFunction, secondLevelKey: String) : this(mapping.name, topLevelKey, secondLevelKey)
-    constructor(mapping: Mapping, topLevelKey: String, secondLevelKey: IntrinsicFunction) : this(mapping.name, topLevelKey, secondLevelKey)
-    constructor(mapping: Mapping, topLevelKey: IntrinsicFunction, secondLevelKey: IntrinsicFunction) : this(mapping.name, topLevelKey, secondLevelKey)
+class FnFindInMap private constructor(
+    private val mapName: Any,
+    private val topLevelKey: Any,
+    private val secondLevelKey: Any
+) : IntrinsicFunction {
+    constructor(mapName: String, topLevelKey: String, secondLevelKey: String) : this(
+        mapName as Any,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(mapName: String, topLevelKey: String, secondLevelKey: IntrinsicFunction) : this(
+        mapName as Any,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(mapName: String, topLevelKey: IntrinsicFunction, secondLevelKey: String) : this(
+        mapName as Any,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(
+        mapName: String,
+        topLevelKey: IntrinsicFunction,
+        secondLevelKey: IntrinsicFunction
+    ) : this(mapName as Any, topLevelKey, secondLevelKey)
+
+    constructor(mapName: IntrinsicFunction, topLevelKey: String, secondLevelKey: String) : this(
+        mapName as Any,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(
+        mapName: IntrinsicFunction,
+        topLevelKey: String,
+        secondLevelKey: IntrinsicFunction
+    ) : this(mapName as Any, topLevelKey, secondLevelKey)
+
+    constructor(
+        mapName: IntrinsicFunction,
+        topLevelKey: IntrinsicFunction,
+        secondLevelKey: String
+    ) : this(mapName as Any, topLevelKey, secondLevelKey)
+
+    constructor(mapName: IntrinsicFunction, topLevelKey: IntrinsicFunction, secondLevelKey: IntrinsicFunction) : this(
+        mapName as Any,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(mapping: Mapping, topLevelKey: String, secondLevelKey: String) : this(
+        mapping.name,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(mapping: Mapping, topLevelKey: IntrinsicFunction, secondLevelKey: String) : this(
+        mapping.name,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(mapping: Mapping, topLevelKey: String, secondLevelKey: IntrinsicFunction) : this(
+        mapping.name,
+        topLevelKey,
+        secondLevelKey
+    )
+
+    constructor(
+        mapping: Mapping,
+        topLevelKey: IntrinsicFunction,
+        secondLevelKey: IntrinsicFunction
+    ) : this(mapping.name, topLevelKey, secondLevelKey)
 
     override val name = "Fn::FindInMap"
 
@@ -44,11 +107,20 @@ class FnFindInMap private constructor(private val mapName: Any, private val topL
 /**
  * [Fn::GetAtt - AWS CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
  */
-class FnGetAtt private constructor(private val logicalNameOfResource: Any,
-                                   private val attributeName: Any) : IntrinsicFunction {
+class FnGetAtt private constructor(
+    private val logicalNameOfResource: Any,
+    private val attributeName: Any
+) : IntrinsicFunction {
 
-    constructor(logicalNameOfResource: String, attributeName: String) : this(logicalNameOfResource as Any, attributeName)
-    constructor(logicalNameOfResource: Resource<*>, attributeName: String) : this(logicalNameOfResource.logicalId, attributeName)
+    constructor(logicalNameOfResource: String, attributeName: String) : this(
+        logicalNameOfResource as Any,
+        attributeName
+    )
+
+    constructor(logicalNameOfResource: Resource<*>, attributeName: String) : this(
+        logicalNameOfResource.logicalId,
+        attributeName
+    )
 
     override val name = "Fn::GetAtt"
 
@@ -147,6 +219,7 @@ fun Parameter.ref(): IntrinsicFunction = Ref(this)
 
 // Condition Functions
 interface ConditionFunction : IntrinsicFunction
+
 /**
  * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-and
  */
@@ -170,7 +243,8 @@ class FnEquals(private val value1: Any, private val value2: Any) : ConditionFunc
 /**
  * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html#intrinsic-function-reference-conditions-if
  */
-class FnIf(private val conditionName: String, private val valueIfTrue: Any, private val valueIfFalse: Any) : ConditionFunction {
+class FnIf(private val conditionName: String, private val valueIfTrue: Any, private val valueIfFalse: Any) :
+    ConditionFunction {
 
     override val name = "Fn::If"
 
@@ -217,4 +291,38 @@ enum class AWS {
 
 class Condition(override val value: Any) : ConditionFunction {
     override val name = "Condition"
+}
+
+// CodePipeline Functions
+/**
+ * [Using Parameter Override Functions with AWS CodePipeline Pipelines - AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-parameter-override-functions.html#w2ab2c13c17b7)
+ */
+class FnGetArtifactAtt private constructor(
+    private val artifactName: Any,
+    private val attributeName: AttributeName
+) : IntrinsicFunction {
+
+    enum class AttributeName {
+        BucketName,
+        ObjectKey,
+        URL
+    }
+
+    override val name = "Fn::GetArtifactAtt"
+
+    override val value get() = listOf(artifactName, attributeName)
+}
+
+/**
+ * [Using Parameter Override Functions with AWS CodePipeline Pipelines - AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-parameter-override-functions.html#w2ab2c13c17b9)
+ */
+class FnGetParam private constructor(
+    private val artifactName: Any,
+    private val JSONFileName: Any,
+    private val keyName: Any
+) : IntrinsicFunction {
+
+    override val name = "Fn::GetParam"
+
+    override val value get() = listOf(artifactName, JSONFileName, keyName)
 }
