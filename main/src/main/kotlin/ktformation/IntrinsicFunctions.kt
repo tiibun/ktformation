@@ -53,6 +53,8 @@ class FnGetAtt private constructor(private val logicalNameOfResource: Any,
     override val name = "Fn::GetAtt"
 
     override val value get() = listOf(logicalNameOfResource, attributeName)
+
+    val shortValue get() = "$logicalNameOfResource.$attributeName"
 }
 
 /**

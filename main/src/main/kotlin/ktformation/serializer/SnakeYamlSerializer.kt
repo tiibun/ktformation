@@ -2,6 +2,7 @@ package ktformation.serializer
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
+import ktformation.FnGetAtt
 import ktformation.IntrinsicFunction
 import ktformation.ParameterType
 import ktformation.policy.Effect
@@ -79,12 +80,16 @@ class SnakeYamlSerializer {
                 fun representIntrinsicFunction(data: IntrinsicFunction): Node {
                     return if (short) {
                         val tag = Tag("!" + data.name.replace("Fn::", ""))
-                        when (data.value) {
-                            is Map<*, *> -> representMapping(tag, data.value as Map<*, *>, false)
-                            is List<*> -> representSequence(tag, data.value as List<*>, false)
-                            is Array<*> -> representSequence(tag, (data.value as Array<*>).toList(), false)
-                            is IntrinsicFunction -> representMapping(Tag.MAP, mapOf(data.name to data.value), false)
-                            else -> representScalar(tag, data.value.toString())
+                        if (data is FnGetAtt) {
+                            representScalar(tag, data.shortValue)
+                        } else {
+                            when (data.value) {
+                                is Map<*, *> -> representMapping(tag, data.value as Map<*, *>, false)
+                                is List<*> -> representSequence(tag, data.value as List<*>, false)
+                                is Array<*> -> representSequence(tag, (data.value as Array<*>).toList(), false)
+                                is IntrinsicFunction -> representMapping(Tag.MAP, mapOf(data.name to data.value), false)
+                                else -> representScalar(tag, data.value.toString())
+                            }
                         }
                     } else {
                         representMapping(Tag.MAP, mapOf(data.name to data.value), null)

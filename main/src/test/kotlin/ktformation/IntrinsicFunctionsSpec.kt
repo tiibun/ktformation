@@ -36,6 +36,24 @@ object IntrinsicFunctionSpec : Spek({
         }
     }
 
+    describe("FnGetAtt") {
+        it("outputs Fn::GetAtt") {
+            val testee = mapOf("Test" to FnGetAtt("Res", "Attr"))
+            assertEquals("""{"Test":{"Fn::GetAtt":["Res","Attr"]}}""", testee.toJSON())
+            assertEquals("""
+                Test: !GetAtt 'Res.Attr'
+
+                """.trimIndent(), testee.toYAML(true))
+            assertEquals("""
+                Test:
+                  Fn::GetAtt:
+                  - Res
+                  - Attr
+
+                """.trimIndent(), testee.toYAML(false))
+        }
+    }
+
     describe("FnAnd") {
         it("outputs Fn::And") {
             val testee = mapOf("Test" to FnAnd(FnEquals("sg-mysggroup", Ref("ASecurityGroup")),
