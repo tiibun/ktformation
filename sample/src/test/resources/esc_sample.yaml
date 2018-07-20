@@ -39,9 +39,7 @@ Outputs:
     Description: The url at which the application is available
     Value: !Join
     - ''
-    - - !GetAtt
-        - ECSALB
-        - DNSName
+    - - !GetAtt 'ECSALB.DNSName'
   ALBArn:
     Description: The ARN of the ALB, exported for later use in creating services
     Export:
@@ -57,9 +55,7 @@ Outputs:
       - ':'
       - - !Ref 'AWS::StackName'
         - ECSRole
-    Value: !GetAtt
-    - ECSServiceRole
-    - Arn
+    Value: !GetAtt 'ECSServiceRole.Arn'
   VPCId:
     Description: The ID of the VPC that this stack is deployed in
     Export:
@@ -333,11 +329,8 @@ Resources:
       - !Ref 'EcsSecurityGroup'
       UserData:
         Fn::Base64: !Sub '#!/bin/bash -xe
-
           echo ECS_CLUSTER=${ECSCluster} >> /etc/ecs/ecs.config
-
           yum install -y aws-cfn-bootstrap
-
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource ECSAutoScalingGroup
           --region ${AWS::Region}'
     Type: AWS::AutoScaling::LaunchConfiguration
