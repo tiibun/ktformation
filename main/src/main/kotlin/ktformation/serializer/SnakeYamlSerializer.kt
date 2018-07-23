@@ -9,7 +9,9 @@ import ktformation.policy.Effect
 import ktformation.util.ClassFinder
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.Yaml
+import org.yaml.snakeyaml.introspector.BeanAccess
 import org.yaml.snakeyaml.introspector.Property
+import org.yaml.snakeyaml.introspector.PropertyUtils
 import org.yaml.snakeyaml.nodes.*
 import org.yaml.snakeyaml.representer.Represent
 import org.yaml.snakeyaml.representer.Representer
@@ -20,6 +22,7 @@ class SnakeYamlSerializer {
     fun serialize(source: Any, short: Boolean): String {
         return Yaml(object : Representer() {
             init {
+                propertyUtils = ReservedOrderedPropertyUtils()
                 addFunctionRepresents()
                 representers[ParameterType::class.java] = EnumRepresent()
                 representers[Effect::class.java] = EnumRepresent()
@@ -31,14 +34,24 @@ class SnakeYamlSerializer {
                 }
             }
 
+            override fun representScalar(tag: Tag?, value: String?): Node {
+                // if value is multi line,
+                if (value?.contains("\n") == true)
+                    return super.representScalar(tag, value, '|')
+                else
+                    return super.representScalar(tag, value)
+            }
+
             override fun representJavaBean(properties: MutableSet<Property>, javaBean: Any): MappingNode {
                 // suppress tag
                 classTags.putIfAbsent(javaBean.javaClass, Tag.MAP)
                 return super.representJavaBean(properties, javaBean)
             }
 
-            override fun representJavaBeanProperty(javaBean: Any, property: Property, propertyValue: Any?,
-                                                   customTag: Tag?): NodeTuple? {
+            override fun representJavaBeanProperty(
+                javaBean: Any, property: Property, propertyValue: Any?,
+                customTag: Tag?
+            ): NodeTuple? {
                 // suppress null or empty collection
                 if (propertyValue == null) return null
                 if (propertyValue is List<*> && propertyValue.isEmpty()) return null
@@ -54,21 +67,24 @@ class SnakeYamlSerializer {
                 val propertyName = jsonProperty?.value ?: property.name.capitalize()
 
                 val tuple = super.representJavaBeanProperty(javaBean, property, propertyValue, customTag)
-                return NodeTuple(ScalarNode(tuple.keyNode.tag,
+                return NodeTuple(
+                    ScalarNode(
+                        tuple.keyNode.tag,
                         propertyName,
                         tuple.keyNode.startMark,
                         tuple.keyNode.endMark,
-                        (tuple.keyNode as ScalarNode).style),
-                        tuple.valueNode)
+                        (tuple.keyNode as ScalarNode).style
+                    ),
+                    tuple.valueNode
+                )
             }
 
             fun getJavaField(jClass: Class<*>, name: String): Field? {
-                return jClass.declaredFields.find { it.name == name } ?:
-                        if (jClass.superclass != null) {
-                            getJavaField(jClass.superclass, name)
-                        } else {
-                            null
-                        }
+                return jClass.declaredFields.find { it.name == name } ?: if (jClass.superclass != null) {
+                    getJavaField(jClass.superclass, name)
+                } else {
+                    null
+                }
             }
 
             inner class IntrinsicFunctionRepresent : Represent {
@@ -108,5 +124,12 @@ class SnakeYamlSerializer {
         }, DumperOptions().apply {
             isAllowReadOnlyProperties = true
         }).dumpAsMap(source)
+    }
+
+    class ReservedOrderedPropertyUtils : PropertyUtils() {
+        override fun createPropertySet(type: Class<out Any>?, bAccess: BeanAccess?): MutableSet<Property> {
+            // super.createPropertySet returns TreeSet
+            return getPropertiesMap(type, BeanAccess.FIELD).values.filter { it.isReadable }.toMutableSet()
+        }
     }
 }

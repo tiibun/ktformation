@@ -53,22 +53,22 @@ object PolicyDocumentSpec : Spek({
             }
             """.trimIndent(), policy.toJSON(true))
             assertEquals("""
-            Version: '2012-10-17'
-            Statement:
-            - Action:
-              - s3:PutObject
-              Condition:
-                ArnLike:
-                  aws:SourceArn: arn:aws:s3:::source-bucket
-                StringEquals:
-                  aws:SourceAccount: '1234567890'
-                  s3:x-amz-acl: bucket-owner-full-control
-              Effect: Allow
-              Principal:
-                Service: s3.amazonaws.com
-              Resource:
-              - arn:aws:s3:::destination-bucket/*
-              Sid: InventoryAndAnalyticsExamplePolicy
+                Version: '2012-10-17'
+                Statement:
+                - Sid: InventoryAndAnalyticsExamplePolicy
+                  Principal:
+                    Service: s3.amazonaws.com
+                  Effect: Allow
+                  Action:
+                  - s3:PutObject
+                  Resource:
+                  - arn:aws:s3:::destination-bucket/*
+                  Condition:
+                    ArnLike:
+                      aws:SourceArn: arn:aws:s3:::source-bucket
+                    StringEquals:
+                      aws:SourceAccount: '1234567890'
+                      s3:x-amz-acl: bucket-owner-full-control
 
             """.trimIndent(), policy.toYAML())
         }

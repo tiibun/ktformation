@@ -8,30 +8,34 @@ import kotlin.test.assertEquals
 
 object CloudFormationSpec : Spek({
     describe("toJson") {
-        it("outputs JSON") {
-            val template = cloudFormation {
-                lateinit var cidrBlock: Parameter
-                parameters {
-                    cidrBlock = parameter("CidrBlock") {
-                        type = ParameterType.STRING
-                        default = "10.0.0"
-                        description = "CIDR block."
-                    }
+        val template = cloudFormation {
+            lateinit var cidrBlock: Parameter
+            parameters {
+                cidrBlock = parameter("CidrBlock") {
+                    type = ParameterType.STRING
+                    default = "10.0.0"
+                    description = "CIDR block."
                 }
-                mappings {
-                    mapping("AWSRegionToAMI",
-                            "ap-southeast-2" to mapOf("AMIID" to "ami-5781be34"))
-                }
-                resources {
-                    awsEC2VPC("VPC") {
-                        properties {
-                            cidrBlock(Ref(cidrBlock))
-                        }
+            }
+            mappings {
+                mapping(
+                    "AWSRegionToAMI",
+                    "ap-southeast-2" to mapOf("AMIID" to "ami-5781be34")
+                )
+            }
+            resources {
+                awsEC2VPC("VPC") {
+                    properties {
+                        cidrBlock(Ref(cidrBlock))
                     }
                 }
             }
+        }
+
+        it("outputs JSON") {
             val json = template.toJSON(true)
-            assertEquals("""
+            assertEquals(
+                """
                 {
                   "AWSTemplateFormatVersion" : "2010-09-09",
                   "Parameters" : {
@@ -59,48 +63,57 @@ object CloudFormationSpec : Spek({
                     }
                   }
                 }
-                """.trimIndent(), json)
+                """.trimIndent(), json
+            )
+        }
 
+        it("outputs YAML long format") {
             val yaml = template.toYAML(false)
-            assertEquals("""
+            assertEquals(
+                """
                 AWSTemplateFormatVersion: '2010-09-09'
+                Parameters:
+                  CidrBlock:
+                    Type: String
+                    Default: 10.0.0
+                    Description: CIDR block.
                 Mappings:
                   AWSRegionToAMI:
                     ap-southeast-2:
                       AMIID: ami-5781be34
-                Parameters:
-                  CidrBlock:
-                    Default: 10.0.0
-                    Description: CIDR block.
-                    Type: String
                 Resources:
                   VPC:
+                    Type: AWS::EC2::VPC
                     Properties:
                       CidrBlock:
                         Ref: CidrBlock
-                    Type: AWS::EC2::VPC
 
-                """.trimIndent(), yaml)
+                """.trimIndent(), yaml
+            )
+        }
 
+        it("outputs YAML short format") {
             val shortYaml = template.toYAML(true)
-            assertEquals("""
+            assertEquals(
+                """
                 AWSTemplateFormatVersion: '2010-09-09'
+                Parameters:
+                  CidrBlock:
+                    Type: String
+                    Default: 10.0.0
+                    Description: CIDR block.
                 Mappings:
                   AWSRegionToAMI:
                     ap-southeast-2:
                       AMIID: ami-5781be34
-                Parameters:
-                  CidrBlock:
-                    Default: 10.0.0
-                    Description: CIDR block.
-                    Type: String
                 Resources:
                   VPC:
+                    Type: AWS::EC2::VPC
                     Properties:
                       CidrBlock: !Ref 'CidrBlock'
-                    Type: AWS::EC2::VPC
 
-                """.trimIndent(), shortYaml)
+                """.trimIndent(), shortYaml
+            )
         }
     }
 })
