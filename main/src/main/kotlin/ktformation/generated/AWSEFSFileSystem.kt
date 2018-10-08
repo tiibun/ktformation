@@ -140,6 +140,70 @@ class AWSEFSFileSystem(logicalId: String) : Resource<AWSEFSFileSystem.Properties
         }
 
         /**
+         * [provisionedThroughputInMibps](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        @JvmField
+        var provisionedThroughputInMibps: Any? = null
+
+        /**
+         * [provisionedThroughputInMibps](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun provisionedThroughputInMibps(value: Double) {
+          this.provisionedThroughputInMibps = value
+        }
+        
+        /**
+         * [provisionedThroughputInMibps](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun provisionedThroughputInMibps(value: IntrinsicFunction) {
+          this.provisionedThroughputInMibps = value
+        }
+
+        /**
+         * [throughputMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-throughputmode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var throughputMode: Any? = null
+
+        /**
+         * [throughputMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-throughputmode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun throughputMode(value: String) {
+          this.throughputMode = value
+        }
+        
+        /**
+         * [throughputMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-throughputmode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun throughputMode(value: IntrinsicFunction) {
+          this.throughputMode = value
+        }
+
+        /**
         * [ElasticFileSystemTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html)
         */
         fun elasticFileSystemTag(init: ElasticFileSystemTag.() -> Unit = {}): ElasticFileSystemTag {

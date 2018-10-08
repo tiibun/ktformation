@@ -12,6 +12,38 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
     @CloudFormationMarker
     class Properties : ResourceProperties() {
         /**
+         * [deploymentCanarySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html#cfn-apigateway-deployment-deploymentcanarysettings)
+         *
+         * _Required_: no
+         *
+         * _Type_: DeploymentCanarySettings
+         */
+        @JvmField
+        var deploymentCanarySettings: Any? = null
+
+        /**
+         * [deploymentCanarySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html#cfn-apigateway-deployment-deploymentcanarysettings)
+         *
+         * _Required_: no
+         *
+         * _Type_: DeploymentCanarySettings
+         */
+        fun deploymentCanarySettings(value: DeploymentCanarySettings) {
+          this.deploymentCanarySettings = value
+        }
+        
+        /**
+         * [deploymentCanarySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html#cfn-apigateway-deployment-deploymentcanarysettings)
+         *
+         * _Required_: no
+         *
+         * _Type_: DeploymentCanarySettings
+         */
+        fun deploymentCanarySettings(value: IntrinsicFunction) {
+          this.deploymentCanarySettings = value
+        }
+
+        /**
          * [description](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html#cfn-apigateway-deployment-description)
          *
          * _Required_: no
@@ -140,6 +172,30 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
         }
 
         /**
+        * [AccessLogSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html)
+        */
+        fun accessLogSetting(init: AccessLogSetting.() -> Unit = {}): AccessLogSetting {
+            return AccessLogSetting().also {
+                it.init()
+            }
+        }
+        /**
+        * [CanarySetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html)
+        */
+        fun canarySetting(init: CanarySetting.() -> Unit = {}): CanarySetting {
+            return CanarySetting().also {
+                it.init()
+            }
+        }
+        /**
+        * [DeploymentCanarySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html)
+        */
+        fun deploymentCanarySettings(init: DeploymentCanarySettings.() -> Unit = {}): DeploymentCanarySettings {
+            return DeploymentCanarySettings().also {
+                it.init()
+            }
+        }
+        /**
         * [MethodSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html)
         */
         fun methodSetting(init: MethodSetting.() -> Unit = {}): MethodSetting {
@@ -164,6 +220,244 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
         }
     }
 
+
+    @CloudFormationMarker
+    class AccessLogSetting {
+            /**
+         * [destinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var destinationArn: Any? = null
+
+        /**
+         * [destinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun destinationArn(value: String) {
+          this.destinationArn = value
+        }
+        
+        /**
+         * [destinationArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun destinationArn(value: IntrinsicFunction) {
+          this.destinationArn = value
+        }
+
+        /**
+         * [format](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var format: Any? = null
+
+        /**
+         * [format](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun format(value: String) {
+          this.format = value
+        }
+        
+        /**
+         * [format](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun format(value: IntrinsicFunction) {
+          this.format = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class CanarySetting {
+            /**
+         * [percentTraffic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var percentTraffic: Any? = null
+
+        /**
+         * [percentTraffic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun percentTraffic(value: Double) {
+          this.percentTraffic = value
+        }
+        
+        /**
+         * [percentTraffic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun percentTraffic(value: IntrinsicFunction) {
+          this.percentTraffic = value
+        }
+
+        /**
+         * [stageVariableOverrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var stageVariableOverrides: Any? = null
+
+        /**
+         * [stageVariableOverrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun stageVariableOverrides(value: Map<String, Any>) {
+          this.stageVariableOverrides = value
+        }
+        
+        /**
+         * [useStageCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var useStageCache: Any? = null
+
+        /**
+         * [useStageCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun useStageCache(value: Boolean) {
+          this.useStageCache = value
+        }
+        
+        /**
+         * [useStageCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun useStageCache(value: IntrinsicFunction) {
+          this.useStageCache = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class DeploymentCanarySettings {
+            /**
+         * [percentTraffic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var percentTraffic: Any? = null
+
+        /**
+         * [percentTraffic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun percentTraffic(value: Double) {
+          this.percentTraffic = value
+        }
+        
+        /**
+         * [percentTraffic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun percentTraffic(value: IntrinsicFunction) {
+          this.percentTraffic = value
+        }
+
+        /**
+         * [stageVariableOverrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var stageVariableOverrides: Any? = null
+
+        /**
+         * [stageVariableOverrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun stageVariableOverrides(value: Map<String, Any>) {
+          this.stageVariableOverrides = value
+        }
+        
+        /**
+         * [useStageCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var useStageCache: Any? = null
+
+        /**
+         * [useStageCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun useStageCache(value: Boolean) {
+          this.useStageCache = value
+        }
+        
+        /**
+         * [useStageCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun useStageCache(value: IntrinsicFunction) {
+          this.useStageCache = value
+        }
+
+    }
 
     @CloudFormationMarker
     class MethodSetting {
@@ -482,6 +776,37 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
     @CloudFormationMarker
     class StageDescription {
             /**
+         * [accessLogSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-accesslogsetting)
+         *
+         * _Required_: no
+         *
+         * _Type_: AccessLogSetting
+         */
+        var accessLogSetting: Any? = null
+
+        /**
+         * [accessLogSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-accesslogsetting)
+         *
+         * _Required_: no
+         *
+         * _Type_: AccessLogSetting
+         */
+        fun accessLogSetting(value: AccessLogSetting) {
+          this.accessLogSetting = value
+        }
+        
+        /**
+         * [accessLogSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-accesslogsetting)
+         *
+         * _Required_: no
+         *
+         * _Type_: AccessLogSetting
+         */
+        fun accessLogSetting(value: IntrinsicFunction) {
+          this.accessLogSetting = value
+        }
+
+        /**
          * [cacheClusterEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled)
          *
          * _Required_: no
@@ -634,6 +959,37 @@ class AWSApiGatewayDeployment(logicalId: String) : Resource<AWSApiGatewayDeploym
          */
         fun cachingEnabled(value: IntrinsicFunction) {
           this.cachingEnabled = value
+        }
+
+        /**
+         * [canarySetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-canarysetting)
+         *
+         * _Required_: no
+         *
+         * _Type_: CanarySetting
+         */
+        var canarySetting: Any? = null
+
+        /**
+         * [canarySetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-canarysetting)
+         *
+         * _Required_: no
+         *
+         * _Type_: CanarySetting
+         */
+        fun canarySetting(value: CanarySetting) {
+          this.canarySetting = value
+        }
+        
+        /**
+         * [canarySetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-canarysetting)
+         *
+         * _Required_: no
+         *
+         * _Type_: CanarySetting
+         */
+        fun canarySetting(value: IntrinsicFunction) {
+          this.canarySetting = value
         }
 
         /**

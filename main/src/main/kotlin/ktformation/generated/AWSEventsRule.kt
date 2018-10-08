@@ -276,6 +276,14 @@ class AWSEventsRule(logicalId: String) : Resource<AWSEventsRule.Properties>(logi
             }
         }
         /**
+        * [SqsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html)
+        */
+        fun sqsParameters(init: SqsParameters.() -> Unit = {}): SqsParameters {
+            return SqsParameters().also {
+                it.init()
+            }
+        }
+        /**
         * [Target](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html)
         */
         fun target(init: Target.() -> Unit = {}): Target {
@@ -546,6 +554,41 @@ class AWSEventsRule(logicalId: String) : Resource<AWSEventsRule.Properties>(logi
          */
         fun values(vararg value: IntrinsicFunction) {
           this.values = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class SqsParameters {
+            /**
+         * [messageGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var messageGroupId: Any? = null
+
+        /**
+         * [messageGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun messageGroupId(value: String) {
+          this.messageGroupId = value
+        }
+        
+        /**
+         * [messageGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun messageGroupId(value: IntrinsicFunction) {
+          this.messageGroupId = value
         }
 
     }
@@ -829,6 +872,37 @@ class AWSEventsRule(logicalId: String) : Resource<AWSEventsRule.Properties>(logi
          */
         fun runCommandParameters(value: IntrinsicFunction) {
           this.runCommandParameters = value
+        }
+
+        /**
+         * [sqsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-sqsparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: SqsParameters
+         */
+        var sqsParameters: Any? = null
+
+        /**
+         * [sqsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-sqsparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: SqsParameters
+         */
+        fun sqsParameters(value: SqsParameters) {
+          this.sqsParameters = value
+        }
+        
+        /**
+         * [sqsParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-sqsparameters)
+         *
+         * _Required_: no
+         *
+         * _Type_: SqsParameters
+         */
+        fun sqsParameters(value: IntrinsicFunction) {
+          this.sqsParameters = value
         }
 
     }

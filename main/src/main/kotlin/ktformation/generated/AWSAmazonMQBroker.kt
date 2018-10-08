@@ -236,6 +236,38 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
         }
 
         /**
+         * [logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs)
+         *
+         * _Required_: no
+         *
+         * _Type_: LogList
+         */
+        @JvmField
+        var logs: Any? = null
+
+        /**
+         * [logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs)
+         *
+         * _Required_: no
+         *
+         * _Type_: LogList
+         */
+        fun logs(value: LogList) {
+          this.logs = value
+        }
+        
+        /**
+         * [logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs)
+         *
+         * _Required_: no
+         *
+         * _Type_: LogList
+         */
+        fun logs(value: IntrinsicFunction) {
+          this.logs = value
+        }
+
+        /**
          * [maintenanceWindowStartTime](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-maintenancewindowstarttime)
          *
          * _Required_: no
@@ -404,6 +436,14 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
             }
         }
         /**
+        * [LogList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html)
+        */
+        fun logList(init: LogList.() -> Unit = {}): LogList {
+            return LogList().also {
+                it.init()
+            }
+        }
+        /**
         * [MaintenanceWindow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html)
         */
         fun maintenanceWindow(init: MaintenanceWindow.() -> Unit = {}): MaintenanceWindow {
@@ -491,6 +531,72 @@ class AWSAmazonMQBroker(logicalId: String) : Resource<AWSAmazonMQBroker.Properti
          */
         fun revision(value: IntrinsicFunction) {
           this.revision = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LogList {
+            /**
+         * [audit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var audit: Any? = null
+
+        /**
+         * [audit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun audit(value: Boolean) {
+          this.audit = value
+        }
+        
+        /**
+         * [audit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun audit(value: IntrinsicFunction) {
+          this.audit = value
+        }
+
+        /**
+         * [general](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var general: Any? = null
+
+        /**
+         * [general](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun general(value: Boolean) {
+          this.general = value
+        }
+        
+        /**
+         * [general](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun general(value: IntrinsicFunction) {
+          this.general = value
         }
 
     }

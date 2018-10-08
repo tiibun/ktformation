@@ -44,6 +44,38 @@ class AWSGlueCrawler(logicalId: String) : Resource<AWSGlueCrawler.Properties>(lo
         }
 
         /**
+         * [configuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-configuration)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var configuration: Any? = null
+
+        /**
+         * [configuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-configuration)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun configuration(value: String) {
+          this.configuration = value
+        }
+        
+        /**
+         * [configuration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-configuration)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun configuration(value: IntrinsicFunction) {
+          this.configuration = value
+        }
+
+        /**
          * [databaseName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-databasename)
          *
          * _Required_: yes

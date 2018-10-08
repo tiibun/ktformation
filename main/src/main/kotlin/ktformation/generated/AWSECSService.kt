@@ -364,6 +364,38 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
         }
 
         /**
+         * [schedulingStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var schedulingStrategy: Any? = null
+
+        /**
+         * [schedulingStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun schedulingStrategy(value: String) {
+          this.schedulingStrategy = value
+        }
+        
+        /**
+         * [schedulingStrategy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun schedulingStrategy(value: IntrinsicFunction) {
+          this.schedulingStrategy = value
+        }
+
+        /**
          * [serviceName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-servicename)
          *
          * _Required_: no
@@ -986,6 +1018,68 @@ class AWSECSService(logicalId: String) : Resource<AWSECSService.Properties>(logi
     @CloudFormationMarker
     class ServiceRegistry {
             /**
+         * [containerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var containerName: Any? = null
+
+        /**
+         * [containerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun containerName(value: String) {
+          this.containerName = value
+        }
+        
+        /**
+         * [containerName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containername)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun containerName(value: IntrinsicFunction) {
+          this.containerName = value
+        }
+
+        /**
+         * [containerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containerport)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var containerPort: Any? = null
+
+        /**
+         * [containerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containerport)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun containerPort(value: Int) {
+          this.containerPort = value
+        }
+        
+        /**
+         * [containerPort](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containerport)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun containerPort(value: IntrinsicFunction) {
+          this.containerPort = value
+        }
+
+        /**
          * [port](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port)
          *
          * _Required_: no

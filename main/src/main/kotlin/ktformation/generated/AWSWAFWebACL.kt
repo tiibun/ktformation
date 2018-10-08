@@ -170,7 +170,7 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
             /**
          * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: WafAction
          */
@@ -179,7 +179,7 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         /**
          * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: WafAction
          */
@@ -190,7 +190,7 @@ class AWSWAFWebACL(logicalId: String) : Resource<AWSWAFWebACL.Properties>(logica
         /**
          * [action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: WafAction
          */

@@ -52,10 +52,34 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
             }
         }
         /**
+        * [ClassicLoadBalancer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html)
+        */
+        fun classicLoadBalancer(init: ClassicLoadBalancer.() -> Unit = {}): ClassicLoadBalancer {
+            return ClassicLoadBalancer().also {
+                it.init()
+            }
+        }
+        /**
+        * [ClassicLoadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html)
+        */
+        fun classicLoadBalancersConfig(init: ClassicLoadBalancersConfig.() -> Unit = {}): ClassicLoadBalancersConfig {
+            return ClassicLoadBalancersConfig().also {
+                it.init()
+            }
+        }
+        /**
         * [EbsBlockDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html)
         */
         fun ebsBlockDevice(init: EbsBlockDevice.() -> Unit = {}): EbsBlockDevice {
             return EbsBlockDevice().also {
+                it.init()
+            }
+        }
+        /**
+        * [FleetLaunchTemplateSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html)
+        */
+        fun fleetLaunchTemplateSpecification(init: FleetLaunchTemplateSpecification.() -> Unit = {}): FleetLaunchTemplateSpecification {
+            return FleetLaunchTemplateSpecification().also {
                 it.init()
             }
         }
@@ -88,6 +112,30 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
         */
         fun instanceNetworkInterfaceSpecification(init: InstanceNetworkInterfaceSpecification.() -> Unit = {}): InstanceNetworkInterfaceSpecification {
             return InstanceNetworkInterfaceSpecification().also {
+                it.init()
+            }
+        }
+        /**
+        * [LaunchTemplateConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html)
+        */
+        fun launchTemplateConfig(init: LaunchTemplateConfig.() -> Unit = {}): LaunchTemplateConfig {
+            return LaunchTemplateConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [LaunchTemplateOverrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html)
+        */
+        fun launchTemplateOverrides(init: LaunchTemplateOverrides.() -> Unit = {}): LaunchTemplateOverrides {
+            return LaunchTemplateOverrides().also {
+                it.init()
+            }
+        }
+        /**
+        * [LoadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html)
+        */
+        fun loadBalancersConfig(init: LoadBalancersConfig.() -> Unit = {}): LoadBalancersConfig {
+            return LoadBalancersConfig().also {
                 it.init()
             }
         }
@@ -136,6 +184,22 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
         */
         fun spotPlacement(init: SpotPlacement.() -> Unit = {}): SpotPlacement {
             return SpotPlacement().also {
+                it.init()
+            }
+        }
+        /**
+        * [TargetGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html)
+        */
+        fun targetGroup(init: TargetGroup.() -> Unit = {}): TargetGroup {
+            return TargetGroup().also {
+                it.init()
+            }
+        }
+        /**
+        * [TargetGroupsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroupsconfig.html)
+        */
+        fun targetGroupsConfig(init: TargetGroupsConfig.() -> Unit = {}): TargetGroupsConfig {
+            return TargetGroupsConfig().also {
                 it.init()
             }
         }
@@ -273,6 +337,76 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
          */
         fun virtualName(value: IntrinsicFunction) {
           this.virtualName = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ClassicLoadBalancer {
+            /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var name: Any? = null
+
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: String) {
+          this.name = value
+        }
+        
+        /**
+         * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun name(value: IntrinsicFunction) {
+          this.name = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class ClassicLoadBalancersConfig {
+            /**
+         * [classicLoadBalancers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<ClassicLoadBalancer>
+         */
+        var classicLoadBalancers: Any? = null
+
+        /**
+         * [classicLoadBalancers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<ClassicLoadBalancer>
+         */
+        fun classicLoadBalancers(value: List<ClassicLoadBalancer>) {
+          this.classicLoadBalancers = value
+        }
+        
+        /**
+         * [classicLoadBalancers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<ClassicLoadBalancer>
+         */
+        fun classicLoadBalancers(vararg value: IntrinsicFunction) {
+          this.classicLoadBalancers = value
         }
 
     }
@@ -463,6 +597,103 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
          */
         fun volumeType(value: IntrinsicFunction) {
           this.volumeType = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class FleetLaunchTemplateSpecification {
+            /**
+         * [launchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var launchTemplateId: Any? = null
+
+        /**
+         * [launchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateId(value: String) {
+          this.launchTemplateId = value
+        }
+        
+        /**
+         * [launchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateId(value: IntrinsicFunction) {
+          this.launchTemplateId = value
+        }
+
+        /**
+         * [launchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var launchTemplateName: Any? = null
+
+        /**
+         * [launchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateName(value: String) {
+          this.launchTemplateName = value
+        }
+        
+        /**
+         * [launchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateName(value: IntrinsicFunction) {
+          this.launchTemplateName = value
+        }
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var version: Any? = null
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun version(value: String) {
+          this.version = value
+        }
+        
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun version(value: IntrinsicFunction) {
+          this.version = value
         }
 
     }
@@ -913,6 +1144,297 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
          */
         fun subnetId(value: IntrinsicFunction) {
           this.subnetId = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LaunchTemplateConfig {
+            /**
+         * [launchTemplateSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: FleetLaunchTemplateSpecification
+         */
+        var launchTemplateSpecification: Any? = null
+
+        /**
+         * [launchTemplateSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: FleetLaunchTemplateSpecification
+         */
+        fun launchTemplateSpecification(value: FleetLaunchTemplateSpecification) {
+          this.launchTemplateSpecification = value
+        }
+        
+        /**
+         * [launchTemplateSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: FleetLaunchTemplateSpecification
+         */
+        fun launchTemplateSpecification(value: IntrinsicFunction) {
+          this.launchTemplateSpecification = value
+        }
+
+        /**
+         * [overrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-overrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<LaunchTemplateOverrides>
+         */
+        var overrides: Any? = null
+
+        /**
+         * [overrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-overrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<LaunchTemplateOverrides>
+         */
+        fun overrides(value: List<LaunchTemplateOverrides>) {
+          this.overrides = value
+        }
+        
+        /**
+         * [overrides](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-overrides)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<LaunchTemplateOverrides>
+         */
+        fun overrides(vararg value: IntrinsicFunction) {
+          this.overrides = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LaunchTemplateOverrides {
+            /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var availabilityZone: Any? = null
+
+        /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun availabilityZone(value: String) {
+          this.availabilityZone = value
+        }
+        
+        /**
+         * [availabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun availabilityZone(value: IntrinsicFunction) {
+          this.availabilityZone = value
+        }
+
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var instanceType: Any? = null
+
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun instanceType(value: String) {
+          this.instanceType = value
+        }
+        
+        /**
+         * [instanceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun instanceType(value: IntrinsicFunction) {
+          this.instanceType = value
+        }
+
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var spotPrice: Any? = null
+
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun spotPrice(value: String) {
+          this.spotPrice = value
+        }
+        
+        /**
+         * [spotPrice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun spotPrice(value: IntrinsicFunction) {
+          this.spotPrice = value
+        }
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var subnetId: Any? = null
+
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: String) {
+          this.subnetId = value
+        }
+        
+        /**
+         * [subnetId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun subnetId(value: IntrinsicFunction) {
+          this.subnetId = value
+        }
+
+        /**
+         * [weightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        var weightedCapacity: Any? = null
+
+        /**
+         * [weightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun weightedCapacity(value: Double) {
+          this.weightedCapacity = value
+        }
+        
+        /**
+         * [weightedCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Double
+         */
+        fun weightedCapacity(value: IntrinsicFunction) {
+          this.weightedCapacity = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class LoadBalancersConfig {
+            /**
+         * [classicLoadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: ClassicLoadBalancersConfig
+         */
+        var classicLoadBalancersConfig: Any? = null
+
+        /**
+         * [classicLoadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: ClassicLoadBalancersConfig
+         */
+        fun classicLoadBalancersConfig(value: ClassicLoadBalancersConfig) {
+          this.classicLoadBalancersConfig = value
+        }
+        
+        /**
+         * [classicLoadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: ClassicLoadBalancersConfig
+         */
+        fun classicLoadBalancersConfig(value: IntrinsicFunction) {
+          this.classicLoadBalancersConfig = value
+        }
+
+        /**
+         * [targetGroupsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: TargetGroupsConfig
+         */
+        var targetGroupsConfig: Any? = null
+
+        /**
+         * [targetGroupsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: TargetGroupsConfig
+         */
+        fun targetGroupsConfig(value: TargetGroupsConfig) {
+          this.targetGroupsConfig = value
+        }
+        
+        /**
+         * [targetGroupsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: TargetGroupsConfig
+         */
+        fun targetGroupsConfig(value: IntrinsicFunction) {
+          this.targetGroupsConfig = value
         }
 
     }
@@ -1645,6 +2167,37 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
         }
 
         /**
+         * [instanceInterruptionBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var instanceInterruptionBehavior: Any? = null
+
+        /**
+         * [instanceInterruptionBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun instanceInterruptionBehavior(value: String) {
+          this.instanceInterruptionBehavior = value
+        }
+        
+        /**
+         * [instanceInterruptionBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun instanceInterruptionBehavior(value: IntrinsicFunction) {
+          this.instanceInterruptionBehavior = value
+        }
+
+        /**
          * [launchSpecifications](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)
          *
          * _Required_: no
@@ -1673,6 +2226,68 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
          */
         fun launchSpecifications(vararg value: IntrinsicFunction) {
           this.launchSpecifications = value
+        }
+
+        /**
+         * [launchTemplateConfigs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<LaunchTemplateConfig>
+         */
+        var launchTemplateConfigs: Any? = null
+
+        /**
+         * [launchTemplateConfigs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<LaunchTemplateConfig>
+         */
+        fun launchTemplateConfigs(value: List<LaunchTemplateConfig>) {
+          this.launchTemplateConfigs = value
+        }
+        
+        /**
+         * [launchTemplateConfigs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<LaunchTemplateConfig>
+         */
+        fun launchTemplateConfigs(vararg value: IntrinsicFunction) {
+          this.launchTemplateConfigs = value
+        }
+
+        /**
+         * [loadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: LoadBalancersConfig
+         */
+        var loadBalancersConfig: Any? = null
+
+        /**
+         * [loadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: LoadBalancersConfig
+         */
+        fun loadBalancersConfig(value: LoadBalancersConfig) {
+          this.loadBalancersConfig = value
+        }
+        
+        /**
+         * [loadBalancersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: LoadBalancersConfig
+         */
+        fun loadBalancersConfig(value: IntrinsicFunction) {
+          this.loadBalancersConfig = value
         }
 
         /**
@@ -1991,6 +2606,107 @@ class AWSEC2SpotFleet(logicalId: String) : Resource<AWSEC2SpotFleet.Properties>(
          */
         fun groupName(value: IntrinsicFunction) {
           this.groupName = value
+        }
+
+        /**
+         * [tenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-tenancy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var tenancy: Any? = null
+
+        /**
+         * [tenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-tenancy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun tenancy(value: String) {
+          this.tenancy = value
+        }
+        
+        /**
+         * [tenancy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-tenancy)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun tenancy(value: IntrinsicFunction) {
+          this.tenancy = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TargetGroup {
+            /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var arn: Any? = null
+
+        /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun arn(value: String) {
+          this.arn = value
+        }
+        
+        /**
+         * [arn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun arn(value: IntrinsicFunction) {
+          this.arn = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class TargetGroupsConfig {
+            /**
+         * [targetGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroupsconfig.html#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<TargetGroup>
+         */
+        var targetGroups: Any? = null
+
+        /**
+         * [targetGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroupsconfig.html#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<TargetGroup>
+         */
+        fun targetGroups(value: List<TargetGroup>) {
+          this.targetGroups = value
+        }
+        
+        /**
+         * [targetGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroupsconfig.html#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)
+         *
+         * _Required_: yes
+         *
+         * _Type_: List<TargetGroup>
+         */
+        fun targetGroups(vararg value: IntrinsicFunction) {
+          this.targetGroups = value
         }
 
     }

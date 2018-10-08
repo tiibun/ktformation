@@ -236,6 +236,38 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         }
 
         /**
+         * [engineMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var engineMode: Any? = null
+
+        /**
+         * [engineMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun engineMode(value: String) {
+          this.engineMode = value
+        }
+        
+        /**
+         * [engineMode](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun engineMode(value: IntrinsicFunction) {
+          this.engineMode = value
+        }
+
+        /**
          * [engineVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion)
          *
          * _Required_: no
@@ -492,6 +524,38 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
         }
 
         /**
+         * [scalingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: ScalingConfiguration
+         */
+        @JvmField
+        var scalingConfiguration: Any? = null
+
+        /**
+         * [scalingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: ScalingConfiguration
+         */
+        fun scalingConfiguration(value: ScalingConfiguration) {
+          this.scalingConfiguration = value
+        }
+        
+        /**
+         * [scalingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: ScalingConfiguration
+         */
+        fun scalingConfiguration(value: IntrinsicFunction) {
+          this.scalingConfiguration = value
+        }
+
+        /**
          * [snapshotIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-snapshotidentifier)
          *
          * _Required_: no
@@ -619,7 +683,14 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
           this.vpcSecurityGroupIds = value
         }
 
-
+        /**
+        * [ScalingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html)
+        */
+        fun scalingConfiguration(init: ScalingConfiguration.() -> Unit = {}): ScalingConfiguration {
+            return ScalingConfiguration().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -630,6 +701,133 @@ class AWSRDSDBCluster(logicalId: String) : Resource<AWSRDSDBCluster.Properties>(
     }
 
 
+    @CloudFormationMarker
+    class ScalingConfiguration {
+            /**
+         * [autoPause](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-autopause)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var autoPause: Any? = null
+
+        /**
+         * [autoPause](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-autopause)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun autoPause(value: Boolean) {
+          this.autoPause = value
+        }
+        
+        /**
+         * [autoPause](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-autopause)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun autoPause(value: IntrinsicFunction) {
+          this.autoPause = value
+        }
+
+        /**
+         * [maxCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-maxcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var maxCapacity: Any? = null
+
+        /**
+         * [maxCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-maxcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxCapacity(value: Int) {
+          this.maxCapacity = value
+        }
+        
+        /**
+         * [maxCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-maxcapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun maxCapacity(value: IntrinsicFunction) {
+          this.maxCapacity = value
+        }
+
+        /**
+         * [minCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-mincapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var minCapacity: Any? = null
+
+        /**
+         * [minCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-mincapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun minCapacity(value: Int) {
+          this.minCapacity = value
+        }
+        
+        /**
+         * [minCapacity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-mincapacity)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun minCapacity(value: IntrinsicFunction) {
+          this.minCapacity = value
+        }
+
+        /**
+         * [secondsBeforeAutoPause](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var secondsBeforeAutoPause: Any? = null
+
+        /**
+         * [secondsBeforeAutoPause](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun secondsBeforeAutoPause(value: Int) {
+          this.secondsBeforeAutoPause = value
+        }
+        
+        /**
+         * [secondsBeforeAutoPause](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun secondsBeforeAutoPause(value: IntrinsicFunction) {
+          this.secondsBeforeAutoPause = value
+        }
+
+    }
 
 }
 

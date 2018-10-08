@@ -44,6 +44,38 @@ class AWSEC2VPCPeeringConnection(logicalId: String) : Resource<AWSEC2VPCPeeringC
         }
 
         /**
+         * [peerRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerregion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        @JvmField
+        var peerRegion: Any? = null
+
+        /**
+         * [peerRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerregion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun peerRegion(value: String) {
+          this.peerRegion = value
+        }
+        
+        /**
+         * [peerRegion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerregion)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun peerRegion(value: IntrinsicFunction) {
+          this.peerRegion = value
+        }
+
+        /**
          * [peerRoleArn](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerrolearn)
          *
          * _Required_: no

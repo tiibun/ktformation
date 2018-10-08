@@ -960,6 +960,37 @@ class AWSElastiCacheReplicationGroup(logicalId: String) : Resource<AWSElastiCach
     @CloudFormationMarker
     class NodeGroupConfiguration {
             /**
+         * [nodeGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var nodeGroupId: Any? = null
+
+        /**
+         * [nodeGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun nodeGroupId(value: String) {
+          this.nodeGroupId = value
+        }
+        
+        /**
+         * [nodeGroupId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun nodeGroupId(value: IntrinsicFunction) {
+          this.nodeGroupId = value
+        }
+
+        /**
          * [primaryAvailabilityZone](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone)
          *
          * _Required_: no

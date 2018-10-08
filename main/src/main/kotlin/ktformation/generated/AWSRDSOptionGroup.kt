@@ -266,7 +266,7 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
          *
          * _Required_: no
          *
-         * _Type_: OptionSetting
+         * _Type_: List<OptionSetting>
          */
         var optionSettings: Any? = null
 
@@ -275,9 +275,9 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
          *
          * _Required_: no
          *
-         * _Type_: OptionSetting
+         * _Type_: List<OptionSetting>
          */
-        fun optionSettings(value: OptionSetting) {
+        fun optionSettings(value: List<OptionSetting>) {
           this.optionSettings = value
         }
         
@@ -286,9 +286,9 @@ class AWSRDSOptionGroup(logicalId: String) : Resource<AWSRDSOptionGroup.Properti
          *
          * _Required_: no
          *
-         * _Type_: OptionSetting
+         * _Type_: List<OptionSetting>
          */
-        fun optionSettings(value: IntrinsicFunction) {
+        fun optionSettings(vararg value: IntrinsicFunction) {
           this.optionSettings = value
         }
 

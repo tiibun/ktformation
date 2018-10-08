@@ -44,6 +44,38 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         }
 
         /**
+         * [authorizationScopes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationscopes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        @JvmField
+        var authorizationScopes: Any? = null
+
+        /**
+         * [authorizationScopes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationscopes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun authorizationScopes(value: List<String>) {
+          this.authorizationScopes = value
+        }
+        
+        /**
+         * [authorizationScopes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationscopes)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun authorizationScopes(vararg value: IntrinsicFunction) {
+          this.authorizationScopes = value
+        }
+
+        /**
          * [authorizationType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationtype)
          *
          * _Required_: no
@@ -472,6 +504,68 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
         }
 
         /**
+         * [connectionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectionid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var connectionId: Any? = null
+
+        /**
+         * [connectionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectionid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun connectionId(value: String) {
+          this.connectionId = value
+        }
+        
+        /**
+         * [connectionId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectionid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun connectionId(value: IntrinsicFunction) {
+          this.connectionId = value
+        }
+
+        /**
+         * [connectionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectiontype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var connectionType: Any? = null
+
+        /**
+         * [connectionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectiontype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun connectionType(value: String) {
+          this.connectionType = value
+        }
+        
+        /**
+         * [connectionType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectiontype)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun connectionType(value: IntrinsicFunction) {
+          this.connectionType = value
+        }
+
+        /**
          * [contentHandling](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling)
          *
          * _Required_: no
@@ -666,6 +760,37 @@ class AWSApiGatewayMethod(logicalId: String) : Resource<AWSApiGatewayMethod.Prop
           this.requestTemplates = value
         }
         
+        /**
+         * [timeoutInMillis](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var timeoutInMillis: Any? = null
+
+        /**
+         * [timeoutInMillis](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun timeoutInMillis(value: Int) {
+          this.timeoutInMillis = value
+        }
+        
+        /**
+         * [timeoutInMillis](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun timeoutInMillis(value: IntrinsicFunction) {
+          this.timeoutInMillis = value
+        }
+
         /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type)
          *

@@ -12,38 +12,6 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
     @CloudFormationMarker
     class Properties : ResourceProperties() {
         /**
-         * [isPrivateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled)
-         *
-         * _Required_: no
-         *
-         * _Type_: Boolean
-         */
-        @JvmField
-        var isPrivateDnsEnabled: Any? = null
-
-        /**
-         * [isPrivateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled)
-         *
-         * _Required_: no
-         *
-         * _Type_: Boolean
-         */
-        fun isPrivateDnsEnabled(value: Boolean) {
-          this.isPrivateDnsEnabled = value
-        }
-        
-        /**
-         * [isPrivateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled)
-         *
-         * _Required_: no
-         *
-         * _Type_: Boolean
-         */
-        fun isPrivateDnsEnabled(value: IntrinsicFunction) {
-          this.isPrivateDnsEnabled = value
-        }
-
-        /**
          * [policyDocument](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument)
          *
          * _Required_: no
@@ -73,6 +41,38 @@ class AWSEC2VPCEndpoint(logicalId: String) : Resource<AWSEC2VPCEndpoint.Properti
          */
         fun policyDocument(value: IntrinsicFunction) {
           this.policyDocument = value
+        }
+
+        /**
+         * [privateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-privatednsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        @JvmField
+        var privateDnsEnabled: Any? = null
+
+        /**
+         * [privateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-privatednsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun privateDnsEnabled(value: Boolean) {
+          this.privateDnsEnabled = value
+        }
+        
+        /**
+         * [privateDnsEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-privatednsenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun privateDnsEnabled(value: IntrinsicFunction) {
+          this.privateDnsEnabled = value
         }
 
         /**

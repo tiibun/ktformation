@@ -300,6 +300,38 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
         }
 
         /**
+         * [kerberosAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-kerberosattributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: KerberosAttributes
+         */
+        @JvmField
+        var kerberosAttributes: Any? = null
+
+        /**
+         * [kerberosAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-kerberosattributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: KerberosAttributes
+         */
+        fun kerberosAttributes(value: KerberosAttributes) {
+          this.kerberosAttributes = value
+        }
+        
+        /**
+         * [kerberosAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-kerberosattributes)
+         *
+         * _Required_: no
+         *
+         * _Type_: KerberosAttributes
+         */
+        fun kerberosAttributes(value: IntrinsicFunction) {
+          this.kerberosAttributes = value
+        }
+
+        /**
          * [logUri](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri)
          *
          * _Required_: no
@@ -648,6 +680,14 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
         */
         fun jobFlowInstancesConfig(init: JobFlowInstancesConfig.() -> Unit = {}): JobFlowInstancesConfig {
             return JobFlowInstancesConfig().also {
+                it.init()
+            }
+        }
+        /**
+        * [KerberosAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html)
+        */
+        fun kerberosAttributes(init: KerberosAttributes.() -> Unit = {}): KerberosAttributes {
+            return KerberosAttributes().also {
                 it.init()
             }
         }
@@ -2561,6 +2601,165 @@ class AWSEMRCluster(logicalId: String) : Resource<AWSEMRCluster.Properties>(logi
          */
         fun terminationProtected(value: IntrinsicFunction) {
           this.terminationProtected = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class KerberosAttributes {
+            /**
+         * [aDDomainJoinPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var aDDomainJoinPassword: Any? = null
+
+        /**
+         * [aDDomainJoinPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun aDDomainJoinPassword(value: String) {
+          this.aDDomainJoinPassword = value
+        }
+        
+        /**
+         * [aDDomainJoinPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun aDDomainJoinPassword(value: IntrinsicFunction) {
+          this.aDDomainJoinPassword = value
+        }
+
+        /**
+         * [aDDomainJoinUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var aDDomainJoinUser: Any? = null
+
+        /**
+         * [aDDomainJoinUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun aDDomainJoinUser(value: String) {
+          this.aDDomainJoinUser = value
+        }
+        
+        /**
+         * [aDDomainJoinUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun aDDomainJoinUser(value: IntrinsicFunction) {
+          this.aDDomainJoinUser = value
+        }
+
+        /**
+         * [crossRealmTrustPrincipalPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var crossRealmTrustPrincipalPassword: Any? = null
+
+        /**
+         * [crossRealmTrustPrincipalPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun crossRealmTrustPrincipalPassword(value: String) {
+          this.crossRealmTrustPrincipalPassword = value
+        }
+        
+        /**
+         * [crossRealmTrustPrincipalPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun crossRealmTrustPrincipalPassword(value: IntrinsicFunction) {
+          this.crossRealmTrustPrincipalPassword = value
+        }
+
+        /**
+         * [kdcAdminPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var kdcAdminPassword: Any? = null
+
+        /**
+         * [kdcAdminPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun kdcAdminPassword(value: String) {
+          this.kdcAdminPassword = value
+        }
+        
+        /**
+         * [kdcAdminPassword](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun kdcAdminPassword(value: IntrinsicFunction) {
+          this.kdcAdminPassword = value
+        }
+
+        /**
+         * [realm](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-realm)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var realm: Any? = null
+
+        /**
+         * [realm](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-realm)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun realm(value: String) {
+          this.realm = value
+        }
+        
+        /**
+         * [realm](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-realm)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun realm(value: IntrinsicFunction) {
+          this.realm = value
         }
 
     }

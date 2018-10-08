@@ -269,6 +269,26 @@ class AWSApiGatewayUsagePlan(logicalId: String) : Resource<AWSApiGatewayUsagePla
           this.stage = value
         }
 
+        /**
+         * [throttle](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var throttle: Any? = null
+
+        /**
+         * [throttle](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun throttle(value: Map<String, Any>) {
+          this.throttle = value
+        }
+        
     }
 
     @CloudFormationMarker

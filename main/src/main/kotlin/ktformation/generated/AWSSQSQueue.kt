@@ -332,6 +332,38 @@ class AWSSQSQueue(logicalId: String) : Resource<AWSSQSQueue.Properties>(logicalI
         }
 
         /**
+         * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tag>
+         */
+        @JvmField
+        var tags: Any? = null
+
+        /**
+         * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tag>
+         */
+        fun tags(value: List<Tag>) {
+          this.tags = value
+        }
+        
+        /**
+         * [tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tag>
+         */
+        fun tags(vararg value: IntrinsicFunction) {
+          this.tags = value
+        }
+
+        /**
          * [visibilityTimeout](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout)
          *
          * _Required_: no

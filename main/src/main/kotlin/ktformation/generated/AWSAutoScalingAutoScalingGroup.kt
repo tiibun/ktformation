@@ -268,6 +268,38 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         }
 
         /**
+         * [launchTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-launchtemplate)
+         *
+         * _Required_: no
+         *
+         * _Type_: LaunchTemplateSpecification
+         */
+        @JvmField
+        var launchTemplate: Any? = null
+
+        /**
+         * [launchTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-launchtemplate)
+         *
+         * _Required_: no
+         *
+         * _Type_: LaunchTemplateSpecification
+         */
+        fun launchTemplate(value: LaunchTemplateSpecification) {
+          this.launchTemplate = value
+        }
+        
+        /**
+         * [launchTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-launchtemplate)
+         *
+         * _Required_: no
+         *
+         * _Type_: LaunchTemplateSpecification
+         */
+        fun launchTemplate(value: IntrinsicFunction) {
+          this.launchTemplate = value
+        }
+
+        /**
          * [lifecycleHookSpecificationList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist)
          *
          * _Required_: no
@@ -652,6 +684,14 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         }
 
         /**
+        * [LaunchTemplateSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html)
+        */
+        fun launchTemplateSpecification(init: LaunchTemplateSpecification.() -> Unit = {}): LaunchTemplateSpecification {
+            return LaunchTemplateSpecification().also {
+                it.init()
+            }
+        }
+        /**
         * [LifecycleHookSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html)
         */
         fun lifecycleHookSpecification(init: LifecycleHookSpecification.() -> Unit = {}): LifecycleHookSpecification {
@@ -692,6 +732,103 @@ class AWSAutoScalingAutoScalingGroup(logicalId: String) : Resource<AWSAutoScalin
         }
     }
 
+
+    @CloudFormationMarker
+    class LaunchTemplateSpecification {
+            /**
+         * [launchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var launchTemplateId: Any? = null
+
+        /**
+         * [launchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateId(value: String) {
+          this.launchTemplateId = value
+        }
+        
+        /**
+         * [launchTemplateId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateId(value: IntrinsicFunction) {
+          this.launchTemplateId = value
+        }
+
+        /**
+         * [launchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var launchTemplateName: Any? = null
+
+        /**
+         * [launchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateName(value: String) {
+          this.launchTemplateName = value
+        }
+        
+        /**
+         * [launchTemplateName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun launchTemplateName(value: IntrinsicFunction) {
+          this.launchTemplateName = value
+        }
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var version: Any? = null
+
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun version(value: String) {
+          this.version = value
+        }
+        
+        /**
+         * [version](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun version(value: IntrinsicFunction) {
+          this.version = value
+        }
+
+    }
 
     @CloudFormationMarker
     class LifecycleHookSpecification {

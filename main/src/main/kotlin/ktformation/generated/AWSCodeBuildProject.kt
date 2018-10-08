@@ -204,6 +204,38 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         }
 
         /**
+         * [logsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-logsconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: LogsConfig
+         */
+        @JvmField
+        var logsConfig: Any? = null
+
+        /**
+         * [logsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-logsconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: LogsConfig
+         */
+        fun logsConfig(value: LogsConfig) {
+          this.logsConfig = value
+        }
+        
+        /**
+         * [logsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-logsconfig)
+         *
+         * _Required_: no
+         *
+         * _Type_: LogsConfig
+         */
+        fun logsConfig(value: IntrinsicFunction) {
+          this.logsConfig = value
+        }
+
+        /**
          * [name](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-name)
          *
          * _Required_: no
@@ -233,6 +265,70 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
          */
         fun name(value: IntrinsicFunction) {
           this.name = value
+        }
+
+        /**
+         * [secondaryArtifacts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondaryartifacts)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Artifacts>
+         */
+        @JvmField
+        var secondaryArtifacts: Any? = null
+
+        /**
+         * [secondaryArtifacts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondaryartifacts)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Artifacts>
+         */
+        fun secondaryArtifacts(value: List<Artifacts>) {
+          this.secondaryArtifacts = value
+        }
+        
+        /**
+         * [secondaryArtifacts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondaryartifacts)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Artifacts>
+         */
+        fun secondaryArtifacts(vararg value: IntrinsicFunction) {
+          this.secondaryArtifacts = value
+        }
+
+        /**
+         * [secondarySources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondarysources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Source>
+         */
+        @JvmField
+        var secondarySources: Any? = null
+
+        /**
+         * [secondarySources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondarysources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Source>
+         */
+        fun secondarySources(value: List<Source>) {
+          this.secondarySources = value
+        }
+        
+        /**
+         * [secondarySources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondarysources)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Source>
+         */
+        fun secondarySources(vararg value: IntrinsicFunction) {
+          this.secondarySources = value
         }
 
         /**
@@ -436,6 +532,14 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
             }
         }
         /**
+        * [CloudWatchLogsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html)
+        */
+        fun cloudWatchLogsConfig(init: CloudWatchLogsConfig.() -> Unit = {}): CloudWatchLogsConfig {
+            return CloudWatchLogsConfig().also {
+                it.init()
+            }
+        }
+        /**
         * [Environment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
         */
         fun environment(init: Environment.() -> Unit = {}): Environment {
@@ -452,6 +556,14 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
             }
         }
         /**
+        * [LogsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
+        */
+        fun logsConfig(init: LogsConfig.() -> Unit = {}): LogsConfig {
+            return LogsConfig().also {
+                it.init()
+            }
+        }
+        /**
         * [ProjectCache](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
         */
         fun projectCache(init: ProjectCache.() -> Unit = {}): ProjectCache {
@@ -464,6 +576,14 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         */
         fun projectTriggers(init: ProjectTriggers.() -> Unit = {}): ProjectTriggers {
             return ProjectTriggers().also {
+                it.init()
+            }
+        }
+        /**
+        * [S3LogsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html)
+        */
+        fun s3LogsConfig(init: S3LogsConfig.() -> Unit = {}): S3LogsConfig {
+            return S3LogsConfig().also {
                 it.init()
             }
         }
@@ -504,6 +624,68 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
     @CloudFormationMarker
     class Artifacts {
             /**
+         * [artifactIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-artifactidentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var artifactIdentifier: Any? = null
+
+        /**
+         * [artifactIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-artifactidentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun artifactIdentifier(value: String) {
+          this.artifactIdentifier = value
+        }
+        
+        /**
+         * [artifactIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-artifactidentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun artifactIdentifier(value: IntrinsicFunction) {
+          this.artifactIdentifier = value
+        }
+
+        /**
+         * [encryptionDisabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var encryptionDisabled: Any? = null
+
+        /**
+         * [encryptionDisabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun encryptionDisabled(value: Boolean) {
+          this.encryptionDisabled = value
+        }
+        
+        /**
+         * [encryptionDisabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun encryptionDisabled(value: IntrinsicFunction) {
+          this.encryptionDisabled = value
+        }
+
+        /**
          * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location)
          *
          * _Required_: no
@@ -597,6 +779,37 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         }
 
         /**
+         * [overrideArtifactName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var overrideArtifactName: Any? = null
+
+        /**
+         * [overrideArtifactName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun overrideArtifactName(value: Boolean) {
+          this.overrideArtifactName = value
+        }
+        
+        /**
+         * [overrideArtifactName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun overrideArtifactName(value: IntrinsicFunction) {
+          this.overrideArtifactName = value
+        }
+
+        /**
          * [packaging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging)
          *
          * _Required_: no
@@ -687,6 +900,103 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
          */
         fun type(value: IntrinsicFunction) {
           this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class CloudWatchLogsConfig {
+            /**
+         * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var groupName: Any? = null
+
+        /**
+         * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun groupName(value: String) {
+          this.groupName = value
+        }
+        
+        /**
+         * [groupName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun groupName(value: IntrinsicFunction) {
+          this.groupName = value
+        }
+
+        /**
+         * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var status: Any? = null
+
+        /**
+         * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun status(value: String) {
+          this.status = value
+        }
+        
+        /**
+         * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun status(value: IntrinsicFunction) {
+          this.status = value
+        }
+
+        /**
+         * [streamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var streamName: Any? = null
+
+        /**
+         * [streamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun streamName(value: String) {
+          this.streamName = value
+        }
+        
+        /**
+         * [streamName](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun streamName(value: IntrinsicFunction) {
+          this.streamName = value
         }
 
     }
@@ -979,6 +1289,72 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
     }
 
     @CloudFormationMarker
+    class LogsConfig {
+            /**
+         * [cloudWatchLogs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html#cfn-codebuild-project-logsconfig-cloudwatchlogs)
+         *
+         * _Required_: no
+         *
+         * _Type_: CloudWatchLogsConfig
+         */
+        var cloudWatchLogs: Any? = null
+
+        /**
+         * [cloudWatchLogs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html#cfn-codebuild-project-logsconfig-cloudwatchlogs)
+         *
+         * _Required_: no
+         *
+         * _Type_: CloudWatchLogsConfig
+         */
+        fun cloudWatchLogs(value: CloudWatchLogsConfig) {
+          this.cloudWatchLogs = value
+        }
+        
+        /**
+         * [cloudWatchLogs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html#cfn-codebuild-project-logsconfig-cloudwatchlogs)
+         *
+         * _Required_: no
+         *
+         * _Type_: CloudWatchLogsConfig
+         */
+        fun cloudWatchLogs(value: IntrinsicFunction) {
+          this.cloudWatchLogs = value
+        }
+
+        /**
+         * [s3Logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html#cfn-codebuild-project-logsconfig-s3logs)
+         *
+         * _Required_: no
+         *
+         * _Type_: S3LogsConfig
+         */
+        var s3Logs: Any? = null
+
+        /**
+         * [s3Logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html#cfn-codebuild-project-logsconfig-s3logs)
+         *
+         * _Required_: no
+         *
+         * _Type_: S3LogsConfig
+         */
+        fun s3Logs(value: S3LogsConfig) {
+          this.s3Logs = value
+        }
+        
+        /**
+         * [s3Logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html#cfn-codebuild-project-logsconfig-s3logs)
+         *
+         * _Required_: no
+         *
+         * _Type_: S3LogsConfig
+         */
+        fun s3Logs(value: IntrinsicFunction) {
+          this.s3Logs = value
+        }
+
+    }
+
+    @CloudFormationMarker
     class ProjectCache {
             /**
          * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
@@ -1075,6 +1451,72 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
          */
         fun webhook(value: IntrinsicFunction) {
           this.webhook = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class S3LogsConfig {
+            /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var location: Any? = null
+
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: String) {
+          this.location = value
+        }
+        
+        /**
+         * [location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun location(value: IntrinsicFunction) {
+          this.location = value
+        }
+
+        /**
+         * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        var status: Any? = null
+
+        /**
+         * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun status(value: String) {
+          this.status = value
+        }
+        
+        /**
+         * [status](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+         *
+         * _Required_: yes
+         *
+         * _Type_: String
+         */
+        fun status(value: IntrinsicFunction) {
+          this.status = value
         }
 
     }
@@ -1268,6 +1710,37 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         }
 
         /**
+         * [sourceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-sourceidentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var sourceIdentifier: Any? = null
+
+        /**
+         * [sourceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-sourceidentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sourceIdentifier(value: String) {
+          this.sourceIdentifier = value
+        }
+        
+        /**
+         * [sourceIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-sourceidentifier)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun sourceIdentifier(value: IntrinsicFunction) {
+          this.sourceIdentifier = value
+        }
+
+        /**
          * [type](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-type)
          *
          * _Required_: yes
@@ -1371,7 +1844,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
             /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: List<String>
          */
@@ -1380,7 +1853,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: List<String>
          */
@@ -1391,7 +1864,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: List<String>
          */
@@ -1402,7 +1875,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: List<String>
          */
@@ -1411,7 +1884,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: List<String>
          */
@@ -1422,7 +1895,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [subnets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: List<String>
          */
@@ -1433,7 +1906,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -1442,7 +1915,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */
@@ -1453,7 +1926,7 @@ class AWSCodeBuildProject(logicalId: String) : Resource<AWSCodeBuildProject.Prop
         /**
          * [vpcId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
          *
-         * _Required_: yes
+         * _Required_: no
          *
          * _Type_: String
          */

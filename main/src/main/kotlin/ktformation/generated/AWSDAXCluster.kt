@@ -300,6 +300,38 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
         }
 
         /**
+         * [sSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-ssespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: SSESpecification
+         */
+        @JvmField
+        var sSESpecification: Any? = null
+
+        /**
+         * [sSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-ssespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: SSESpecification
+         */
+        fun sSESpecification(value: SSESpecification) {
+          this.sSESpecification = value
+        }
+        
+        /**
+         * [sSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-ssespecification)
+         *
+         * _Required_: no
+         *
+         * _Type_: SSESpecification
+         */
+        fun sSESpecification(value: IntrinsicFunction) {
+          this.sSESpecification = value
+        }
+
+        /**
          * [securityGroupIds](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-securitygroupids)
          *
          * _Required_: no
@@ -395,7 +427,14 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
           this.tags = value
         }
 
-
+        /**
+        * [SSESpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html)
+        */
+        fun sSESpecification(init: SSESpecification.() -> Unit = {}): SSESpecification {
+            return SSESpecification().also {
+                it.init()
+            }
+        }
     }
 
     fun properties(init: Properties.() -> Unit): Properties {
@@ -406,6 +445,40 @@ class AWSDAXCluster(logicalId: String) : Resource<AWSDAXCluster.Properties>(logi
     }
 
 
+    @CloudFormationMarker
+    class SSESpecification {
+            /**
+         * [sSEEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html#cfn-dax-cluster-ssespecification-sseenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var sSEEnabled: Any? = null
+
+        /**
+         * [sSEEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html#cfn-dax-cluster-ssespecification-sseenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun sSEEnabled(value: Boolean) {
+          this.sSEEnabled = value
+        }
+        
+        /**
+         * [sSEEnabled](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html#cfn-dax-cluster-ssespecification-sseenabled)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun sSEEnabled(value: IntrinsicFunction) {
+          this.sSEEnabled = value
+        }
+
+    }
 
 }
 

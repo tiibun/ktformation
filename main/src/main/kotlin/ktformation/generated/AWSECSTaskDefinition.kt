@@ -348,6 +348,14 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
             }
         }
         /**
+        * [DockerVolumeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html)
+        */
+        fun dockerVolumeConfiguration(init: DockerVolumeConfiguration.() -> Unit = {}): DockerVolumeConfiguration {
+            return DockerVolumeConfiguration().also {
+                it.init()
+            }
+        }
+        /**
         * [HealthCheck](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html)
         */
         fun healthCheck(init: HealthCheck.() -> Unit = {}): HealthCheck {
@@ -420,10 +428,26 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
             }
         }
         /**
+        * [RepositoryCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html)
+        */
+        fun repositoryCredentials(init: RepositoryCredentials.() -> Unit = {}): RepositoryCredentials {
+            return RepositoryCredentials().also {
+                it.init()
+            }
+        }
+        /**
         * [TaskDefinitionPlacementConstraint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html)
         */
         fun taskDefinitionPlacementConstraint(init: TaskDefinitionPlacementConstraint.() -> Unit = {}): TaskDefinitionPlacementConstraint {
             return TaskDefinitionPlacementConstraint().also {
+                it.init()
+            }
+        }
+        /**
+        * [Tmpfs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html)
+        */
+        fun tmpfs(init: Tmpfs.() -> Unit = {}): Tmpfs {
+            return Tmpfs().also {
                 it.init()
             }
         }
@@ -1197,6 +1221,37 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
         }
 
         /**
+         * [repositoryCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: RepositoryCredentials
+         */
+        var repositoryCredentials: Any? = null
+
+        /**
+         * [repositoryCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: RepositoryCredentials
+         */
+        fun repositoryCredentials(value: RepositoryCredentials) {
+          this.repositoryCredentials = value
+        }
+        
+        /**
+         * [repositoryCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials)
+         *
+         * _Required_: no
+         *
+         * _Type_: RepositoryCredentials
+         */
+        fun repositoryCredentials(value: IntrinsicFunction) {
+          this.repositoryCredentials = value
+        }
+
+        /**
          * [ulimits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-ulimits)
          *
          * _Required_: no
@@ -1415,6 +1470,143 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
          */
         fun permissions(vararg value: IntrinsicFunction) {
           this.permissions = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class DockerVolumeConfiguration {
+            /**
+         * [autoprovision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        var autoprovision: Any? = null
+
+        /**
+         * [autoprovision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun autoprovision(value: Boolean) {
+          this.autoprovision = value
+        }
+        
+        /**
+         * [autoprovision](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
+         *
+         * _Required_: no
+         *
+         * _Type_: Boolean
+         */
+        fun autoprovision(value: IntrinsicFunction) {
+          this.autoprovision = value
+        }
+
+        /**
+         * [driver](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var driver: Any? = null
+
+        /**
+         * [driver](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun driver(value: String) {
+          this.driver = value
+        }
+        
+        /**
+         * [driver](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun driver(value: IntrinsicFunction) {
+          this.driver = value
+        }
+
+        /**
+         * [driverOpts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var driverOpts: Any? = null
+
+        /**
+         * [driverOpts](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun driverOpts(value: Map<String, Any>) {
+          this.driverOpts = value
+        }
+        
+        /**
+         * [labels](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        var labels: Any? = null
+
+        /**
+         * [labels](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
+         *
+         * _Required_: no
+         *
+         * _Type_: Map<String, Any>
+         */
+        fun labels(value: Map<String, Any>) {
+          this.labels = value
+        }
+        
+        /**
+         * [scope](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var scope: Any? = null
+
+        /**
+         * [scope](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun scope(value: String) {
+          this.scope = value
+        }
+        
+        /**
+         * [scope](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun scope(value: IntrinsicFunction) {
+          this.scope = value
         }
 
     }
@@ -1906,6 +2098,68 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
           this.initProcessEnabled = value
         }
 
+        /**
+         * [sharedMemorySize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var sharedMemorySize: Any? = null
+
+        /**
+         * [sharedMemorySize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun sharedMemorySize(value: Int) {
+          this.sharedMemorySize = value
+        }
+        
+        /**
+         * [sharedMemorySize](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun sharedMemorySize(value: IntrinsicFunction) {
+          this.sharedMemorySize = value
+        }
+
+        /**
+         * [tmpfs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tmpfs>
+         */
+        var tmpfs: Any? = null
+
+        /**
+         * [tmpfs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tmpfs>
+         */
+        fun tmpfs(value: List<Tmpfs>) {
+          this.tmpfs = value
+        }
+        
+        /**
+         * [tmpfs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<Tmpfs>
+         */
+        fun tmpfs(vararg value: IntrinsicFunction) {
+          this.tmpfs = value
+        }
+
     }
 
     @CloudFormationMarker
@@ -2158,6 +2412,41 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
     }
 
     @CloudFormationMarker
+    class RepositoryCredentials {
+            /**
+         * [credentialsParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var credentialsParameter: Any? = null
+
+        /**
+         * [credentialsParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun credentialsParameter(value: String) {
+          this.credentialsParameter = value
+        }
+        
+        /**
+         * [credentialsParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun credentialsParameter(value: IntrinsicFunction) {
+          this.credentialsParameter = value
+        }
+
+    }
+
+    @CloudFormationMarker
     class TaskDefinitionPlacementConstraint {
             /**
          * [expression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression)
@@ -2219,6 +2508,103 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
          */
         fun type(value: IntrinsicFunction) {
           this.type = value
+        }
+
+    }
+
+    @CloudFormationMarker
+    class Tmpfs {
+            /**
+         * [containerPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        var containerPath: Any? = null
+
+        /**
+         * [containerPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun containerPath(value: String) {
+          this.containerPath = value
+        }
+        
+        /**
+         * [containerPath](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
+         *
+         * _Required_: no
+         *
+         * _Type_: String
+         */
+        fun containerPath(value: IntrinsicFunction) {
+          this.containerPath = value
+        }
+
+        /**
+         * [mountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        var mountOptions: Any? = null
+
+        /**
+         * [mountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun mountOptions(value: List<String>) {
+          this.mountOptions = value
+        }
+        
+        /**
+         * [mountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
+         *
+         * _Required_: no
+         *
+         * _Type_: List<String>
+         */
+        fun mountOptions(vararg value: IntrinsicFunction) {
+          this.mountOptions = value
+        }
+
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        var size: Any? = null
+
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun size(value: Int) {
+          this.size = value
+        }
+        
+        /**
+         * [size](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
+         *
+         * _Required_: no
+         *
+         * _Type_: Int
+         */
+        fun size(value: IntrinsicFunction) {
+          this.size = value
         }
 
     }
@@ -2323,6 +2709,37 @@ class AWSECSTaskDefinition(logicalId: String) : Resource<AWSECSTaskDefinition.Pr
     @CloudFormationMarker
     class Volume {
             /**
+         * [dockerVolumeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: DockerVolumeConfiguration
+         */
+        var dockerVolumeConfiguration: Any? = null
+
+        /**
+         * [dockerVolumeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: DockerVolumeConfiguration
+         */
+        fun dockerVolumeConfiguration(value: DockerVolumeConfiguration) {
+          this.dockerVolumeConfiguration = value
+        }
+        
+        /**
+         * [dockerVolumeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration)
+         *
+         * _Required_: no
+         *
+         * _Type_: DockerVolumeConfiguration
+         */
+        fun dockerVolumeConfiguration(value: IntrinsicFunction) {
+          this.dockerVolumeConfiguration = value
+        }
+
+        /**
          * [host](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-host)
          *
          * _Required_: no
